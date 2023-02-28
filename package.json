@@ -1,6 +1,6 @@
 {
-  "name": "GildataDesign",
-  "version": "1.2.6",
+  "name": "component-library-gj",
+  "version": "1.0.0",
   "description": "A Component Library for Vue.js.",
   "main": "lib/GildataDesign.common.js",
   "files": [
@@ -33,7 +33,7 @@
   },
   "homepage": "http://10.106.1.122/gildataDesign/#/zh-CN/component/quickstart",
   "keywords": [
-    "GildataDesign",
+    "componentlibrary",
     "vue",
     "components"
   ],
