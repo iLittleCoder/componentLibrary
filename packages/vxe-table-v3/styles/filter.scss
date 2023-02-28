@@ -1,0 +1,151 @@
+/**Variable**/
+@import './base/checked.scss';
+
+/*筛选*/
+.jy-cell--filter {
+  padding: 0 0.1em 0 0.25em;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 0;
+  &.col--active {
+    .jy-filter--btn {
+      color: $jy-table-font-color;
+    }
+  }
+  .jy-filter--btn {
+    color: $jy-table-column-icon-border-color;
+    cursor: pointer;
+    &:hover {
+      color: $jy-table-column-icon-border-hover-color;
+    }
+  }
+  &.is--active{
+    .jy-filter--btn {
+      color: $jy-primary-color;
+    }
+  }
+}
+.is--filter-active {
+  .jy-cell--filter {
+    .jy-filter--btn {
+      color: $jy-primary-color;
+    }
+  }
+}
+
+/*筛选容器*/
+.jy-table--filter-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  min-width: 100px;
+  border-radius: $jy-border-radius;
+  background-color: $jy-table-filter-panel-background-color;
+  border: 1px solid $--border-color-base;
+  box-shadow: 0 1px 6px rgba(0,0,0,.2);
+  z-index: 10;
+  &:not(.is--multiple) {
+    text-align: center;
+  }
+  &.is--active {
+    display: block;
+  }
+  .jy-table--filter-header,
+  .jy-table--filter-body {
+    & > li {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 360px;
+      padding: 0.25em 0.8em;
+      cursor: pointer;
+      &.is--checked {
+        color: $jy-primary-color;
+      }
+      &:hover {
+        background-color: $jy-table-row-hover-background-color;
+      }
+    }
+  }
+  .jy-table--filter-header {
+    padding-top: 0.2em;
+  }
+  .jy-table--filter-body {
+    max-height: 200px;
+    padding-bottom: 0.2em;
+  }
+  & > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    user-select: none;
+  }
+  &.is--multiple {
+    & > ul {
+      & > li {
+        padding: 0.25em 0.8em 0.25em 2.3em;
+      }
+    }
+  }
+  .jy-table--filter-footer {
+    border-top: 1px solid $jy-table-popup-border-color;
+    padding: 0.6em;
+    user-select: none;
+    button {
+      background-color: transparent;
+      padding: 0 0.4em;
+      border: 0;
+      color: $jy-table-font-color;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        color: $jy-primary-color;
+      }
+      &.is--disabled {
+        color: $jy-disabled-color;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.jy-table--filter-option {
+  @extend %XECheckbox;
+  .jy-checkbox--icon {
+    left: 0.6em;
+    top: 0.38em;
+  }
+}
+
+.jy-table {
+  .jy-table--filter-option {
+    & > .jy-checkbox--icon {
+      font-size: $jy-checkbox-font-size-default;
+    }
+  }
+  &.size--medium {
+    .jy-table--filter-option {
+      & > .jy-checkbox--icon {
+        font-size: $jy-checkbox-font-size-medium;
+      }
+    }
+  }
+  &.size--small {
+    .jy-table--filter-option {
+      & > .jy-checkbox--icon {
+        font-size: $jy-checkbox-font-size-small;
+      }
+    }
+  }
+  &.size--mini {
+    .jy-table--filter-option {
+      & > .jy-checkbox--icon {
+        font-size: $jy-checkbox-font-size-mini;
+      }
+    }
+  }
+}

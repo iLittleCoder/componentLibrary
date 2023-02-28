@@ -1,0 +1,37 @@
+.demo-block.demo-tag {
+  .jy-tag + .jy-tag {
+    margin-left: 10px;
+  }
+
+  .button-new-tag {
+    margin-left: 10px;
+    // padding-top: 2px;
+    // padding-bottom: 2px;
+    border-style: dashed;
+  }
+
+  .input-new-tag {
+    width: 90px;
+    margin-left: 10px;
+    vertical-align: bottom;
+    // .jy-input__inner {
+    //   height: 24px;
+    //   line-height: 24px;
+    // }
+  }
+
+  .tag-group {
+    display: flex;
+    align-items: center;
+
+    &__title {
+      width: 45px;
+      font-size: 14px;
+      color: #606266;
+    }
+
+    &+.tag-group  {
+      margin-top: 10px;
+    }
+  }
+}

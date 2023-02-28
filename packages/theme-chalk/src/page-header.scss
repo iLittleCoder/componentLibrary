@@ -1,0 +1,53 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(page-header) {
+  display: flex;
+  line-height: 24px;
+  background-color: $--color-neutral;
+  padding: 12px 20px;
+  justify-content: space-between;
+
+  @include e(left) {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  width: 1px;
+    //  height: 16px;
+    //  right: -20px;
+    //  top: 50%;
+    //  transform: translateY(-50%);
+    //  background-color: $--border-color-base;
+    //}
+
+    .Gildata-leftarrow {
+      font-size: $--font-size-medium;
+      align-self: center;
+      color: $--color-text-regular;
+    }
+
+    @include e(title) {
+      font-size: 14px;
+      font-weight: 600;
+      color: $--color-info;
+      margin: 0 12px;
+      line-height: 28px;
+    }
+
+    @include e(subtitle) {
+      line-height: 28px;
+      font-size: 12px;
+      font-weight: 400;
+      color: $--color-text-regular;
+    }
+  }
+
+  @include e(content) {
+    font-size: 18px;
+    color: $--color-text-primary;
+  }
+}

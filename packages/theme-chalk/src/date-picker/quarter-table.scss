@@ -1,0 +1,100 @@
+@import "../common/var";
+@include b(quarter-table){
+    font-size: 12px;
+    margin: -1px;
+    border-collapse: separate;
+    border-spacing: 0 4px;
+    
+    td {
+      text-align: center;
+      padding: 8px 0px;
+      cursor: pointer;
+      & div {
+        height: 28px;
+        padding: 6px 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+      }
+      &.today {
+        .cell {
+          border: 1px solid  $--color-primary;
+          color: $--color-primary;
+          // font-weight: bold;
+          height: 20px;
+          line-height: 20px;
+        }
+        &.start-date .cell,
+        &.end-date .cell {
+          color: $--color-white;
+        }
+      }
+  
+      &.disabled .cell {
+        // background-color: $--background-color-base;
+        cursor: not-allowed;
+        color: $--color-text-disabled;
+  
+        &:hover {
+          // color: $--color-text-placeholder;
+          background-color: transparent;
+        }
+      }
+  
+      .cell {
+        // width: 60px;
+        width: $--datepicker-cell-width;
+        height: $--datepicker-cell-height;
+        display: block;
+        line-height: $--datepicker-cell-height;
+        color: $--color-info;
+        margin: 0 auto;
+        border-radius: $--datepicker-cell-border-radius;
+        &:hover{
+          background: $--color-neutral-hover;
+        }
+        &:focus{
+          background: $--color-neutral-pressed;
+        }
+      }
+  
+      &.in-range div {
+        background-color: $--datepicker-inrange-background-color;
+        &:hover {
+          // background-color: $--datepicker-inrange-hover-background-color;
+        }
+      }
+      &.in-range:not(.start-date):not(.end-date) .cell{
+        &:hover{
+          // background-color: $--datepicker-inrange-hover-background-color;
+          background-color: transparent;
+        }
+      }
+      &.start-date div,
+      &.end-date div {
+        color: $--color-white;
+      }
+  
+      &.start-date .cell,
+      &.end-date .cell {
+        color: $--color-white;
+        background-color: $--datepicker-active-color;
+      }
+  
+      &.start-date div {
+        border-top-left-radius: $--datepicker-cell-border-radius;
+        border-bottom-left-radius: $--datepicker-cell-border-radius;
+      }
+  
+      &.end-date div {
+        border-top-right-radius: $--datepicker-cell-border-radius;
+        border-bottom-right-radius: $--datepicker-cell-border-radius;
+      }
+  
+      &.current:not(.disabled) .cell {
+        // color: $--datepicker-active-color;
+        color: $--color-white;
+        background-color: $--datepicker-active-color;
+      }
+    }
+}

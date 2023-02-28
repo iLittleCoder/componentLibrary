@@ -1,0 +1,105 @@
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
+
+@include b(breadcrumb) {
+  display: flex;
+  font-size: $--font-size-base;
+  line-height: 18px;
+  @include utils-clearfix;
+
+  @include e(separator) {
+    margin: 0 8px;
+    color: $--color-text-disabled !important;
+    font-weight: bold;
+    line-height: 18px !important;
+
+    &[class*=icon] {
+      margin: 0 6px;
+      font-weight: normal;
+    }
+  }
+
+  .jy-dropdown {
+    .Gildata-more {
+      cursor: pointer;
+      line-height: 18px !important;
+      &:hover {
+        color: $--color-primary;
+      }
+    }
+  }
+
+  @include e(item) {
+    //float: left;
+
+    @include e(inner) {
+      color: $--color-text-regular;
+      line-height: 18px;
+
+      // &.is-link, & a {
+      &.is-link, & a {
+        font-weight: 600;
+        text-decoration: none;
+        transition: $--color-transition-base;
+        color: $--color-text-primary;
+
+        &:hover {
+          color: $--color-primary-hover;
+          cursor: pointer;
+        }
+
+        &:active {
+          color: $--color-primary-pressed;
+          cursor: pointer;
+        }
+      }
+
+      & a {
+        color: var(--color-info);
+      }
+
+      @include when(disabled) {
+        cursor: not-allowed;
+        color: $--color-text-disabled;
+
+        a {
+          pointer-events:none;
+          cursor: not-allowed;
+          color: $--color-text-disabled;
+
+          &:hover {
+            cursor: not-allowed;
+            color: $--color-text-disabled;
+          }
+        }
+      }
+    }
+
+    @include e(separator) {
+      @include when(disabled) {
+        cursor: not-allowed;
+        color: $--color-text-disabled;
+
+        &:hover {
+          cursor: not-allowed;
+          color: $--color-text-disabled;
+        }
+      }
+    }
+
+    &:last-child {
+
+      .jy-breadcrumb__separator {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.jy-breadcrumb__dropdown {
+  .jy-breadcrumb__inner {
+    color: $--color-info;
+  }
+}

@@ -1,0 +1,285 @@
+@use "sass:math";
+@import "mixins/mixins";
+@import "common/var";
+@import "input";
+
+@include b(input-number) {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  line-height: #{$--input-height - 2};
+
+  .jy-input {
+    display: block;
+
+    &__inner {
+      -webkit-appearance: none;
+      padding-left: #{$--input-height + 10};
+      padding-right: #{$--input-height + 10};
+      text-align: left;
+    }
+  }
+
+  @include e((increase, decrease)) {
+    position: absolute;
+    z-index: 1;
+    top: 1px;
+    width: $--input-height;
+    height: auto;
+    text-align: center;
+
+    color: $--color-text-regular;
+    cursor: pointer;
+    font-size: 13px;
+
+    &:hover {
+      &:not(.is-disabled){
+        background: $--color-neutral-hover;
+      }
+
+      &:not(.is-disabled) ~ .jy-input .jy-input__inner:not(.is-disabled) {
+        border-color: $--input-focus-border;
+      }
+    }
+    &:focus, &:active {
+      &:not(.is-disabled){
+              background-color: $--color-neutral-pressed;
+      }
+    }
+
+    &.is-disabled {
+      color: $--disabled-color-base;
+      cursor: not-allowed;
+    }
+  }
+
+  @include e(increase) {
+    right: 1px;
+    border-radius: 0 $--border-radius-base $--border-radius-base 0;
+
+  }
+
+  @include e(decrease) {
+    left: 1px;
+    border-radius: $--border-radius-base 0 0 $--border-radius-base;
+
+  }
+
+  @include when(disabled) {
+    @include e((increase, decrease)) {
+      border-color: $--disabled-border-base;
+      color: $--disabled-border-base;
+
+      &:hover {
+        color: $--disabled-border-base;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  @include m(medium) {
+    width: 200px;
+    line-height: #{$--input-medium-height - 2};
+
+    @include e((increase, decrease)) {
+      width: $--input-medium-height;
+      font-size: $--input-medium-font-size;
+    }
+
+    .jy-input__inner {
+      padding-left: #{$--input-medium-height + 7};
+      padding-right: #{$--input-medium-height + 7};
+    }
+    
+  }
+
+  @include m(large) {
+    width: 130px;
+    line-height: #{$--input-large-height - 2};
+
+    @include e((increase, decrease)) {
+      width: $--input-large-height;
+      font-size: $--input-large-font-size;
+
+      [class*=el-icon] {
+        transform: scale(.9);
+      }
+    }
+
+    .jy-input__inner {
+      padding-left: #{$--input-large-height + 7};
+      padding-right: #{$--input-large-height + 7};
+    }
+  }
+
+  @include m(mini) {
+    width: 130px;
+    line-height: #{$--input-mini-height - 2};
+
+    @include e((increase, decrease)) {
+      width: $--input-mini-height;
+      font-size: $--input-mini-font-size;
+
+      [class*=el-icon] {
+        transform: scale(.8);
+      }
+    }
+
+    .jy-input__inner {
+      padding-left: #{$--input-mini-height + 7};
+      padding-right: #{$--input-mini-height + 7};
+    }
+  }
+
+  @include when(without-controls) {
+    .jy-input__inner {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  @include when(controls-right) {
+    .jy-input__inner {
+      padding-left: 8px;
+      padding-right: #{$--input-height + 10};
+    }
+
+    @include e((increase, decrease)) {
+      height: auto;
+      line-height: #{math.div($--input-height - 2, 2)};
+
+      [class*=el-icon] {
+        transform: scale(.8);
+      }
+    }
+
+    @include e(increase) {
+      border-radius: 0 $--border-radius-base 0 0;
+
+    }
+
+    @include e(decrease) {
+      right: 1px;
+      bottom: 1px;
+      top: auto;
+      left: auto;
+      border-right: none;
+
+      border-radius: 0 0 $--border-radius-base 0;
+    }
+
+    &[class*=medium] {
+      .jy-input__inner {
+        padding-left: 10px;
+      }
+      
+      [class*=increase], [class*=decrease] {
+        line-height: #{math.div($--input-medium-height - 2, 2)};
+      }
+    }
+
+    &[class*=large] {
+      .jy-input__inner {
+        padding-left: 12px;
+      }
+      [class*=increase], [class*=decrease] {
+        line-height: #{math.div($--input-large-height - 2, 2)};
+      }
+    }
+
+    &[class*=mini] {
+      .jy-input__inner {
+        padding-left: 6px;
+      }
+      [class*=increase], [class*=decrease] {
+        line-height: #{math.div($--input-mini-height - 2, 2)};
+      }
+    }
+  }
+
+  @include e(slottext) {
+    color: $--color-info;
+    position: absolute;
+    z-index: 1;
+    font-size: 12px;
+    line-height: 28px;
+  }
+  @include e(pretext) {
+    left: 8px;
+  }
+  @include e(appendtext) {
+    right: 38px;
+  }
+  @include when(pretext){
+    .jy-input__inner{
+      padding-left: 28px
+    }
+    &[class*=large] {
+      .jy-input__inner{
+        padding-left: 36px
+      }
+      .jy-input-number__pretext{
+        line-height: 40px;
+        left: 12px;
+      }
+    }
+    &[class*=medium] {
+      .jy-input__inner{
+        padding-left: 32px
+      }
+      .jy-input-number__pretext{
+        line-height: 32px;
+        left: 10px;
+      }
+    }
+    &[class*=mini] {
+      .jy-input__inner{
+        padding-left: 24px
+      }
+      .jy-input-number__pretext{
+        line-height: 22px;
+        left: 6px;
+      }
+    }
+  }
+  @include when(appendtext){
+    .jy-input__inner{
+      padding-right: 55px
+    }
+    &[class*=large] {
+      [class*=appendtext] {
+        right: 45px;
+      }
+      .jy-input__inner{
+        padding-right: 60px
+      }
+    }
+
+    &[class*=mini] {
+      [class*=appendtext] {
+        right: 30px;
+      }
+      .jy-input__inner{
+        padding-right: 35px
+      }
+    }
+  }
+
+  @include e(percentage){
+    color: $--color-info;
+    position: absolute;
+    z-index: 1;
+    font-size: 12px;
+    line-height: 28px;
+    right: 30px;
+    @include m(large){
+      right: 30px;
+    }
+    @include m(medium){
+      right: 34px;
+    }
+    @include m(mini){
+      right: 24px;
+    }
+  }
+}

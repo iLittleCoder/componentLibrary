@@ -1,0 +1,194 @@
+@import 'mixins/mixins';
+@import 'common/var';
+@import 'common/transition';
+@import 'checkbox';
+
+.is-draggStart {
+  background-color: $--tree-node-hover-background-color;
+  border-radius: 4px;
+
+  // .jy-tree-node__content{
+  //   margin-bottom: 0;
+  // }
+}
+.is-draggEnd {
+  background-color: $--color-neutral;
+}
+
+@include b(tree) {
+  position: relative;
+  cursor: default;
+  background: transparent;
+  color: $--tree-font-color;
+
+  @include e(empty-block) {
+    position: relative;
+    min-height: 60px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include e(empty-text) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $--color-text-secondary;
+    font-size: $--font-size-base;
+  }
+
+  @include e(drop-indicator) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $--color-primary;
+  }
+}
+
+@include b(tree-node) {
+  white-space: nowrap;
+  outline: none;
+  &:focus {
+    /* focus */
+    > .jy-tree-node__content:not(.is-disabled) {
+      background-color: $--tree-node-hover-background-color;
+    }
+  }
+
+  &.is-showCheckbox {
+    .jy-tree-node__label {
+      padding-left: 8px;
+    }
+  }
+
+  @include when(drop-inner) {
+    > .jy-tree-node__content .jy-tree-node__label {
+      background-color: $--color-primary;
+      color: #fff;
+    }
+  }
+
+  @include e(content) {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    border-radius: $--border-radius-base;
+    padding-right: 5px;
+    padding-left: 4px;
+
+    @include when(rightIcon) {
+      > .jy-tree-node__label {
+        flex: 1;
+      }
+    }
+
+    @include when(disabled) {
+      .jy-tree-node__label {
+        color: $--color-text-disabled !important;
+      }
+
+      cursor: not-allowed;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: $--color-neutral-hover;
+    }
+    &:active,
+    &:focus {
+      background-color: $--color-neutral-pressed;
+    }
+
+    .jy-tree.is-dragging & {
+      cursor: move;
+
+      & * {
+        pointer-events: none;
+      }
+    }
+
+    .jy-tree.is-dragging.is-drop-not-allow & {
+      cursor: not-allowed;
+    }
+
+    .jy-checkbox {
+      margin-left: 8px;
+      height: 22px;
+      .jy-checkbox__input {
+        padding: 4px 0;
+      }
+    }
+  }
+
+  @include e(expand-icon) {
+    cursor: pointer;
+    color: $--tree-expand-icon-color;
+    font-size: $--font-size-medium;
+
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+
+    &.expanded {
+      transform: rotate(90deg);
+    }
+
+    &.is-leaf {
+      color: transparent;
+      cursor: default;
+    }
+  }
+
+  @include e(label) {
+    font-size: $--font-size-base;
+    padding: 0 8px;
+  }
+
+  @include e(loading-icon) {
+    margin: 0 8px;
+    font-size: $--font-size-base;
+    color: $--color-primary;
+  }
+
+  .jy-tree-custom-leftIcon {
+    margin-left: 8px;
+    color: $--color-text-placeholder;
+  }
+
+  .jy-tree-custom-rightIcon {
+    color: $--color-text-regular;
+    &:hover,
+    &:focus {
+      color: $--color-primary-hover;
+    }
+    &:active {
+      color: $--color-primary-pressed;
+    }
+  }
+
+  & > .jy-tree-node__children {
+    overflow: hidden;
+    background-color: transparent;
+  }
+
+  &.is-expanded > .jy-tree-node__children {
+    display: block;
+  }
+}
+
+.jy-tree--highlight-current .jy-tree-node.is-current > .jy-tree-node__content {
+  background: $--background-primary-color;
+  color: $--color-primary;
+  //.jy-tree-node__expand-icon {
+  //  color: $--color-primary;
+  //}
+  .jy-tree-custom-leftIcon,
+  .jy-tree-custom-rightIcon {
+    color: $--color-primary;
+  }
+}

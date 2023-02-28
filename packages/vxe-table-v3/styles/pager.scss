@@ -1,0 +1,285 @@
+/**Variable**/
+@import './helpers/mixin.scss';
+
+/*pager*/
+.jy-table-pager {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $jy-font-color;
+  font-family: $jy-font-family;
+  text-align: right;
+  background-color: $jy-pager-background-color;
+  &.is--hidden {
+    display: none;
+  }
+  &.align--left {
+    text-align: left;
+  }
+  &.align--center {
+    text-align: center;
+  }
+  &.is--loading {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: $jy-loading-z-index;
+      user-select: none;
+      background-color: $jy-loading-background-color;
+    }
+  }
+  .jy-table-pager--prev-btn,
+  .jy-table-pager--next-btn,
+  .jy-table-pager--num-btn,
+  .jy-table-pager--jump-prev,
+  .jy-table-pager--jump-next {
+    color: inherit;
+    outline: 0;
+    border: 1px solid transparent;
+    &:not(.is--disabled) {
+      &:focus {
+        box-shadow: 0 0 0.25em 0 $jy-primary-color;
+      }
+      &:hover {
+        color: $jy-primary-color;
+      }
+      &:active {
+        background-color: $jy-button-default-background-color;
+      }
+    }
+  }
+  &.is--border,
+  &.is--perfect {
+    &:not(.is--background) {
+      .jy-table-pager--prev-btn,
+      .jy-table-pager--next-btn,
+      .jy-table-pager--num-btn,
+      .jy-table-pager--jump-prev,
+      .jy-table-pager--jump-next {
+        border-color: $jy-input-border-color;
+      }
+    }
+  }
+  &.is--background,
+  &.is--perfect {
+    .jy-table-pager--prev-btn,
+    .jy-table-pager--next-btn,
+    .jy-table-pager--jump-prev,
+    .jy-table-pager--num-btn,
+    .jy-table-pager--jump-next {
+      background-color: $jy-pager-perfect-button-background-color;
+    }
+    .jy-table-pager--jump-prev,
+    .jy-table-pager--num-btn,
+    .jy-table-pager--jump-next {
+      &:not(.is--disabled) {
+        &.is--active {
+          color: #fff;
+          background-color: $jy-primary-color;
+          &:hover {
+            background-color: $jy-primary-color;
+          }
+          &:focus {
+            border-color: $jy-primary-color;
+          }
+          &:active {
+            border-color: $jy-primary-color;
+            background-color: $jy-primary-color;
+          }
+        }
+      }
+    }
+  }
+  &.is--perfect {
+    border: 1px solid $jy-table-border-color;
+    border-top-width: 0;
+    background-color: $jy-pager-perfect-background-color;
+  }
+  &.is--border {
+    .jy-table-pager--num-btn {
+      &.is--active {
+        border-color: $jy-primary-color;
+      }
+    }
+  }
+  .jy-table-pager--wrapper {
+    flex-grow: 1;
+  }
+  .jy-table-pager--jump-icon,
+  .jy-table-pager--btn-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .jy-table-pager--left-wrapper,
+  .jy-table-pager--right-wrapper,
+  .jy-table-pager--total,
+  .jy-table-pager--prev-btn,
+  .jy-table-pager--next-btn,
+  .jy-table-pager--jump,
+  .jy-table-pager--jump-prev,
+  .jy-table-pager--jump-next,
+  .jy-table-pager--count,
+  .jy-table-pager--sizes {
+    margin: 0 0.4em;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .jy-table-pager--prev-btn,
+  .jy-table-pager--jump-prev,
+  .jy-table-pager--num-btn,
+  .jy-table-pager--jump-next,
+  .jy-table-pager--next-btn {
+    position: relative;
+    cursor: pointer;
+  }
+  .jy-table-pager--left-wrapper,
+  .jy-table-pager--right-wrapper,
+  .jy-table-pager--count,
+  .jy-table-pager--prev-btn,
+  .jy-table-pager--next-btn,
+  .jy-table-pager--jump-prev,
+  .jy-table-pager--num-btn,
+  .jy-table-pager--jump-next {
+    height: 2.15em;
+    line-height: 2em;
+    display: inline-block;
+  }
+  .jy-table-pager--jump .jy-table-pager--goto,
+  .jy-table-pager--sizes > .jy-table-input {
+    height: 2.15em;
+  }
+  .jy-table-pager--sizes > .jy-table-select--panel .jy-table-select-option {
+    text-align: center;
+  }
+  .jy-table-pager--jump-prev,
+  .jy-table-pager--prev-btn,
+  .jy-table-pager--next-btn,
+  .jy-table-pager--jump-next,
+  .jy-table-pager--num-btn,
+  .jy-table-pager--count {
+    min-width: 2.15em;
+  }
+  .jy-table-pager--btn-wrapper {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    .jy-table-pager--jump-prev,
+    .jy-table-pager--jump-next {
+      &:hover {
+        .jy-table-pager--jump-more-icon {
+          display: none;
+        }
+        .jy-table-pager--jump-icon {
+          display: inline-block;
+        }
+      }
+    }
+    .jy-table-pager--jump-icon {
+      display: none;
+    }
+  }
+  .jy-table-pager--jump-prev,
+  .jy-table-pager--prev-btn,
+  .jy-table-pager--next-btn,
+  .jy-table-pager--jump-next,
+  .jy-table-pager--num-btn {
+    text-align: center;
+    border-radius: $jy-border-radius;
+    margin: 0 0.25em;
+    user-select: none;
+    background-color: $jy-pager-background-color;
+    &:not(.is--disabled) {
+      &:hover {
+        color: $jy-primary-color;
+      }
+      &.is--active,
+      &:focus {
+        color: $jy-primary-color;
+      }
+      &:active {
+        color: $jy-primary-color;
+      }
+    }
+    &.is--disabled {
+      cursor: no-drop;
+      color: $jy-disabled-color;
+      &:hover {
+        color: $jy-disabled-color;
+      }
+    }
+  }
+  .jy-table-pager--num-btn {
+    vertical-align: middle;
+    &.is--active {
+      font-weight: 500;
+    }
+  }
+  .jy-table-pager--sizes {
+    width: 7em;
+    text-align: center;
+    cursor: pointer;
+    & .jy-table-input--inner {
+      text-align: center;
+    }
+  }
+  .jy-table-pager--count {
+    text-align: center;
+    & > span {
+      vertical-align: middle;
+    }
+    .jy-table-pager--separator {
+      margin-right: 0.2em;
+      &:before {
+        content: '/';
+      }
+    }
+  }
+  .jy-table-pager--jump .jy-table-pager--goto {
+    border-radius: $jy-border-radius;
+    border: 1px solid $jy-input-border-color;
+    color: $jy-font-color;
+    transition: border 0.2s ease-in-out;
+    padding: 0 0.4em;
+    background-color: $jy-input-background-color;
+    &:focus {
+      border: 1px solid $jy-primary-color;
+      outline: 0;
+    }
+  }
+  .jy-table-pager--jump {
+    .jy-table-pager--goto-text {
+      margin-right: 0.25em;
+    }
+    .jy-table-pager--classifier-text {
+      margin-left: 0.25em;
+    }
+    .jy-table-pager--goto {
+      width: 3.2em;
+      text-align: center;
+    }
+  }
+}
+
+.jy-table-pager {
+  font-size: $jy-font-size;
+  height: $jy-table-row-height-default;
+  &.size--medium {
+    font-size: $jy-font-size-medium;
+    height: $jy-table-row-height-medium;
+  }
+  &.size--small {
+    font-size: $jy-font-size-small;
+    height: $jy-table-row-height-small;
+  }
+  &.size--mini {
+    font-size: $jy-font-size-mini;
+    height: $jy-table-row-height-mini;
+  }
+}

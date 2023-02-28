@@ -1,0 +1,55 @@
+@import "common/var";
+@import "mixins/mixins";
+
+@include b(divider) {
+  border-top: 1px solid $--border-color-normal;
+  position: relative;
+
+  @include m(dashed) {
+    border-top: 1px dashed $--border-color-normal;
+  }
+
+  @include m(horizontal) {
+    display: block;
+    height: 0;
+    width: 100%;
+    margin: 7px 0;
+    &.is-text {
+      margin: 20px 0;
+    }
+  }
+
+  @include m(vertical) {
+    display: inline-block;
+    width: 0;
+    height: 12px;
+    margin: 0 20px;
+    vertical-align: middle;
+    position: relative;
+    border-left: 1px solid $--border-color-normal;
+  }
+
+  @include e(text) {
+    position: absolute;
+    background-color: transparent;
+    padding: 0 12px;
+    font-weight: 600;
+    color: $--color-info;
+    font-size: $--font-size-base;
+
+    @include when(left) {
+      left: 20px;
+      transform: translateY(-50%);
+    }
+
+    @include when(center)  {
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    @include when(right)  {
+      right: 20px;
+      transform: translateY(-50%);
+    }
+  }
+}

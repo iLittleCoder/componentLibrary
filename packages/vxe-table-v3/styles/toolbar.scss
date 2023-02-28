@@ -1,0 +1,207 @@
+/**Variable**/
+@import './base/checked.scss';
+
+/*toolbar*/
+.jy-table-toolbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: $jy-font-color;
+  font-family: $jy-font-family;
+  background-color: $jy-toolbar-background-color;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  &.is--perfect {
+    border: 1px solid $jy-table-border-color;
+    border-bottom-width: 0;
+    background-color: $jy-table-header-background-color;
+  }
+  &.is--loading {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: $jy-loading-z-index;
+      user-select: none;
+      background-color: $jy-loading-background-color;
+    }
+  }
+  .jy-table-buttons--wrapper {
+    flex-grow: 1;
+    & > .jy-table-button+.jy-table-button--item,
+    & > .jy-table-button--item+.jy-table-button,
+    & > .jy-table-button--item+.jy-table-button--item {
+      margin-left: 0.8em;
+    }
+    & > .jy-table-button--item {
+      display: inline-block;
+    }
+  }
+  .jy-table-tools--wrapper {
+    & > .jy-table-button+.jy-table-tool--item,
+    & > .jy-table-tool--item+.jy-table-button,
+    & > .jy-table-tool--item+.jy-table-tool--item {
+      margin-left: 0.8em;
+    }
+    & > .jy-table-tool--item {
+      display: inline-block;
+    }
+  }
+  .jy-table-tools--wrapper {
+    & > .jy-table-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .jy-table-tools--wrapper,
+  .jy-table-tools--operate {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  .jy-table-custom--wrapper {
+    position: relative;
+    margin-left: 0.8em;
+    &.is--active {
+      & > .jy-table-button {
+        background-color: $jy-toolbar-custom-active-background-color;
+        border-radius: 50%;
+      }
+      .jy-table-custom--option-wrapper {
+        display: block;
+      }
+    }
+  }
+  .jy-table-custom--option-wrapper {
+    display: none;
+    position: absolute;
+    right: 2px;
+    text-align: left;
+    background-color: $jy-toolbar-panel-background-color;
+    z-index: 19;
+    border: 1px solid $jy-table-border-color;
+    border-radius: $jy-border-radius;
+    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+    .jy-table-custom--header {
+      padding: 0.28em 0;
+      font-weight: 500;
+      border-bottom: 1px solid $jy-table-popup-border-color;
+    }
+    .jy-table-custom--body {
+      padding: 0.2em 0;
+      max-height: 17.6em;
+      .jy-table-custom--option {
+        &:hover {
+          background-color: $jy-table-row-hover-background-color;
+        }
+      }
+    }
+    .jy-table-custom--header,
+    .jy-table-custom--body {
+      & > li {
+        max-width: 16em;
+        min-width: 12.5em;
+        padding: 0.2em 1em 0.2em 2.3em;
+        @for $i from 2 through 8 {
+          $interval: $i - 1 + 0.2;
+          &.level--#{$i}{
+            padding-left: #{$interval + 2.3}em;
+            .jy-table-checkbox--icon {
+              left: #{$interval + 0.6}em;
+            }
+          }
+        }
+      }
+    }
+    .jy-table-custom--footer {
+      border-top: 1px solid $jy-table-popup-border-color;
+      text-align: right;
+      button {
+        background-color: transparent;
+        width: 50%;
+        height: 2.5em;
+        border: 0;
+        color: $jy-font-color;
+        text-align: center;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          color: $jy-primary-color;
+        }
+      }
+    }
+  }
+}
+
+.jy-table-custom--option-wrapper .jy-table-custom--header,
+.jy-table-custom--option-wrapper .jy-table-custom--body {
+  list-style-type: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  & > li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.jy-table-custom--option {
+  @extend %XECheckbox;
+  .jy-table-checkbox--icon {
+    left: 0.6em;
+    top: 0.38em;
+  }
+}
+
+.jy-table-toolbar {
+  font-size: $jy-font-size;
+  height: $jy-toolbar-height-default;
+  .jy-table-custom--option {
+    & > .jy-table-checkbox--icon {
+      font-size: $jy-checkbox-font-size-default;
+    }
+  }
+  &.size--medium {
+    font-size: $jy-font-size-medium;
+    height: $jy-toolbar-height-medium;
+    .jy-table-custom--option {
+      & > .jy-table-checkbox--icon {
+        font-size: $jy-checkbox-font-size-medium;
+      }
+    }
+  }
+  &.size--small {
+    font-size: $jy-font-size-small;
+    height: $jy-toolbar-height-small;
+    .jy-table-custom--option {
+      & > .jy-table-checkbox--icon {
+        font-size: $jy-checkbox-font-size-small;
+      }
+    }
+  }
+  &.size--mini {
+    font-size: $jy-font-size-mini;
+    height: $jy-toolbar-height-mini;
+    .jy-table-custom--option {
+      & > .jy-table-checkbox--icon {
+        font-size: $jy-checkbox-font-size-mini;
+      }
+    }
+  }
+}

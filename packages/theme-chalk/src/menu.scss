@@ -1,0 +1,468 @@
+@import 'mixins/mixins';
+@import 'mixins/utils';
+@import 'common/var';
+@import 'common/transition';
+
+@mixin active-border {
+  &::after {
+    transition: transform 0.3s;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -4px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: 2px;
+    background: $--color-primary;
+    border-radius: 4px;
+    box-shadow: $--menu-active-border-box-shadow-color;
+  }
+}
+
+@mixin menu-item {
+  line-height: 18px;
+  font-size: $--menu-item-font-size;
+  color: $--menu-item-font-color;
+  padding: 7px 0 7px 8px;
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $--menu-item-hover-fill;
+  }
+
+  @include when(disabled) {
+    color: $--color-text-disabled;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: none !important;
+
+    i {
+      color: $--color-text-disabled;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+
+@include b(menu) {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  background-color: $--menu-background-color;
+  @include utils-clearfix;
+
+  @include m(horizontal) {
+    padding: 5px 0;
+
+    & > .jy-menu-item {
+      float: left;
+      line-height: 18px;
+      margin: 0;
+      color: $--color-text-secondary;
+      margin-right: 24px;
+      padding: 2px 8px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:first-of-type {
+        margin-left: 32px;
+      }
+
+      a,
+      a:hover {
+        color: inherit;
+      }
+
+      &:not(.is-disabled):not(.is-active):hover,
+      &:not(.is-disabled):not(.is-active):focus {
+        background-color: $--color-neutral-hover;
+      }
+    }
+    & > .jy-submenu {
+      float: left;
+      margin-right: 24px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:focus,
+      &:hover {
+        outline: none;
+        .jy-submenu__title {
+          color: $--color-text-primary;
+          border-radius: $--border-radius-base;
+        }
+      }
+
+      &.is-active {
+        .jy-submenu__title {
+          color: $--color-text-primary;
+          font-weight: 600;
+
+          @include active-border;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+
+      & .jy-submenu__title {
+        line-height: 18px;
+        color: $--color-text-secondary;
+        padding: 2px 8px;
+
+        &:hover {
+          background-color: $--color-neutral-hover;
+        }
+      }
+      & .jy-submenu__icon-arrow {
+        position: static;
+        vertical-align: middle;
+        margin-left: 8px;
+        margin-top: -3px;
+      }
+    }
+    & .jy-menu {
+      & .jy-menu-item,
+      & .jy-submenu__title {
+        // background-color: $--menu-background-color;
+        float: none;
+        height: 28px;
+        line-height: 28px;
+        padding: 0 8px;
+        color: $--color-text-primary;
+      }
+      > li {
+        &:hover {
+          //background-color: $--color-neutral-hover;
+          border-radius: 4px;
+        }
+      }
+      & .jy-menu-item {
+        height: 28px;
+        line-height: 28px;
+        border-radius: 4px;
+        &:hover:not(.is-active) {
+          background-color: $--color-neutral-hover;
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 8px;
+        }
+      }
+      & .jy-menu-item.is-active,
+      & .jy-submenu.is-active > .jy-submenu__title {
+        //color: $--color-text-primary;
+      }
+    }
+    & .jy-menu-item:not(.is-disabled):hover,
+    & .jy-menu-item:not(.is-disabled):focus {
+      outline: none;
+      // color: $--color-text-primary;
+    }
+    & .jy-menu-item:not(.is-disabled):focus {
+      outline: none;
+      // color: $--color-text-primary;
+      background-color: $--color-tip;
+    }
+    & > .jy-menu-item.is-active {
+      color: $--color-text-primary;
+      font-weight: 600;
+      position: relative;
+      background-color: $--color-tip;
+      @include active-border;
+    }
+    @include b(submenu) {
+      @include when(opened) {
+        &:not(.is-active) .jy-submenu__title {
+          color: $--color-text-primary;
+        }
+      }
+    }
+  }
+
+  @include m(vertical) {
+    padding: 8px 0;
+
+    &:not(.jy-menu--collapse) {
+      .jy-submenu {
+        .jy-submenu__title {
+          margin: 0px 8px;
+          margin-bottom: 8px;
+        }
+      }
+      .jy-submenu.is-opened {
+        .jy-submenu__title {
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    .jy-menu-item {
+      margin: 0 8px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+
+      [class^='el-icon-'],
+      [class^='Gildata-'] {
+        margin-right: 8px;
+        text-align: center;
+        font-size: 16px;
+        line-height: inherit;
+      }
+    }
+
+    .jy-menu--inline {
+      background-color: $--background-primary-color-light;
+      padding: 4px 0;
+      padding-bottom: 0px;
+      margin-bottom: 4px;
+    }
+
+    .jy-menu--popup-right-start {
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    @include e(icon-arrow) {
+      position: absolute;
+      right: 8px;
+      top: 10px;
+      transition: transform 0.3s;
+      font-size: $--font-size-base;
+    }
+  }
+
+  // 折叠菜单
+  @include m(collapse) {
+    width: 48px;
+
+    > .jy-menu-item {
+      margin-bottom: 0;
+    }
+
+    > .jy-menu-item,
+    .jy-submenu {
+      height: 32px;
+      margin-bottom: 8px;
+    }
+
+    > .jy-menu-item,
+    > .jy-submenu > .jy-submenu__title {
+      margin: 0 8px;
+      padding: 0;
+      padding-left: 0 !important;
+
+      &:focus,
+      &:hover {
+        //background-color: unset !important;
+      }
+
+      [class^='el-icon-'],
+      [class^='Gildata-'] {
+        margin: 0;
+        font-size: $--font-size-medium;
+        text-align: center;
+        padding: 8px;
+        border-radius: $--border-radius-base;
+        line-height: 16px;
+        &:focus,
+        &:hover {
+          // background-color: $--color-neutral-hover;
+        }
+      }
+      .jy-submenu__icon-arrow {
+        display: none;
+      }
+      span {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: inline-block;
+      }
+    }
+
+    > .jy-menu-item.is-active i {
+      color: $--menu-active-color;
+      // background-color: $--color-neutral-pressed;
+      /* &:hover{
+        background-color: $--background-primary-color;
+      }*/
+    }
+    > .jy-submenu.is-active i {
+      color: $--color-primary;
+      /* &:hover{
+        background-color: $--background-primary-color;
+      }*/
+    }
+    .jy-menu .jy-submenu {
+      min-width: 200px;
+    }
+
+    .jy-submenu {
+      position: relative;
+      & .jy-menu {
+        position: absolute;
+        margin-left: 4px;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+        border: 1px solid $--border-color-light;
+        border-radius: $--border-radius-small;
+        box-shadow: $--box-shadow-light;
+      }
+
+      &.is-opened {
+        > .jy-submenu__title .jy-submenu__icon-arrow {
+          transform: none;
+        }
+      }
+    }
+  }
+  @include m(popup) {
+    z-index: 100;
+    min-width: 120px;
+    border: none;
+    padding: 8px;
+    border-radius: $--border-radius-small;
+    box-shadow: $--box-shadow-light-1;
+    background: $--color-tip;
+    &-bottom-start {
+      margin-top: 5px;
+
+      .jy-menu--popup-right-start {
+        margin-left: 12px;
+      }
+    }
+    &-right-start {
+      margin-left: 4px;
+      margin-right: 4px;
+      .jy-menu-item {
+        margin: 0px;
+      }
+      .jy-submenu .jy-submenu__title {
+        margin: 0px !important;
+      }
+      .jy-submenu.is-opened:not(.is-active) .jy-submenu__title {
+        color: $--color-info;
+      }
+
+      .jy-menu--popup-right-start {
+        margin-left: 12px;
+      }
+    }
+    .jy-submenu__title .jy-submenu__icon-arrow {
+      transform: none !important;
+    }
+  }
+}
+@include b(menu-item) {
+  @include menu-item;
+
+  & [class^='el-icon-'] {
+    margin-right: 5px;
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  @include when(active) {
+    color: $--menu-active-color;
+    background-color: $--menu-active-background-color;
+    i {
+      color: inherit;
+    }
+  }
+}
+
+@include b(submenu) {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  @include e(title) {
+    @include menu-item;
+
+    &:hover {
+      background-color: $--menu-item-hover-fill;
+    }
+  }
+  & .jy-menu {
+    border: none;
+  }
+  & .jy-menu-item {
+    height: 32px;
+    line-height: 18px;
+    padding-left: 32px;
+  }
+  @include e(icon-arrow) {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transition: transform 0.3s;
+    font-size: $--font-size-base;
+  }
+  @include when(active) {
+    > .jy-submenu__title {
+      color: $--color-primary;
+      border-bottom-color: $--color-primary;
+      &:hover {
+        background: transparent;
+        color: $--color-primary;
+      }
+    }
+  }
+  @include when(opened) {
+    .jy-submenu__title {
+      // color:$--color-primary ;
+    }
+    > .jy-submenu__title .jy-submenu__icon-arrow {
+      transform: rotateZ(180deg);
+    }
+  }
+  @include when(disabled) {
+    .jy-submenu__title,
+    .jy-menu-item,
+    i {
+      color: $--color-text-disabled !important;
+      cursor: not-allowed !important;
+      background: none !important;
+    }
+  }
+  [class^='el-icon-'],
+  [class^='Gildata-'] {
+    margin-right: 8px;
+    text-align: center;
+    font-size: 16px;
+    line-height: inherit;
+  }
+}
+
+@include b(menu-item-group) {
+  > ul {
+    padding: 0;
+  }
+  @include e(title) {
+    padding: 7px 0 7px 20px;
+    line-height: normal;
+    font-size: 12px;
+    color: $--color-text-secondary;
+  }
+}
+
+.horizontal-collapse-transition .jy-submenu__title .jy-submenu__icon-arrow {
+  transition: 0.2s;
+  opacity: 0;
+}

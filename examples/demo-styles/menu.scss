@@ -1,0 +1,37 @@
+.demo-block.demo-menu {
+  background-color: #F7F7F7;
+
+  .jy-menu-vertical-demo {
+    width: 160px;
+  }
+  .jy-menu-vertical-demo-last:not(.jy-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+  }
+
+  .jy-menu-demo {
+    padding-left: 55px;
+  }
+  .jy-menu-vertical-demo:not(.jy-menu--collapse) {
+    width: 160px;
+    min-height: 400px;
+  }
+  .line {
+    height: 1px;
+    background-color: #e0e6ed;
+    margin: 35px -24px;
+  }
+  h5 {
+    font-size: 14px;
+    color: #8492a6;
+    margin-top: 10px;
+  }
+  .tac {
+    text-align: center;
+
+    .jy-menu-vertical-demo {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+}

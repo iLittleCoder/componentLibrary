@@ -1,0 +1,42 @@
+.demo-block {
+  .demo-backtop{
+    color: #202020;
+  }
+  .backtop-up {
+    border-radius: 4px;
+    background: #256dff;
+  }
+
+  .jy-backtop-up {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #3F7FFF;
+    }
+    &:active {
+      background-color: #2160E0;
+    }
+  }
+}
+
+
+.BlackTheme{
+  .demo-backtop{
+    color: #e6e6e6;
+  }
+  .backtop-up {
+    background: #F5BA63;
+  }
+  .jy-backtop-up {
+    &:hover {
+      background-color: #F6C276;
+    }
+    &:active {
+      background-color: #D8A457;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+/**Variable**/
+
+/*快捷菜单*/
+.jy-table--context-menu-wrapper,
+.jy-table--context-menu-clild-wrapper {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  border: 1px solid $jy-table-popup-border-color;
+  box-shadow: 3px 3px 4px -2px rgba(0,0,0,.6);
+  padding: 0 1px;
+  user-select: none;
+  color: $jy-table-font-color;
+  font-family: $jy-font-family;
+  background-color: $jy-table-menu-background-color;
+  list-style: none;
+}
+.jy-table-context-menu--link {
+  display: block;
+
+  width: $jy-table-menu-item-width;
+  line-height: 26px;
+  color: $jy-table-font-color;
+  cursor: pointer;
+  .jy-table-context-menu--link-prefix,
+  .jy-table-context-menu--link-suffix {
+    position: absolute;
+    top: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+  }
+  .jy-table-context-menu--link-prefix {
+    left: 5px;
+  }
+  .jy-table-context-menu--link-suffix {
+    right: 5px;
+    &.suffix--haschild {
+      top: 8px;
+      &:before {
+        position: absolute;
+        content: "";
+        border: 4px solid transparent;
+        border-left-color: #727272;
+      }
+    }
+  }
+
+  .jy-context-menu--link-content {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.jy-table-context-menu--option-wrapper,
+.jy-table--context-menu-clild-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    position: relative;
+    margin: 1px 0;
+    border: 1px solid transparent;
+    padding: 0 2.5em;
+    line-height: 26px;
+
+    &:last-child {
+      border: 0;
+    }
+    &.link--active {
+      background-color: $--color-neutral-hover;
+      border-color:$--color-neutral-hover;
+
+    }
+    &.link--disabled {
+      & > .jy-table-context-menu--link {
+        color: $jy-disabled-color;
+        cursor: no-drop;
+      }
+      &.link--active {
+        border-color:#C0C1C2;
+        background-color: #EEEEEE;
+        &:hover {
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}
+.jy-table--context-menu-clild-wrapper {
+  display: none;
+  top: 0;
+  left: 104%;
+  &.is--show {
+    display: block;
+  }
+}
+.jy-context-menu--link{
+  color: $jy-table-font-color;
+}

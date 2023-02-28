@@ -1,0 +1,58 @@
+.demo-block {
+  .jy-dropdown {
+    vertical-align: top;
+
+    & + .jy-dropdown {
+      margin-left: 15px;
+    }
+  }
+  .jy-dropdown-link {
+    cursor: pointer;
+    color: #256DFF;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
+}
+
+.block-col-2 {
+  margin: -24px;
+
+  .jy-col {
+    padding: 30px 0;
+    text-align: center;
+    border-right: 1px solid #eff2f6;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+.demo-dropdown .demonstration {
+  display: block;
+  color: #8492a6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.BlackTheme{
+  .demo-block {
+    .jy-dropdown-link {
+      color: #f5ba63;
+    }
+    
+  }
+  
+  .block-col-2 {
+    .jy-col {
+      border-right: solid 1px rgba(#e6e6e6, 0.12);
+  
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+  
+}

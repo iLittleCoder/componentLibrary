@@ -1,0 +1,276 @@
+@import '../common/var';
+@mixin button-group-secondary($color) {
+  background: $color;
+  border-color: $color;
+
+  @include when(secondary) {
+    background: $--background-color-white;
+    color: $color;
+  }
+}
+
+@mixin button-plain($color, $type) {
+  color: $color;
+  //background: mix($--button-base-color, $color, $--mix-radio);
+  //border-color: mix($--button-base-color, $color, 60%);
+
+  /* 这里border-color直接修改成了 $color */
+  //border-color: $color;
+
+  /*
+    @else if $type == info {
+      background: $--background-info-color;
+      border-color: $--border-info-color;
+    }
+    没有info状态
+  */
+
+  @if $type == primary {
+    background: $--background-primary-color;
+    border-color: $--border-primary-color;
+  } @else if $type == success {
+    background: $--background-success-color;
+    border-color: $--border-success-color;
+  } @else if $type == warning {
+    background: $--background-warning-color;
+    border-color: $--border-warning-color;
+  } @else if $type == danger {
+    background: $--background-danger-color;
+    border-color: $--border-danger-color;
+  }
+
+  &:hover,
+  &:focus {
+    background: $color;
+    border-color: $color;
+    color: $--color-white;
+  }
+
+  &:active {
+    //background: mix($--color-black, $color, $--mix-percent);
+    //border-color: mix($--color-black, $color, $--mix-percent);
+    color: $--color-text-base;
+    outline: none;
+    /*
+    @else if $type == info {
+      background: $--color-info-pressed;
+      border-color: $--color-info-pressed;
+    }
+    没有info状态
+  */
+    @if $type == primary {
+      background: $--color-primary-pressed;
+      border-color: $--color-primary-pressed;
+    } @else if $type == success {
+      background: $--color-success-pressed;
+      border-color: $--color-success-pressed;
+    } @else if $type == warning {
+      background: $--color-warning-pressed;
+      border-color: $--color-warning-pressed;
+    } @else if $type == danger {
+      background: $--color-danger-pressed;
+      border-color: $--color-danger-pressed;
+    }
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $--color-text-disabled;
+      background: $--background-color-disabled;
+      border-color: transparent;
+    }
+  }
+}
+
+@mixin button-secondary($color, $type) {
+  color: $color;
+  background: $--color-neutral;
+  border-color: $color;
+
+  &:hover,
+  &:focus {
+    background: $--color-neutral;
+    //border-color: mix($--color-white, $color, $--mix-percent);
+    //color: mix($--color-white, $color, $--mix-percent);
+    /*
+   @else if $type == info {
+      border-color: $--color-info-hover;
+      color: $--color-info-hover;
+    }
+    没有info状态
+  */
+    @if $type == primary {
+      border-color: $--color-primary-hover;
+      color: $--color-primary-hover;
+    } @else if $type == success {
+      border-color: $--color-success-hover;
+      color: $--color-success-hover;
+    } @else if $type == warning {
+      border-color: $--color-warning-hover;
+      color: $--color-warning-hover;
+    } @else if $type == danger {
+      border-color: $--color-danger-hover;
+      color: $--color-danger-hover;
+    }
+  }
+
+  &:active {
+    background: $--color-neutral;
+    //border-color: mix($--color-black, $color, $--mix-percent);
+    //color: mix($--color-black, $color, $--mix-percent);
+    outline: none;
+    /*
+   @else if $type == info {
+      border-color: $--color-info-pressed;
+      color: $--color-info-pressed;
+    }
+    没有info状态
+  */
+    @if $type == primary {
+      border-color: $--color-primary-pressed;
+      color: $--color-primary-pressed;
+    } @else if $type == success {
+      border-color: $--color-success-pressed;
+      color: $--color-success-pressed;
+    } @else if $type == warning {
+      border-color: $--color-warning-pressed;
+      color: $--color-warning-pressed;
+    } @else if $type == danger {
+      border-color: $--color-danger-pressed;
+      color: $--color-danger-pressed;
+    }
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $--color-text-disabled;
+      background: transparent;
+      border-color: $--border-color-disabled;
+    }
+  }
+}
+
+@mixin button-variant($color, $background-color, $border-color, $type) {
+  color: $color;
+
+  background: $background-color;
+
+  border-color: $border-color;
+
+  &:hover,
+  &:focus {
+    color: $color;
+    /*
+   @else if $type == info {
+      background: $--color-info-hover;
+      border-color: $--color-info-hover;
+    } 
+    没有info状态
+  */
+    @if $type == primary {
+      background: $--color-primary-hover;
+      border-color: $--color-primary-hover;
+    } @else if $type == success {
+      background: $--color-success-hover;
+      border-color: $--color-success-hover;
+    } @else if $type == warning {
+      background: $--color-warning-hover;
+      border-color: $--color-warning-hover;
+    } @else if $type == danger {
+      background: $--color-danger-hover;
+      border-color: $--color-danger-hover;
+    }
+  }
+
+  &:active {
+    //background: mix($--color-black, $background-color, $--mix-percent);
+    //border-color: mix($--color-black, $border-color, $--mix-percent);
+    color: $color;
+    outline: none;
+    /*
+   @else if $type == info {
+      background: $--color-info-pressed;
+      border-color: $--color-info-pressed;
+    } 
+    没有info状态
+  */
+    @if $type == primary {
+      background: $--color-primary-pressed;
+      border-color: $--color-primary-pressed;
+    } @else if $type == success {
+      background: $--color-success-pressed;
+      border-color: $--color-success-pressed;
+    } @else if $type == warning {
+      background: $--color-warning-pressed;
+      border-color: $--color-warning-pressed;
+    } @else if $type == danger {
+      background: $--color-danger-pressed;
+      border-color: $--color-danger-pressed;
+    }
+  }
+
+  &.is-active {
+    //background: mix($--color-black, $background-color, $--mix-percent);
+    //border-color: mix($--color-black, $border-color, $--mix-percent);
+    color: $color;
+    /*
+   @else if $type == info {
+      background: $--color-info-pressed;
+      border-color: $--color-info-pressed;
+    }
+    没有info状态
+  */
+    @if $type == primary {
+      background: $--color-primary-pressed;
+      border-color: $--color-primary-pressed;
+    } @else if $type == success {
+      background: $--color-success-pressed;
+      border-color: $--color-success-pressed;
+    } @else if $type == warning {
+      background: $--color-warning-pressed;
+      border-color: $--color-warning-pressed;
+    } @else if $type == danger {
+      background: $--color-danger-pressed;
+      border-color: $--color-danger-pressed;
+    }
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $--color-text-disabled;
+      background: $--background-color-disabled;
+      border-color: transparent;
+    }
+  }
+
+  &.is-plain {
+    @include button-plain($background-color, $type);
+  }
+  &.is-secondary {
+    @include button-secondary($background-color, $type);
+  }
+}
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  border-radius: $border-radius;
+  &.is-round {
+    padding: $padding-vertical $padding-horizontal;
+  }
+}
+
+@mixin button-single-loading($padding-vertical, $padding-horizontal, $background-color, $border-color) {
+  padding: $padding-vertical $padding-horizontal;
+  background: $background-color;
+  border-color: $border-color;
+}

@@ -1,0 +1,15 @@
+.demo-block {
+  .jy-date-editor + .jy-date-editor {
+    margin-left: 10px;
+  }
+  .show-desc{
+    color: rgba(#202020,0.65);
+  }
+}
+.BlackTheme{
+  .demo-block {
+    .show-desc{
+      color: rgba(#e6e6e6,0.65);
+    }
+  }
+}

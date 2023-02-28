@@ -1,0 +1,141 @@
+@import "../common/var";
+
+@include b(date-range-picker) {
+  width: 532px;
+  &.jy-month-range-picker,
+  &.jy-year-range-picker{
+    width: 480px;
+  }
+  &.jy-quarter-range-picker{
+    width: 656px;
+  }
+  .jy-month-table{
+    padding: 0 8px;
+  }
+
+  &.has-sidebar {
+    width: 756px;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .el-picker-panel__body {
+    min-width: 513px;
+  }
+
+  .el-picker-panel__content {
+    margin: 0;
+  }
+
+  &.has-time{
+    // 时间日期选择器
+    .jy-date-range-picker__time-header .jy-input__inner{
+      text-align: center;
+      background-color: $--color-neutral;
+    }
+    
+  }
+
+  @include e(header) {
+    position: relative;
+    text-align: center;
+    // margin:0px;
+    margin: 0 -8px;
+
+    border-bottom: 1px solid $--border-color-normal;
+    height: 32px;
+    line-height: 32px;
+    .btn-float-left{
+      float: left;
+      padding: 0;
+      padding-left: 8px;
+    }
+    .btn-float-right{
+      float: right;
+      padding: 0;
+      padding-right: 8px;
+    }
+    [class*=arrow-left] {
+      float: left;
+      padding: 0;
+      padding-left: 8px;
+    }
+
+    [class*=arrow-right] {
+      float: right;
+      padding: 0;
+      padding-right: 8px;
+    }
+
+    div {
+      // font-size: 16px;
+      // font-weight: 500;
+      margin-right: 10px;
+      font-size: $--datepicker-header-label-font-size;
+      font-weight: bold;
+    }
+  }
+
+
+  @include e(content) {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    margin: 0;
+    padding:0 8px;
+
+    @include when(left) {
+      // border-right: 1px solid $--datepicker-inner-border-color;
+    }
+    .el-date-range-picker__header {
+
+      div {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+    }
+  }
+
+  @include e(editors-wrap) {
+    box-sizing: border-box;
+    display: table-cell;
+
+    @include when(right) {
+      text-align: right;
+    }
+  }
+
+  @include e(time-header) {
+    position: relative;
+    border-bottom: 1px solid $--datepicker-inner-border-color;
+    font-size: 12px;
+    padding: 8px;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+
+    > .el-icon-arrow-right {
+      font-size: 20px;
+      vertical-align: middle;
+      display: table-cell;
+      color: $--datepicker-icon-color;
+    }
+  }
+
+  @include e(time-picker-wrap) {
+    position: relative;
+    display: table-cell;
+    padding: 0 4px;
+
+    .el-picker-panel {
+      position: absolute;
+      top: 13px;
+      right: 0;
+      z-index: 1;
+      background: $--color-white;
+    }
+  }
+}

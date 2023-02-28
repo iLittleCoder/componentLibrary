@@ -1,0 +1,87 @@
+@import 'mixins/mixins';
+@import 'common/var';
+
+@include b(select-charter) {
+  margin: 0;
+  padding: 0;
+  min-width: 422px;
+
+  @include e(header) {
+    .jy-menu--horizontal > .jy-menu-item:last-of-type {
+      margin-right: 32px;
+    }
+  }
+
+  @include e(line) {
+    box-shadow: $--popper-box-shadow;
+    height: 1px;
+    background-color: $--table-border-color;
+  }
+
+  @include e(wrap) {
+    max-height: $--select-dropdown-max-height;
+  }
+
+  @include e(list) {
+    padding: $--select-dropdown-item-mt 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @include e(letter) {
+    padding-left: 32px;
+    font-size: $--select-font-size;
+
+    color: $--color-text-placeholder;
+    line-height: 30px;
+    position: relative;
+
+    @include when(multiple) {
+      .jy-checkbox {
+        position: absolute;
+        left: 9px;
+      }
+    }
+  }
+
+  @include e(item) {
+    font-size: $--select-font-size;
+    padding: 0 32px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $--select-option-color;
+    height: $--select-option-height;
+    line-height: $--select-option-height;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    @include when(disabled) {
+      color: $--select-option-disabled-color;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    @include when(multiple) {
+      .jy-checkbox {
+        position: absolute;
+        left: 9px;
+      }
+    }
+
+    &:hover {
+      background-color: $--select-option-hover-background;
+    }
+
+    .optionChecked {
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $--select-option-selected-font-color;
+    }
+  }
+}

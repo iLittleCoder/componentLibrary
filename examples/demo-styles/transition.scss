@@ -1,0 +1,22 @@
+.demo-transition {
+  .transition-box {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: #256DFF;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+  }
+}
+
+.BlackTheme {
+  .demo-transition {
+    .transition-box {
+      background-color: #F5BA63;
+    }
+  }
+}

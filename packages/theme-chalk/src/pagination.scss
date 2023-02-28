@@ -1,0 +1,415 @@
+@import 'mixins/mixins';
+@import 'mixins/utils';
+@import 'common/var';
+@import 'select';
+
+@mixin backgroundColor {
+  &:hover,
+  &:focus {
+    background: $--color-neutral-hover;
+  }
+
+  &:active {
+    background: $--color-neutral-pressed;
+  }
+
+  &:disabled {
+    color: $--color-text-disabled;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      background: unset;
+    }
+  }
+}
+
+@include b(pagination) {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: $--pagination-font-color;
+  font-weight: $--font-weight-primary;
+  @include utils-clearfix;
+
+  span:not([class*='suffix']),
+  button {
+    display: inline-block;
+    font-size: $--font-size-base;
+    height: $--pagination-button-height;
+    line-height: $--pagination-button-height;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+
+  .jy-input__inner {
+    text-align: center;
+    -moz-appearance: textfield;
+    line-height: normal;
+
+    //@include backgroundColor;
+    &:disabled {
+      color: $--color-text-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  button {
+    border: none;
+    padding: 1px 4px;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include backgroundColor;
+  }
+
+  .btn-prev,
+  .btn-next {
+    vertical-align: top;
+    background: center center no-repeat;
+    background-size: 16px;
+    background-color: $--pagination-background-color;
+    cursor: pointer;
+    margin: 0;
+    color: $--color-text-regular;
+    border-radius: $--border-radius-base;
+
+    .el-icon {
+      display: block;
+      font-size: 12px;
+      font-weight: bold;
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .btn-prev {
+    margin-right: 8px;
+  }
+
+  .btn-next {
+    margin-left: 8px;
+  }
+
+  .jy-pager li.disabled {
+    color: $--color-text-placeholder;
+    cursor: not-allowed;
+  }
+
+  @include m(select-popper) {
+    &.jy-select-dropdown {
+      border: none;
+    }
+  }
+
+  @include m(small) {
+    .btn-prev,
+    .btn-next,
+    .jy-pager li,
+    .jy-pager li.btn-quicknext,
+    .jy-pager li.btn-quickprev,
+    .jy-pager li:last-child {
+      border-color: transparent;
+      font-size: 12px;
+      line-height: $--pagination-button-height;
+      height: $--pagination-button-height;
+      min-width: 20px;
+    }
+
+    .arrow.disabled {
+      visibility: hidden;
+    }
+
+    .more::before,
+    li.more::before {
+      line-height: $--pagination-button-height;
+    }
+
+    span:not([class*='suffix']),
+    button {
+      height: $--pagination-button-height;
+      line-height: $--pagination-button-height;
+    }
+
+    @include e(editor) {
+      height: 22px;
+      &.jy-input .jy-input__inner {
+        height: 22px;
+      }
+    }
+  }
+
+  @include e(sizes) {
+    font-weight: normal;
+    color: $--color-text-primary;
+
+    .jy-select {
+      .jy-select-right-icon {
+        .jy-input__icon {
+          color: $--color-text-secondary !important;
+        }
+      }
+    }
+
+    .jy-input {
+      // width: 84px;
+      margin: 0;
+
+      .jy-input__inner {
+        font-size: $--font-size-base;
+        border: none;
+        padding-left: 6px;
+        padding-right: 4px;
+        border-radius: $--pagination-border-radius;
+        color: $--color-info;
+
+        &:hover {
+          border-color: $--pagination-hover-color;
+        }
+      }
+    }
+
+    // pagesize 的下拉 icon
+    .jy-input .jy-input__suffix {
+      right: 8px;
+
+      .jy-select__caret {
+        font-size: $--font-size-base;
+        font-weight: bold;
+        color: $--color-text-regular;
+      }
+    }
+  }
+
+  @include e(total) {
+    margin-right: 10px;
+    font-weight: $--font-weight-primary;
+    color: $--color-text-primary;
+  }
+
+  @include e(jump) {
+    font-weight: normal;
+    color: $--color-text-primary;
+    margin-left: 8px;
+
+    .jy-input__inner {
+      padding: 0 3px;
+    }
+  }
+
+  @include e(rightwrapper) {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @include e(editor) {
+    line-height: $--pagination-button-height;
+    padding: 0 2px;
+    height: $--pagination-button-height;
+
+    text-align: center;
+    margin: 0 8px;
+    box-sizing: border-box;
+    border-radius: $--pagination-border-radius;
+
+    &.jy-input {
+      width: 44px;
+    }
+
+    &.jy-input .jy-input__inner {
+      height: $--pagination-button-height;
+
+      &:hover,
+      &:focus {
+        background: transparent;
+      }
+    }
+
+    .jy-input__inner::-webkit-inner-spin-button,
+    .jy-input__inner::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  @include when(background) {
+    .btn-prev,
+    .btn-next,
+    .jy-pager li {
+      margin: 0 5px;
+      background-color: $--color-info-lighter;
+      color: $--color-text-primary;
+      min-width: 20px;
+      border-radius: 2px;
+
+      &.disabled {
+        color: $--color-text-placeholder;
+      }
+    }
+
+    .btn-prev,
+    .btn-next {
+      padding: 0;
+
+      &:disabled {
+        color: $--color-text-placeholder;
+      }
+    }
+
+    .jy-pager li:not(.disabled) {
+      &:hover {
+        //color: $--pagination-hover-color;
+        color: $--color-primary;
+      }
+
+      &.active {
+        background-color: $--color-primary;
+        color: $--color-white;
+      }
+    }
+
+    &.jy-pagination--small {
+      .btn-prev,
+      .btn-next,
+      .jy-pager li {
+        margin: 0 3px;
+        min-width: 20px;
+      }
+    }
+  }
+}
+
+@include b(pager) {
+  user-select: none;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+
+  .more::before {
+    line-height: $--pagination-button-height;
+  }
+
+  li {
+    padding: 0 6px;
+    background: $--pagination-background-color;
+    vertical-align: top;
+    display: inline-block;
+    font-size: $--font-size-bigger;
+    min-width: 20px;
+    height: $--pagination-button-height;
+    line-height: $--pagination-button-height;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    border-radius: $--border-radius-base;
+
+    &:not(:last-of-type) {
+      margin-right: 8px;
+    }
+
+    &.btn-quicknext,
+    &.btn-quickprev {
+      line-height: $--pagination-button-height;
+      color: $--pagination-button-color;
+
+      &.disabled {
+        color: $--color-text-placeholder;
+      }
+    }
+
+    &.el-icon-d-arrow-left,
+    &.el-icon-d-arrow-right {
+      color: $--color-text-regular;
+    }
+
+    &.btn-quicknext,
+    &.btn-quickprev {
+      padding: 0 4px;
+    }
+
+    &.btn-quickprev:hover {
+      cursor: pointer;
+    }
+
+    &.btn-quicknext:hover {
+      cursor: pointer;
+    }
+
+    &.active + li {
+      border-left: 0;
+    }
+
+    &.active {
+      color: $--color-primary !important;
+      background: $--background-primary-color;
+      cursor: default;
+    }
+
+    @include backgroundColor;
+  }
+}
+
+@include b(simple-pager) {
+  // width: 44px;
+  margin: 0 -3px;
+  font-weight: normal;
+  color: $--color-text-primary;
+  text-align: center;
+
+  .jy-simple-one-pager {
+    color: $--color-info;
+  }
+
+  .jy-select {
+    .jy-select-new-main {
+      padding: 0;
+    }
+
+    .jy-input {
+      border-radius: $--pagination-border-radius;
+
+      .jy-input__inner {
+        font-size: $--font-size-base;
+        padding: 0 6px;
+        border: none;
+        height: 20px;
+        line-height: 20px;
+        color: $--color-info;
+
+        &:hover {
+          border-color: $--pagination-hover-color;
+        }
+      }
+    }
+
+    .jy-select-right-icon {
+      display: none;
+    }
+  }
+
+  // pagesize 的下拉 icon
+  .jy-input .jy-input__suffix {
+    display: none;
+  }
+
+  .jy-select-dropdown {
+    left: -18px !important;
+    border: none;
+
+    .jy-select-dropdown__item {
+      padding: 0 32px;
+
+      span {
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+  }
+}

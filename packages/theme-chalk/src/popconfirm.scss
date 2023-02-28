@@ -1,0 +1,27 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(popconfirm) {
+
+  @include e(popover) {
+    padding: 16px;
+  }
+  @include e(main) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    color: $--color-info;
+    line-height: 18px;
+  }
+  @include e(icon) {
+    margin-right: 8px;
+  }
+  @include e(action) {
+    text-align: right; 
+    margin: 0;
+
+    .jy-button + .jy-button {
+      margin-left: 8px;
+    }
+  }
+}

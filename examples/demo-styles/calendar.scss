@@ -1,0 +1,93 @@
+.demo-calendar.demo-block {
+  .calendar-demo{
+    margin-bottom: 20px;
+  }
+  .is-selected {
+    color: #256DFF;
+    padding: 0;
+    margin: 0;
+  } 
+  .is-not-selected{
+    color:rgb(20,20,20)
+  }
+  .calendar-class-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    margin: -16px;
+    padding: 16px;
+    box-shadow: 1px;
+    padding-bottom: 14px;
+    box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 10%);
+  }
+  .calendar-class{
+    height: 64px;
+    overflow: hidden;
+    margin: 0 -16px;
+    margin-top: 14px;
+    box-sizing: border-box;
+    .jy-scrollbar{
+      height: 64px;
+      .jy-scrollbar__wrap{
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    }
+
+    &-cell{
+      width: 100%;
+      overflow: hidden;
+      font-size: 12px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display:inline-block;
+      color: rgba(32,32,32,0.65);
+      line-height: 20px;
+      box-sizing: border-box;
+      font-weight: 400;
+      padding-right: 10px;
+    }
+    &-text{
+      height: 20px;
+    }
+
+    &-bot{
+      height: 6px;
+      width: 6px;
+      border-radius: 50%; 
+      display:inline-block;
+      margin-right: 8px;
+      margin-left: 6px;
+      &-success{
+        background-color: #35B55F;
+      }
+      &-error{
+        background-color: #EE5640;
+      }
+      &-warning{
+        background-color: #FFAA0E;
+      }
+    }
+  }
+}
+
+.BlackTheme{
+  .demo-calendar.demo-block{
+    .is-selected {
+      color: #F5BA63;
+    } 
+    .is-not-selected{
+      color:rgb(230,230,230)
+    }
+    .calendar-class-header{
+      box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 60%);
+    }
+    .calendar-class{
+      &-cell{
+        color: rgba(230,230,230,0.65);
+      }
+    }
+  }
+ 
+}

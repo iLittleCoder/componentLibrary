@@ -1,0 +1,29 @@
+node_modules
+.DS_Store
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+lerna-debug.log
+npm-debug.log.*
+yarn-debug.log.*
+yarn-error.log.*
+lerna-debug.log.*
+.idea
+.vscode
+examples/GildataDesign
+fe.element/GildataDesign
+.npmrc
+coverage
+waiter.config.js
+build/bin/algolia-key.js
+.envrc
+
+packages/theme-chalk/lib/
+1.js
+packages/vxe-table-v3/lib/
+lib/
+packages/vxe-table-v3/libTable/
+packages/vxe-table-v3/lib_temp/
+* copy.vue
+* copy.scss
+* copy.md

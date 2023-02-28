@@ -1,0 +1,102 @@
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
+@import "./input.scss";
+@import "./scrollbar.scss";
+@import "./popper";
+
+@include b(autocomplete) {
+  position: relative;
+  display: inline-block;
+  .jy-input__inner{
+  //  color: $--select-option-selected-font-color ;
+   color: $--color-info ;
+  }
+}
+
+@include b(autocomplete-suggestion) {
+  margin: 5px 0;
+  box-shadow: $--box-shadow-light-1;
+  border-radius: $--border-radius-base;
+  // border: 1px solid $--border-color-light;
+  box-sizing: border-box;
+  background-color: $--popper-background-color;
+  
+
+  @include e(wrap) {
+    max-height: 280px;
+    padding: $--popper-padding-1 0;
+    box-sizing: border-box;
+  }
+
+  @include e(list) {
+    margin: 0;
+    padding: 0;
+    .jy-empty{
+      padding-bottom: 7px;
+    }
+  }
+  .data_empty{
+    font-size: $--font-size-base;
+    color:  $--color-info;
+    padding: 0 $--popper-padding-2;
+  }
+
+  & li {
+    padding: 0 12px;
+    margin: 0;
+    line-height: 28px;
+    cursor: pointer;
+    // color: $--color-text-regular;
+    color: $--select-option-color; 
+    font-size: $--font-size-base;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      background-color: $--select-option-hover-background;
+    }
+    &:active {
+      background-color: $--color-neutral-pressed;
+    }
+
+    &.highlighted {
+      background-color: $--select-option-hover-background;
+    }
+
+    &.divider {
+      margin-top: 6px;
+      border-top: 1px solid $--color-black;
+    }
+
+    &.divider:last-child {
+      margin-bottom: -6px;
+    }
+    
+    & .addr{
+      @include color-opacity(0.45)
+    }
+  }
+
+  @include when(loading) {
+    li {
+      text-align: center;
+      height: 100px;
+      line-height: 100px;
+      font-size: 20px;
+      color: #999;
+      @include utils-vertical-center;
+
+      &:hover {
+        background-color: $--color-white;
+      }
+    }
+
+    & .Gildata-loading {
+      vertical-align: middle;
+      color: $--color-primary;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import "common/var";
+
+:root {
+  color-primary-hover: $--color-primary-hover;
+  color-success-hover: $--color-success-hover;
+  color-warning-hover: $--color-warning-hover;
+  color-danger-hover: $--color-danger-hover;
+  color-info-hover: $--color-info-hover;
+  color-main-hover: $--color-main-hover;
+  color-secondary-hover: $--color-secondary-hover;
+
+  color-primary-pressed: $--color-primary-pressed;
+  color-success-pressed: $--color-success-pressed;
+  color-warning-pressed: $--color-warning-pressed;
+  color-danger-pressed: $--color-danger-pressed;
+  color-info-pressedpressed: $--color-info-pressed;
+  color-main-pressed: $--color-main-pressed;
+  color-secondary-pressed: $--color-secondary-pressed;
+
+  color-primary-light-1: $--color-primary-light-1;
+  color-primary-light-2: $--color-primary-light-2;
+  color-primary-light-3: $--color-primary-light-3;
+  color-primary-light-4: $--color-primary-light-4;
+  color-primary-light-5: $--color-primary-light-5;
+  color-primary-light-6: $--color-primary-light-6;
+  color-primary-light-7: $--color-primary-light-7;
+  color-primary-light-8: $--color-primary-light-8;
+  color-primary-light-9: $--color-primary-light-9;
+
+  color-success-light: $--color-success-light;
+  color-warning-light: $--color-warning-light;
+  color-danger-light: $--color-danger-light;
+  color-info-light: $--color-info-light;
+
+  color-success-lighter: $--color-success-lighter;
+  color-warning-lighter: $--color-warning-lighter;
+  color-danger-lighter: $--color-danger-lighter;
+  color-info-lighter: $--color-info-lighter;
+
+  color-text-regular: $--color-text-regular;
+  color-text-secondary: $--color-text-secondary;
+  color-text-disabled: $--color-text-disabled;
+  color-text-placeholder: $--color-text-placeholder;
+  color-text-steps: $--color-text-steps;
+
+  border-color-base: $--border-color-base;
+  border-color-normal: $--border-color-normal;
+  border-color-disabled: $--border-color-disabled;
+
+  border-primary-color: $--border-primary-color;
+  border-success-color: $--border-success-color;
+  border-warning-color: $--border-warning-color;
+  border-danger-color: $--border-danger-color;
+  border-info-color: $--border-info-color;
+  border-main-color: $--border-main-color;
+
+  background-color-base: $--background-color-base;
+  background-color-disabled: $--background-color-disabled;
+  background-primary-color: $--background-primary-color;
+  background-success-color: $--background-success-color;
+  background-warning-color: $--background-warning-color;
+  background-danger-color: $--background-danger-color;
+  background-info-color: $--background-info-color;
+  background-main-color: $--background-main-color;
+  background-primary-light: $--background-primary-light;
+  background-modal-color: $--background-modal-color;
+
+  link-hover-color: $--link-hover-color;
+  group-option-fill-hover: $--group-option-fill-hover;
+  tab-header-fill-active: $--tab-header-fill-active;
+  tab-header-fill-hover: $--tab-header-fill-hover;
+
+  dialog-box-shadow: $--dialog-box-shadow;
+  slider-button-hover-color: $--slider-button-hover-color;
+  datepicker-inrange-background-color: $--datepicker-inrange-background-color;
+  loading-mask-background-color: $--loading-mask-background-color;
+}

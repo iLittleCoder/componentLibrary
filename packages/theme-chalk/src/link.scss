@@ -1,0 +1,119 @@
+@import 'mixins/mixins';
+@import 'common/var';
+
+$typeMap: (
+  primary: $--color-primary,
+  danger: $--color-danger,
+  success: $--color-success,
+  warning: $--color-warning,
+  info: $--color-info
+);
+
+@include b(link) {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: $--font-size-base;
+  font-weight: $--font-weight-primary;
+
+  @include when(underline) {
+    &:hover:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 0;
+      bottom: 0;
+      border-bottom: 1px solid $--color-primary;
+    }
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+  }
+
+  & [class*='el-icon-'] {
+    & + span {
+      margin-left: 4px;
+    }
+  }
+
+  & [class*='Gildata-'] {
+    & + span {
+      margin-left: 4px;
+    }
+  }
+
+  &.jy-link--default {
+    color: $--color-text-regular;
+    &:hover {
+      color: $--color-primary;
+    }
+    &:after {
+      border-color: $--color-primary;
+    }
+    @include when(disabled) {
+      color: $--color-text-disabled;
+    }
+  }
+
+  @each $type, $primaryColor in $typeMap {
+    &.jy-link--#{$type} {
+      color: $primaryColor;
+
+      @if $type == primary {
+        &:hover {
+          color: $--color-primary-hover;
+        }
+      } @else if $type == success {
+        &:hover {
+          color: $--color-success-hover;
+        }
+      } @else if $type == warning {
+        &:hover {
+          color: $--color-warning-hover;
+        }
+      } @else if $type == info {
+        &:hover {
+          color: $--color-info-hover;
+        }
+      } @else if $type == danger {
+        &:hover {
+          color: $--color-danger-hover;
+        }
+      }
+
+      &:after {
+        border-color: $primaryColor;
+      }
+      /*
+      @else if $type == info {
+          color: $--color-info-hover;
+        } 
+      */
+      @include when(disabled) {
+        @if $type == primary {
+          color: $--color-primary-hover;
+        } @else if $type == success {
+          color: $--color-success-hover;
+        } @else if $type == warning {
+          color: $--color-warning-hover;
+        } @else if $type == danger {
+          color: $--color-danger-hover;
+        }
+      }
+      @include when(underline) {
+        &:hover:after {
+          border-color: $primaryColor;
+        }
+      }
+    }
+  }
+}

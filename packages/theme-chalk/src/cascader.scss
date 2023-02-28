@@ -1,0 +1,578 @@
+@import "mixins/mixins";
+@import "common/var";
+@import "./input";
+@import "./popper";
+@import "./tag";
+@import "./cascader-panel";
+
+@include b(cascader) {
+  background-color: $--cascader-bg-color;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  font-size: $--font-size-base;
+  line-height: 26px;
+  width: 100%;
+
+  @include e(dropdown) {
+    .jy-empty {
+      margin-bottom: 10px;
+      .jy-empty__description {
+        p {
+          font-size: $--font-size-base;
+        }
+      }
+    }
+  }
+
+  @include e(box) {
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding-right: 22px;
+    height: 28px;
+    line-height: 28px;
+
+    &-content{
+      height: 28px;
+      line-height: 28px;
+      position: relative;
+    }
+    @include when(notAdaption){
+      max-width: 125px;
+      width: fit-content;
+    }
+
+     // 获取焦点并且可搜索
+    @include when(showBorder) {
+      border: 1px solid $--border-color-base;
+      border-radius: 4px;
+      &:hover,
+      &:focus {
+        border-color: $--color-primary-hover;
+      }
+      &:active {
+        border-color: $--color-primary-pressed;
+      }
+
+      .jy-cascader__box-content{
+        height: 26px;
+        line-height: 26px;
+      }
+      .jy-input__inner{
+        height: 26px;
+      }
+      .jy-cascader__icon{
+        .jy-input__icon[class^=Gildata-], 
+        .jy-input__icon[class*=" Gildata-"]{
+          line-height: 26px;
+        }
+      }
+
+    }
+    // 
+    @include when(highlight){
+      .jy-cascader__icon i:not(.Gildata-clean){
+        color: $--color-primary;
+      }
+      &.is-focus{
+        .jy-cascader__selected,
+        .jy-cascader__icon i {
+          color: $--color-text-secondary;
+        }
+      }
+    }
+    @include when(filter) {
+      cursor: text;
+    }
+  }
+  @include e(input){
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+
+    .jy-input__inner{
+      display: block;
+      text-overflow: ellipsis;
+      opacity: 1;
+      padding-right: 0;
+      height: 28px;
+      border: none;
+      color: $--color-text-regular;
+      &::placeholder{
+        color: $--color-text-regular;
+      }
+    }
+    &.is-filter .jy-input__inner{
+      opacity: 1;
+      cursor: text;
+    }
+  }
+
+
+  
+  @include e(icon){
+    position: absolute;
+    right: 6px;
+    top: 0px;
+    font-size: 16px;
+    height: 100%;
+    color: $--color-text-regular;
+    .jy-input__icon[class^=Gildata-], .jy-input__icon[class*=" Gildata-"]{
+      line-height: 28px;
+    }
+    .Gildata-clean {
+      color: $--color-text-placeholder;
+      &:hover {
+        color: $--color-text-regular;
+      }
+      &:active {
+        color: $--color-info;
+      }
+    }
+    
+    .Gildata-downarrow{ 
+      transition: transform .3s;
+      font-size: 16px;
+      color: $--color-text-regular;
+
+      @include when(reverse) {
+        transform: rotateZ(180deg);
+      }
+    }
+
+  }
+
+  @include e(placeholder){
+    display: inline-block;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    padding: 0 8px;
+    color: $--color-text-regular;
+    opacity: 0;
+    
+  }
+  @include e(selected){
+    display: inline-block;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    padding: 0 8px;
+    color: $--color-primary;
+    opacity: 0;
+  }
+ 
+
+  &:not(.is-disabled):hover {
+    .jy-input__inner {
+      cursor: pointer;
+    }
+  }
+
+  .jy-input {
+    display: block;
+
+    @include when(highlight) {
+      .jy-input__inner{
+        color: $--color-primary;
+      }
+    }
+
+    // 获取焦点时 文字显示黑色
+    @include when(focus) {
+      .jy-input__inner, i {
+        color: $--color-text-secondary;
+        vertical-align: baseline;
+      }
+    }
+
+    // 获取焦点并且可搜索
+    @include when(showBorder) {
+      .jy-input__inner {
+        border-color: $--border-color-base;
+
+        &:hover,
+        &:focus {
+          border-color: $--color-primary-hover;
+        }
+
+        &:active {
+          border-color: $--color-primary-pressed;
+        }
+      }
+    }
+  }
+
+  @include m(large) {
+    font-size: $--input-large-font-size;
+    line-height: $--input-large-height;
+
+    .jy-cascader__search-input {
+      height: $--input-large-height;
+      font-size: $--input-large-font-size;
+      line-height: $--input-large-height;
+    }
+
+    .jy-cascader__box{
+      height: $--input-large-height;
+      line-height: $--input-large-height;
+      padding-right: 26px;
+      &-content{
+        height: $--input-large-height;
+        line-height: $--input-large-height;
+      }
+      &.is-showBorder{
+        .jy-cascader__box-content{
+          height: #{$--input-large-height - 2 };
+          line-height: #{$--input-large-height - 2 };
+        }
+        .jy-cascader__icon{
+          .jy-input__icon[class^=Gildata-], 
+          .jy-input__icon[class*=" Gildata-"]{
+            line-height: #{$--input-large-height - 2 };
+          }
+        }
+        .jy-cascader__input .jy-input__inner{
+          height: #{$--input-medium-height - 2 };
+        }
+      }
+      .jy-cascader__icon{
+        .jy-input__icon[class^=Gildata-], 
+        .jy-input__icon[class*=" Gildata-"]{
+          line-height: $--input-large-height;
+        }
+      }
+      .jy-cascader__input .jy-input__inner{
+        height: #{$--input-large-height };
+      }
+
+      .jy-cascader__selected,
+      .jy-cascader__placeholder,
+      .jy-input__inner{
+        padding: 0 12px;
+      }
+      .jy-cascader__icon{
+        right: 10px;
+      }
+
+    }
+
+
+
+
+
+    
+  }
+
+  @include m(medium) {
+    font-size: $--input-medium-font-size;
+    line-height: $--input-medium-height;
+
+    .jy-cascader__search-input {
+      font-size: $--input-medium-font-size;
+      height: $--input-medium-height;
+      line-height: $--input-medium-height;
+    }
+
+    .jy-cascader__box{
+      height: $--input-medium-height;
+      line-height: $--input-medium-height;
+      padding-right: 24px;
+      &-content{
+        height: $--input-medium-height;
+        line-height: $--input-medium-height;
+      }
+      &.is-showBorder{
+        .jy-cascader__box-content{
+          height: #{$--input-medium-height - 2 };
+          line-height: #{$--input-medium-height - 2 };
+        }
+        .jy-cascader__icon{
+          .jy-input__icon[class^=Gildata-], 
+          .jy-input__icon[class*=" Gildata-"]{
+            line-height: #{$--input-medium-height - 2 };
+          }
+        }
+        .jy-cascader__input .jy-input__inner{
+          height: #{$--input-medium-height - 2 };
+        }
+      }
+      .jy-cascader__icon{
+        .jy-input__icon[class^=Gildata-], 
+        .jy-input__icon[class*=" Gildata-"]{
+          line-height: $--input-medium-height;
+        }
+      }
+      .jy-cascader__input .jy-input__inner{
+        height: #{$--input-medium-height };
+      }
+
+      .jy-cascader__selected,
+      .jy-cascader__placeholder,
+      .jy-input__inner{
+        padding: 0 10px;
+      }
+      .jy-cascader__icon{
+        right: 8px;
+      }
+
+    }
+  }
+
+  @include m(mini) {
+    font-size: $--input-mini-font-size;
+    line-height: $--input-mini-height;
+
+    .jy-cascader__search-input {
+      height: $--input-mini-height;
+      line-height: $--input-mini-height;
+    }
+
+    .jy-cascader__box{
+      height: $--input-mini-height;
+      line-height: $--input-mini-height;
+      padding-right: 20px;
+      &-content{
+        height: $--input-mini-height;
+        line-height: $--input-mini-height;
+      }
+      &.is-showBorder{
+        .jy-cascader__box-content{
+          height: #{$--input-mini-height - 2 };
+          line-height: #{$--input-mini-height - 2 };
+        }
+        .jy-cascader__input .jy-input__inner{
+          height: #{$--input-mini-height - 2 };
+        }
+        .jy-cascader__icon{
+          .jy-input__icon[class^=Gildata-], 
+          .jy-input__icon[class*=" Gildata-"]{
+            line-height: #{$--input-mini-height - 2 };
+          }
+        }
+      }
+      .jy-cascader__icon{
+        .jy-input__icon[class^=Gildata-], 
+        .jy-input__icon[class*=" Gildata-"]{
+          line-height: $--input-mini-height;
+        }
+      }
+      .jy-cascader__input .jy-input__inner{
+        height:  $--input-mini-height;
+      }
+
+      .jy-cascader__selected,
+      .jy-cascader__placeholder,
+       .jy-input__inner{
+        padding: 0 4px;
+      }
+      .jy-cascader__icon{
+        right: 4px;
+      }
+
+    }
+  }
+
+  @include when(disabled) {
+    .jy-cascader__label {
+      z-index: #{$--index-normal + 1};
+      color: $--disabled-color-base;
+    }
+  }
+
+  @include e(dropdown) {
+    margin: 5px 0;
+    font-size: $--cascader-menu-font-size;
+    background: $--cascader-menu-fill;
+    //border: $--cascader-menu-border;
+    border: none;
+    border-radius: $--cascader-menu-radius;
+    box-shadow: $--box-shadow-light-1;
+
+    > .jy-cascader__footer {
+      text-align: right;
+      padding-right: 8px;
+      border-top: 1px solid $--border-color-normal;
+
+      .jy-button {
+        padding: 6px;
+      }
+      .jy-button + .jy-button {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  @include e(tagScroll) {
+    border-bottom: 1px solid $--border-color-normal;
+
+
+    > .jy-scrollbar__wrap {
+      overflow-y: auto;
+    }
+  }
+
+  @include e(tags) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: normal;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 8px 0 0 8px;
+    max-height: 85px;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    /**
+    * 滚动条整体部分
+    * width 表示垂直方向滑轨的宽度
+    * height表示水平方向滑轨的高度
+    */
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      transition: .3s all;
+    }
+    /*滚动条的轨道*/
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      &:hover {
+        background-color: $--border-color-disabled;
+      }
+    }
+    /*滚动条里面的滑块，能向上向下移动*/
+    &::-webkit-scrollbar-thumb {
+      background-color: $--scrollbar-background-color;
+      border-radius: $--border-radius-base;
+      transition: .3s all;
+      &:hover {
+        background-color: $--scrollbar-hover-background-color;
+      }
+      &:active {
+        background-color: $--scrollbar-pressed-background-color;
+      }
+    }
+
+    .jy-tag {
+      max-width: calc(100% - 8px);
+      display: inline-flex;
+      align-items: center;
+      margin: 0 8px 8px 0;
+      text-overflow: ellipsis;
+      background: $--cascader-tag-background;
+      padding: 1px 4px 1px 6px;
+      border: none;
+
+      &:not(.is-hit) {
+        border-color: transparent;
+      }
+
+      > span {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .jy-tag__close {
+        flex: none;
+        background-color: transparent;
+        color: $--color-text-secondary;
+        margin-left: 2px;
+        top: 0px;
+
+        &:hover {
+          //background-color: $--color-text-secondary;
+        }
+      }
+    }
+  }
+
+  @include e(suggestion-panel) {
+    border-radius: $--cascader-menu-radius;
+    max-height: 204px;
+
+    .jy-scrollbar__view {
+      max-height: 165px;
+    }
+  }
+
+  @include e(suggestion-list) {
+
+    margin: 0;
+    padding: 6px 0;
+    font-size: $--font-size-base;
+    color: $--color-info;
+    text-align: center;
+
+    .jy-empty {
+      width: 100%;
+      padding-bottom: 15px;
+    }
+  }
+
+  @include e(suggestion-item) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    padding: 0 20px 0 22px;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+
+    &:hover, &:focus {
+      background: $--cascader-node-background-hover;
+    }
+
+    span {
+      padding: 0 10px;
+    }
+
+    &.is-checked {
+      color: $--color-info;
+      i {
+        position: absolute;
+        left: 10px;
+        margin-right: 10px;
+        color: $--color-primary;
+      }
+    }
+  }
+
+  @include e(empty-text) {
+    margin: 10px 0;
+    color: $--cascader-color-empty;
+  }
+
+  @include e(search-input) {
+    flex: 1;
+    height: 28px;
+    min-width: 60px;
+    margin-left: 8px;
+    padding: 0;
+    font-size: $--font-size-base;
+    color: $--cascader-menu-font-color;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $--color-text-placeholder;
+    }
+  }
+}

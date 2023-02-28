@@ -1,0 +1,157 @@
+@use "sass:math";
+@import "./common/var.scss";
+@import "./mixins/mixins.scss";
+
+[class*="jy-col-"] {
+  float: left;
+  box-sizing: border-box;
+}
+
+.jy-col-0 {
+  display: none;
+}
+
+@for $i from 0 through 24 {
+  .jy-col-#{$i} {
+    width: (math.div(1 , 24) * $i * 100) * 1%;
+  }
+
+  .jy-col-offset-#{$i} {
+    margin-left: (math.div(1 , 24) * $i * 100) * 1%;
+  }
+
+  .jy-col-pull-#{$i} {
+    position: relative;
+    right: (math.div(1 , 24) * $i * 100) * 1%;
+  }
+
+  .jy-col-push-#{$i} {
+    position: relative;
+    left: (math.div(1 , 24) * $i * 100) * 1%;
+  }
+}
+
+@include res(xs) {
+  .jy-col-xs-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .jy-col-xs-#{$i} {
+      width: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-xs-offset-#{$i} {
+      margin-left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-xs-pull-#{$i} {
+      position: relative;
+      right: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-xs-push-#{$i} {
+      position: relative;
+      left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(sm) {
+  .jy-col-sm-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .jy-col-sm-#{$i} {
+      width: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-sm-offset-#{$i} {
+      margin-left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-sm-pull-#{$i} {
+      position: relative;
+      right: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-sm-push-#{$i} {
+      position: relative;
+      left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(md) {
+  .jy-col-md-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .jy-col-md-#{$i} {
+      width: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-md-offset-#{$i} {
+      margin-left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-md-pull-#{$i} {
+      position: relative;
+      right: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-md-push-#{$i} {
+      position: relative;
+      left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(lg) {
+  .jy-col-lg-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .jy-col-lg-#{$i} {
+      width: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-lg-offset-#{$i} {
+      margin-left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-lg-pull-#{$i} {
+      position: relative;
+      right: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-lg-push-#{$i} {
+      position: relative;
+      left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(xl) {
+  .jy-col-xl-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .jy-col-xl-#{$i} {
+      width: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-xl-offset-#{$i} {
+      margin-left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-xl-pull-#{$i} {
+      position: relative;
+      right: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+
+    .jy-col-xl-push-#{$i} {
+      position: relative;
+      left: (math.div(1 , 24) * $i * 100) * 1%;
+    }
+  }
+}

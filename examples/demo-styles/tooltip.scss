@@ -1,0 +1,39 @@
+.demo-tooltip {
+  .jy-tooltip + .jy-tooltip {
+    margin-left: 15px;
+  }
+  .box {
+    width: 200px;
+
+    .top {
+      text-align: center;
+    }
+
+    .left {
+      float: left;
+      width: 60px;
+    }
+
+    .right {
+      float: right;
+      width: 60px;
+    }
+
+    .bottom {
+      clear: both;
+      text-align: center;
+    }
+
+    .item {
+      margin: 4px;
+    }
+
+    .left .jy-tooltip__popper,
+    .right .jy-tooltip__popper {
+      padding: 8px 10px;
+    }
+    .jy-tooltip {
+      margin-left: 0;
+    }
+  }
+}

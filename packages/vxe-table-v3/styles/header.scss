@@ -1,0 +1,146 @@
+/**Variable**/
+
+.jy-table {
+  .jy-table--header-wrapper {
+    color: $jy-table-header-font-color;
+    .jy-table--header-border-line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 0;
+      border-bottom: 0.5px   solid  $jy-table-border-color;
+    }
+  }
+  /*排序*/
+  .jy-cell--sort {
+    width: 1.5em;
+    height: 1.35em;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+  }
+  .jy-sort--asc-btn,
+  .jy-sort--desc-btn {
+    position: absolute;
+    left: 0.35em;
+    color: $jy-table-column-icon-border-color;
+    width: 1em;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      color: $jy-table-font-color;
+    }
+    &.sort--active {
+      color: $--color-text-primary;
+    }
+  }
+  .jy-sort--asc-btn {
+    top: -0.25em;
+  }
+  .jy-sort--desc-btn {
+    bottom: -0.15em;
+  }
+  .is--sortable:hover{
+      background: $--color-neutral-hover;
+  }
+}
+.jy-table{
+  .jy-header--column:last-child{
+    .jy-resizable{
+      display: none;
+    }
+  }
+}
+.jy-header--column {
+  position: relative;
+  font-weight: $jy-table-header-font-weight;
+  // user-select: none;
+  &.col--ellipsis {
+    & > .jy-cell {
+      display: flex;
+      align-items: center;
+      .jy-cell--title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      & > i,
+      & > span {
+        &:not(.jy-cell--title) {
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+  .jy-cell--required-icon {
+    display: inline-block;
+    color: $jy-table-validate-error-color;
+    width: 0.8em;
+    height: 1em;
+    line-height: 1em;
+    font-family: $jy-icon-font-family;
+    font-weight: normal;
+    position: relative;
+    &:before {
+      content: "*";
+      position: absolute;
+      left: 0;
+      top: 0.2em;
+    }
+  }
+  // .jy-cell--required-icon,
+  // .jy-cell--edit-icon,
+  // .jy-cell-help-icon,
+  // .jy-cell--title {
+  //   vertical-align: middle;
+  // }
+  .jy-cell--required-icon {
+    margin-right: 0.1em;
+  }
+  .jy-cell--edit-icon,
+  .jy-cell-help-icon {
+    margin-right: 0.2em;
+  }
+  .jy-cell-help-icon {
+    cursor: help;
+    vertical-align: text-bottom;
+  }
+  .jy-resizable {
+    position: absolute;
+    right: -7px;
+    bottom: 0;
+    width: 14px;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+    cursor: col-resize;
+    &.is--line {
+      &:before,
+      &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &:before {
+        width: 1px;
+        height: 50%;
+        background: $jy-table-resizable-line-color;
+      }
+      &:after {
+        width: 0;
+        height: 100%;
+      }
+    }
+
+  }
+}
+
+.jy-table--fixed-right-wrapper {
+  .jy-header--column {
+    .jy-resizable {
+      right: auto;
+      left: -7px;
+    }
+  }
+}

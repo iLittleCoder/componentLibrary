@@ -1,0 +1,53 @@
+.demo-select  {
+  .demo-flex{
+    display: flex;
+    align-items: center;
+  }
+  .jy-select{
+    width: 220px;
+  }
+  .width-200 .jy-select{
+    width: 200px;
+  }
+  .width-300 .jy-select{
+    width: 300px;
+  }
+  .show-desc{
+    font-size: 12px;
+    margin: 15px 0;
+    color: #202020;
+  }
+  .select-width-adation{
+    margin-bottom: 10px;
+    width: fit-content;
+  }
+  .select-flex{
+    display: flex;
+    align-items: center;
+    .jy-select{
+      width: 220px;
+    }
+  }
+ 
+}
+.jy-select-dropdown {
+  .set-option-color{
+    color: rgba(#202020,0.45) ;
+    font-size: 13px ;
+    margin-left: 12px ;
+  }
+}
+
+.BlackTheme{
+  .demo-select {
+    .show-desc{
+      color: #e6e6e6;
+    }
+    
+  }
+  .jy-select-dropdown{
+    .set-option-color{
+      color: rgba(#e6e6e6,0.45) ;
+    }
+  }
+}

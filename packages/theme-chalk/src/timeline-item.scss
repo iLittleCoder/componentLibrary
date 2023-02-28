@@ -1,0 +1,97 @@
+@import 'mixins/mixins';
+@import 'common/var';
+
+@include b(timeline-item) {
+  position: relative;
+  padding-bottom: 32px;
+  min-width: 100px;
+  @include e(wrapper) {
+    position: relative;
+    top: -7px;
+    &-inner {
+      display: none;
+    }
+  }
+
+  @include e(tail) {
+    position: absolute;
+    // top: 10px;
+    // height: calc(100% - 14px);
+    // border-left: 1px solid $--border-color-base;
+  }
+
+  @include e(icon) {
+    // color: $--color-white;
+    // font-size: $--font-size-small;
+  }
+
+  @include e(node) {
+    position: absolute;
+    background-color: $--timeline-node-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include m(normal) {
+      width: $--timeline-node-size-normal;
+      height: $--timeline-node-size-normal;
+    }
+    @include m(large) {
+      width: $--timeline-node-size-large;
+      height: $--timeline-node-size-large;
+    }
+    @include m(has-icon) {
+      width: $--timeline-node-size-has-icon;
+      height: $--timeline-node-size-has-icon;
+    }
+
+    @include m(primary) {
+      background-color: $--color-primary;
+    }
+    @include m(success) {
+      background-color: $--color-success;
+    }
+    @include m(warning) {
+      background-color: $--color-warning;
+    }
+    @include m(danger) {
+      background-color: $--color-danger;
+    }
+    @include m(info) {
+      background-color: $--color-info;
+    }
+  }
+
+  @include e(dot) {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include e(content) {
+    color: $--color-text-primary;
+    font-size: 14px;
+    &-div {
+      opacity: 0;
+      position: relative;
+      width: calc(50% - 22px);
+      font-size: 14px;
+    }
+  }
+
+  @include e(timestamp) {
+    color: $--color-text-placeholder;
+    line-height: 1;
+    font-size: $--font-size-extra-small;
+
+    @include when(top) {
+      margin-bottom: 8px;
+      padding-top: 4px;
+    }
+    @include when(bottom) {
+      margin-top: 8px;
+    }
+  }
+}

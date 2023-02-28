@@ -1,0 +1,51 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #256dff;
+  --color-success: #35b55f;
+  --color-warning: #ffaa0e;
+  --color-danger: #ee5640;
+  --color-info: #202020;
+  --color-neutral: #ffffff;
+  --color-tip: #ffffff;
+  --color-primary-hover: #3f7fff;
+  --color-success-hover: #4dbe72;
+  --color-warning-hover: #ffb42b;
+  --color-danger-hover: #f06a57;
+  --color-primary-pressed: #2160e0;
+  --color-success-pressed: #2f9f54;
+  --color-warning-pressed: #e0960c;
+  --color-danger-pressed: #d14c38;
+  --color-neutral-hover: #f0f0f0;
+  --color-neutral-pressed: #e1e1e1;
+  --color-text-regular: rgba(32, 32, 32, 0.65);
+  --color-text-disabled: rgba(32, 32, 32, 0.3);
+  --color-text-placeholder: rgba(32, 32, 32, 0.45);
+  --border-color-disabled: rgba(32, 32, 32, 0.04);
+  --border-primary-color: #d3e2ff;
+  --border-success-color: #d7f0df;
+  --border-warning-color: #ffeecf;
+  --border-danger-color: #fcddd9;
+  --border-main-color: #d3e2ff;
+  /* --background-color-base: rgba(32, 32, 32, 0.07); */
+  --background-color-base: #efefef;
+
+  --background-primary-color: #e5edff;
+  --background-success-color: #e7f6ec;
+  --background-warning-color: #fff5e2;
+  --background-danger-color: #fdebe8;
+  --background-main-color: #e5edff;
+  --background-modal-color: rgba(0, 0, 0, 0.45);
+  --background-primary-color-light: #f7f9fc;
+  --background-primary-color-neutral: #f7f7f7;
+  --popper-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.1);
+  --menu-active-background-color: #e5edff;
+  --menu-active-color: #256dff;
+  --loading-spinner-background-color: rgba(255, 255, 255, 0.9);
+  --tooltip-fill: #202020;
+  --scrollbar-background-color: rgba(20, 20, 20, 0.5);
+  --scrollbar-hover-background-color: rgba(32, 32, 32, 0.4);
+  --scrollbar-pressed-background-color: rgba(32, 32, 32, 0.6);
+  --table-border-color: #efefef;
+  --menu-active-border-box-shadow-color: 0px -1px 4px 0px rgba(37, 109, 255, 0.15);
+}

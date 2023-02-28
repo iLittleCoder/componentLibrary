@@ -1,0 +1,45 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(empty) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+
+  @include e(image) {
+    width: 85px;
+
+    img {
+      user-select: none;
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+      object-fit: contain; // 缩放替换后的内容以保持其纵横比，同时将其放入元素的内容框
+    }
+
+    svg {
+      fill: $--svg-monochrome-grey;
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+    }
+  }
+
+  @include e(description) {
+      font-size: $--font-size-bigger;
+      margin: 0;
+      color: $--color-text-placeholder;
+      line-height: 20px;
+    &.empty-mini{
+      font-size: $--font-size-base;
+    }
+
+  }
+
+  @include e(bottom) {
+    margin-top: 8px;
+  }
+}

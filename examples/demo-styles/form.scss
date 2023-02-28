@@ -1,0 +1,79 @@
+.demo-form {
+  .jy-select .jy-input {
+    // width: 380px;
+  }
+  .jy-form {
+    width: 460px;
+  }
+
+  .line {
+    text-align: center;
+    color: rgba(20,20,20,0.65);
+  }
+
+  .jy-checkbox-group {
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &:after,
+    &:before {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+      visibility: hidden;
+      font-size: 0;
+      height: 0;
+    }
+
+    .jy-checkbox {
+      float: left;
+      width: 160px;
+      padding-right: 20px;
+      margin: 0;
+      padding: 0;
+
+      + .jy-checkbox {
+        margin-left: 0;
+      }
+    }
+  }
+  .demo-form-normal {
+    width: 460px;
+  }
+  .demo-form-inline {
+    width: auto;
+
+  //  &:not( .jy-select) .jy-input {
+  //     width: 150px;
+  //   }
+    > * {
+      margin-right: 10px;
+    }
+  }
+  .demo-ruleForm {
+    width: 460px;
+
+    .jy-select .jy-input {
+      width: 360px;
+    }
+  }
+  .demo-dynamic {
+    .jy-input {
+      margin-right: 10px;
+      width: 270px;
+      vertical-align: top;
+    }
+  }
+  .fr {
+    float: right;
+  }
+}
+.BlackTheme{
+  .demo-form .line{
+    color: rgba(230,230,230,0.65);
+  }
+}

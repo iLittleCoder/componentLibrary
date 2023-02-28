@@ -1,0 +1,55 @@
+.jy-cascader {
+  width: 220px;
+}
+.cascader-demo {
+  margin-right: 50px;
+  margin-bottom: 10px;
+
+  .demonstration {
+    margin-bottom: 20px !important;
+  }
+}
+.cascader-title {
+  margin: 20px 0;
+  font-size: 12px;
+  color: rgb(20, 20, 20);
+}
+
+.demo-cascader-size {
+  .jy-cascader {
+    vertical-align: top;
+    margin-right: 15px;
+  }
+}
+.cascader-flex {
+  display: flex;
+}
+.demo-cascader .block {
+  padding: 30px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  &:last-child {
+    border-right: none;
+  }
+  .jy-cascader__box {
+    text-align: left;
+  }
+}
+.demo-cascader .demonstration {
+  display: block;
+  color: #8492a6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.demo-cascader {
+  .block {
+    width: 240px;
+  }
+}
+
+.BlackTheme {
+  .jy-cascader {
+    width: 220px;
+  }
+}

@@ -1,0 +1,259 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(message) {
+  min-width: $--message-min-width;
+  box-sizing: border-box;
+  border-radius: $--border-radius-base;
+  border-width: $--border-width-base;
+  border-style: $--border-style-base;
+  border-color: $--border-main-color;
+  position: fixed;
+  color: $--color-text-primary;
+  font-weight: $--font-weight-primary;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background-color: $--background-main-color;
+  transition: opacity 0.3s, transform .4s, top 0.4s;
+  overflow: hidden;
+  // padding: 8px;
+  padding: 9px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: $--box-shadow-light-4;
+  .svg-icon {
+    margin-right: 10px;
+  }
+
+  // 朴素message
+  @include when(plain) {
+    background-color: $--popper-background-color;
+    border-color: $--border-color-base;
+
+    //.jy-message__content, .jy-message__subtitle {
+    //  color: $--color-info;
+    //}
+
+    .jy-message__closeBtn, .jy-message__content, .jy-message__subtitle {
+      color: $--color-info;
+    }
+
+    .jy-message__closeBtn {
+      &:hover,
+      &:focus {
+        color: $--color-primary;
+      }
+      &:active {
+        color: $--color-primary;
+      }
+    }
+
+    .Gildata-loading{
+      color: $--color-main;
+    }
+  }
+
+  @include when(noIcon) {
+    padding: 8px 16px;
+  }
+
+  @include when(center) {
+    justify-content: center;
+    .jy-message__box {
+      flex: unset;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @include when(description) {
+    align-items: flex-start;
+  }
+
+  @include m(info) {
+    background-color: $--background-main-color;
+    border-color: $--border-main-color;
+
+    @include e(closeBtn) {
+      color: $--color-main;
+      &:hover,
+      &:focus {
+        color: $--color-main-hover;
+      }
+      &:active {
+        color: $--color-main-pressed;
+      }
+    }
+
+    @include e(subtitle) {
+      color: $--color-main;
+      &:hover,
+      &:focus {
+        color: $--color-main-hover;
+      }
+      &:active {
+        color: $--color-main-pressed;
+      }
+    }
+  }
+
+  @include m(success) {
+    background-color: $--background-success-color;
+    border-color: $--border-success-color;
+
+    @include e(closeBtn) {
+      color: $--color-success;
+      &:hover,
+      &:focus {
+        color: $--color-success-hover;
+      }
+      &:active {
+        color: $--color-success-pressed;
+      }
+    }
+
+    @include e(subtitle) {
+      color: $--color-success;
+      &:hover,
+      &:focus {
+        color: $--color-success-hover;
+      }
+      &:active {
+        color: $--color-success-pressed;
+      }
+    }
+  }
+
+  @include m(warning) {
+    background-color: $--background-warning-color;
+    border-color: $--border-warning-color;
+
+    @include e(closeBtn) {
+      color: $--color-warning;
+      &:hover,
+      &:focus {
+        color: $--color-warning-hover;
+      }
+      &:active {
+        color: $--color-warning-pressed;
+      }
+    }
+    @include e(subtitle) {
+      color: $--color-warning;
+      &:hover,
+      &:focus {
+        color: $--color-warning-hover;
+      }
+      &:active {
+        color: $--color-warning-pressed;
+      }
+    }
+  }
+
+  @include m(error) {
+    background-color: $--background-danger-color;
+    border-color: $--border-danger-color;
+
+    @include e(closeBtn) {
+      color: $--color-danger;
+      &:hover,
+      &:focus {
+        color: $--color-danger-hover;
+      }
+      &:active {
+        color: $--color-danger-pressed;
+      }
+    }
+
+    @include e(subtitle) {
+      color: $--color-danger;
+      &:hover,
+      &:focus {
+        color: $--color-danger-hover;
+      }
+      &:active {
+        color: $--color-danger-pressed;
+      }
+    }
+  }
+
+  @include e(icon) {
+    margin-right: 10px;
+  }
+
+  @include e(box) {
+    flex: 1;
+  }
+
+  @include e(subtitle) {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    max-width: 84px;
+    flex-shrink: 0;
+    font-size: 14px;
+    line-height: 14px;
+    margin-left: 8px;
+    p + i {
+      margin-left: 8px;
+    }
+  }
+
+  @include e(content) {
+    padding: 0;
+    font-size: 14px;
+    line-height: 16px;
+    &:focus {
+      outline-width: 0;
+    }
+  }
+
+  @include e(des) {
+    padding: 0;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 4px;
+    &:focus {
+      outline-width: 0;
+    }
+  }
+
+  @include e(closeBtn) {
+    cursor: pointer;
+    color: $--message-close-icon-color;
+    font-size: $--message-close-size;
+
+    &:focus {
+      outline-width: 0;
+    }
+    //&:hover {
+    //  color: $--message-close-hover-color;
+    //}
+  }
+
+  & .el-icon-success {
+    color: $--message-success-font-color;
+  }
+
+  & .el-icon-error {
+    color: $--message-danger-font-color;
+  }
+
+  & .el-icon-info {
+    color: $--message-info-font-color;
+  }
+
+  & .el-icon-warning {
+    color: $--message-warning-font-color;
+  }
+}
+
+.jy-message-fade-enter,
+.jy-message-fade-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

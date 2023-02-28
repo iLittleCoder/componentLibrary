@@ -1,0 +1,126 @@
+@keyframes dot {
+  0% { width: 0; margin-right: 1em; }
+  100% { width: 1em; margin-right: 0; }
+}
+
+.demo-image {
+  .block {
+    padding: 30px 0;
+    text-align: center;
+    border-right: solid 1px #eff2f6;
+    display: inline-block;
+    width: 20%;
+    box-sizing: border-box;
+    vertical-align: top;
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .demonstration {
+    display: block;
+    color: #8492a6;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .jy-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+}
+
+.demo-image__placeholder, .demo-image__error {
+  @extend .demo-image;
+
+  .block {
+    width: 49%;
+  }
+
+  .jy-image {
+    width: 300px;
+    height: 200px;
+  }
+
+  .image-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #F7F7F7;
+    color: rgba(32,32,32,0.4500);
+    font-size: 12px;
+  }
+}
+
+.demo-image__placeholder {
+  .dot {
+    animation: dot 2s infinite steps(3, start);
+    overflow: hidden;
+  }
+}
+
+.demo-image__error {
+  .image-slot {
+    font-size: 12px;
+
+    i {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.demo-image__placeholder {
+  .image-slot {
+    font-size: 12px;
+
+    i {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: #256dff;
+    }
+  }
+}
+
+.demo-image__lazy {
+  height: 400px;
+  overflow-y: auto;
+
+  .jy-image {
+    display: block;
+    min-height: 200px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.BlackTheme{
+  .demo-image {
+    .block {
+      border-right: 1px solid rgba(#e6e6e6, 0.12);
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  
+  .demo-image__placeholder, .demo-image__error {
+    .image-slot {
+      background: rgba(#e6e6e6, 0.12);
+      color: rgba(#e6e6e6, 0.45);
+    }
+  }
+  .demo-image__placeholder {
+    .image-slot {
+      i {
+        color: #f5ba63;
+      }
+    }
+  }
+}

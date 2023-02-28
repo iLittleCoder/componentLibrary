@@ -1,0 +1,104 @@
+/**Variable**/
+
+.jy-table-textarea {
+  position: relative;
+  display: inline-block;
+  &:not(.def--cols) {
+    width: 100%;
+    .jy-table-textarea--inner {
+      width: 100%;
+    }
+  }
+}
+
+.jy-table-textarea--inner {
+  border-radius: $jy-border-radius;
+  outline: 0;
+  font-size: inherit;
+  padding: 0 0.6em;
+  color: $jy-font-color;
+  line-height: inherit;
+  border: 1px solid $jy-input-border-color;
+  background-color: $jy-textarea-background-color;
+  display: block;
+  padding: 0.3em 0.6em;
+  &::placeholder {
+    color: $jy-input-placeholder-color;
+  }
+  &:focus {
+    border: 1px solid $jy-primary-color;
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: $jy-input-disabled-background-color;
+  }
+}
+
+.jy-table-textarea--inner,
+.jy-table-textarea--autosize {
+  line-height: $jy-textarea-line-height;
+  color: $jy-font-color;
+  font-family: $jy-font-family;
+}
+
+.jy-table-textarea--autosize {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.3em 0.6em;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.jy-table-textarea--count {
+  position: absolute;
+  bottom: 0.2em;
+  right: 1.4em;
+  padding-left: 0.2em;
+  color: $jy-textarea-count-color;
+  background-color: $jy-textarea-count-background-color;
+  &.is--error {
+    color: $jy-textarea-count-error-color;
+  }
+}
+
+.jy-table-textarea,
+.jy-table-textarea--autosize {
+  font-size: $jy-font-size;
+  &.size--medium {
+    font-size: $jy-font-size-medium;
+  }
+  &.size--small {
+    font-size: $jy-font-size-small;
+  }
+  &.size--mini {
+    font-size: $jy-font-size-mini;
+  }
+}
+
+.jy-table-textarea {
+  &:not(.is--autosize) {
+    min-height: $jy-input-height-default;
+  }
+  &.size--medium {
+    font-size: $jy-font-size-medium;
+    &:not(.is--autosize) {
+      min-height: $jy-input-height-medium;
+    }
+  }
+  &.size--small {
+    &:not(.is--autosize) {
+      min-height: $jy-input-height-small;
+    }
+  }
+  &.size--mini {
+    &:not(.is--autosize) {
+      min-height: $jy-input-height-mini;
+    }
+  }
+}

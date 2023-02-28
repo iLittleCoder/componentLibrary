@@ -1,0 +1,215 @@
+.demo-block.demo-card {
+
+  .source {
+    background: #F7F7F7;
+  }
+
+  .text-body {
+    height: 384px;
+  }
+
+  .card-box {
+    background: #ffffff;
+    padding: 12px;
+  }
+  .special-card {
+    padding: 0;
+    .jy-card__header {
+      padding: 0;
+    }
+    .card-title {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      height: 32px;
+      justify-content: space-between;
+      background: #F7F7F7;
+      padding: 0 10px 0 16px;
+    }
+
+    .icon-list {
+      i {
+        margin-left: 24px;
+        &:last-of-type {
+          background: #F06A57;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .special-subtitle {
+      display: flex;
+      align-items: center;
+      height: 32px;
+      background: #FFFFFF;
+      padding-left: 14px;
+
+      i {
+        &:hover {
+          color: #256dff;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .special-body {
+      background: #F5F6F8;
+      padding: 10px 10px 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+      border-radius: 4px;
+
+      .special-list {
+        border-radius: 4px;
+        flex: 1;
+        margin: 0 10px 10px 0;
+        height: 311px;
+        background: #ffffff;
+        width: calc((100% - 30px) / 2);
+        min-width: calc((100% - 30px) / 2); // 加入这两个后每个item的宽度就生效了
+        max-width: calc((100% - 30px) / 2); // 加入这两个后每个item的宽度就生效了
+        &:nth-child(2n) { // 去除第2n个的margin-right
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  .text-body {
+    font-size: 14px;
+    background: rgba(255, 204, 204, 0.3);
+    line-height: 40px;
+    border-radius: 4px;
+  }
+  .text {
+    font-size: 14px;
+  }
+
+  .svg-icon {
+    margin-right: 4px;
+  }
+
+  .time {
+    font-size: 13px;
+    color: rgba(32,32,32,0.45);
+  }
+
+  .bottom {
+    margin-top: 13px;
+    line-height: 12px;
+  }
+
+  .item {
+    padding: 10px 0;
+  }
+
+  .button {
+    padding: 0;
+    float: right;
+  }
+
+  .image {
+    width: 100%;
+    display: block;
+  }
+
+  .box-card {
+    width: 564px;
+    margin-bottom: 30px;
+  }
+
+  .card-subtitle {
+    margin-bottom: 12px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .subtitle {
+      height: 32px;
+      background: #F7F7F7;
+      border-radius: 4px;
+      line-height: 32px;
+      padding-left: 20px;
+      margin: 0;
+      font-size: 12px;
+      color: #202020;
+      font-weight: 600;
+    }
+    div {
+      height: 142px;
+      border-radius: 4px;
+      background: rgba(255, 204, 204, 0.3);
+      margin-top: 12px;
+    }
+  }
+}
+
+.BlackTheme {
+  .demo-block.demo-card {
+    .source {
+      background: #252525;
+    }
+    .card-box {
+      background: #15181A;
+    }
+    .special-card {
+      .card-title {
+        background: #252525;
+      }
+      .icon-list {
+        i {
+          &:last-of-type {
+            background: #F06A57;
+            color: #ffffff;
+          }
+        }
+      }
+  
+      .special-subtitle {
+        background:  #15181A;
+        i {
+          &:hover {
+            color: #F5BA63;
+          }
+        }
+      }
+  
+      .special-body {
+        background: #252525;
+        .special-list {
+          background: rgba(#e6e6e6,0.04);;
+        }
+      }
+    }
+    .text-body {
+      background: rgba(#e6e6e6,0.04);
+    }
+  
+    .time {
+      color: rgba(#e6e6e6,0.45);
+    }
+  
+    .card-subtitle {
+      margin-bottom: 12px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+  
+      .subtitle {
+        background: #252525;
+        color: #e6e6e6;
+      }
+      div {
+        background: rgba(#e6e6e6,0.04);
+      }
+    }
+  }
+}

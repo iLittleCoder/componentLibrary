@@ -1,0 +1,388 @@
+/**Variable**/
+@import './helpers/mixin.scss';
+
+$btnThemeList: (
+  (
+    name: "primary",
+    textColor: $jy-primary-color,
+    btnColor: #fff,
+    btnBackground: $jy-primary-color,
+  ),
+  (
+    name: "success",
+    textColor: $jy-success-color,
+    btnColor: #fff,
+    btnBackground: $jy-success-color
+  ),
+  (
+    name: "info",
+    textColor: $jy-info-color,
+    btnColor: #fff,
+    btnBackground: $jy-info-color
+  ),
+  (
+    name: "warning",
+    textColor: $jy-warning-color,
+    btnColor: #fff,
+    btnBackground: $jy-warning-color
+  ),
+  (
+    name: "danger",
+    textColor: $jy-danger-color,
+    btnColor: #fff,
+    btnBackground: $jy-danger-color
+  ),
+  (
+    name: "perfect",
+    textColor: $jy-table-header-background-color,
+    btnColor: $jy-font-color,
+    btnBackground: $jy-table-header-background-color
+  )
+);
+
+.jy-table-button {
+  position: relative;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $--background-color-white;
+  border: $--border-base;
+  border-color: $--border-color-base;
+  color: $--color-text-regular;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: $--button-font-weight;
+
+  @include animatTransition(border, .2s);
+  &:not(.is--disabled) {
+    color: $jy-font-color;
+    cursor: pointer;
+    .jy-table-button--icon {
+      &.jy-table-icon--zoomin {
+        border-color: $jy-font-color;
+      }
+    }
+  }
+  &.is--loading {
+    cursor: progress;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: inherit;
+      background-color: hsla(0,0%,100%,.35);
+      pointer-events: none;
+    }
+  }
+  &.is--disabled {
+    color: $jy-disabled-color;
+    .jy-table-button--icon {
+      &.jy-table-icon--zoomin {
+        border-color: $jy-disabled-color;
+      }
+    }
+    &:not(.is--loading) {
+      cursor: no-drop;
+    }
+  }
+  &.type--text {
+    text-decoration: none;
+    border: 0;
+    padding: 0.1em 0.5em;
+    background-color: transparent;
+    &:not(.is--disabled) {
+      &:focus {
+        //box-shadow: 0 0 0.25em 0 $jy-primary-color;
+      }
+      &:hover {
+        color: $jy-primary-color;
+      }
+    }
+    @for $index from 0 to length($btnThemeList) {
+      $item: nth($btnThemeList, $index + 1);
+      $textColor: map-get($item, textColor);
+      &.theme--#{map-get($item, name)} {
+        color: $textColor;
+        &:not(.is--disabled) {
+          &:hover {
+            color: $textColor;
+          }
+        }
+        &.is--disabled {
+          color: $textColor;
+        }
+      }
+    }
+  }
+  &.type--button {
+    font-family: inherit;
+    height: $jy-button-height-default;
+    line-height: 1;
+    border: 1px solid $jy-input-border-color;
+    &.is--round {
+      border-radius: $jy-button-round-border-radius-default;
+    }
+    &:not(.is--round) {
+      border-radius: $jy-border-radius;
+    }
+    &.is--circle {
+      padding: 0 0.5em;
+      min-width: $jy-button-height-default;
+      border-radius: 50%;
+    }
+    &:not(.is--circle) {
+      padding: 0 1em;
+    }
+    &:not(.is--disabled) {
+      &:hover {
+        color: $jy-primary-color;
+        .jy-table-button--icon {
+          &.jy-table-icon--zoomin {
+            border-color: $jy-primary-color;
+          }
+        }
+      }
+      &:focus {
+        border-color: $jy-primary-color;
+       // box-shadow: 0 0 0.25em 0 $jy-primary-color;
+      }
+      &:active {
+        color: $jy-primary-color;
+        border-color: $jy-primary-color;
+        background-color: $jy-button-default-background-color;
+        .jy-table-button--icon {
+          &.jy-table-icon--zoomin {
+            background-color: $jy-button-default-background-color;
+          }
+          &.jy-table-icon--zoomout {
+            &:after {
+              background-color: $jy-button-default-background-color;
+            }
+          }
+        }
+      }
+    }
+    @for $index from 0 to length($btnThemeList) {
+      $item: nth($btnThemeList, $index + 1);
+      $btnColor: map-get($item, btnColor);
+      $btnBackground: map-get($item, btnBackground);
+      &.theme--#{map-get($item, name)} {
+        color: $btnColor;
+        .jy-table-button--icon {
+          &.jy-table-icon--zoomin {
+            border-color: $btnColor;
+          }
+        }
+        &:not(.is--disabled) {
+          border-color: $btnBackground;
+          background-color: $btnBackground;
+          &:hover {
+            color: $btnColor;
+            background-color: $btnBackground;
+            border-color: $btnBackground;
+            .jy-table-button--icon {
+              &.jy-table-icon--zoomin {
+                border-color: $btnBackground;
+              }
+            }
+          }
+          &:active {
+            color: $btnColor;
+            background-color: $btnBackground;
+            border-color: $btnBackground;
+            &.jy-table-icon--zoomin {
+              background-color: $btnBackground;
+            }
+            &.jy-table-icon--zoomout {
+              &:after {
+                background-color: $btnBackground;
+              }
+            }
+          }
+        }
+        &.is--disabled {
+          border-color: $btnBackground;
+          background-color: $btnBackground;
+        }
+        &.is--loading {
+          border-color: $btnBackground;
+          background-color: $btnBackground;
+        }
+      }
+    }
+  }
+  &.size--medium {
+    font-size: $jy-font-size-medium;
+    &.type--button {
+      height: $jy-button-height-medium;
+      &.is--circle {
+        min-width: $jy-button-height-medium;
+      }
+      &.is--round {
+        border-radius: $jy-button-round-border-radius-medium;
+      }
+    }
+    .jy-table-button--loading-icon,
+    .jy-table-button--icon {
+      min-width: $jy-font-size-medium;
+    }
+  }
+  &.size--small {
+    font-size: $jy-font-size-small;
+    &.type--button {
+      height: $jy-button-height-small;
+      &.is--circle {
+        min-width: $jy-button-height-small;
+      }
+      &.is--round {
+        border-radius: $jy-button-round-border-radius-small;
+      }
+    }
+    .jy-table-button--loading-icon,
+    .jy-table-button--icon {
+      min-width: $jy-font-size-small;
+    }
+  }
+  &.size--mini {
+    font-size: $jy-font-size-mini;
+    &.type--button {
+      height: $jy-button-height-mini;
+      &.is--circle {
+        min-width: $jy-button-height-mini;
+      }
+      &.is--round {
+        border-radius: $jy-button-round-border-radius-mini;
+      }
+    }
+    .jy-table-button--loading-icon,
+    .jy-table-button--icon {
+      min-width: $jy-font-size-mini;
+    }
+  }
+}
+.jy-table-input,
+.jy-table-button {
+  &+.jy-table-button,
+  &+.jy-table-button--dropdown {
+    margin-left: 12px;
+  }
+}
+.jy-table-button--loading-icon,
+.jy-table-button--icon {
+  min-width: $jy-font-size;
+  &+.jy-table-button--content {
+    margin-left: 4px;
+  }
+}
+.jy-table-button--wrapper,
+.jy-table-button--dropdown {
+  display: inline-block;
+}
+.jy-table-button--dropdown {
+  position: relative;
+  &+.jy-table-button,
+  &+.jy-table-button--dropdown {
+    margin-left: 12px;
+  }
+  & > .jy-table-button {
+    &.type--button {
+      @for $index from 0 to length($btnThemeList) {
+        $item: nth($btnThemeList, $index + 1);
+        $btnColor: map-get($item, btnColor);
+        &.theme--#{map-get($item, name)} {
+          color: $btnColor;
+        }
+      }
+    }
+  }
+  &.is--active {
+    & > .jy-table-button {
+      &:not(.is--disabled) {
+        color: $jy-primary-color;
+      }
+      &.type--text {
+        @for $index from 0 to length($btnThemeList) {
+          $item: nth($btnThemeList, $index + 1);
+          $textColor: map-get($item, textColor);
+          &.theme--#{map-get($item, name)} {
+            color:$textColor;
+          }
+        }
+      }
+      &.type--button {
+        @for $index from 0 to length($btnThemeList) {
+          $item: nth($btnThemeList, $index + 1);
+          $btnColor: map-get($item, btnColor);
+          $btnBackground: map-get($item, btnBackground);
+          &.theme--#{map-get($item, name)} {
+            color: $btnColor;
+            background-color: $btnBackground;
+            border-color: $btnBackground;
+          }
+        }
+      }
+    }
+    .jy-table-button--dropdown-arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.jy-table-button--dropdown-arrow {
+  font-size: 12px;
+  margin-left: 4px;
+  @include animatTransition(transform, .2s);
+}
+
+.jy-table-button--dropdown-panel {
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 4px 0;
+  &.animat--leave {
+    display: block;
+    opacity: 0;
+    transform: scaleY(0.5);
+    transition: transform .3s cubic-bezier(.23,1,.32,1), opacity .3s cubic-bezier(.23,1,.32,1);
+    transform-origin: center top;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    &[placement="top"] {
+      transform-origin: center bottom;
+    }
+  }
+  &.animat--enter {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+.jy-table-button--dropdown-wrapper {
+  padding: 5px;
+  background-color: $jy-button-dropdown-panel-background-color;
+  border-radius: $jy-border-radius;
+  border: 1px solid $jy-input-border-color;
+  //box-shadow: 0 1px 6px rgba(0,0,0,.2);
+  & > .jy-table-button {
+    margin-left: 0;
+    margin-top: 0.4em;
+    display: block;
+    width: 100%;
+    border: 0;
+    &.type--text {
+      padding: 2px 8px;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

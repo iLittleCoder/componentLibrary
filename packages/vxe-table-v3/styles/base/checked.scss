@@ -1,0 +1,191 @@
+// 单选框和复选框
+%RadioAndCheckboxSpan {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+%RadioAndCheckboxIcon {
+  display: none;
+  position: absolute;
+  height: 14px;
+  width: 14px;
+}
+
+%XERadio {
+  @extend %RadioAndCheckboxSpan;
+  .jy-radio--icon {
+    @extend %RadioAndCheckboxIcon;
+    font-size: $jy-radio-font-size-default;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      top: 0;
+      left: 0;
+      background-color: $--radio-input-background-color;
+      border: 2px $--border-style-base $--border-color-base;
+      border-radius: $--radio-input-border-radius;
+    }
+  }
+  .jy-radio--unchecked-icon {
+    display: inline-block;
+  }
+  .jy-radio--checked-icon {
+    &:after {
+      content: "";
+      position: absolute;
+      height: 6px;
+      width: 6px;
+      top: 4px;
+      left:4px;
+      border-radius: 50%;
+      background-color: $jy-radio-checked-icon-background-color;
+
+
+    }
+  }
+  &.is--checked {
+    color: $jy-primary-color;
+    .jy-radio--unchecked-icon {
+      display: none;
+    }
+    .jy-radio--checked-icon {
+      display: inline-block;
+      &:before {
+        border-color: $jy-primary-color;
+      }
+    }
+  }
+  &:not(.is--disabled) {
+    &:hover {
+      .jy-radio--icon {
+        &:before {
+          border-color: $jy-primary-color;
+        }
+      }
+    }
+  }
+  &.is--disabled {
+    cursor: not-allowed;
+    color: $jy-disabled-color;
+    .jy-radio--icon {
+      &:before {
+        background-color: $--radio-disabled-input-fill;
+        border-color: $--radio-disabled-input-border-color;
+      }
+      &:after {
+        background-color: $jy-primary-disabled-color;
+      }
+    }
+  }
+}
+
+%XECheckbox {
+  @extend %RadioAndCheckboxSpan;
+  .jy-checkbox--icon {
+    @extend %RadioAndCheckboxIcon;
+    font-size: $jy-checkbox-font-size-default;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      top: 0;
+      left: 0;
+      border: 2px $--border-style-base $--border-color-base;
+      background-color: $--checkbox-background-color;
+      border-radius: $jy-checkbox-border-radius;
+    }
+  }
+  .jy-checkbox--unchecked-icon {
+    display: inline-block;
+  }
+  .jy-checkbox--checked-icon {
+    &:after {
+      content: "";
+      position: absolute;
+      height: $jy-checkbox-checked-height;
+      width: $jy-checkbox-checked-width;
+      top: 1.5px;
+      left: 4px;
+      border: $jy-checkbox-border-width solid $--checkbox-checked-icon-color;
+      border-left: 0;
+      border-top: 0;
+      transform: rotate(45deg) scaleY(1)
+
+
+    }
+  }
+  .jy-checkbox--indeterminate-icon {
+    background: $--checkbox-background-color;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 6px;
+      width: 6px;
+      background-color: $jy-primary-color;
+      transform: translate(-50%, -50%);
+    }
+
+      &:before {
+        border-color: $--table-border-color!important;
+        background-color: $--checkbox-background-color!important;
+      }
+
+  }
+  &.is--checked,
+  &.is--indeterminate {
+    color: $jy-primary-color;
+    .jy-checkbox--unchecked-icon {
+      display: none;
+    }
+    .jy-checkbox--icon {
+      &:before {
+        border-color: $jy-primary-color;
+        background-color: $jy-primary-color;
+      }
+    }
+  }
+  &.is--checked {
+    .jy-checkbox--checked-icon {
+      display: inline-block;
+    }
+  }
+  &.is--indeterminate {
+    .jy-checkbox--indeterminate-icon {
+      display: inline-block;
+    }
+  }
+  &:not(.is--disabled) {
+    &:hover {
+      .jy-checkbox--icon {
+        &:before {
+          border-color: $jy-primary-color;
+        }
+      }
+    }
+  }
+  &.is--disabled {
+    cursor: not-allowed;
+
+    cursor: not-allowed;
+    color: $--border-color-disabled;
+    .jy-checkbox--icon {
+      &:before {
+        border-color: $--border-color-disabled;
+        background-color: $--border-color-disabled;
+      }
+      &:after {
+        border-color: $jy-primary-disabled-color;
+      }
+    }
+    .jy-checkbox--indeterminate-icon {
+      &:after {
+        background-color: $jy-primary-disabled-color;
+      }
+    }
+  }
+}

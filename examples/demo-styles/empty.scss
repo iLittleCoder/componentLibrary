@@ -1,0 +1,23 @@
+.empty-box {
+  display: flex;
+
+  div {
+    flex: 1;
+  }
+
+  .jy-empty__description {
+
+    p {
+      color: rgba(32, 32, 32, 0.45);
+    }
+  }
+
+  &:last-of-type {
+    justify-content: flex-start;
+    margin-top: 20px;
+    .jy-empty {
+      width: 33.33%;
+      flex: unset;
+    }
+  }
+}

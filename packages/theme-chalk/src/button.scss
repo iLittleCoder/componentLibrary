@@ -1,0 +1,425 @@
+@charset "UTF-8";
+@import 'common/var';
+@import 'mixins/button';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+// 默认button为辅助按钮
+@include b(button) {
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $--button-bg-color;
+  border: $--border-base;
+  border-color: $--border-color-base;
+  color: $--color-text-regular;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: $--button-font-weight;
+
+  @include utils-user-select(none);
+  & + & {
+    margin-left: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $--color-primary-hover;
+    border-color: $--color-primary-hover;
+    background: $--button-bg-color;
+  }
+
+  &:active {
+    color: $--color-primary-pressed;
+    border-color: $--color-primary-pressed;
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  & [class*='el-icon-'] {
+    & + span {
+      margin-left: 4px;
+    }
+  }
+
+  & [class*='Gildata-'] {
+    & + span {
+      margin-left: 4px;
+    }
+  }
+
+  & span {
+    & + [class*='el-icon-'] {
+      margin-left: 4px;
+    }
+  }
+
+  & span {
+    & + [class*='Gildata-'] {
+      margin-left: 4px;
+    }
+  }
+  &.jy-button--danger {
+    @include button-variant($--color-text-base, $--color-danger, $--color-danger, 'danger');
+  }
+
+  @include when(plain) {
+    border-color: $--color-primary;
+    color: $--color-primary;
+
+    &:hover,
+    &:focus {
+      color: $--color-primary-hover;
+      border-color: $--color-primary-hover;
+      background: $--button-bg-color;
+    }
+
+    &:active {
+      color: $--color-primary-pressed;
+      border-color: $--color-primary-pressed;
+      outline: none;
+    }
+  }
+
+  @include when(active) {
+    color: $--color-primary-pressed;
+    border-color: $--color-primary-pressed;
+  }
+
+  @include when(no-border) {
+    border: none;
+    padding: 3px 4px;
+
+    &:hover {
+      color: $--color-info;
+      background: $--color-neutral-hover;
+    }
+
+    &:focus {
+      background: $--color-neutral-pressed;
+      // color: $--color-primary;
+      color: $--color-info;
+    }
+
+    &:active {
+      // background: transparent;
+      // color: $--color-primary;
+      background: $--color-neutral-pressed;
+      color: $--color-info;
+    }
+  }
+
+  @include when(disabled) {
+    &,
+    &:hover,
+    &:focus {
+      color: $--color-text-disabled;
+      cursor: not-allowed;
+      background-image: none;
+      background: $--button-bg-color;
+      border-color: $--border-color-disabled;
+    }
+
+    &.jy-button--text {
+      background: transparent;
+    }
+
+    &.is-plain {
+      &,
+      &:hover,
+      &:focus {
+        background: $--button-bg-color;
+        border-color: $--background-color-disabled;
+        color: $--color-text-disabled;
+      }
+    }
+  }
+
+  @include when(loading) {
+    position: relative;
+    pointer-events: none;
+
+    .Gildata-loading {
+      z-index: 1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -8px;
+      margin-top: -8px;
+    }
+
+    /* loading状态时将内容改成透明 */
+    span {
+      opacity: 0;
+    }
+  }
+
+  @include when(round) {
+    border-radius: 20px;
+    padding: 5px 8px;
+  }
+  @include when(circle) {
+    border-radius: 50%;
+    padding: 5px;
+    line-height: 1;
+
+    i {
+      font-size: 16px;
+      line-height: 16px !important;
+    }
+  }
+
+  @include m(success) {
+    @include button-variant($--color-text-base, $--color-success, $--color-success, success);
+  }
+
+  @include m(primary) {
+    @include button-variant($--color-text-base, $--color-primary, $--color-primary, primary);
+  }
+
+  @include m(warning) {
+    @include button-variant($--color-text-base, $--color-warning, $--color-warning, warning);
+  }
+  @include m(danger) {
+    @include button-variant($--color-text-base, $--color-danger, $--color-danger, danger);
+  }
+  @include m(info) {
+    @include button-variant($--color-text-base, $--color-info, $--color-info, info);
+  }
+  @include m(large) {
+    line-height: 20px;
+    [class^='Gildata-'],
+    i {
+      line-height: 20px;
+    }
+    @include button-size(9px, 12px, $--font-size-bigger, $--border-radius-base);
+    @include when(circle) {
+      padding: $--button-medium-padding-vertical;
+    }
+    @include when(left) {
+      padding-left: 10px;
+    }
+    @include when(right) {
+      padding-right: 10px;
+    }
+  }
+  @include m(medium) {
+    line-height: 20px;
+    [class^='Gildata-'],
+    i {
+      line-height: 20px;
+    }
+    @include button-size(5px, 10px, $--font-size-bigger, $--border-radius-base);
+    @include when(circle) {
+      padding: $--button-medium-padding-vertical;
+    }
+    @include when(left) {
+      padding-left: 8px;
+    }
+    @include when(right) {
+      padding-right: 8px;
+    }
+  }
+  @include m(small) {
+    line-height: 18px;
+    [class^='Gildata-'],
+    i {
+      line-height: 18px;
+    }
+    // 默认尺寸
+    @include button-size(4px, 8px, $--button-font-size, $--button-border-radius);
+    @include when(circle) {
+      padding: $--button-small-padding-circle;
+    }
+    @include when(left) {
+      padding-left: 6px;
+    }
+    @include when(right) {
+      padding-right: 6px;
+    }
+  }
+  @include m(mini) {
+    line-height: 18px;
+    [class^='Gildata-'],
+    i {
+      line-height: 18px;
+    }
+    @include button-size(1px, 6px, $--button-mini-font-size, $--border-radius-base);
+    @include when(circle) {
+      padding: $--button-mini-padding-vertical;
+    }
+    @include when(left) {
+      padding-left: 4px;
+    }
+    @include when(right) {
+      padding-right: 4px;
+    }
+  }
+  @include m(text) {
+    border-color: transparent;
+    color: $--color-primary;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover,
+    &:focus {
+      color: $--color-primary-hover;
+      border-color: transparent;
+      background: transparent;
+    }
+    &:active {
+      color: $--color-primary-pressed;
+      border-color: transparent;
+      background: transparent;
+    }
+
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus {
+      border-color: transparent;
+    }
+
+    @at-root {
+      @each $type in (primary, success, warning, danger, info, secondary) {
+        .jy-text-button--#{$type} {
+          @if $type == primary {
+            color: $--color-primary;
+          } @else if $type == success {
+            color: $--color-success;
+          } @else if $type == warning {
+            color: $--color-warning;
+          } @else if $type == danger {
+            color: $--color-danger;
+          } @else {
+            color: $--color-primary;
+          }
+
+          &:hover,
+          &:focus {
+            @if $type == primary {
+              color: $--color-primary-hover;
+            } @else if $type == success {
+              color: $--color-success-hover;
+            } @else if $type == warning {
+              color: $--color-warning-hover;
+            } @else if $type == danger {
+              color: $--color-danger-hover;
+            } @else {
+              color: $--color-primary-hover;
+            }
+          }
+
+          &:active {
+            @if $type == primary {
+              color: $--color-primary-pressed;
+            } @else if $type == success {
+              color: $--color-success-pressed;
+            } @else if $type == warning {
+              color: $--color-warning-pressed;
+            } @else if $type == danger {
+              color: $--color-danger-pressed;
+            } @else {
+              color: $--color-primary-pressed;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include b(button-group) {
+  @include utils-clearfix;
+  display: inline-block;
+  vertical-align: middle;
+
+  & > .jy-button {
+    float: left;
+    position: relative;
+    & + .jy-button {
+      margin-left: 0;
+    }
+    &.is-disabled {
+      z-index: 1;
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $--color-text-disabled;
+        background: $--background-color-disabled;
+        border-color: transparent;
+      }
+    }
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:first-child:last-child {
+      border-top-right-radius: $--button-border-radius;
+      border-bottom-right-radius: $--button-border-radius;
+      border-top-left-radius: $--button-border-radius;
+      border-bottom-left-radius: $--button-border-radius;
+
+      &.is-round {
+        border-radius: 20px;
+      }
+
+      &.is-circle {
+        border-radius: 50%;
+      }
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus,
+      &:active {
+        z-index: 1;
+      }
+    }
+
+    @include when(active) {
+      z-index: 1;
+    }
+  }
+
+  & > .jy-dropdown {
+    & > .jy-button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @each $type in (primary, success, warning, danger, info) {
+    .jy-button--#{$type}:not(.is-secondary) {
+      &:first-child {
+        border-right-color: rgba(255, 255, 255, 0.5);
+      }
+      &:last-child {
+        border-left-color: rgba(255, 255, 255, 0.5);
+      }
+      &:not(:first-child):not(:last-child) {
+        border-left-color: rgba(255, 255, 255, 0.5);
+        border-right-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}

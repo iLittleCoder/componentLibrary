@@ -1,0 +1,260 @@
+@import 'mixins/mixins';
+@import 'common/var';
+@import 'common/popup';
+@import 'button';
+@import 'input';
+
+@include b(message-box) {
+  display: inline-block;
+  width: $--msgbox-width;
+  vertical-align: middle;
+  padding-bottom: 20px;
+  //  background-color: $--color-neutral;
+  background-color: $--color-tip;
+  border-radius: $--border-radius-base;
+  font-size: $--font-size-base;
+  text-align: left;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  .svg-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include e(wrapper) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 0;
+      vertical-align: middle;
+    }
+  }
+
+  @include e(header) {
+    position: relative;
+    padding: 24px 20px 12px 24px;
+  }
+
+  @include e(title) {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-weight: $--font-weight-bold;
+    font-size: $--font-size-medium;
+    color: $--color-text-primary;
+    display: flex;
+    align-items: center;
+    position: relative;
+    > .svg-icon {
+      margin-right: 10px;
+    }
+
+    @include when(showClose) {
+      margin-right: 10px;
+    }
+  }
+
+  @include e(headerbtn) {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: $--font-size-large;
+    cursor: pointer;
+
+    .jy-message-box__close {
+      color: $--color-text-secondary;
+      font-size: $--font-size-extra-large;
+      border-radius: $--border-radius-base;
+
+      &:hover,
+      &:focus {
+        background-color: $--color-neutral-hover;
+      }
+
+      &:active {
+        background-color: $--color-neutral-pressed;
+      }
+    }
+  }
+
+  @include e(content) {
+    padding: 0 20px 0 54px;
+    color: $--color-text-primary;
+    font-size: $--font-size-base;
+
+    &.is-noIcon {
+      padding-left: 24px;
+    }
+  }
+
+  @include e(container) {
+    position: relative;
+  }
+
+  @include e(input) {
+    padding-top: 15px;
+
+    & input.invalid {
+      border-color: $--color-danger;
+      &:focus {
+        border-color: $--color-danger;
+      }
+    }
+  }
+
+  @include e(status) {
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    text-align: center;
+    transform: translateY(-1px);
+    font-size: $--font-size-large;
+    padding-right: 10px;
+
+    &::before {
+      // 防止图标切割
+      padding-left: 1px;
+    }
+
+    + .jy-message-box__message {
+      padding-left: 36px;
+      padding-right: 12px;
+    }
+
+    &.el-icon-success {
+      color: $--messagebox-success-color;
+    }
+
+    &.el-icon-info {
+      color: $--messagebox-info-color;
+    }
+
+    &.el-icon-warning {
+      color: $--messagebox-warning-color;
+    }
+
+    &.el-icon-error {
+      color: $--messagebox-danger-color;
+    }
+  }
+
+  @include e(message) {
+    margin: 0;
+    font-size: $--font-size-bigger;
+
+    & p {
+      margin: 0;
+      line-height: $--font-line-height-base;
+    }
+  }
+
+  @include e(errormsg) {
+    color: $--color-danger;
+    font-size: $--messagebox-error-font-size;
+    min-height: 18px;
+    margin-top: 2px;
+  }
+
+  @include e(btns) {
+    padding: 28px 20px 0 0;
+    text-align: right;
+    //& button {
+    //  padding: 6px 11px 6px 10px !important;
+    //}
+    //& button:nth-child(1) {
+    //  border-color: $--color-primary !important;
+    //  color: $--color-primary !important;;
+    //
+    //  &:hover,
+    //  &:focus {
+    //    color: $--color-primary-hover !important;;
+    //    border-color: transparent;
+    //    background-color: transparent;
+    //  }
+    //  &:active {
+    //    color: $--color-primary-pressed !important;;
+    //    border-color: transparent;
+    //    background-color: transparent;
+    //  }
+    //}
+    & button:nth-child(2) {
+      margin-left: 12px;
+    }
+  }
+
+  @include e(btns-reverse) {
+    flex-direction: row-reverse;
+  }
+
+  // centerAlign 布局
+  @include m(center) {
+    @include e(title) {
+      position: relative;
+      justify-content: center;
+    }
+
+    //@include e(status) {
+    //  position: relative;
+    //  top: auto;
+    //  padding-right: 5px;
+    //  text-align: center;
+    //  transform: translateY(-1px);
+    //}
+
+    @include e(message) {
+      margin-left: 0;
+    }
+
+    @include e((btns, content)) {
+      text-align: center;
+    }
+
+    @include e(content) {
+      $padding-horizontal: $--msgbox-padding-primary + 12px;
+
+      padding-left: $padding-horizontal;
+      padding-right: $padding-horizontal;
+    }
+  }
+}
+
+.msgbox-fade-enter-active {
+  animation: msgbox-fade-in 0.3s;
+}
+
+.msgbox-fade-leave-active {
+  animation: msgbox-fade-out 0.3s;
+}
+
+@keyframes msgbox-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes msgbox-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}

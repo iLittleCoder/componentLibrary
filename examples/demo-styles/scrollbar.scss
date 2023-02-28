@@ -1,0 +1,65 @@
+.demo-scrollbar {
+  .source {
+    padding: 0;
+  }
+
+  .demo-scroll-table {
+    padding: 24px;
+  }
+  .demo-scroll-bar {
+    padding: 24px;
+    background-color: #f7f7f7;
+  }
+
+  .table-scrollbar {
+    width: 564px;
+    height: 200px;
+
+    .jy-table {
+      width: 710px;
+    }
+
+    .self-wrap {
+      overflow-x: hidden;
+    }
+  }
+
+  .jy-card {
+    padding: 0;
+    width: 564px;
+    overflow: inherit;
+
+    .jy-card__header {
+      background-color: #ffffff;
+      position: sticky;
+      top: 0;
+      padding: 6px 12px;
+    }
+
+    .jy-card__body {
+      padding: 0 12px;
+
+      div {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(32,32,32,0.65);
+        line-height: 22px;
+        padding: 4px 12px;
+        background-color: #f7f7f7;
+      }
+    }
+  }
+
+  .scroll-bar {
+    width: 564px;
+    height: 300px;
+    &:first-of-type {
+      padding-bottom: 12px;
+      background-color: #ffffff;
+    }
+
+    .self-wrap {
+      overflow-x: hidden;
+    }
+  }
+}

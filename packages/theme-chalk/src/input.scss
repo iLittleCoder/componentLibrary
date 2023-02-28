@@ -1,0 +1,576 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(textarea) {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  font-size: $--font-size-base;
+
+  .jy-input__count__molecule{
+    color:$--color-info ;
+  }
+
+  @include e(inner) {
+    display: block;
+    resize: vertical;
+    padding: 8px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: inherit;
+    color: $--input-font-color;
+    background-color: $--input-background-color;
+    background-image: none;
+    border: $--input-border;
+    border-radius: $--input-border-radius;
+    transition: $--border-transition-base;
+
+    @include scroll-bar;
+   
+    &::placeholder {
+      color: $--input-placeholder-color;
+    }
+
+    &:hover {
+      border-color: $--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $--input-focus-border;
+    }
+
+    
+  }
+
+  & .jy-input__count {
+    color: $--color-text-placeholder;
+    background: transparent;
+    position: absolute;
+    font-size: 12px;
+    bottom: 5px;
+    right: 10px;
+  }
+
+  @include when(disabled) {
+    &.no-border .jy-textarea__inner{
+      background-color:transparent
+    }
+    .jy-textarea__inner {
+      background-color: $--input-disabled-fill;
+      border-color: $--input-disabled-border;
+      color: $--input-disabled-color;
+      cursor: not-allowed;
+
+      &::placeholder {
+        color: $--input-disabled-placeholder-color;
+      }
+    }
+  }
+
+  @include when(exceed) {
+    .jy-textarea__inner {
+      border-color: $--color-danger;
+    }
+
+    .jy-input__count {
+      color: $--color-danger;
+    }
+  }
+
+}
+
+@include b(input) {
+  position: relative;
+  font-size: $--font-size-base;
+  display: inline-block;
+  width: 100%;
+  @include scroll-bar;
+
+  
+
+ 
+
+  & .jy-input__clear {
+    color: $--input-icon-color;
+    font-size: $--input-font-size;
+    cursor: pointer;
+    // transition: $--color-transition-base;
+    &:hover {
+      color: $--input-clear-hover-color;
+    }
+    &:active{
+      color: $--color-text-primary;
+    }
+    &.Gildata-eye,
+    &.Gildata-clean{
+      font-size: 16px;
+    }
+  }
+
+  
+
+  & .jy-input__count {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    color: $--color-text-placeholder;
+    font-size: 12px;
+
+    
+
+    .jy-input__count-inner {
+      background: transparent;
+      line-height: initial;
+      display: inline-block;
+      padding: 0 5px;
+      .jy-input__count__molecule{
+        color:$--color-info ;
+      }
+    }
+  }
+
+  @include e(inner) {
+    -webkit-appearance: none;
+    background-color: $--input-background-color;
+    background-image: none;
+    border-radius: $--input-border-radius;
+    border: $--input-border;
+    box-sizing: border-box;
+    color: $--input-font-color;
+    display: inline-block;
+    font-size: inherit;
+    height: $--input-height;
+    line-height: $--input-height;
+    outline: none;
+    padding: 0 8px;
+    transition: $--border-transition-base;
+    width: 100%;
+
+    &::-ms-reveal {
+      display: none;
+    }
+
+    &::placeholder {
+      color: $--input-placeholder-color;
+    }
+
+    &:hover {
+      border-color: $--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $--input-focus-border;
+    }
+
+    
+  }
+
+  @include e(suffix) {
+    position: absolute;
+    height: 100%;
+    right: 6px;
+    top: 0;
+    text-align: center;
+    color: $--input-icon-color;
+    transition: all .3s;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  @include e(suffix-inner) {
+    pointer-events: all;
+    line-height: $--input-height;
+    .Gildata-clean{
+      color: $--color-text-placeholder;
+      &:hover {
+        color: $--color-text-regular;
+      }
+      &:active {
+        color: $--color-info;
+      }
+    }
+    & [class^=Gildata-],  
+    & [class*=" Gildata-"] {
+      line-height: $--input-height;
+    }
+
+  }
+
+  @include e(prefix) {
+    position: absolute;
+    height: 100%;
+    left: 6px;
+    top: 0;
+    text-align: center;
+    color: $--input-icon-color;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    & [class^=Gildata-],  
+    & [class*=" Gildata-"] {
+      line-height: $--input-height;
+    }
+  }
+
+  @include e(icon) {
+    height: 100%;
+    width: 16px;
+    text-align: center;
+    transition: all .3s;
+    line-height: $--input-height;
+
+    &[class^=Gildata-],  
+    &[class*=" Gildata-"] {
+      line-height: $--input-height;
+    }
+
+    &:after {
+      content: '';
+      height: 100%;
+      width: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  @include e(validateIcon) {
+    pointer-events: none;
+  }
+
+  @include when(active) {
+    .jy-input__inner {
+      outline: none;
+      border-color: $--input-focus-border;
+    }
+  }
+
+  @include when(disabled) {
+    .jy-input__inner {
+      background-color: $--input-disabled-fill;
+      border-color: $--input-disabled-border;
+      color: $--input-disabled-color;
+      cursor: not-allowed;
+
+
+      &::placeholder {
+        // color: $--input-disabled-placeholder-color;
+        color: $--color-text-disabled;
+      }
+    }
+
+    .jy-input__icon {
+      cursor: not-allowed;
+      opacity: 0.3;
+    }
+    .jy-input-group__prepend,.jy-input-group__append{
+      background-color: $--background-color-disabled;
+      border-color: $--border-color-disabled;
+      color: $--color-text-disabled;
+    }
+  }
+
+  @include when(border) {
+    .jy-input__inner {
+        border:1px solid transparent;
+      &:hover {
+        border-color: $--input-hover-border;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $--input-focus-border;
+      }
+    }
+  }
+
+  @include when(exceed) {
+    .jy-input__inner {
+      border-color: $--color-danger;
+    }
+
+    .jy-input__suffix {
+      .jy-input__count {
+        color: $--color-danger;
+      }
+    }
+  }
+
+  @include m(suffix) {
+    .jy-input__inner {
+      padding-right: 30px;
+    }
+  }
+
+  @include m(prefix) {
+    .jy-input__inner {
+      padding-left: 28px;
+    }
+   
+  }
+
+  @include m(medium) {
+    font-size: $--input-medium-font-size;
+
+    @include e(inner) {
+      height: $--input-medium-height;
+      line-height: $--input-medium-height;
+      padding: 0 10px;
+    }
+    &.jy-input--prefix{
+      .jy-input__inner{
+        padding-left: 32px;
+      }
+      & [class^=Gildata-],  & [class*=" Gildata-"] {
+        line-height:  $--input-medium-height;
+      }
+    }
+    &.jy-input--suffix{
+      .jy-input__inner{
+        padding-right: 32px;
+      }
+    }
+
+    .jy-input__suffix-inner ,.jy-input__icon {
+      line-height: $--input-medium-height;
+    }
+    .jy-input__suffix{
+      right: 8px;
+    }
+    .jy-input__prefix{
+      left: 8px;
+    }
+  }
+  @include m(large) {
+    font-size: $--input-large-font-size;
+
+    @include e(inner) {
+      height: $--input-large-height;
+      line-height: $--input-large-height;
+      padding: 0 12px;
+    }
+
+    &.jy-input--prefix{
+      .jy-input__inner{
+        padding-left: 36px;
+      }
+      & [class^=Gildata-],   & [class*=" Gildata-"] {
+        line-height: $--input-large-height;
+      }
+    }
+    &.jy-input--suffix{
+      .jy-input__inner{
+        padding-right: 36px;
+      }
+    }
+
+
+   .jy-input__suffix-inner, .jy-input__icon {
+      line-height: $--input-large-height;
+    }
+    .jy-input__suffix{
+      right: 10px;
+    }
+    .jy-input__prefix{
+      left: 10px;
+    }
+  }
+  @include m(mini) {
+    font-size: $--input-mini-font-size;
+
+    @include e(inner) {
+      height: $--input-mini-height;
+      line-height: $--input-mini-height;
+      padding: 0 6px;
+    }
+
+    &.jy-input--prefix{
+      .jy-input__inner{
+        padding-left: 24px;
+      }
+      & [class^=Gildata-],  & [class*=" Gildata-"] {
+        line-height: $--input-mini-height;
+      }
+    }
+    &.jy-input--suffix{
+      .jy-input__inner{
+        padding-right: 24px;
+      }
+    }
+
+    .jy-input__suffix-inner,.jy-input__icon {
+      line-height: $--input-mini-height;
+    }
+    .jy-input__suffix{
+      right: 4px;
+    }
+    .jy-input__prefix{
+      left: 4px;
+    }
+  }
+
+  @include m(danger) {
+    @include e(inner) {
+      color: $--color-info;
+      border-color:  $--color-danger;
+    }
+
+    .jy-input__icon {
+     color: $--color-danger;
+    }
+  }
+  @include m(warning) {
+    @include e(inner) {
+      color: $--color-info;
+      border-color: $--color-warning;
+    }
+
+    .jy-input__icon {
+     color: $--color-warning;
+    }
+  }
+  @include m(success) {
+    @include e(inner) {
+      color: $--color-info;
+      // border-color:  $--color-success;
+      border-color: $--border-color-base;
+    }
+
+    .jy-input__icon {
+     color: $--color-success;
+    }
+  }
+
+}
+
+@include b(input-group) {
+  line-height: normal;
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing:0;
+
+  > .jy-input__inner {
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  @include e((append, prepend)) {
+    background-color:  $--border-color-base;
+    color: $--color-info;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    border: none;
+
+    border-radius: $--input-border-radius;
+    padding: 0 20px;
+    width: 1px;
+    white-space: nowrap;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $--color-primary;
+    }
+    .jy-select{
+      margin: 0 -20px;
+     
+    }
+    button.jy-button{
+      color: $--color-white;
+       border-color: transparent;
+       background-color: transparent;
+       border-top: 0;
+       border-bottom: 0;
+    }
+    .jy-button,
+    .jy-input {
+      font-size: inherit;
+    }
+    div.jy-select .jy-input__inner::placeholder {
+      color: $--color-text-secondary;
+    }
+  }
+
+  @include e(prepend) {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    .jy-select-new-main{
+      border-right-color: transparent;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      max-width: 120px;
+      // &-active{
+      //   border: 1px solid $--color-primary;
+      // }
+    }
+    .select-option-show .jy-select-new-main{
+      border-color: $--border-color-base;
+    }
+
+    &:hover{
+      .jy-select-new-main:not(.is-disabled) {
+        border: 1px solid $--color-primary;
+      }
+     
+    }
+
+  }
+
+  @include e(append) {
+    background-color: $--color-primary ;
+    color: $--color-white;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .jy-select-new-main{
+      border-left-color: transparent;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      max-width: 120px;
+      // &-active{
+      //   border: 1px solid $--color-primary;
+      // }
+    }
+    .select-option-show .jy-select-new-main{
+      border-color: $--border-color-base;
+    }
+
+    &:hover{
+      .jy-select-new-main:not(.is-disabled) {
+        border: 1px solid $--color-primary;
+      }
+    }
+    
+
+  }
+
+  @include m(prepend) {
+    .jy-input__inner {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  @include m(append) {
+    .jy-input__inner {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+/** disalbe default clear on IE */
+.jy-input__inner::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}

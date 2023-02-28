@@ -1,0 +1,30 @@
+.demo-badge.demo-block .jy-dropdown {
+  vertical-align: middle;
+}
+.demo-badge.demo-block {
+  .share-button {
+    width: 36px;
+    padding: 10px;
+  }
+
+  .mark {
+    margin-top: 8px;
+    line-height: 1;
+    float: right;
+  }
+
+  .item {
+    margin-right: 40px;
+  }
+ 
+}
+.demo-flex{
+  display: flex;
+  align-items: center;
+  &-content{
+    margin-right: 8px;
+  }
+  &-badge{
+    height: 20px;
+  }
+}

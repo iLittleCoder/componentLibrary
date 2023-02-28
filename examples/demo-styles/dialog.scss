@@ -1,0 +1,39 @@
+.demo-block.demo-dialog {
+  .full-image {
+    width: 100%;
+  }
+  .jy-dialog__wrapper {
+    margin: 0;
+  }
+  .jy-select {
+    width: 348px;
+    .jy-input {
+      width: 100%;
+    }
+  }
+  .jy-input {
+    width: 348px;
+  }
+  .jy-button--text {
+    margin-right: 15px;
+  }
+
+  .jy-form-item {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .text {
+    color: #202020;
+  }
+}
+
+.BlackTheme {
+  .demo-block.demo-dialog {
+    .text {
+      color: #e6e6e6;
+      border-radius: 4px;
+    }
+  }
+}

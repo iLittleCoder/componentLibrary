@@ -1,0 +1,372 @@
+@import '../mixins/mixins';
+@import '../common/var';
+@import '../common/transition';
+
+@include b(date-editor) {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+
+  &.jy-input,
+  &.jy-input__inner {
+    width: 110px;
+  }
+  .jy-input__inner {
+    &::placeholder {
+      color: $--date-input-placeholder-color;
+    }
+  }
+
+  .Gildata-clean {
+    color: $--color-text-placeholder;
+    cursor: pointer;
+    &:hover {
+      color: $--color-text-regular;
+    }
+    &:active {
+      color: $--color-text-primary;
+    }
+  }
+
+  .jy-input__suffix {
+    color: $--date-input-placeholder-color;
+  }
+  &.text-active {
+    .jy-input__inner {
+      color: $--color-primary;
+    }
+    .jy-input__icon.text-active {
+      color: $--color-primary;
+    }
+  }
+
+  &.no-border {
+    border: none;
+    &.is-disabled .jy-input__inner {
+      background-color: transparent;
+    }
+    .jy-input__inner {
+      border: none;
+    }
+  }
+
+  @include m(medium) {
+    &.jy-input__inner {
+      width: 128px;
+    }
+  }
+  @include m(large) {
+    &.jy-input__inner {
+      width: 133px;
+    }
+  }
+
+  @include m(mini) {
+    &.jy-input__inner {
+      width: 104px;
+    }
+  }
+
+  @include m((monthrange)) {
+    &.jy-input,
+    &.jy-input__inner {
+      width: 300px;
+    }
+  }
+
+  @include m((daterange, timerange)) {
+    &.jy-input,
+    &.jy-input__inner {
+      width: 350px;
+    }
+  }
+
+  @include m(datetimerange) {
+    &.jy-input,
+    &.jy-input__inner {
+      width: 400px;
+    }
+  }
+
+  @include m(dates) {
+    .jy-input__inner {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .jy-range__icon {
+    font-size: 16px;
+    color: $--date-input-placeholder-color;
+    line-height: 26px;
+    transition: all 0.3s;
+  }
+
+  .jy-range-input {
+    appearance: none;
+    border: none;
+    outline: none;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: $--font-size-base;
+    color: $--color-text-regular;
+    background-color: transparent;
+
+    &::placeholder {
+      color: $--date-input-placeholder-color;
+    }
+  }
+
+  .jy-range-separator {
+    height: 100%;
+    padding: 0 5px;
+    margin: 0;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    width: 15%;
+    color: $--date-input-placeholder-color;
+  }
+
+  .jy-range__close-icon {
+    font-size: 16px;
+    color: $--date-input-placeholder-color;
+    width: 16px;
+    display: inline-block;
+    // float: right;
+    line-height: 28px;
+  }
+}
+
+@include b(range-editor) {
+  &.jy-input__inner {
+    box-sizing: border-box;
+    width: 240px;
+  }
+  .Gildata-clean {
+    color: $--color-text-placeholder;
+    cursor: pointer;
+    &:hover {
+      color: $--color-text-regular;
+    }
+    &:active {
+      color: $--color-text-primary;
+    }
+  }
+
+  .jy-range-input {
+    &::placeholder {
+      color: $--date-input-placeholder-color;
+    }
+  }
+  &.text-active {
+    .jy-range-input,
+    .jy-input__icon.text-active,
+    .jy-range__icon,
+    .jy-input__icon.Gildata-calendar {
+      color: $--color-primary;
+    }
+  }
+
+  &.no-border {
+    border: none;
+    .jy-range-input {
+      border: none;
+    }
+  }
+
+  @include when(active) {
+    border-color: $--color-primary;
+
+    &:hover {
+      border-color: $--color-primary;
+    }
+  }
+
+  @include when(disabled) {
+    background-color: $--input-disabled-fill;
+    border-color: $--input-disabled-border;
+    color: $--input-disabled-color;
+    cursor: not-allowed;
+    &:hover,
+    &:focus {
+      border-color: $--input-disabled-border;
+    }
+    .jy-input__inner {
+      background-color: $--input-disabled-fill;
+      color: $--input-disabled-color;
+      cursor: not-allowed;
+      &::placeholder {
+        color: $--color-text-disabled;
+      }
+    }
+    .jy-range-separator {
+      color: $--input-disabled-color;
+    }
+  }
+}
+
+@include b(date-range-test-outer) {
+  position: relative;
+  min-width: 180px;
+  &.jy-input__inner {
+    padding-right: 30px;
+    padding-left: 8px;
+  }
+  .jy-date-range-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .jy-date-range-next,
+  .jy-date-range-prev {
+    width: calc((100% - 15%) / 2);
+    height: 100%;
+    .jy-range-input {
+      width: 100%;
+      height: 100%;
+      display: inherit;
+      font-size: $--input-mini-font-size;
+    }
+  }
+  .jy-range-separator {
+    line-height: 26px;
+  }
+  .jy-date-range-icon {
+    height: 100%;
+    position: absolute;
+    right: 6px;
+    top: 0;
+    .jy-input__icon[class^='Gildata-'],
+    .jy-input__icon[class*=' Gildata-'] {
+      line-height: 26px;
+    }
+  }
+  &.no-border {
+    .jy-range-separator {
+      line-height: 28px;
+    }
+    .jy-date-range-icon {
+      .jy-input__icon[class^='Gildata-'],
+      .jy-input__icon[class*=' Gildata-'] {
+        line-height: 28px;
+      }
+    }
+  }
+
+  @include m(large) {
+    &.jy-input__inner {
+      height: $--input-large-height;
+      padding-right: 38px;
+      padding-left: 12px;
+    }
+    .jy-date-range-next,
+    .jy-date-range-prev {
+      .jy-range-input {
+        font-size: $--input-large-font-size;
+      }
+    }
+    .jy-range-separator {
+      line-height: 38px;
+      font-size: $--input-large-font-size;
+    }
+    .jy-date-range-icon {
+      position: absolute;
+      right: 10px;
+      .jy-input__icon[class^='Gildata-'],
+      .jy-input__icon[class*=' Gildata-'] {
+        line-height: 38px;
+      }
+    }
+    &.no-border {
+      .jy-range-separator {
+        line-height: 40px;
+      }
+      .jy-date-range-icon {
+        .jy-input__icon[class^='Gildata-'],
+        .jy-input__icon[class*=' Gildata-'] {
+          line-height: 40px;
+        }
+      }
+    }
+  }
+
+  @include m(medium) {
+    &.jy-input__inner {
+      height: $--input-medium-height;
+      padding-right: 34px;
+      padding-left: 10px;
+    }
+    .jy-date-range-next,
+    .jy-date-range-prev {
+      .jy-range-input {
+        font-size: $--input-medium-font-size;
+      }
+    }
+    .jy-range-separator {
+      line-height: 30px;
+      font-size: $--input-medium-font-size;
+    }
+    .jy-date-range-icon {
+      position: absolute;
+      right: 8px;
+      .jy-input__icon[class^='Gildata-'],
+      .jy-input__icon[class*=' Gildata-'] {
+        line-height: 30px;
+      }
+    }
+
+    &.no-border {
+      .jy-range-separator {
+        line-height: 32px;
+      }
+      .jy-date-range-icon {
+        .jy-input__icon[class^='Gildata-'],
+        .jy-input__icon[class*=' Gildata-'] {
+          line-height: 32px;
+        }
+      }
+    }
+  }
+
+  @include m(mini) {
+    &.jy-input__inner {
+      height: $--input-mini-height;
+      padding-right: 26px;
+      padding-left: 6px;
+    }
+    .jy-date-range-next,
+    .jy-date-range-prev {
+      .jy-range-input {
+        font-size: $--input-mini-font-size;
+      }
+    }
+    .jy-range-separator {
+      line-height: 20px;
+      font-size: $--input-mini-font-size;
+    }
+    .jy-date-range-icon {
+      position: absolute;
+      right: 4px;
+      .jy-input__icon[class^='Gildata-'],
+      .jy-input__icon[class*=' Gildata-'] {
+        line-height: 20px;
+      }
+    }
+    &.no-border {
+      .jy-range-separator {
+        line-height: 22px;
+      }
+      .jy-date-range-icon {
+        .jy-input__icon[class^='Gildata-'],
+        .jy-input__icon[class*=' Gildata-'] {
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

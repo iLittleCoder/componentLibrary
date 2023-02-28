@@ -1,0 +1,56 @@
+@import 'common/var';
+@import './date-picker/picker.scss';
+@import './date-picker/date-picker.scss';
+@import './scrollbar.scss';
+@import './popper';
+
+.time-select {
+  margin: 5px 0;
+  min-width: 0;
+}
+
+.time-select .jy-picker-panel__content {
+  max-height: 200px;
+  margin: 0;
+}
+
+.time-select-item {
+  color: $--color-info;
+  height: 28px;
+  line-height: 28px;
+  padding: 0;
+  padding-left: 32px;
+  padding-right: 8px;
+  font-size: 12px;
+
+  position: relative;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:first-child {
+    margin-top: 8px;
+  }
+}
+
+.time-select-item.selected {
+  .time-selected {
+    position: absolute;
+    left: 8px;
+    top: 6px;
+  }
+  &:not(.disabled) .time-selected {
+    color: $--color-primary;
+  }
+}
+
+.time-select-item.disabled {
+  color: $--color-text-disabled;
+  cursor: not-allowed;
+}
+
+.time-select-item:not(.disabled):hover {
+  background-color: $--color-neutral-hover;
+  cursor: pointer;
+}

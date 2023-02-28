@@ -1,0 +1,21 @@
+@import "mixins/mixins";
+
+@include b(steps) {
+  display: flex;
+
+  @include m(simple) {
+
+    border-radius: 4px;
+    background: $--steps-simple-background;
+  }
+
+
+  @include m(horizontal) {
+    white-space: nowrap;
+  }
+
+  @include m(vertical) {
+    height: 100%;
+    flex-flow: column;
+  }
+}

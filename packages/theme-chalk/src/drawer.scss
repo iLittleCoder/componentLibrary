@@ -1,0 +1,244 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@keyframes jy-drawer-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin drawer-animation($direction) {
+
+  @keyframes #{$direction}-drawer-in {
+    0% {
+
+      @if $direction == ltr {
+        transform: translate(-100%, 0px);
+      }
+
+      @if $direction == rtl {
+        transform: translate(100%, 0px);
+      }
+
+      @if $direction == ttb {
+        transform: translate(0px, -100%);
+      }
+
+      @if $direction == btt {
+        transform: translate(0px, 100%);
+      }
+    }
+
+    100% {
+      @if $direction == ltr {
+        transform: translate(0px, 0px);
+      }
+
+      @if $direction == rtl {
+        transform: translate(0px, 0px);
+      }
+
+      @if $direction == ttb {
+        transform: translate(0px, 0px);
+      }
+
+      @if $direction == btt {
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+
+  @keyframes #{$direction}-drawer-out {
+    0% {
+      @if $direction == ltr {
+        transform: translate(0px, 0px);
+      }
+
+      @if $direction == rtl {
+        transform: translate(0px, 0px);;
+      }
+
+      @if $direction == ttb {
+        transform: translate(0px, 0px);
+      }
+
+      @if $direction == btt {
+        transform: translate(0px, 0);
+      }
+    }
+
+    100% {
+      @if $direction == ltr {
+        transform: translate(-100%, 0px);
+      }
+
+      @if $direction == rtl {
+        transform: translate(100%, 0px);
+      }
+
+      @if $direction == ttb {
+        transform: translate(0px, -100%);
+      }
+
+      @if $direction == btt {
+        transform: translate(0px, 100%);
+      }
+    }
+  }
+}
+
+@mixin animation-in($direction) {
+  .jy-drawer__open &.#{$direction} {
+    animation: #{$direction}-drawer-in .3s 1ms;
+  }
+}
+
+@mixin animation-out($direction) {
+  &.#{$direction} {
+    animation: #{$direction}-drawer-out .3s;
+  }
+}
+
+@include drawer-animation(rtl);
+@include drawer-animation(ltr);
+@include drawer-animation(ttb);
+@include drawer-animation(btt);
+
+$directions: rtl, ltr, ttb, btt;
+
+@include b(drawer) {
+  position: absolute;
+  box-sizing: border-box;
+  background-color: $--dialog-background-color;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  outline: none;
+
+  @each $direction in $directions {
+    @include animation-out($direction);
+    @include animation-in($direction);
+  }
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  &__header {
+    align-items: center;
+    color: $--color-info;
+    font-size: $--font-size-bigger;
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    padding: 6px 16px;
+    flex-shrink: 0;
+    border-bottom: 1px solid $--border-color-normal;
+
+    .jy-icon {
+      font-size: $--font-size-extra-large;
+
+      &:hover {
+        background-color: $--color-neutral-hover;
+        border-radius: $--border-radius-base;
+      }
+    }
+    & > :first-child {
+      flex: 1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    flex: 1;
+    line-height: inherit;
+    font-size: 1rem;
+  }
+
+  &__close-btn {
+    border: none;
+    cursor: pointer;
+    font-size: $--font-size-extra-large;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  &__body {
+    flex: 1;
+    overflow: auto;
+    padding: 16px;
+    font-size: $--font-size-base;
+    border-radius: $--border-radius-base;
+    color: $--color-text-regular;
+    & > * {
+      box-sizing: border-box;
+    }
+  }
+
+  &.ltr, &.rtl {
+    height: 100%;
+    top: 0;
+    bottom: 0;
+  }
+
+  &.ttb, &.btt {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  &.ltr {
+    left: 0;
+  }
+
+  &.rtl {
+    right: 0;
+  }
+
+  &.ttb {
+    top: 0;
+  }
+
+  &.btt {
+    bottom: 0;
+  }
+  &__footer {
+    text-align: right;
+    padding: 12px 12px 12px 0;
+    border-top: 1px solid $--border-color-normal;
+
+    .jy-button + .jy-button {
+      margin-left: 8px;
+    }
+    .jy-button {
+      padding: 2px 12px;
+    }
+  }
+}
+
+.jy-drawer__container {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.jy-drawer-fade-enter-active {
+  animation: jy-drawer-fade-in .3s;
+}
+
+.jy-drawer-fade-leave-active {
+  animation: jy-drawer-fade-in .3s reverse;
+}

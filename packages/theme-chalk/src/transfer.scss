@@ -1,0 +1,325 @@
+@use "sass:math";
+@import 'mixins/mixins';
+@import 'mixins/utils';
+@import 'common/var';
+@import 'input';
+@import 'button';
+@import 'checkbox';
+
+@mixin delIcon {
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    color: $--color-primary-hover;
+  }
+  &:active {
+    color: $--color-primary-pressed;
+  }
+}
+
+@include b(transfer) {
+  font-size: $--font-size-base;
+
+  @include e(buttons) {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 12px;
+
+    .jy-button + .jy-button {
+      margin-left: 0;
+      margin-top: 12px;
+    }
+
+    .jy-button {
+      line-height: 16px;
+      padding: 4px;
+      border: none;
+
+      .jy-transfer__left {
+        margin-left: 2px;
+      }
+
+      .jy-transfer__right {
+        margin-right: 2px;
+      }
+
+      .jy-transfer__direction-mr {
+        margin-right: 8px;
+      }
+      .jy-transfer__direction-ml {
+        margin-left: 8px;
+      }
+      .jy-transfer__direction-icon-ml {
+        margin-left: 0;
+      }
+
+      i {
+        line-height: 16px;
+        color: $--color-neutral;
+      }
+      &:hover {
+        color: $--color-neutral;
+      }
+    }
+  }
+
+  @include e(button) {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 50%;
+    color: $--color-white;
+    background-color: $--color-primary;
+    font-size: 0;
+
+    @include when(with-texts) {
+      border-radius: $--border-radius-base;
+      color: $--color-neutral;
+    }
+
+    @include when(disabled) {
+      background-color: $--background-color-disabled;
+      color: $--color-text-placeholder;
+      i {
+        color: $--color-text-disabled;
+      }
+
+      &:hover {
+        background-color: $--background-color-base;
+        color: $--color-text-placeholder;
+      }
+    }
+
+    &:nth-child(2) {
+      margin: 0;
+    }
+
+    span {
+      font-size: $--font-size-base;
+    }
+
+    & [class*='el-icon-'] + span {
+      margin-left: 0;
+    }
+    & [class*='Gildata-'] + span {
+      margin-left: 0;
+    }
+  }
+}
+
+@include b(transfer-panel) {
+  border: 1px solid $--table-border-color;
+  border-radius: $--border-radius-base;
+  background: $--color-neutral;
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  max-height: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+  .jy-pagination {
+    padding: 6px 8px;
+    text-align: right;
+    border-top: 1px solid $--border-color-normal;
+  }
+
+  @include e(body) {
+    height: $--transfer-panel-body-height;
+    position: relative;
+
+    @include when(with-footer) {
+      padding-bottom: $--transfer-panel-footer-height;
+    }
+
+    .jy-empty {
+      position: absolute;
+      top: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include e(scrollbar) {
+    height: $--transfer-panel-body-height;
+
+    @include when(filterable) {
+      height: #{$--transfer-panel-body-height - $--transfer-filter-height};
+      padding-top: 0;
+    }
+    .jy-scrollbar__wrap {
+      overflow-x: hidden;
+    }
+  }
+
+  @include e(list) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    //height: $--transfer-panel-body-height;
+    //overflow: auto;
+    box-sizing: border-box;
+  }
+
+  @include e(del) {
+    position: relative;
+    float: right;
+    line-height: 16px;
+    color: $--color-text-regular;
+    cursor: pointer;
+
+    @include delIcon;
+  }
+
+  @include e(delItem) {
+    font-size: $--font-size-base;
+    font-weight: 400;
+    color: $--color-info;
+    line-height: 18px;
+    padding: 5px 12px;
+  }
+
+  @include e(item) {
+    height: $--transfer-item-height;
+    line-height: $--transfer-item-height;
+    padding-left: 12px;
+    display: block !important;
+
+    &.is-oneWay {
+      &:hover {
+        background-color: unset;
+      }
+    }
+
+    &.jy-checkbox {
+      margin-right: 0;
+    }
+
+    & + .jy-transfer-panel__item {
+      margin-left: 0;
+    }
+
+    &:not(.is-disabled):hover {
+      background-color: $--color-neutral-hover;
+    }
+
+    &.jy-checkbox .jy-checkbox__label {
+      width: 100%;
+      @include utils-ellipsis;
+      display: block;
+      box-sizing: border-box;
+      padding-left: 22px;
+      line-height: $--transfer-item-height;
+    }
+
+    .jy-checkbox__input {
+      position: absolute;
+      top: 7px;
+    }
+  }
+
+  @include e(filter) {
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+    display: block;
+    width: auto;
+
+    .jy-input__suffix {
+      right: 12px !important;
+    }
+
+    .jy-input__inner {
+      width: 100%;
+      font-size: 12px;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+
+    .jy-input__icon {
+      margin-left: 5px;
+    }
+
+    .Gildata-close,
+    .Gildata-clean {
+      cursor: pointer;
+    }
+  }
+
+  .jy-transfer-panel__header {
+    height: $--transfer-panel-header-height;
+    line-height: $--transfer-panel-header-height;
+    background: $--background-primary-color-light;
+    margin: 0;
+    padding-left: 12px;
+    box-sizing: border-box;
+    color: $--color-info;
+    // border-radius: 4px;
+
+    .jy-transfer-panel__oneWayHeader {
+      i {
+        line-height: 32px;
+        float: right;
+        margin-right: 12px;
+        color: $--color-text-regular;
+        cursor: pointer;
+
+        @include delIcon;
+      }
+    }
+
+    .jy-checkbox {
+      display: block;
+      line-height: 32px;
+
+      .jy-checkbox__label {
+        font-size: $--font-size-base;
+        color: $--color-text-primary;
+        font-weight: normal;
+
+        span {
+          position: absolute;
+          right: 15px;
+          color: $--color-text-secondary;
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .jy-transfer-panel__footer {
+    height: $--transfer-panel-footer-height;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid $--border-color-normal;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: $--index-normal;
+    padding: 9px 9px 9px 12px;
+    box-sizing: border-box;
+    @include utils-vertical-center;
+
+    .jy-checkbox {
+      padding-left: 20px;
+      color: $--color-text-regular;
+    }
+  }
+
+  .jy-transfer-panel__empty {
+    margin: 0;
+    height: $--transfer-item-height;
+    line-height: $--transfer-item-height;
+    padding: 6px 15px 0;
+    color: $--color-text-secondary;
+    text-align: center;
+  }
+
+  .jy-checkbox__label {
+    padding-left: 10px;
+  }
+}

@@ -1,0 +1,34 @@
+.demo-divider-container-1 {
+  display: inline-block;
+  width: 33%;
+}
+
+.demo-divider-container-2 {
+  display: inline-block;
+  width: 50%;
+}
+
+.demo-divider {
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #202020;
+    line-height: 18px;
+  }
+
+  .jy-vertical__span {
+    color: rgba(20,20,20, 0.65);
+  }
+}
+
+.BlackTheme{
+  .demo-divider {
+    span {
+      color: #e6e6e6;
+    }
+  
+    .jy-vertical__span {
+      color: rgba(#e6e6e6, 0.65);
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import "config";
+
+/*
+sass内置函数
+1） `inspect`
+inspect(\$value)函数返回 $value 的字符串表示形式
+```
+@debug inspect(null); // "null"
+@debug inspect(('width': 200px)); // "('width': 200px)"
+```
+2） `str-index`
+inspect(\$str, \$value)返回字符串的第一个索引(索引从1开始)，如果字符串不包含子字符串，则返回 null
+```
+@debug str-index("sans-serif", "ans"); // 2
+```
+3） `str-slice`
+str-slice(\$str, \$beginIndex, \$endIndex) 截取字符串的指定字符
+```
+@debug str-index("(.el-message)", 2, -2); // .el-message
+```
+*/
+
+
+/* BEM 辅助函数*/
+// 字符串截取（2, -2）, 如(.el-message,) → .el-message
+@function selectorToString($selector) {
+  $selector: inspect($selector);
+  $selector: str-slice($selector, 2, -2);
+  @return $selector;
+}
+
+//判断父级选择器是否包含'--'
+@function containsModifier($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, $modifier-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+//判断 父级选择器是否包含'.is-'
+@function containWhenFlag($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, '.' + $state-prefix) {
+    @return true
+  } @else {
+    @return false
+  }
+}
+
+//判断 父级是否包含 ':'
+// 用于判断伪类和伪元素
+@function containPseudoClass($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, ':') {
+    @return true
+  } @else {
+    @return false
+  }
+}
+
+// 判断父级选择器（$selector: &），是否包含`--` `.is-`  `：`这三种字符
+@function hitAllSpecialNestRule($selector) {
+  @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector);
+}

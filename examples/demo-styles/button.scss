@@ -1,0 +1,93 @@
+.demo-block.demo-button {
+  .special-press.is-no-border:hover {
+    // color: rgba(32, 32, 32, 0.65);
+    background: var(--color-neutral-hover);
+    color: var(--color-info);
+  }
+  .special-press.is-no-border:focus {
+    // background-color: rgba(32, 32, 32, 0.12);
+    // color: rgba(32, 32, 32, 0.65);
+    background: var(--color-neutral-pressed);
+    color: var(--color-info);
+  }
+  .special-focus.is-no-border {
+    color: var(--color-primary);
+    background-color: #fff;
+  }
+  .jy-row {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .jy-button + .jy-button {
+    margin-left: 10px;
+  }
+  .jy-button-group {
+    .jy-button + .jy-button {
+      margin-left: 0;
+    }
+
+    & + .jy-button-group {
+      margin-left: 10px;
+    }
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .shaixuan-content {
+    .shaixuan-item {
+      margin-right: 12px;
+      text-align: center;
+    }
+    .shaixuan-desc {
+      font-size: 14px;
+      opacity: 0.45;
+      color: var(--color-info);
+      display: inline-block;
+      margin-top: 12px;
+    }
+    .shaixuan-btn {
+      pointer-events: none;
+      &.hover {
+        background: var(--color-neutral-hover);
+        color: var(--color-info);
+        cursor: pointer;
+      }
+      &.pressed {
+        background: var(--color-neutral-pressed);
+        color: var(--color-info);
+        cursor: pointer;
+      }
+      &.selected {
+        background: transparent;
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+.demo-iconBtn-group {
+  button {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+// .BlackTheme {
+//   .demo-block.demo-button {
+//     .special-press.is-no-border:hover {
+//       color: rgba(230, 230, 230, 0.65);
+//     }
+//     .special-press.is-no-border:focus {
+//       background-color: rgba(230, 230, 230, 0.06);
+//       color: rgba(230, 230, 230, 0.65);
+//     }
+//     .special-focus.is-no-border {
+//       color: #f5ba63;
+//       background-color: #fff;
+//     }
+//   }
+// }

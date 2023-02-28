@@ -1,0 +1,101 @@
+@import "mixins/mixins";
+@import "common/var";
+
+// 默认尺寸为48px
+@include b(avatar) {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  color: $--color-white;
+  background: $--background-step-color;
+  width: $--avatar-medium-size;
+  height: $--avatar-medium-size;
+  line-height: $--avatar-medium-size;
+  font-size: $--font-size-extra-large;
+  font-weight: 500;
+
+  i {
+    color: $--color-text-placeholder;
+    font-size: $--avatar-small-size;
+    line-height: inherit;
+  }
+
+  >img {
+    display: block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  @include m(circle) {
+    border-radius: 50%;
+  }
+
+  @include m(square) {
+    border-radius: $--border-radius-base;
+  }
+
+  @include m(icon) {
+    font-size: $--avatar-icon-font-size;
+  }
+
+  @include m(large) {
+    width: $--avatar-large-size;
+    height: $--avatar-large-size;
+    line-height: $--avatar-large-size;
+    font-size: $--font-size-extra-large;
+
+    i {
+      font-size: $--avatar-medium-size;
+      //line-height: $--avatar-large-size;
+    }
+  }
+
+  @include m(medium) {
+    width: $--avatar-medium-size;
+    height: $--avatar-medium-size;
+    line-height: $--avatar-medium-size;
+    font-size: $--font-size-medium;
+
+    i {
+      font-size: $--avatar-small-size;
+      //line-height: $--avatar-medium-size;
+    }
+  }
+
+  @include m(small) {
+    width: $--avatar-small-size;
+    height: $--avatar-small-size;
+    line-height: $--avatar-small-size;
+    font-size: $--font-size-medium;
+
+    i {
+      font-size: $--avatar-smaller-size;
+      //line-height: $--avatar-small-size;
+    }
+  }
+
+  @include m(smaller) {
+    width: $--avatar-smaller-size;
+    height: $--avatar-smaller-size;
+    line-height: $--avatar-smaller-size;
+    font-size: $--font-size-base;
+
+    i {
+      font-size: $--avatar-mini-size;
+      //line-height: $--avatar-smaller-size;
+    }
+  }
+
+  @include m(mini) {
+    width: $--avatar-mini-size;
+    height: $--avatar-mini-size;
+    line-height: $--avatar-mini-size;
+    font-size: $--font-size-base;
+
+    i {
+      font-size: $--font-size-medium;
+      //line-height: $--avatar-mini-size;
+    }
+  }
+}

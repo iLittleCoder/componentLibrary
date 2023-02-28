@@ -1,0 +1,317 @@
+/**Variable**/
+%ButtonHover {
+  color: $jy-primary-color;
+  border-color: $jy-primary-color;
+}
+
+.jy-table-form {
+  position: relative;
+  font-size: $jy-font-size;
+  color: $jy-font-color;
+  font-family: $jy-font-family;
+  background-color: $jy-form-background-color;
+  text-align: left;
+}
+
+.jy-table-form-slots {
+  display: none;
+}
+
+.jy-table-form--item-content,
+.jy-table-form--item-trigger-node {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.jy-table-form--item-title {
+  display: flex;
+  flex-direction: row;
+  max-width: 320px;
+  padding-right: 0.8em;
+  &.is--ellipsis {
+    .jy-table-form--item-title-content {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .jy-table-form--item-title-prefix,
+  .jy-table-form--item-title-suffix,
+  .jy-table-form--item-title-postfix {
+    flex-shrink: 0;
+  }
+  .jy-table-form--item-title-prefix,
+  .jy-table-form--item-title-suffix {
+    cursor: help;
+    vertical-align: middle;
+    & > i {
+      vertical-align: middle;
+    }
+  }
+  .jy-table-form--item-title-prefix {
+    margin-right: 0.25em;
+  }
+  .jy-table-form--item-title-suffix {
+    margin-left: 0.2em;
+  }
+  .jy-table-form--item-title-postfix {
+    display: flex;
+    align-items: center;
+  }
+  .jy-table-form--item-title-content {
+    flex-grow: 1;
+  }
+  .jy-table-form--item-title-label {
+    vertical-align: middle;
+  }
+}
+
+.jy-table-form--item-trigger-node {
+  font-size: 12px;
+  min-width: 100px;
+  color: #909399;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  .jy-table-form--item-trigger-icon {
+    margin: 0 0.25em;
+    transition: all 0.1s;
+  }
+}
+
+.jy-table-form--item-valid {
+  position: absolute;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.2em;
+  color: $jy-form-validate-error-color;
+  background-color: $jy-form-validate-error-background-color;
+  z-index: 1;
+  opacity: 0;
+  transform-origin: center top;
+  transform: scaleY(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.jy-table-form {
+  .jy-table-form--gather {
+    display: inline-block;
+  }
+  .jy-table-form--item {
+    display: none;
+    padding: 0.5em 0.8em 0.5em 0;
+    &.is--active {
+      &:not(.is--hidden) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.jy-table-form--item {
+  &.is--colon {
+    .jy-table-form--item-title-postfix {
+      &:after {
+        content: ":";
+        font-weight: normal;
+        margin-left: 0.2em;
+      }
+    }
+  }
+  &.is--asterisk {
+    &.is--required {
+      .jy-table-form--item-title-content {
+        &:before {
+          content: "*";
+          color: $jy-form-validate-error-color;
+          font-family: Verdana,Arial,Tahoma;
+          margin-right: 0.2em;
+          font-weight: normal;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  &.is--span {
+    .jy-table-default-input:not([type="submit"]):not([type="reset"]),
+    .jy-table-default-textarea,
+    .jy-table-default-select,
+    .jy-table-input,
+    .jy-table-textarea,
+    .jy-table-select {
+      width: 100%;
+    }
+  }
+  &.is--error {
+    .jy-table-input > .jy-table-input--inner,
+    .jy-table-textarea > .jy-table-textarea--inner,
+    .jy-table-select,
+    .jy-table-select.is--active > .jy-table-input .jy-table-input--inner,
+    .jy-table-default-input,
+    .jy-table-default-textarea,
+    .jy-table-default-select {
+      border-color: $jy-form-validate-error-color;
+    }
+    .jy-table-input>.jy-table-input--inner,
+    .jy-table-textarea>.jy-table-textarea--inner,
+    .jy-table-default-input[type="text"],
+    .jy-table-default-input[type="search"],
+    .jy-table-default-textarea,
+    .jy-table-default-select {
+      &:focus {
+        border-color: $jy-form-validate-error-color;
+      }
+    }
+    .jy-table-form--item-valid {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+  .jy-table-form--item-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .jy-table-form--item-title {
+      flex-shrink: 0;
+    }
+    .jy-table-form--item-content {
+      position: relative;
+      flex-grow: 1;
+    }
+  }
+  .jy-table-default-input,
+  .jy-table-default-textarea,
+  .jy-table-default-select {
+    outline: 0;
+    border: 1px solid $jy-input-border-color;
+    border-radius: $jy-border-radius;
+  }
+  .jy-table-default-input,
+  .jy-table-default-select {
+    height: $jy-button-height-default;
+  }
+  .jy-table-default-input {
+    padding: 0 0.8em;
+  }
+  .jy-table-default-textarea {
+    padding: 0.3em 0.6em;
+  }
+  .jy-table-default-input[type="number"] {
+    padding-right: 0.2em;
+  }
+  .jy-table-default-input[type="text"],
+  .jy-table-default-input[type="search"] {
+    padding: 0 1em;
+  }
+  .jy-table-default-input[type="text"],
+  .jy-table-default-input[type="search"],
+  .jy-table-default-textarea,
+  .jy-table-default-select {
+    color: $jy-font-color;
+    &:focus {
+      border: 1px solid $jy-primary-color;
+    }
+    &[disabled] {
+      cursor: not-allowed;
+      background-color: $jy-input-disabled-background-color;
+    }
+  }
+  .jy-table-default-input[type="submit"],
+  .jy-table-default-input[type="reset"] {
+    line-height: $jy-button-height-default - 2px;
+    background-color: #fff;
+    cursor: pointer;
+    &:hover {
+      @extend %ButtonHover;
+    }
+    &:active {
+      color: $jy-primary-color;
+      border-color: $jy-primary-color;
+    }
+  }
+  .jy-table-default-input {
+    &[type="date"]::-webkit-inner-spin-button {
+      margin-top: 6px;
+    }
+    &[type="date"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      height: 24px;
+    }
+    &::placeholder {
+      color: $jy-input-placeholder-color;
+    }
+  }
+  .jy-table-default-input[type="text"],
+  .jy-table-default-input[type="search"],
+  .jy-table-default-textarea,
+  .jy-table-default-select {
+    width: 180px;
+  }
+  .jy-table-default-textarea {
+    resize: none;
+    vertical-align: middle;
+    &::placeholder {
+      color: $jy-input-placeholder-color;
+    }
+  }
+}
+
+.jy-table-form {
+  .jy-table-form--item-inner {
+    min-height: $jy-form-item-min-height-default;
+    & > .align--center {
+      text-align: center;
+    }
+    & > .align--left {
+      text-align: left;
+    }
+    & > .align--right {
+      text-align: right;
+    }
+  }
+  &.size--medium {
+    font-size: $jy-font-size-medium;
+    .jy-table-form--item-inner {
+      min-height: $jy-form-item-min-height-medium;
+    }
+    .jy-table-default-input[type="submit"],
+    .jy-table-default-input[type="reset"] {
+      line-height: $jy-button-height-medium - 2px;
+    }
+    .jy-table-default-input,
+    .jy-table-default-input,
+    .jy-table-default-select {
+      height: $jy-button-height-medium;
+    }
+  }
+  &.size--small {
+    font-size: $jy-font-size-small;
+    .jy-table-form--item-inner {
+      min-height: $jy-form-item-min-height-small;
+    }
+    .jy-table-default-input[type="submit"],
+    .jy-table-default-input[type="reset"] {
+      line-height: $jy-button-height-small - 2px;
+    }
+    .jy-table-default-input,
+    .jy-table-default-input,
+    .jy-table-default-select {
+      height: $jy-button-height-small;
+    }
+  }
+  &.size--mini {
+    font-size: $jy-font-size-mini;
+    .jy-table-form--item-inner {
+      min-height: $jy-form-item-min-height-mini;
+    }
+    .jy-table-default-input[type="submit"],
+    .jy-table-default-input[type="reset"] {
+      line-height: $jy-button-height-mini - 2px;
+    }
+    .jy-table-default-input,
+    .jy-table-default-input,
+    .jy-table-default-select {
+      height: $jy-button-height-mini;
+    }
+  }
+}

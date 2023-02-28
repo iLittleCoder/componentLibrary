@@ -1,0 +1,10 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(pie) {
+  width: 100%;
+
+  @include m(chart) {
+    border-radius: $--border-radius-base;
+  }
+}

@@ -1,0 +1,292 @@
+@import 'mixins/mixins';
+@import 'common/var';
+
+@mixin genTheme($backgroundColorWeight, $borderColorWeight, $fontColorWeight) {
+  background-color: $--background-primary-color;
+  border-color: $--background-primary-color;
+  color: $--color-primary;
+
+  @include when(hit) {
+    background-color: transparent !important;
+  }
+
+  // 点击效果
+  @include when(operable) {
+    &:hover,
+    &:focus {
+      color: $--color-primary-hover;
+    }
+    &:active {
+      color: $--color-primary-pressed;
+    }
+  }
+
+  .jy-tag__close {
+    color: $--color-primary;
+    &:hover,
+    &:focus {
+      color: $--color-primary-hover;
+    }
+    &:active {
+      color: $--color-primary-pressed;
+    }
+  }
+
+  &.jy-tag--info {
+    background-color: $--color-neutral-hover;
+    // border-color: $--color-neutral-hover;
+    border-color: transparent;
+    color: $--color-text-secondary;
+
+    @include when(hit) {
+      border-color: $--color-text-secondary;
+    }
+
+    // 点击效果
+    @include when(operable) {
+      &:hover,
+      &:focus {
+        color: $--color-info-hover;
+      }
+      &:active {
+        color: $--color-info-pressed;
+      }
+    }
+
+    .jy-tag__close {
+      color: $--color-text-secondary;
+      &:hover,
+      &:focus {
+        color: $--color-info-hover;
+      }
+      &:active {
+        color: $--color-info-pressed;
+      }
+    }
+  }
+
+  &.jy-tag--success {
+    background-color: $--background-success-color;
+    border-color: $--background-success-color;
+    color: $--color-success;
+
+    @include when(hit) {
+      border-color: $--color-success;
+    }
+
+    // 点击效果
+    @include when(operable) {
+      &:hover,
+      &:focus {
+        color: $--color-success-hover;
+      }
+      &:active {
+        color: $--color-success-pressed;
+      }
+    }
+
+    .jy-tag__close {
+      color: $--color-success;
+      &:hover,
+      &:focus {
+        color: $--color-success-hover;
+      }
+      &:active {
+        color: $--color-success-pressed;
+      }
+    }
+  }
+
+  &.jy-tag--warning {
+    background-color: $--background-warning-color;
+    border-color: $--background-warning-color;
+    color: $--color-warning;
+
+    @include when(hit) {
+      border-color: $--color-warning;
+    }
+
+    // 点击效果
+    @include when(operable) {
+      &:hover,
+      &:focus {
+        color: $--color-warning-hover;
+      }
+      &:active {
+        color: $--color-warning-pressed;
+      }
+    }
+
+    .jy-tag__close {
+      color: $--color-warning;
+      &:hover,
+      &:focus {
+        color: $--color-warning-hover;
+      }
+      &:active {
+        color: $--color-warning-pressed;
+      }
+    }
+  }
+
+  &.jy-tag--danger {
+    background-color: $--background-danger-color;
+    border-color: $--background-danger-color;
+    color: $--color-danger;
+
+    @include when(hit) {
+      border-color: $--color-danger;
+    }
+
+    // 点击效果
+    @include when(operable) {
+      &:hover,
+      &:focus {
+        color: $--color-danger-hover;
+      }
+      &:active {
+        color: $--color-danger-pressed;
+      }
+    }
+
+    .jy-tag__close {
+      color: $--color-danger;
+      &:hover,
+      &:focus {
+        color: $--color-danger-hover;
+      }
+      &:active {
+        color: $--color-danger-pressed;
+      }
+    }
+  }
+}
+
+@include b(tag) {
+  @include genTheme($--tag-backround-mix-percent, $--tag-border-mix-percent, 100%);
+  display: inline-block;
+  padding: 0 6px;
+  line-height: 20px;
+  font-size: $--font-size-base;
+  color: $--color-primary;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $--border-radius-base;
+  box-sizing: border-box;
+  white-space: nowrap;
+
+  [class^='Gildata-'],
+  [class*=' Gildata-'] {
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    //top: 0;
+  }
+
+  @include when(hit) {
+    border-color: $--color-primary;
+  }
+
+  @include when(operable) {
+    cursor: pointer;
+  }
+
+  .Gildata-close {
+    text-align: center;
+    cursor: pointer;
+  }
+
+  @include m(large) {
+    padding: 0 12px;
+    font-size: $--font-size-bigger;
+    line-height: 38px;
+
+    @include when(rightIcon) {
+      padding-right: 10px;
+      i {
+        padding-left: 10px;
+      }
+    }
+    @include when(leftIcon) {
+      padding-right: 10px;
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  @include m(big) {
+    padding: 0 10px;
+    font-size: $--font-size-bigger;
+    line-height: 30px;
+
+    @include when(rightIcon) {
+      padding-right: 8px;
+      i {
+        padding-left: 8px;
+      }
+    }
+    @include when(leftIcon) {
+      padding-right: 8px;
+      i {
+        padding-right: 8px;
+      }
+    }
+  }
+
+  @include m(medium) {
+    padding: 0 8px;
+    font-size: $--font-size-bigger;
+    line-height: 26px;
+
+    @include when(rightIcon) {
+      padding-right: 6px;
+      i {
+        padding-left: 6px;
+      }
+    }
+    @include when(leftIcon) {
+      padding-right: 6px;
+      i {
+        padding-right: 6px;
+      }
+    }
+  }
+
+  @include m(small) {
+    padding: 0 6px;
+    line-height: 20px;
+
+    @include when(rightIcon) {
+      padding-right: 4px;
+      i {
+        padding-left: 4px;
+      }
+    }
+    @include when(leftIcon) {
+      padding-right: 4px;
+      i {
+        padding-right: 4px;
+      }
+    }
+  }
+
+  @include m(mini) {
+    padding: 0px 4px;
+    line-height: 16px;
+
+    @include when(rightIcon) {
+      padding-right: 2px;
+      i {
+        padding-left: 2px;
+      }
+    }
+
+    @include when(leftIcon) {
+      padding-right: 2px;
+      i {
+        padding-right: 2px;
+      }
+    }
+  }
+}

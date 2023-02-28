@@ -1,0 +1,33 @@
+.demo-block {
+  &.demo-radio {
+    .jy-radio.is-bordered + .jy-radio.is-bordered {
+      margin-left: 0;
+    }
+  }
+  .demo-radio-group {
+    margin-bottom: 20px;
+    .jy-radio-group {
+      .jy-radio--large {
+        &:first-of-type {
+          margin-right: 35px;
+        }
+      }
+      .jy-radio--medium {
+        &:first-of-type {
+          margin-right: 37px;
+        }
+      }
+      .jy-radio--small {
+        &:first-of-type {
+          margin-right: 44px;
+        }
+      }
+      .jy-radio--mini {
+        &:first-of-type {
+          margin-right: 44px;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,89 @@
+.demo-tree {
+  .custom-tree-icon {
+    &:hover {
+      color: #3F7FFF;
+    }
+    &:active {
+      color: #2160E0;
+    }
+  }
+  .leaf {
+    width: 20px;
+    background: #ddd;
+  }
+
+  .tree-demo {
+    width: 200px;
+  }
+
+  .folder {
+    width: 20px;
+    background: #888;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  .filter-tree {
+    margin-top: 20px;
+  }
+
+  .custom-tree-container {
+    display: flex;
+    margin: -24px;
+  }
+
+  .block {
+    flex: 1;
+    padding: 8px 24px 24px;
+
+    &:first-child {
+      border-right: 1px solid #eff2f6;
+    }
+
+    > p {
+      text-align: center;
+      margin: 0;
+      line-height: 4;
+    }
+  }
+
+  .custom-tree-node {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 0 8px;
+  }
+  .custom-tree-tooltip {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 0 8px;
+
+    .Gildata-help {
+      margin-right: 8px;
+    }
+  }
+}
+
+.BlackTheme {
+  .demo-tree {
+    .block {
+      &:first-child {
+        border-right: 1px solid rgba(230, 230, 230, 0.07);
+      }
+    }
+    .custom-tree-icon {
+      &:hover {
+        color: #f6c276;
+      }
+      &:active {
+        color: #d8a457;
+      }
+    }
+  }
+}

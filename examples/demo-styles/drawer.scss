@@ -1,0 +1,27 @@
+.demo-drawer {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    form {
+      flex: 1;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    button {
+      flex: 1;
+    }
+  }
+}
+
+.demo-dialog-drawer {
+  .jy-drawer__body {
+    padding: 0;
+  }
+  .demo-drawer__content {
+    padding-top: 16px;
+  }
+}
+

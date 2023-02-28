@@ -1,0 +1,54 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(rate) {
+  height: $--rate-height;
+  line-height: 1;
+
+  &:focus, &:active {
+    outline-width: 0;
+  }
+
+  @include e(item) {
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+    vertical-align: middle;
+  }
+
+  @include e(icon) {
+    position: relative;
+    display: inline-block;
+    font-size: $--rate-icon-size;
+    margin-right: $--rate-icon-margin;
+    color: $--border-color-base;
+    transition: .3s;
+    &.hover {
+      transform: scale(1.125);
+    }
+
+    .path2 {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  @include e(decimal) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    overflow: hidden;
+    font-size: $--rate-icon-size;
+    &.Gildata-star4{
+      width: 100% !important;
+    }
+  }
+
+  @include e(text) {
+    font-size: $--rate-font-size;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+}

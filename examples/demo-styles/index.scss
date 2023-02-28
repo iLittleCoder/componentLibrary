@@ -1,0 +1,269 @@
+@import './affix.scss';
+@import './alert.scss';
+@import './autocomplete.scss';
+@import './badge.scss';
+@import './border.scss';
+@import './button.scss';
+@import './calendar.scss';
+@import './card.scss';
+@import './carousel.scss';
+@import './cascader.scss';
+@import './collapse.scss';
+@import './color-picker.scss';
+@import './color.scss';
+@import './container.scss';
+@import './date-picker.scss';
+@import './datetime-picker.scss';
+@import './dialog.scss';
+@import './dropdown.scss';
+@import './form.scss';
+@import './i18n.scss';
+@import './icon.scss';
+@import './input-number.scss';
+@import './input.scss';
+@import './layout.scss';
+@import './loading.scss';
+@import './menu.scss';
+@import './pagination.scss';
+@import './popover.scss';
+@import './progress.scss';
+@import './rate.scss';
+@import './select.scss';
+@import './slider.scss';
+@import './switch.scss';
+@import './table.scss';
+@import './tag.scss';
+@import './time-picker.scss';
+@import './timeline.scss';
+@import './tooltip.scss';
+@import './transition.scss';
+@import './transfer.scss';
+@import './tree.scss';
+@import './typography.scss';
+@import './upload.scss';
+@import './divider.scss';
+@import './image.scss';
+@import './infinite-scroll.scss';
+@import './avatar.scss';
+@import './drawer.scss';
+@import './skeleton.scss';
+@import './descriptions.scss';
+@import './empty.scss';
+@import './radio.scss';
+@import './backtop.scss';
+@import './link.scss';
+@import './scrollbar.scss';
+@import './page-header.scss';
+@import './tree-select.scss';
+@import './common/black.scss';
+@import './pie.scss';
+@import './chart.scss';
+
+.BlackTheme {
+  // 头部
+  .headerWrapper .header {
+    background-color: #252525;
+    .container {
+      border-bottom: 1px solid rgba(#e6e6e6, 0.07);
+    }
+    .logo-box .logo-name,
+    .nav-item a {
+      color: #e6e6e6;
+      &:hover {
+        // background-color: #ffb42b;
+        background-color: rgba(#e6e6e6, 0.12);
+      }
+      &:active {
+        background-color: rgba(#e6e6e6, 0.06);
+      }
+      &.active {
+        color: #f5ba63;
+        &::after {
+          background-color: #f5ba63;
+        }
+      }
+    }
+    .nav-dropdown span {
+      color: #e6e6e6;
+    }
+    .nav-dropdown i {
+      color: rgba(#e6e6e6, 0.65);
+    }
+    h1 span {
+      border: 1px solid #252525;
+    }
+  }
+
+  .main-cnt {
+    background-color: #15181a;
+
+    // 反馈
+    .feedback-container {
+      .feedback-box {
+        // background: #2b2b2c;
+        background-image: url('~examples/assets/images/resource-black-bg.png');
+      }
+      .feedback-title,
+      .feedback-item-title {
+        color: #e6e6e6;
+      }
+      .feedback-des {
+        color: rgba(#e6e6e6, 0.65);
+      }
+      .feedback-item-person {
+        background-color: #2b2b2c;
+      }
+      .feedback-name {
+        color: #f5ba63;
+      }
+      .feedback-email {
+        color: #e6e6e6;
+      }
+    }
+
+    // 左边
+    .page-component__nav {
+      background-color: #252525;
+      .side-nav .nav-item a {
+        color: #e6e6e6;
+        &.active {
+          color: #f5ba63;
+          background: #3d2f19;
+        }
+        &:hover {
+          color: #f5ba63;
+        }
+      }
+      .side-nav .nav-group__title {
+        color: rgba(#e6e6e6, 0.45);
+      }
+    }
+    // 右边
+    .page-container {
+      .page-component__content {
+        border-color: rgba(#e6e6e6, 0.07);
+      }
+      // 设计介绍
+      &.page-guide {
+        .content {
+          div,
+          p {
+            color: #e6e6e6;
+          }
+        }
+      }
+      // 组件
+      &.page-component {
+        // 通用
+        .content {
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            color: #e6e6e6;
+          }
+          p {
+            color: rgba(230, 230, 230, 0.65);
+          }
+          .hljs {
+            color: #e6e6e6;
+            background-color: #252525;
+            border: 1px solid #252525;
+          }
+          code {
+            background-color: #252525;
+            color: #e6e6e6;
+            border-color: rgba(#e6e6e6, 0.12);
+          }
+        }
+        // 更新日志
+        .page-changelog {
+          .heading {
+            color: #e6e6e6;
+          }
+          .timeline > li {
+            border: 1px solid rgba(#e6e6e6, 0.12);
+          }
+          .timeline h3 {
+            border-bottom: 1px solid rgba(#e6e6e6, 0.07);
+          }
+          li {
+            a {
+              color: #f5ba63;
+            }
+          }
+        }
+        // 代码模块
+        .demo-block {
+          &.hover {
+            box-shadow: 0 0 8px 0 rgba(#000, 0.6), 0 2px 4px 0 rgba(#000, 0.5);
+          }
+          border: 1px solid rgba(#e6e6e6, 0.12);
+          .demo-block-control {
+            background-color: #252525;
+            border-top: solid 1px rgba(#e6e6e6, 0.07);
+            &:hover {
+              color: #f5ba63;
+            }
+            span {
+              color: #f5ba63;
+            }
+          }
+          .meta {
+            background-color: #2b2b2c;
+            border-top: 1px rgba(#e6e6e6, 0.07);
+            .description {
+              background-color: #15181a;
+              border: solid 1px rgba(#e6e6e6, 0.07);
+            }
+          }
+        }
+        // 属性表格
+        .content > table {
+          background-color: #15181a;
+          th {
+            color: rgba(#e6e6e6, 0.65);
+            border-bottom: solid 1px rgba(#e6e6e6, 0.12);
+          }
+          td {
+            color: #e6e6e6;
+            border-bottom: solid 1px rgba(#e6e6e6, 0.12);
+            a {
+              color: #f5ba63;
+            }
+          }
+        }
+        // 底部
+        .footer-nav {
+          color: #e6e6e6;
+          i {
+            color: #e6e6e6;
+          }
+          .footer-nav-link:hover {
+            color: #f5ba63;
+          }
+        }
+        .tip {
+          background-color: #252525;
+          border-left: #f5ba63 5px solid;
+          p {
+            a {
+              color: #f5ba63;
+            }
+          }
+        }
+        .warning {
+          background-color: #252525;
+        }
+      }
+    }
+  }
+}
+
+.BlackTheme {
+  .demo-block .demo-block-control:hover {
+    color: #f5ba63;
+  }
+}

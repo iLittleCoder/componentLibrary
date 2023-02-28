@@ -1,0 +1,212 @@
+@import "mixins/mixins";
+@import "mixins/utils";
+@import 'mixins/button';
+@import "common/var";
+
+@include b(radio) {
+  color: $--radio-font-color;
+  font-weight: $--radio-font-weight;
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  outline: none;
+  font-size: $--font-size-base;
+  margin-right: 30px;
+  @include utils-user-select(none);
+
+  @include when(bordered) {
+    padding: $--radio-bordered-padding;
+    border-radius: $--border-radius-base;
+    border: $--border-base;
+    box-sizing: border-box;
+    height: $--radio-bordered-height;
+
+    &.is-checked {
+      border-color: $--color-primary; 
+    }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      border-color: $--border-color-disabled;
+    }
+
+    & + .jy-radio.is-bordered {
+      margin-left: 10px;
+    }
+  }
+
+  @include m(medium) {
+    &.is-bordered {
+      padding: $--radio-bordered-medium-padding;
+      border-radius: $--button-medium-border-radius;
+      height: $--radio-bordered-medium-height;
+      .jy-radio__label {
+        font-size: $--button-medium-font-size;
+      }
+      .jy-radio__inner {
+        height: $--radio-bordered-medium-input-height;
+        width: $--radio-bordered-medium-input-width;
+        &::after {
+          width: $--radio-inner-circle-medium-radius;
+          height: $--radio-inner-circle-medium-radius;
+        }
+      }
+    }
+  }
+  @include m(small) {
+    &.is-bordered {
+      padding: $--radio-bordered-small-padding;
+      border-radius: $--button-small-border-radius;
+      height: $--radio-bordered-small-height;
+      .jy-radio__label {
+        font-size: $--button-small-font-size;
+      }
+      .jy-radio__inner {
+        height: $--radio-bordered-small-input-height;
+        width: $--radio-bordered-small-input-width;
+        &::after {
+          width: $--radio-inner-circle-small-radius;
+          height: $--radio-inner-circle-small-radius;
+        }
+      }
+    }
+  }
+  @include m(mini) {
+    &.is-bordered {
+      padding: $--radio-bordered-mini-padding;
+      border-radius: $--button-mini-border-radius;
+      height: $--radio-bordered-mini-height;
+      .jy-radio__label {
+        font-size: $--button-mini-font-size;
+      }
+      .jy-radio__inner {
+        height: $--radio-bordered-mini-input-height;
+        width: $--radio-bordered-mini-input-width;
+        &::after {
+          width: $--radio-inner-circle-mini-radius;
+          height: $--radio-inner-circle-mini-radius;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include e(input) {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+
+    @include when(disabled) {
+      .jy-radio__inner {
+        background-color: $--radio-disabled-input-fill;
+        border-color: $--radio-disabled-input-border-color;
+        cursor: not-allowed;
+
+        &::after {
+          cursor: not-allowed;
+          background-color: $--radio-disabled-icon-color;
+        }
+
+        & + .jy-radio__label {
+          cursor: not-allowed;
+        }
+      }
+      &.is-checked {
+        .jy-radio__inner {
+          background-color: $--radio-disabled-checked-input-fill;
+          border-color: $--radio-disabled-checked-input-border-color;
+
+          &::after {
+            background-color: $--color-text-disabled;
+          }
+        }
+      }
+      & + span.jy-radio__label {
+        color: $--color-text-disabled;
+        cursor: not-allowed;
+      }
+    }
+
+    @include when(checked) {
+      .jy-radio__inner {
+        border-color: $--radio-checked-input-border-color;
+
+
+        &::after {
+          transform: translate(-50%, -50%) scale(1);
+          background: $--radio-checked-icon-color;
+        }
+      }
+
+      & + .jy-radio__label {
+        // color: $--radio-checked-font-color;
+      }
+    }
+
+    @include when(focus) {
+      .jy-radio__inner {
+        border-color: $--radio-input-border-color-hover;
+      }
+    }
+  }
+  @include e(inner) {
+    border: 2px $--border-style-base $--border-color-base;
+    border-radius: $--radio-input-border-radius;
+    width: $--radio-input-width;
+    height: $--radio-input-height;
+    background-color: $--radio-input-background-color;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+
+    &:hover {
+      border-color: $--radio-input-border-color-hover;
+    }
+
+    &::after {
+      width:$--radio-inner-circle-radius;
+      height:$--radio-inner-circle-radius;
+      border-radius: $--radio-input-border-radius;
+      background-color: $--color-white;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform .15s ease-in;
+    }
+  }
+
+  @include e(original) {
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+
+  &:focus:not(.is-focus):not(:active):not(.is-disabled) { /*获得焦点时 样式提醒*/
+    .jy-radio__inner {
+      box-shadow: 0 0 2px 2px $--radio-input-border-color-hover;
+    }
+  }
+
+  @include e(label) {
+    font-size: $--radio-font-size;
+    padding-left: 4px;
+  }
+}

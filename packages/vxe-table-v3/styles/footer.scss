@@ -1,0 +1,23 @@
+/**Variable**/
+
+.jy-table--footer-wrapper {
+  color: $jy-table-footer-font-color;
+  margin-top: -1px;
+  &.body--wrapper{
+    overflow-x: auto;
+  }
+}
+
+.jy-footer--column {
+  &.col--ellipsis {
+    & > .jy-cell {
+      display: flex;
+      align-items: center;
+      .jy-cell--item {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

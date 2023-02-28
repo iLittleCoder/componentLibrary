@@ -1,0 +1,212 @@
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
+
+@include b(form) {
+  @include m(label-left) {
+    & .jy-form-item__label {
+      text-align: left;
+      &--flex{
+        justify-content: start;
+      }
+    }
+  }
+  @include m(label-right) {
+    & .jy-form-item__label {
+      text-align: right;
+      &--flex{
+        justify-content: end;
+      }
+    }
+  }
+  @include m(label-top) {
+    & .jy-form-item__label {
+      margin-top: 14px;
+      float: none;
+      display: inline-block;
+      text-align: left;
+      padding: 0 0 6px 0;
+      line-height: 1;
+    }
+  }
+  @include m(inline) {
+    & .jy-form-item {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+    & .jy-form-item__label {
+      float: none;
+      display: inline-block;
+    }
+    & .jy-form-item__content {
+      display: inline-block;
+      vertical-align: top;
+    }
+    &.jy-form--label-top .jy-form-item__content {
+      display: block;
+    }
+  }
+}
+@include b(form-item) {
+  margin-bottom: 16px;
+  @include utils-clearfix;
+
+  & .jy-form-item {
+    margin-bottom: 0;
+  }
+
+  & .jy-input__validateIcon {
+    display: none;
+  }
+
+  @include m(large) {
+    .jy-form-item__label {
+      line-height: 40px;
+    }
+    .jy-form-item__content {
+      line-height: 40px;
+    }
+    &.jy-form-item {
+      margin-bottom: 24px;
+    }
+  }
+  @include m(medium) {
+    .jy-form-item__label {
+      line-height: 32px;
+      padding-right: 20px;
+    }
+    .jy-form-item__content {
+      line-height: 32px;
+      .jy-form-item__error--inline{
+        line-height: 32px;
+      }
+    }
+    &.jy-form-item {
+      margin-bottom: 20px;
+    }
+  }
+  @include m(mini) {
+    .jy-form-item__label {
+      line-height: 22px;
+      padding-right: 12px;
+    }
+    .jy-form-item__content {
+      line-height: 22px;
+      .jy-form-item__error--inline{
+        line-height: 22px;
+      }
+
+    }
+    &.jy-form-item {
+      margin-bottom: 12px;
+    }
+    .jy-form-item__error {
+      padding-top: 1px;
+    }
+  }
+
+  @include e(label-wrap) {
+    float: left;
+    .jy-form-item__label {
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  @include e(label) {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: $--form-label-font-size;
+    color: $--color-text-regular;
+    line-height: 28px;
+    padding: 0 16px 0 0;
+    box-sizing: border-box;
+    &--flex{
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+    &--star{
+      color: $--color-danger;
+      margin-right: 0;
+    }
+  }
+  @include e(content) {
+    line-height: 28px;
+    position: relative;
+    font-size: 14px;
+    @include utils-clearfix;
+
+    .jy-input-group {
+      vertical-align: top;
+    }
+    &-line{
+      display: flex;
+    }
+    .jy-form-item__error--inline{
+      line-height: 28px;
+      width: 120px;
+    }
+  }
+  @include e(error) {
+    color: $--color-danger;
+    // font-size: 12px;
+    // line-height: 1;
+    // padding-top: 4px;
+    // position: absolute;
+    // top: 100%;
+    // left: 0;
+
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 6px 0;
+    position: absolute;
+    padding: 6px 0;
+
+    @include m(inline) {
+      position: relative;
+      top: auto;
+      left: auto;
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  // @include when(required) {
+  //   @include pseudo('not(.is-no-asterisk)') {
+  //     & > .jy-form-item__label:before,
+  //     & .jy-form-item__label-wrap > .jy-form-item__label:before {
+  //       content: '*';
+  //       color: $--color-danger;
+  //       margin-right: 4px;
+  //     }
+  //   }
+  // }
+
+  @include when(error) {
+    margin-bottom: 30px;
+    & .jy-input__inner,
+    & .jy-textarea__inner {
+      &, &:focus {
+        border-color: $--color-danger;
+      }
+    }
+    & .jy-input-group__append,
+    & .jy-input-group__prepend {
+      & .jy-input__inner {
+        border-color: transparent;
+      }
+    }
+    .jy-input__validateIcon {
+      color: $--color-danger;
+    }
+  }
+
+  @include m(feedback) {
+    .jy-input__validateIcon {
+      display: inline-block;
+    }
+  }
+}

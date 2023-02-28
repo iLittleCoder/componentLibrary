@@ -1,0 +1,161 @@
+.BlackTheme {
+  $--color-bg-base: #17161b !default;
+  $--color-primary: #f5ba63 !default;
+  $--color-success: #35b55f !default;
+  $--color-warning: #ffaa0e !default;
+  $--color-danger: #ee5640 !default;
+  $--color-info: #e6e6e6 !default;
+  $--color-neutral: #15181a !default;
+
+  $--color-white: #fff !default;
+
+  $--mix-percent: 12% !default;
+
+  $--color-primary-hover: mix(
+    $--color-white,
+    $--color-primary,
+    $--mix-percent
+  ) !default;
+
+  $--color-text-primary: $--color-info !default; // rgba(32, 32, 32, 1) // 主要文字
+  $--color-text-regular: rgba($--color-info, 0.65) !default; // 常规文字
+  $--color-text-secondary: rgba($--color-info, 0.65) !default; // 次要文字
+  $--color-text-disabled: rgba($--color-info, 0.3) !default; // Disabled文字
+  $--color-text-placeholder: rgba(
+    $--color-info,
+    0.45
+  ) !default; // placeholder文字
+  $--color-text-steps: rgba($--color-white, 0.45) !default; // placeholder文字
+
+  .demo-block,
+  .border-cut,
+  .demo-scroll-bar {
+    background-color: $--color-bg-base;
+  }
+
+  .demo-border {
+    border: 1px solid rgba($--color-info, 0.07);
+    table {
+      background-color: #15181a;
+      td,
+      th {
+        border-bottom: 1px solid rgba($--color-info, 0.07);
+      }
+      th {
+        color: rgba($--color-info, 0.45);
+      }
+      td {
+        color: $--color-info;
+      }
+    }
+    tbody {
+      tr {
+        &:first-of-type {
+          td {
+            color: rgba($--color-info, 0.45);
+          }
+        }
+      }
+      tr {
+        .text-shadow1,
+        .text-shadow2 {
+          background: #2b2b2c;
+          box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.6);
+        }
+        .text-shadow2 {
+          box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.6);
+        }
+        td {
+          color: $--color-info;
+        }
+      }
+    }
+
+    .line div {
+      border-top: 1px solid #eee;
+    }
+    .line .table-border {
+      border-top: 1px solid rgba($--color-info, 0.07);
+    }
+    .line .normal-border {
+      border-top: 1px dashed rgba($--color-info, 0.12);
+    }
+    .line .light-border {
+      border-top: 1px solid rgba($--color-info, 0.07);
+    }
+    .line .disabled-border {
+      border-top: 1px solid rgba($--color-info, 0.04);
+    }
+
+    .demo-shadow {
+      border: 1px solid #eee;
+    }
+    .demo-shadow-text {
+      color: #666;
+    }
+  }
+
+  .demo-border-box {
+    .demo-radius {
+      .demo-border-box {
+        border: 1px solid rgba($--color-info, 0.12);
+      }
+      .demo-border-tip {
+        color: $--color-info;
+      }
+    }
+  }
+  //   布局
+  .jy-header,
+  .jy-footer {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+  }
+  .jy-aside {
+    color: #ffffff;
+  }
+  .demo-container {
+    .jy-container {
+      background: $--color-primary;
+      .jy-header {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  #chang-jian-ye-mian-bu-ju + .demo-container {
+    .jy-header,
+    .jy-footer {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    .jy-aside {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .jy-main {
+      background-color: $--color-primary;
+      color: #ffffff;
+    }
+  }
+
+  // 滚动条
+  .demo-scrollbar {
+    .jy-card {
+      .jy-card__header {
+        background-color:  $--color-neutral;
+      }
+      .jy-card__body {
+        div {
+          color: rgba($--color-info, 0.65);
+          background-color: rgba($--color-info, 0.04);
+        }
+      }
+    }
+
+    .scroll-bar {
+      &:first-of-type {
+        background-color: $--color-bg-base;
+      }
+    }
+  }
+}

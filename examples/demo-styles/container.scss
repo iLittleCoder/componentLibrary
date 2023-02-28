@@ -1,0 +1,81 @@
+.jy-header,
+.jy-footer {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  line-height: 60px;
+}
+
+.jy-aside {
+  color: #ffffff;
+}
+
+.demo-container {
+  section {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .jy-container {
+    background: #256DFF;
+
+    .jy-header {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+#chang-jian-ye-mian-bu-ju + .demo-container {
+  .jy-header,
+  .jy-footer {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .jy-aside {
+    text-align: center;
+    line-height: 200px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .jy-main {
+    background-color: #256dff;
+    color: #ffffff;
+    text-align: center;
+    line-height: 160px;
+  }
+
+  & > .source > .jy-container {
+    margin-bottom: 40px;
+
+    &:nth-child(5) .jy-aside,
+    &:nth-child(6) .jy-aside {
+      line-height: 260px;
+    }
+
+    &:nth-child(7) .jy-aside {
+      line-height: 320px;
+    }
+  }
+}
+
+.BlackTheme {
+  .jy-header,
+  .jy-footer {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+  }
+  .jy-aside {
+    color: #ffffff;
+  }
+  .demo-container {
+    .jy-container {
+      background: #F5BA63;
+      .jy-header {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}

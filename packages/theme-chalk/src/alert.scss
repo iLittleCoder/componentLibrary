@@ -1,0 +1,244 @@
+@import 'mixins/mixins';
+@import 'common/var';
+
+@include b(alert) {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: $--alert-border-radius;
+  position: relative;
+  background-color: $--color-white;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+  color: $--color-info;
+  border: 1px solid $--border-main-color;
+
+  .svg-icon {
+    //width: 18px;
+    //height: 18px;
+    margin-right: 10px;
+  }
+
+  @include when(dark) {
+    .jy-alert__closebtn {
+      color: $--color-white;
+    }
+    .jy-alert__description {
+      color: $--color-white;
+    }
+  }
+
+  @include when(center) {
+    justify-content: center;
+  }
+
+  @include when(showIcon) {
+    padding-left: 10px;
+  }
+
+  @include when(hideBgColor) {
+    background-color: transparent !important;
+  }
+
+  @include m(primary) {
+    &.is-light {
+      background-color: $--background-main-color;
+      border-color: $--border-main-color;
+
+      .jy-alert__closebtn {
+        color: $--color-main;
+      }
+    }
+
+    &.is-dark {
+      background-color: $--color-main;
+      color: $--color-white;
+    }
+
+    &.is-showTextType {
+      color: $--color-main;
+      .svg-icon {
+        margin-right: 4px;
+      }
+
+      .jy-alert__description {
+        color: $--color-main;
+      }
+    }
+  }
+
+  @include m(success) {
+    &.is-light {
+      background-color: $--background-success-color;
+      border-color: $--border-success-color;
+
+      .jy-alert__closebtn {
+        color: $--color-success;
+      }
+    }
+
+    &.is-dark {
+      background-color: $--color-success;
+      color: $--color-white;
+    }
+
+    &.is-showTextType {
+      color: $--color-success;
+      .svg-icon {
+        margin-right: 4px;
+      }
+
+      .jy-alert__description {
+        color: $--color-success;
+      }
+    }
+  }
+
+  // @include m(info) {
+  //   &.is-light {
+  //     background-color: $--background-info-color;
+  //     border-color: $--border-info-color;
+
+  //     .jy-alert__closebtn {
+  //       color: $--color-text-placeholder;
+  //     }
+  //   }
+
+  //   &.is-dark {
+  //     background-color: $--color-info;
+  //     color: $--color-white;
+  //   }
+
+  //   &.is-showTextType {
+  //     color: $--color-text-placeholder;
+  //     .svg-icon {
+  //       margin-right: 4px;
+  //     }
+
+  //     .jy-alert__description {
+  //       color: $--color-text-placeholder;
+  //     }
+  //   }
+  // }
+
+  @include m(warning) {
+    &.is-light {
+      background-color: $--background-warning-color;
+      border-color: $--border-warning-color;
+
+      .jy-alert__closebtn {
+        color: $--color-warning;
+      }
+    }
+
+    &.is-dark {
+      background-color: $--color-warning;
+      color: $--color-white;
+    }
+
+    &.is-showTextType {
+      color: $--color-warning;
+
+      .svg-icon {
+        margin-right: 4px;
+      }
+
+      .jy-alert__description {
+        color: $--color-warning;
+      }
+    }
+  }
+
+  @include m(error) {
+    &.is-light {
+      background-color: $--background-danger-color;
+      border-color: $--border-danger-color;
+
+      .jy-alert__closebtn {
+        color: $--color-danger;
+      }
+    }
+
+    &.is-dark {
+      background-color: $--color-danger;
+      color: $--color-white;
+    }
+
+    &.is-showTextType {
+      color: $--color-danger;
+      .svg-icon {
+        margin-right: 4px;
+      }
+
+      .jy-alert__description {
+        color: $--color-danger;
+      }
+    }
+  }
+
+  @include e(content) {
+    display: table-cell;
+    padding: 0px;
+  }
+
+  @include e(icon) {
+    font-size: $--alert-icon-size;
+    width: $--alert-icon-size;
+    line-height: 19px;
+    @include when(big) {
+      font-size: $--alert-icon-large-size;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  @include e(title) {
+    font-size: $--font-size-bigger;
+    line-height: 20px;
+    @include when(bold) {
+      font-weight: bold;
+    }
+  }
+
+  & .jy-alert__description {
+    font-size: $--alert-description-font-size;
+    color: $--color-info;
+    margin: 4px 0 0 0;
+    line-height: 20px;
+  }
+
+  @include e(closebtn) {
+    font-size: $--alert-close-font-size;
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    i {
+      font-size: 20px;
+    }
+
+    span + i {
+      margin-left: 8px;
+      line-height: 19px;
+    }
+
+    @include when(customed) {
+      font-style: normal;
+      font-size: $--alert-close-customed-font-size;
+      top: 9px;
+    }
+  }
+  @include when(noBorder) {
+    border: none;
+  }
+}
+
+.el-alert-fade-enter,
+.el-alert-fade-leave-active {
+  opacity: 0;
+}

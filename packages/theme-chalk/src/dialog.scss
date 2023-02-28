@@ -1,0 +1,156 @@
+@import "mixins/mixins";
+@import "mixins/utils";
+@import "common/var";
+@import "common/popup";
+
+@include b(dialog) {
+  position: relative;
+  margin: 0 auto 50px;
+  background: $--popper-background-color;
+  border-radius: $--border-radius-small;
+  //box-shadow: $--dialog-box-shadow;
+  box-sizing: border-box;
+  width: 50%;
+
+  @include when(fullscreen) {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    overflow: auto;
+  }
+
+  @include e(wrapper) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+  }
+
+  @include e(header) {
+    padding: 6px 0 6px 16px;
+    font-weight: $--font-weight-bold;
+    font-size: $--font-size-bigger;
+    border-bottom: 1px solid $--border-color-normal;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  @include e(headerbtn) {
+    margin-right: 14px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: $--font-size-medium;
+    border-radius: $--border-radius-base;
+
+    .jy-dialog__close {
+      color: $--color-text-regular;
+      font-size: $--font-size-extra-large;
+      border-radius: 4px;
+
+      &:hover, &:focus {
+        background-color: $--color-neutral-hover;
+      }
+
+      &:active {
+        background-color: $--color-neutral-pressed;
+      }
+    }
+  }
+
+  @include e(title) {
+    line-height: $--font-line-height-base;
+    font-size: $--font-size-bigger;
+    color: $--color-text-primary;
+  }
+
+  @include e(body) {
+    padding: 16px;
+    color: $--color-text-primary;
+    font-size: $--font-size-bigger;
+    word-break: break-all;
+  }
+
+  @include e(footer) {
+    padding: 0 16px 16px 0;
+    text-align: right;
+    box-sizing: border-box;
+
+    > .dialog-footer {
+      .jy-button {
+        padding: 4px 11px 4px 10px !important;
+
+        //&:first-of-type {
+        //  border-color: $--color-primary !important;
+        //  color: $--color-primary;
+        //
+        //  &:hover,
+        //  &:focus {
+        //    color: $--color-primary-hover;
+        //    border-color: transparent;
+        //    background-color: transparent;
+        //  }
+        //  &:active {
+        //    color: $--color-primary-pressed;
+        //    border-color: transparent;
+        //    background-color: transparent;
+        //  }
+        //}
+        &:last-of-type {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  // 内容居中布局
+  @include m(center) {
+    text-align: center;
+
+    @include e(body) {
+      text-align: initial;
+    }
+
+    @include e(footer) {
+      text-align: inherit;
+      padding: 0 0 16px 0;
+    }
+  }
+}
+
+.dialog-fade-enter-active {
+  animation: dialog-fade-in .3s;
+}
+
+.dialog-fade-leave-active {
+  animation: dialog-fade-out .3s;
+}
+
+@keyframes dialog-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}
