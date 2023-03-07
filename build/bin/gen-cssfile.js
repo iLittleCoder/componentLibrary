@@ -39,17 +39,15 @@
 var fs = require('fs');
 var path = require('path');
 var Components = require('../../components.json');
-var themes = [
-  'theme-chalk'
-];
+var themes = ['theme-chalk'];
 Components = Object.keys(Components);
 var basepath = path.resolve(__dirname, '../../packages/');
 
-// 空的css文件
-let emptyList = ['breadcrumb-item', 'button-group', 'checkbox-button', 'checkbox-group', 'collapse-item', 'infiniteScroll',
-  'dropdown-item', 'dropdown-menu', 'form-item', 'infinite-scroll', 'menu-item', 'menu-item-group', 'submenu', 'tab-pane' ];
+// // 空的css文件
+// let emptyList = ['breadcrumb-item', 'button-group', 'checkbox-button', 'checkbox-group', 'collapse-item', 'infiniteScroll',
+//   'dropdown-item', 'dropdown-menu', 'form-item', 'infinite-scroll', 'menu-item', 'menu-item-group', 'submenu', 'tab-pane' ];
 
-Components = Components.filter(item => !emptyList.includes(item));
+// Components = Components.filter(item => !emptyList.includes(item));
 
 // 判断指定文件是否存在
 function fileExists(filePath) {

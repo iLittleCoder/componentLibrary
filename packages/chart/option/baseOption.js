@@ -83,7 +83,18 @@ export let barOption = (colorMap) => {
     legend: {
       bottom: 0
     },
-    color: [colorMap.graph1, colorMap.graph2, colorMap.graph3, colorMap.graph4, colorMap.graph5, colorMap.graph6, colorMap.graph7, colorMap.graph8, colorMap.graph9, colorMap.graph10],
+    color: [
+      colorMap.graph1,
+      colorMap.graph2,
+      colorMap.graph3,
+      colorMap.graph4,
+      colorMap.graph5,
+      colorMap.graph6,
+      colorMap.graph7,
+      colorMap.graph8,
+      colorMap.graph9,
+      colorMap.graph10
+    ],
     grid: { top: 40, left: 5, right: 0, bottom: 0, containLabel: true },
     xAxis: {
       axisLine: {
@@ -122,18 +133,29 @@ export let barOption = (colorMap) => {
       formatter: (params) => {
         let returnData = '';
         if (params && Array.isArray(params) && params.length > 0) {
-          returnData = `<span style="display:inline-block; margin-bottom:5px; color: ${colorMap.font_01}">` + params[0].axisValueLabel + '</span>' + '<br/>';
+          returnData =
+            `<span style="display:inline-block; margin-bottom:5px; color: ${colorMap.font_01}">` +
+            params[0].axisValueLabel +
+            '</span>' +
+            '<br/>';
         }
         for (let i = 0; i < params.length; i++) {
           if (params[i].seriesName !== '') {
             let indexColor = params[i].color;
-            returnData += '<span style="display:inline-block; border-radius:2px;width:10px; height:10px;background:' + indexColor + '"></span>';
             returnData +=
-              `<span style="display:inline-block; margin-bottom:5px; margin-left:8px; color: ${colorMap.font_02}">` +
+              '<span style="display:inline-block; border-radius:2px;width:10px; height:10px;background:' +
+              indexColor +
+              '"></span>';
+            returnData +=
+              `<span style="display:inline-block; margin-bottom:5px; margin-left:8px; color: ${
+                colorMap.font_02
+              }">` +
               params[i].seriesName +
               '</span>' +
               ':' +
-              `<span style="display:inline-block; margin-bottom:5px; margin-left:8px; font-weight:500;color: ${colorMap.font_01}">` +
+              `<span style="display:inline-block; margin-bottom:5px; margin-left:8px; font-weight:500;color: ${
+                colorMap.font_01
+              }">` +
               (formatNumber(params[i].value) || '--') +
               '</span></br>';
           }
@@ -162,12 +184,23 @@ export let barSeries = {
 export let lineOption = (colorMap) => {
   return {
     legend: {
-      bottom: 0,
-      itemStyle: {
-        color: colorMap.lineColor
-      }
+      bottom: 0
+      // itemStyle: {
+      //   color: colorMap.lineColor
+      // }
     },
-    color: [colorMap.graph1, colorMap.graph2, colorMap.graph3, colorMap.graph4, colorMap.graph5, colorMap.graph6, colorMap.graph7, colorMap.graph8, colorMap.graph9, colorMap.graph10],
+    color: [
+      colorMap.graph1,
+      colorMap.graph2,
+      colorMap.graph3,
+      colorMap.graph4,
+      colorMap.graph5,
+      colorMap.graph6,
+      colorMap.graph7,
+      colorMap.graph8,
+      colorMap.graph9,
+      colorMap.graph10
+    ],
     grid: { top: 40, left: 5, right: 0, bottom: 0, containLabel: true },
     xAxis: {
       show: true,
@@ -196,18 +229,27 @@ export let lineOption = (colorMap) => {
       formatter: (params) => {
         let returnData = '';
         if (params && Array.isArray(params) && params.length > 0) {
-          returnData = `<span style="display:inline-block; margin-bottom:5px; color: ${colorMap.font_01}">` + params[0].axisValueLabel + '</span>' + '<br/>';
+          returnData =
+            `<span style="display:inline-block; margin-bottom:5px; color: ${colorMap.font_01}">` +
+            params[0].axisValueLabel +
+            '</span>' +
+            '<br/>';
         }
         for (let i = 0; i < params.length; i++) {
           if (params[i].seriesName !== '') {
             let indexColor = params[i].color;
-            returnData += '<span style="display:inline-block; margin-right:5px;border-radius:2px;width:10px;height:10px;background:' + indexColor + '"></span>';
+            returnData +=
+              '<span style="display:inline-block; margin-right:5px;border-radius:2px;width:10px;height:10px;background:' +
+              indexColor +
+              '"></span>';
             returnData +=
               `<span style="display:inline-block; margin-bottom:5px; color: ${colorMap.font_02}">` +
               params[i].seriesName +
               '</span>' +
               ':' +
-              `<span style="display:inline-block; margin-bottom:5px; margin-left:8px;font-weight:500;color: ${colorMap.font_01}">` +
+              `<span style="display:inline-block; margin-bottom:5px; margin-left:8px;font-weight:500;color: ${
+                colorMap.font_01
+              }">` +
               (formatNumber(params[i].value) || '--') +
               '</span></br>';
           }
@@ -265,11 +307,25 @@ export function lineAreaStyle(item, key, colorMap) {
  * */
 export let preOption = (colorMap) => {
   return {
-    color: [colorMap.graph1, colorMap.graph2, colorMap.graph3, colorMap.graph4, colorMap.graph5, colorMap.graph6, colorMap.graph7, colorMap.graph8, colorMap.graph9, colorMap.graph10],
+    color: [
+      colorMap.graph1,
+      colorMap.graph2,
+      colorMap.graph3,
+      colorMap.graph4,
+      colorMap.graph5,
+      colorMap.graph6,
+      colorMap.graph7,
+      colorMap.graph8,
+      colorMap.graph9,
+      colorMap.graph10
+    ],
     tooltip: {
       trigger: 'item', // 数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用
       formatter: (params) => {
-        return `<span style="margin-right: 8px; color: ${colorMap.font_02}">${params.data.name}</span>` + `<span style="font-weight:500; color: ${colorMap.font_01};">${params.data.value}</span>`;
+        return (
+          `<span style="margin-right: 8px; color: ${colorMap.font_02}">${params.data.name}</span>` +
+          `<span style="font-weight:500; color: ${colorMap.font_01};">${params.data.value}</span>`
+        );
       }
     }
   };
@@ -346,20 +402,29 @@ export let scatterOption = (colorMap, type) => {
       formatter: (params) => {
         let returnData = '';
         if (params && Array.isArray(params) && params.length > 0) {
-          returnData = `<span style="display:inline-block; margin-bottom:5px; color: ${colorMap.font_01};">` + params[0].axisValueLabel + '</span>' + '<br/>';
+          returnData =
+            `<span style="display:inline-block; margin-bottom:5px; color: ${colorMap.font_01};">` +
+            params[0].axisValueLabel +
+            '</span>' +
+            '<br/>';
         }
         for (let i = 0; i < params.length; i++) {
           if (params[i].seriesName !== '') {
             // 注意: 如果是气泡图 这里用的是borderColor"#81ADFF", 因为color带透明度 "rgba(129, 173, 255, 0.12)"
             // 如果是散点图，indexColor取color，因为散点图设置了白色的边框，如果是气泡图，indexColor取borderColor
             let indexColor = type === 'scatter' ? params[i].color : params[i].borderColor;
-            returnData += '<span style="display:inline-block; border-radius: 50%; margin-right:5px; width:10px;height:10px;background:' + indexColor + '"></span>';
+            returnData +=
+              '<span style="display:inline-block; border-radius: 50%; margin-right:5px; width:10px;height:10px;background:' +
+              indexColor +
+              '"></span>';
             returnData +=
               `<span style="display:inline-block; margin-bottom:5px; color: ${colorMap.font_02}">` +
               params[i].seriesName +
               '</span>' +
               ':' +
-              `<span style="display:inline-block; margin-bottom:5px; margin-left:8px;font-weight:500;color: ${colorMap.font_01};">` +
+              `<span style="display:inline-block; margin-bottom:5px; margin-left:8px;font-weight:500;color: ${
+                colorMap.font_01
+              };">` +
               (params[i].value[1] || '--') +
               '</span></br>'; // params[i].value[1] 只显示Y轴上的数据
           }
@@ -410,7 +475,10 @@ export let gaugeOption = (colorMap) => {
       borderRadius: 2,
       extraCssText: 'box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);',
       formatter: (params) => {
-        return `<span style="margin-right: 8px; color: ${colorMap.font_02}">${params.name}</span>` + `<span style="font-weight:500; color: ${colorMap.font_01};">${params.data.value}%</span>`;
+        return (
+          `<span style="margin-right: 8px; color: ${colorMap.font_02}">${params.name}</span>` +
+          `<span style="font-weight:500; color: ${colorMap.font_01};">${params.data.value}%</span>`
+        );
       }
     }
   };
@@ -500,7 +568,18 @@ export let gaugeSeries = (colorMap) => {
  * */
 export let radarOption = (colorMap, indicator) => {
   let obj = {
-    color: [colorMap.graph1, colorMap.graph2, colorMap.graph3, colorMap.graph4, colorMap.graph5, colorMap.graph6, colorMap.graph7, colorMap.graph8, colorMap.graph9, colorMap.graph10],
+    color: [
+      colorMap.graph1,
+      colorMap.graph2,
+      colorMap.graph3,
+      colorMap.graph4,
+      colorMap.graph5,
+      colorMap.graph6,
+      colorMap.graph7,
+      colorMap.graph8,
+      colorMap.graph9,
+      colorMap.graph10
+    ],
     legend: {
       bottom: 0,
       icon: 'circle'
@@ -531,8 +610,17 @@ export let radarOption = (colorMap, indicator) => {
       formatter: ({ name, color, value }) => {
         let returnData = '';
         if (name) {
-          returnData += '<span style="display:inline-block; border-radius: 50%; margin-right:5px; width:10px;height:10px;background:' + color + '"></span>';
-          returnData += `<span style="display:inline-block; margin-bottom:5px; background: ${color}  color: ${colorMap.font_01};">` + name + '</span>' + '<br/>';
+          returnData +=
+            '<span style="display:inline-block; border-radius: 50%; margin-right:5px; width:10px;height:10px;background:' +
+            color +
+            '"></span>';
+          returnData +=
+            `<span style="display:inline-block; margin-bottom:5px; background: ${color}  color: ${
+              colorMap.font_01
+            };">` +
+            name +
+            '</span>' +
+            '<br/>';
         }
         for (let i = 0; i < value.length; i++) {
           returnData +=
@@ -540,7 +628,9 @@ export let radarOption = (colorMap, indicator) => {
             indicator[i].name +
             '</span>' +
             ':' +
-            `<span style="display:inline-block; margin-bottom:5px; margin-left: 8px;font-weight:500;color: ${colorMap.font_01};">` +
+            `<span style="display:inline-block; margin-bottom:5px; margin-left: 8px;font-weight:500;color: ${
+              colorMap.font_01
+            };">` +
             (formatNumber(value[i]) || '--') +
             '</span></br>';
         }
@@ -587,7 +677,14 @@ export let chinaOption = (colorMap) => {
       calculable: true, // 是否显示拖拽用的手柄
       text: ['高', '低'], // 取值范围的文字
       splitNumber: 6, // 默认分割段数
-      color: [colorMap.graph1, colorMap.graph11, colorMap.graph12, colorMap.graph13, colorMap.graph14, colorMap.graph15],
+      color: [
+        colorMap.graph1,
+        colorMap.graph11,
+        colorMap.graph12,
+        colorMap.graph13,
+        colorMap.graph14,
+        colorMap.graph15
+      ],
       textStyle: {
         color: colorMap.font_01,
         fontSize: 12,
