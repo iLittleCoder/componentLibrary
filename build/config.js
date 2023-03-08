@@ -9,21 +9,21 @@ var transitionList = fs.readdirSync(path.resolve(__dirname, '../src/transitions'
 var externals = {};
 
 Object.keys(Components).forEach(function(key) {
-  externals[`GildataDesign/packages/${key}`] = `GildataDesign/lib/${key}`;
+  externals[`GildataDesign/packages/${key}`] = `component-library-gj/lib/${key}`;
 });
 
-externals['GildataDesign/src/locale'] = 'GildataDesign/lib/locale';
+externals['GildataDesign/src/locale'] = 'component-library-gj/lib/locale';
 utilsList.forEach(function(file) {
   file = path.basename(file, '.js');
-  externals[`GildataDesign/src/utils/${file}`] = `GildataDesign/lib/utils/${file}`;
+  externals[`GildataDesign/src/utils/${file}`] = `component-library-gj/lib/utils/${file}`;
 });
 mixinsList.forEach(function(file) {
   file = path.basename(file, '.js');
-  externals[`GildataDesign/src/mixins/${file}`] = `GildataDesign/lib/mixins/${file}`;
+  externals[`GildataDesign/src/mixins/${file}`] = `component-library-gj/lib/mixins/${file}`;
 });
 transitionList.forEach(function(file) {
   file = path.basename(file, '.js');
-  externals[`GildataDesign/src/transitions/${file}`] = `GildataDesign/lib/transitions/${file}`;
+  externals[`GildataDesign/src/transitions/${file}`] = `component-library-gj/lib/transitions/${file}`;
 });
 
 externals = [Object.assign({

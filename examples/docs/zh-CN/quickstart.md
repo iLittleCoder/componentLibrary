@@ -27,7 +27,7 @@ npm i GildataDesign -S
 ```javascript
 import Vue from 'vue';
 import GildataDesign from 'GildataDesign';
-import 'GildataDesign/lib/theme-chalk/index.css';
+import 'component-library-gj/lib/theme-chalk/index.css';
 import App from './App.vue';
 
 Vue.use(GildataDesign);
@@ -288,9 +288,9 @@ import Vue from 'vue';
 import App from './App.vue';
 
 import GildataDesign from 'GildataDesign';
-import 'GildataDesign/lib/theme-chalk/index.css';
+import 'component-library-gj/lib/theme-chalk/index.css';
 // 引入jyChangeTheme方法
-import { jyChangeTheme } from 'GildataDesign/lib/utils/change-theme.js';
+import { jyChangeTheme } from 'component-library-gj/lib/utils/change-theme.js';
 // 切换黑色主题
 jyChangeTheme('Black');
 // 切换白色主题
@@ -313,9 +313,9 @@ import Vue from 'vue';
 import App from './App.vue';
 
 import GildataDesign from 'GildataDesign';
-import 'GildataDesign/lib/theme-chalk/index.css';
+import 'component-library-gj/lib/theme-chalk/index.css';
 // 引入jyChangeTheme方法
-import { jyChangeTheme } from 'GildataDesign/lib/utils/change-theme.js';
+import { jyChangeTheme } from 'component-library-gj/lib/utils/change-theme.js';
 // 导入下载好的json文件
 import themeJson from './theme.json';
 // 注册新的主题

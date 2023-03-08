@@ -31,7 +31,7 @@
         ["module-resolver", {
           "root": ["GildataDesign"],
           "alias": {
-            "GildataDesign/src": "GildataDesign/lib"
+            "GildataDesign/src": "component-library-gj/lib"
           }
         }]
       ]

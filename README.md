@@ -13,7 +13,7 @@ npm install GildataDesign -S
 
 ```javascript
 import GildataDesign from 'GildataDesign';
-import 'GildataDesign/lib/theme-chalk/index.css';
+import 'component-library-gj/lib/theme-chalk/index.css';
 
 Vue.use(GildataDesign);
 

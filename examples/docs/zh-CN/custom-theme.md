@@ -20,7 +20,7 @@ GildataDesign 的 theme-chalk 使用 SCSS 编写，如果你的项目也使用�
 $--color-primary: teal;
 
 /* 改变 icon 字体路径变量，必需 */
-$--font-path: '~GildataDesign/lib/theme-chalk/fonts';
+$--font-path: '~component-library-gj/lib/theme-chalk/fonts';
 
 @import "~GildataDesign/packages/theme-chalk/src/index";
 ```

@@ -1,5 +1,5 @@
 // Vue.prototype.$updateTheme = function(type) {
-//     import(`GildataDesign/lib/theme-chalk/\${type}.css`).then(res => {
+//     import(`component-library-gj/lib/theme-chalk/\${type}.css`).then(res => {
 //       if(!window[type]) {
 //         window[type] = document.head.lastElementChild;
 //       } else {
