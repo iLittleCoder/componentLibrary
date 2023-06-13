@@ -9,49 +9,49 @@
 :::demo 导航菜单默认为垂直模式，通过`mode`属性可以使导航菜单变更为水平模式。另外，在菜单中通过`submenu`组件可以生成二级菜单。Menu 还提供了`background-color`、`text-color`和`active-text-color`，分别用于设置菜单的背景色、菜单的文字颜色和当前激活菜单的文字颜色。
 
 ```html
-<jy-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-  <jy-menu-item index="1">处理中心</jy-menu-item>
-  <jy-submenu index="2">
+<gj-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+  <gj-menu-item index="1">处理中心</gj-menu-item>
+  <gj-submenu index="2">
     <template slot="title">我的工作台</template>
-    <jy-menu-item index="2-1">选项1</jy-menu-item>
-    <jy-menu-item index="2-2">选项2</jy-menu-item>
-    <jy-menu-item index="2-3">选项3</jy-menu-item>
-    <jy-submenu index="2-4">
+    <gj-menu-item index="2-1">选项1</gj-menu-item>
+    <gj-menu-item index="2-2">选项2</gj-menu-item>
+    <gj-menu-item index="2-3">选项3</gj-menu-item>
+    <gj-submenu index="2-4">
       <template slot="title">选项4</template>
-      <jy-menu-item index="2-4-1">选项1</jy-menu-item>
-      <jy-menu-item index="2-4-2">选项2</jy-menu-item>
-      <jy-menu-item index="2-4-3">选项3</jy-menu-item>
-    </jy-submenu>
-  </jy-submenu>
-  <jy-menu-item index="3" disabled>消息中心</jy-menu-item>
-  <jy-menu-item index="4">订单管理</jy-menu-item>
-</jy-menu>
+      <gj-menu-item index="2-4-1">选项1</gj-menu-item>
+      <gj-menu-item index="2-4-2">选项2</gj-menu-item>
+      <gj-menu-item index="2-4-3">选项3</gj-menu-item>
+    </gj-submenu>
+  </gj-submenu>
+  <gj-menu-item index="3" disabled>消息中心</gj-menu-item>
+  <gj-menu-item index="4">订单管理</gj-menu-item>
+</gj-menu>
 
 <!-- 
 <div class="line"></div>
-<jy-menu
+<gj-menu
   :default-active="activeIndex2"
   class="el-menu-demo"
   mode="horizontal"
   @select="handleSelect"
   background-color="#F7F7F7"
   active-text-color="#256DFF">
-  <jy-menu-item index="1">处理中心</jy-menu-item>
-  <jy-submenu index="2">
+  <gj-menu-item index="1">处理中心</gj-menu-item>
+  <gj-submenu index="2">
     <template slot="title">我的工作台</template>
-    <jy-menu-item index="2-1">选项1</jy-menu-item>
-    <jy-menu-item index="2-2">选项2</jy-menu-item>
-    <jy-menu-item index="2-3">选项3</jy-menu-item>
-    <jy-submenu index="2-4">
+    <gj-menu-item index="2-1">选项1</gj-menu-item>
+    <gj-menu-item index="2-2">选项2</gj-menu-item>
+    <gj-menu-item index="2-3">选项3</gj-menu-item>
+    <gj-submenu index="2-4">
       <template slot="title">选项4</template>
-      <jy-menu-item index="2-4-1">选项1</jy-menu-item>
-      <jy-menu-item index="2-4-2">选项2</jy-menu-item>
-      <jy-menu-item index="2-4-3">选项3</jy-menu-item>
-    </jy-submenu>
-  </jy-submenu>
-  <jy-menu-item index="3" disabled>消息中心</jy-menu-item>
-  <jy-menu-item index="4">订单管理</jy-menu-item>
-</jy-menu>
+      <gj-menu-item index="2-4-1">选项1</gj-menu-item>
+      <gj-menu-item index="2-4-2">选项2</gj-menu-item>
+      <gj-menu-item index="2-4-3">选项3</gj-menu-item>
+    </gj-submenu>
+  </gj-submenu>
+  <gj-menu-item index="3" disabled>消息中心</gj-menu-item>
+  <gj-menu-item index="4">订单管理</gj-menu-item>
+</gj-menu>
  -->
 
 
@@ -79,85 +79,85 @@
 
 :::demo 通过`el-menu-item-group`组件可以实现菜单进行分组，分组名可以通过`title`属性直接设定，也可以通过具名 slot 来设定。
 ```html
-<jy-row class="tac">
-  <jy-col :span="6">
+<gj-row class="tac">
+  <gj-col :span="6">
     <h5>默认颜色</h5>
-    <jy-menu
+    <gj-menu
       default-active="2"
-      class="jy-menu-vertical-demo"
+      class="gj-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose">
-      <jy-submenu index="1">
+      <gj-submenu index="1">
         <template slot="title">
           <i class="Gildata-home"></i>
           <span>Navigation</span>
         </template>
-        <jy-menu-item index="1-1">Option 1</jy-menu-item>
-        <jy-menu-item index="1-2">Option 2</jy-menu-item>
-        <jy-submenu index="1-3">
+        <gj-menu-item index="1-1">Option 1</gj-menu-item>
+        <gj-menu-item index="1-2">Option 2</gj-menu-item>
+        <gj-submenu index="1-3">
           <template slot="title">Option 3</template>
-          <jy-menu-item index="1-3-1">Option 3.1</jy-menu-item>
-          <jy-menu-item index="1-3-2">Option 3.2</jy-menu-item>
-        </jy-submenu>
-      </jy-submenu>
-      <jy-menu-item index="2">
+          <gj-menu-item index="1-3-1">Option 3.1</gj-menu-item>
+          <gj-menu-item index="1-3-2">Option 3.2</gj-menu-item>
+        </gj-submenu>
+      </gj-submenu>
+      <gj-menu-item index="2">
         <i class="Gildata-all"></i>
         <span slot="title">导航二</span>
-      </jy-menu-item>
-      <jy-menu-item index="3" disabled>
+      </gj-menu-item>
+      <gj-menu-item index="3" disabled>
         <i class="Gildata-time"></i>
         <span slot="title">导航三</span>
-      </jy-menu-item>
-      <jy-menu-item index="4">
+      </gj-menu-item>
+      <gj-menu-item index="4">
         <i class="Gildata-star1"></i>
         <span slot="title">导航四</span>
-      </jy-menu-item>
-    </jy-menu>
-  </jy-col>
-  <!--<jy-col :span="6">
+      </gj-menu-item>
+    </gj-menu>
+  </gj-col>
+  <!--<gj-col :span="6">
           <h5>自定义颜色</h5>
-          <jy-menu
+          <gj-menu
             default-active="2"
-            class="jy-menu-vertical-demo"
+            class="gj-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
             background-color="#545c64"
             text-color="#fff"
             active-text-color="#FFAA0E">
-            <jy-submenu index="1">
+            <gj-submenu index="1">
               <template slot="title">
                 <i class="Gildata-home"></i>
                 <span>导航一</span>
               </template>
-              <jy-menu-item-group>
+              <gj-menu-item-group>
                 <template slot="title">分组一</template>
-                <jy-menu-item index="1-1">选项1</jy-menu-item>
-                <jy-menu-item index="1-2">选项2</jy-menu-item>
-              </jy-menu-item-group>
-              <jy-menu-item-group title="分组2">
-                <jy-menu-item index="1-3">选项3</jy-menu-item>
-              </jy-menu-item-group>
-              <jy-submenu index="1-4">
+                <gj-menu-item index="1-1">选项1</gj-menu-item>
+                <gj-menu-item index="1-2">选项2</gj-menu-item>
+              </gj-menu-item-group>
+              <gj-menu-item-group title="分组2">
+                <gj-menu-item index="1-3">选项3</gj-menu-item>
+              </gj-menu-item-group>
+              <gj-submenu index="1-4">
                 <template slot="title">选项4</template>
-                <jy-menu-item index="1-4-1">选项1</jy-menu-item>
-              </jy-submenu>
-            </jy-submenu>
-            <jy-menu-item index="2">
+                <gj-menu-item index="1-4-1">选项1</gj-menu-item>
+              </gj-submenu>
+            </gj-submenu>
+            <gj-menu-item index="2">
               <i class="Gildata-all"></i>
               <span slot="title">导航二</span>
-            </jy-menu-item>
-            <jy-menu-item index="3" disabled>
+            </gj-menu-item>
+            <gj-menu-item index="3" disabled>
               <i class="Gildata-time"></i>
               <span slot="title">导航三</span>
-            </jy-menu-item>
-            <jy-menu-item index="4">
+            </gj-menu-item>
+            <gj-menu-item index="4">
               <i class="Gildata-star1"></i>
               <span slot="title">导航四</span>
-            </jy-menu-item>
-          </jy-menu>
-        </jy-col> -->
+            </gj-menu-item>
+          </gj-menu>
+        </gj-col> -->
   
-</jy-row>
+</gj-row>
 
 <script>
   export default {
@@ -181,37 +181,37 @@
 <div>
 
 </div>
-<jy-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-  <jy-radio-button :label="false">展开</jy-radio-button>
-  <jy-radio-button :label="true">收起</jy-radio-button>
-</jy-radio-group>
-<jy-menu default-active="1-4-1" class="jy-menu-vertical-demo-last" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
-  <jy-submenu index="1">
+<gj-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+  <gj-radio-button :label="false">展开</gj-radio-button>
+  <gj-radio-button :label="true">收起</gj-radio-button>
+</gj-radio-group>
+<gj-menu default-active="1-4-1" class="gj-menu-vertical-demo-last" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
+  <gj-submenu index="1">
     <template slot="title">
       <i class="Gildata-home"></i>
       <span slot="title">导航一</span>
     </template>
-    <jy-menu-item index="1-1">选项1</jy-menu-item>
-    <jy-menu-item index="1-2">选项2</jy-menu-item>
-    <jy-menu-item index="1-3">选项3</jy-menu-item>
-    <jy-submenu index="1-4">
+    <gj-menu-item index="1-1">选项1</gj-menu-item>
+    <gj-menu-item index="1-2">选项2</gj-menu-item>
+    <gj-menu-item index="1-3">选项3</gj-menu-item>
+    <gj-submenu index="1-4">
       <span slot="title">选项4</span>
-      <jy-menu-item index="1-4-1">选项1</jy-menu-item>
-    </jy-submenu>
-  </jy-submenu>
-  <jy-menu-item index="2">
+      <gj-menu-item index="1-4-1">选项1</gj-menu-item>
+    </gj-submenu>
+  </gj-submenu>
+  <gj-menu-item index="2">
     <i class="Gildata-all"></i>
     <span slot="title">导航二</span>
-  </jy-menu-item>
-  <jy-menu-item index="3">
+  </gj-menu-item>
+  <gj-menu-item index="3">
     <i class="Gildata-time"></i>
     <span slot="title">导航三</span>
-  </jy-menu-item>
-  <jy-menu-item index="4">
+  </gj-menu-item>
+  <gj-menu-item index="4">
     <i class="Gildata-star1"></i>
     <span slot="title">导航四</span>
-  </jy-menu-item>
-</jy-menu>
+  </gj-menu-item>
+</gj-menu>
 
 
 <script>

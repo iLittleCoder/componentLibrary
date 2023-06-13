@@ -1,8 +1,8 @@
-import JyDropdown from './src/dropdown';
+import GjDropdown from './src/dropdown';
 
 /* istanbul ignore next */
-JyDropdown.install = function(Vue) {
-  Vue.component(JyDropdown.name, JyDropdown);
+GjDropdown.install = function(Vue) {
+  Vue.component(GjDropdown.name, GjDropdown);
 };
 
-export default JyDropdown;
+export default GjDropdown;

@@ -1,24 +1,24 @@
 <template>
   <div
-    :class="['jy-color-picker', colorDisabled ? 'is-disabled' : '', colorSize ? `jy-color-picker--${colorSize}` : '']"
+    :class="['gj-color-picker', colorDisabled ? 'is-disabled' : '', colorSize ? `gj-color-picker--${colorSize}` : '']"
     v-clickoutside="hide"
   >
-    <div class="jy-color-picker__mask" v-if="colorDisabled"></div>
-    <div class="jy-color-picker__trigger" @click="handleTrigger">
-      <span class="jy-color-picker__color" :class="{ 'is-alpha': showAlpha }">
+    <div class="gj-color-picker__mask" v-if="colorDisabled"></div>
+    <div class="gj-color-picker__trigger" @click="handleTrigger">
+      <span class="gj-color-picker__color" :class="{ 'is-alpha': showAlpha }">
         <span
-          class="jy-color-picker__color-inner"
+          class="gj-color-picker__color-inner"
           :style="{
             backgroundColor: displayedColor
           }"
         ></span>
-        <span class="jy-color-picker__empty el-icon-close" v-if="!value && !showPanelColor"></span>
+        <span class="gj-color-picker__empty el-icon-close" v-if="!value && !showPanelColor"></span>
       </span>
-      <span class="jy-color-picker__icon el-icon-arrow-down" v-show="value || showPanelColor"></span>
+      <span class="gj-color-picker__icon el-icon-arrow-down" v-show="value || showPanelColor"></span>
     </div>
     <picker-dropdown
       ref="dropdown"
-      :class="['jy-color-picker__panel', popperClass || '']"
+      :class="['gj-color-picker__panel', popperClass || '']"
       v-model="showPicker"
       @pick="confirmValue"
       @clear="clearValue"

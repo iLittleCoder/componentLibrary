@@ -2,23 +2,23 @@
   <div>
     <p class="tip">最大高度，通过设置 <table-api-link prop="max-height"/> 启用，当数据少时自适应</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
       ref="xTable1"
       max-height="400"
       :loading="loading">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="100"></jy-column>
-      <jy-column field="name" title="Name" sortable width="200"></jy-column>
-      <jy-column field="age" title="Age" width="200"></jy-column>
-      <jy-column field="sex" title="Sex" width="200"></jy-column>
-      <jy-column field="region" title="Region" width="200"></jy-column>
-      <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
-      <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-      <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="100"></gj-column>
+      <gj-column field="name" title="Name" sortable width="200"></gj-column>
+      <gj-column field="age" title="Age" width="200"></gj-column>
+      <gj-column field="sex" title="Sex" width="200"></gj-column>
+      <gj-column field="region" title="Region" width="200"></gj-column>
+      <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
+      <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+      <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -29,22 +29,22 @@
 
     <p class="tip">当数据超过最大高度时自动显示滚动条</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
       ref="xTable2"
       max-height="400"
       :loading="loading">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="100"></jy-column>
-      <jy-column field="name" title="Name" sortable width="200"></jy-column>
-      <jy-column field="age" title="Age" width="200"></jy-column>
-      <jy-column field="rate" title="Rate" width="200"></jy-column>
-      <jy-column field="time" title="Time" width="200"></jy-column>
-      <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-      <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="100"></gj-column>
+      <gj-column field="name" title="Name" sortable width="200"></gj-column>
+      <gj-column field="age" title="Age" width="200"></gj-column>
+      <gj-column field="rate" title="Rate" width="200"></gj-column>
+      <gj-column field="time" title="Time" width="200"></gj-column>
+      <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+      <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -62,22 +62,22 @@ export default {
       loading: false,
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
           ref="xTable"
           max-height="400"
           :loading="loading">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="100"></jy-column>
-          <jy-column field="name" title="Name" sortable width="200"></jy-column>
-          <jy-column field="age" title="Age" width="200"></jy-column>
-          <jy-column field="region" title="Region" width="200"></jy-column>
-          <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
-          <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-          <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="100"></gj-column>
+          <gj-column field="name" title="Name" sortable width="200"></gj-column>
+          <gj-column field="age" title="Age" width="200"></gj-column>
+          <gj-column field="region" title="Region" width="200"></gj-column>
+          <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
+          <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+          <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -123,23 +123,23 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
           ref="xTable"
           max-height="400"
           :loading="loading">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="100"></jy-column>
-          <jy-column field="name" title="Name" sortable width="200"></jy-column>
-          <jy-column field="age" title="Age" width="200"></jy-column>
-          <jy-column field="sex" title="Sex" width="200"></jy-column>
-          <jy-column field="rate" title="Rate" width="200"></jy-column>
-          <jy-column field="time" title="Time" width="200"></jy-column>
-          <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-          <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="100"></gj-column>
+          <gj-column field="name" title="Name" sortable width="200"></gj-column>
+          <gj-column field="age" title="Age" width="200"></gj-column>
+          <gj-column field="sex" title="Sex" width="200"></gj-column>
+          <gj-column field="rate" title="Rate" width="200"></gj-column>
+          <gj-column field="time" title="Time" width="200"></gj-column>
+          <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+          <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+        </gj-table>
         `,
         `
         export default {

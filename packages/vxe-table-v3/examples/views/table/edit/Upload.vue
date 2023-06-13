@@ -11,20 +11,20 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable"
       height="400"
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell'}">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -53,20 +53,20 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           ref="xTable"
           height="400"
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell'}">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

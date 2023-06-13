@@ -1,8 +1,8 @@
 <template>
-  <ul class="jy-select-group__wrap" v-show="visible">
-    <li class="jy-select-group__title">{{ label }}</li>
+  <ul class="gj-select-group__wrap" v-show="visible">
+    <li class="gj-select-group__title">{{ label }}</li>
     <li>
-      <ul class="jy-select-group">
+      <ul class="gj-select-group">
         <slot></slot>
       </ul>
     </li>
@@ -15,9 +15,9 @@
   export default {
     mixins: [Emitter],
 
-    name: 'JyOptionGroup',
+    name: 'GjOptionGroup',
 
-    componentName: 'JyOptionGroup',
+    componentName: 'GjOptionGroup',
 
     props: {
       label: String,
@@ -35,7 +35,7 @@
 
     watch: {
       disabled(val) {
-        this.broadcast('JyOption', 'handleGroupDisabled', val);
+        this.broadcast('GjOption', 'handleGroupDisabled', val);
       }
     },
 
@@ -53,7 +53,7 @@
 
     mounted() {
       if (this.disabled) {
-        this.broadcast('JyOption', 'handleGroupDisabled', this.disabled);
+        this.broadcast('GjOption', 'handleGroupDisabled', this.disabled);
       }
     }
   };

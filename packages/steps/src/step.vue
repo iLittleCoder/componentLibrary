@@ -1,6 +1,6 @@
 <template>
     <div
-            class="jy-step"
+            class="gj-step"
             :style="style"
             :class="[
       !isSimple && `is-${$parent.direction}`,
@@ -14,24 +14,24 @@
 
         <!-- icon & line -->
         <div
-                class="jy-step__head"
+                class="gj-step__head"
                 :class="`is-${currentStatus}`"
         >
             <div
-                    class="jy-step__line"
+                    class="gj-step__line"
                     :style="isLast ? '' : { marginRight: $parent.stepOffset + 'px' }"
                     v-if="!isNav"
             >
-                <i class="jy-step__line-inner" :style="lineStyle"></i>
+                <i class="gj-step__line-inner" :style="lineStyle"></i>
             </div>
             <div v-if="isNav" class="Gildata-rightarrow" :class="['is-' + currentStatus]"
                  :style="isLast ? '' : { marginRight: $parent.stepOffset + 'px' }"></div>
-            <div class="jy-step__icon" :class="`is-${icon ? 'icon' : 'text'}`" v-if="!(isSimple)">
+            <div class="gj-step__icon" :class="`is-${icon ? 'icon' : 'text'}`" v-if="!(isSimple)">
                 <slot
                         v-if="currentStatus !== 'success' && currentStatus !== 'error'"
                         name="icon">
-                    <i v-if="icon" class="jy-step__icon-inner" :class="[icon]"></i>
-                    <div class="jy-step__icon-inner" v-if="!icon && !(isSimple)">
+                    <i v-if="icon" class="gj-step__icon-inner" :class="[icon]"></i>
+                    <div class="gj-step__icon-inner" v-if="!icon && !(isSimple)">
                         <template v-if="!isPoint">
                             {{ index + 1 }}
                         </template>
@@ -40,18 +40,18 @@
                 <i
                         v-else
                         :class="['Gildata-' + (currentStatus === 'success' ? 'correct3' : 'close')]"
-                        class="jy-step__icon-inner is-status"
+                        class="gj-step__icon-inner is-status"
                 >
                 </i>
-                <div class="jy-step__title" v-if="!(isCenter||isVertical)">{{title}}</div>
+                <div class="gj-step__title" v-if="!(isCenter||isVertical)">{{title}}</div>
 
             </div>
         </div>
         <!-- title & description -->
-        <div class="jy-step__main">
+        <div class="gj-step__main">
             <div
                     v-if="isCenter||isVertical"
-                    class="jy-step__title"
+                    class="gj-step__title"
                     ref="title"
                     :class="['is-' + currentStatus]">
                 <slot name="title">
@@ -60,19 +60,19 @@
                   </div>
 
                 </slot>
-                <div class="jy-step__description" v-if="isSimple">
+                <div class="gj-step__description" v-if="isSimple">
                     <slot name="description">{{ description }}</slot>
                 </div>
             </div>
 
-            <div v-if="isSimple" class="jy-step__arrow" :class="['is-' + currentStatus]"></div>
+            <div v-if="isSimple" class="gj-step__arrow" :class="['is-' + currentStatus]"></div>
 
             <!--
-                  <div v-if="isNav" class="jy-step__arrow"  :class="['is-' + currentStatus]"></div>
+                  <div v-if="isNav" class="gj-step__arrow"  :class="['is-' + currentStatus]"></div>
             -->
             <div
                     v-if="!(isSimple)"
-                    class="jy-step__description"
+                    class="gj-step__description"
                     :class="['is-' + currentStatus]">
                 <div v-show="!description" style="color: transparent;height: 1px">占位专用</div>
                 <slot name="description">{{ description }}</slot>
@@ -83,7 +83,7 @@
 
 <script>
   export default {
-    name: 'JyStep',
+    name: 'GjStep',
 
     props: {
       title: String,

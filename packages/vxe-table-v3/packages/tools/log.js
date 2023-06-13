@@ -1,7 +1,7 @@
 import GlobalConfig from '../v-x-e-table/src/conf'
 
 export function getLog (message, params) {
-  return `[jy-table v${process.env.VUE_APP_VXE_TABLE_VERSION}] ${GlobalConfig.i18n(message, params)}`
+  return `[gj-table v${process.env.VUE_APP_VXE_TABLE_VERSION}] ${GlobalConfig.i18n(message, params)}`
 }
 
 function outLog (type) {

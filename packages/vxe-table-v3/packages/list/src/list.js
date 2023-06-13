@@ -86,13 +86,13 @@ export default {
   render (h) {
     const { $scopedSlots, styles, bodyHeight, topSpaceHeight, items, className, loading } = this
     return h('div', {
-      class: ['jy-table-list', className ? (XEUtils.isFunction(className) ? className({ $list: this }) : className) : '', {
+      class: ['gj-table-list', className ? (XEUtils.isFunction(className) ? className({ $list: this }) : className) : '', {
         'is--loading': loading
       }]
     }, [
       h('div', {
         ref: 'virtualWrapper',
-        class: 'jy-table-list--virtual-wrapper',
+        class: 'gj-table-list--virtual-wrapper',
         style: styles,
         on: {
           scroll: this.scrollEvent
@@ -100,26 +100,26 @@ export default {
       }, [
         h('div', {
           ref: 'ySpace',
-          class: 'jy-table-list--y-space',
+          class: 'gj-table-list--y-space',
           style: {
             height: bodyHeight ? `${bodyHeight}px` : ''
           }
         }),
         h('div', {
           ref: 'virtualBody',
-          class: 'jy-table-list--body',
+          class: 'gj-table-list--body',
           style: {
             marginTop: topSpaceHeight ? `${topSpaceHeight}px` : ''
           }
         }, $scopedSlots.default ? $scopedSlots.default.call(this, { items, $list: this }, h) : [])
       ]),
       h('div', {
-        class: ['jy-table-list--loading jy-table-loading', {
+        class: ['gj-table-list--loading gj-table-loading', {
           'is--visible': loading
         }]
       }, [
         h('div', {
-          class: 'jy-table-loading--spinner'
+          class: 'gj-table-loading--spinner'
         })
       ])
     ])

@@ -4,9 +4,9 @@ import Panel from '../panel/time-select';
 export default {
   mixins: [Picker],
 
-  name: 'JyTimeSelect',
+  name: 'GjTimeSelect',
 
-  componentName: 'JyTimeSelect',
+  componentName: 'GjTimeSelect',
 
   props: {
     type: {

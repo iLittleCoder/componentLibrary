@@ -9,7 +9,7 @@
   color: $--color-text-regular;
   font-size: $--font-size-base;
 
-  .jy-button {
+  .gj-button {
     .Gildata-downarrow {
       transition: transform .3s;
     }
@@ -21,12 +21,12 @@
     }
   }
 
-  .jy-button-group {
+  .gj-button-group {
     display: block;
-    .jy-button {
+    .gj-button {
       float: none;
     }
-    .jy-button{
+    .gj-button{
       @include m(large){
         padding-left: 12px;
         padding-right: 10px;
@@ -47,7 +47,7 @@
 
   }
 
-  & .jy-dropdown__caret-button {
+  & .gj-dropdown__caret-button {
     position: relative;
     border-left: none;
 
@@ -71,7 +71,7 @@
       }
     }
 
-    & .jy-dropdown__icon {
+    & .gj-dropdown__icon {
       padding-left: 0;
     }
   }
@@ -80,7 +80,7 @@
     margin: 0;
   }
 
-  .jy-dropdown-selfdefine { // 自定义
+  .gj-dropdown-selfdefine { // 自定义
     &:focus:active, &:focus:not(.focusing) {
       outline-width: 0;
     }
@@ -154,7 +154,7 @@
       padding: 0 17px;
       font-size: 14px;
 
-      &.jy-dropdown-menu__item--divided {
+      &.gj-dropdown-menu__item--divided {
         $divided-offset: 6px;
         margin-top: $divided-offset;
 
@@ -174,7 +174,7 @@
       padding: 0 15px;
       font-size: 13px;
 
-      &.jy-dropdown-menu__item--divided {
+      &.gj-dropdown-menu__item--divided {
         $divided-offset: 4px;
         margin-top: $divided-offset;
 
@@ -194,7 +194,7 @@
       padding: 0 10px;
       font-size: 12px;
 
-      &.jy-dropdown-menu__item--divided {
+      &.gj-dropdown-menu__item--divided {
         $divided-offset: 3px;
         margin-top: $divided-offset;
 

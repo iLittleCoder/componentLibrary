@@ -1,8 +1,8 @@
-import JyBreadcrumbItem from '../breadcrumb/src/breadcrumb-item';
+import GjBreadcrumbItem from '../breadcrumb/src/breadcrumb-item';
 
 /* istanbul ignore next */
-JyBreadcrumbItem.install = function(Vue) {
-  Vue.component(JyBreadcrumbItem.name, JyBreadcrumbItem);
+GjBreadcrumbItem.install = function(Vue) {
+  Vue.component(GjBreadcrumbItem.name, GjBreadcrumbItem);
 };
 
-export default JyBreadcrumbItem;
+export default GjBreadcrumbItem;

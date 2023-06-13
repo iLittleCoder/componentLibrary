@@ -1,22 +1,22 @@
 <template>
-  <div class="jy-select-charter" ref="charter" v-if="select.visible">
-    <div class="jy-select-charter__header">
+  <div class="gj-select-charter" ref="charter" v-if="select.visible">
+    <div class="gj-select-charter__header">
       <!-- @select="handleSelect" -->
-      <jy-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect">
-        <jy-menu-item v-for="item in charterList" :key="item" :index="item">
+      <gj-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect">
+        <gj-menu-item v-for="item in charterList" :key="item" :index="item">
           <span v-for="(ele, index) in item" :key="item + index" @click.stop="handleClick(item, ele)">{{ ele }}</span>
-        </jy-menu-item>
-      </jy-menu>
-      <div class="jy-select-charter__line"></div>
+        </gj-menu-item>
+      </gj-menu>
+      <div class="gj-select-charter__line"></div>
     </div>
-    <div class="jy-select-charter__tags">
+    <div class="gj-select-charter__tags">
       <div
         v-if="showFooter && selectMultiple && selected.length && !collapseTags"
-        class="jy-m-select__tags-text-top"
+        class="gj-m-select__tags-text-top"
         :style="{ 'max-width': charterWidth + 'px' }"
       >
         <template v-for="(item, itemIndex) in selected">
-          <jy-tag
+          <gj-tag
             :key="itemIndex"
             :closable="!select.selectDisabled"
             :size="select.collapseTagSize"
@@ -25,17 +25,17 @@
             @close="select.deleteTag2($event, item)"
             disable-transitions
           >
-            <span class="jy-select__tags-text">{{ item.currentLabel }}</span>
-          </jy-tag>
+            <span class="gj-select__tags-text">{{ item.currentLabel }}</span>
+          </gj-tag>
         </template>
       </div>
 
       <div
         v-if="showFooter && selectMultiple && selected.length && collapseTags"
-        class="jy-m-select__tags-text-top"
+        class="gj-m-select__tags-text-top"
         :style="{ 'max-width': charterWidth + 'px' }"
       >
-        <jy-tag
+        <gj-tag
           :closable="!select.selectDisabled"
           :size="select.collapseTagSize"
           :hit="selected[0].hitState"
@@ -43,41 +43,41 @@
           @close="select.deleteTag2($event, selected[0])"
           disable-transitions
         >
-          <span class="jy-select__tags-text">{{ selected[0].currentLabel }}</span>
-        </jy-tag>
-        <jy-tag
+          <span class="gj-select__tags-text">{{ selected[0].currentLabel }}</span>
+        </gj-tag>
+        <gj-tag
           v-if="selected.length > 1"
           :closable="false"
           :size="select.collapseTagSize"
           type="info"
           disable-transitions
         >
-          <span class="jy-select__tags-text">+ {{ selected.length - 1 }}</span>
-        </jy-tag>
+          <span class="gj-select__tags-text">+ {{ selected.length - 1 }}</span>
+        </gj-tag>
       </div>
 
-      <div v-if="showFooter && selectMultiple && selected.length" class="jy-select-charter__line"></div>
+      <div v-if="showFooter && selectMultiple && selected.length" class="gj-select-charter__line"></div>
     </div>
 
-    <jy-scrollbar ref="scrollbarCharter" wrap-class="jy-select-charter__wrap" view-class="jy-select-charter__list">
+    <gj-scrollbar ref="scrollbarCharter" wrap-class="gj-select-charter__wrap" view-class="gj-select-charter__list">
       <div ref="showAllData">
         <div v-for="(item, index) in allData" :key="index">
           <div
-            class="jy-select-charter__letter"
+            class="gj-select-charter__letter"
             :class="{ 'is-multiple': selectMultiple, ['at-' + item.initial]: true }"
           >
-            <jy-checkbox
+            <gj-checkbox
               :disabled="allDisabled(item)"
               v-if="selectMultiple"
               :value="allSelect(item)"
               :indeterminate="isIndeterminate(item)"
               @click.native.stop.prevent="selectAllCharterClick(item)"
-            ></jy-checkbox>
+            ></gj-checkbox>
             <span> {{ item.initial }}</span>
           </div>
           <div
             @click.stop="selectOptionClick(ele)"
-            class="jy-select-charter__item"
+            class="gj-select-charter__item"
             v-for="(ele, index) in item.data"
             :key="ele[defaultProps.value] + index"
             :class="{
@@ -92,12 +92,12 @@
               class="Gildata-tick optionChecked"
               v-if="!selectMultiple && selectedValue === ele[defaultProps.value]"
             ></i>
-            <jy-checkbox
+            <gj-checkbox
               :disabled="ele.disabled"
               v-if="selectMultiple"
               :value="selectedValue.includes(ele[defaultProps.value])"
               @click.native.stop.prevent="selectOptionClick(ele)"
-            ></jy-checkbox>
+            ></gj-checkbox>
             <span> {{ ele[defaultProps.label] }}</span>
           </div>
         </div>
@@ -105,12 +105,12 @@
 
       <template v-if="allData.length === 0">
         <slot name="empty" v-if="$slots.empty"></slot>
-        <p class="jy-select-dropdown__empty" v-else>
-          <jy-empty empty-type="noData"></jy-empty>
+        <p class="gj-select-dropdown__empty" v-else>
+          <gj-empty empty-type="noData"></gj-empty>
         </p>
       </template>
-    </jy-scrollbar>
-    <div v-if="showFooter && selectMultiple" class="jy-select-reset">
+    </gj-scrollbar>
+    <div v-if="showFooter && selectMultiple" class="gj-select-reset">
       <span @click="select.resetClick">重置</span>
       <span @click="select.sureClick">确定</span>
     </div>
@@ -118,25 +118,25 @@
 </template>
 <script type="text/babel">
 import Emitter from 'GildataDesign/src/mixins/emitter';
-import JyMenu from 'GildataDesign/packages/menu';
-import JyMenuItem from 'GildataDesign/packages/menu-item';
-import JyEmpty from 'GildataDesign/packages/empty';
-import JyScrollbar from 'GildataDesign/packages/scrollbar';
-import JyTag from 'GildataDesign/packages/tag';
+import GjMenu from 'GildataDesign/packages/menu';
+import GjMenuItem from 'GildataDesign/packages/menu-item';
+import GjEmpty from 'GildataDesign/packages/empty';
+import GjScrollbar from 'GildataDesign/packages/scrollbar';
+import GjTag from 'GildataDesign/packages/tag';
 import scrollIntoView from 'GildataDesign/src/utils/scroll-into-view';
 
 import { pySegSort, getChineseHeadLetter } from './getPinyin';
 export default {
   mixins: [Emitter],
-  name: 'JyOptionCharter',
-  componentName: 'JyOptionCharter',
+  name: 'GjOptionCharter',
+  componentName: 'GjOptionCharter',
 
   components: {
-    JyMenu,
-    JyMenuItem,
-    JyScrollbar,
-    JyEmpty,
-    JyTag
+    GjMenu,
+    GjMenuItem,
+    GjScrollbar,
+    GjEmpty,
+    GjTag
   },
 
   props: {
@@ -270,7 +270,7 @@ export default {
       }
     },
     defaultScroll() {
-      let option = this.$refs.showAllData.getElementsByClassName('jy-select-charter__item is-selected');
+      let option = this.$refs.showAllData.getElementsByClassName('gj-select-charter__item is-selected');
       this.scrollToOption(option[0]);
     },
 
@@ -278,7 +278,7 @@ export default {
       // const target = Array.isArray(option) && option[0] ? option[0].$el : option.$el;
       const target = option;
       if (this.select.$refs.popper && target) {
-        const menu = this.select.$refs.popper.$el.querySelector('.jy-select-charter__wrap');
+        const menu = this.select.$refs.popper.$el.querySelector('.gj-select-charter__wrap');
         scrollIntoView(menu, target);
       }
       this.$refs.scrollbarCharter && this.$refs.scrollbarCharter.handleScroll();
@@ -286,7 +286,7 @@ export default {
 
     selectOptionClick(ele) {
       if (this.limitReached !== true && ele.disabled !== true) {
-        this.dispatch('JySelect', 'handleOptionCharterClick', [
+        this.dispatch('GjSelect', 'handleOptionCharterClick', [
           this,
           {
             label: ele[this.defaultProps.label],
@@ -297,7 +297,7 @@ export default {
     },
     selectAllCharterClick(item) {
       let data = item.data.filter((_) => _.disabled !== true);
-      this.dispatch('JySelect', 'handleOptionCharterClick', [this, data, true]);
+      this.dispatch('GjSelect', 'handleOptionCharterClick', [this, data, true]);
     },
     initIndex() {
       let resIndex = this.charterList[0];

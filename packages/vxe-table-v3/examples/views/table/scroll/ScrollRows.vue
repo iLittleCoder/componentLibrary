@@ -18,7 +18,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -28,28 +28,28 @@
       :export-config="{}"
       :sort-config="{trigger: 'cell'}"
       :loading="loading">
-      <jy-column type="seq" width="100"></jy-column>
-      <jy-column field="name" title="Name" sortable width="200"></jy-column>
-      <jy-column field="id" title="ID" width="200"></jy-column>
-      <jy-column field="sex" title="Sex" width="200"></jy-column>
-      <jy-column field="rate" title="Rate" width="200"></jy-column>
-      <jy-column field="region" title="Region" width="200"></jy-column>
-      <jy-column field="time" title="Time" width="200"></jy-column>
-      <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
-      <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-      <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-      <jy-column field="attr1" title="Attr1" width="200"></jy-column>
-      <jy-column field="attr2" title="Attr2" width="200"></jy-column>
-      <jy-column field="attr3" title="Attr3" width="200"></jy-column>
-      <jy-column field="attr4" title="Attr4" width="200"></jy-column>
-      <jy-column field="attr5" title="Attr5" width="200"></jy-column>
-      <jy-column field="attr6" title="Attr6" width="200"></jy-column>
-      <jy-column field="attr7" title="Attr7" width="200"></jy-column>
-      <jy-column field="attr8" title="Attr8" width="200"></jy-column>
-      <jy-column field="attr11" title="attr11" width="200"></jy-column>
-      <jy-column field="attr9" title="Attr9" width="200"></jy-column>
-      <jy-column field="attr10" title="attr10" width="200"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="100"></gj-column>
+      <gj-column field="name" title="Name" sortable width="200"></gj-column>
+      <gj-column field="id" title="ID" width="200"></gj-column>
+      <gj-column field="sex" title="Sex" width="200"></gj-column>
+      <gj-column field="rate" title="Rate" width="200"></gj-column>
+      <gj-column field="region" title="Region" width="200"></gj-column>
+      <gj-column field="time" title="Time" width="200"></gj-column>
+      <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
+      <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+      <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+      <gj-column field="attr1" title="Attr1" width="200"></gj-column>
+      <gj-column field="attr2" title="Attr2" width="200"></gj-column>
+      <gj-column field="attr3" title="Attr3" width="200"></gj-column>
+      <gj-column field="attr4" title="Attr4" width="200"></gj-column>
+      <gj-column field="attr5" title="Attr5" width="200"></gj-column>
+      <gj-column field="attr6" title="Attr6" width="200"></gj-column>
+      <gj-column field="attr7" title="Attr7" width="200"></gj-column>
+      <gj-column field="attr8" title="Attr8" width="200"></gj-column>
+      <gj-column field="attr11" title="attr11" width="200"></gj-column>
+      <gj-column field="attr9" title="Attr9" width="200"></gj-column>
+      <gj-column field="attr10" title="attr10" width="200"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -78,7 +78,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -88,28 +88,28 @@ export default {
           :export-config="{}"
           :sort-config="{trigger: 'cell'}"
           :loading="loading">
-          <jy-column type="seq" width="100"></jy-column>
-          <jy-column field="name" title="Name" sortable width="200"></jy-column>
-          <jy-column field="id" title="ID" width="200"></jy-column>
-          <jy-column field="sex" title="Sex" width="200"></jy-column>
-          <jy-column field="rate" title="Rate" width="200"></jy-column>
-          <jy-column field="region" title="Region" width="200"></jy-column>
-          <jy-column field="time" title="Time" width="200"></jy-column>
-          <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
-          <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-          <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-          <jy-column field="attr1" title="Attr1" width="200"></jy-column>
-          <jy-column field="attr2" title="Attr2" width="200"></jy-column>
-          <jy-column field="attr3" title="Attr3" width="200"></jy-column>
-          <jy-column field="attr4" title="Attr4" width="200"></jy-column>
-          <jy-column field="attr5" title="Attr5" width="200"></jy-column>
-          <jy-column field="attr6" title="Attr6" width="200"></jy-column>
-          <jy-column field="attr7" title="Attr7" width="200"></jy-column>
-          <jy-column field="attr8" title="Attr8" width="200"></jy-column>
-          <jy-column field="attr11" title="attr11" width="200"></jy-column>
-          <jy-column field="attr9" title="Attr9" width="200"></jy-column>
-          <jy-column field="attr10" title="attr10" width="200"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="100"></gj-column>
+          <gj-column field="name" title="Name" sortable width="200"></gj-column>
+          <gj-column field="id" title="ID" width="200"></gj-column>
+          <gj-column field="sex" title="Sex" width="200"></gj-column>
+          <gj-column field="rate" title="Rate" width="200"></gj-column>
+          <gj-column field="region" title="Region" width="200"></gj-column>
+          <gj-column field="time" title="Time" width="200"></gj-column>
+          <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
+          <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+          <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+          <gj-column field="attr1" title="Attr1" width="200"></gj-column>
+          <gj-column field="attr2" title="Attr2" width="200"></gj-column>
+          <gj-column field="attr3" title="Attr3" width="200"></gj-column>
+          <gj-column field="attr4" title="Attr4" width="200"></gj-column>
+          <gj-column field="attr5" title="Attr5" width="200"></gj-column>
+          <gj-column field="attr6" title="Attr6" width="200"></gj-column>
+          <gj-column field="attr7" title="Attr7" width="200"></gj-column>
+          <gj-column field="attr8" title="Attr8" width="200"></gj-column>
+          <gj-column field="attr11" title="attr11" width="200"></gj-column>
+          <gj-column field="attr9" title="Attr9" width="200"></gj-column>
+          <gj-column field="attr10" title="attr10" width="200"></gj-column>
+        </gj-table>
         `,
         `
         export default {

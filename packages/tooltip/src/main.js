@@ -5,7 +5,7 @@ import { generateId } from 'GildataDesign/src/utils/util';
 import Vue from 'vue';
 
 export default {
-  name: 'JyTooltip',
+  name: 'GjTooltip',
 
   mixins: [Popper],
 
@@ -31,7 +31,7 @@ export default {
     },
     transition: {
       type: String,
-      default: 'jy-fade-in-linear'
+      default: 'gj-fade-in-linear'
     },
     popperOptions: {
       default() {
@@ -60,7 +60,7 @@ export default {
 
   data() {
     return {
-      tooltipId: `jy-tooltip-${generateId()}`,
+      tooltipId: `gj-tooltip-${generateId()}`,
       timeoutPending: null,
       focusing: false
     };
@@ -96,7 +96,7 @@ export default {
             aria-hidden={this.disabled || !this.showPopper ? 'true' : 'false'}
             v-show={!this.disabled && this.showPopper}
             class={[
-              'jy-tooltip__popper',
+              'gj-tooltip__popper',
               'is-' + this.effect,
               this.popperClass
             ]}
@@ -180,9 +180,9 @@ export default {
 
     addTooltipClass(prev) {
       if (!prev) {
-        return 'jy-tooltip';
+        return 'gj-tooltip';
       } else {
-        return 'jy-tooltip ' + prev.replace('jy-tooltip', '');
+        return 'gj-tooltip ' + prev.replace('gj-tooltip', '');
       }
     },
 

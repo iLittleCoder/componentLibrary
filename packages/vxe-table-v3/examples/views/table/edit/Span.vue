@@ -10,7 +10,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable"
@@ -19,11 +19,11 @@
       :data="tableData"
       :edit-rules="validRules"
       :edit-config="{trigger: 'click', mode: 'cell'}">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="role" title="Role" :edit-render="{name: 'input', props: {placeholder: '请输入角色'}}"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', props: {placeholder: '请输入名称'}}"></jy-column>
-      <jy-column field="address" title="Address" :edit-render="{name: 'input', props: {placeholder: '请输入地址'}}"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="role" title="Role" :edit-render="{name: 'input', props: {placeholder: '请输入角色'}}"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', props: {placeholder: '请输入名称'}}"></gj-column>
+      <gj-column field="address" title="Address" :edit-render="{name: 'input', props: {placeholder: '请输入地址'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -74,7 +74,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           ref="xTable"
@@ -83,11 +83,11 @@ export default {
           :data="tableData"
           :edit-rules="validRules"
           :edit-config="{trigger: 'click', mode: 'cell'}">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="role" title="Role" :edit-render="{name: 'input', props: {placeholder: '请输入角色'}}"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', props: {placeholder: '请输入名称'}}"></jy-column>
-          <jy-column field="address" title="Address" :edit-render="{name: 'input', props: {placeholder: '请输入地址'}}"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="role" title="Role" :edit-render="{name: 'input', props: {placeholder: '请输入角色'}}"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', props: {placeholder: '请输入名称'}}"></gj-column>
+          <gj-column field="address" title="Address" :edit-render="{name: 'input', props: {placeholder: '请输入地址'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

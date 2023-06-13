@@ -4,24 +4,24 @@
       实现子孙表格懒加载
     </p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :tree-config="{transform: true}"
       :expand-config="{lazy: true, loadMethod: loadContentMethod}"
       :data="tableData">
-      <jy-column field="name" title="Name" tree-node></jy-column>
-      <jy-column type="expand" width="80">
+      <gj-column field="name" title="Name" tree-node></gj-column>
+      <gj-column type="expand" width="80">
         <template #content="{ row }">
           <div class="expand-wrapper">
             <vxe-grid :columns="row.childCols" :data="row.childData"></vxe-grid>
           </div>
         </template>
-      </jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -61,24 +61,24 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           :tree-config="{transform: true}"
           :expand-config="{lazy: true, loadMethod: loadContentMethod}"
           :data="tableData">
-          <jy-column field="name" title="Name" tree-node></jy-column>
-          <jy-column type="expand" width="80">
+          <gj-column field="name" title="Name" tree-node></gj-column>
+          <gj-column type="expand" width="80">
             <template #content="{ row }">
               <div class="expand-wrapper">
                 <vxe-grid :columns="row.childCols" :data="row.childData"></vxe-grid>
               </div>
             </template>
-          </jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

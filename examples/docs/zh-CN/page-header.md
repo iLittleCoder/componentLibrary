@@ -6,15 +6,15 @@
 
 :::demo
 ```html
-<jy-page-header @back="goBack" subtitle="这是一个副标题">
+<gj-page-header @back="goBack" subtitle="这是一个副标题">
   <template slot="content">
-    <jy-radio-group :show-background="false" v-model="radio1" size="mini">
-       <jy-radio-button label="选项1"></jy-radio-button>
-       <jy-radio-button label="选项2"></jy-radio-button>
-       <jy-radio-button label="选项3"></jy-radio-button>
-    </jy-radio-group>
+    <gj-radio-group :show-background="false" v-model="radio1" size="mini">
+       <gj-radio-button label="选项1"></gj-radio-button>
+       <gj-radio-button label="选项2"></gj-radio-button>
+       <gj-radio-button label="选项3"></gj-radio-button>
+    </gj-radio-group>
 </template>
-</jy-page-header>
+</gj-page-header>
 
 <script>
   export default {

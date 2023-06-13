@@ -10,11 +10,11 @@
 
 ```html
 <template>
-  <jy-table v-loading="loading" :data="tableData" style="width: 100%">
-    <jy-column field="date" title="日期" width="180"> </jy-column>
-    <jy-column field="name" title="姓名" width="180"> </jy-column>
-    <jy-column field="address" title="地址"> </jy-column>
-  </jy-table>
+  <gj-table v-loading="loading" :data="tableData" style="width: 100%">
+    <gj-column field="date" title="日期" width="180"> </gj-column>
+    <gj-column field="name" title="姓名" width="180"> </gj-column>
+    <gj-column field="address" title="地址"> </gj-column>
+  </gj-table>
 </template>
 
 <style>
@@ -61,7 +61,7 @@
 
 ```html
 <template>
-  <jy-table
+  <gj-table
     v-loading="loading"
     element-loading-text="拼命加载中"
     element-loading-spinner="Gildata-loading"
@@ -69,10 +69,10 @@
     :data="tableData"
     style="width: 100%"
   >
-    <jy-column field="date" title="日期" width="180"> </jy-column>
-    <jy-column field="name" title="姓名" width="180"> </jy-column>
-    <jy-column field="address" title="地址"> </jy-column>
-  </jy-table>
+    <gj-column field="date" title="日期" width="180"> </gj-column>
+    <gj-column field="name" title="姓名" width="180"> </gj-column>
+    <gj-column field="address" title="地址"> </gj-column>
+  </gj-table>
 </template>
 
 <script>
@@ -113,12 +113,12 @@
 
 ```html
 <template>
-  <jy-button type="primary" @click="openFullScreen1" v-loading.fullscreen.lock="fullscreenLoading">
+  <gj-button type="primary" @click="openFullScreen1" v-loading.fullscreen.lock="fullscreenLoading">
     指令方式
-  </jy-button>
-  <jy-button type="primary" @click="openFullScreen2">
+  </gj-button>
+  <gj-button type="primary" @click="openFullScreen2">
     服务方式
-  </jy-button>
+  </gj-button>
 </template>
 
 <script>

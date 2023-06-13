@@ -95,7 +95,7 @@ export default {
       attrs.placeholder = getFuncText(placeholder)
     }
     return h('div', {
-      class: ['jy-table-textarea', className, {
+      class: ['gj-table-textarea', className, {
         [`size--${vSize}`]: vSize,
         'is--autosize': autosize,
         'is--disabled': disabled,
@@ -105,7 +105,7 @@ export default {
     }, [
       h('textarea', {
         ref: 'textarea',
-        class: 'jy-table-textarea--inner',
+        class: 'gj-table-textarea--inner',
         domProps: {
           value: inputValue
         },
@@ -116,7 +116,7 @@ export default {
         on: defaultEvents
       }),
       showWordCount ? h('span', {
-        class: ['jy-table-textarea--count', {
+        class: ['gj-table-textarea--count', {
           'is--error': this.isCountError
         }]
       }, countMethod ? `${countMethod({ value: inputValue })}` : `${this.inputCount}${maxlength ? `/${maxlength}` : ''}`) : null
@@ -182,7 +182,7 @@ export default {
         }
         const textElem = $refs.textarea
         const textStyle = getComputedStyle(textElem)
-        autoTxtElem.className = ['jy-table-textarea--autosize', size ? `size--${size}` : ''].join(' ')
+        autoTxtElem.className = ['gj-table-textarea--autosize', size ? `size--${size}` : ''].join(' ')
         autoTxtElem.style.width = `${textElem.clientWidth}px`
         autoTxtElem.style.padding = textStyle.padding
         autoTxtElem.innerHTML = ('' + (inputValue || '　')).replace(/\n$/, '\n　')

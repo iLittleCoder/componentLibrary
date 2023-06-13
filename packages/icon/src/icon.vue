@@ -18,7 +18,7 @@
 import '../../theme-chalk/src/fonts/iconfont.js';
 
 export default {
-  name: 'JyIcon',
+  name: 'GjIcon',
 
   props: {
     name: String

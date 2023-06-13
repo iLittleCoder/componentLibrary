@@ -1,6 +1,6 @@
 <template>
   <div
-    class="jy-rate"
+    class="gj-rate"
     @keydown="handleKey"
     role="slider"
     :aria-valuenow="currentValue"
@@ -11,37 +11,37 @@
   >
     <span
       v-for="(item, key) in max"
-      class="jy-rate__item"
+      class="gj-rate__item"
       @mousemove="setCurrentValue(item, $event)"
       @mouseleave="resetCurrentValue"
       @click="selectValue(item)"
       :style="{ cursor: rateDisabled ? 'auto' : 'pointer' }"
       :key="key"
     >
-      <i :class="[classes[item - 1], { hover: hoverIndex === item }]" class="jy-rate__icon" :style="getIconStyle(item)">
-        <i v-if="showDecimalIcon(item)" :class="decimalIconClass" :style="decimalStyle" class="jy-rate__decimal"> </i>
+      <i :class="[classes[item - 1], { hover: hoverIndex === item }]" class="gj-rate__icon" :style="getIconStyle(item)">
+        <i v-if="showDecimalIcon(item)" :class="decimalIconClass" :style="decimalStyle" class="gj-rate__decimal"> </i>
       </i>
     </span>
-    <span v-if="showText || showScore" class="jy-rate__text" :style="{ color: textColor }">{{ text }}</span>
+    <span v-if="showText || showScore" class="gj-rate__text" :style="{ color: textColor }">{{ text }}</span>
   </div>
 </template>
 
 <script>
 import { hasClass } from 'GildataDesign/src/utils/dom';
 import { isObject } from 'GildataDesign/src/utils/types';
-import JyIcon from 'GildataDesign/packages/icon';
+import GjIcon from 'GildataDesign/packages/icon';
 
 import Migrating from 'GildataDesign/src/mixins/migrating';
 
 export default {
-  name: 'JyRate',
+  name: 'GjRate',
   components: {
-    JyIcon
+    GjIcon
   },
   mixins: [Migrating],
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     }
   },
@@ -223,7 +223,7 @@ export default {
     },
 
     rateDisabled() {
-      return this.disabled || (this.jyForm || {}).disabled;
+      return this.disabled || (this.GjForm || {}).disabled;
     }
   },
 
@@ -327,10 +327,10 @@ export default {
       /* istanbul ignore if */
       if (this.allowHalf) {
         let target = event.target;
-        if (hasClass(target, 'jy-rate__item')) {
-          target = target.querySelector('.jy-rate__icon');
+        if (hasClass(target, 'gj-rate__item')) {
+          target = target.querySelector('.gj-rate__icon');
         }
-        if (hasClass(target, 'jy-rate__decimal')) {
+        if (hasClass(target, 'gj-rate__decimal')) {
           target = target.parentNode;
         }
         this.pointerAtLeftHalf = event.offsetX * 2 <= target.clientWidth;

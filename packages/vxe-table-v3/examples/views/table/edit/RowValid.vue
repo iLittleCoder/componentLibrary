@@ -20,7 +20,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       keep-source
@@ -28,13 +28,13 @@
       :data="tableData"
       :edit-rules="validRules"
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}">
-      <jy-column type="checkbox" width="80"></jy-column>
-      <jy-column type="seq" width="80"></jy-column>
-      <jy-column field="name" title="Name" width="400" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="age" title="Age" width="200" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="sex2" title="Sex" width="200" :edit-render="{name: '$input'}"></jy-column>
-      <jy-column field="date" title="Date" width="300" fixed="right" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="80"></gj-column>
+      <gj-column type="seq" width="80"></gj-column>
+      <gj-column field="name" title="Name" width="400" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="age" title="Age" width="200" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="sex2" title="Sex" width="200" :edit-render="{name: '$input'}"></gj-column>
+      <gj-column field="date" title="Date" width="300" fixed="right" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -93,7 +93,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           keep-source
@@ -101,13 +101,13 @@ export default {
           :data="tableData"
           :edit-rules="validRules"
           :edit-config="{trigger: 'click', mode: 'row', showStatus: true}">
-          <jy-column type="checkbox" width="80"></jy-column>
-          <jy-column type="seq" width="80"></jy-column>
-          <jy-column field="name" title="Name" width="400" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="age" title="Age" width="200" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="sex2" title="Sex" width="200" :edit-render="{name: '$input'}"></jy-column>
-          <jy-column field="date" title="Date" width="300" fixed="right" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="80"></gj-column>
+          <gj-column type="seq" width="80"></gj-column>
+          <gj-column field="name" title="Name" width="400" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="age" title="Age" width="200" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="sex2" title="Sex" width="200" :edit-render="{name: '$input'}"></gj-column>
+          <gj-column field="date" title="Date" width="300" fixed="right" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

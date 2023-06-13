@@ -51,16 +51,16 @@
     </p>
 
     <p>
-      <jy-table-tooltip ref="xTip"></jy-table-tooltip>
-      <jy-table
+      <gj-table-tooltip ref="xTip"></gj-table-tooltip>
+      <gj-table
         border
         height="200"
         :data="tableData">
-        <jy-table type="seq" width="60"></jy-table>
-        <jy-table field="name" title="Name"></jy-table>
-        <jy-table field="sex" title="Sex"></jy-table>
-        <jy-table field="age" title="Age"></jy-table>
-      </jy-table>
+        <gj-table type="seq" width="60"></gj-table>
+        <gj-table field="name" title="Name"></gj-table>
+        <gj-table field="sex" title="Sex"></gj-table>
+        <gj-table field="age" title="Age"></gj-table>
+      </gj-table>
       <vxe-pager
         perfect
         :current-page.sync="page6.currentPage"
@@ -198,16 +198,16 @@ export default {
         </p>
 
         <p>
-          <jy-table-tooltip ref="xTip"></jy-table-tooltip>
-          <jy-table
+          <gj-table-tooltip ref="xTip"></gj-table-tooltip>
+          <gj-table
             border
             height="200"
             :data="tableData">
-            <jy-table type="seq" width="60"></jy-table>
-            <jy-table field="name" title="Name"></jy-table>
-            <jy-table field="sex" title="Sex"></jy-table>
-            <jy-table field="age" title="Age"></jy-table>
-          </jy-table>
+            <gj-table type="seq" width="60"></gj-table>
+            <gj-table field="name" title="Name"></gj-table>
+            <gj-table field="sex" title="Sex"></gj-table>
+            <gj-table field="age" title="Age"></gj-table>
+          </gj-table>
           <vxe-pager
             perfect
             :current-page.sync="page6.currentPage"

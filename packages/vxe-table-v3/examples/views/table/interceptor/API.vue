@@ -1,46 +1,46 @@
 <template>
   <div>
     <h1>{{ $t('app.aside.nav.interceptor') }}</h1>
-    <p class="tip">通过内置事件拦截器可以很容易的处理表格事件行为与第三方组件的兼容性；比如这些插件 <a class="link" href="https://www.npmjs.com/package/jy-table-plugin-element" target="_blank">jy-table-plugin-element</a></p>
-    <jy-table
+    <p class="tip">通过内置事件拦截器可以很容易的处理表格事件行为与第三方组件的兼容性；比如这些插件 <a class="link" href="https://www.npmjs.com/package/gj-table-plugin-element" target="_blank">gj-table-plugin-element</a></p>
+    <gj-table
       resizable
       highlight-current-row
       highlight-hover-row
       highlight-current-column
       class="api-table"
       :data="tableData">
-      <jy-column field="name" title="app.api.title.prop" min-width="280" tree-node></jy-column>
-      <jy-column field="desc" title="app.api.title.desc" min-width="200"></jy-column>
-      <jy-column field="type" title="app.api.title.type" min-width="140"></jy-column>
-      <jy-column field="enum" title="app.api.title.enum" min-width="150"></jy-column>
-      <jy-column field="defVal" title="app.api.title.defVal" min-width="160"></jy-column>
-      <jy-column field="version" :title="$t('app.api.title.version')" width="120">
+      <gj-column field="name" title="app.api.title.prop" min-width="280" tree-node></gj-column>
+      <gj-column field="desc" title="app.api.title.desc" min-width="200"></gj-column>
+      <gj-column field="type" title="app.api.title.type" min-width="140"></gj-column>
+      <gj-column field="enum" title="app.api.title.enum" min-width="150"></gj-column>
+      <gj-column field="defVal" title="app.api.title.defVal" min-width="160"></gj-column>
+      <gj-column field="version" :title="$t('app.api.title.version')" width="120">
         <template #default="{ row }">
           <span v-show="row.version" class="compatibility">v{{  row.version }}</span>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
     <h2>可选值</h2>
-    <jy-table
+    <gj-table
       resizable
       highlight-hover-row
       class="api-table"
       :data="typeList">
-      <jy-column field="name" title="app.api.title.prop" min-width="280" tree-node></jy-column>
-      <jy-column field="desc" title="app.api.title.desc" min-width="200"></jy-column>
-      <jy-column field="type" title="app.api.title.type" min-width="140"></jy-column>
-      <jy-column field="enum" title="app.api.title.enum" min-width="150"></jy-column>
-      <jy-column field="defVal" title="app.api.title.defVal" min-width="160"></jy-column>
-      <jy-column field="version" :title="$t('app.api.title.version')" width="120">
+      <gj-column field="name" title="app.api.title.prop" min-width="280" tree-node></gj-column>
+      <gj-column field="desc" title="app.api.title.desc" min-width="200"></gj-column>
+      <gj-column field="type" title="app.api.title.type" min-width="140"></gj-column>
+      <gj-column field="enum" title="app.api.title.enum" min-width="150"></gj-column>
+      <gj-column field="defVal" title="app.api.title.defVal" min-width="160"></gj-column>
+      <gj-column field="version" :title="$t('app.api.title.version')" width="120">
         <template #default="{ row }">
           <span v-show="row.version" class="compatibility">v{{  row.version }}</span>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
     <h2>示例</h2>
     <p class="tip">
       例子：比如自定义渲染某个组件后，由于弹出层面板不在单元格之内，按键事件的交互行为存在冲突<br>
-      当然还有最简单的用法，只需给弹出面板加上 class=jy-table--ignore-clear 即可
+      当然还有最简单的用法，只需给弹出面板加上 class=gj-table--ignore-clear 即可
     </p>
     <pre>
       <pre-code class="javascript">{{ demoCodes[0] }}</pre-code>

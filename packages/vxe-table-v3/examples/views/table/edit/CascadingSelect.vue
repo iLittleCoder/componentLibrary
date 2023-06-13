@@ -8,7 +8,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -17,12 +17,12 @@
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}"
       @edit-actived="editActivedEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="attr3" title="Project type" :edit-render="{name: '$select', options: ptypeList, props: {clearable: true}, events: {change: ptypeChangeEvent}}"></jy-column>
-      <jy-column field="attr4" title="Project name" :formatter="formatPanmeLabel" :edit-render="{name: '$select', options: pnameList, props: {clearable: true}}"></jy-column>
-      <jy-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="attr3" title="Project type" :edit-render="{name: '$select', options: ptypeList, props: {clearable: true}, events: {change: ptypeChangeEvent}}"></gj-column>
+      <gj-column field="attr4" title="Project name" :formatter="formatPanmeLabel" :edit-render="{name: '$select', options: pnameList, props: {clearable: true}}"></gj-column>
+      <gj-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -68,7 +68,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -77,12 +77,12 @@ export default {
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'row'}"
           @edit-actived="editActivedEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="attr3" title="Project type" :edit-render="{name: '$select', options: ptypeList, props: {clearable: true}, events: {change: ptypeChangeEvent}}"></jy-column>
-          <jy-column field="attr4" title="Project name" :formatter="formatPanmeLabel" :edit-render="{name: '$select', options: pnameList, props: {clearable: true}}"></jy-column>
-          <jy-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="attr3" title="Project type" :edit-render="{name: '$select', options: ptypeList, props: {clearable: true}, events: {change: ptypeChangeEvent}}"></gj-column>
+          <gj-column field="attr4" title="Project name" :formatter="formatPanmeLabel" :edit-render="{name: '$select', options: pnameList, props: {clearable: true}}"></gj-column>
+          <gj-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

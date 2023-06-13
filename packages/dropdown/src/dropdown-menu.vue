@@ -1,6 +1,6 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="doDestroy">
-    <ul class="jy-dropdown-menu jy-popper" :class="[size && `jy-dropdown-menu--${size}`]" v-show="showPopper">
+  <transition name="gj-zoom-in-top" @after-leave="doDestroy">
+    <ul class="gj-dropdown-menu gj-popper" :class="[size && `gj-dropdown-menu--${size}`]" v-show="showPopper">
       <slot></slot>
     </ul>
   </transition>
@@ -9,9 +9,9 @@
   import Popper from 'GildataDesign/src/utils/vue-popper';
 
   export default {
-    name: 'JyDropdownMenu',
+    name: 'GjDropdownMenu',
 
-    componentName: 'JyDropdownMenu',
+    componentName: 'GjDropdownMenu',
 
     mixins: [Popper],
 

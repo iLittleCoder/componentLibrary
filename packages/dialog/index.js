@@ -1,10 +1,10 @@
-import JyDialog from './src/component';
+import GjDialog from './src/component';
 import DialogDrag from './src/dialogDrag';
 
 /* istanbul ignore next */
-JyDialog.install = function(Vue) {
-  Vue.component(JyDialog.name, JyDialog);
+GjDialog.install = function(Vue) {
+  Vue.component(GjDialog.name, GjDialog);
   Vue.directive('dialogDrag', DialogDrag);
 };
 
-export default JyDialog;
+export default GjDialog;

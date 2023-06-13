@@ -14,7 +14,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       show-overflow
@@ -27,14 +27,14 @@
       :footer-cell-class-name="footerCellClassName"
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}">
-      <jy-column type="seq" width="60"></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
       <vxe-colgroup title="统计信息">
-        <jy-column field="name" title="Name" :edit-render="{name: 'input', immediate: true}"></jy-column>
-        <jy-column field="age" title="Age" :edit-render="{name: '$input', immediate: true, props: {type: 'number', min: 1, max: 120}, events: {change: updateFooterEvent}}"></jy-column>
-        <jy-column field="num1" title="Num" :edit-render="{name: 'input', immediate: true, events: {input: updateFooterEvent}}"></jy-column>
-        <jy-column field="rate" title="Rate" :edit-render="{name: 'input', immediate: true, events: {input: updateFooterEvent}}"></jy-column>
+        <gj-column field="name" title="Name" :edit-render="{name: 'input', immediate: true}"></gj-column>
+        <gj-column field="age" title="Age" :edit-render="{name: '$input', immediate: true, props: {type: 'number', min: 1, max: 120}, events: {change: updateFooterEvent}}"></gj-column>
+        <gj-column field="num1" title="Num" :edit-render="{name: 'input', immediate: true, events: {input: updateFooterEvent}}"></gj-column>
+        <gj-column field="rate" title="Rate" :edit-render="{name: 'input', immediate: true, events: {input: updateFooterEvent}}"></gj-column>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -69,7 +69,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-footer
           show-overflow
@@ -82,14 +82,14 @@ export default {
           :footer-cell-class-name="footerCellClassName"
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'row'}">
-          <jy-column type="seq" width="60"></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
           <vxe-colgroup title="统计信息">
-            <jy-column field="name" title="Name" :edit-render="{name: 'input', immediate: true}"></jy-column>
-            <jy-column field="age" title="Age" :edit-render="{name: '$input', immediate: true, props: {type: 'number', min: 1, max: 120}, events: {change: updateFooterEvent}}"></jy-column>
-            <jy-column field="num1" title="Num" :edit-render="{name: 'input', immediate: true, events: {input: updateFooterEvent}}"></jy-column>
-            <jy-column field="rate" title="Rate" :edit-render="{name: 'input', immediate: true, events: {input: updateFooterEvent}}"></jy-column>
+            <gj-column field="name" title="Name" :edit-render="{name: 'input', immediate: true}"></gj-column>
+            <gj-column field="age" title="Age" :edit-render="{name: '$input', immediate: true, props: {type: 'number', min: 1, max: 120}, events: {change: updateFooterEvent}}"></gj-column>
+            <gj-column field="num1" title="Num" :edit-render="{name: 'input', immediate: true, events: {input: updateFooterEvent}}"></gj-column>
+            <gj-column field="rate" title="Rate" :edit-render="{name: 'input', immediate: true, events: {input: updateFooterEvent}}"></gj-column>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {

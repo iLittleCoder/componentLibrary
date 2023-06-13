@@ -4,7 +4,7 @@ import { isEnableConf, getFuncText } from '../../tools/utils'
 
 function renderPrefixIcon (h, titlePrefix) {
   return h('span', {
-    class: 'jy-table-form--item-title-prefix'
+    class: 'gj-table-form--item-title-prefix'
   }, [
     h('i', {
       class: titlePrefix.icon || GlobalConfig.icon.FORM_PREFIX
@@ -14,7 +14,7 @@ function renderPrefixIcon (h, titlePrefix) {
 
 function renderSuffixIcon (h, titleSuffix) {
   return h('span', {
-    class: 'jy-table-form--item-title-suffix'
+    class: 'gj-table-form--item-title-suffix'
   }, [
     h('i', {
       class: titleSuffix.icon || GlobalConfig.icon.FORM_SUFFIX
@@ -32,7 +32,7 @@ export function renderTitle (h, _vm, item) {
   if (titlePrefix) {
     titVNs.push(
       (titlePrefix.content || titlePrefix.message)
-        ? h('jy-table-tooltip', {
+        ? h('gj-table-tooltip', {
           props: {
             ...tooltipOpts,
             ...titlePrefix,
@@ -46,19 +46,19 @@ export function renderTitle (h, _vm, item) {
   }
   titVNs.push(
     h('span', {
-      class: 'jy-table-form--item-title-label'
+      class: 'gj-table-form--item-title-label'
     }, compConf && compConf.renderItemTitle ? compConf.renderItemTitle(itemRender, params) : (slots && slots.title ? _vm.callSlot(slots.title, params, h) : getFuncText(item.title)))
   )
   contVNs.push(
     h('div', {
-      class: 'jy-table-form--item-title-content'
+      class: 'gj-table-form--item-title-content'
     }, titVNs)
   )
   const fixVNs = []
   if (titleSuffix) {
     fixVNs.push(
       (titleSuffix.content || titleSuffix.message)
-        ? h('jy-table-tooltip', {
+        ? h('gj-table-tooltip', {
           props: {
             ...tooltipOpts,
             ...titlePrefix,
@@ -72,7 +72,7 @@ export function renderTitle (h, _vm, item) {
   }
   contVNs.push(
     h('div', {
-      class: 'jy-table-form--item-title-postfix'
+      class: 'gj-table-form--item-title-postfix'
     }, fixVNs)
   )
   return contVNs

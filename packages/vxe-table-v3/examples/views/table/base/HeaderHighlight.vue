@@ -2,17 +2,17 @@
   <div>
     <p class="tip">高亮当前列，当前列是唯一的，通过设置 <table-api-link prop="highlight-current-column"/> 参数</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-column
       highlight-current-column
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -23,19 +23,19 @@
 
     <p class="tip">列和行选中高亮，通过设置 <table-api-link prop="highlight-hover-row"/>、<table-api-link prop="highlight-hover-column"/> 参数</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       highlight-current-row
       highlight-hover-column
       highlight-current-column
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -62,17 +62,17 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-column
           highlight-current-column
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -93,19 +93,19 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           highlight-current-row
           highlight-hover-column
           highlight-current-column
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {

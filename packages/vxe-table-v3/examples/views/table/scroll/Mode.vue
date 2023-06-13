@@ -18,7 +18,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -28,34 +28,34 @@
       :loading="loading"
       :checkbox-config="{checkField: 'checked'}"
       :scroll-y="{mode: 'wheel'}">
-      <jy-column type="seq" width="100" fixed="left"></jy-column>
-      <jy-column field="attr0" title="Attr0" width="200" fixed="left" sortable></jy-column>
-      <jy-column field="attr1" title="Attr1" width="200"></jy-column>
-      <jy-column field="attr2" title="Attr2" width="200"></jy-column>
-      <jy-column field="attr3" title="Attr3" width="200"></jy-column>
-      <jy-column field="attr4" title="Attr4" width="120"></jy-column>
-      <jy-column field="attr5" title="Attr5" width="200"></jy-column>
-      <jy-column field="attr6" title="Attr6" width="300" sortable></jy-column>
-      <jy-column field="attr7" title="Attr7" width="200" sortable></jy-column>
-      <jy-column field="attr8" title="Attr8" width="220"></jy-column>
-      <jy-column field="attr9" title="Attr9" width="200"></jy-column>
-      <jy-column field="attr10" title="Attr10" width="130"></jy-column>
-      <jy-column field="attr11" title="Attr11" width="200"></jy-column>
-      <jy-column field="attr12" title="Attr12" width="100"></jy-column>
-      <jy-column field="attr13" title="Attr14" width="200"></jy-column>
-      <jy-column field="attr14" title="Attr14" width="300"></jy-column>
-      <jy-column field="attr15" title="Attr15" width="200"></jy-column>
-      <jy-column field="attr16" title="Attr16" width="200"></jy-column>
-      <jy-column field="attr17" title="Attr17" width="80"></jy-column>
-      <jy-column field="attr18" title="Attr18" width="200"></jy-column>
-      <jy-column field="attr19" title="Attr19" width="140"></jy-column>
-      <jy-column field="attr20" title="Attr20" width="200"></jy-column>
-      <jy-column field="attr21" title="Attr21" width="160"></jy-column>
-      <jy-column field="attr22" title="Attr22" width="200"></jy-column>
-      <jy-column field="attr23" title="Attr23" width="200"></jy-column>
-      <jy-column field="attr24" title="Attr24" width="100" fixed="right"></jy-column>
-      <jy-column field="attr25" title="Attr25" width="200" fixed="right"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="100" fixed="left"></gj-column>
+      <gj-column field="attr0" title="Attr0" width="200" fixed="left" sortable></gj-column>
+      <gj-column field="attr1" title="Attr1" width="200"></gj-column>
+      <gj-column field="attr2" title="Attr2" width="200"></gj-column>
+      <gj-column field="attr3" title="Attr3" width="200"></gj-column>
+      <gj-column field="attr4" title="Attr4" width="120"></gj-column>
+      <gj-column field="attr5" title="Attr5" width="200"></gj-column>
+      <gj-column field="attr6" title="Attr6" width="300" sortable></gj-column>
+      <gj-column field="attr7" title="Attr7" width="200" sortable></gj-column>
+      <gj-column field="attr8" title="Attr8" width="220"></gj-column>
+      <gj-column field="attr9" title="Attr9" width="200"></gj-column>
+      <gj-column field="attr10" title="Attr10" width="130"></gj-column>
+      <gj-column field="attr11" title="Attr11" width="200"></gj-column>
+      <gj-column field="attr12" title="Attr12" width="100"></gj-column>
+      <gj-column field="attr13" title="Attr14" width="200"></gj-column>
+      <gj-column field="attr14" title="Attr14" width="300"></gj-column>
+      <gj-column field="attr15" title="Attr15" width="200"></gj-column>
+      <gj-column field="attr16" title="Attr16" width="200"></gj-column>
+      <gj-column field="attr17" title="Attr17" width="80"></gj-column>
+      <gj-column field="attr18" title="Attr18" width="200"></gj-column>
+      <gj-column field="attr19" title="Attr19" width="140"></gj-column>
+      <gj-column field="attr20" title="Attr20" width="200"></gj-column>
+      <gj-column field="attr21" title="Attr21" width="160"></gj-column>
+      <gj-column field="attr22" title="Attr22" width="200"></gj-column>
+      <gj-column field="attr23" title="Attr23" width="200"></gj-column>
+      <gj-column field="attr24" title="Attr24" width="100" fixed="right"></gj-column>
+      <gj-column field="attr25" title="Attr25" width="200" fixed="right"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -85,7 +85,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -95,34 +95,34 @@ export default {
           :loading="loading"
           :checkbox-config="{checkField: 'checked'}"
           :scroll-y="{mode: 'wheel'}">
-          <jy-column type="seq" width="100" fixed="left"></jy-column>
-          <jy-column field="attr0" title="Attr0" width="200" fixed="left" sortable></jy-column>
-          <jy-column field="attr1" title="Attr1" width="200"></jy-column>
-          <jy-column field="attr2" title="Attr2" width="200"></jy-column>
-          <jy-column field="attr3" title="Attr3" width="200"></jy-column>
-          <jy-column field="attr4" title="Attr4" width="120"></jy-column>
-          <jy-column field="attr5" title="Attr5" width="200"></jy-column>
-          <jy-column field="attr6" title="Attr6" width="300" sortable></jy-column>
-          <jy-column field="attr7" title="Attr7" width="200" sortable></jy-column>
-          <jy-column field="attr8" title="Attr8" width="220"></jy-column>
-          <jy-column field="attr9" title="Attr9" width="200"></jy-column>
-          <jy-column field="attr10" title="Attr10" width="130"></jy-column>
-          <jy-column field="attr11" title="Attr11" width="200"></jy-column>
-          <jy-column field="attr12" title="Attr12" width="100"></jy-column>
-          <jy-column field="attr13" title="Attr14" width="200"></jy-column>
-          <jy-column field="attr14" title="Attr14" width="300"></jy-column>
-          <jy-column field="attr15" title="Attr15" width="200"></jy-column>
-          <jy-column field="attr16" title="Attr16" width="200"></jy-column>
-          <jy-column field="attr17" title="Attr17" width="80"></jy-column>
-          <jy-column field="attr18" title="Attr18" width="200"></jy-column>
-          <jy-column field="attr19" title="Attr19" width="140"></jy-column>
-          <jy-column field="attr20" title="Attr20" width="200"></jy-column>
-          <jy-column field="attr21" title="Attr21" width="160"></jy-column>
-          <jy-column field="attr22" title="Attr22" width="200"></jy-column>
-          <jy-column field="attr23" title="Attr23" width="200"></jy-column>
-          <jy-column field="attr24" title="Attr24" width="100" fixed="right"></jy-column>
-          <jy-column field="attr25" title="Attr25" width="200" fixed="right"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="100" fixed="left"></gj-column>
+          <gj-column field="attr0" title="Attr0" width="200" fixed="left" sortable></gj-column>
+          <gj-column field="attr1" title="Attr1" width="200"></gj-column>
+          <gj-column field="attr2" title="Attr2" width="200"></gj-column>
+          <gj-column field="attr3" title="Attr3" width="200"></gj-column>
+          <gj-column field="attr4" title="Attr4" width="120"></gj-column>
+          <gj-column field="attr5" title="Attr5" width="200"></gj-column>
+          <gj-column field="attr6" title="Attr6" width="300" sortable></gj-column>
+          <gj-column field="attr7" title="Attr7" width="200" sortable></gj-column>
+          <gj-column field="attr8" title="Attr8" width="220"></gj-column>
+          <gj-column field="attr9" title="Attr9" width="200"></gj-column>
+          <gj-column field="attr10" title="Attr10" width="130"></gj-column>
+          <gj-column field="attr11" title="Attr11" width="200"></gj-column>
+          <gj-column field="attr12" title="Attr12" width="100"></gj-column>
+          <gj-column field="attr13" title="Attr14" width="200"></gj-column>
+          <gj-column field="attr14" title="Attr14" width="300"></gj-column>
+          <gj-column field="attr15" title="Attr15" width="200"></gj-column>
+          <gj-column field="attr16" title="Attr16" width="200"></gj-column>
+          <gj-column field="attr17" title="Attr17" width="80"></gj-column>
+          <gj-column field="attr18" title="Attr18" width="200"></gj-column>
+          <gj-column field="attr19" title="Attr19" width="140"></gj-column>
+          <gj-column field="attr20" title="Attr20" width="200"></gj-column>
+          <gj-column field="attr21" title="Attr21" width="160"></gj-column>
+          <gj-column field="attr22" title="Attr22" width="200"></gj-column>
+          <gj-column field="attr23" title="Attr23" width="200"></gj-column>
+          <gj-column field="attr24" title="Attr24" width="100" fixed="right"></gj-column>
+          <gj-column field="attr25" title="Attr25" width="200" fixed="right"></gj-column>
+        </gj-table>
         `,
         `
         export default {

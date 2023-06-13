@@ -1,22 +1,22 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-enter="handleEnter" @after-leave="handleLeave">
+  <transition name="gj-zoom-in-top" @after-enter="handleEnter" @after-leave="handleLeave">
     <div
       v-show="visible"
-      class="jy-picker-panel jy-date-picker jy-popper"
+      class="gj-picker-panel gj-date-picker gj-popper"
       :class="[
         {
           'has-time': showTime,
-          'jy-picker-panel__content-ym': currentView === 'year' || currentView === 'month'
+          'gj-picker-panel__content-ym': currentView === 'year' || currentView === 'month'
         },
         popperClass
       ]"
     >
-      <div class="jy-picker-panel__body-wrapper">
-        <slot name="sidebar" class="jy-picker-panel__sidebar"></slot>
-        <div class="jy-picker-panel__body">
-          <div class="jy-date-picker__time-header" v-if="showTime">
-            <span class="jy-date-picker__editor-wrap">
-              <jy-input
+      <div class="gj-picker-panel__body-wrapper">
+        <slot name="sidebar" class="gj-picker-panel__sidebar"></slot>
+        <div class="gj-picker-panel__body">
+          <div class="gj-date-picker__time-header" v-if="showTime">
+            <span class="gj-date-picker__editor-wrap">
+              <gj-input
                 :placeholder="t('el.datepicker.selectDate')"
                 :value="visibleDate"
                 size="mini"
@@ -24,8 +24,8 @@
                 @change="handleVisibleDateChange"
               />
             </span>
-            <span class="jy-date-picker__editor-wrap second-wrap" v-clickoutside="handleTimePickClose">
-              <jy-input
+            <span class="gj-date-picker__editor-wrap second-wrap" v-clickoutside="handleTimePickClose">
+              <gj-input
                 ref="input"
                 @focus="timePickerVisible = true"
                 :placeholder="t('el.datepicker.selectTime')"
@@ -45,9 +45,9 @@
             </span>
           </div>
           <div
-            class="jy-date-picker__header"
+            class="gj-date-picker__header"
             :class="{
-              'jy-date-picker__header--bordered': currentView === 'year' || currentView === 'month'
+              'gj-date-picker__header--bordered': currentView === 'year' || currentView === 'month'
             }"
             v-show="currentView !== 'time'"
           >
@@ -55,21 +55,21 @@
               type="button"
               @click="prevYear"
               :aria-label="t(`el.datepicker.prevYear`)"
-              class="jy-picker-panel__icon-btn jy-date-picker__prev-btn Gildata-d-leftarrow"
+              class="gj-picker-panel__icon-btn gj-date-picker__prev-btn Gildata-d-leftarrow"
             ></button>
             <button
               type="button"
               @click="prevMonth"
               v-show="currentView === 'date'"
               :aria-label="t(`el.datepicker.prevMonth`)"
-              class="jy-picker-panel__icon-btn jy-date-picker__prev-btn Gildata-leftarrow"
+              class="gj-picker-panel__icon-btn gj-date-picker__prev-btn Gildata-leftarrow"
             ></button>
-            <span @click="showYearPicker" role="button" class="jy-date-picker__header-label">{{ yearLabel }}</span>
+            <span @click="showYearPicker" role="button" class="gj-date-picker__header-label">{{ yearLabel }}</span>
             <span
               @click="showMonthPicker"
               v-show="currentView === 'date'"
               role="button"
-              class="jy-date-picker__header-label"
+              class="gj-date-picker__header-label"
               :class="{ active: currentView === 'month' }"
               >{{ t(`el.datepicker.month${month + 1}`) }}</span
             >
@@ -77,18 +77,18 @@
               type="button"
               @click="nextYear"
               :aria-label="t(`el.datepicker.nextYear`)"
-              class="jy-picker-panel__icon-btn jy-date-picker__next-btn Gildata-d-rightarrow"
+              class="gj-picker-panel__icon-btn gj-date-picker__next-btn Gildata-d-rightarrow"
             ></button>
             <button
               type="button"
               @click="nextMonth"
               v-show="currentView === 'date'"
               :aria-label="t(`el.datepicker.nextMonth`)"
-              class="jy-picker-panel__icon-btn jy-date-picker__next-btn Gildata-rightarrow"
+              class="gj-picker-panel__icon-btn gj-date-picker__next-btn Gildata-rightarrow"
             ></button>
           </div>
 
-          <div class="jy-picker-panel__content">
+          <div class="gj-picker-panel__content">
             <date-table
               v-show="currentView === 'date'"
               @pick="handleDatePick"
@@ -132,50 +132,50 @@
         </div>
       </div>
 
-      <div class="jy-picker-panel__footer" v-show="(footerVisible && currentView === 'date') || showToday">
+      <div class="gj-picker-panel__footer" v-show="(footerVisible && currentView === 'date') || showToday">
         <div class="text-align-center" v-show="!(footerVisible && currentView === 'date') && showToday">
           <span>
-            <jy-button size="mini" type="text" class="jy-picker-panel__link-btn" @click="changeToNow">
+            <gj-button size="mini" type="text" class="gj-picker-panel__link-btn" @click="changeToNow">
               {{ t('el.datepicker.today') }}
-            </jy-button>
+            </gj-button>
           </span>
         </div>
 
         <span v-show="footerVisible && currentView === 'date' && !showTime">
-          <jy-button
+          <gj-button
             size="mini"
             type="text"
-            class="jy-picker-panel__link-btn"
+            class="gj-picker-panel__link-btn"
             @click="changeToNow"
             v-show="selectionMode !== 'dates'"
           >
             {{ t('el.datepicker.now') }}
-          </jy-button>
-          <jy-button size="mini" type="text" class="jy-picker-panel__link-btn" @click="confirm">
+          </gj-button>
+          <gj-button size="mini" type="text" class="gj-picker-panel__link-btn" @click="confirm">
             {{ t('el.datepicker.confirm') }}
-          </jy-button>
+          </gj-button>
         </span>
 
         <div class="day-panel-footer" v-show="footerVisible && currentView === 'date' && showTime">
-          <jy-button
+          <gj-button
             size="mini"
             type="text"
-            class="jy-picker-panel__link-btn"
+            class="gj-picker-panel__link-btn"
             @click="changeToNow"
             v-show="selectionMode !== 'dates'"
           >
             {{ t('el.datepicker.now') }}
-          </jy-button>
-          <button class="jy-picker-panel__link-btn datetime-btn datetime-confirm" @click="confirm">
+          </gj-button>
+          <button class="gj-picker-panel__link-btn datetime-btn datetime-confirm" @click="confirm">
             {{ t('el.datepicker.confirm') }}
           </button>
         </div>
       </div>
 
-      <div class="jy-picker-panel__shortcut--footer" v-if="shortcuts">
-        <jy-button size="mini" v-for="(shortcut, key) in shortcuts" :key="key" @click="handleShortcutClick(shortcut)">{{
+      <div class="gj-picker-panel__shortcut--footer" v-if="shortcuts">
+        <gj-button size="mini" v-for="(shortcut, key) in shortcuts" :key="key" @click="handleShortcutClick(shortcut)">{{
           shortcut.text
-        }}</jy-button>
+        }}</gj-button>
       </div>
     </div>
   </transition>

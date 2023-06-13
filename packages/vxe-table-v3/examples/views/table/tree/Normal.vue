@@ -13,15 +13,15 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       show-overflow
       ref="xTree1"
       :show-header="false"
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
       :radio-config="{labelField: 'name'}"
       :data="tableData1">
-      <jy-column type="radio" tree-node></jy-column>
-    </jy-table>
+      <gj-column type="radio" tree-node></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -32,7 +32,7 @@
 
     <p class="tip">带连接线</p>
 
-    <jy-table
+    <gj-table
       show-overflow
       highlight-hover-row
       :row-config="{useKey: true}"
@@ -40,8 +40,8 @@
       :data="tableData2"
       :checkbox-config="{labelField: 'name'}"
       :tree-config="{transform: true, accordion: true, line: true, iconOpen: 'fa fa-caret-down', iconClose: 'fa fa-caret-right'}">
-      <jy-column type="checkbox" tree-node></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" tree-node></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -52,7 +52,7 @@
 
     <p class="tip">更多功能</p>
 
-    <jy-table
+    <gj-table
       show-overflow
       highlight-hover-row
       ref="xTree3"
@@ -62,7 +62,7 @@
       :data="tableData3"
       :checkbox-config="{labelField: 'name'}"
       :tree-config="{transform: true, accordion: true, line: true, iconOpen: 'fa fa-minus-square-o', iconClose: 'fa fa-plus-square-o'}">
-      <jy-column type="checkbox" tree-node>
+      <gj-column type="checkbox" tree-node>
         <template #default="{ row }">
           <span>
             <template v-if="row.children && row.children.length">
@@ -74,16 +74,16 @@
             <span>{{ row.name }}</span>
           </span>
         </template>
-      </jy-column>
-      <jy-column title="操作" width="140">
+      </gj-column>
+      <gj-column title="操作" width="140">
         <template #default="{ row }">
           <vxe-button type="text" icon="fa fa-eye"></vxe-button>
           <vxe-button type="text" icon="fa fa-edit"></vxe-button>
           <vxe-button type="text" icon="fa fa-trash-o" @click="removeRowEvent(row)"></vxe-button>
           <vxe-button type="text" icon="fa fa-id-card-o"></vxe-button>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -122,12 +122,12 @@ export default {
         { id: 24577, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' }
       ],
       tableData2: [
-        { id: 10000, parentId: null, name: 'jy-table test abc1', type: 'mp3', size: 1024, date: '2020-08-01' },
+        { id: 10000, parentId: null, name: 'gj-table test abc1', type: 'mp3', size: 1024, date: '2020-08-01' },
         { id: 10050, parentId: null, name: 'Test2', type: 'mp4', size: null, date: '2021-04-01' },
         { id: 24300, parentId: 10050, name: 'Test3', type: 'avi', size: 1024, date: '2020-03-01' },
-        { id: 20045, parentId: 24300, name: 'jy-table test abc4', type: 'html', size: 600, date: '2021-04-01' },
-        { id: 10053, parentId: 24300, name: 'jy-table test abc96', type: 'avi', size: null, date: '2021-04-01' },
-        { id: 24330, parentId: 10053, name: 'jy-table test abc5', type: 'txt', size: 25, date: '2021-10-01' },
+        { id: 20045, parentId: 24300, name: 'gj-table test abc4', type: 'html', size: 600, date: '2021-04-01' },
+        { id: 10053, parentId: 24300, name: 'gj-table test abc96', type: 'avi', size: null, date: '2021-04-01' },
+        { id: 24330, parentId: 10053, name: 'gj-table test abc5', type: 'txt', size: 25, date: '2021-10-01' },
         { id: 21011, parentId: 10053, name: 'Test6', type: 'pdf', size: 512, date: '2020-01-01' },
         { id: 22200, parentId: 10053, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
         { id: 23666, parentId: null, name: 'Test8', type: 'xlsx', size: 2048, date: '2020-11-01' },
@@ -137,17 +137,17 @@ export default {
         { id: 23688, parentId: 23666, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
         { id: 23681, parentId: 23688, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
         { id: 23682, parentId: 23688, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
-        { id: 24555, parentId: null, name: 'jy-table test abc9', type: 'avi', size: 224, date: '2020-10-01' },
+        { id: 24555, parentId: null, name: 'gj-table test abc9', type: 'avi', size: 224, date: '2020-10-01' },
         { id: 24566, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
         { id: 24577, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' }
       ],
       tableData3: [
-        { id: 10000, parentId: null, name: 'jy-table test abc1', type: 'mp3', size: 1024, date: '2020-08-01' },
+        { id: 10000, parentId: null, name: 'gj-table test abc1', type: 'mp3', size: 1024, date: '2020-08-01' },
         { id: 10050, parentId: null, name: 'Test2', type: 'mp4', size: null, date: '2021-04-01' },
         { id: 24300, parentId: 10050, name: 'Test3', type: 'avi', size: 1024, date: '2020-03-01' },
-        { id: 20045, parentId: 24300, name: 'jy-table test abc4', type: 'html', size: 600, date: '2021-04-01' },
-        { id: 10053, parentId: 24300, name: 'jy-table test abc96', type: 'avi', size: null, date: '2021-04-01' },
-        { id: 24330, parentId: 10053, name: 'jy-table test abc5', type: 'txt', size: 25, date: '2021-10-01' },
+        { id: 20045, parentId: 24300, name: 'gj-table test abc4', type: 'html', size: 600, date: '2021-04-01' },
+        { id: 10053, parentId: 24300, name: 'gj-table test abc96', type: 'avi', size: null, date: '2021-04-01' },
+        { id: 24330, parentId: 10053, name: 'gj-table test abc5', type: 'txt', size: 25, date: '2021-10-01' },
         { id: 21011, parentId: 10053, name: 'Test6', type: 'pdf', size: 512, date: '2020-01-01' },
         { id: 22200, parentId: 10053, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
         { id: 23666, parentId: null, name: 'Test8', type: 'xlsx', size: 2048, date: '2020-11-01' },
@@ -157,7 +157,7 @@ export default {
         { id: 23688, parentId: 23666, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
         { id: 23681, parentId: 23688, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
         { id: 23682, parentId: 23688, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
-        { id: 24555, parentId: null, name: 'jy-table test abc9', type: 'avi', size: 224, date: '2020-10-01' },
+        { id: 24555, parentId: null, name: 'gj-table test abc9', type: 'avi', size: 224, date: '2020-10-01' },
         { id: 24566, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
         { id: 24577, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' }
       ],
@@ -172,15 +172,15 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           show-overflow
           ref="xTree"
           :show-header="false"
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :radio-config="{labelField: 'name'}"
           :data="tableData1">
-          <jy-column type="radio" tree-node></jy-column>
-        </jy-table>
+          <gj-column type="radio" tree-node></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -221,7 +221,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           show-overflow
           highlight-hover-row
           row-key
@@ -229,8 +229,8 @@ export default {
           :data="tableData2"
           :checkbox-config="{labelField: 'name'}"
           :tree-config="{transform: true, accordion: true, line: true, iconOpen: 'fa fa-caret-down', iconClose: 'fa fa-caret-right'}">
-          <jy-column type="checkbox" tree-node></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" tree-node></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'
@@ -263,7 +263,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           show-overflow
           highlight-hover-row
           row-key
@@ -273,7 +273,7 @@ export default {
           :data="tableData3"
           :checkbox-config="{labelField: 'name'}"
           :tree-config="{transform: true, accordion: true, line: true, iconOpen: 'fa fa-minus-square-o', iconClose: 'fa fa-plus-square-o'}">
-          <jy-column type="checkbox" tree-node>
+          <gj-column type="checkbox" tree-node>
             <template #default="{ row }">
               <span>
                 <template v-if="row.children && row.children.length">
@@ -285,16 +285,16 @@ export default {
                 <span>{{ row.name }}</span>
               </span>
             </template>
-          </jy-column>
-          <jy-column title="操作" width="140">
+          </gj-column>
+          <gj-column title="操作" width="140">
             <template #default="{ row }">
               <vxe-button type="text" icon="fa fa-eye"></vxe-button>
               <vxe-button type="text" icon="fa fa-edit"></vxe-button>
               <vxe-button type="text" icon="fa fa-trash-o" @click="removeRowEvent(row)"></vxe-button>
               <vxe-button type="text" icon="fa fa-id-card-o"></vxe-button>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         export default {

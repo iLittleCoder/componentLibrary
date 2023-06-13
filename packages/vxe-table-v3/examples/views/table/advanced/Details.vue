@@ -2,7 +2,7 @@
   <div>
     <p class="tip">实现点击行弹出窗口并显示详情信息<span class="red">（具体请自行实现，该示例仅供参考）</span></p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       highlight-hover-row
@@ -10,16 +10,16 @@
       height="500"
       :data="tableData"
       @cell-click="cellClickEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <vxe-modal v-model="showDetails" title="查看详情" width="600" height="400" :mask="false" :lock-view="false" resize>
       <template #default>
-        <jy-table
+        <gj-table
           border="inner"
           auto-resize
           show-overflow
@@ -28,9 +28,9 @@
           :show-header="false"
           :sync-resize="showDetails"
           :data="detailData">
-          <jy-column field="label" width="40%"></jy-column>
-          <jy-column field="value"></jy-column>
-        </jy-table>
+          <gj-column field="label" width="40%"></gj-column>
+          <gj-column field="value"></gj-column>
+        </gj-table>
       </template>
     </vxe-modal>
 
@@ -63,7 +63,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           highlight-hover-row
@@ -71,16 +71,16 @@ export default {
           height="500"
           :data="tableData"
           @cell-click="cellClickEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
 
         <vxe-modal v-model="showDetails" title="查看详情" width="600" height="400" :mask="false" :lock-view="false" resize>
           <template #default>
-            <jy-table
+            <gj-table
               border="inner"
               auto-resize
               show-overflow
@@ -89,9 +89,9 @@ export default {
               :show-header="false"
               :sync-resize="showDetails"
               :data="detailData">
-              <jy-column field="label" width="40%"></jy-column>
-              <jy-column field="value"></jy-column>
-            </jy-table>
+              <gj-column field="label" width="40%"></gj-column>
+              <gj-column field="value"></gj-column>
+            </gj-table>
           </template>
         </vxe-modal>
         `,

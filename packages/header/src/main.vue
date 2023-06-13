@@ -1,14 +1,14 @@
 <template>
-  <header class="jy-header" :style="{ height }">
+  <header class="gj-header" :style="{ height }">
     <slot></slot>
   </header>
 </template>
 
 <script>
   export default {
-    name: 'JyHeader',
+    name: 'GjHeader',
 
-    componentName: 'JyHeader',
+    componentName: 'GjHeader',
 
     props: {
       height: {

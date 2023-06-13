@@ -33,12 +33,12 @@ export default ${ComponentName};`
   {
     filename: 'src/main.vue',
     content: `<template>
-  <div class="jy-${componentname}"></div>
+  <div class="gj-${componentname}"></div>
 </template>
 
 <script>
 export default {
-  name: 'Jy${ComponentName}'
+  name: 'gj${ComponentName}'
 };
 </script>`
   },

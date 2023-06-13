@@ -11,13 +11,13 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable"
       :data="tableData"
       :expand-config="{lazy: true, loadMethod: loadContentMethod}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="expand" width="80">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="expand" width="80">
         <template #content="{ row }">
           <ul>
             <li v-for="(item, index) in row.detailList" :key="index">
@@ -27,11 +27,11 @@
             </li>
           </ul>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -42,20 +42,20 @@
 
     <p class="tip">实现父子表格懒加载</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData2"
       :expand-config="{accordion: true, lazy: true, loadMethod: loadContentMethod2}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="expand" width="80">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="expand" width="80">
         <template #content="{ row }">
           <vxe-grid :columns="row.childCols" :data="row.childData"></vxe-grid>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -95,13 +95,13 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable"
           :data="tableData"
           :expand-config="{lazy: true, loadMethod: loadContentMethod}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="expand" width="80">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="expand" width="80">
             <template #content="{ row }">
               <ul>
                 <li v-for="(item, index) in row.detailList" :key="index">
@@ -111,11 +111,11 @@ export default {
                 </li>
               </ul>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'
@@ -152,20 +152,20 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData"
           :expand-config="{accordion: true, lazy: true, loadMethod: loadContentMethod}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="expand" width="80">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="expand" width="80">
             <template #content="{ row }">
               <vxe-grid :columns="row.childCols" :data="row.childData"></vxe-grid>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

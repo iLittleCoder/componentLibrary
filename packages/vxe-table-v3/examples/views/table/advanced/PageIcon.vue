@@ -2,19 +2,19 @@
   <div>
     <p class="tip">自定义分页按钮图标，例如第三方图标库：font-awesome、inconfont</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       height="400"
       :loading="loading"
       :data="tableData">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address"></gj-column>
+    </gj-table>
 
     <vxe-pager
       border
@@ -53,19 +53,19 @@ export default {
       },
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           height="400"
           :loading="loading"
           :data="tableData">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" title="序号" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" title="序号" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address"></gj-column>
+        </gj-table>
 
         <vxe-pager
           border

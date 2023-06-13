@@ -4,7 +4,7 @@
     @mouseenter.stop="handleMouseEnter"
     @mouseleave.stop="handleMouseLeave">
     <div
-      class="jy-carousel__container"
+      class="gj-carousel__container"
       :style="{ height: height }">
       <transition
         v-if="arrowDisplay"
@@ -15,7 +15,7 @@
           @mouseenter="handleButtonEnter('left')"
           @mouseleave="handleButtonLeave"
           @click.stop="throttledArrowClick(activeIndex - 1)"
-          class="jy-carousel__arrow jy-carousel__arrow--left">
+          class="gj-carousel__arrow gj-carousel__arrow--left">
           <i class="Gildata-leftarrow"></i>
         </button>
       </transition>
@@ -28,7 +28,7 @@
           @mouseenter="handleButtonEnter('right')"
           @mouseleave="handleButtonLeave"
           @click.stop="throttledArrowClick(activeIndex + 1)"
-          class="jy-carousel__arrow jy-carousel__arrow--right">
+          class="gj-carousel__arrow gj-carousel__arrow--right">
           <i class="Gildata-rightarrow"></i>
         </button>
       </transition>
@@ -41,12 +41,12 @@
         v-for="(item, index) in items"
         :key="index"
         :class="[
-          'jy-carousel__indicator',
-          'jy-carousel__indicator--' + direction,
+          'gj-carousel__indicator',
+          'gj-carousel__indicator--' + direction,
           { 'is-active': index === activeIndex }]"
         @mouseenter="throttledIndicatorHover(index)"
         @click.stop="handleIndicatorClick(index)">
-        <button class="jy-carousel__button">
+        <button class="gj-carousel__button">
           <span v-if="hasLabel">{{ item.label }}</span>
         </button>
       </li>
@@ -59,7 +59,7 @@ import throttle from 'throttle-debounce/throttle';
 import { addResizeListener, removeResizeListener } from 'GildataDesign/src/utils/resize-event';
 
 export default {
-  name: 'JyCarousel',
+  name: 'GjCarousel',
 
   props: {
     initialIndex: {
@@ -122,20 +122,20 @@ export default {
     },
 
     carouselClasses() {
-      const classes = ['jy-carousel', 'jy-carousel--' + this.direction];
+      const classes = ['gj-carousel', 'gj-carousel--' + this.direction];
       if (this.type === 'card') {
-        classes.push('jy-carousel--card');
+        classes.push('gj-carousel--card');
       }
       return classes;
     },
 
     indicatorsClasses() {
-      const classes = ['jy-carousel__indicators', 'jy-carousel__indicators--' + this.direction];
+      const classes = ['gj-carousel__indicators', 'gj-carousel__indicators--' + this.direction];
       if (this.hasLabel) {
-        classes.push('jy-carousel__indicators--labels');
+        classes.push('gj-carousel__indicators--labels');
       }
       if (this.indicatorPosition === 'outside' || this.type === 'card') {
-        classes.push('jy-carousel__indicators--outside');
+        classes.push('gj-carousel__indicators--outside');
       }
       return classes;
     }
@@ -207,7 +207,7 @@ export default {
     },
 
     updateItems() {
-      this.items = this.$children.filter(child => child.$options.name === 'JyCarouselItem');
+      this.items = this.$children.filter(child => child.$options.name === 'GjCarouselItem');
     },
 
     resetItemPosition(oldIndex) {

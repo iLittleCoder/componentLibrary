@@ -1,49 +1,49 @@
 <template>
     <div>
         {{active}}
-        <jy-steps :active="active" finish-status="success" >
-            <jy-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-        </jy-steps>
-        <jy-button style="margin: 12px;" @click="next">下一步</jy-button>
-        <jy-steps :active="active"  align-center>
-            <jy-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-        </jy-steps>
-        <jy-button style="margin: 12px;" @click="next">下一步</jy-button>
+        <gj-steps :active="active" finish-status="success" >
+            <gj-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+        </gj-steps>
+        <gj-button style="margin: 12px;" @click="next">下一步</gj-button>
+        <gj-steps :active="active"  align-center>
+            <gj-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+        </gj-steps>
+        <gj-button style="margin: 12px;" @click="next">下一步</gj-button>
         <div style="height: 300px;">
-            <jy-steps :active="active" direction="vertical"  >
-                <jy-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></jy-step>
-                <jy-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></jy-step>
-                <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            </jy-steps>
+            <gj-steps :active="active" direction="vertical"  >
+                <gj-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></gj-step>
+                <gj-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></gj-step>
+                <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            </gj-steps>
         </div>
-        <jy-button style="margin: 12px;" @click="next">下一步</jy-button>
-        <jy-steps :active="active" finish-status="success" align-center simple >
-            <jy-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-        </jy-steps>
-        <jy-steps :active="active" finish-status="success" align-center nav>
-            <jy-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-        </jy-steps>
-        <jy-steps :active="active"  point>
-            <jy-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-        </jy-steps>
+        <gj-button style="margin: 12px;" @click="next">下一步</gj-button>
+        <gj-steps :active="active" finish-status="success" align-center simple >
+            <gj-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+        </gj-steps>
+        <gj-steps :active="active" finish-status="success" align-center nav>
+            <gj-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+        </gj-steps>
+        <gj-steps :active="active"  point>
+            <gj-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+        </gj-steps>
         <div style="height: 300px;">
-            <jy-steps :active="active" direction="vertical" point >
-                <jy-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></jy-step>
-                <jy-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></jy-step>
-                <jy-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></jy-step>
-            </jy-steps>
+            <gj-steps :active="active" direction="vertical" point >
+                <gj-step title="步骤 1"  description="这是一段很长很长很长的描述性文字"></gj-step>
+                <gj-step title="步骤 2"  description="这是一段很长很长很长的描述性文字"></gj-step>
+                <gj-step title="步骤 3"  description="这是一段很长很长很长的描述性文字"></gj-step>
+            </gj-steps>
         </div>
 
     </div>

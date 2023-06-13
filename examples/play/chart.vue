@@ -1,8 +1,8 @@
 <template>
   <div>
-    <jy-chart theme="White" ref="chart" height="400px" type="bar" :chartOptions="chartOptions"></jy-chart>
+    <gj-chart theme="White" ref="chart" height="400px" type="bar" :chartOptions="chartOptions"></gj-chart>
 
-    <jy-line :chartOptions="chartOptions2"></jy-line>
+    <gj-line :chartOptions="chartOptions2"></gj-line>
 
     <p></p>
   </div>

@@ -4,15 +4,15 @@
       使用 <table-api-link prop="highlight-current-row"/> 方式
     </p>
 
-    <jy-table
+    <gj-table
       highlight-current-row
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
       :data="tableData1">
-      <jy-column field="name" title="Name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -23,15 +23,15 @@
 
     <p class="tip">使用 radio 方式</p>
 
-    <jy-table
+    <gj-table
       :tree-config="{transform: true}"
       :radio-config="{labelField: 'name', highlight: true}"
       :data="tableData2">
-      <jy-column type="radio" title="Name" width="400" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="radio" title="Name" width="400" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -42,7 +42,7 @@
 
     <p class="tip">当然也可以两种方式同时使用</p>
 
-    <jy-table
+    <gj-table
       resizable
       highlight-current-row
       ref="xTable3"
@@ -50,15 +50,15 @@
       :radio-config="{labelField: 'name', trigger: 'row'}"
       :data="tableData3"
       @current-change="currentChangeEvent">
-      <jy-column type="radio" width="400" tree-node>
+      <gj-column type="radio" width="400" tree-node>
         <template #header>
           <vxe-button type="text" @click="clearCurrentRowEvent" :disabled="!selectRow">取消</vxe-button>
         </template>
-      </jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -136,15 +136,15 @@ export default {
       selectRow: null,
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           highlight-current-row
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :data="tableData1">
-          <jy-column field="name" title="Name" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="Name" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -175,15 +175,15 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           :tree-config="{transform: true}"
           :radio-config="{labelField: 'name', highlight: true}"
           :data="tableData2">
-          <jy-column type="radio" title="Name" width="400" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column type="radio" title="Name" width="400" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -214,7 +214,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           resizable
           highlight-current-row
           ref="xTable"
@@ -222,15 +222,15 @@ export default {
           :radio-config="{labelField: 'name', trigger: 'row'}"
           :data="tableData3"
           @current-change="currentChangeEvent">
-          <jy-column type="radio" width="400" tree-node>
+          <gj-column type="radio" width="400" tree-node>
             <template #header>
               <vxe-button type="text" @click="clearCurrentRowEvent" :disabled="!selectRow">取消</vxe-button>
             </template>
-          </jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {

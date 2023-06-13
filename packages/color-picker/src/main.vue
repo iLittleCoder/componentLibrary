@@ -72,7 +72,7 @@
       },
 
       _elFormItemSize() {
-        return (this.jyFormItem || {}).jyFormItemSize;
+        return (this.GjFormItem || {}).GjFormItemSize;
       },
 
       colorSize() {
@@ -122,14 +122,14 @@
         const value = this.color.value;
         this.$emit('input', value);
         this.$emit('change', value);
-        this.dispatch('JyFormItem', 'el.form.change', value);
+        this.dispatch('GjFormItem', 'el.form.change', value);
         this.showPicker = false;
       },
       clearValue() {
         this.$emit('input', null);
         this.$emit('change', null);
         if (this.value !== null) {
-          this.dispatch('JyFormItem', 'el.form.change', null);
+          this.dispatch('GjFormItem', 'el.form.change', null);
         }
         this.showPanelColor = false;
         this.showPicker = false;

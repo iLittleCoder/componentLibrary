@@ -1,14 +1,14 @@
 <template>
-  <div class="jy-transfer-panel">
-    <div class="jy-transfer-panel__header">
+  <div class="gj-transfer-panel">
+    <div class="gj-transfer-panel__header">
       <div
         v-if="oneWay && type === 'right'"
-        class="jy-transfer-panel__oneWayHeader"
+        class="gj-transfer-panel__oneWayHeader"
       >
         <span>{{ title }}</span>
         <span @click="handleDelete('all')"><i class="Gildata-delete"></i></span>
       </div>
-      <jy-checkbox
+      <gj-checkbox
         v-else
         v-model="allChecked"
         @change="handleAllCheckedChange"
@@ -16,14 +16,14 @@
       >
         {{ title }}
         <span>{{ checkedSummary }}</span>
-      </jy-checkbox>
+      </gj-checkbox>
     </div>
 
     <div
-      :class="['jy-transfer-panel__body', hasFooter ? 'is-with-footer' : '']"
+      :class="['gj-transfer-panel__body', hasFooter ? 'is-with-footer' : '']"
     >
-      <jy-input
-        class="jy-transfer-panel__filter"
+      <gj-input
+        class="gj-transfer-panel__filter"
         v-model="query"
         size="mini"
         :placeholder="placeholder"
@@ -33,37 +33,37 @@
       >
         <i
           slot="suffix"
-          :class="['jy-input__icon', inputIcon]"
+          :class="['gj-input__icon', inputIcon]"
           @click="clearQuery"
         ></i>
-      </jy-input>
-      <jy-scrollbar
+      </gj-input>
+      <gj-scrollbar
         v-show="!hasNoMatch && data.length > 0"
-        class="jy-transfer-panel__scrollbar"
+        class="gj-transfer-panel__scrollbar"
         :class="{ 'is-filterable': filterable }"
       >
-        <div v-if="oneWay && type === 'right'" class="jy-transfer-panel__list">
+        <div v-if="oneWay && type === 'right'" class="gj-transfer-panel__list">
           <div
-            class="jy-transfer-panel__delItem"
+            class="gj-transfer-panel__delItem"
             v-for="item in currentList"
             :key="item[keyProp]"
           >
             <span>{{ item[labelProp] || item[keyProp] }}</span>
             <span
               @click="handleDelete('item', item[keyProp])"
-              class="jy-transfer-panel__del"
+              class="gj-transfer-panel__del"
               ><i class="Gildata-close"
             /></span>
           </div>
         </div>
-        <jy-checkbox-group
+        <gj-checkbox-group
           v-else
           v-model="checked"
-          class="jy-transfer-panel__list"
+          class="gj-transfer-panel__list"
         >
-          <jy-checkbox
+          <gj-checkbox
             :class="[
-              'jy-transfer-panel__item',
+              'gj-transfer-panel__item',
               oneWay && type === 'right' ? 'is-oneWay' : ''
             ]"
             :label="item[keyProp]"
@@ -73,54 +73,54 @@
           >
             <option-content :option="item"></option-content>
             <!--        <option-content :oneWay="oneWay" :type="type" :option="item"></option-content>-->
-          </jy-checkbox>
-        </jy-checkbox-group>
-      </jy-scrollbar>
+          </gj-checkbox>
+        </gj-checkbox-group>
+      </gj-scrollbar>
 
-      <jy-empty
+      <gj-empty
         v-show="hasNoMatch || (data.length === 0 && !hasNoMatch)"
         empty-type="noData"
         description="暂无数据"
-      ></jy-empty>
+      ></gj-empty>
     </div>
-    <jy-pagination
+    <gj-pagination
       v-if="showPagination"
       :page-size="pageSize"
       layout="prev, simple, next"
       @current-change="paginationChange"
       :total="filteredData.length"
     >
-    </jy-pagination>
+    </gj-pagination>
 
-    <p class="jy-transfer-panel__footer" v-if="hasFooter">
+    <p class="gj-transfer-panel__footer" v-if="hasFooter">
       <slot></slot>
     </p>
   </div>
 </template>
 
 <script>
-import Jyscrollbar from 'GildataDesign/packages/scrollbar';
-import JyPagination from 'GildataDesign/packages/pagination';
-import JyCheckboxGroup from 'GildataDesign/packages/checkbox-group';
-import JyEmpty from 'GildataDesign/packages/empty';
-import JyCheckbox from 'GildataDesign/packages/checkbox';
-import JyInput from 'GildataDesign/packages/input';
+import Gjscrollbar from 'GildataDesign/packages/scrollbar';
+import GjPagination from 'GildataDesign/packages/pagination';
+import GjCheckboxGroup from 'GildataDesign/packages/checkbox-group';
+import GjEmpty from 'GildataDesign/packages/empty';
+import GjCheckbox from 'GildataDesign/packages/checkbox';
+import GjInput from 'GildataDesign/packages/input';
 import Locale from 'GildataDesign/src/mixins/locale';
 
 export default {
   mixins: [Locale],
 
-  name: 'JyTransferPanel',
+  name: 'GjTransferPanel',
 
-  componentName: 'JyTransferPanel',
+  componentName: 'GjTransferPanel',
 
   components: {
-    Jyscrollbar,
-    JyPagination,
-    JyCheckboxGroup,
-    JyCheckbox,
-    JyInput,
-    JyEmpty,
+    Gjscrollbar,
+    GjPagination,
+    GjCheckboxGroup,
+    GjCheckbox,
+    GjInput,
+    GjEmpty,
     OptionContent: {
       props: {
         option: Object,
@@ -136,7 +136,7 @@ export default {
       },
       render(h) {
         const getParent = (vm) => {
-          if (vm.$options.componentName === 'JyTransferPanel') {
+          if (vm.$options.componentName === 'GjTransferPanel') {
             return vm;
           } else if (vm.$parent) {
             return getParent(vm.$parent);
@@ -146,7 +146,7 @@ export default {
         };
         const panel = getParent(this);
         const transfer = panel.$parent || panel;
-        // let delIcon = this.oneWay && this.type === 'right' ? <span onClick={ $event => this.optionDel($event, panel, this.option[panel.keyProp]) } class='jy-transfer-panel__del'><i class='Gildata-close'/></span> : '';
+        // let delIcon = this.oneWay && this.type === 'right' ? <span onClick={ $event => this.optionDel($event, panel, this.option[panel.keyProp]) } class='gj-transfer-panel__del'><i class='Gildata-close'/></span> : '';
         return panel.renderContent ? (
           panel.renderContent(h, this.option)
         ) : transfer.$scopedSlots.default ? (

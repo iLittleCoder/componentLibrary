@@ -11,63 +11,63 @@
 ```html
 <div style="margin-bottom:20px">
   <span class="show-desc">尺寸：</span>
-  <jy-radio-group size="mini" v-model="size" :show-background="false">
-    <jy-radio-button label="large"></jy-radio-button>
-    <jy-radio-button label="medium"> </jy-radio-button>
-    <jy-radio-button label="small"></jy-radio-button>
-    <jy-radio-button label="mini"></jy-radio-button>
-  </jy-radio-group>
+  <gj-radio-group size="mini" v-model="size" :show-background="false">
+    <gj-radio-button label="large"></gj-radio-button>
+    <gj-radio-button label="medium"> </gj-radio-button>
+    <gj-radio-button label="small"></gj-radio-button>
+    <gj-radio-button label="mini"></gj-radio-button>
+  </gj-radio-group>
 </div>
-<jy-form :size="size" ref="form" :model="form" label-width="80px">
-  <jy-form-item label="客户名称">
-    <jy-input v-model="form.name"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="客户城市">
-    <jy-select border v-model="form.region" placeholder="请选择客户城市" selectWidth="380px">
-      <jy-option label="区域一" value="shanghai"></jy-option>
-      <jy-option label="区域二" value="beijing"></jy-option>
-    </jy-select>
-  </jy-form-item>
-  <jy-form-item label="交付时间">
-    <jy-col :span="11">
-      <jy-date-picker
+<gj-form :size="size" ref="form" :model="form" label-width="80px">
+  <gj-form-item label="客户名称">
+    <gj-input v-model="form.name"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="客户城市">
+    <gj-select border v-model="form.region" placeholder="请选择客户城市" selectWidth="380px">
+      <gj-option label="区域一" value="shanghai"></gj-option>
+      <gj-option label="区域二" value="beijing"></gj-option>
+    </gj-select>
+  </gj-form-item>
+  <gj-form-item label="交付时间">
+    <gj-col :span="11">
+      <gj-date-picker
         border
         type="date"
         placeholder="选择日期"
         v-model="form.date1"
         style="width: 100%;"
-      ></jy-date-picker>
-    </jy-col>
-    <jy-col class="line" :span="2">-</jy-col>
-    <jy-col :span="11">
-      <jy-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></jy-time-picker>
-    </jy-col>
-  </jy-form-item>
-  <jy-form-item label="是否驻场">
-    <jy-switch v-model="form.delivery"></jy-switch>
-  </jy-form-item>
-  <jy-form-item label="项目性质">
-    <jy-checkbox-group v-model="form.type">
-      <jy-checkbox label="甲方项目1" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目2" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目3" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目4" name="type"></jy-checkbox>
-    </jy-checkbox-group>
-  </jy-form-item>
-  <jy-form-item label="客户来源">
-    <jy-radio-group v-model="form.resource" @change="handleChange">
-      <jy-radio label="new">新客户</jy-radio>
-      <jy-radio label="old">老客户</jy-radio>
-    </jy-radio-group>
-  </jy-form-item>
-  <jy-form-item label="备注">
-    <jy-input type="textarea" v-model="form.desc"></jy-input>
-  </jy-form-item>
-  <jy-form-item>
-    <jy-button type="primary" @click="onSubmit">立即创建</jy-button>
-    <jy-button>取消</jy-button>
-  </jy-form-item>
-</jy-form>
+      ></gj-date-picker>
+    </gj-col>
+    <gj-col class="line" :span="2">-</gj-col>
+    <gj-col :span="11">
+      <gj-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></gj-time-picker>
+    </gj-col>
+  </gj-form-item>
+  <gj-form-item label="是否驻场">
+    <gj-switch v-model="form.delivery"></gj-switch>
+  </gj-form-item>
+  <gj-form-item label="项目性质">
+    <gj-checkbox-group v-model="form.type">
+      <gj-checkbox label="甲方项目1" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目2" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目3" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目4" name="type"></gj-checkbox>
+    </gj-checkbox-group>
+  </gj-form-item>
+  <gj-form-item label="客户来源">
+    <gj-radio-group v-model="form.resource" @change="handleChange">
+      <gj-radio label="new">新客户</gj-radio>
+      <gj-radio label="old">老客户</gj-radio>
+    </gj-radio-group>
+  </gj-form-item>
+  <gj-form-item label="备注">
+    <gj-input type="textarea" v-model="form.desc"></gj-input>
+  </gj-form-item>
+  <gj-form-item>
+    <gj-button type="primary" @click="onSubmit">立即创建</gj-button>
+    <gj-button>取消</gj-button>
+  </gj-form-item>
+</gj-form>
 
 <script>
   export default {
@@ -105,7 +105,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 > <i>When there is only one single-line text input field in a form, the user agent should accept Enter in that field as a request to submit the form.</i>
 
-即：当一个 form 元素中只有一个输入框时，在该输入框中按下回车应提交该表单。如果希望阻止这一默认行为，可以在 `<jy-form>` 标签上添加 `@submit.native.prevent`。
+即：当一个 form 元素中只有一个输入框时，在该输入框中按下回车应提交该表单。如果希望阻止这一默认行为，可以在 `<gj-form>` 标签上添加 `@submit.native.prevent`。
 :::
 
 ### 表单禁用
@@ -113,56 +113,56 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo 设置 `disabled` 属性可以让表单禁用
 
 ```html
-<jy-form disabled size="small" ref="form" :model="form" label-width="80px">
-  <jy-form-item label="客户名称">
-    <jy-input v-model="form.name"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="客户城市">
-    <jy-select border v-model="form.region" placeholder="请选择客户城市" selectWidth="380px">
-      <jy-option label="区域一" value="shanghai"></jy-option>
-      <jy-option label="区域二" value="beijing"></jy-option>
-    </jy-select>
-  </jy-form-item>
-  <jy-form-item label="交付时间">
-    <jy-col :span="11">
-      <jy-date-picker
+<gj-form disabled size="small" ref="form" :model="form" label-width="80px">
+  <gj-form-item label="客户名称">
+    <gj-input v-model="form.name"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="客户城市">
+    <gj-select border v-model="form.region" placeholder="请选择客户城市" selectWidth="380px">
+      <gj-option label="区域一" value="shanghai"></gj-option>
+      <gj-option label="区域二" value="beijing"></gj-option>
+    </gj-select>
+  </gj-form-item>
+  <gj-form-item label="交付时间">
+    <gj-col :span="11">
+      <gj-date-picker
         border
         type="date"
         placeholder="选择日期"
         v-model="form.date1"
         style="width: 100%;"
-      ></jy-date-picker>
-    </jy-col>
-    <jy-col class="line" :span="2">-</jy-col>
-    <jy-col :span="11">
-      <jy-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></jy-time-picker>
-    </jy-col>
-  </jy-form-item>
-  <jy-form-item label="是否驻场">
-    <jy-switch v-model="form.delivery"></jy-switch>
-  </jy-form-item>
-  <jy-form-item label="项目性质">
-    <jy-checkbox-group v-model="form.type">
-      <jy-checkbox label="甲方项目1" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目2" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目3" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目4" name="type"></jy-checkbox>
-    </jy-checkbox-group>
-  </jy-form-item>
-  <jy-form-item label="客户来源">
-    <jy-radio-group v-model="form.resource">
-      <jy-radio label="new">新客户</jy-radio>
-      <jy-radio label="old">老客户</jy-radio>
-    </jy-radio-group>
-  </jy-form-item>
-  <jy-form-item label="备注">
-    <jy-input type="textarea" v-model="form.desc"></jy-input>
-  </jy-form-item>
-  <jy-form-item>
-    <jy-button type="primary" @click="onSubmit">立即创建</jy-button>
-    <jy-button>取消</jy-button>
-  </jy-form-item>
-</jy-form>
+      ></gj-date-picker>
+    </gj-col>
+    <gj-col class="line" :span="2">-</gj-col>
+    <gj-col :span="11">
+      <gj-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></gj-time-picker>
+    </gj-col>
+  </gj-form-item>
+  <gj-form-item label="是否驻场">
+    <gj-switch v-model="form.delivery"></gj-switch>
+  </gj-form-item>
+  <gj-form-item label="项目性质">
+    <gj-checkbox-group v-model="form.type">
+      <gj-checkbox label="甲方项目1" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目2" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目3" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目4" name="type"></gj-checkbox>
+    </gj-checkbox-group>
+  </gj-form-item>
+  <gj-form-item label="客户来源">
+    <gj-radio-group v-model="form.resource">
+      <gj-radio label="new">新客户</gj-radio>
+      <gj-radio label="old">老客户</gj-radio>
+    </gj-radio-group>
+  </gj-form-item>
+  <gj-form-item label="备注">
+    <gj-input type="textarea" v-model="form.desc"></gj-input>
+  </gj-form-item>
+  <gj-form-item>
+    <gj-button type="primary" @click="onSubmit">立即创建</gj-button>
+    <gj-button>取消</gj-button>
+  </gj-form-item>
+</gj-form>
 
 <script>
   export default {
@@ -198,20 +198,20 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo 设置 `inline` 属性可以让表单域变为行内的表单域
 
 ```html
-<jy-form :inline="true" :model="formInline" class="demo-form-inline">
-  <jy-form-item label="审批人">
-    <jy-input v-model="formInline.user" placeholder="审批人"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="客户城市">
-    <jy-select v-model="formInline.region" placeholder="客户城市">
-      <jy-option label="区域一" value="shanghai"></jy-option>
-      <jy-option label="区域二" value="beijing"></jy-option>
-    </jy-select>
-  </jy-form-item>
-  <jy-form-item>
-    <jy-button type="primary" @click="onSubmit">查询</jy-button>
-  </jy-form-item>
-</jy-form>
+<gj-form :inline="true" :model="formInline" class="demo-form-inline">
+  <gj-form-item label="审批人">
+    <gj-input v-model="formInline.user" placeholder="审批人"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="客户城市">
+    <gj-select v-model="formInline.region" placeholder="客户城市">
+      <gj-option label="区域一" value="shanghai"></gj-option>
+      <gj-option label="区域二" value="beijing"></gj-option>
+    </gj-select>
+  </gj-form-item>
+  <gj-form-item>
+    <gj-button type="primary" @click="onSubmit">查询</gj-button>
+  </gj-form-item>
+</gj-form>
 
 <script>
   export default {
@@ -241,23 +241,23 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo 通过设置 `label-position` 属性可以改变表单域标签的位置，可选值为 `top`、`left`，当设为 `top` 时标签会置于表单域的顶部
 
 ```html
-<jy-radio-group v-model="labelPosition" size="small">
-  <jy-radio-button label="left">左对齐</jy-radio-button>
-  <jy-radio-button label="right">右对齐</jy-radio-button>
-  <jy-radio-button label="top">顶部对齐</jy-radio-button>
-</jy-radio-group>
+<gj-radio-group v-model="labelPosition" size="small">
+  <gj-radio-button label="left">左对齐</gj-radio-button>
+  <gj-radio-button label="right">右对齐</gj-radio-button>
+  <gj-radio-button label="top">顶部对齐</gj-radio-button>
+</gj-radio-group>
 <div style="margin: 20px;"></div>
-<jy-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
-  <jy-form-item label="名称">
-    <jy-input v-model="formLabelAlign.name"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="客户城市">
-    <jy-input v-model="formLabelAlign.region"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="备注">
-    <jy-input v-model="formLabelAlign.type"></jy-input>
-  </jy-form-item>
-</jy-form>
+<gj-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
+  <gj-form-item label="名称">
+    <gj-input v-model="formLabelAlign.name"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="客户城市">
+    <gj-input v-model="formLabelAlign.region"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="备注">
+    <gj-input v-model="formLabelAlign.type"></gj-input>
+  </gj-form-item>
+</gj-form>
 <script>
   export default {
     data() {
@@ -283,59 +283,59 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo Form 组件提供了表单验证的功能，只需要通过 `rules` 属性传入约定的验证规则，并将 Form-Item 的 `prop` 属性设置为需校验的字段名即可。校验规则参见 [async-validator](https://github.com/yiminghe/async-validator)
 
 ```html
-<jy-form size="mini" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-  <jy-form-item label="客户名称" prop="name">
-    <jy-input v-model="ruleForm.name"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="客户城市" prop="region">
-    <jy-select v-model="ruleForm.region" placeholder="请选择客户城市">
-      <jy-option label="区域一" value="shanghai"></jy-option>
-      <jy-option label="区域二" value="beijing"></jy-option>
-    </jy-select>
-  </jy-form-item>
-  <jy-form-item label="交付时间" required>
-    <jy-col :span="11">
-      <jy-form-item prop="date1">
-        <jy-date-picker
+<gj-form size="mini" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+  <gj-form-item label="客户名称" prop="name">
+    <gj-input v-model="ruleForm.name"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="客户城市" prop="region">
+    <gj-select v-model="ruleForm.region" placeholder="请选择客户城市">
+      <gj-option label="区域一" value="shanghai"></gj-option>
+      <gj-option label="区域二" value="beijing"></gj-option>
+    </gj-select>
+  </gj-form-item>
+  <gj-form-item label="交付时间" required>
+    <gj-col :span="11">
+      <gj-form-item prop="date1">
+        <gj-date-picker
           type="date"
           placeholder="选择日期"
           v-model="ruleForm.date1"
           style="width: 100%;"
-        ></jy-date-picker>
-      </jy-form-item>
-    </jy-col>
-    <jy-col class="line" :span="2">-</jy-col>
-    <jy-col :span="11">
-      <jy-form-item prop="date2">
-        <jy-time-picker placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></jy-time-picker>
-      </jy-form-item>
-    </jy-col>
-  </jy-form-item>
-  <jy-form-item label="是否驻场" prop="delivery">
-    <jy-switch v-model="ruleForm.delivery"></jy-switch>
-  </jy-form-item>
-  <jy-form-item label="项目性质" prop="type">
-    <jy-checkbox-group v-model="ruleForm.type">
-      <jy-checkbox label="甲方项目1" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目2" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目3" name="type"></jy-checkbox>
-      <jy-checkbox label="甲方项目4" name="type"></jy-checkbox>
-    </jy-checkbox-group>
-  </jy-form-item>
-  <jy-form-item label="客户来源" prop="resource">
-    <jy-radio-group v-model="ruleForm.resource">
-      <jy-radio label="新客户"></jy-radio>
-      <jy-radio label="老客户"></jy-radio>
-    </jy-radio-group>
-  </jy-form-item>
-  <jy-form-item label="备注" prop="desc">
-    <jy-input type="textarea" v-model="ruleForm.desc"></jy-input>
-  </jy-form-item>
-  <jy-form-item>
-    <jy-button type="primary" @click="submitForm('ruleForm')">立即创建</jy-button>
-    <jy-button @click="resetForm('ruleForm')">重置</jy-button>
-  </jy-form-item>
-</jy-form>
+        ></gj-date-picker>
+      </gj-form-item>
+    </gj-col>
+    <gj-col class="line" :span="2">-</gj-col>
+    <gj-col :span="11">
+      <gj-form-item prop="date2">
+        <gj-time-picker placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></gj-time-picker>
+      </gj-form-item>
+    </gj-col>
+  </gj-form-item>
+  <gj-form-item label="是否驻场" prop="delivery">
+    <gj-switch v-model="ruleForm.delivery"></gj-switch>
+  </gj-form-item>
+  <gj-form-item label="项目性质" prop="type">
+    <gj-checkbox-group v-model="ruleForm.type">
+      <gj-checkbox label="甲方项目1" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目2" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目3" name="type"></gj-checkbox>
+      <gj-checkbox label="甲方项目4" name="type"></gj-checkbox>
+    </gj-checkbox-group>
+  </gj-form-item>
+  <gj-form-item label="客户来源" prop="resource">
+    <gj-radio-group v-model="ruleForm.resource">
+      <gj-radio label="新客户"></gj-radio>
+      <gj-radio label="老客户"></gj-radio>
+    </gj-radio-group>
+  </gj-form-item>
+  <gj-form-item label="备注" prop="desc">
+    <gj-input type="textarea" v-model="ruleForm.desc"></gj-input>
+  </gj-form-item>
+  <gj-form-item>
+    <gj-button type="primary" @click="submitForm('ruleForm')">立即创建</gj-button>
+    <gj-button @click="resetForm('ruleForm')">重置</gj-button>
+  </gj-form-item>
+</gj-form>
 <script>
   export default {
     data() {
@@ -413,21 +413,21 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo 本例还使用`status-icon`属性为输入框添加了表示校验结果的反馈图标。
 
 ```html
-<jy-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-  <jy-form-item label="密码" prop="pass">
-    <jy-input type="password" v-model="ruleForm.pass" autocomplete="off"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="确认密码" prop="checkPass">
-    <jy-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="年龄" prop="age">
-    <jy-input v-model.number="ruleForm.age"></jy-input>
-  </jy-form-item>
-  <jy-form-item>
-    <jy-button type="primary" @click="submitForm('ruleForm')">提交</jy-button>
-    <jy-button @click="resetForm('ruleForm')">重置</jy-button>
-  </jy-form-item>
-</jy-form>
+<gj-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+  <gj-form-item label="密码" prop="pass">
+    <gj-input type="password" v-model="ruleForm.pass" autocomplete="off"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="确认密码" prop="checkPass">
+    <gj-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="年龄" prop="age">
+    <gj-input v-model.number="ruleForm.age"></gj-input>
+  </gj-form-item>
+  <gj-form-item>
+    <gj-button type="primary" @click="submitForm('ruleForm')">提交</gj-button>
+    <gj-button @click="resetForm('ruleForm')">重置</gj-button>
+  </gj-form-item>
+</gj-form>
 <script>
   export default {
     data() {
@@ -509,8 +509,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo 除了在 Form 组件上一次性传递所有的验证规则外还可以在单个的表单域上传递属性的验证规则
 
 ```html
-<jy-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="100px" class="demo-dynamic">
-  <jy-form-item
+<gj-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="100px" class="demo-dynamic">
+  <gj-form-item
     prop="email"
     label="邮箱"
     :rules="[
@@ -518,9 +518,9 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
       { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
     ]"
   >
-    <jy-input v-model="dynamicValidateForm.email"></jy-input>
-  </jy-form-item>
-  <jy-form-item
+    <gj-input v-model="dynamicValidateForm.email"></gj-input>
+  </gj-form-item>
+  <gj-form-item
     v-for="(domain, index) in dynamicValidateForm.domains"
     :label="'域名' + index"
     :key="domain.key"
@@ -529,14 +529,14 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
       required: true, message: '域名不能为空', trigger: 'blur'
     }"
   >
-    <jy-input v-model="domain.value"></jy-input><jy-button @click.prevent="removeDomain(domain)">删除</jy-button>
-  </jy-form-item>
-  <jy-form-item>
-    <jy-button type="primary" @click="submitForm('dynamicValidateForm')">提交</jy-button>
-    <jy-button @click="addDomain">新增域名</jy-button>
-    <jy-button @click="resetForm('dynamicValidateForm')">重置</jy-button>
-  </jy-form-item>
-</jy-form>
+    <gj-input v-model="domain.value"></gj-input><gj-button @click.prevent="removeDomain(domain)">删除</gj-button>
+  </gj-form-item>
+  <gj-form-item>
+    <gj-button type="primary" @click="submitForm('dynamicValidateForm')">提交</gj-button>
+    <gj-button @click="addDomain">新增域名</gj-button>
+    <gj-button @click="resetForm('dynamicValidateForm')">重置</gj-button>
+  </gj-form-item>
+</gj-form>
 <script>
   export default {
     data() {
@@ -589,8 +589,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo 数字类型的验证需要在 `v-model` 处加上 `.number` 的修饰符，这是 `Vue` 自身提供的用于将绑定值转化为 `number` 类型的修饰符。
 
 ```html
-<jy-form :model="numberValidateForm" ref="numberValidateForm" label-width="100px" class="demo-ruleForm">
-  <jy-form-item
+<gj-form :model="numberValidateForm" ref="numberValidateForm" label-width="100px" class="demo-ruleForm">
+  <gj-form-item
     label="年龄"
     prop="age"
     :rules="[
@@ -598,13 +598,13 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
       { type: 'number', message: '年龄必须为数字值'}
     ]"
   >
-    <jy-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></jy-input>
-  </jy-form-item>
-  <jy-form-item>
-    <jy-button type="primary" @click="submitForm('numberValidateForm')">提交</jy-button>
-    <jy-button @click="resetForm('numberValidateForm')">重置</jy-button>
-  </jy-form-item>
-</jy-form>
+    <gj-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></gj-input>
+  </gj-form-item>
+  <gj-form-item>
+    <gj-button type="primary" @click="submitForm('numberValidateForm')">提交</gj-button>
+    <gj-button @click="resetForm('numberValidateForm')">重置</gj-button>
+  </gj-form-item>
+</gj-form>
 <script>
   export default {
     data() {
@@ -646,43 +646,43 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 :::demo 如果希望某个表单项或某个表单组件的尺寸不同于 Form 上的`size`属性，直接为这个表单项或表单组件设置自己的`size`即可。
 
 ```html
-<jy-form ref="form" :model="sizeForm" label-width="80px" size="mini">
-  <jy-form-item label="客户名称">
-    <jy-input v-model="sizeForm.name"></jy-input>
-  </jy-form-item>
-  <jy-form-item label="客户城市">
-    <jy-select v-model="sizeForm.region" placeholder="请选择客户城市">
-      <jy-option label="区域一" value="shanghai"></jy-option>
-      <jy-option label="区域二" value="beijing"></jy-option>
-    </jy-select>
-  </jy-form-item>
-  <jy-form-item label="交付时间">
-    <jy-col :span="11">
-      <jy-date-picker type="date" placeholder="选择日期" v-model="sizeForm.date1" style="width: 100%;"></jy-date-picker>
-    </jy-col>
-    <jy-col class="line" :span="2">-</jy-col>
-    <jy-col :span="11">
-      <jy-time-picker placeholder="选择时间" v-model="sizeForm.date2" style="width: 100%;"></jy-time-picker>
-    </jy-col>
-  </jy-form-item>
-  <jy-form-item label="项目性质">
-    <jy-checkbox-group v-model="sizeForm.type">
-      <jy-checkbox-button label="甲方项目1" name="type"></jy-checkbox-button>
-      <jy-checkbox-button label="甲方项目2" name="type"></jy-checkbox-button>
-      <jy-checkbox-button label="甲方项目3" name="type"></jy-checkbox-button>
-    </jy-checkbox-group>
-  </jy-form-item>
-  <jy-form-item label="客户来源">
-    <jy-radio-group v-model="sizeForm.resource" size="medium">
-      <jy-radio border label="新客户"></jy-radio>
-      <jy-radio border label="老客户"></jy-radio>
-    </jy-radio-group>
-  </jy-form-item>
-  <jy-form-item size="large">
-    <jy-button type="primary" @click="onSubmit">立即创建</jy-button>
-    <jy-button>取消</jy-button>
-  </jy-form-item>
-</jy-form>
+<gj-form ref="form" :model="sizeForm" label-width="80px" size="mini">
+  <gj-form-item label="客户名称">
+    <gj-input v-model="sizeForm.name"></gj-input>
+  </gj-form-item>
+  <gj-form-item label="客户城市">
+    <gj-select v-model="sizeForm.region" placeholder="请选择客户城市">
+      <gj-option label="区域一" value="shanghai"></gj-option>
+      <gj-option label="区域二" value="beijing"></gj-option>
+    </gj-select>
+  </gj-form-item>
+  <gj-form-item label="交付时间">
+    <gj-col :span="11">
+      <gj-date-picker type="date" placeholder="选择日期" v-model="sizeForm.date1" style="width: 100%;"></gj-date-picker>
+    </gj-col>
+    <gj-col class="line" :span="2">-</gj-col>
+    <gj-col :span="11">
+      <gj-time-picker placeholder="选择时间" v-model="sizeForm.date2" style="width: 100%;"></gj-time-picker>
+    </gj-col>
+  </gj-form-item>
+  <gj-form-item label="项目性质">
+    <gj-checkbox-group v-model="sizeForm.type">
+      <gj-checkbox-button label="甲方项目1" name="type"></gj-checkbox-button>
+      <gj-checkbox-button label="甲方项目2" name="type"></gj-checkbox-button>
+      <gj-checkbox-button label="甲方项目3" name="type"></gj-checkbox-button>
+    </gj-checkbox-group>
+  </gj-form-item>
+  <gj-form-item label="客户来源">
+    <gj-radio-group v-model="sizeForm.resource" size="medium">
+      <gj-radio border label="新客户"></gj-radio>
+      <gj-radio border label="老客户"></gj-radio>
+    </gj-radio-group>
+  </gj-form-item>
+  <gj-form-item size="large">
+    <gj-button type="primary" @click="onSubmit">立即创建</gj-button>
+    <gj-button>取消</gj-button>
+  </gj-form-item>
+</gj-form>
 
 <script>
   export default {

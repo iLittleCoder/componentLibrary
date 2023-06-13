@@ -2,17 +2,17 @@
   <div>
     <p class="tip">当一个表格高度需要自适应的时候可以设置为最大高度，通过设置 <table-api-link prop="max-height"/> 参数</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       max-height="200"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex" align="center"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex" align="center"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -23,17 +23,17 @@
 
     <p class="tip">如果设置 <table-api-link prop="max-height"/>，当内容为达到最大高度时会自适应</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       max-height="200"
       :data="tableData2">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -45,17 +45,17 @@
     <p class="tip">也可以设置相对于父容器的百分比</p>
 
     <div style="height: 400px;">
-      <jy-table
+      <gj-table
         border
         highlight-hover-row
         max-height="100%"
         :data="tableData">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name" sortable></jy-column>
-        <jy-column field="sex" title="Sex"></jy-column>
-        <jy-column field="age" title="Age"></jy-column>
-        <jy-column field="address" title="Address" show-overflow></jy-column>
-      </jy-table>
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name" sortable></gj-column>
+        <gj-column field="sex" title="Sex"></gj-column>
+        <gj-column field="age" title="Age"></gj-column>
+        <gj-column field="address" title="Address" show-overflow></gj-column>
+      </gj-table>
     </div>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -81,17 +81,17 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           max-height="200"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex" align="center"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex" align="center"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -106,17 +106,17 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           max-height="200"
           :data="tableData2">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -132,17 +132,17 @@ export default {
         `,
         `
         <div style="height: 400px;">
-          <jy-table
+          <gj-table
             border
             highlight-hover-row
             max-height="100%"
             :data="tableData">
-            <jy-column type="seq" width="60"></jy-column>
-            <jy-column field="name" title="Name" sortable></jy-column>
-            <jy-column field="sex" title="Sex"></jy-column>
-            <jy-column field="age" title="Age"></jy-column>
-            <jy-column field="address" title="Address" show-overflow></jy-column>
-          </jy-table>
+            <gj-column type="seq" width="60"></gj-column>
+            <gj-column field="name" title="Name" sortable></gj-column>
+            <gj-column field="sex" title="Sex"></gj-column>
+            <gj-column field="age" title="Age"></gj-column>
+            <gj-column field="address" title="Address" show-overflow></gj-column>
+          </gj-table>
         </div>
         `,
         `

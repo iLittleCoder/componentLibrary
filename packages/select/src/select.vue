@@ -1,36 +1,36 @@
 <template>
   <div
-    class="jy-select"
+    class="gj-select"
     :class="[
-      selectSize ? 'jy-select--' + selectSize : '',
+      selectSize ? 'gj-select--' + selectSize : '',
       {
         'no-border': !border,
         'select-option-show': visible,
-        'jy-select__adaption': isSelfAdaption
+        'gj-select__adaption': isSelfAdaption
       }
     ]"
     @click.stop="toggleMenu"
     v-clickoutside="handleClose"
   >
     <div
-      class="jy-select-new-main"
+      class="gj-select-new-main"
       :class="[
         selectDisabled ? 'is-disabled' : '',
-        isSelfAdaption && collapseTags && selected.length ? 'jy-select-not-set-width-long' : '',
-        (!!selectedLabel && !multiple) || (multiple && !!selected.length) ? 'jy-select-new-main-active' : '',
-        isSelfAdaption ? 'jy-select-not-set-width' : ''
+        isSelfAdaption && collapseTags && selected.length ? 'gj-select-not-set-width-long' : '',
+        (!!selectedLabel && !multiple) || (multiple && !!selected.length) ? 'gj-select-new-main-active' : '',
+        isSelfAdaption ? 'gj-select-not-set-width' : ''
       ]"
       @mouseenter="inputHovering = true"
       @mouseleave="inputHovering = false"
     >
       <div
-        class="jy-select-content"
+        class="gj-select-content"
         :class="{
           'is-no-filter': !filterable
         }"
       >
-        <span class="jy-select__single">
-          <jy-input
+        <span class="gj-select__single">
+          <gj-input
             ref="reference"
             v-model="selectedLabel"
             type="text"
@@ -59,16 +59,16 @@
             @compositionupdate="handleComposition"
             @compositionend="handleComposition"
           >
-          </jy-input>
+          </gj-input>
         </span>
-        <span class="jy-select-placeholder" v-if="!selectedLabel && !multiple" :title="currentPlaceholder">{{
+        <span class="gj-select-placeholder" v-if="!selectedLabel && !multiple" :title="currentPlaceholder">{{
           currentPlaceholder
         }}</span>
-        <span class="jy-select-selected-item" v-if="!!selectedLabel && !multiple" :title="selectedLabel"
+        <span class="gj-select-selected-item" v-if="!!selectedLabel && !multiple" :title="selectedLabel"
           >{{ selectedLabel }}
         </span>
         <span
-          class="jy-select-placeholder"
+          class="gj-select-placeholder"
           v-if="
             multiple &&
               currentPlaceholder &&
@@ -80,14 +80,14 @@
         >
 
         <div
-          class="jy-select-selected-item jy-select-selected-item-multiple"
+          class="gj-select-selected-item gj-select-selected-item-multiple"
           v-if="multiple && ((showFooter && selectedCopy.length) || (selected.length && !showFooter) || filterable)"
         >
-          <div class="jy-select__tags" ref="tags">
+          <div class="gj-select__tags" ref="tags">
             <!-- <template v-if="!showCharter">
-              <span v-if="collapseTags && selected.length" class="jy-select-tagsitem">
-                <jy-tag
-                  class="jy-select-tagsitem-first"
+              <span v-if="collapseTags && selected.length" class="gj-select-tagsitem">
+                <gj-tag
+                  class="gj-select-tagsitem-first"
                   :closable="!selectDisabled"
                   :size="collapseTagSize"
                   :hit="selected[0].hitState"
@@ -95,24 +95,24 @@
                   @close="deleteTag($event, selected[0])"
                   disable-transitions
                 >
-                  <span class="jy-select__tags-text">{{ selected[0].currentLabel }}</span>
-                </jy-tag>
-                <jy-tag
+                  <span class="gj-select__tags-text">{{ selected[0].currentLabel }}</span>
+                </gj-tag>
+                <gj-tag
                   v-if="selected.length > 1"
                   :closable="false"
                   :size="collapseTagSize"
                   type="info"
                   disable-transitions
                 >
-                  <span class="jy-select__tags-text">+ {{ selected.length - 1 }}</span>
-                </jy-tag>
+                  <span class="gj-select__tags-text">+ {{ selected.length - 1 }}</span>
+                </gj-tag>
               </span>
             </template>
 
             <template v-if="showCharter">
-              <span v-if="collapseTags && selectedCopy.length" class="jy-select-tagsitem">
-                <jy-tag
-                  class="jy-select-tagsitem-first"
+              <span v-if="collapseTags && selectedCopy.length" class="gj-select-tagsitem">
+                <gj-tag
+                  class="gj-select-tagsitem-first"
                   :closable="!selectDisabled"
                   :size="collapseTagSize"
                   :hit="selectedCopy[0].hitState"
@@ -120,22 +120,22 @@
                   @close="deleteTag($event, selectedCopy[0])"
                   disable-transitions
                 >
-                  <span class="jy-select__tags-text">{{ selectedCopy[0].currentLabel }}</span>
-                </jy-tag>
-                <jy-tag
+                  <span class="gj-select__tags-text">{{ selectedCopy[0].currentLabel }}</span>
+                </gj-tag>
+                <gj-tag
                   v-if="selectedCopy.length > 1"
                   :closable="false"
                   :size="collapseTagSize"
                   type="info"
                   disable-transitions
                 >
-                  <span class="jy-select__tags-text">+ {{ selectedCopy.length - 1 }}</span>
-                </jy-tag>
+                  <span class="gj-select__tags-text">+ {{ selectedCopy.length - 1 }}</span>
+                </gj-tag>
               </span>
             </template> -->
-            <span v-if="collapseTags && tagList.length" class="jy-select-tagsitem">
-              <jy-tag
-                class="jy-select-tagsitem-first"
+            <span v-if="collapseTags && tagList.length" class="gj-select-tagsitem">
+              <gj-tag
+                class="gj-select-tagsitem-first"
                 :closable="!selectDisabled && !showFooter"
                 :size="collapseTagSize"
                 :hit="tagList[0].hitState"
@@ -143,32 +143,32 @@
                 @close="deleteTag($event, tagList[0])"
                 disable-transitions
               >
-                <span class="jy-select__tags-text">{{ tagList[0].currentLabel }}</span>
-              </jy-tag>
-              <jy-tag
+                <span class="gj-select__tags-text">{{ tagList[0].currentLabel }}</span>
+              </gj-tag>
+              <gj-tag
                 v-if="tagList.length > 1"
                 :closable="false"
                 :size="collapseTagSize"
                 type="info"
                 disable-transitions
               >
-                <span class="jy-select__tags-text">+ {{ tagList.length - 1 }}</span>
-              </jy-tag>
+                <span class="gj-select__tags-text">+ {{ tagList.length - 1 }}</span>
+              </gj-tag>
             </span>
 
-            <div class="jy-m-select__tags-text" v-if="!collapseTags && showFooter">
+            <div class="gj-m-select__tags-text" v-if="!collapseTags && showFooter">
               <span v-for="(item, index) in selectedCopy" :key="index"
                 >{{ item.currentLabel }}{{ index < selectedCopy.length - 1 ? separator : '' }}</span
               >
             </div>
-            <div class="jy-m-select__tags-text test" v-if="!collapseTags && !showFooter">
+            <div class="gj-m-select__tags-text test" v-if="!collapseTags && !showFooter">
               <span v-for="(item, index) in selected" :key="index"
                 >{{ item.currentLabel }}{{ index < selected.length - 1 ? separator : '' }}</span
               >
             </div>
 
             <span
-              class="jy-select-placeholder multiple-placeholder"
+              class="gj-select-placeholder multiple-placeholder"
               v-if="
                 multiple &&
                   !query &&
@@ -181,7 +181,7 @@
 
             <input
               type="text"
-              class="jy-select__input"
+              class="gj-select__input"
               :class="[selectSize ? `is-${selectSize}` : '']"
               :disabled="selectDisabled"
               :autocomplete="autoComplete || autocomplete"
@@ -214,35 +214,35 @@
         </div>
       </div>
 
-      <span class="jy-select-right-icon">
+      <span class="gj-select-right-icon">
         <i
           v-show="!showClose"
           :class="[
-            'jy-select__caret',
-            'jy-input__icon',
+            'gj-select__caret',
+            'gj-input__icon',
             iconClass === 'search' ? 'Gildata-search1' : iconClass,
             visible && 'is-reverse',
-            !!selectedLabel || selected.length > 0 ? 'jy-input__selected' : ''
+            !!selectedLabel || selected.length > 0 ? 'gj-input__selected' : ''
           ]"
         ></i>
         <i
-          class="jy-select__caret jy-input__icon"
+          class="gj-select__caret gj-input__icon"
           :class="[showClose ? 'Gildata-clean' : '']"
           @click="handleClearClick"
         ></i>
       </span>
     </div>
 
-    <transition name="jy-zoom-in-top" @before-enter="handleMenuEnter" @after-leave="doDestroy">
-      <jy-select-menu ref="popper" :append-to-body="popperAppendToBody" v-show="visible && emptyText !== false">
+    <transition name="gj-zoom-in-top" @before-enter="handleMenuEnter" @after-leave="doDestroy">
+      <gj-select-menu ref="popper" :append-to-body="popperAppendToBody" v-show="visible && emptyText !== false">
         <div v-if="!showCharter">
           <div
             v-if="showFooter && multiple && selected.length"
             :style="{ 'max-width': inputWidth + 'px' }"
-            class="jy-m-select__tags-text-top"
+            class="gj-m-select__tags-text-top"
           >
             <template v-for="(item, itemIndex) in selected">
-              <jy-tag
+              <gj-tag
                 :key="itemIndex"
                 :closable="!selectDisabled"
                 :size="collapseTagSize"
@@ -251,40 +251,40 @@
                 @close="deleteTag($event, item)"
                 disable-transitions
               >
-                <span class="jy-select__tags-text">{{ item.currentLabel }}</span>
-              </jy-tag>
+                <span class="gj-select__tags-text">{{ item.currentLabel }}</span>
+              </gj-tag>
             </template>
           </div>
-          <div v-if="showFooter && multiple && selected.length" class="jy-m-select__tags-text-line"></div>
-          <jy-scrollbar
+          <div v-if="showFooter && multiple && selected.length" class="gj-m-select__tags-text-line"></div>
+          <gj-scrollbar
             tag="ul"
-            wrap-class="jy-select-dropdown__wrap"
-            view-class="jy-select-dropdown__list"
+            wrap-class="gj-select-dropdown__wrap"
+            view-class="gj-select-dropdown__list"
             ref="scrollbar"
             :class="{
               'is-empty': !allowCreate && query && filteredOptionsCount === 0
             }"
             v-show="options.length > 0 && !loading"
           >
-            <jy-option :value="query" created v-if="showNewOption"> </jy-option>
+            <gj-option :value="query" created v-if="showNewOption"> </gj-option>
             <slot></slot>
-          </jy-scrollbar>
-          <div v-if="showFooter && multiple" class="jy-select-reset">
+          </gj-scrollbar>
+          <div v-if="showFooter && multiple" class="gj-select-reset">
             <span @click="resetClick">重置</span>
             <span @click="sureClick">确定</span>
           </div>
 
           <template v-if="emptyText && (!allowCreate || loading || (allowCreate && options.length === 0))">
             <slot name="empty" v-if="$slots.empty"></slot>
-            <p class="jy-select-dropdown__empty" v-else>
-              <jy-empty empty-type="noResult" :description="emptyText"></jy-empty>
+            <p class="gj-select-dropdown__empty" v-else>
+              <gj-empty empty-type="noResult" :description="emptyText"></gj-empty>
             </p>
           </template>
         </div>
         <div v-else>
           <slot></slot>
         </div>
-      </jy-select-menu>
+      </gj-select-menu>
     </transition>
   </div>
 </template>
@@ -293,12 +293,12 @@
 import Emitter from 'GildataDesign/src/mixins/emitter';
 import Focus from 'GildataDesign/src/mixins/focus';
 import Locale from 'GildataDesign/src/mixins/locale';
-import JyInput from 'GildataDesign/packages/input';
-import JyEmpty from 'GildataDesign/packages/empty';
-import JySelectMenu from './select-dropdown.vue';
-import JyOption from './option.vue';
-import JyTag from 'GildataDesign/packages/tag';
-import JyScrollbar from 'GildataDesign/packages/scrollbar';
+import GjInput from 'GildataDesign/packages/input';
+import GjEmpty from 'GildataDesign/packages/empty';
+import GjSelectMenu from './select-dropdown.vue';
+import GjOption from './option.vue';
+import GjTag from 'GildataDesign/packages/tag';
+import GjScrollbar from 'GildataDesign/packages/scrollbar';
 import debounce from 'throttle-debounce/debounce';
 import Clickoutside from 'GildataDesign/src/utils/clickoutside';
 import { addResizeListener, removeResizeListener } from 'GildataDesign/src/utils/resize-event';
@@ -310,16 +310,16 @@ import { isKorean } from 'GildataDesign/src/utils/shared';
 export default {
   mixins: [Emitter, Locale, Focus('reference'), NavigationMixin],
 
-  name: 'JySelect',
+  name: 'GjSelect',
 
-  componentName: 'JySelect',
+  componentName: 'GjSelect',
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
 
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
@@ -332,7 +332,7 @@ export default {
 
   computed: {
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
 
     readonly() {
@@ -403,7 +403,7 @@ export default {
     },
 
     selectDisabled() {
-      return this.disabled || (this.jyForm || {}).disabled;
+      return this.disabled || (this.GjForm || {}).disabled;
     },
 
     collapseTagSize() {
@@ -422,12 +422,12 @@ export default {
   },
 
   components: {
-    JyInput,
-    JySelectMenu,
-    JyOption,
-    JyTag,
-    JyScrollbar,
-    JyEmpty
+    GjInput,
+    GjSelectMenu,
+    GjOption,
+    GjTag,
+    GjScrollbar,
+    GjEmpty
   },
 
   directives: { Clickoutside },
@@ -573,13 +573,13 @@ export default {
       }
       if (!valueEquals(val, oldVal)) {
         // 表单中的校验方法
-        this.dispatch('JyFormItem', 'el.form.change', val);
+        this.dispatch('GjFormItem', 'el.form.change', val);
       }
     },
 
     visible(val) {
       if (!val) {
-        this.broadcast('JySelectDropdown', 'destroyPopper');
+        this.broadcast('GjSelectDropdown', 'destroyPopper');
         if (this.$refs.input) {
           this.$refs.input.blur();
         }
@@ -611,7 +611,7 @@ export default {
           this.setSelected2(this.value);
         }
       } else {
-        this.broadcast('JySelectDropdown', 'updatePopper');
+        this.broadcast('GjSelectDropdown', 'updatePopper');
         if (this.filterable) {
           this.query = this.remote ? '' : this.selectedLabel;
           this.handleQueryChange(this.query);
@@ -619,8 +619,8 @@ export default {
             this.$refs.input.focus();
           } else {
             if (!this.remote) {
-              this.broadcast('JyOption', 'queryChange', '');
-              this.broadcast('JyOptionGroup', 'queryChange');
+              this.broadcast('GjOption', 'queryChange', '');
+              this.broadcast('GjOptionGroup', 'queryChange');
             }
 
             if (this.selectedLabel) {
@@ -637,7 +637,7 @@ export default {
     options() {
       if (this.$isServer) return;
       this.$nextTick(() => {
-        this.broadcast('JySelectDropdown', 'updatePopper');
+        this.broadcast('GjSelectDropdown', 'updatePopper');
       });
       if (this.multiple) {
         this.resetInputHeight();
@@ -714,7 +714,7 @@ export default {
       }
       this.previousQuery = val;
       this.$nextTick(() => {
-        if (this.visible) this.broadcast('JySelectDropdown', 'updatePopper');
+        if (this.visible) this.broadcast('GjSelectDropdown', 'updatePopper');
       });
       this.hoverIndex = -1;
       if (this.multiple && this.filterable) {
@@ -730,11 +730,11 @@ export default {
         this.remoteMethod(val);
       } else if (typeof this.filterMethod === 'function') {
         this.filterMethod(val);
-        this.broadcast('JyOptionGroup', 'queryChange');
+        this.broadcast('GjOptionGroup', 'queryChange');
       } else {
         this.filteredOptionsCount = this.optionsCount;
-        this.broadcast('JyOption', 'queryChange', val);
-        this.broadcast('JyOptionGroup', 'queryChange');
+        this.broadcast('GjOption', 'queryChange', val);
+        this.broadcast('GjOptionGroup', 'queryChange');
       }
       if (this.defaultFirstOption && (this.filterable || this.remote) && this.filteredOptionsCount) {
         this.checkDefaultFirstOption();
@@ -744,7 +744,7 @@ export default {
     scrollToOption(option) {
       const target = Array.isArray(option) && option[0] ? option[0].$el : option.$el;
       if (this.$refs.popper && target) {
-        const menu = this.$refs.popper.$el.querySelector('.jy-select-dropdown__wrap');
+        const menu = this.$refs.popper.$el.querySelector('.gj-select-dropdown__wrap');
         scrollIntoView(menu, target);
       }
       this.$refs.scrollbar && this.$refs.scrollbar.handleScroll();
@@ -985,7 +985,7 @@ export default {
         }
         input.style.height = heightNum;
         if (this.visible && this.emptyText !== false) {
-          this.broadcast('JySelectDropdown', 'updatePopper');
+          this.broadcast('GjSelectDropdown', 'updatePopper');
         }
       });
     },

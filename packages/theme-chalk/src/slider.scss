@@ -27,15 +27,15 @@
     &.disabled {
       cursor: default;
 
-      .jy-slider__bar {
+      .gj-slider__bar {
         background-color: $--slider-disable-color;
       }
 
-      .jy-slider__button {
+      .gj-slider__button {
         border-color: $--slider-disable-color;
       }
 
-      .jy-slider__button-wrapper {
+      .gj-slider__button-wrapper {
         &:hover,
         &.hover {
           cursor: not-allowed;
@@ -46,7 +46,7 @@
         }
       }
 
-      .jy-slider__button {
+      .gj-slider__button {
         &:hover,
         &.hover,
         &.dragging {
@@ -63,7 +63,7 @@
         }
       }
 
-      .jy-slider__stop{
+      .gj-slider__stop{
         // background-color: $--slider-runway-background-color;
         &-selected{
           background-color: $--slider-disable-color;
@@ -77,15 +77,15 @@
     margin-top: 3px;
     width: 130px;
 
-    &.jy-input-number--mini {
+    &.gj-input-number--mini {
       margin-top: 5px;
     }
 
-    &.jy-input-number--medium {
+    &.gj-input-number--medium {
       margin-top: 0;
     }
 
-    &.jy-input-number--large {
+    &.gj-input-number--large {
       margin-top: -2px;
     }
   }
@@ -113,7 +113,7 @@
     line-height: normal;
     @include utils-vertical-center;
 
-    .jy-tooltip {
+    .gj-tooltip {
       vertical-align: middle;
       display: inline-block;
     }
@@ -213,42 +213,42 @@
 
   @include when(vertical) {
     position: relative;
-    .jy-slider__runway {
+    .gj-slider__runway {
       width: $--slider-height;
       height: 100%;
       margin: 0 16px;
     }
-    .jy-slider__bar {
+    .gj-slider__bar {
       width: $--slider-height;
       height: auto;
       border-radius: 0 0 3px 3px;
     }
-    .jy-slider__button-wrapper {
+    .gj-slider__button-wrapper {
       top: auto;
       left: $--slider-button-wrapper-offset;
       // transform: translateY(50%);
       transform: translate(30%, 50%);
 
     }
-    .jy-slider__stop {
+    .gj-slider__stop {
       transform: translateY(50%);
     }
-    &.jy-slider--with-input {
+    &.gj-slider--with-input {
       padding-bottom: #{$--input-medium-height + 22px};
-      .jy-slider__input {
+      .gj-slider__input {
         overflow: visible;
         float: none;
         position: absolute;
         bottom: 22px;
         width: 36px;
         margin-top: 15px;
-        .jy-input__inner {
+        .gj-input__inner {
           text-align: center;
           padding-left: 5px;
           padding-right: 5px;
         }
-        .jy-input-number__decrease,
-        .jy-input-number__increase
+        .gj-input-number__decrease,
+        .gj-input-number__increase
         {
           top: $--input-large-height;
           margin-top: -1px;
@@ -257,29 +257,29 @@
           box-sizing: border-box;
           transition: $--border-transition-base;
         }
-        .jy-input-number__decrease {
+        .gj-input-number__decrease {
           width: 18px;
           right: 18px;
           border-bottom-left-radius: $--input-border-radius;
         }
-        .jy-input-number__increase {
+        .gj-input-number__increase {
           width: 19px;
           border-bottom-right-radius: $--input-border-radius;
-          & ~ .jy-input .jy-input__inner {
+          & ~ .gj-input .gj-input__inner {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
           }
         }
         &:hover {
-          .jy-input-number__decrease,
-          .jy-input-number__increase
+          .gj-input-number__decrease,
+          .gj-input-number__increase
           {
             border-color: $--input-hover-border;
           }
         }
         &:active {
-          .jy-input-number__decrease,
-          .jy-input-number__increase
+          .gj-input-number__decrease,
+          .gj-input-number__increase
           {
             border-color: $--input-focus-border;
           }

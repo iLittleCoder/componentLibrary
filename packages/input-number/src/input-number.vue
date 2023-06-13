@@ -2,8 +2,8 @@
   <div
     @dragstart.prevent
     :class="[
-      'jy-input-number',
-      inputNumberSize ? 'jy-input-number--' + inputNumberSize : '',
+      'gj-input-number',
+      inputNumberSize ? 'gj-input-number--' + inputNumberSize : '',
       { 'is-disabled': inputNumberDisabled },
       { 'is-without-controls': !controls },
       { 'is-controls-right': controlsAtRight },
@@ -14,7 +14,7 @@
     ]"
   >
     <span
-      class="jy-input-number__decrease"
+      class="gj-input-number__decrease"
       role="button"
       v-if="controls"
       v-repeat-click="decrease"
@@ -24,7 +24,7 @@
       <i :class="`el-icon-${controlsAtRight ? 'arrow-down' : 'minus'}`"></i>
     </span>
     <span
-      class="jy-input-number__increase"
+      class="gj-input-number__increase"
       role="button"
       v-if="controls"
       v-repeat-click="increase"
@@ -36,20 +36,20 @@
 
     <span
       v-if="$slots.pretext"
-      class="jy-input-number__slottext jy-input-number__pretext"
+      class="gj-input-number__slottext gj-input-number__pretext"
     >
       <slot name="pretext"></slot>
     </span>
     <span
       v-if="$slots.appendtext"
-      class="jy-input-number__slottext jy-input-number__appendtext"
+      class="gj-input-number__slottext gj-input-number__appendtext"
     >
       <slot name="appendtext"></slot>
     </span>
 
     <!-- <div
-      class="jy-input-number__percentage"
-      :class="['jy-input-number__percentage--' + inputNumberSize]"
+      class="gj-input-number__percentage"
+      :class="['gj-input-number__percentage--' + inputNumberSize]"
       v-if="!!percentageText"
     >
       <span>
@@ -57,7 +57,7 @@
       </span>
     </div> -->
 
-    <jy-input
+    <gj-input
       ref="input"
       :value="displayValue"
       :placeholder="placeholder"
@@ -74,22 +74,22 @@
       @input="handleInput"
       @change="handleInputChange"
     >
-    </jy-input>
+    </gj-input>
   </div>
 </template>
 <script>
-import JyInput from 'GildataDesign/packages/input';
+import GjInput from 'GildataDesign/packages/input';
 import Focus from 'GildataDesign/src/mixins/focus';
 import RepeatClick from 'GildataDesign/src/directives/repeat-click';
 
 export default {
-  name: 'JyInputNumber',
+  name: 'GjInputNumber',
   mixins: [Focus('input')],
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
@@ -97,7 +97,7 @@ export default {
     repeatClick: RepeatClick
   },
   components: {
-    JyInput
+    GjInput
   },
   props: {
     step: {
@@ -199,13 +199,13 @@ export default {
       return this.controls && this.controlsPosition === 'right';
     },
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
     inputNumberSize() {
       return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
     },
     inputNumberDisabled() {
-      return this.disabled || !!(this.jyForm || {}).disabled;
+      return this.disabled || !!(this.GjForm || {}).disabled;
     },
     displayValue() {
       if (this.userInput !== null) {

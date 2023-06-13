@@ -1,24 +1,18 @@
 ## 安装
 
-本节将介绍如何在项目中使用 GildataDesign, <font class='a-in-componet-primary-color' >支持 vue 版本为 2.6+</font>
+本节将介绍如何在项目中使用 component-library-gj, <font class='a-in-componet-primary-color' >支持 vue 版本为 2.6+</font>
 
 ### npm 安装
-
-<font class='a-in-componet-primary-color' >npm 源切换为聚源私有 npm 库</font>
-
-```shell
-npm config set registry https://repo.gildata.com/artifactory/api/npm/npmhundsun/
-```
 
 输入安装命令
 
 ```shell
-npm i GildataDesign -S
+npm i component-library-gj -S
 ```
 
-### 引入 GildataDesign
+### 引入 component-library-gj
 
-你可以引入整个 GildataDesign，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 GildataDesign。
+你可以引入整个 component-library-gj，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 component-library-gj。
 
 #### 完整引入
 
@@ -26,11 +20,11 @@ npm i GildataDesign -S
 
 ```javascript
 import Vue from 'vue';
-import GildataDesign from 'GildataDesign';
+import componentLibraryGj from 'component-library-gj';
 import 'component-library-gj/lib/theme-chalk/index.css';
 import App from './App.vue';
 
-Vue.use(GildataDesign);
+Vue.use(componentLibraryGj);
 
 new Vue({
   el: '#app',
@@ -38,16 +32,16 @@ new Vue({
 });
 ```
 
-以上代码便完成了 GildataDesign 的引入。需要注意的是，样式文件需要单独引入。
+以上代码便完成了 component-library-gj 的引入。需要注意的是，样式文件需要单独引入。
 
 #### 按需引入
 
-借助 babel-plugin-GildataDesign，我们可以只引入需要的组件，以达到减小项目体积的目的。
+借助 babel-plugin-componentLibraryGj，我们可以只引入需要的组件，以达到减小项目体积的目的。
 
-首先，安装 babel-plugin-GildataDesign：
+首先，安装 babel-plugin-componentLibraryGj：
 
 ```bash
-npm install babel-plugin-GildataDesign -D
+npm install babel-plugin-componentLibraryGj -D
 ```
 
 然后，将 .babelrc 修改为：
@@ -57,9 +51,9 @@ npm install babel-plugin-GildataDesign -D
   "presets": ["@vue/app"],
   "plugins": [
     [
-      "GildataDesign",
+      "component-library-gj",
       {
-        "libraryName": "GildataDesign",
+        "libraryName": "component-library-gj",
         "libDir": "lib",
         "styleLibraryName": "theme-chalk"
       }
@@ -72,7 +66,7 @@ npm install babel-plugin-GildataDesign -D
 
 ```javascript
 import Vue from 'vue';
-import { Button, Select, Table } from 'GildataDesign';
+import { Button, Select, Table } from 'component-library-gj';
 import App from './App.vue';
 
 Vue.component(Button.name, Button);
@@ -170,7 +164,7 @@ import {
   Message,
   Notification,
   Table
-} from 'GildataDesign';
+} from 'component-library-gj';
 
 Vue.use(Pagination);
 Vue.use(Table);
@@ -257,21 +251,21 @@ Vue.prototype.$message = Message;
 
 ### 全局配置
 
-在引入 GildataDesign 时，可以传入一个全局配置对象。该对象目前支持 `size` 与 `zIndex` 字段。`size` 用于改变组件的默认尺寸，`zIndex` 设置弹框的初始 z-index（默认值：2000）。按照引入 GildataDesign 的方式，具体操作如下：
+在引入 component-library-gj 时，可以传入一个全局配置对象。该对象目前支持 `size` 与 `zIndex` 字段。`size` 用于改变组件的默认尺寸，`zIndex` 设置弹框的初始 z-index（默认值：2000）。按照引入 component-library-gj 的方式，具体操作如下：
 
-完整引入 GildataDesign：
+完整引入 component-library-gj：
 
 ```js
 import Vue from 'vue';
-import GildataDesign from 'GildataDesign';
-Vue.use(GildataDesign, { size: 'small', zIndex: 3000 });
+import component-library-gj from 'component-library-gj';
+Vue.use(component-library-gj, { size: 'small', zIndex: 3000 });
 ```
 
-按需引入 GildataDesign：
+按需引入 component-library-gj：
 
 ```js
 import Vue from 'vue';
-import { Button } from 'GildataDesign';
+import { Button } from 'component-library-gj';
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
 Vue.use(Button);
@@ -287,7 +281,7 @@ GildataDesignUI 组件提供了两种主题`Black`和`White` 时，默认是白�
 import Vue from 'vue';
 import App from './App.vue';
 
-import GildataDesign from 'GildataDesign';
+import component-library-gj from 'component-library-gj';
 import 'component-library-gj/lib/theme-chalk/index.css';
 // 引入jyChangeTheme方法
 import { jyChangeTheme } from 'component-library-gj/lib/utils/change-theme.js';
@@ -312,7 +306,7 @@ new Vue({
 import Vue from 'vue';
 import App from './App.vue';
 
-import GildataDesign from 'GildataDesign';
+import component-library-gj from 'component-library-gj';
 import 'component-library-gj/lib/theme-chalk/index.css';
 // 引入jyChangeTheme方法
 import { jyChangeTheme } from 'component-library-gj/lib/utils/change-theme.js';
@@ -329,4 +323,4 @@ new Vue({
 
 ### 开始使用
 
-至此，一个基于 Vue 和 GildataDesign 的开发环境已经搭建完毕，现在就可以编写代码了。各个组件的使用方法请参阅它们各自的文档。
+至此，一个基于 Vue 和 component-library-gj 的开发环境已经搭建完毕，现在就可以编写代码了。各个组件的使用方法请参阅它们各自的文档。

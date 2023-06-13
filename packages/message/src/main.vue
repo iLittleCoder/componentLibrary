@@ -1,9 +1,9 @@
 <template>
-  <transition name="jy-message-fade" @after-leave="handleAfterLeave">
+  <transition name="gj-message-fade" @after-leave="handleAfterLeave">
     <div
       :class="[
-        'jy-message',
-        type && !iconClass ? `jy-message--${type}` : '',
+        'gj-message',
+        type && !iconClass ? `gj-message--${type}` : '',
         center ? 'is-center' : '',
         description ? 'is-description' : '',
         customClass,
@@ -17,26 +17,26 @@
       role="alert"
     >
       <template v-if="showIcon">
-        <i class="jy-message__icon" :class="iconClass" v-if="iconClass"></i>
+        <i class="gj-message__icon" :class="iconClass" v-if="iconClass"></i>
         <svg v-else-if="typeClass" class="icon svg-icon" aria-hidden="true">
           <use :xlink:href="'#' + typeClass"></use>
         </svg>
       </template>
 
-      <div class="jy-message__box">
+      <div class="gj-message__box">
         <slot>
-          <p v-if="!dangerouslyUseHTMLString" class="jy-message__content">
+          <p v-if="!dangerouslyUseHTMLString" class="gj-message__content">
             {{ message }}
           </p>
-          <p v-else v-html="message" class="jy-message__content"></p>
+          <p v-else v-html="message" class="gj-message__content"></p>
         </slot>
-        <div v-if="description" class="jy-message__des">{{ description }}</div>
+        <div v-if="description" class="gj-message__des">{{ description }}</div>
       </div>
-      <div class="jy-message__subtitle" v-if="subtitle || showClose">
+      <div class="gj-message__subtitle" v-if="subtitle || showClose">
         <p v-if="subtitle" @click="clickSubtitle">{{ subtitle }}</p>
         <i
           v-if="showClose"
-          class="jy-message__closeBtn Gildata-close"
+          class="gj-message__closeBtn Gildata-close"
           @click="close"
         ></i>
       </div>

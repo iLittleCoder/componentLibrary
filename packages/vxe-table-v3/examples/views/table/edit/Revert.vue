@@ -14,24 +14,24 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       ref="xTable"
       border
       show-overflow
       keep-source
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="age" title="Age" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column title="操作">
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="age" title="Age" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column title="操作">
         <template #default="{ row }">
           <vxe-button v-if="!$refs.xTable.isInsertByRow(row)" @click="$refs.xTable.revertData(row)">还原</vxe-button>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -65,24 +65,24 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           ref="xTable"
           border
           show-overflow
           keep-source
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="age" title="Age" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column title="操作">
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="age" title="Age" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column title="操作">
             <template #default="{ row }">
               <vxe-button v-if="!$refs.xTable.isInsertByRow(row)" @click="$refs.xTable.revertData(row)">还原</vxe-button>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         export default {

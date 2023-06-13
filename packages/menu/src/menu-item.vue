@@ -1,5 +1,5 @@
 <template>
-  <li class="jy-menu-item"
+  <li class="gj-menu-item"
     role="menuitem"
     tabindex="-1"
     :style="[paddingStyle, itemStyle, { backgroundColor }]"
@@ -13,15 +13,15 @@
     @blur="onMouseLeave"
     @mouseleave="onMouseLeave"
   >
-    <jy-tooltip
-      v-if="parentMenu.$options.componentName === 'JyMenu' && rootMenu.collapse && $slots.title"
+    <gj-tooltip
+      v-if="parentMenu.$options.componentName === 'GjMenu' && rootMenu.collapse && $slots.title"
       effect="dark"
       placement="right">
       <div slot="content"><slot name="title"></slot></div>
       <div style="position: absolute;left: 0;top: 0;height: 100%;width: 100%;display: inline-block;box-sizing: border-box;">
         <slot></slot>
       </div>
-    </jy-tooltip>
+    </gj-tooltip>
     <template v-else>
       <slot></slot>
       <slot name="title"></slot>
@@ -30,17 +30,17 @@
 </template>
 <script>
   import Menu from './menu-mixin';
-  import JyTooltip from 'GildataDesign/packages/tooltip';
+  import GjTooltip from 'GildataDesign/packages/tooltip';
   import Emitter from 'GildataDesign/src/mixins/emitter';
 
   export default {
-    name: 'JyMenuItem',
+    name: 'GjMenuItem',
 
-    componentName: 'JyMenuItem',
+    componentName: 'GjMenuItem',
 
     mixins: [Menu, Emitter],
 
-    components: { JyTooltip },
+    components: { GjTooltip },
 
     props: {
       index: {
@@ -95,7 +95,7 @@
       },
       handleClick() {
         if (!this.disabled) {
-          this.dispatch('JyMenu', 'item-click', this);
+          this.dispatch('GjMenu', 'item-click', this);
           this.$emit('click', this);
         }
       }

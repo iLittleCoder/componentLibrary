@@ -2,7 +2,7 @@
   <div>
     <p class="tip">
       可以设置大小尺寸：medium / small / mini<br>
-      默认大小：Table 48px 、Button 34px、Input 34px、Checkbox 16px、Radio 16px，可以通过 scss 变量修改，<a class="link" href="https://github.com/x-extends/jy-table/blob/master/styles/variable.scss" target="_blank">查看所有变量</a><br><a class="link" href="https://github.com/x-extends/jy-table-demo/tree/master/jy-table-by-theme" target="_blank">（项目示例）</a>
+      默认大小：Table 48px 、Button 34px、Input 34px、Checkbox 16px、Radio 16px，可以通过 scss 变量修改，<a class="link" href="https://github.com/x-extends/gj-table/blob/master/styles/variable.scss" target="_blank">查看所有变量</a><br><a class="link" href="https://github.com/x-extends/gj-table-demo/tree/master/gj-table-by-theme" target="_blank">（项目示例）</a>
     </p>
 
     <vxe-toolbar>
@@ -56,20 +56,20 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       :export-config="{}"
       :align="allAlign"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="radio" width="60"></jy-column>
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></jy-column>
-      <jy-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="radio" width="60"></gj-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></gj-column>
+      <gj-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <vxe-pager
       perfect
@@ -132,21 +132,21 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       size="medium"
       :export-config="{}"
       :align="allAlign"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="radio" width="60"></jy-column>
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></jy-column>
-      <jy-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="radio" width="60"></gj-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></gj-column>
+      <gj-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <vxe-pager
       perfect
@@ -210,21 +210,21 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       size="small"
       :export-config="{}"
       :align="allAlign"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="radio" width="60"></jy-column>
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></jy-column>
-      <jy-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="radio" width="60"></gj-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></gj-column>
+      <gj-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <vxe-pager
       perfect
@@ -288,21 +288,21 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       size="mini"
       :export-config="{}"
       :align="allAlign"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="radio" width="60"></jy-column>
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></jy-column>
-      <jy-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="radio" width="60"></gj-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></gj-column>
+      <gj-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <vxe-pager
       perfect
@@ -354,17 +354,17 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="radio" width="60"></jy-column>
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></jy-column>
-          <jy-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="radio" width="60"></gj-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></gj-column>
+          <gj-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -385,18 +385,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           size="medium"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="radio" width="60"></jy-column>
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></jy-column>
-          <jy-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="radio" width="60"></gj-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></gj-column>
+          <gj-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -417,18 +417,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           size="small"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="radio" width="60"></jy-column>
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></jy-column>
-          <jy-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="radio" width="60"></gj-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></gj-column>
+          <gj-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -449,18 +449,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           size="mini"
           :data="tableData">
-          <<jy-column type="seq" width="60"></jy-column>
-          <jy-column type="radio" width="60"></jy-column>
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></jy-column>
-          <jy-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <<gj-column type="seq" width="60"></gj-column>
+          <gj-column type="radio" width="60"></gj-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="sex" title="Sex" :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]"></gj-column>
+          <gj-column field="sex2" title="Sex2" sortable :filters="[{value:'0',label:'女'},{value:'1',label:'男'}]" :filter-multiple="false"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {

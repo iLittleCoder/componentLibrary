@@ -51,7 +51,7 @@ function renderBtns (h, _vm) {
       const renderToolbarButton = compConf.renderToolbarButton || compConf.renderButton
       if (renderToolbarButton) {
         return h('span', {
-          class: 'jy-table-button--item'
+          class: 'gj-table-button--item'
         }, renderToolbarButton.call(_vm, h, buttonRender, { $grid: $xegrid, $table: $xetable, button: item }))
       }
     }
@@ -98,7 +98,7 @@ function renderRightTools (h, _vm) {
       const { renderToolbarTool } = compConf
       if (renderToolbarTool) {
         return h('span', {
-          class: 'jy-table-tool--item'
+          class: 'gj-table-tool--item'
         }, renderToolbarTool.call(_vm, h, toolRender, { $grid: $xegrid, $table: $xetable, tool: item }))
       }
     }
@@ -152,7 +152,7 @@ function renderCustoms (h, _vm) {
     if (isColGroup || colKey) {
       cols.push(
         h('li', {
-          class: ['jy-table-custom--option', `level--${column.level}`, {
+          class: ['gj-table-custom--option', `level--${column.level}`, {
             'is--group': isColGroup,
             'is--checked': column.visible,
             'is--indeterminate': column.halfVisible,
@@ -170,23 +170,23 @@ function renderCustoms (h, _vm) {
           }
         }, [
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--checked-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--checked-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--unchecked-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--unchecked-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--indeterminate-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--indeterminate-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--label'
+            class: 'gj-table-checkbox--label'
           }, colTitle)
         ])
       )
     }
   })
   return h('div', {
-    class: ['jy-table-custom--wrapper', {
+    class: ['gj-table-custom--wrapper', {
       'is--active': customStore.visible
     }],
     ref: 'customWrapper'
@@ -202,13 +202,13 @@ function renderCustoms (h, _vm) {
       on: customBtnOns
     }),
     h('div', {
-      class: 'jy-table-custom--option-wrapper'
+      class: 'gj-table-custom--option-wrapper'
     }, [
       h('ul', {
-        class: 'jy-table-custom--header'
+        class: 'gj-table-custom--header'
       }, [
         h('li', {
-          class: ['jy-table-custom--option', {
+          class: ['gj-table-custom--option', {
             'is--checked': customStore.isAll,
             'is--indeterminate': customStore.isIndeterminate
           }],
@@ -220,25 +220,25 @@ function renderCustoms (h, _vm) {
           }
         }, [
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--checked-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--checked-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--unchecked-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--unchecked-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--indeterminate-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--indeterminate-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--label'
+            class: 'gj-table-checkbox--label'
           }, GlobalConfig.i18n('vxe.toolbar.customAll'))
         ])
       ]),
       h('ul', {
-        class: 'jy-table-custom--body',
+        class: 'gj-table-custom--body',
         on: customWrapperOns
       }, cols),
       customOpts.isFooter === false ? null : h('div', {
-        class: 'jy-table-custom--footer'
+        class: 'gj-table-custom--footer'
       }, [
         h('button', {
           class: 'btn--confirm',
@@ -343,20 +343,20 @@ export default {
   render (h) {
     const { _e, $xegrid, perfect, loading, importOpts, exportOpts, refresh, refreshOpts, zoom, zoomOpts, custom, vSize, className } = this
     return h('div', {
-      class: ['jy-table-toolbar', className ? (XEUtils.isFunction(className) ? className({ $toolbar: this }) : className) : '', {
+      class: ['gj-table-toolbar', className ? (XEUtils.isFunction(className) ? className({ $toolbar: this }) : className) : '', {
         [`size--${vSize}`]: vSize,
         'is--perfect': perfect,
         'is--loading': loading
       }]
     }, [
       h('div', {
-        class: 'jy-table-buttons--wrapper'
+        class: 'gj-table-buttons--wrapper'
       }, renderBtns(h, this)),
       h('div', {
-        class: 'jy-table-tools--wrapper'
+        class: 'gj-table-tools--wrapper'
       }, renderRightTools(h, this)),
       h('div', {
-        class: 'jy-table-tools--operate'
+        class: 'gj-table-tools--operate'
       }, [
         this.import ? h('vxe-button', {
           props: {
@@ -431,7 +431,7 @@ export default {
     fintTable () {
       const { $children } = this.$parent
       const selfIndex = $children.indexOf(this)
-      return XEUtils.find($children, (comp, index) => comp && comp.loadData && index > selfIndex && comp.$vnode.componentOptions.tag === 'jy-table')
+      return XEUtils.find($children, (comp, index) => comp && comp.loadData && index > selfIndex && comp.$vnode.componentOptions.tag === 'gj-table')
     },
     checkTable () {
       if (this.$xetable) {

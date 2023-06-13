@@ -1,14 +1,14 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="$emit('dodestroy')">
-    <div v-show="visible" class="jy-time-range-picker jy-picker-panel jy-popper" :class="popperClass">
-      <div class="jy-time-range-picker__content">
-        <div class="jy-time-range-picker__cell">
-          <div class="jy-time-range-picker__header">
+  <transition name="gj-zoom-in-top" @after-leave="$emit('dodestroy')">
+    <div v-show="visible" class="gj-time-range-picker gj-picker-panel gj-popper" :class="popperClass">
+      <div class="gj-time-range-picker__content">
+        <div class="gj-time-range-picker__cell">
+          <div class="gj-time-range-picker__header">
             {{ t('el.datepicker.startTime') }}
           </div>
           <div
             :class="{ 'has-seconds': showSeconds, 'is-arrow': arrowControl }"
-            class="jy-time-range-picker__body jy-time-panel__content"
+            class="gj-time-range-picker__body gj-time-panel__content"
           >
             <time-spinner
               ref="minSpinner"
@@ -22,13 +22,13 @@
             </time-spinner>
           </div>
         </div>
-        <div class="jy-time-range-picker__cell">
-          <div class="jy-time-range-picker__header">
+        <div class="gj-time-range-picker__cell">
+          <div class="gj-time-range-picker__header">
             {{ t('el.datepicker.endTime') }}
           </div>
           <div
             :class="{ 'has-seconds': showSeconds, 'is-arrow': arrowControl }"
-            class="jy-time-range-picker__body jy-time-panel__content"
+            class="gj-time-range-picker__body gj-time-panel__content"
           >
             <time-spinner
               ref="maxSpinner"
@@ -43,15 +43,15 @@
           </div>
         </div>
       </div>
-      <div class="jy-time-panel__footer footer-range">
-        <jy-button class="footer-btn" size="mini" @click="handleCancel()">{{ t('el.table.resetFilter') }}</jy-button>
-        <jy-button
+      <div class="gj-time-panel__footer footer-range">
+        <gj-button class="footer-btn" size="mini" @click="handleCancel()">{{ t('el.table.resetFilter') }}</gj-button>
+        <gj-button
           class="footer-btn ml-8"
           type="primary"
           size="mini"
           :disabled="btnDisabled"
           @click="handleConfirm()"
-          >{{ t('el.datepicker.confirm') }}</jy-button
+          >{{ t('el.datepicker.confirm') }}</gj-button
         >
       </div>
     </div>

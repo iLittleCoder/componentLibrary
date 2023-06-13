@@ -8,17 +8,17 @@
 
 基础的表格展示用法。
 
-:::demo 当`jy-table`元素中注入`data`对象数组后，在`jy-column`中用`field`属性来对应对象中的键名即可填入数据，用`title`属性来定义表格的列名。可以使用`width`属性来定义列宽。
+:::demo 当`gj-table`元素中注入`data`对象数组后，在`gj-column`中用`field`属性来对应对象中的键名即可填入数据，用`title`属性来定义表格的列名。可以使用`width`属性来定义列宽。
 ```html
 <template>
   <div>
     <div style="margin-bottom: 20px;">
-       <jy-button @click="allAlign = 'left'">居左</jy-button>
-       <jy-button @click="allAlign = 'center'">居中</jy-button>
-       <jy-button @click="allAlign = 'right'">居右</jy-button>
+       <gj-button @click="allAlign = 'left'">居左</gj-button>
+       <gj-button @click="allAlign = 'center'">居中</gj-button>
+       <gj-button @click="allAlign = 'right'">居右</gj-button>
     </div>
        
-    <jy-table
+    <gj-table
       :align="allAlign"
       :data="tableData"
       :resizable="false"
@@ -27,27 +27,27 @@
       }"
       border="none"
     >
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
-    <p class="tip">使用 `jy-column` 属性启用 hover 行高亮</p>
+    <p class="tip">使用 `gj-column` 属性启用 hover 行高亮</p>
 
-    <jy-table
+    <gj-table
       border
       show-header-overflow
       show-overflow
       highlight-hover-row
       :align="allAlign"
       :data="tableData">
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address"></jy-column>
-    </jy-table>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address"></gj-column>
+    </gj-table>
   </div>
 </template>
 
@@ -79,45 +79,45 @@ export default {
   <div>
     <p class="tip">设置  `type=seq`  开启序号列</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
     
     <p class="tip">使用  `seq-config={startIndex}`  自定义起始序号</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       :seq-config="{startIndex: 100}"
       :data="tableData">
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
 
     
     <p class="tip">使用 ` seq-config={seqMethod}` 自定义方法</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       :seq-config="{seqMethod}"
       :data="tableData">
-      <jy-column type="seq" title="序号" width="80"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" title="序号" width="80"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
 
   
@@ -165,57 +165,57 @@ export default {
       <span class="red">(注：不应该全部都使用固定像素，应该当所有列加起来的宽度小于表格宽度时，就会出现空白区，可以配合 "%" 或 "min-width" 实现等比例缩放)</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="seq"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
    
 
     <p class="tip">部分固定列宽，其余自适应</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="80"></jy-column>
-      <jy-column field="name" title="Name" width="200"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex" width="140"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="80"></gj-column>
+      <gj-column field="name" title="Name" width="200"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex" width="140"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
    
 
     <p class="tip">设置固定和最小宽，实现等比例放大</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="80"></jy-column>
-      <jy-column field="name" title="Name" min-width="200"></jy-column>
-      <jy-column field="role" title="Role" min-width="140"></jy-column>
-      <jy-column field="sex" title="Sex" min-width="120"></jy-column>
-      <jy-column field="age" title="Age" min-width="120"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="80"></gj-column>
+      <gj-column field="name" title="Name" min-width="200"></gj-column>
+      <gj-column field="role" title="Role" min-width="140"></gj-column>
+      <gj-column field="sex" title="Sex" min-width="120"></gj-column>
+      <gj-column field="age" title="Age" min-width="120"></gj-column>
+    </gj-table>
 
    
 
     <p class="tip">设置百分比</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="10%"></jy-column>
-      <jy-column field="name" title="Name" width="30%"></jy-column>
-      <jy-column field="role" title="Role" width="20%"></jy-column>
-      <jy-column field="sex" title="Sex" width="20%"></jy-column>
-      <jy-column field="age" title="Age" width="20%"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="10%"></gj-column>
+      <gj-column field="name" title="Name" width="30%"></gj-column>
+      <gj-column field="role" title="Role" width="20%"></gj-column>
+      <gj-column field="sex" title="Sex" width="20%"></gj-column>
+      <gj-column field="age" title="Age" width="20%"></gj-column>
+    </gj-table>
 
    
   </div>
@@ -256,14 +256,14 @@ export default {
   <div>
     <p class="tip">单元格超出指定宽度自动换行，通过设置 《a href="scroll-y"="{enabled: false} 关闭虚拟滚动，则支持自动换行</p>
 
-    <jy-table
+    <gj-table
       :data="tableData"
       :scroll-y="{enabled: false}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
    
 
@@ -282,14 +282,14 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           :data="tableData"
           :scroll-y="{enabled: false}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -328,23 +328,23 @@ export default {
       还可以设置 tooltip-config.enterable 允许鼠标进入 tooltip 中，通过 title-help 设置列标题的帮助提示消息
     </p>
 
-    <jy-table
+    <gj-table
       show-footer
       :footer-method="footerMethod"
       :tooltip-config="{showAll: true, enterable: true, contentMethod: showTooltipMethod}"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="名称" :title-help="{message: '自定义帮助提示信息',icon: 'Gildata-gauge'}"></jy-column>
-      <jy-column field="role" title="角色" :titlePrefix="{message: '自定义图标', icon: 'Gildata-map'}"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-      <jy-column field="rate" title="Rate">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="名称" :title-help="{message: '自定义帮助提示信息',icon: 'Gildata-gauge'}"></gj-column>
+      <gj-column field="role" title="角色" :titlePrefix="{message: '自定义图标', icon: 'Gildata-map'}"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+      <gj-column field="rate" title="Rate">
         <template #header>
           <span>自定义标题</span>
         </template>
-      </jy-column>
-      <jy-column field="address" title="Address" width="160"></jy-column>
-      <jy-column type="html" field="content" title="Content" width="200"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="address" title="Address" width="160"></gj-column>
+      <gj-column type="html" field="content" title="Content" width="200"></gj-column>
+    </gj-table>
   </div>
 </template>
 
@@ -419,23 +419,23 @@ cell溢出后省略号的处理机制
       还可以设置 tooltip-config.enterable 允许鼠标进入 tooltip 中，通过 title-help 设置列标题的帮助提示消息
     </p>
 
-    <jy-table
+    <gj-table
       show-footer
       :footer-method="footerMethod"
       :tooltip-config="{showAll: true, enterable: true, contentMethod: showTooltipMethod}"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="名称" :title-help="{message: '自定义帮助提示信息'}"></jy-column>
-      <jy-column field="role" title="角色" :title-help="{message: '自定义图标', icon: 'fa fa-bell'}"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-      <jy-column field="rate" title="Rate">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="名称" :title-help="{message: '自定义帮助提示信息'}"></gj-column>
+      <gj-column field="role" title="角色" :title-help="{message: '自定义图标', icon: 'fa fa-bell'}"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+      <gj-column field="rate" title="Rate">
         <template #header>
           <span>自定义标题</span>
         </template>
-      </jy-column>
-      <jy-column field="address" title="Address" width="160"></jy-column>
-      <jy-column type="html" field="content" title="Content" width="200"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="address" title="Address" width="160"></gj-column>
+      <gj-column type="html" field="content" title="Content" width="200"></gj-column>
+    </gj-table>
   </div>
 </template>
 
@@ -510,30 +510,30 @@ export default {
       <span class="red">（注：不支持树形结构，在可编辑表格场景下，临时插入的数据不会有斑马纹样式）</span>
     </p>
 
-    <jy-table
+    <gj-table
       stripe
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
     <p class="tip">使用 《a href="highlight-hover-row" 属性启用 hover 行高亮</p>
 
-    <jy-table
+    <gj-table
       stripe
       highlight-current-row
       highlight-hover-row
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     
   </div>
@@ -569,72 +569,72 @@ export default {
   <div>
     <p class="tip">通过设置 border=none|default 默认不显示边框</p>
 
-    <jy-table
+    <gj-table
       show-footer
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="tip">通过设置 border=true|full 显示完整边框</p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="tip">通过设置 border=outer 显示外边框</p>
 
-    <jy-table
+    <gj-table
       show-footer
       border="outer"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="tip">通过设置 border=inner 显示内边框</p>
 
-    <jy-table
+    <gj-table
       show-footer
       border="inner"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
     
     <p class="tip">通过设置 border=false 显示外边框</p>
 
-    <jy-table
+    <gj-table
       show-footer
       border="false"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
   </div>
 </template>
 
@@ -690,37 +690,37 @@ export default {
       <span class="red">（注：当自定义样式之后可能会覆盖表格的样式，比如选中行..等，记得自行处理好相关样式）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       class="mytable-style"
       :header-cell-class-name="headerCellClassName"
       :row-class-name="rowClassName"
       :cell-class-name="cellClassName"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="attr1" title="Attr1"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="attr1" title="Attr1"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
     <p class="tip">通过 "cell-click" 事件点击改变颜色</p>
 
-    <jy-table
+    <gj-table
       border
       class="mytable-style"
       :cell-class-name="cellClassName2"
       :data="tableData"
       @cell-click="cellClickEvent2">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="attr1" title="Attr1"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="attr1" title="Attr1"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
   </div>
@@ -779,19 +779,19 @@ export default {
 </script>
 
 <style>
-    .mytable-style.jy-table .jy-body--row.row-green {
+    .mytable-style.gj-table .gj-body--row.row-green {
       background-color: #187;
       color: #fff;
     }
-    .mytable-style.jy-table .jy-header--column.col-blue {
+    .mytable-style.gj-table .gj-header--column.col-blue {
       background-color: #2db7f5;
       color: #fff;
     }
-    .mytable-style.jy-table .jy-body--column.col-red {
+    .mytable-style.gj-table .gj-body--column.col-red {
       background-color: red;
       color: #fff;
     }
-    .mytable-style.jy-table .jy-body--column.col-orange {
+    .mytable-style.gj-table .gj-body--column.col-orange {
       background-color: #f60;
       color: #fff;
     }
@@ -811,20 +811,20 @@ export default {
       <span class="red">（组件不支持改动原生滚动条，各种兼容性问题可自行实现，该示例仅供参考）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       class="mytable-scrollbar"
       height="200"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60" fixed="left"></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="sex" title="Sex" width="250"></jy-column>
-      <jy-column field="age" title="Age" width="250"></jy-column>
-      <jy-column field="role" title="Role" width="300"></jy-column>
-      <jy-column field="address" title="Address" width="350" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60" fixed="left"></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="sex" title="Sex" width="250"></gj-column>
+      <gj-column field="age" title="Age" width="250"></gj-column>
+      <gj-column field="role" title="Role" width="300"></gj-column>
+      <gj-column field="address" title="Address" width="350" show-overflow></gj-column>
+    </gj-table>
   </div>
 </template>
 
@@ -911,15 +911,15 @@ export default {
   <div>
     <p class="tip">隐藏头部，通过设置 " prop="show-header" 参数</p>
 
-    <jy-table
+    <gj-table
       :show-header="false"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
@@ -927,20 +927,20 @@ export default {
 
  
  
-        <jy-button @click="showHeader = !showHeader">显示/隐藏表头</jy-button>
+        <gj-button @click="showHeader = !showHeader">显示/隐藏表头</gj-button>
     
   
 
-    <jy-table
+    <gj-table
       height="200"
       :show-header="showHeader"
       :data="tableData2">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
  
   </div>
@@ -986,22 +986,22 @@ export default {
 
 纵向内容过多时，可选择固定表头。
 
-:::demo 只要在`jy-table`元素中定义了`height`属性，即可实现固定表头的表格，而不需要额外的代码。
+:::demo 只要在`gj-table`元素中定义了`height`属性，即可实现固定表头的表格，而不需要额外的代码。
 ```html
 <template>
   <div>
     <p class="tip">当纵向内容过多时，固定表头就非常有用了，通过设置 height 参数</p>
 
-    <jy-table
+    <gj-table
       border
       height="400"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
   </div>
@@ -1052,24 +1052,24 @@ export default {
   <div>
     <p class="tip">横纵内容过多时，同时固定列和表头</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       
       highlight-hover-row
       :data="tableData">
-      <jy-column type="seq" width="60" fixed="left"></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="role" title="Role" width="300"></jy-column>
-      <jy-column field="sex" title="Sex" width="300"></jy-column>
-      <jy-column field="date" title="Date" width="300"></jy-column>
-      <jy-column title="操作" fixed="right" width="200">
+      <gj-column type="seq" width="60" fixed="left"></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="role" title="Role" width="300"></gj-column>
+      <gj-column field="sex" title="Sex" width="300"></gj-column>
+      <gj-column field="date" title="Date" width="300"></gj-column>
+      <gj-column title="操作" fixed="right" width="200">
         <template #default>
-          <jy-button type="text">按钮1</jy-button>
-          <jy-button type="text">按钮2</jy-button>
+          <gj-button type="text">按钮1</gj-button>
+          <gj-button type="text">按钮2</gj-button>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
   
 
@@ -1077,32 +1077,32 @@ export default {
 
     <div style="margin-bottom:20px"> 
       <template >
-        <jy-button @click="toggleFixedColumn(0, 'left')">切换第一列固定</jy-button>
-        <jy-button @click="toggleFixedColumn(1, 'left')">切换第二列固定</jy-button>
-        <jy-button @click="toggleFixedColumn(4, 'right')">切换第五列固定</jy-button>
-        <jy-button @click="toggleFixedColumn(5, 'right')">切换第六列固定</jy-button>
+        <gj-button @click="toggleFixedColumn(0, 'left')">切换第一列固定</gj-button>
+        <gj-button @click="toggleFixedColumn(1, 'left')">切换第二列固定</gj-button>
+        <gj-button @click="toggleFixedColumn(4, 'right')">切换第五列固定</gj-button>
+        <gj-button @click="toggleFixedColumn(5, 'right')">切换第六列固定</gj-button>
       </template>
     </div>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable2"
       
       highlight-hover-row
       show-overflow
       :data="tableData">
-      <jy-column type="seq" width="60" :fixed="colFixeds.col0"></jy-column>
-      <jy-column field="name" title="Name" width="300" :fixed="colFixeds.col1"></jy-column>
-      <jy-column field="role" title="Role" width="300"></jy-column>
-      <jy-column field="sex" title="Sex" width="300"></jy-column>
-      <jy-column field="date" title="Date" width="300" :fixed="colFixeds.col4"></jy-column>
-      <jy-column title="操作" width="200" :fixed="colFixeds.col5">
+      <gj-column type="seq" width="60" :fixed="colFixeds.col0"></gj-column>
+      <gj-column field="name" title="Name" width="300" :fixed="colFixeds.col1"></gj-column>
+      <gj-column field="role" title="Role" width="300"></gj-column>
+      <gj-column field="sex" title="Sex" width="300"></gj-column>
+      <gj-column field="date" title="Date" width="300" :fixed="colFixeds.col4"></gj-column>
+      <gj-column title="操作" width="200" :fixed="colFixeds.col5">
         <template #default>
-          <jy-button status="primary" type="mini">按钮1</jy-button>
-          <jy-button type="mini">按钮2</jy-button>
+          <gj-button status="primary" type="mini">按钮1</gj-button>
+          <gj-button type="mini">按钮2</gj-button>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
   
 
@@ -1110,27 +1110,27 @@ export default {
       <span>分组表头<span class="red">（注：固定列必须按组进行设置）</span></span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       height="400"
       :data="tableData">
-      <jy-colgroup title="基本信息" fixed="left">
-        <jy-column type="seq" width="60" fixed="left"></jy-column>
-        <jy-column field="name" title="Name" fixed="left" width="180"></jy-column>
-      </jy-colgroup>
-      <jy-colgroup title="更多信息">
-        <jy-column field="role" title="Role" width="300"></jy-column>
-        <jy-column field="age" title="Age" width="200"></jy-column>
-        <jy-colgroup title="详细信息">
-          <jy-column field="sex" title="Sex" width="200"></jy-column>
-          <jy-column field="num" title="Num" width="200"></jy-column>
-        </jy-colgroup>
-      </jy-colgroup>
-      <jy-colgroup title="额外信息" fixed="right">
-        <jy-column field="date3" title="Date" fixed="right" width="140"></jy-column>
-        <jy-column field="address" title="Address" fixed="right" width="200" show-overflow></jy-column>
-      </jy-colgroup>
-    </jy-table>
+      <gj-colgroup title="基本信息" fixed="left">
+        <gj-column type="seq" width="60" fixed="left"></gj-column>
+        <gj-column field="name" title="Name" fixed="left" width="180"></gj-column>
+      </gj-colgroup>
+      <gj-colgroup title="更多信息">
+        <gj-column field="role" title="Role" width="300"></gj-column>
+        <gj-column field="age" title="Age" width="200"></gj-column>
+        <gj-colgroup title="详细信息">
+          <gj-column field="sex" title="Sex" width="200"></gj-column>
+          <gj-column field="num" title="Num" width="200"></gj-column>
+        </gj-colgroup>
+      </gj-colgroup>
+      <gj-colgroup title="额外信息" fixed="right">
+        <gj-column field="date3" title="Date" fixed="right" width="140"></gj-column>
+        <gj-column field="address" title="Address" fixed="right" width="200" show-overflow></gj-column>
+      </gj-colgroup>
+    </gj-table>
 
     
   </div>
@@ -1197,49 +1197,49 @@ export default {
   <div>
     <p class="tip">当一个表格高度需要自适应的时候可以设置为最大高度，通过设置 "max-height" 参数</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       max-height="200"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex" align="center"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex" align="center"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
  
 
     <p class="tip">如果设置 "max-height"，当内容为达到最大高度时会自适应</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       max-height="200"
       :data="tableData2">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
     <p class="tip">也可以设置相对于父容器的百分比</p>
 
     <div style="height: 400px;">
-      <jy-table
+      <gj-table
         border
         highlight-hover-row
         max-height="100%"
         :data="tableData">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name" sortable></jy-column>
-        <jy-column field="sex" title="Sex"></jy-column>
-        <jy-column field="age" title="Age"></jy-column>
-        <jy-column field="address" title="Address" show-overflow></jy-column>
-      </jy-table>
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name" sortable></gj-column>
+        <gj-column field="sex" title="Sex"></gj-column>
+        <gj-column field="age" title="Age"></gj-column>
+        <gj-column field="address" title="Address" show-overflow></gj-column>
+      </gj-table>
     </div>
 
    
@@ -1271,32 +1271,32 @@ export default {
 
 数据结构比较复杂的时候，可使用多级表头来展现数据的层次关系。
 
-:::demo 只需要在 jy-column 里面嵌套 jy-column，就可以实现多级表头。
+:::demo 只需要在 gj-column 里面嵌套 gj-column，就可以实现多级表头。
 ```html
 <template>
   <div>
     <p class="tip">当数据结构比较复杂的时候，可以使用多级表头来更加直观的显示数据</p>
 
-    <jy-table
+    <gj-table
       border
       height="400"
       :data="tableData">
-      <jy-column title="基本信息">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name"></jy-column>
-      </jy-column>
-      <jy-colgroup title="更多信息">
-        <jy-column field="role" title="Role"></jy-column>
-        <jy-colgroup title="详细信息">
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-colgroup>
-      </jy-colgroup>
-      <jy-colgroup title="分类信息">
-        <jy-column field="date3" title="Date"></jy-column>
-      </jy-colgroup>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column title="基本信息">
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name"></gj-column>
+      </gj-column>
+      <gj-colgroup title="更多信息">
+        <gj-column field="role" title="Role"></gj-column>
+        <gj-colgroup title="详细信息">
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-colgroup>
+      </gj-colgroup>
+      <gj-colgroup title="分类信息">
+        <gj-column field="date3" title="Date"></gj-column>
+      </gj-colgroup>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
@@ -1338,17 +1338,17 @@ export default {
   <div>
     <p class="tip">高亮当前列，当前列是唯一的，通过设置 "highlight-current-column" 参数</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-column
       highlight-current-column
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
@@ -1390,11 +1390,11 @@ export default {
     <p class="tip">使用 "highlight-current-row" 显示高亮行，当前行是唯一的；用户操作点击选项时会触发事件"current-change"</p>
 
  
-          <jy-button @click="$refs.xTable.setCurrentRow(tableData[1])">设置第二行选中</jy-button>
-          <jy-button @click="$refs.xTable.clearCurrentRow()">取消选中</jy-button>
-          <jy-button @click="getCurrentEvent">获取高亮行</jy-button>
+          <gj-button @click="$refs.xTable.setCurrentRow(tableData[1])">设置第二行选中</gj-button>
+          <gj-button @click="$refs.xTable.clearCurrentRow()">取消选中</gj-button>
+          <gj-button @click="getCurrentEvent">获取高亮行</gj-button>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       highlight-current-row
@@ -1402,11 +1402,11 @@ export default {
       
       :data="tableData"
       @current-change="currentChangeEvent">
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
   </div>
@@ -1446,32 +1446,32 @@ export default {
 
 数据结构比较复杂的时候，可使用多级表头来展现数据的层次关系。
 
-:::demo 只需要在 jy-column 里面嵌套 jy-column，就可以实现多级表头。
+:::demo 只需要在 gj-column 里面嵌套 gj-column，就可以实现多级表头。
 ```html
 <template>
   <div>
     <p class="tip">当数据结构比较复杂的时候，可以使用多级表头来更加直观的显示数据</p>
 
-    <jy-table
+    <gj-table
       border
       height="400"
       :data="tableData">
-      <jy-colgroup title="基本信息">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name"></jy-column>
-      </jy-colgroup>
-      <jy-colgroup title="更多信息">
-        <jy-column field="role" title="Role"></jy-column>
-        <jy-colgroup title="详细信息">
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-colgroup>
-      </jy-colgroup>
-      <jy-colgroup title="分类信息">
-        <jy-column field="date3" title="Date"></jy-column>
-      </jy-colgroup>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-colgroup title="基本信息">
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name"></gj-column>
+      </gj-colgroup>
+      <gj-colgroup title="更多信息">
+        <gj-column field="role" title="Role"></gj-column>
+        <gj-colgroup title="详细信息">
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-colgroup>
+      </gj-colgroup>
+      <gj-colgroup title="分类信息">
+        <gj-column field="date3" title="Date"></gj-column>
+      </gj-colgroup>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
@@ -1509,17 +1509,17 @@ export default {
 
 选择单行数据时使用色块表示。
 
-:::demo Table 组件提供了单选的支持，只需要配置`highlight-current-row`属性即可实现单选。之后由`current-change`事件来管理选中时触发的事件，它会传入`currentRow`，`oldCurrentRow`。如果需要显示索引，可以增加一列`jy-column`，设置`type`属性为`index`即可显示从 1 开始的索引号。
+:::demo Table 组件提供了单选的支持，只需要配置`highlight-current-row`属性即可实现单选。之后由`current-change`事件来管理选中时触发的事件，它会传入`currentRow`，`oldCurrentRow`。如果需要显示索引，可以增加一列`gj-column`，设置`type`属性为`index`即可显示从 1 开始的索引号。
 ```html
 <template>
   <div>
     <p class="tip">单选表格，用户手动选中时会触发事件 radio-change，还通过 "highlight" 设置高亮选中行</p>
 
-    <jy-button @click="$refs.xTable1.setRadioRow(tableData[1])">设置第二行选中</jy-button>
-          <jy-button @click="clearRadioRowEevnt">取消选中</jy-button>
-          <jy-button @click="getRadioEvent1">获取选中</jy-button>
+    <gj-button @click="$refs.xTable1.setRadioRow(tableData[1])">设置第二行选中</gj-button>
+          <gj-button @click="clearRadioRowEevnt">取消选中</gj-button>
+          <gj-button @click="getRadioEvent1">获取选中</gj-button>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable1"
       
@@ -1527,13 +1527,13 @@ export default {
       :radio-config="{highlight: true}"
       @cell-click="cellClickEvent"
       @radio-change="radioChangeEvent">
-      <jy-column type="radio" width="40" align="center">
+      <gj-column type="radio" width="40" align="center">
         
-      </jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
 
@@ -1543,23 +1543,23 @@ export default {
 
     <div style="margin-bottom:20px">
       <template>
-        <jy-button @click="$refs.xTable2.setRadioRow(tableData[0])">设置第一行选中（如果被禁用，不可选中）</jy-button>
-        <jy-button @click="$refs.xTable2.setRadioRow(tableData[1])">设置第二行选中</jy-button>
-        <jy-button @click="$refs.xTable2.clearRadioRow()">清除所有行选中</jy-button>
+        <gj-button @click="$refs.xTable2.setRadioRow(tableData[0])">设置第一行选中（如果被禁用，不可选中）</gj-button>
+        <gj-button @click="$refs.xTable2.setRadioRow(tableData[1])">设置第二行选中</gj-button>
+        <gj-button @click="$refs.xTable2.clearRadioRow()">清除所有行选中</gj-button>
       </template>
     </div>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable2"
       
       :radio-config="{labelField: 'name', checkMethod: checkRadioMethod}"
       :data="tableData">
-      <jy-column type="radio" title="请选择" width="100"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" title="请选择" width="100"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
 
 
@@ -1568,70 +1568,70 @@ export default {
       <span class="red">（注：默认行为只会在 reload 之后触发一次）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       
       :row-config="{keyField: 'id'}"
       :data="tableData"
       :radio-config="{checkRowKey: defaultSelecteRow}">
-      <jy-column type="radio" width="40"></jy-column>
-      <jy-column field="id" title="ID"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" width="40"></gj-column>
+      <gj-column field="id" title="ID"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
     <p class="tip">单选的默认行为是不允许取消的，可以通过设置 "radio-config.strict=false" 允许取消</p>
 
-    <jy-table
+    <gj-table
       border
       
       :radio-config="{strict: false}"
       :data="tableData"
       @radio-change="radioChangeEvent4">
-      <jy-column type="radio" width="40"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" width="40"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
     <p class="tip">两种方式混合使用</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-current-row
       
       :radio-config="{labelField: 'name'}"
       :data="tableData">
-      <jy-column type="radio" title="还可以这样" width="120"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" title="还可以这样" width="120"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
     <p class="tip">当然也可以两种方式同时使用</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       highlight-current-row
       
       :radio-config="{labelField: 'name', trigger: 'row'}"
       :data="tableData">
-      <jy-column type="radio" title="还可以这样" width="120"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" title="还可以这样" width="120"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   </div>
 </template>
@@ -1687,30 +1687,30 @@ export default {
 
 选择多行数据时使用 Checkbox。
 
-:::demo 实现多选非常简单: 手动添加一个`jy-column`，设`type`属性为`selection`即可；默认情况下若内容过多会折行显示，若需要单行显示可以使用`show-overflow-tooltip`属性，它接受一个`Boolean`，为`true`时多余的内容会在 hover 时以 tooltip 的形式显示出来。
+:::demo 实现多选非常简单: 手动添加一个`gj-column`，设`type`属性为`selection`即可；默认情况下若内容过多会折行显示，若需要单行显示可以使用`show-overflow-tooltip`属性，它接受一个`Boolean`，为`true`时多余的内容会在 hover 时以 tooltip 的形式显示出来。
 ```html
 <template>
   <div>
     <p class="tip">多选表格，用户手动勾选时会触发事件 "checkbox-change"</p>
 
-    <jy-button @click="$refs.xTable1.toggleCheckboxRow(tableData[1])">切换第二行选中</jy-button>
-           <jy-button @click="$refs.xTable1.setCheckboxRow([tableData[2], tableData[3]], true)">设置第三、四行选中</jy-button>
-           <jy-button @click="$refs.xTable1.setAllCheckboxRow(true)">设置所有行选中</jy-button>
-           <jy-button @click="$refs.xTable1.clearCheckboxRow()">清除所有行选中</jy-button>
-           <jy-button @click="getSelectEvent1">获取选中</jy-button>
+    <gj-button @click="$refs.xTable1.toggleCheckboxRow(tableData[1])">切换第二行选中</gj-button>
+           <gj-button @click="$refs.xTable1.setCheckboxRow([tableData[2], tableData[3]], true)">设置第三、四行选中</gj-button>
+           <gj-button @click="$refs.xTable1.setAllCheckboxRow(true)">设置所有行选中</gj-button>
+           <gj-button @click="$refs.xTable1.clearCheckboxRow()">清除所有行选中</gj-button>
+           <gj-button @click="getSelectEvent1">获取选中</gj-button>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable1"
       :data="tableData"
       @checkbox-all="selectAllEvent"
       @checkbox-change="selectChangeEvent">
-      <jy-column type="checkbox" width="40"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="40"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
@@ -1718,59 +1718,59 @@ export default {
       还可以通过 "checkMethod" 方法控制 checkbox 是否允许用户手动勾选，还可以配置 "visibleMethod" 是否显示复选框<br>
     </p>
 
-    <jy-button @click="$refs.xTable2.toggleCheckboxRow(tableData2[0])">设置第一行选中（如果被禁用，不可选中）</jy-button>
-           <jy-button @click="$refs.xTable2.toggleCheckboxRow(tableData2[1])">切换第二行选中</jy-button>
-           <jy-button @click="$refs.xTable2.setCheckboxRow([tableData2[2], tableData2[3]], true)">设置第三、四行选中</jy-button>
-           <jy-button @click="$refs.xTable2.setAllCheckboxRow(true)">设置所有行选中</jy-button>
-           <jy-button @click="$refs.xTable2.clearCheckboxRow()">清除所有行选中</jy-button>
+    <gj-button @click="$refs.xTable2.toggleCheckboxRow(tableData2[0])">设置第一行选中（如果被禁用，不可选中）</gj-button>
+           <gj-button @click="$refs.xTable2.toggleCheckboxRow(tableData2[1])">切换第二行选中</gj-button>
+           <gj-button @click="$refs.xTable2.setCheckboxRow([tableData2[2], tableData2[3]], true)">设置第三、四行选中</gj-button>
+           <gj-button @click="$refs.xTable2.setAllCheckboxRow(true)">设置所有行选中</gj-button>
+           <gj-button @click="$refs.xTable2.clearCheckboxRow()">清除所有行选中</gj-button>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable2"
       :data="tableData2"
       :checkbox-config="{labelField: 'name', checkMethod: checCheckboxkMethod2, visibleMethod: showCheckboxkMethod2}">
-      <jy-column type="checkbox" title="All"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="All"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
 
     <p class="tip">当表格中不存在有效数据时列头复选框为禁用状态</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData"
       :checkbox-config="{labelField: 'name', checkMethod:checCheckboxkMethod3}">
-      <jy-column type="checkbox" title="All"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="All"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
     <p class="tip">多选表格，通过配置 "trigger" 设置触发源，使用渲染最快的 "checkField" 属性绑定方式</p>
 
-   <jy-button @click="$refs.xTable4.toggleCheckboxRow(tableData4[1])">切换第二行选中</jy-button>
-          <jy-button @click="$refs.xTable4.setCheckboxRow([tableData4[2], tableData4[3]], true)">设置第三、四行选中</jy-button>
-          <jy-button @click="$refs.xTable4.setAllCheckboxRow(true)">设置所有行选中</jy-button>
-          <jy-button @click="$refs.xTable4.clearCheckboxRow()">清除所有行选中</jy-button>
+   <gj-button @click="$refs.xTable4.toggleCheckboxRow(tableData4[1])">切换第二行选中</gj-button>
+          <gj-button @click="$refs.xTable4.setCheckboxRow([tableData4[2], tableData4[3]], true)">设置第三、四行选中</gj-button>
+          <gj-button @click="$refs.xTable4.setAllCheckboxRow(true)">设置所有行选中</gj-button>
+          <gj-button @click="$refs.xTable4.clearCheckboxRow()">清除所有行选中</gj-button>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       class="checkbox-table"
       ref="xTable4"
       :data="tableData4"
       :checkbox-config="{checkField: 'checked', trigger: 'row'}">
-      <jy-column type="checkbox" width="40"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="40"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
@@ -1779,61 +1779,61 @@ export default {
       <span class="red">（注：默认行为只会在 reload 之后触发一次）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       :row-config="{keyField: 'id'}"
       :data="tableData5"
       :checkbox-config="{checkRowKeys: defaultSelecteRows, highlight: true}"
       :radio-config="{labelField: 'name'}">
-      <jy-column type="checkbox" width="40"></jy-column>
-      <jy-column field="id" title="ID"></jy-column>
-      <jy-column type="radio" width="300" title="Name"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="40"></gj-column>
+      <gj-column field="id" title="ID"></gj-column>
+      <gj-column type="radio" width="300" title="Name"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
    
 
     <p class="tip">通过"checkStrictly" 设置父子节点不互相关联，启用后"showHeader" 默认为 false</p>
 
-   <jy-button @click="$refs.xTable6.setCheckboxRow(tableData, true)">设置所有行选中</jy-button>
-          <jy-button @click="$refs.xTable6.clearCheckboxRow()">清除所有行选中</jy-button>
+   <gj-button @click="$refs.xTable6.setCheckboxRow(tableData, true)">设置所有行选中</gj-button>
+          <gj-button @click="$refs.xTable6.clearCheckboxRow()">清除所有行选中</gj-button>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       ref="xTable6"
       :data="tableData"
       :checkbox-config="{checkStrictly: true}">
-      <jy-column type="checkbox" width="40"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="40"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
 
     <p class="tip">多选可单选同时使用</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       :data="tableData"
       :radio-config="{labelField: 'name'}">
-      <jy-column type="checkbox" width="40"></jy-column>
-      <jy-column type="radio" width="300" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="40"></gj-column>
+      <gj-column type="radio" width="300" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     
 
     <p class="tip">不仅如此，还可以多种方式混合使用，通过"range" 启用范围选中，通过鼠标按住复选框的列，向上或向下滑动选取，还可以同时按住 Ctrl 键局部选取</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       highlight-hover-row
@@ -1842,12 +1842,12 @@ export default {
       :data="tableData8"
       :radio-config="{labelField: 'role'}"
       :checkbox-config="{labelField: 'name', highlight: true, range: true}">
-      <jy-column type="checkbox" title="Name"></jy-column>
-      <jy-column type="radio" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="Name"></gj-column>
+      <gj-column type="radio" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
   
   </div>
@@ -1948,79 +1948,79 @@ export default {
       还可以通过调用"sort" 方法实现手动排序
     </p>
         <div style="margin-bottom:20px">
-                    <jy-button @click="$refs.xTable.sort('name', 'asc')">Name 升序</jy-button>
-                   <jy-button @click="$refs.xTable.sort('name', 'desc')">Name 降序</jy-button>
-                   <jy-button @click="$refs.xTable.clearSort()">清除排序</jy-button>
+                    <gj-button @click="$refs.xTable.sort('name', 'asc')">Name 升序</gj-button>
+                   <gj-button @click="$refs.xTable.sort('name', 'desc')">Name 降序</gj-button>
+                   <gj-button @click="$refs.xTable.clearSort()">清除排序</gj-button>
         </div>
          
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       ref="xTable"
       
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="num" title="字符串" sort-type="string" sortable></jy-column>
-      <jy-column field="num2" title="数值" sort-type="number" sortable></jy-column>
-      <jy-column field="address" title="Address" sortable></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="num" title="字符串" sort-type="string" sortable></gj-column>
+      <gj-column field="num2" title="数值" sort-type="number" sortable></gj-column>
+      <gj-column field="address" title="Address" sortable></gj-column>
+    </gj-table>
 
    
 
     <p class="tip">配置 " prop="sort-by" 指定字段排序、或者方法返回自定义排序的值；例如：当使用格式化函数时，排序还是使用原始值</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       
       :data="tableData2">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :sort-by="sortNameMethod2" sortable>
-      </jy-column>
-      <jy-column field="num" title="Num" sortable></jy-column>
-      <jy-column field="num1" title="分离格式化与数值字段" sort-by="num1" sortable ></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :sort-by="sortNameMethod2" sortable>
+      </gj-column>
+      <gj-column field="num" title="Num" sortable></gj-column>
+      <gj-column field="num1" title="分离格式化与数值字段" sort-by="num1" sortable ></gj-column>
+    </gj-table>
     <p class="tip">配置"sort-config".sortMethod" 自定义排序</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       
       :data="tableData3"
       :sort-config="{sortMethod: customSortMethod}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="num1" title="Num1"></jy-column>
-      <jy-column field="num2" title="Num2"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="num1" title="Num1"></gj-column>
+      <gj-column field="num2" title="Num2"></gj-column>
+    </gj-table>
 
    
 
     <p class="tip">配置"multiple" 启用多字段组合排序</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       
       :sort-config="{multiple: true}"
       :data="tableData4"
       @sort-change="sortChangeEvent3">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="num" title="Num" sortable></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="num" title="Num" sortable></gj-column>
+    </gj-table>
 
     
 
     <p class="tip">点击表头排序，通过"defaultSort" 默认排序、orders" 自定义轮转顺序、通过配置"trigger" 设置触发源</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       highlight-hover-column
@@ -2028,13 +2028,13 @@ export default {
       :data="tableData"
       :sort-config="{trigger: 'cell', defaultSort: {field: 'age', order: 'desc'}, orders: ['desc', 'asc', null]}"
       @sort-change="sortChangeEvent4">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="sex" title="Sex" sortable></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="address" title="Address" sortable></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="sex" title="Sex" sortable></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="address" title="Address" sortable></gj-column>
+    </gj-table>
 
     
   </div>
@@ -2196,21 +2196,21 @@ export default {
       &nbsp;&nbsp;<span class="orange">resetFilter() 清除筛选条件</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       ref="xTable1"
       :data="tableData"
       @filter-visible="filterVisibleEvent"
       @filter-change="filterChangeEvent">
-      <jy-column field="id" title="ID"></jy-column>
-      <jy-column field="name" title="Name" sortable :filters="[]" :filter-method="filterNameMethod"></jy-column>
-      <jy-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></jy-column>
-      <jy-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
+      <gj-column field="id" title="ID"></gj-column>
+      <gj-column field="name" title="Name" sortable :filters="[]" :filter-method="filterNameMethod"></gj-column>
+      <gj-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></gj-column>
+      <gj-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
        
-      </jy-column>
-      <jy-column field="time" title="Time" sortable></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="time" title="Time" sortable></gj-column>
+    </gj-table>
   </div>
 </template>
 
@@ -2273,53 +2273,53 @@ export default {
   <div>
     <p class="tip">当数据为空时，通过"empty-text" 设置空数据提示文本，可以使用 <router-link class="link" :to="{name: 'RendererEmpty'}">渲染器</router-link> 实现全局复用</p>
 
-    <jy-table
+    <gj-table
       empty-text="没有更多数据了！"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
   
 
     <p class="tip">可以通过 slot=empty" 自定义提示语</p>
 
-    <jy-table
+    <gj-table
       border
       :loading="loading"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
       <template slot="empty">
-        <jy-empty empty-type="noResult" description="无搜索结果"></jy-empty>
+        <gj-empty empty-type="noResult" description="无搜索结果"></gj-empty>
       </template>
-    </jy-table>
+    </gj-table>
 
   
 
     <p class="tip">出现滚动条</p>
 
-    <jy-table
+    <gj-table
       border
       
       :loading="loading"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="sex" title="Sex" width="300"></jy-column>
-      <jy-column field="age" title="Age" width="300"></jy-column>
-      <jy-column field="date12" title="Date" width="300"></jy-column>
-      <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="sex" title="Sex" width="300"></gj-column>
+      <gj-column field="age" title="Age" width="300"></gj-column>
+      <gj-column field="date12" title="Date" width="300"></gj-column>
+      <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
       <template #empty  >
-          <jy-empty empty-type="noData"></jy-empty>
+          <gj-empty empty-type="noData"></gj-empty>
 
       </template>
-    </jy-table>
+    </gj-table>
  
   </div>
 </template>
@@ -2356,34 +2356,34 @@ export default {
   <div>
     <p class="tip">通过设置 "loading" 属性可以使用自带的加载效果</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       height="300"
       :loading="true"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
 
     <p class="tip">加载中</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       height="300"
       :loading="loading"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
 
   </div>
@@ -2434,56 +2434,56 @@ export default {
       通过"row-id" 指定主键，还可以通过"trigger" 指定触发方式<br>
     </p>
 
-    <jy-button @click="getTreeExpansionEvent">获取已展开</jy-button>
-           <jy-button @click="$refs.xTree.setAllTreeExpand(true)">展开所有</jy-button>
-           <jy-button @click="$refs.xTree.clearTreeExpand()">关闭所有</jy-button>
+    <gj-button @click="getTreeExpansionEvent">获取已展开</gj-button>
+           <gj-button @click="$refs.xTree.setAllTreeExpand(true)">展开所有</gj-button>
+           <gj-button @click="$refs.xTree.clearTreeExpand()">关闭所有</gj-button>
 
-    <jy-table
+    <gj-table
       resizable
       border="inner"
       ref="xTree"
       :tree-config="{children: 'childs'}"
       :data="tableData1"
       @toggle-tree-expand="toggleExpandChangeEvent">
-      <jy-column type="seq" width="80"></jy-column>
-      <jy-column field="name" title="app.body.label.name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="80"></gj-column>
+      <gj-column field="name" title="app.body.label.name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     
 
     <p class="tip">默认展开树节点，通过"tree-config"={expandRowKeys": []} 设置默认展开树节点的主键</p>
 
-    <jy-table
+    <gj-table
       resizable
       :row-config="{keyField: 'id'}"
       :tree-config="{transform: true, expandRowKeys: defaultExpandKeys}"
       :data="tableData2">
-      <jy-column field="name" title="app.body.label.name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="app.body.label.name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
 
     <p class="tip">默认展开所有树节点，通过"tree-config"={expandAll": true} 设置默认展开所有树节点</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       :row-config="{keyField: 'id'}"
       :data="tableData3"
       :tree-config="{transform: true, expandAll: true}">
-      <jy-column type="seq" width="180" title="序号" tree-node></jy-column>
-      <jy-column field="name" title="app.body.label.name"></jy-column>
-      <jy-colgroup title="基本信息">
-        <jy-column field="size" title="Size"></jy-column>
-        <jy-column field="type" title="Type"></jy-column>
-      </jy-colgroup>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="180" title="序号" tree-node></gj-column>
+      <gj-column field="name" title="app.body.label.name"></gj-column>
+      <gj-colgroup title="基本信息">
+        <gj-column field="size" title="Size"></gj-column>
+        <gj-column field="type" title="Type"></gj-column>
+      </gj-colgroup>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
    
   </div>
@@ -2596,7 +2596,7 @@ export default {
       " prop="edit"：自定义可编辑模板（建议使用<router-link :to="{name: 'RendererAPI'}">渲染器</router-link>，可以更好的复用）
     </p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-footer
@@ -2606,8 +2606,8 @@ export default {
       :data="tableData"
       @checkbox-change="checkboxChangeEvent"
       @checkbox-all="checkboxChangeEvent">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="160" :resizable="false" show-overflow>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="160" :resizable="false" show-overflow>
         <template #header>
           <div class="first-col">
             <div class="first-col-top">名称</div>
@@ -2615,62 +2615,62 @@ export default {
           </div>
         </template>
         <template #footer="{ items, _columnIndex }">
-          <jy-button status="primary" @click="clickFooterItem(items, _columnIndex)" size="mini">支持</jy-button>
-          <jy-button @click="clickFooterItem(items, _columnIndex)" size="mini">test abc</jy-button>
+          <gj-button status="primary" @click="clickFooterItem(items, _columnIndex)" size="mini">支持</gj-button>
+          <gj-button @click="clickFooterItem(items, _columnIndex)" size="mini">test abc</gj-button>
         </template>
-      </jy-column>
-      <jy-column field="name" width="200" title="app.body.label.name" sortable>
+      </gj-column>
+      <gj-column field="name" width="200" title="app.body.label.name" sortable>
         <template #default="{ row }">
           <a href="http://confluence.gildata.com/pages/viewpage.action?pageId=135531865" target="_black">我是超链接：{{ row.name }}</a>
         </template>
-      </jy-column>
-      <jy-column field="time" width="200" title="Time">
+      </gj-column>
+      <gj-column field="time" width="200" title="Time">
         <template #header>
-          <jy-input v-model="value1" placeholder="放个输入框" size="mini"></jy-input>
+          <gj-input v-model="value1" placeholder="放个输入框" size="mini"></gj-input>
         </template>
         <template #default="{ row, rowIndex }">
           <template v-if="rowIndex === 2">
-             <jy-radio v-model="row.flag" label="1">备选项</jy-radio>
-             <jy-checkbox v-model="row.flag">备选项</jy-checkbox>
+             <gj-radio v-model="row.flag" label="1">备选项</gj-radio>
+             <gj-checkbox v-model="row.flag">备选项</gj-checkbox>
           </template>
           <template v-else-if="rowIndex === 3">
-            <jy-switch v-model="row.flag" open-label="开" close-label="关"></jy-switch>
+            <gj-switch v-model="row.flag" open-label="开" close-label="关"></gj-switch>
           </template>
           <template v-else>
             <span>{{ formatDate(row.time) }}</span>
           </template>
         </template>
-      </jy-column>
-      <jy-column field="address" title="Address" width="200" show-overflow>
+      </gj-column>
+      <gj-column field="address" title="Address" width="200" show-overflow>
         <template #default="{ row, rowIndex }">
           <template v-if="rowIndex === 1">
-            <jy-select v-model="row.flag1" transfer>
-              <jy-option value="Y" label="是"></jy-option>
-              <jy-option value="N" label="否"></jy-option>
-            </jy-select>
+            <gj-select v-model="row.flag1" transfer>
+              <gj-option value="Y" label="是"></gj-option>
+              <gj-option value="N" label="否"></gj-option>
+            </gj-select>
           </template>
           <template v-else>
-            <a href="https://github.com/x-extends/jy-table">{{ row.name }}</a>
+            <a href="https://github.com/x-extends/gj-table">{{ row.name }}</a>
           </template>
         </template>
-      </jy-column>
-      <jy-column field="html1" title="Html片段" width="200" show-overflow>
+      </gj-column>
+      <gj-column field="html1" title="Html片段" width="200" show-overflow>
         <template #default="{ row }">
           <span v-html="row.html1"></span>
         </template>
         <template #footer>
           <span>
-            <img src="../../assets/images/intro-theme-b.png" style="width: 36px;">自定义模板<img src="/jy-table/static/other/img2.gif" style="width: 30px;">
+            <img src="../../assets/images/intro-theme-b.png" style="width: 36px;">自定义模板<img src="/gj-table/static/other/img2.gif" style="width: 30px;">
           </span>
         </template>
-      </jy-column>
-      <jy-column field="img1" title="图片路径" width="120">
+      </gj-column>
+      <gj-column field="img1" title="图片路径" width="120">
         <template #default="{ row }">
           <img v-if="row.img1" :src="row.img1" style="width: 100px;">
           <span v-else>无</span>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
    
 
@@ -2807,58 +2807,58 @@ export default {
       <span class="red">（注：span-method" ，不能用于虚拟滚动、树形结构、展开行、固定列，合并的逻辑都是自行实现的，该示例仅供参考）</span>
     </p>
 
-   <jy-button @click="allAlign = 'left'">居左</jy-button>
-           <jy-button @click="allAlign = 'center'">居中</jy-button>
-           <jy-button @click="allAlign = 'right'">居右</jy-button>
+   <gj-button @click="allAlign = 'left'">居左</gj-button>
+           <gj-button @click="allAlign = 'center'">居中</gj-button>
+           <gj-button @click="allAlign = 'right'">居右</gj-button>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :stripe="false"
       :align="allAlign"
       :merge-cells="mergeCells"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
  
 
     <p class="tip">合并列</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       
       :scroll-y="{enabled: false}"
       :span-method="colspanMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
    
 
     <p class="tip">合并行</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       
       :scroll-y="{enabled: false}"
       :span-method="mergeRowMethod"
       :data="tableData3">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="key" title="Key"></jy-column>
-      <jy-column field="content" title="Translate"></jy-column>
-      <jy-column field="language" title="Language" :filters="[{label: '中文', value: 'zh_CN' }, {label: 'English', value: 'en_US'}]"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="key" title="Key"></gj-column>
+      <gj-column field="content" title="Translate"></gj-column>
+      <gj-column field="language" title="Language" :filters="[{label: '中文', value: 'zh_CN' }, {label: 'English', value: 'en_US'}]"></gj-column>
+    </gj-table>
 
   
 
@@ -2948,7 +2948,7 @@ export default {
   <div>
     <p class="tip">右键菜单，支持表头菜单、内容菜单、表尾菜单，自定义样式，配置项 ={header,body,footer}</p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       highlight-current-row
@@ -2958,12 +2958,12 @@ export default {
       :data="tableData"
       :menu-config="tableMenu"
       @menu-click="contextMenuClickEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="time" title="Time"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="time" title="Time"></gj-column>
+    </gj-table>
   </div>
 </template>
 
@@ -3095,7 +3095,7 @@ export default {
 
 
 
-### JY-TABLE API
+### gj-TABLE API
 
 
 <iframe height="865" style="width: 100%;" scrolling="no" title="GildataDesign demo" src="http://10.106.1.122//tableDoc/#/table/api" frameborder="no" allowtransparency="true" allowfullscreen="true">
@@ -3103,7 +3103,7 @@ export default {
   (<a href='https://codepen.io/ziyoung'>@ziyoung</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### JY-COLUM API
+### gj-COLUM API
 
 
 <iframe height="865" style="width: 100%;" scrolling="no" title="GildataDesign demo" src="http://10.106.1.122/tableDoc/#/column/api" frameborder="no" allowtransparency="true" allowfullscreen="true">

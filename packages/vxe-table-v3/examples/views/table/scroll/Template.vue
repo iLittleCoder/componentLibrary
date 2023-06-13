@@ -64,7 +64,7 @@ export default {
           slots: {
             default: ({ row }) => {
               return [
-                <a class="link" href="https://x-extends.github.io/jy-table/">我是超链接：{ row.sex }</a>
+                <a class="link" href="https://x-extends.github.io/gj-table/">我是超链接：{ row.sex }</a>
               ]
             },
             header: ({ column }) => {
@@ -186,7 +186,7 @@ export default {
                   slots: {
                     default: ({ row, column }) => {
                       return [
-                        <a class="link" href="https://x-extends.github.io/jy-table/">我是超链接：{ row.sex }</a>
+                        <a class="link" href="https://x-extends.github.io/gj-table/">我是超链接：{ row.sex }</a>
                       ]
                     },
                     header: ({ column }) => {
@@ -283,7 +283,7 @@ export default {
                     age: 18,
                     num2: 234,
                     rate: 3,
-                    img1: '/jy-table/static/other/img1.gif',
+                    img1: '/gj-table/static/other/img1.gif',
                     html2: \`<span style="color:red">HTML标签\${index}</span>\`,
                     address: \`test abc系列\${index}\`
                   })
@@ -363,7 +363,7 @@ export default {
             age: 18,
             num2: 234,
             rate: 3,
-            img1: '/jy-table/static/other/img1.gif',
+            img1: '/gj-table/static/other/img1.gif',
             html2: `<span style="color:red">HTML标签${index}</span>`,
             address: `test abc系列${index}`
           })

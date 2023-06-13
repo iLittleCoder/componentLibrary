@@ -82,7 +82,7 @@ const renderItem = (h, _vm, item, slots) => {
     mouseleave: _vm.handleTitleTipLeaveEvent
   } : {}
   return h('div', {
-    class: ['jy-table-form--item', item.id, span ? `jy-table-col--${span} is--span` : null, className ? (XEUtils.isFunction(className) ? className(params) : className) : '', {
+    class: ['gj-table-form--item', item.id, span ? `gj-table-col--${span} is--span` : null, className ? (XEUtils.isFunction(className) ? className(params) : className) : '', {
       'is--title': title,
       'is--required': isRequired,
       'is--hidden': visible === false || (folding && collapseAll),
@@ -91,10 +91,10 @@ const renderItem = (h, _vm, item, slots) => {
     }]
   }, [
     h('div', {
-      class: 'jy-table-form--item-inner'
+      class: 'gj-table-form--item-inner'
     }, [
       title || (slots && slots.title) ? h('div', {
-        class: ['jy-table-form--item-title', titleAlign ? `align--${titleAlign}` : null, {
+        class: ['gj-table-form--item-title', titleAlign ? `align--${titleAlign}` : null, {
           'is--ellipsis': hasEllipsis
         }],
         style: titleWidth ? {
@@ -106,24 +106,24 @@ const renderItem = (h, _vm, item, slots) => {
         on: ons
       }, renderTitle(h, _vm, item)) : null,
       h('div', {
-        class: ['jy-table-form--item-content', align ? `align--${align}` : null]
+        class: ['gj-table-form--item-content', align ? `align--${align}` : null]
       }, contentVNs.concat(
         [
           collapseNode ? h('div', {
-            class: 'jy-table-form--item-trigger-node',
+            class: 'gj-table-form--item-trigger-node',
             on: {
               click: _vm.toggleCollapseEvent
             }
           }, [
             h('span', {
-              class: 'jy-table-form--item-trigger-text'
+              class: 'gj-table-form--item-trigger-text'
             }, collapseAll ? GlobalConfig.i18n('vxe.form.unfolding') : GlobalConfig.i18n('vxe.form.folding')),
             h('i', {
-              class: ['jy-table-form--item-trigger-icon', collapseAll ? GlobalConfig.icon.FORM_FOLDING : GlobalConfig.icon.FORM_UNFOLDING]
+              class: ['gj-table-form--item-trigger-icon', collapseAll ? GlobalConfig.icon.FORM_FOLDING : GlobalConfig.icon.FORM_UNFOLDING]
             })
           ]) : null,
           errRule && validOpts.showMessage ? h('div', {
-            class: 'jy-table-form--item-valid',
+            class: 'gj-table-form--item-valid',
             style: errRule.maxWidth ? {
               width: `${errRule.maxWidth}px`
             } : null

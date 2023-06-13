@@ -8,8 +8,8 @@
   white-space: nowrap;
 }
 
-.jy-table {
-  [class*="jy-"] {
+.gj-table {
+  [class*="gj-"] {
     font-variant: tabular-nums;
     font-feature-settings: 'tnum';
     @extend %boxSizing;
@@ -18,32 +18,32 @@
       @extend %boxSizing;
     }
   }
-  .jy-checkbox__inner::after{
+  .gj-checkbox__inner::after{
     box-sizing: content-box;
   }
 }
 
-.jy-primary-color {
-  color: $jy-primary-color;
+.gj-primary-color {
+  color: $gj-primary-color;
 }
-.jy-success-color {
-  color: $jy-success-color;
+.gj-success-color {
+  color: $gj-success-color;
 }
-.jy-info-color {
-  color: $jy-info-color;
+.gj-info-color {
+  color: $gj-info-color;
 }
-.jy-warning-color {
-  color: $jy-warning-color;
+.gj-warning-color {
+  color: $gj-warning-color;
 }
-.jy-danger-color {
-  color: $jy-danger-color;
+.gj-danger-color {
+  color: $gj-danger-color;
 }
-.jy-perfect-color {
-  color: $jy-table-header-background-color;
+.gj-perfect-color {
+  color: $gj-table-header-background-color;
 }
 
 // 24 栅格布局
-.jy-row {
+.gj-row {
   $spans: 4.16667%, 8.33333%, 12.5%, 16.66667%, 20.83333%, 25%, 29.16667%, 33.33333%,
           37.5%, 41.66667%, 45.83333%, 50%, 54.16667%, 58.33333%, 62.5%, 66.66667%,
           70.83333%, 75%, 79.16667%, 83.33333%, 87.5%, 91.66667%, 95.83333%, 100%;
@@ -56,7 +56,7 @@
     visibility: hidden;
   }
   @for $index from 0 to length($spans) {
-    & > .jy-col--#{$index + 1} {
+    & > .gj-col--#{$index + 1} {
       float: left;
       width: nth($spans, $index + 1);
     }
@@ -65,25 +65,25 @@
 
 /*animat*/
 .is--animat {
-  .jy-sort--asc-btn,
-  .jy-sort--desc-btn,
-  .jy-filter--btn {
+  .gj-sort--asc-btn,
+  .gj-sort--desc-btn,
+  .gj-filter--btn {
     &:before,
     &:after {
       @include animatTransition(border);
     }
   }
-  .jy-input--wrapper {
-    .jy-input {
+  .gj-input--wrapper {
+    .gj-input {
       @include animatTransition(border);
     }
   }
-  .jy-table--expand-btn,
-  .jy-tree--node-btn {
+  .gj-table--expand-btn,
+  .gj-tree--node-btn {
     @include animatTransition(transform);
   }
-  .jy-checkbox,
-  .jy-radio {
+  .gj-checkbox,
+  .gj-radio {
     > input {
       &:checked+span {
         @include animatTransition(background-color);

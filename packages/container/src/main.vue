@@ -1,14 +1,14 @@
 <template>
-  <section class="jy-container" :class="{ 'is-vertical': isVertical }">
+  <section class="gj-container" :class="{ 'is-vertical': isVertical }">
     <slot></slot>
   </section>
 </template>
 
 <script>
   export default {
-    name: 'JyContainer',
+    name: 'GjContainer',
 
-    componentName: 'JyContainer',
+    componentName: 'GjContainer',
 
     props: {
       direction: String
@@ -24,7 +24,7 @@
         return this.$slots && this.$slots.default
           ? this.$slots.default.some(vnode => {
             const tag = vnode.componentOptions && vnode.componentOptions.tag;
-            return tag === 'jy-header' || tag === 'jy-footer';
+            return tag === 'gj-header' || tag === 'gj-footer';
           })
           : false;
       }

@@ -11,18 +11,18 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       ref="xTree"
       max-height="400"
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
       :data="tableData">
-      <jy-column field="name" title="app.body.label.name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="app.body.label.name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -66,18 +66,18 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           ref="xTree"
           max-height="400"
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :data="tableData">
-          <jy-column field="name" title="app.body.label.name" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="app.body.label.name" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {

@@ -1,8 +1,8 @@
 <script>
-import JyScrollbar from 'GildataDesign/packages/scrollbar';
+import GjScrollbar from 'GildataDesign/packages/scrollbar';
 export default {
-  name: 'JyTimeline',
-  components: { JyScrollbar },
+  name: 'GjTimeline',
+  components: { GjScrollbar },
   props: {
     reverse: {
       type: Boolean,
@@ -36,9 +36,9 @@ export default {
     const direction = this.direction;
     const turns = this.turns;
     const classes = {
-      'jy-timeline': true,
+      'gj-timeline': true,
       'is-reverse': reverse,
-      ['jy-timeline__' + direction]: true,
+      ['gj-timeline__' + direction]: true,
       'is-turns': turns
     };
     let slots = this.$slots.default || [];
@@ -52,11 +52,11 @@ export default {
         paddingTop: this.dataOdd + 22 + 'px'
       };
       return (
-        <jy-scrollbar>
+        <gj-scrollbar>
           <ul class={classes} style={allHeight} id="timeline-ul">
             {slots}
           </ul>
-        </jy-scrollbar>
+        </gj-scrollbar>
       );
     } else {
       return <ul class={classes}>{slots}</ul>;
@@ -95,7 +95,7 @@ export default {
   methods: {
     getChildrenData() {
       if (this.isTurns) {
-        let data = this.$el.querySelectorAll('.jy-timeline-item__wrapper');
+        let data = this.$el.querySelectorAll('.gj-timeline-item__wrapper');
         let oneList = [];
         let twoList = [];
         for (let i = 0; i < data.length; i++) {

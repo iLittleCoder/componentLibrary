@@ -1,8 +1,8 @@
 <template>
-  <jy-input
-    class="jy-date-editor"
+  <gj-input
+    class="gj-date-editor"
     :class="[
-      'jy-date-editor--' + type,
+      'gj-date-editor--' + type,
       !border ? 'no-border' : '',
       !!displayValue && displayValue.length > 0 ? 'text-active' : '',
       !border && !!displayValue && displayValue.length > 0 ? 'nb-active' : ''
@@ -28,7 +28,7 @@
     <i
       slot="suffix"
       @click="handleClickIcon"
-      class="jy-input__icon "
+      class="gj-input__icon "
       :class="[showClose ? '' + clearIcon : '']"
       v-if="haveTrigger"
     >
@@ -36,7 +36,7 @@
     <i
       slot="suffix"
       :class="[
-        'jy-input__icon',
+        'gj-input__icon',
         triggerClass,
         !!displayValue && displayValue.length > 0 ? 'text-active' : ''
       ]"
@@ -44,20 +44,20 @@
       v-if="!showClose"
     >
     </i>
-  </jy-input>
+  </gj-input>
   <div
-    class="jy-date-editor jy-range-editor jy-input__inner jy-date-range-test-outer"
+    class="gj-date-editor gj-range-editor gj-input__inner gj-date-range-test-outer"
     :class="[
-      'jy-date-editor--' + type,
+      'gj-date-editor--' + type,
       !border ? 'no-border' : '',
-      pickerSize ? `jy-range-editor--${pickerSize}` : '',
+      pickerSize ? `gj-range-editor--${pickerSize}` : '',
       pickerDisabled ? 'is-disabled' : '',
       pickerVisible ? 'is-active' : '',
       !!displayValue && displayValue.length === 2 ? 'text-active' : '',
       !border && !!displayValue && displayValue.length === 2 ? 'nb-active' : '',
       pickerSize
-        ? 'jy-date-range-test-outer--' + pickerSize
-        : 'jy-date-range-test-outer--small'
+        ? 'gj-date-range-test-outer--' + pickerSize
+        : 'gj-date-range-test-outer--small'
     ]"
     @click="handleRangeClick"
     @mouseenter="handleMouseEnter"
@@ -67,8 +67,8 @@
     v-clickoutside="handleClose"
     v-else
   >
-    <div class="jy-date-range-content">
-      <div class="jy-date-range-prev">
+    <div class="gj-date-range-content">
+      <div class="gj-date-range-prev">
         <input
           autocomplete="off"
           :placeholder="startPlaceholder"
@@ -80,15 +80,15 @@
           @input="handleStartInput"
           @change="handleStartChange"
           @focus="handleFocus"
-          class="jy-range-input"
+          class="gj-range-input"
         />
       </div>
 
       <slot name="range-separator">
-        <div class="jy-range-separator">{{ rangeSeparator }}</div>
+        <div class="gj-range-separator">{{ rangeSeparator }}</div>
       </slot>
 
-      <div class="jy-date-range-next">
+      <div class="gj-date-range-next">
         <input
           autocomplete="off"
           :placeholder="endPlaceholder"
@@ -100,21 +100,21 @@
           @input="handleEndInput"
           @change="handleEndChange"
           @focus="handleFocus"
-          class="jy-range-input"
+          class="gj-range-input"
         />
       </div>
     </div>
 
-    <div class="jy-date-range-icon">
+    <div class="gj-date-range-icon">
       <i
         v-if="!showClose"
-        :class="['jy-input__icon', 'jy-range__icon', triggerClass]"
+        :class="['gj-input__icon', 'gj-range__icon', triggerClass]"
       ></i>
       <i
         @click="handleClickIcon"
         v-if="haveTrigger && showClose"
         :class="[showClose ? clearIcon : '']"
-        class="jy-input__icon jy-range__close-icon"
+        class="gj-input__icon gj-range__close-icon"
       >
       </i>
     </div>
@@ -130,10 +130,10 @@
       @input="handleStartInput"
       @change="handleStartChange"
       @focus="handleFocus"
-      class="jy-range-input"
+      class="gj-range-input"
     />
     <slot name="range-separator">
-      <span class="jy-range-separator">{{ rangeSeparator }}</span>
+      <span class="gj-range-separator">{{ rangeSeparator }}</span>
     </slot>
     <input
       autocomplete="off"
@@ -146,18 +146,18 @@
       @input="handleEndInput"
       @change="handleEndChange"
       @focus="handleFocus"
-      class="jy-range-input"
+      class="gj-range-input"
     />
 
     <i
       v-if="!showClose"
-      :class="['jy-input__icon', 'jy-range__icon', triggerClass]"
+      :class="['gj-input__icon', 'gj-range__icon', triggerClass]"
     ></i>
     <i
       @click="handleClickIcon"
       v-if="haveTrigger && showClose"
       :class="[showClose ? clearIcon : '']"
-      class="jy-input__icon jy-range__close-icon"
+      class="gj-input__icon gj-range__close-icon"
     >
     </i> -->
   </div>
@@ -174,7 +174,7 @@ import {
 } from 'GildataDesign/src/utils/date-util';
 import Popper from 'GildataDesign/src/utils/vue-popper';
 import Emitter from 'GildataDesign/src/mixins/emitter';
-import JyInput from 'GildataDesign/packages/input';
+import GjInput from 'GildataDesign/packages/input';
 import merge from 'GildataDesign/src/utils/merge';
 
 const NewPopper = {
@@ -491,10 +491,10 @@ export default {
   mixins: [Emitter, NewPopper],
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
@@ -559,7 +559,7 @@ export default {
     }
   },
 
-  components: { JyInput },
+  components: { GjInput },
 
   directives: { Clickoutside },
 
@@ -586,7 +586,7 @@ export default {
         this.emitChange(this.value);
         this.userInput = null;
         if (this.validateEvent) {
-          this.dispatch('JyFormItem', 'el.form.blur');
+          this.dispatch('GjFormItem', 'el.form.blur');
         }
         this.$emit('blur', this);
         this.blur();
@@ -612,7 +612,7 @@ export default {
         !this.pickerVisible &&
         this.validateEvent
       ) {
-        this.dispatch('JyFormItem', 'el.form.change', val);
+        this.dispatch('GjFormItem', 'el.form.change', val);
       }
     }
   },
@@ -738,7 +738,7 @@ export default {
     },
 
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
 
     pickerSize() {
@@ -746,7 +746,7 @@ export default {
     },
 
     pickerDisabled() {
-      return this.disabled || (this.jyForm || {}).disabled;
+      return this.disabled || (this.GjForm || {}).disabled;
     },
 
     firstInputId() {
@@ -1139,7 +1139,7 @@ export default {
         this.$emit('change', val);
         this.valueOnOpen = val;
         if (this.validateEvent) {
-          this.dispatch('JyFormItem', 'el.form.change', val);
+          this.dispatch('GjFormItem', 'el.form.change', val);
         }
       }
     },

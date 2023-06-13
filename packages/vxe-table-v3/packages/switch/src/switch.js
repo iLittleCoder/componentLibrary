@@ -57,7 +57,7 @@ export default {
   render (h) {
     const { isChecked, vSize, className, disabled, openIcon, closeIcon } = this
     return h('div', {
-      class: ['jy-table-switch', className, isChecked ? 'is--on' : 'is--off', {
+      class: ['gj-table-switch', className, isChecked ? 'is--on' : 'is--off', {
         [`size--${vSize}`]: vSize,
         'is--disabled': disabled,
         'is--animat': this.hasAnimat
@@ -65,7 +65,7 @@ export default {
     }, [
       h('button', {
         ref: 'btn',
-        class: 'jy-table-switch--button',
+        class: 'gj-table-switch--button',
         attrs: {
           type: 'button',
           disabled: disabled
@@ -77,23 +77,23 @@ export default {
         }
       }, [
         h('span', {
-          class: 'jy-table-switch--label jy-table-switch--label-on'
+          class: 'gj-table-switch--label gj-table-switch--label-on'
         }, [
           openIcon ? h('i', {
-            class: ['jy-table-switch--label-icon', openIcon]
+            class: ['gj-table-switch--label-icon', openIcon]
           }) : null,
           this.onShowLabel
         ]),
         h('span', {
-          class: 'jy-table-switch--label jy-table-switch--label-off'
+          class: 'gj-table-switch--label gj-table-switch--label-off'
         }, [
           closeIcon ? h('i', {
-            class: ['jy-table-switch--label-icon', closeIcon]
+            class: ['gj-table-switch--label-icon', closeIcon]
           }) : null,
           this.offShowLabel
         ]),
         h('span', {
-          class: 'jy-table-switch--icon',
+          class: 'gj-table-switch--icon',
           style: this.styles
         })
       ])

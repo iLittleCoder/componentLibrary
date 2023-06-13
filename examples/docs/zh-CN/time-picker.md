@@ -12,14 +12,14 @@
 <div>
   <div style="margin-bottom:20px">
     <span class="show-desc">尺寸：</span>
-    <jy-radio-group size="mini" v-model="size" :show-background="false">
-      <jy-radio-button label="large"></jy-radio-button>
-      <jy-radio-button label="medium"> </jy-radio-button>
-      <jy-radio-button label="small"></jy-radio-button>
-      <jy-radio-button label="mini"></jy-radio-button>
-    </jy-radio-group>
+    <gj-radio-group size="mini" v-model="size" :show-background="false">
+      <gj-radio-button label="large"></gj-radio-button>
+      <gj-radio-button label="medium"> </gj-radio-button>
+      <gj-radio-button label="small"></gj-radio-button>
+      <gj-radio-button label="mini"></gj-radio-button>
+    </gj-radio-group>
   </div>
-  <jy-time-select
+  <gj-time-select
     v-model="value"
     :size="size"
     :picker-options="{
@@ -30,9 +30,9 @@
   }"
     placeholder="选择时间"
   >
-  </jy-time-select>
+  </gj-time-select>
 
-  <jy-time-select
+  <gj-time-select
     border
     :size="size"
     v-model="value1"
@@ -44,7 +44,7 @@
   }"
     placeholder="选择时间"
   >
-  </jy-time-select>
+  </gj-time-select>
 </div>
 
 <script>
@@ -70,7 +70,7 @@
 
 ```html
 <template>
-  <jy-time-picker
+  <gj-time-picker
     :style="{width: !!value1? '85px': '100px'}"
     v-model="value1"
     :picker-options="{
@@ -78,8 +78,8 @@
     }"
     placeholder="任意时间点"
   >
-  </jy-time-picker>
-  <jy-time-picker
+  </gj-time-picker>
+  <gj-time-picker
     :style="{ width: !!value2? '85px': '100px'}"
     arrow-control
     v-model="value2"
@@ -88,9 +88,9 @@
     }"
     placeholder="任意时间点"
   >
-  </jy-time-picker>
+  </gj-time-picker>
 
-  <jy-time-picker
+  <gj-time-picker
     border
     :style="{width: '154px'}"
     v-model="value3"
@@ -99,9 +99,9 @@
     }"
     placeholder="任意时间点"
   >
-  </jy-time-picker>
+  </gj-time-picker>
 
-  <jy-time-picker
+  <gj-time-picker
     border
     :style="{width: '154px'}"
     arrow-control
@@ -111,7 +111,7 @@
     }"
     placeholder="任意时间点"
   >
-  </jy-time-picker>
+  </gj-time-picker>
 </template>
 
 <script>
@@ -138,7 +138,7 @@
 
 ```html
 <template>
-  <jy-time-select
+  <gj-time-select
     :style="{width: !!startTime? '70px': '90px'}"
     placeholder="起始时间"
     v-model="startTime"
@@ -148,8 +148,8 @@
       end: '18:30'
     }"
   >
-  </jy-time-select>
-  <jy-time-select
+  </gj-time-select>
+  <gj-time-select
     :style="{width: !!endTime? '70px': '90px'}"
     placeholder="结束时间"
     v-model="endTime"
@@ -160,9 +160,9 @@
       minTime: startTime
     }"
   >
-  </jy-time-select>
+  </gj-time-select>
 
-  <jy-time-select
+  <gj-time-select
     border
     :style="{width: '154px'}"
     placeholder="起始时间"
@@ -173,8 +173,8 @@
       end: '18:30'
     }"
   >
-  </jy-time-select>
-  <jy-time-select
+  </gj-time-select>
+  <gj-time-select
     border
     :style="{width: '154px'}"
     placeholder="结束时间"
@@ -186,7 +186,7 @@
       minTime: startTime
     }"
   >
-  </jy-time-select>
+  </gj-time-select>
 </template>
 
 <script>
@@ -215,15 +215,15 @@
 <template>
   <div style="margin-bottom:20px">
     <span class="show-desc">尺寸：</span>
-    <jy-radio-group size="mini" v-model="size" :show-background="false">
-      <jy-radio-button label="large"></jy-radio-button>
-      <jy-radio-button label="medium"> </jy-radio-button>
-      <jy-radio-button label="small"></jy-radio-button>
-      <jy-radio-button label="mini"></jy-radio-button>
-    </jy-radio-group>
+    <gj-radio-group size="mini" v-model="size" :show-background="false">
+      <gj-radio-button label="large"></gj-radio-button>
+      <gj-radio-button label="medium"> </gj-radio-button>
+      <gj-radio-button label="small"></gj-radio-button>
+      <gj-radio-button label="mini"></gj-radio-button>
+    </gj-radio-group>
   </div>
 
-  <jy-time-picker
+  <gj-time-picker
     is-range
     v-model="value1"
     range-separator="-"
@@ -232,8 +232,8 @@
     placeholder="选择时间范围"
     :size="size"
   >
-  </jy-time-picker>
-  <jy-time-picker
+  </gj-time-picker>
+  <gj-time-picker
     is-range
     arrow-control
     v-model="value2"
@@ -243,9 +243,9 @@
     placeholder="选择时间范围"
     :size="size"
   >
-  </jy-time-picker>
+  </gj-time-picker>
 
-  <jy-time-picker
+  <gj-time-picker
     border
     is-range
     v-model="value3"
@@ -255,8 +255,8 @@
     placeholder="选择时间范围"
     :size="size"
   >
-  </jy-time-picker>
-  <jy-time-picker
+  </gj-time-picker>
+  <gj-time-picker
     border
     is-range
     arrow-control
@@ -267,7 +267,7 @@
     placeholder="选择时间范围"
     :size="size"
   >
-  </jy-time-picker>
+  </gj-time-picker>
 </template>
 
 <script>
@@ -300,8 +300,8 @@
 | placeholder       | 非范围选择时的占位内容                                               | string                                | —                                                        | —                    |
 | start-placeholder | 范围选择时开始日期的占位内容                                         | string                                | —                                                        | —                    |
 | end-placeholder   | 范围选择时开始日期的占位内容                                         | string                                | —                                                        | —                    |
-| is-range          | 是否为时间范围选择，仅对`<jy-time-picker>`有效                       | boolean                               | —                                                        | false                |
-| arrow-control     | 是否使用箭头进行时间选择，仅对`<jy-time-picker>`有效                 | boolean                               | —                                                        | false                |
+| is-range          | 是否为时间范围选择，仅对`<gj-time-picker>`有效                       | boolean                               | —                                                        | false                |
+| arrow-control     | 是否使用箭头进行时间选择，仅对`<gj-time-picker>`有效                 | boolean                               | —                                                        | false                |
 | align             | 对齐方式                                                             | string                                | left / center / right                                    | left                 |
 | popper-class      | TimePicker 下拉框的类名                                              | string                                | —                                                        | —                    |
 | picker-options    | 当前时间日期选择器特有的选项参考下表                                 | object                                | —                                                        | {}                   |

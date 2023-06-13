@@ -4,18 +4,17 @@
 
 ```shell
 
-npm config set registry https://repo.gildata.com/artifactory/api/npm/npmhundsun/
 
-npm install GildataDesign -S
+npm i component-library-gj -S
 ```
 
 ## Quick Start
 
 ```javascript
-import GildataDesign from 'GildataDesign';
+import componentLibraryGj from 'component-library-gj';
 import 'component-library-gj/lib/theme-chalk/index.css';
 
-Vue.use(GildataDesign);
+Vue.use(componentLibraryGj);
 
 // or
 import {
@@ -34,11 +33,9 @@ Modern browsers and Internet Explorer 10+.
 
 ## Website
 
-[中文](http://10.106.1.122/gildataDesign/#/zh-CN/component/quickstart)
 
 ## Changelog
 
-[更新日志](http://10.106.1.122/gildataDesign/#/zh-CN/component/changelog).
 
 ## Custom Theme
 

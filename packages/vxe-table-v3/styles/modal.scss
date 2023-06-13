@@ -1,7 +1,7 @@
 /**Variable**/
 @import './helpers/mixin.scss';
 
-.jy-table-modal--wrapper {
+.gj-table-modal--wrapper {
   display: none;
   position: fixed;
   top: 0;
@@ -9,8 +9,8 @@
   line-height: 1.5;
   width: calc(100% + 18px);
   height: calc(100% + 18px);
-  color: $jy-font-color;
-  font-family: $jy-font-family;
+  color: $gj-font-color;
+  font-family: $gj-font-family;
   transition: top .4s ease-in-out;
   &.is--active {
     display: block;
@@ -22,21 +22,21 @@
       }
     }
     &.type--message {
-      .jy-table-modal--box {
+      .gj-table-modal--box {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    .jy-table-modal--box {
+    .gj-table-modal--box {
       opacity: 1;
       visibility: visible;
     }
   }
   &.is--loading {
-    .jy-table-modal--header,
-    .jy-table-modal--footer {
+    .gj-table-modal--header,
+    .gj-table-modal--footer {
       position: relative;
-      border-bottom-color: $jy-loading-background-color;
+      border-bottom-color: $gj-loading-background-color;
       &:before {
         content: "";
         position: absolute;
@@ -46,7 +46,7 @@
         height: 100%;
         z-index: 1;
         user-select: none;
-        background-color: $jy-loading-background-color;
+        background-color: $gj-loading-background-color;
       }
     }
   }
@@ -86,7 +86,7 @@
       }
     }
     &.type--message {
-      .jy-table-modal--box {
+      .gj-table-modal--box {
         &:not(.is--drag) {
           @include animatTransition(all, .4s, ease-out);
         }
@@ -96,14 +96,14 @@
   &.type--message,
   &.type--alert,
   &.type--confirm {
-    .jy-table-modal--body {
+    .gj-table-modal--body {
       white-space: normal;
       word-break: break-word;
     }
   }
   &.type--message {
     text-align: center;
-    .jy-table-modal--box {
+    .gj-table-modal--box {
       display: inline-block;
       padding: 2px 0;
       margin-top: 0;
@@ -111,7 +111,7 @@
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
       opacity: 0;
       transform: translateY(-100%);
-      .jy-table-modal--body {
+      .gj-table-modal--body {
         &:after {
           content: '';
           display: block;
@@ -121,12 +121,12 @@
           visibility: hidden;
         }
       }
-      .jy-table-modal--content {
+      .gj-table-modal--content {
         max-width: 800px;
         float: left;
       }
     }
-    .jy-table-modal--status-wrapper {
+    .gj-table-modal--status-wrapper {
       font-size: 1.4em;
       padding-left: 10px;
     }
@@ -134,7 +134,7 @@
   &.type--modal,
   &.type--alert,
   &.type--confirm {
-    .jy-table-modal--box {
+    .gj-table-modal--box {
       display: flex;
       flex-direction: column;
       position: fixed;
@@ -142,39 +142,39 @@
       top: 0;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     }
-    .jy-table-modal--body {
+    .gj-table-modal--body {
       overflow: auto;
-      .jy-table-modal--content {
+      .gj-table-modal--content {
         overflow: auto;
       }
     }
   }
 
   &.type--modal {
-    .jy-table-modal--header {
+    .gj-table-modal--header {
       padding: 0.6em 4.6em 0.6em 1em;
     }
   }
   &.type--alert,
   &.type--confirm {
-    .jy-table-modal--status-wrapper {
+    .gj-table-modal--status-wrapper {
       font-size: 1.6em;
       padding-left: 10px;
     }
   }
-  .jy-table-modal--box {
+  .gj-table-modal--box {
     visibility: hidden;
     width: 420px;
-    background-color: $jy-modal-body-background-color;
-    border-radius: $jy-border-radius;
-    border: 1px solid $jy-modal-border-color;
+    background-color: $gj-modal-body-background-color;
+    border-radius: $gj-border-radius;
+    border: 1px solid $gj-modal-border-color;
     text-align: left;
     pointer-events: auto;
     opacity: 0;
     &.is--drag {
       cursor: move;
-     .jy-table-modal--body,
-     .jy-table-modal--footer {
+     .gj-table-modal--body,
+     .gj-table-modal--footer {
         &:after {
           content: "";
           position: absolute;
@@ -184,67 +184,67 @@
           height: 100%;
         }
       }
-      .jy-table-modal--body {
+      .gj-table-modal--body {
         overflow: hidden;
-        .jy-table-modal--content {
+        .gj-table-modal--content {
           overflow: hidden;
         }
       }
     }
   }
   &.status--info {
-    .jy-table-modal--status-wrapper {
-      color: $jy-info-color;
+    .gj-table-modal--status-wrapper {
+      color: $gj-info-color;
     }
   }
   &.status--warning,
   &.status--question {
-    .jy-table-modal--status-wrapper {
-      color: $jy-warning-color;
+    .gj-table-modal--status-wrapper {
+      color: $gj-warning-color;
     }
   }
   &.status--success {
-    .jy-table-modal--status-wrapper {
-      color: $jy-success-color;
+    .gj-table-modal--status-wrapper {
+      color: $gj-success-color;
     }
   }
   &.status--error {
-    .jy-table-modal--status-wrapper {
-      color: $jy-danger-color;
+    .gj-table-modal--status-wrapper {
+      color: $gj-danger-color;
     }
   }
   &.status--loading {
-    .jy-table-modal--status-wrapper {
-      color: $jy-disabled-color;
+    .gj-table-modal--status-wrapper {
+      color: $gj-disabled-color;
     }
   }
-  .jy-table-modal--status-wrapper {
+  .gj-table-modal--status-wrapper {
     flex-shrink: 0;
     display: flex;
     align-items: center;
   }
-  .jy-table-modal--content {
+  .gj-table-modal--content {
     flex-grow: 1;
     padding: 0.8em 1em;
     white-space: pre-line;
   }
-  .jy-table-modal--header,
-  .jy-table-modal--body,
-  .jy-table-modal--footer {
+  .gj-table-modal--header,
+  .gj-table-modal--body,
+  .gj-table-modal--footer {
     position: relative;
   }
-  .jy-table-modal--body {
+  .gj-table-modal--body {
     display: flex;
     flex-grow: 1;
   }
-  .jy-table-modal--header {
+  .gj-table-modal--header {
     flex-shrink: 0;
     font-size: 1.1em;
     font-weight: 500;
     padding: 0.6em 2.8em 0.6em 1em;
-    border-bottom: 1px solid $jy-modal-border-color;
-    background-color: $jy-modal-header-background-color;
-    border-radius: $jy-border-radius $jy-border-radius 0 0;
+    border-bottom: 1px solid $gj-modal-border-color;
+    background-color: $gj-modal-header-background-color;
+    border-radius: $gj-border-radius $gj-border-radius 0 0;
     user-select: none;
     &.is--drag {
       cursor: move;
@@ -255,32 +255,32 @@
       white-space: nowrap;
     }
   }
-  .jy-table-modal--zoom-btn,
-  .jy-table-modal--close-btn {
+  .gj-table-modal--zoom-btn,
+  .gj-table-modal--close-btn {
     position: absolute;
     right: 14px;
     top: 0.85em;
     z-index: 1;
     cursor: pointer;
     &:hover {
-      color: $jy-primary-color;
+      color: $gj-primary-color;
     }
   }
-  .jy-table-modal--zoom-btn {
+  .gj-table-modal--zoom-btn {
     right: 44px;
   }
-  .jy-table-modal--footer {
+  .gj-table-modal--footer {
     flex-shrink: 0;
     text-align: right;
     padding: 0.4em 1em 0.8em 1em;
   }
   &.is--maximize {
-    .jy-table-modal--box {
-      .jy-table-modal--header {
+    .gj-table-modal--box {
+      .gj-table-modal--header {
         cursor: default;
       }
     }
-    .jy-table-modal--resize {
+    .gj-table-modal--resize {
       .wl-resize,
       .wr-resize,
       .swst-resize,
@@ -293,7 +293,7 @@
       }
     }
   }
-  .jy-table-modal--resize {
+  .gj-table-modal--resize {
     $SpaceSize: 8px;
     $SpaceWidth: 5px;
     .wl-resize,
@@ -368,15 +368,15 @@
   }
 }
 
-.jy-table-modal--wrapper {
-  font-size: $jy-font-size;
+.gj-table-modal--wrapper {
+  font-size: $gj-font-size;
   &.size--medium {
-    font-size: $jy-font-size-medium;
+    font-size: $gj-font-size-medium;
   }
   &.size--small {
-    font-size: $jy-font-size-small;
+    font-size: $gj-font-size-small;
   }
   &.size--mini {
-    font-size: $jy-font-size-mini;
+    font-size: $gj-font-size-mini;
   }
 }

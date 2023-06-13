@@ -2,18 +2,18 @@
   <div>
     <p class="tip">设置 <table-api-link prop="edit-config"/> 的 <table-api-link prop="activeMethod"/> 方法判断单元格是否禁用，例如：限制第二行不允许编辑</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       height="400"
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row', activeMethod: activeRowMethod}"
       @edit-disabled="editDisabledEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -24,7 +24,7 @@
 
     <p class="tip">配合  <table-api-link prop="edit-actived"/> 事件，使用组件方式禁用编辑</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable"
@@ -32,12 +32,12 @@
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}"
       @edit-actived="editActivedEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {disabled: nameDisabled}}"></jy-column>
-      <jy-column field="age" title="Age" :edit-render="{name: 'input', attrs: {disabled: ageDisabled}}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList, props: {disabled: sexDisabled}}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {disabled: nameDisabled}}"></gj-column>
+      <gj-column field="age" title="Age" :edit-render="{name: 'input', attrs: {disabled: ageDisabled}}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList, props: {disabled: sexDisabled}}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -72,18 +72,18 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           height="400"
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'row', activeMethod: activeRowMethod}"
           @edit-disabled="editDisabledEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -117,7 +117,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           ref="xTable"
@@ -125,12 +125,12 @@ export default {
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'row'}"
           @edit-actived="editActivedEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {disabled: nameDisabled}}"></jy-column>
-          <jy-column field="age" title="Age" :edit-render="{name: 'input', attrs: {disabled: ageDisabled}}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList, props: {disabled: sexDisabled}}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {disabled: nameDisabled}}"></gj-column>
+          <gj-column field="age" title="Age" :edit-render="{name: 'input', attrs: {disabled: ageDisabled}}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList, props: {disabled: sexDisabled}}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

@@ -1,8 +1,8 @@
-import JyForm from './src/form';
+import GjForm from './src/form';
 
 /* istanbul ignore next */
-JyForm.install = function(Vue) {
-  Vue.component(JyForm.name, JyForm);
+GjForm.install = function(Vue) {
+  Vue.component(GjForm.name, GjForm);
 };
 
-export default JyForm;
+export default GjForm;

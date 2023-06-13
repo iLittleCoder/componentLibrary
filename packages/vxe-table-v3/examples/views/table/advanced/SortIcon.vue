@@ -2,7 +2,7 @@
   <div>
     <p class="tip">改变图标，通过设置 <table-api-link prop="sort-config"/>={<table-api-link prop="iconAsc"/>, <table-api-link prop="iconDesc"/>} 局部替换默认的图标</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       highlight-hover-row
@@ -10,12 +10,12 @@
       height="300"
       :sort-config="{iconAsc: 'fa fa-chevron-up', iconDesc: 'fa fa-chevron-down'}"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="address" title="Address" sortable></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="address" title="Address" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -42,7 +42,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           highlight-hover-row
@@ -50,12 +50,12 @@ export default {
           height="300"
           :sort-config="{iconAsc: 'fa fa-chevron-up', iconDesc: 'fa fa-chevron-down'}"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="address" title="Address" sortable></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="address" title="Address" sortable></gj-column>
+        </gj-table>
         `,
         `
         export default {

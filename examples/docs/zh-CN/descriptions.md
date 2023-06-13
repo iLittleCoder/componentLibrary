@@ -7,15 +7,15 @@
 :::demo
 
 ```html
-<jy-descriptions title="用户信息">
-    <jy-descriptions-item label="用户名">kooriookami</jy-descriptions-item>
-    <jy-descriptions-item label="手机号">18100000000</jy-descriptions-item>
-    <jy-descriptions-item label="居住地">苏州市</jy-descriptions-item>
-    <jy-descriptions-item label="备注">
-      <jy-tag size="small">学校</jy-tag>
-    </jy-descriptions-item>
-    <jy-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</jy-descriptions-item>
-</jy-descriptions>
+<gj-descriptions title="用户信息">
+    <gj-descriptions-item label="用户名">kooriookami</gj-descriptions-item>
+    <gj-descriptions-item label="手机号">18100000000</gj-descriptions-item>
+    <gj-descriptions-item label="居住地">苏州市</gj-descriptions-item>
+    <gj-descriptions-item label="备注">
+      <gj-tag size="small">学校</gj-tag>
+    </gj-descriptions-item>
+    <gj-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</gj-descriptions-item>
+</gj-descriptions>
 ```
 :::
 
@@ -25,66 +25,66 @@
 
 ```html
 <template>
-  <jy-radio-group v-model="size">
-    <jy-radio label="">默认</jy-radio>
-    <jy-radio label="medium">中等</jy-radio>
-    <jy-radio label="small">小型</jy-radio>
-    <jy-radio label="mini">超小</jy-radio>
-  </jy-radio-group>
+  <gj-radio-group v-model="size">
+    <gj-radio label="">默认</gj-radio>
+    <gj-radio label="medium">中等</gj-radio>
+    <gj-radio label="small">小型</gj-radio>
+    <gj-radio label="mini">超小</gj-radio>
+  </gj-radio-group>
 
-  <jy-descriptions class="margin-top" title="带边框列表" :column="3" :size="size" border>
+  <gj-descriptions class="margin-top" title="带边框列表" :column="3" :size="size" border>
     <template slot="extra">
-      <jy-button type="primary" size="small">操作</jy-button>
+      <gj-button type="primary" size="small">操作</gj-button>
     </template>
-    <jy-descriptions-item>
+    <gj-descriptions-item>
       <template slot="label">
         <i class="el-icon-user"></i>
         用户名
       </template>
       kooriookami
-    </jy-descriptions-item>
-    <jy-descriptions-item>
+    </gj-descriptions-item>
+    <gj-descriptions-item>
       <template slot="label">
         <i class="el-icon-mobile-phone"></i>
         手机号
       </template>
       18100000000
-    </jy-descriptions-item>
-    <jy-descriptions-item>
+    </gj-descriptions-item>
+    <gj-descriptions-item>
       <template slot="label">
         <i class="el-icon-location-outline"></i>
         居住地
       </template>
       苏州市
-    </jy-descriptions-item>
-    <jy-descriptions-item>
+    </gj-descriptions-item>
+    <gj-descriptions-item>
       <template slot="label">
         <i class="el-icon-tickets"></i>
         备注
       </template>
-      <jy-tag size="small">学校</jy-tag>
-    </jy-descriptions-item>
-    <jy-descriptions-item>
+      <gj-tag size="small">学校</gj-tag>
+    </gj-descriptions-item>
+    <gj-descriptions-item>
       <template slot="label">
         <i class="el-icon-office-building"></i>
         联系地址
       </template>
       江苏省苏州市吴中区吴中大道 1188 号
-    </jy-descriptions-item>
-  </jy-descriptions>
+    </gj-descriptions-item>
+  </gj-descriptions>
 
-  <jy-descriptions class="margin-top" title="无边框列表" :column="3" :size="size">
+  <gj-descriptions class="margin-top" title="无边框列表" :column="3" :size="size">
     <template slot="extra">
-      <jy-button type="primary" size="small">操作</jy-button>
+      <gj-button type="primary" size="small">操作</gj-button>
     </template>
-    <jy-descriptions-item label="用户名">kooriookami</jy-descriptions-item>
-    <jy-descriptions-item label="手机号">18100000000</jy-descriptions-item>
-    <jy-descriptions-item label="居住地">苏州市</jy-descriptions-item>
-    <jy-descriptions-item label="备注">
-      <jy-tag size="small">学校</jy-tag>
-    </jy-descriptions-item>
-    <jy-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</jy-descriptions-item>
-  </jy-descriptions>
+    <gj-descriptions-item label="用户名">kooriookami</gj-descriptions-item>
+    <gj-descriptions-item label="手机号">18100000000</gj-descriptions-item>
+    <gj-descriptions-item label="居住地">苏州市</gj-descriptions-item>
+    <gj-descriptions-item label="备注">
+      <gj-tag size="small">学校</gj-tag>
+    </gj-descriptions-item>
+    <gj-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</gj-descriptions-item>
+  </gj-descriptions>
 </template>
 
 <script>
@@ -104,25 +104,25 @@
 :::demo
 
 ```html
-<jy-descriptions title="垂直带边框列表" direction="vertical" :column="4" border>
-  <jy-descriptions-item label="用户名">kooriookami</jy-descriptions-item>
-  <jy-descriptions-item label="手机号">18100000000</jy-descriptions-item>
-  <jy-descriptions-item label="居住地" :span="2">苏州市</jy-descriptions-item>
-  <jy-descriptions-item label="备注">
-    <jy-tag size="small">学校</jy-tag>
-  </jy-descriptions-item>
-  <jy-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</jy-descriptions-item>
-</jy-descriptions>
+<gj-descriptions title="垂直带边框列表" direction="vertical" :column="4" border>
+  <gj-descriptions-item label="用户名">kooriookami</gj-descriptions-item>
+  <gj-descriptions-item label="手机号">18100000000</gj-descriptions-item>
+  <gj-descriptions-item label="居住地" :span="2">苏州市</gj-descriptions-item>
+  <gj-descriptions-item label="备注">
+    <gj-tag size="small">学校</gj-tag>
+  </gj-descriptions-item>
+  <gj-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</gj-descriptions-item>
+</gj-descriptions>
 
-<jy-descriptions class="margin-top" title="垂直无边框列表" :column="4" direction="vertical">
-  <jy-descriptions-item label="用户名">kooriookami</jy-descriptions-item>
-  <jy-descriptions-item label="手机号">18100000000</jy-descriptions-item>
-  <jy-descriptions-item label="居住地" :span="2">苏州市</jy-descriptions-item>
-  <jy-descriptions-item label="备注">
-    <jy-tag size="small">学校</jy-tag>
-  </jy-descriptions-item>
-  <jy-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</jy-descriptions-item>
-</jy-descriptions>
+<gj-descriptions class="margin-top" title="垂直无边框列表" :column="4" direction="vertical">
+  <gj-descriptions-item label="用户名">kooriookami</gj-descriptions-item>
+  <gj-descriptions-item label="手机号">18100000000</gj-descriptions-item>
+  <gj-descriptions-item label="居住地" :span="2">苏州市</gj-descriptions-item>
+  <gj-descriptions-item label="备注">
+    <gj-tag size="small">学校</gj-tag>
+  </gj-descriptions-item>
+  <gj-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</gj-descriptions-item>
+</gj-descriptions>
 ```
 :::
 
@@ -131,15 +131,15 @@
 :::demo
 
 ```html
-<jy-descriptions title="自定义样式列表" :column="3" border>
-  <jy-descriptions-item label="用户名" label-class-name="my-label" content-class-name="my-content">kooriookami</jy-descriptions-item>
-  <jy-descriptions-item label="手机号">18100000000</jy-descriptions-item>
-  <jy-descriptions-item label="居住地">苏州市</jy-descriptions-item>
-  <jy-descriptions-item label="备注">
-    <jy-tag size="small">学校</jy-tag>
-  </jy-descriptions-item>
-  <jy-descriptions-item label="联系地址" :contentStyle="{'text-align': 'right'}">江苏省苏州市吴中区吴中大道 1188 号</jy-descriptions-item>
-</jy-descriptions>
+<gj-descriptions title="自定义样式列表" :column="3" border>
+  <gj-descriptions-item label="用户名" label-class-name="my-label" content-class-name="my-content">kooriookami</gj-descriptions-item>
+  <gj-descriptions-item label="手机号">18100000000</gj-descriptions-item>
+  <gj-descriptions-item label="居住地">苏州市</gj-descriptions-item>
+  <gj-descriptions-item label="备注">
+    <gj-tag size="small">学校</gj-tag>
+  </gj-descriptions-item>
+  <gj-descriptions-item label="联系地址" :contentStyle="{'text-align': 'right'}">江苏省苏州市吴中区吴中大道 1188 号</gj-descriptions-item>
+</gj-descriptions>
 <style>
   .my-label {
     background: #E1F3D8;

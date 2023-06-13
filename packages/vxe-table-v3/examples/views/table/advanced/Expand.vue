@@ -17,22 +17,22 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       ref="xTable"
       border
       auto-resize
       :data="tableData"
       @toggle-row-expand="toggleExpandChangeEvent">
-      <jy-column type="seq" width="60" :fixed="seqFixed"></jy-column>
-      <jy-column type="expand" width="80" :fixed="expandFixed">
+      <gj-column type="seq" width="60" :fixed="seqFixed"></gj-column>
+      <gj-column type="expand" width="80" :fixed="expandFixed">
         <template #content="{ row, rowIndex }">
           <div v-if="rowIndex === 1" class="expand-wrapper">
-            <jy-table
+            <gj-table
               border
               :data="otherList">
-              <jy-column field="role" title="Role"></jy-column>
-              <jy-column field="address" title="Address"></jy-column>
-            </jy-table>
+              <gj-column field="role" title="Role"></gj-column>
+              <gj-column field="address" title="Address"></gj-column>
+            </gj-table>
           </div>
           <div v-else class="expand-wrapper">
             <ul>
@@ -55,11 +55,11 @@
             </ul>
           </div>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name" width="400"></jy-column>
-      <jy-column field="sex" title="Sex" width="400"></jy-column>
-      <jy-column field="age" title="Age" width="400" :fixed="ageFixed"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="name" title="Name" width="400"></gj-column>
+      <gj-column field="sex" title="Sex" width="400"></gj-column>
+      <gj-column field="age" title="Age" width="400" :fixed="ageFixed"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -71,21 +71,21 @@
 
     <p class="tip">默认展开指定行，通过 <table-api-link prop="expandRowKeys"/> 参数设置默认展开行，指定默认值需要有 <table-api-link prop="row-id"/></p>
 
-    <jy-table
+    <gj-table
       border
       :row-config="{keyField: 'id'}"
       :expand-config="{expandRowKeys: ['10003']}"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="expand" width="60">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="expand" width="60">
         <template #content="{ row, rowIndex }">
           <div v-if="rowIndex === 1" class="expand-wrapper">
-            <jy-table
+            <gj-table
               border
               :data="tableData">
-              <jy-column field="role" title="Role"></jy-column>
-              <jy-column field="age" title="Age"></jy-column>
-            </jy-table>
+              <gj-column field="role" title="Role"></gj-column>
+              <gj-column field="age" title="Age"></gj-column>
+            </gj-table>
           </div>
           <div v-else class="expand-wrapper">
             <ul>
@@ -108,11 +108,11 @@
             </ul>
           </div>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -127,12 +127,12 @@
       还可以配置 <table-api-link prop="labelField"/> 列显示属性
     </p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData"
       :expand-config="{labelField: 'name', expandAll: true}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="expand" title="Name">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="expand" title="Name">
         <template #content="{ row }">
           <ul class="expand-wrapper">
             <li>
@@ -153,10 +153,10 @@
             </li>
           </ul>
         </template>
-      </jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -201,22 +201,22 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           ref="xTable"
           border
           auto-resize
           :data="tableData"
           @toggle-row-expand="toggleExpandChangeEvent">
-          <jy-column type="seq" width="60" :fixed="seqFixed"></jy-column>
-          <jy-column type="expand" width="80" :fixed="expandFixed">
+          <gj-column type="seq" width="60" :fixed="seqFixed"></gj-column>
+          <gj-column type="expand" width="80" :fixed="expandFixed">
             <template #content="{ row, rowIndex }">
               <div v-if="rowIndex === 1" class="expand-wrapper">
-                <jy-table
+                <gj-table
                   border
                   :data="otherList">
-                  <jy-column field="role" title="Role"></jy-column>
-                  <jy-column field="address" title="Address"></jy-column>
-                </jy-table>
+                  <gj-column field="role" title="Role"></gj-column>
+                  <gj-column field="address" title="Address"></gj-column>
+                </gj-table>
               </div>
               <div v-else class="expand-wrapper">
                 <ul>
@@ -239,11 +239,11 @@ export default {
                 </ul>
               </div>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name" width="400"></jy-column>
-          <jy-column field="sex" title="Sex" width="400"></jy-column>
-          <jy-column field="age" title="Age" width="400" :fixed="ageFixed"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="name" title="Name" width="400"></gj-column>
+          <gj-column field="sex" title="Sex" width="400"></gj-column>
+          <gj-column field="age" title="Age" width="400" :fixed="ageFixed"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -287,21 +287,21 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           row-id="id"
           :expand-config="{expandRowKeys: ['10003']}"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="expand" width="60">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="expand" width="60">
             <template #content="{ row, rowIndex }">
               <div v-if="rowIndex === 1" class="expand-wrapper">
-                <jy-table
+                <gj-table
                   border
                   :data="tableData">
-                  <jy-column field="role" title="Role"></jy-column>
-                  <jy-column field="age" title="Age"></jy-column>
-                </jy-table>
+                  <gj-column field="role" title="Role"></gj-column>
+                  <gj-column field="age" title="Age"></gj-column>
+                </gj-table>
               </div>
               <div v-else class="expand-wrapper">
                 <ul>
@@ -324,11 +324,11 @@ export default {
                 </ul>
               </div>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -352,12 +352,12 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData"
           :expand-config="{labelField: 'name', expandAll: true}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="expand" title="Name">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="expand" title="Name">
             <template #content="{ row }">
               <ul class="expand-wrapper">
                 <li>
@@ -378,10 +378,10 @@ export default {
                 </li>
               </ul>
             </template>
-          </jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {

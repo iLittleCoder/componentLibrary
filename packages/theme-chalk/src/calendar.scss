@@ -108,7 +108,7 @@
 
     @include when(selected) {
       background-color: $--background-primary-color;
-      .jy-calendar-day:hover{
+      .gj-calendar-day:hover{
         color: $--color-primary;
         background-color: $--background-primary-color;
       }
@@ -186,7 +186,7 @@
     td{
       border-top: $--calendar-border;
     }
-    .jy-calendar-day-table tr td {
+    .gj-calendar-day-table tr td {
       border: none;
       border-top: none;
     }

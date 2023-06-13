@@ -73,7 +73,7 @@
     font-size: $--font-size-large;
     cursor: pointer;
 
-    .jy-message-box__close {
+    .gj-message-box__close {
       color: $--color-text-secondary;
       font-size: $--font-size-extra-large;
       border-radius: $--border-radius-base;
@@ -128,7 +128,7 @@
       padding-left: 1px;
     }
 
-    + .jy-message-box__message {
+    + .gj-message-box__message {
       padding-left: 36px;
       padding-right: 12px;
     }

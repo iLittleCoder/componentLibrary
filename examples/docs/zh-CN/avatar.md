@@ -10,28 +10,28 @@
 
 ```html
 <template>
-  <jy-row class="demo-avatar demo-basic">
-    <jy-col :span="12">
+  <gj-row class="demo-avatar demo-basic">
+    <gj-col :span="12">
       <div class="sub-title">circle</div>
       <div class="demo-basic--circle">
         <div class="block" v-for="size in sizeList" :key="size">
-          <jy-avatar :size="size" icon="Gildata-user"></jy-avatar>
+          <gj-avatar :size="size" icon="Gildata-user"></gj-avatar>
         </div>
       </div>
-    </jy-col>
-    <jy-col :span="12">
+    </gj-col>
+    <gj-col :span="12">
       <div class="sub-title">square</div>
       <div class="demo-basic--circle">
         <div class="block" v-for="size in sizeList" :key="size">
-          <jy-avatar
+          <gj-avatar
             shape="square"
             :size="size"
             icon="Gildata-user"
-          ></jy-avatar>
+          ></gj-avatar>
         </div>
       </div>
-    </jy-col>
-  </jy-row>
+    </gj-col>
+  </gj-row>
 </template>
 <script>
   export default {
@@ -58,26 +58,26 @@
 
 ```html
 <template>
-  <jy-row class="demo-avatar demo-basic">
-    <jy-col :span="12">
+  <gj-row class="demo-avatar demo-basic">
+    <gj-col :span="12">
       <div class="sub-title">circle</div>
       <div class="demo-basic--circle">
         <div class="block" v-for="size in sizeList" :key="size">
-          <jy-avatar :background-color="bgColor" :size="size">G</jy-avatar>
+          <gj-avatar :background-color="bgColor" :size="size">G</gj-avatar>
         </div>
       </div>
-    </jy-col>
-    <jy-col :span="12">
+    </gj-col>
+    <gj-col :span="12">
       <div class="sub-title">square</div>
       <div class="demo-basic--circle">
         <div class="block" v-for="size in sizeList" :key="size">
-          <jy-avatar :background-color="bgColor" shape="square" :size="size"
-            >G</jy-avatar
+          <gj-avatar :background-color="bgColor" shape="square" :size="size"
+            >G</gj-avatar
           >
         </div>
       </div>
-    </jy-col>
-  </jy-row>
+    </gj-col>
+  </gj-row>
 </template>
 <script>
   export default {
@@ -117,15 +117,15 @@
 <template>
   <div class="demo-type">
     <div>
-      <jy-avatar icon="Gildata-star1"></jy-avatar>
+      <gj-avatar icon="Gildata-star1"></gj-avatar>
     </div>
     <div>
-      <jy-avatar
+      <gj-avatar
         src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-      ></jy-avatar>
+      ></gj-avatar>
     </div>
     <div>
-      <jy-avatar :style="{color: textColor}"> user </jy-avatar>
+      <gj-avatar :style="{color: textColor}"> user </gj-avatar>
     </div>
   </div>
 </template>
@@ -163,7 +163,7 @@
 ```html
 <template>
   <div class="demo-type">
-    <jy-avatar :size="60" src="https://empty" :error="errorHandler" />
+    <gj-avatar :size="60" src="https://empty" :error="errorHandler" />
   </div>
 </template>
 <script>
@@ -191,7 +191,7 @@
   <div class="demo-fit">
     <div class="block" v-for="fit in fits" :key="fit">
       <span class="title">{{ fit }}</span>
-      <jy-avatar shape="square" :size="100" :fit="fit" :src="url"></jy-avatar>
+      <gj-avatar shape="square" :size="100" :fit="fit" :src="url"></gj-avatar>
     </div>
   </div>
 </template>

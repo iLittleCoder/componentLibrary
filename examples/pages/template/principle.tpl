@@ -27,36 +27,36 @@
 <template>
   <div>
     <h2><%= 1 ></h2>
-    <jy-row :gutter="14" class="cards">
-      <jy-col :xs="12" :sm="6">
+    <gj-row :gutter="14" class="cards">
+      <gj-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/consistency.png" alt="Consistency">
           <h4><%= 2 ></h4>
           <span><%= 3 ></span>
         </div>
-      </jy-col>
-      <jy-col :xs="12" :sm="6">
+      </gj-col>
+      <gj-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/feedback.png" alt="Feedback">
           <h4><%= 4 ></h4>
           <span><%= 5 ></span>
         </div>
-      </jy-col>
-      <jy-col :xs="12" :sm="6">
+      </gj-col>
+      <gj-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/efficiency.png" alt="Efficiency">
           <h4><%= 6 ></h4>
           <span><%= 7 ></span>
         </div>
-      </jy-col>
-      <jy-col :xs="12" :sm="6">
+      </gj-col>
+      <gj-col :xs="12" :sm="6">
         <div class="card">
           <img src="~examples/assets/images/controllability.png" alt="Controllability">
           <h4><%= 8 ></h4>
           <span><%= 9 ></span>
         </div>
-      </jy-col>
-    </jy-row>
+      </gj-col>
+    </gj-row>
     <h3><%= 10 ></h3>
     <ul>
       <li><strong><%= 11 ></strong><%= 12 ></li>

@@ -1,29 +1,29 @@
 <template>
   <transition name="viewer-fade">
-    <div tabindex="-1" ref="jy-image-viewer__wrapper" class="jy-image-viewer__wrapper" :style="{ 'z-index': viewerZIndex }">
-      <div class="jy-image-viewer__mask" @click.self="handleMaskClick"></div>
+    <div tabindex="-1" ref="gj-image-viewer__wrapper" class="gj-image-viewer__wrapper" :style="{ 'z-index': viewerZIndex }">
+      <div class="gj-image-viewer__mask" @click.self="handleMaskClick"></div>
       <!-- CLOSE -->
-      <span class="jy-image-viewer__btn jy-image-viewer__close" @click="hide">
+      <span class="gj-image-viewer__btn gj-image-viewer__close" @click="hide">
         <i class="Gildata-close"></i>
       </span>
       <!-- ARROW -->
       <template v-if="!isSingle">
         <span
-          class="jy-image-viewer__btn jy-image-viewer__prev"
+          class="gj-image-viewer__btn gj-image-viewer__prev"
           :class="{ 'is-disabled': !infinite && isFirst }"
           @click="prev">
           <i class="el-icon-arrow-left"/>
         </span>
         <span
-          class="jy-image-viewer__btn jy-image-viewer__next"
+          class="gj-image-viewer__btn gj-image-viewer__next"
           :class="{ 'is-disabled': !infinite && isLast }"
           @click="next">
           <i class="el-icon-arrow-right"/>
         </span>
       </template>
       <!-- ACTIONS -->
-      <div class="jy-image-viewer__btn jy-image-viewer__actions">
-        <div class="jy-image-viewer__actions__inner">
+      <div class="gj-image-viewer__btn gj-image-viewer__actions">
+        <div class="gj-image-viewer__actions__inner">
           <!--全屏-->
           <i :class="mode.icon" @click="toggleMode"></i>
           <!--左旋-->
@@ -36,12 +36,12 @@
         </div>
       </div>
       <!-- CANVAS -->
-      <div class="jy-image-viewer__canvas">
+      <div class="gj-image-viewer__canvas">
         <img
           v-for="(url, i) in urlList"
           v-if="i === index"
           ref="img"
-          class="jy-image-viewer__img"
+          class="gj-image-viewer__img"
           :key="url"
           :src="currentImg"
           :style="imgStyle"
@@ -72,7 +72,7 @@ const Mode = {
 const mousewheelEventName = isFirefox() ? 'DOMMouseScroll' : 'mousewheel';
 
 export default {
-  name: 'JyImageViewer',
+  name: 'GjImageViewer',
 
   props: {
     urlList: {
@@ -320,7 +320,7 @@ export default {
     }
     // add tabindex then wrapper can be focusable via Javascript
     // focus wrapper so arrow key can't cause inner scroll behavior underneath
-    this.$refs['jy-image-viewer__wrapper'].focus();
+    this.$refs['gj-image-viewer__wrapper'].focus();
   },
   destroyed() {
     // if appendToBody is true, remove DOM node after destroy

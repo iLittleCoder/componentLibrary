@@ -17,7 +17,7 @@ export default {
         return this.scrollToColumn(column).then(() => {
           const headerWrapperElem = elemStore[`${fixed || 'main'}-header-wrapper`] || elemStore['main-header-wrapper']
           if (headerWrapperElem) {
-            const filterBtnElem = headerWrapperElem.querySelector(`.jy-header--column.${column.id} .jy-filter--btn`)
+            const filterBtnElem = headerWrapperElem.querySelector(`.gj-header--column.${column.id} .gj-filter--btn`)
             DomTools.triggerEvent(filterBtnElem, 'click')
           }
         })
@@ -91,8 +91,8 @@ export default {
           if (filterWrapperElem) {
             filterWidth = filterWrapperElem.offsetWidth
             filterHeight = filterWrapperElem.offsetHeight
-            filterHeadElem = filterWrapperElem.querySelector('.jy-table--filter-header')
-            filterFootElem = filterWrapperElem.querySelector('.jy-table--filter-footer')
+            filterHeadElem = filterWrapperElem.querySelector('.gj-table--filter-header')
+            filterFootElem = filterWrapperElem.querySelector('.gj-table--filter-footer')
           }
           const centerWidth = filterWidth / 2
           const minMargin = 10

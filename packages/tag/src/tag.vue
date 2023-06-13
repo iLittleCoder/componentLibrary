@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'JyTag',
+  name: 'GjTag',
   props: {
     text: String,
     closable: Boolean,
@@ -61,9 +61,9 @@ export default {
       closable
     } = this;
     const classes = [
-      'jy-tag',
-      type ? `jy-tag--${type}` : '',
-      tagSize ? `jy-tag--${tagSize}` : '',
+      'gj-tag',
+      type ? `gj-tag--${type}` : '',
+      tagSize ? `gj-tag--${tagSize}` : '',
       hit && 'is-hit',
       leftIcon && 'is-leftIcon',
       (closable || rightIcon) && 'is-rightIcon',
@@ -83,7 +83,7 @@ export default {
         {this.leftIcon && !this.showLeftSvg && <i class={this.leftIcon} />}
         {this.$slots.default && <span>{this.$slots.default}</span>}
         {this.closable && (
-          <i class="jy-tag__close Gildata-close" on-click={this.handleClose} />
+          <i class="gj-tag__close Gildata-close" on-click={this.handleClose} />
         )}
         {this.showRightSvg && (
           <svg class="icon svg-icon" aria-hidden="true">
@@ -99,7 +99,7 @@ export default {
     return this.disableTransitions ? (
       tagEl
     ) : (
-      <transition name="jy-zoom-in-center">{tagEl}</transition>
+      <transition name="gj-zoom-in-center">{tagEl}</transition>
     );
   }
 };

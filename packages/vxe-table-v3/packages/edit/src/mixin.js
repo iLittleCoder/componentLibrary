@@ -515,7 +515,7 @@ export default {
       const { $el, editStore, afterFullData } = this
       const { actived } = editStore
       const { args, row } = actived
-      if (args && afterFullData.indexOf(row) > -1 && $el.querySelectorAll('.jy-body--column.col--actived').length) {
+      if (args && afterFullData.indexOf(row) > -1 && $el.querySelectorAll('.gj-body--column.col--actived').length) {
         return Object.assign({}, args)
       }
       return null

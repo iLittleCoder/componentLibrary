@@ -76,7 +76,7 @@ export function handleFieldOrColumn (_vm, fieldOrColumn) {
 }
 
 function queryCellElement (cell, selector) {
-  return cell.querySelector('.jy-cell' + selector)
+  return cell.querySelector('.gj-cell' + selector)
 }
 
 export function toFilters (filters) {
@@ -110,12 +110,12 @@ export function getColMinWidth (params) {
   let mWidth = minTitleWidth + paddingLeftRight
   // 默认最小宽处理
   if (hasEllipsis) {
-    const checkboxIconWidth = getPaddingLeftRightSize(queryCellElement(cell, '--title>.jy-cell--checkbox'))
-    const requiredIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.jy-cell--required-icon'))
-    const editIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.jy-cell--edit-icon'))
-    const helpIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.jy-cell-help-icon'))
-    const sortIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.jy-cell--sort'))
-    const filterIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.jy-cell--filter'))
+    const checkboxIconWidth = getPaddingLeftRightSize(queryCellElement(cell, '--title>.gj-cell--checkbox'))
+    const requiredIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.gj-cell--required-icon'))
+    const editIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.gj-cell--edit-icon'))
+    const helpIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.gj-cell-help-icon'))
+    const sortIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.gj-cell--sort'))
+    const filterIconWidth = getElemenMarginWidth(queryCellElement(cell, '>.gj-cell--filter'))
     mWidth += checkboxIconWidth + requiredIconWidth + editIconWidth + helpIconWidth + filterIconWidth + sortIconWidth
   }
   // 如果设置最小宽

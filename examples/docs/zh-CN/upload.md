@@ -7,7 +7,7 @@
 :::demo 通过 slot 你可以传入自定义的上传按钮类型和文字提示。可通过设置`limit`和`on-exceed`来限制上传文件的个数和定义超出限制时的行为。可通过设置`before-remove`来阻止文件移除操作。
 
 ```html
-<jy-upload
+<gj-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
@@ -18,8 +18,8 @@
   :on-exceed="handleExceed"
   :file-list="fileList"
 >
-  <jy-button> <i class="Gildata-upload" slot="left"></i>点击上传</jy-button>
-</jy-upload>
+  <gj-button> <i class="Gildata-upload" slot="left"></i>点击上传</gj-button>
+</gj-upload>
 <script>
   export default {
     data() {
@@ -69,7 +69,7 @@
 :::demo
 
 ```html
-<jy-upload
+<gj-upload
   class="avatar-uploader"
   action="https://jsonplaceholder.typicode.com/posts/"
   :show-file-list="false"
@@ -78,7 +78,7 @@
 >
   <img v-if="imageUrl" :src="imageUrl" class="avatar" />
   <i v-else class="Gildata-plus avatar-uploader-icon"></i>
-</jy-upload>
+</gj-upload>
 
 <style></style>
 
@@ -121,7 +121,7 @@
 :::demo
 
 ```html
-<jy-upload
+<gj-upload
   action="https://jsonplaceholder.typicode.com/posts/"
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
@@ -131,10 +131,10 @@
     <i class="Gildata-plus "></i>
     <span>上传</span>
   </span>
-</jy-upload>
-<jy-dialog :visible.sync="dialogVisible">
+</gj-upload>
+<gj-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="" />
-</jy-dialog>
+</gj-dialog>
 <script>
   export default {
     data() {
@@ -165,14 +165,14 @@
 :::demo
 
 ```html
-<jy-upload action="#" list-type="picture-card" :auto-upload="false">
+<gj-upload action="#" list-type="picture-card" :auto-upload="false">
   <span slot="default" class="demo-list-picture">
     <i class="Gildata-plus"></i>
     <span>上传</span>
   </span>
   <div slot="file" slot-scope="{file}" class="demo-file-slot ">
-    <img class="jy-upload-list__item-thumbnail" :src="file.url" alt="" />
-    <span class="jy-upload-list__item-actions">
+    <img class="gj-upload-list__item-thumbnail" :src="file.url" alt="" />
+    <span class="gj-upload-list__item-actions">
       <span @click="handlePictureCardPreview(file)">
         <i class="Gildata-enlarged"></i>
       </span>
@@ -184,10 +184,10 @@
       </span>
     </span>
   </div>
-</jy-upload>
-<jy-dialog :visible.sync="dialogVisible">
+</gj-upload>
+<gj-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="" />
-</jy-dialog>
+</gj-dialog>
 <script>
   export default {
     data() {
@@ -220,7 +220,7 @@
 :::demo
 
 ```html
-<jy-upload
+<gj-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
@@ -228,8 +228,8 @@
   :file-list="fileList"
   list-type="picture"
 >
-  <jy-button> <i class="Gildata-upload" slot="left"></i>点击上传</jy-button>
-</jy-upload>
+  <gj-button> <i class="Gildata-upload" slot="left"></i>点击上传</gj-button>
+</gj-upload>
 <script>
   export default {
     data() {
@@ -269,14 +269,14 @@
 :::demo
 
 ```html
-<jy-upload
+<gj-upload
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
   :file-list="fileList"
 >
-  <jy-button> <i class="Gildata-upload" slot="left"></i>点击上传</jy-button>
-</jy-upload>
+  <gj-button> <i class="Gildata-upload" slot="left"></i>点击上传</gj-button>
+</gj-upload>
 <script>
   export default {
     data() {
@@ -311,20 +311,20 @@
 :::demo
 
 ```html
-<jy-upload
+<gj-upload
   class="upload-demo"
   drag
   action="https://jsonplaceholder.typicode.com/posts/"
   multiple
 >
   <i class="Gildata-plus "></i>
-  <div class="jy-upload__text">
+  <div class="gj-upload__text">
     <div>将文件拖到此处，或<em>点击上传</em></div>
-    <div class="jy-upload__tip">
+    <div class="gj-upload__tip">
       只能上传word/excel/png/jpg文件，且不超过2MB
     </div>
   </div>
-</jy-upload>
+</gj-upload>
 ```
 
 :::
@@ -334,7 +334,7 @@
 :::demo
 
 ```html
-<jy-upload
+<gj-upload
   class="upload-demo"
   ref="upload"
   action="https://jsonplaceholder.typicode.com/posts/"
@@ -343,21 +343,21 @@
   :file-list="fileList"
   :auto-upload="false"
 >
-  <jy-button slot="trigger">
-    <i class="Gildata-upload" slot="left"></i>选取文件</jy-button
+  <gj-button slot="trigger">
+    <i class="Gildata-upload" slot="left"></i>选取文件</gj-button
   >
-  <jy-button
+  <gj-button
     style="margin-left: 10px;"
     size="small"
     type="success"
     @click="submitUpload"
-    >上传到服务器</jy-button
+    >上传到服务器</gj-button
   >
 
-  <div slot="tip" class="jy-upload__tip">
+  <div slot="tip" class="gj-upload__tip">
     只能上传jpg/png文件，且不超过500kb
   </div>
-</jy-upload>
+</gj-upload>
 <script>
   export default {
     data() {

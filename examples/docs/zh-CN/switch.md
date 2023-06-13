@@ -7,10 +7,10 @@
 :::demo
 
 ```html
-<jy-switch v-model="value" active-value></jy-switch>
-<jy-switch v-model="value" disabled active-text="付费"></jy-switch>
-<jy-switch v-model="value" size="mini" active-value></jy-switch>
-<jy-switch v-model="value" size="mini" disabled active-text="付费"></jy-switch>
+<gj-switch v-model="value" active-value></gj-switch>
+<gj-switch v-model="value" disabled active-text="付费"></gj-switch>
+<gj-switch v-model="value" size="mini" active-value></gj-switch>
+<gj-switch v-model="value" size="mini" disabled active-text="付费"></gj-switch>
 
 <script>
   export default {
@@ -29,11 +29,11 @@
 :::demo 绑定`v-model`到一个`Boolean`类型的变量。可以使用`active-color`属性与`inactive-color`属性来设置开关的背景色。
 
 ```html
-<jy-switch
+<gj-switch
   v-model="value"
   active-color="#13ce66"
   inactive-color="#ff4949">
-</jy-switch>
+</gj-switch>
 
 <script>
   export default {
@@ -52,19 +52,19 @@
 :::demo 使用`active-text`属性与`inactive-text`属性来设置开关的文字描述。
 
 ```html
-<jy-switch
+<gj-switch
   v-model="value1"
   active-text="按月付费"
   inactive-text="按年付费">
-</jy-switch>
-<jy-switch
+</gj-switch>
+<gj-switch
   style="display: block"
   v-model="value2"
   active-color="#13ce66"
   inactive-color="#ff4949"
   active-text="按月付费"
   inactive-text="按年付费">
-</jy-switch>
+</gj-switch>
 
 <script>
   export default {
@@ -84,15 +84,15 @@
 :::demo 设置`active-value`和`inactive-value`属性，接受`Boolean`, `String`或`Number`类型的值。
 
 ```html
-<jy-tooltip :content="'Switch value: ' + value" placement="top">
-  <jy-switch
+<gj-tooltip :content="'Switch value: ' + value" placement="top">
+  <gj-switch
     v-model="value"
     active-color="#13ce66"
     inactive-color="#ff4949"
     active-value="100"
     inactive-value="0">
-  </jy-switch>
-</jy-tooltip>
+  </gj-switch>
+</gj-tooltip>
 
 <script>
   export default {
@@ -113,14 +113,14 @@
 
 
 ```html
-<jy-switch
+<gj-switch
   v-model="value1"
   disabled>
-</jy-switch>
-<jy-switch
+</gj-switch>
+<gj-switch
   v-model="value2"
   disabled>
-</jy-switch>
+</gj-switch>
 <script>
   export default {
     data() {

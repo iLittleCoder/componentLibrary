@@ -1,13 +1,13 @@
 <template>
   <div
-    class="jy-autocomplete"
+    class="gj-autocomplete"
     v-clickoutside="close"
     aria-haspopup="listbox"
     role="combobox"
     :aria-expanded="suggestionVisible"
     :aria-owns="id"
   >
-    <jy-input
+    <gj-input
       ref="input"
       v-bind="[$props, $attrs]"
       @input="handleInput"
@@ -33,8 +33,8 @@
       <template slot="suffix" v-if="$slots.suffix">
         <slot name="suffix"></slot>
       </template>
-    </jy-input>
-    <jy-autocomplete-suggestions
+    </gj-input>
+    <gj-autocomplete-suggestions
       visible-arrow
       :class="[popperClass ? popperClass : '']"
       :popper-options="popperOptions"
@@ -59,35 +59,35 @@
         </li>
       </div>
       <div v-else>
-        <jy-empty></jy-empty>
+        <gj-empty></gj-empty>
       </div>
-    </jy-autocomplete-suggestions>
+    </gj-autocomplete-suggestions>
   </div>
 </template>
 <script>
 import debounce from 'throttle-debounce/debounce';
-import JyInput from 'GildataDesign/packages/input';
-import JyEmpty from 'GildataDesign/packages/empty';
+import GjInput from 'GildataDesign/packages/input';
+import GjEmpty from 'GildataDesign/packages/empty';
 import Clickoutside from 'GildataDesign/src/utils/clickoutside';
-import JyAutocompleteSuggestions from './autocomplete-suggestions.vue';
+import GjAutocompleteSuggestions from './autocomplete-suggestions.vue';
 import Emitter from 'GildataDesign/src/mixins/emitter';
 import Migrating from 'GildataDesign/src/mixins/migrating';
 import { generateId } from 'GildataDesign/src/utils/util';
 import Focus from 'GildataDesign/src/mixins/focus';
 
 export default {
-  name: 'JyAutocomplete',
+  name: 'GjAutocomplete',
 
   mixins: [Emitter, Focus('input'), Migrating],
 
   inheritAttrs: false,
 
-  componentName: 'JyAutocomplete',
+  componentName: 'GjAutocomplete',
 
   components: {
-    JyInput,
-    JyEmpty,
-    JyAutocompleteSuggestions
+    GjInput,
+    GjEmpty,
+    GjAutocompleteSuggestions
   },
 
   directives: { Clickoutside },
@@ -167,14 +167,14 @@ export default {
       );
     },
     id() {
-      return `jy-autocomplete-${generateId()}`;
+      return `gj-autocomplete-${generateId()}`;
     }
   },
   watch: {
     suggestionVisible(val) {
       let $input = this.getInput();
       if ($input) {
-        this.broadcast('JyAutocompleteSuggestions', 'visible', [
+        this.broadcast('GjAutocompleteSuggestions', 'visible', [
           val,
           $input.offsetWidth
         ]);
@@ -289,10 +289,10 @@ export default {
         index = this.suggestions.length - 1;
       }
       const suggestion = this.$refs.suggestions.$el.querySelector(
-        '.jy-autocomplete-suggestion__wrap'
+        '.gj-autocomplete-suggestion__wrap'
       );
       const suggestionList = suggestion.querySelectorAll(
-        '.jy-autocomplete-suggestion__list li'
+        '.gj-autocomplete-suggestion__list li'
       );
 
       let highlightItem = suggestionList[index];

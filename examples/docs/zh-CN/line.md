@@ -11,7 +11,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" :chartOptions="chartOptions"></jy-line>
+  <gj-line :themeType="theme" :chartOptions="chartOptions"></gj-line>
 </template>
 
 <script>
@@ -63,7 +63,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" :chartOptions="chartOptions1"></jy-line>
+  <gj-line :themeType="theme" :chartOptions="chartOptions1"></gj-line>
 </template>
 
 <script>
@@ -130,7 +130,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" :chartOptions="chartOptions2"></jy-line>
+  <gj-line :themeType="theme" :chartOptions="chartOptions2"></gj-line>
 </template>
 
 <script>
@@ -205,7 +205,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" :chartOptions="chartOptions3"></jy-line>
+  <gj-line :themeType="theme" :chartOptions="chartOptions3"></gj-line>
 </template>
 
 <script>
@@ -278,7 +278,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" :data="chartOptions4.data" :chartOptions="chartOptions4"></jy-line>
+  <gj-line :themeType="theme" :data="chartOptions4.data" :chartOptions="chartOptions4"></gj-line>
 </template>
 
 <script>
@@ -343,7 +343,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" :data="chartOptions5.data" :chartOptions="chartOptions5"></jy-line>
+  <gj-line :themeType="theme" :data="chartOptions5.data" :chartOptions="chartOptions5"></gj-line>
 </template>
 
 <script>
@@ -429,7 +429,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" :chartOptions="chartOptions6"></jy-line>
+  <gj-line :themeType="theme" :chartOptions="chartOptions6"></gj-line>
 </template>
 
 <script>
@@ -477,7 +477,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" width="800" :chartOptions="chartOptions7"></jy-line>
+  <gj-line :themeType="theme" width="800" :chartOptions="chartOptions7"></gj-line>
 </template>
 
 <script>
@@ -552,7 +552,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" :chartOptions="chartOptions8"></jy-line>
+  <gj-line :themeType="theme" :chartOptions="chartOptions8"></gj-line>
 </template>
 
 <script>
@@ -615,7 +615,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" width="800" :chartOptions="chartOptions9"></jy-line>
+  <gj-line :themeType="theme" width="800" :chartOptions="chartOptions9"></gj-line>
 </template>
 
 <script>
@@ -760,7 +760,7 @@
 
 ```html
 <template>
-  <jy-line :themeType="theme" width="800" :chartOptions="chartOptions10"></jy-line>
+  <gj-line :themeType="theme" width="800" :chartOptions="chartOptions10"></gj-line>
 </template>
 
 <script>

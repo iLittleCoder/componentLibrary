@@ -8,11 +8,11 @@
   font-size: 0;
 
   @include when(plain) {
-    .jy-radio-button__orig-radio:checked + .jy-radio-button__inner {
+    .gj-radio-button__orig-radio:checked + .gj-radio-button__inner {
       background-color: unset;
       color: $--color-primary;
     }
-    .jy-radio-button__inner {
+    .gj-radio-button__inner {
       &:hover {
         border-color: $--color-primary;
         background-color: unset;

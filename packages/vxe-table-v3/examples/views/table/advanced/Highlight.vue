@@ -2,19 +2,19 @@
   <div>
     <p class="tip">键盘移动高亮行，设置 <table-api-link prop="keyboard-config"/>={isArrow: true} 启用方向键功能</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       highlight-current-row
       height="400"
       :data="tableData"
       :keyboard-config="{isArrow: true}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -50,19 +50,19 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           highlight-current-row
           height="400"
           :data="tableData"
           :keyboard-config="{isArrow: true}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {

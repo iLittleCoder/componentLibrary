@@ -1,8 +1,8 @@
 <template>
-  <div class="jy-calendar-year">
+  <div class="gj-calendar-year">
     <table
       v-if="!yearShowDate"
-      class="jy-calendar-table"
+      class="gj-calendar-table"
       cellspacing="0"
       cellpadding="0"
       border="0"
@@ -15,7 +15,7 @@
             :key="key"
             @click="handleClick(cell)"
           >
-            <div class="jy-calendar-day">
+            <div class="gj-calendar-day">
               <span class="cell" v-if="!elCalendar.$scopedSlots.monthCell"
                 >{{ cell.text }}月</span
               >
@@ -28,16 +28,16 @@
       </tbody>
     </table>
     <div v-if="yearShowDate">
-      <table class="jy-calendar-table-detail">
+      <table class="gj-calendar-table-detail">
         <tbody>
           <tr v-for="(row, key) in rows" :key="key">
             <td v-for="(cell, key) in row" :key="key">
-              <div class="jy-calendar-day">
+              <div class="gj-calendar-day">
                 <span class="cell" :style="yearMonthStyle"
                   >{{ cell.text }}月</span
                 >
                 <table
-                  class="jy-calendar-day-table"
+                  class="gj-calendar-day-table"
                   cellspacing="0"
                   cellpadding="0"
                   border="0"

@@ -15,15 +15,15 @@ icon尺寸统一是16px
 
 <template>
   <button
-    class="jy-button"
+    class="gj-button"
     @click="handleClick"
     :disabled="buttonDisabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
     :class="[
-      type ? 'jy-button--' + type : '',
-      buttonSize ? 'jy-button--' + buttonSize : '',
-      buttonText ? 'jy-text-button--' + textType : '',
+      type ? 'gj-button--' + type : '',
+      buttonSize ? 'gj-button--' + buttonSize : '',
+      buttonText ? 'gj-text-button--' + textType : '',
       {
         'is-disabled': buttonDisabled,
         'is-loading': loading,
@@ -46,13 +46,13 @@ icon尺寸统一是16px
 </template>
 <script>
   export default {
-    name: 'JyButton',
+    name: 'GjButton',
 
     inject: {
-      jyForm: {
+      GjForm: {
         default: ''
       },
-      jyFormItem: {
+      GjFormItem: {
         default: ''
       }
     },
@@ -93,13 +93,13 @@ icon尺寸统一是16px
         return this.type === 'text' && this.textType;
       },
       _elFormItemSize() {
-        return (this.jyFormItem || {}).jyFormItemSize;
+        return (this.GjFormItem || {}).GjFormItemSize;
       },
       buttonSize() {
         return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
       },
       buttonDisabled() {
-        return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.jyForm || {}).disabled;
+        return this.$options.propsData.hasOwnProperty('disabled') ? this.disabled : (this.GjForm || {}).disabled;
       }
     },
 

@@ -1,5 +1,5 @@
 /*
-jy-table-radio--icon jy-table-radio--checked-icon
+gj-table-radio--icon gj-table-radio--checked-icon
 */
 
 /**Variable**/
@@ -7,18 +7,18 @@ jy-table-radio--icon jy-table-radio--checked-icon
 @import './base/common.scss';
 
 /*radio-group*/
-.jy-table-radio-group {
+.gj-table-radio-group {
   display: inline-block;
   vertical-align: middle;
   line-height: 1;
   font-size: 0;
-  &+.jy-table-radio-group {
+  &+.gj-table-radio-group {
     margin-left: 10px;
   }
 }
 
 /*radio*/
-.jy-table-radio {
+.gj-table-radio {
   color: $--radio-font-color;
   font-weight: $--radio-font-weight;
   line-height: 1;
@@ -37,23 +37,23 @@ jy-table-radio--icon jy-table-radio--checked-icon
       border: 0;
       appearance: none;
     }
-    &+.jy-table-radio--icon {
+    &+.gj-table-radio--icon {
       position: relative;
       display: inline-block;
       width: 1em;
       height: 1em;
-      border: $jy-radio-border-width solid $jy-input-border-color;
-      background-color: $jy-radio-icon-background-color;
+      border: $gj-radio-border-width solid $gj-input-border-color;
+      background-color: $gj-radio-icon-background-color;
       vertical-align: middle;
       border-radius: 50%;
     }
-    &:checked+.jy-table-radio--icon {
-      background-color: $jy-primary-color;
-      border-color: $jy-primary-color;
+    &:checked+.gj-table-radio--icon {
+      background-color: $gj-primary-color;
+      border-color: $gj-primary-color;
       &:before {
         content: "";
         position: absolute;
-        background-color: $jy-radio-checked-icon-background-color;
+        background-color: $gj-radio-checked-icon-background-color;
         border-radius: 50%;
         height: 0.25em;
         width: 0.25em;
@@ -61,24 +61,24 @@ jy-table-radio--icon jy-table-radio--checked-icon
         left: 50%;
         transform: translate(-50%,-50%);
       }
-      &+.jy-table-radio--label {
-        color: $jy-primary-color;
+      &+.gj-table-radio--label {
+        color: $gj-primary-color;
       }
     }
   }
   &:not(.is--disabled) {
     & > input {
       &:focus {
-        &+.jy-table-radio--icon {
-          border-color: $jy-primary-color;
-          box-shadow: 0 0 0.2em 0 $jy-primary-color;
+        &+.gj-table-radio--icon {
+          border-color: $gj-primary-color;
+          box-shadow: 0 0 0.2em 0 $gj-primary-color;
         }
       }
     }
     &:hover {
       > input {
-        &+.jy-table-radio--icon {
-          border-color: $jy-primary-color;
+        &+.gj-table-radio--icon {
+          border-color: $gj-primary-color;
         }
       }
     }
@@ -86,61 +86,61 @@ jy-table-radio--icon jy-table-radio--checked-icon
   &.is--disabled {
     cursor: not-allowed;
     > input {
-      &+.jy-table-radio--icon {
-        border-color: $jy-input-disabled-color;
-        background-color: $jy-input-disabled-background-color;
+      &+.gj-table-radio--icon {
+        border-color: $gj-input-disabled-color;
+        background-color: $gj-input-disabled-background-color;
         &:before {
-          border-color: $jy-primary-disabled-color;
-          background-color: $jy-primary-disabled-color;
+          border-color: $gj-primary-disabled-color;
+          background-color: $gj-primary-disabled-color;
         }
-        &+.jy-table-radio--label {
-          color: $jy-disabled-color;
+        &+.gj-table-radio--label {
+          color: $gj-disabled-color;
         }
       }
     }
   }
-  .jy-table-radio--label {
+  .gj-table-radio--label {
     padding-left: 0.5em;
     vertical-align: middle;
     display: inline-block;
     max-width: 50em;
     @extend %TextEllipsis;
   }
-  &:not(.jy-table-radio-button) {
-    &+.jy-table-radio {
+  &:not(.gj-table-radio-button) {
+    &+.gj-table-radio {
       margin-left: 10px;
     }
   }
 }
 
-.jy-table-radio-button {
-  .jy-table-radio--label {
-    background-color: $jy-radio-button-default-background-color;
+.gj-table-radio-button {
+  .gj-table-radio--label {
+    background-color: $gj-radio-button-default-background-color;
   }
   &:first-child {
-    .jy-table-radio--label {
-      border-left: 1px solid $jy-input-border-color;
-      border-radius: $jy-border-radius 0 0 $jy-border-radius;
+    .gj-table-radio--label {
+      border-left: 1px solid $gj-input-border-color;
+      border-radius: $gj-border-radius 0 0 $gj-border-radius;
     }
   }
   &:last-child {
-    .jy-table-radio--label {
-      border-radius: 0 $jy-border-radius $jy-border-radius 0;
+    .gj-table-radio--label {
+      border-radius: 0 $gj-border-radius $gj-border-radius 0;
     }
   }
   > input {
-    &:checked+.jy-table-radio--label {
+    &:checked+.gj-table-radio--label {
       color: #fff;
-      background-color: $jy-primary-color;
-      border-color: $jy-primary-color;
+      background-color: $gj-primary-color;
+      border-color: $gj-primary-color;
     }
   }
-  .jy-table-radio--label {
+  .gj-table-radio--label {
     padding: 0 1em;
-    line-height: $jy-button-height-default - 2;
+    line-height: $gj-button-height-default - 2;
     display: inline-block;
     border-style: solid;
-    border-color: $jy-input-border-color;
+    border-color: $gj-input-border-color;
     border-width: 1px 1px 1px 0;
     max-width: 50em;
     @extend %TextEllipsis;
@@ -149,14 +149,14 @@ jy-table-radio--icon jy-table-radio--checked-icon
     cursor: not-allowed;
     > input {
       &:not(:checked) {
-        &+.jy-table-radio--label {
-          color: $jy-input-disabled-color;
+        &+.gj-table-radio--label {
+          color: $gj-input-disabled-color;
         }
       }
       &:checked {
-        &+.jy-table-radio--label {
-          border-color: $jy-primary-color;
-          background-color: $jy-primary-color;
+        &+.gj-table-radio--label {
+          border-color: $gj-primary-color;
+          background-color: $gj-primary-color;
         }
       }
     }
@@ -164,60 +164,60 @@ jy-table-radio--icon jy-table-radio--checked-icon
   &:not(.is--disabled) {
     & > input {
       &:focus {
-        &+.jy-table-radio--label {
-          border-color: $jy-primary-color;
-          box-shadow: 0 0 0.2em 0 $jy-primary-color;
+        &+.gj-table-radio--label {
+          border-color: $gj-primary-color;
+          box-shadow: 0 0 0.2em 0 $gj-primary-color;
         }
       }
     }
     &:hover {
       > input {
         &:not(:checked) {
-          &+.jy-table-radio--label {
-            color: $jy-primary-color;
+          &+.gj-table-radio--label {
+            color: $gj-primary-color;
           }
         }
       }
     }
   }
   &.size--medium {
-    .jy-table-radio--label {
-      line-height: $jy-button-height-medium - 2;
+    .gj-table-radio--label {
+      line-height: $gj-button-height-medium - 2;
     }
   }
   &.size--small {
-    .jy-table-radio--label {
-      line-height: $jy-button-height-small - 2;
+    .gj-table-radio--label {
+      line-height: $gj-button-height-small - 2;
     }
   }
   &.size--mini {
-    .jy-table-radio--label {
-      line-height: $jy-button-height-mini - 2;
+    .gj-table-radio--label {
+      line-height: $gj-button-height-mini - 2;
     }
   }
 }
 
-.jy-table-radio {
-  font-size: $jy-font-size;
-  .jy-table-radio--icon {
-    font-size: $jy-radio-font-size-default;
+.gj-table-radio {
+  font-size: $gj-font-size;
+  .gj-table-radio--icon {
+    font-size: $gj-radio-font-size-default;
   }
   &.size--medium {
-    font-size: $jy-font-size-medium;
-    .jy-table-radio--icon {
-      font-size: $jy-radio-font-size-medium;
+    font-size: $gj-font-size-medium;
+    .gj-table-radio--icon {
+      font-size: $gj-radio-font-size-medium;
     }
   }
   &.size--small {
-    font-size: $jy-font-size-small;
-    .jy-table-radio--icon {
-      font-size: $jy-radio-font-size-small;
+    font-size: $gj-font-size-small;
+    .gj-table-radio--icon {
+      font-size: $gj-radio-font-size-small;
     }
   }
   &.size--mini {
-    font-size: $jy-font-size-mini;
-    .jy-table-radio--icon {
-      font-size: $jy-radio-font-size-mini;
+    font-size: $gj-font-size-mini;
+    .gj-table-radio--icon {
+      font-size: $gj-radio-font-size-mini;
     }
   }
 }

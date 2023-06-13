@@ -10,7 +10,7 @@
 ```html
 <template>
   Scroll down to see the bottom-right button.
-  <jy-backtop target=".page-component__scroll .jy-scrollbar__wrap"></jy-backtop>
+  <gj-backtop target=".page-component__scroll .gj-scrollbar__wrap"></gj-backtop>
 </template>
 ```
 
@@ -24,11 +24,11 @@
 ```html
 <template>
   Scroll down to see the bottom-right button.
-  <jy-backtop class="backtop-up" target=".page-component__scroll .jy-scrollbar__wrap" :bottom="100">
-    <div class="jy-backtop-up">
+  <gj-backtop class="backtop-up" target=".page-component__scroll .gj-scrollbar__wrap" :bottom="100">
+    <div class="gj-backtop-up">
       UP
     </div>
-  </jy-backtop>
+  </gj-backtop>
 </template>
 ```
 

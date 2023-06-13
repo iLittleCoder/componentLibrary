@@ -15,19 +15,19 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       ref="xTree"
       :row-config="{keyField: 'id'}"
       :tree-config="{lazy: true, hasChild: 'hasChild', loadMethod: loadChildrenMethod}"
       :data="tableData1">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" width="400" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" width="400" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -38,7 +38,7 @@
 
     <p class="tip">通过设置 <table-api-link prop="expandRowKeys"/> 属性默认展开指定节点</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :row-config="{keyField: 'id'}"
@@ -46,11 +46,11 @@
       :checkbox-config="{labelField: 'name'}"
       :tree-config="{transform: true, lazy: true, hasChild: 'hasChild', expandRowKeys: defaultExpandRowKeys, loadMethod: loadChildrenMethod, iconOpen: 'fa fa-minus-square-o', iconClose: 'fa fa-plus-square-o'}"
       :data="tableData2">
-      <jy-column type="checkbox" title="Name" width="400" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="Name" width="400" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -85,18 +85,18 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           ref="xTree"
           row-id="id"
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId', lazy: true, hasChild: 'hasChild', loadMethod: loadChildrenMethod}"
           :data="tableData1">
-          <jy-column field="name" title="Name" width="400" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="Name" width="400" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -127,7 +127,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           resizable
           row-id="id"
@@ -135,11 +135,11 @@ export default {
           :checkbox-config="{labelField: 'name'}"
           :tree-config="{transform: true, lazy: true, hasChild: 'hasChild', expandRowKeys: defaultExpandRowKeys, loadMethod: loadChildrenMethod, iconOpen: 'fa fa-minus-square-o', iconClose: 'fa fa-plus-square-o'}"
           :data="tableData2">
-          <jy-column type="checkbox" title="Name" width="400" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" title="Name" width="400" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {

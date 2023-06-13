@@ -451,7 +451,7 @@
     ],
     "description": "按钮"
   },
-  "jy-table-tooltip": {
+  "gj-table-tooltip": {
     "attributes": [
       "value",
       "content",

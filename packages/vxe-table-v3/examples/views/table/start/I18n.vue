@@ -18,13 +18,13 @@
       <pre-code class="html">{{ demoCodes[3] }}</pre-code>
     </pre>
     <h2>{{ $t('app.body.demo.start.i18n.findError') }}</h2>
-    <p class="tip">通过 <a class="link" href="https://github.com/x-extends/jy-table/pulls">Pull requests</a> 贡献翻译 -> <a class="link" href="https://github.com/x-extends/jy-table/tree/master/packages/locale/lang">添加或修改</a></p>
+    <p class="tip">通过 <a class="link" href="https://github.com/x-extends/gj-table/pulls">Pull requests</a> 贡献翻译 -> <a class="link" href="https://github.com/x-extends/gj-table/tree/master/packages/locale/lang">添加或修改</a></p>
     <div>
       <ul class="lang-list">
-        <li><a class="link" href="https://github.com/x-extends/jy-table/blob/master/packages/locale/lang/zh-CN.js" target="_blank">简体中文（zh-CN）</a></li>
-        <li><a class="link" href="https://github.com/x-extends/jy-table/blob/master/packages/locale/lang/zh-TC.js" target="_blank">繁体中文（zh-TC）</a></li>
-        <li><a class="link" href="https://github.com/x-extends/jy-table/blob/master/packages/locale/lang/en-US.js" target="_blank">English（en-US）</a></li>
-        <li><a class="link" href="https://github.com/x-extends/jy-table/blob/master/packages/locale/lang/ja-JP.js" target="_blank">ジャパン（ja-JP）</a></li>
+        <li><a class="link" href="https://github.com/x-extends/gj-table/blob/master/packages/locale/lang/zh-CN.js" target="_blank">简体中文（zh-CN）</a></li>
+        <li><a class="link" href="https://github.com/x-extends/gj-table/blob/master/packages/locale/lang/zh-TC.js" target="_blank">繁体中文（zh-TC）</a></li>
+        <li><a class="link" href="https://github.com/x-extends/gj-table/blob/master/packages/locale/lang/en-US.js" target="_blank">English（en-US）</a></li>
+        <li><a class="link" href="https://github.com/x-extends/gj-table/blob/master/packages/locale/lang/ja-JP.js" target="_blank">ジャパン（ja-JP）</a></li>
       </ul>
     </div>
   </div>
@@ -38,8 +38,8 @@ export default {
         `
         import Vue from 'vue'
         import VueI18n from 'vue-i18n'
-        import zhCN from 'jy-table/lib/locale/lang/zh-CN'
-        import enUS from 'jy-table/lib/locale/lang/en-US'
+        import zhCN from 'gj-table/lib/locale/lang/zh-CN'
+        import enUS from 'gj-table/lib/locale/lang/en-US'
 
         const messages = {
           zh_CN: {
@@ -60,9 +60,9 @@ export default {
         `
         import Vue from 'vue'
         import i18n from './i18n'
-        import VXETable from 'jy-table'
-        import zhCN from 'jy-table/lib/locale/lang/zh-CN'
-        import enUS from 'jy-table/lib/locale/lang/en-US'
+        import VXETable from 'gj-table'
+        import zhCN from 'gj-table/lib/locale/lang/zh-CN'
+        import enUS from 'gj-table/lib/locale/lang/en-US'
 
         VXETable.setup({
           // 对组件内置的提示语进行国际化翻译
@@ -86,14 +86,14 @@ export default {
         })
         `,
         `
-        <jy-table
+        <gj-table
           border
           height="600"
           :data="tableData">
-          <jy-column field="name" title="app.body.label.name"></jy-column>
-          <jy-column field="age" title="app.body.label.age"></jy-column>
-          <jy-column field="sex" title="app.body.label.sex"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="app.body.label.name"></gj-column>
+          <gj-column field="age" title="app.body.label.age"></gj-column>
+          <gj-column field="sex" title="app.body.label.sex"></gj-column>
+        </gj-table>
         `
       ]
     }

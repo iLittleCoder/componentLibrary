@@ -86,10 +86,10 @@
       text-align: center;
       position: static;
       transform: none;
-      .jy-carousel__indicator:hover button {
+      .gj-carousel__indicator:hover button {
         background-color: $--color-primary;
       }
-      .jy-carousel__indicator {
+      .gj-carousel__indicator {
         &.is-active {
           button {
             background-color: $--color-primary;
@@ -107,14 +107,14 @@
       transform: none;
       text-align: center;
 
-      .jy-carousel__button {
+      .gj-carousel__button {
         height: auto;
         width: auto;
         padding: 2px 18px;
         font-size: 12px;
       }
 
-      .jy-carousel__indicator {
+      .gj-carousel__indicator {
         padding: 6px 4px;
       }
     }
@@ -135,7 +135,7 @@
 
     @include m(vertical) {
       padding: $--carousel-indicator-padding-horizontal $--carousel-indicator-padding-vertical;
-      .jy-carousel__button {
+      .gj-carousel__button {
         width: $--carousel-indicator-height;
         height: #{math.div($--carousel-indicator-width, 2)};
       }

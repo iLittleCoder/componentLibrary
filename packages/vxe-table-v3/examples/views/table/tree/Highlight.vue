@@ -4,16 +4,16 @@
       键盘移动高亮行，设置 <table-api-link prop="keyboard-config"/>={isArrow: true, isEnter: true} 启用方向键功能
     </p>
 
-    <jy-table
+    <gj-table
       highlight-current-row
       :data="tableData"
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
       :keyboard-config="{isArrow: true, isEnter: true}">
-      <jy-column field="name" title="Name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -59,16 +59,16 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           highlight-current-row
           :data="tableData"
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :keyboard-config="{isArrow: true, isEnter: true}">
-          <jy-column field="name" title="Name" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="Name" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {

@@ -6,16 +6,16 @@
     </p>
 
     <div style="overflow: hidden; width: 100%; height: 300px">
-      <jy-table
+      <gj-table
         border
         height="auto"
         :data="tableData">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name"></jy-column>
-        <jy-column field="sex" title="Sex"></jy-column>
-        <jy-column field="age" title="Age"></jy-column>
-        <jy-column field="address" title="Address" show-overflow></jy-column>
-      </jy-table>
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name"></gj-column>
+        <gj-column field="sex" title="Sex"></gj-column>
+        <gj-column field="age" title="Age"></gj-column>
+        <gj-column field="address" title="Address" show-overflow></gj-column>
+      </gj-table>
     </div>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -28,27 +28,27 @@
     <p class="tip">也可以设置相对于父容器的百分比</p>
 
     <div style="overflow: hidden; height: 500px">
-      <jy-table
+      <gj-table
         border
         height="40%"
         :data="tableData">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name"></jy-column>
-        <jy-column field="sex" title="Sex"></jy-column>
-        <jy-column field="age" title="Age"></jy-column>
-        <jy-column field="address" title="Address" show-overflow></jy-column>
-      </jy-table>
-      <jy-table
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name"></gj-column>
+        <gj-column field="sex" title="Sex"></gj-column>
+        <gj-column field="age" title="Age"></gj-column>
+        <gj-column field="address" title="Address" show-overflow></gj-column>
+      </gj-table>
+      <gj-table
         border
         height="60%"
         :data="tableData">
-        <jy-column type="seq" width="60" fixed="left"></jy-column>
-        <jy-column field="name" title="Name" width="300"></jy-column>
-        <jy-column field="sex" title="Sex" width="300"></jy-column>
-        <jy-column field="age" title="Age" width="300"></jy-column>
-        <jy-column field="date13" title="Date" width="300"></jy-column>
-        <jy-column field="address" title="Address" width="200" fixed="right" show-overflow></jy-column>
-      </jy-table>
+        <gj-column type="seq" width="60" fixed="left"></gj-column>
+        <gj-column field="name" title="Name" width="300"></gj-column>
+        <gj-column field="sex" title="Sex" width="300"></gj-column>
+        <gj-column field="age" title="Age" width="300"></gj-column>
+        <gj-column field="date13" title="Date" width="300"></gj-column>
+        <gj-column field="address" title="Address" width="200" fixed="right" show-overflow></gj-column>
+      </gj-table>
     </div>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -72,20 +72,20 @@
     </vxe-toolbar>
 
     <div style="overflow: hidden;" :style="{width: tableWidth, height: tableHeight}">
-      <jy-table
+      <gj-table
         border
         auto-resize
         show-footer
         height="auto"
         :footer-method="footerMethod"
         :data="tableData">
-        <jy-column type="seq" width="60" fixed="left"></jy-column>
-        <jy-column field="name" title="Name" width="300"></jy-column>
-        <jy-column field="sex" title="Sex" width="300"></jy-column>
-        <jy-column field="age" title="Age" width="300"></jy-column>
-        <jy-column field="date13" title="Date" width="300"></jy-column>
-        <jy-column field="address" title="Address" width="200" fixed="right" show-overflow></jy-column>
-      </jy-table>
+        <gj-column type="seq" width="60" fixed="left"></gj-column>
+        <gj-column field="name" title="Name" width="300"></gj-column>
+        <gj-column field="sex" title="Sex" width="300"></gj-column>
+        <gj-column field="age" title="Age" width="300"></gj-column>
+        <gj-column field="date13" title="Date" width="300"></gj-column>
+        <gj-column field="address" title="Address" width="200" fixed="right" show-overflow></gj-column>
+      </gj-table>
     </div>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -116,16 +116,16 @@ export default {
       demoCodes: [
         `
         <div style="overflow: hidden; width: 100%; height: 300px">
-          <jy-table
+          <gj-table
             border
             height="auto"
             :data="tableData">
-            <jy-column type="seq" width="60"></jy-column>
-            <jy-column field="name" title="Name"></jy-column>
-            <jy-column field="sex" title="Sex"></jy-column>
-            <jy-column field="age" title="Age"></jy-column>
-            <jy-column field="address" title="Address" show-overflow></jy-column>
-          </jy-table>
+            <gj-column type="seq" width="60"></gj-column>
+            <gj-column field="name" title="Name"></gj-column>
+            <gj-column field="sex" title="Sex"></gj-column>
+            <gj-column field="age" title="Age"></gj-column>
+            <gj-column field="address" title="Address" show-overflow></gj-column>
+          </gj-table>
         </div>
         `,
         `
@@ -148,27 +148,27 @@ export default {
         `,
         `
         <div style="overflow: hidden; height: 500px">
-          <jy-table
+          <gj-table
             border
             height="40%"
             :data="tableData">
-            <jy-column type="seq" width="60"></jy-column>
-            <jy-column field="name" title="Name"></jy-column>
-            <jy-column field="sex" title="Sex"></jy-column>
-            <jy-column field="age" title="Age"></jy-column>
-            <jy-column field="address" title="Address" show-overflow></jy-column>
-          </jy-table>
-          <jy-table
+            <gj-column type="seq" width="60"></gj-column>
+            <gj-column field="name" title="Name"></gj-column>
+            <gj-column field="sex" title="Sex"></gj-column>
+            <gj-column field="age" title="Age"></gj-column>
+            <gj-column field="address" title="Address" show-overflow></gj-column>
+          </gj-table>
+          <gj-table
             border
             height="60%"
             :data="tableData">
-            <jy-column type="seq" width="60" fixed="left"></jy-column>
-            <jy-column field="name" title="Name" width="300"></jy-column>
-            <jy-column field="sex" title="Sex" width="300"></jy-column>
-            <jy-column field="age" title="Age" width="300"></jy-column>
-            <jy-column field="date13" title="Date" width="300"></jy-column>
-            <jy-column field="address" title="Address" width="200" fixed="right" show-overflow></jy-column>
-          </jy-table>
+            <gj-column type="seq" width="60" fixed="left"></gj-column>
+            <gj-column field="name" title="Name" width="300"></gj-column>
+            <gj-column field="sex" title="Sex" width="300"></gj-column>
+            <gj-column field="age" title="Age" width="300"></gj-column>
+            <gj-column field="date13" title="Date" width="300"></gj-column>
+            <gj-column field="address" title="Address" width="200" fixed="right" show-overflow></gj-column>
+          </gj-table>
         </div>
         `,
         `
@@ -202,20 +202,20 @@ export default {
         </vxe-toolbar>
 
         <div style="overflow: hidden;" :style="{width: tableWidth, height: tableHeight}">
-          <jy-table
+          <gj-table
             border
             auto-resize
             show-footer
             height="auto"
             :footer-method="footerMethod"
             :data="tableData">
-            <jy-column type="seq" width="60" fixed="left"></jy-column>
-            <jy-column field="name" title="Name" width="300"></jy-column>
-            <jy-column field="sex" title="Sex" width="300"></jy-column>
-            <jy-column field="age" title="Age" width="300"></jy-column>
-            <jy-column field="date13" title="Date" width="300"></jy-column>
-            <jy-column field="address" title="Address" width="200" fixed="right" show-overflow></jy-column>
-          </jy-table>
+            <gj-column type="seq" width="60" fixed="left"></gj-column>
+            <gj-column field="name" title="Name" width="300"></gj-column>
+            <gj-column field="sex" title="Sex" width="300"></gj-column>
+            <gj-column field="age" title="Age" width="300"></gj-column>
+            <gj-column field="date13" title="Date" width="300"></gj-column>
+            <gj-column field="address" title="Address" width="200" fixed="right" show-overflow></gj-column>
+          </gj-table>
         </div>
         `,
         `

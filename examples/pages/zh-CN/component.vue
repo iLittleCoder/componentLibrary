@@ -3,10 +3,10 @@
     height: calc(100% - 60px);
     margin-top: 60px;
 
-    > .jy-scrollbar__bar.is-horizontal {
+    > .gj-scrollbar__bar.is-horizontal {
       display: none;
     }
-    > .jy-scrollbar__wrap {
+    > .gj-scrollbar__wrap {
       overflow-x: auto;
     }
   }
@@ -28,7 +28,7 @@
       margin-top: 60px;
       transition: padding-top .3s;
 
-      > .jy-scrollbar__wrap {
+      > .gj-scrollbar__wrap {
         height: 100%;
         overflow-x: auto;
       }
@@ -136,23 +136,23 @@
   }
 </style>
 <template>
-  <jy-scrollbar class="page-component__scroll" ref="componentScrollBar">
+  <gj-scrollbar class="page-component__scroll" ref="componentScrollBar">
   <div class="page-container page-component">
-    <jy-scrollbar class="page-component__nav">
+    <gj-scrollbar class="page-component__nav">
       <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
-    </jy-scrollbar>
+    </gj-scrollbar>
     <div class="page-component__content">
       <router-view class="content"></router-view>
       <footer-nav></footer-nav>
     </div>
-    <jy-backtop
+    <gj-backtop
       v-if="showBackToTop"
-      target=".page-component__scroll .jy-scrollbar__wrap"
+      target=".page-component__scroll .gj-scrollbar__wrap"
       :right="100"
       :bottom="150"
-    ></jy-backtop>
+    ></gj-backtop>
   </div>
-  </jy-scrollbar>
+  </gj-scrollbar>
 </template>
 <script>
   import bus from '../../bus';
@@ -230,7 +230,7 @@
     },
     mounted() {
       this.componentScrollBar = this.$refs.componentScrollBar;
-      this.componentScrollBox = this.componentScrollBar.$el.querySelector('.jy-scrollbar__wrap');
+      this.componentScrollBox = this.componentScrollBar.$el.querySelector('.gj-scrollbar__wrap');
       this.throttledScrollHandler = throttle(300, this.handleScroll);
       this.componentScrollBox.addEventListener('scroll', this.throttledScrollHandler);
       this.renderAnchorHref();

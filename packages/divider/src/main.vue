@@ -2,11 +2,11 @@
   <div
     v-bind="data.attrs"
     v-on="listeners"
-    :class="[data.staticClass, 'jy-divider', `jy-divider--${props.direction}`, { 'is-text': slots().default }, `jy-divider--${props.type}`]"
+    :class="[data.staticClass, 'gj-divider', `gj-divider--${props.direction}`, { 'is-text': slots().default }, `gj-divider--${props.type}`]"
   >
     <div
       v-if="slots().default && props.direction !== 'vertical'"
-      :class="['jy-divider__text', `is-${props.contentPosition}`]"
+      :class="['gj-divider__text', `is-${props.contentPosition}`]"
      >
       <slot />
     </div>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'JyDivider',
+  name: 'GjDivider',
   props: {
     direction: {
       type: String,

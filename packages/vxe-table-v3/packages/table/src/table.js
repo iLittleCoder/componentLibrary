@@ -22,7 +22,7 @@ function renderFixed (h, $xetable, fixedType) {
   const { _e, tableData, tableColumn, tableGroupColumn, vSize, showHeader, showFooter, columnStore, footerTableData } = $xetable
   const fixedColumn = columnStore[`${fixedType}List`]
   return h('div', {
-    class: `jy-table--fixed-${fixedType}-wrapper`,
+    class: `gj-table--fixed-${fixedType}-wrapper`,
     ref: `${fixedType}Container`
   }, [
     showHeader ? h(VxeTableHeader, {
@@ -36,7 +36,7 @@ function renderFixed (h, $xetable, fixedType) {
       },
       ref: `${fixedType}Header`
     }) : _e(),
-    h('jy-table-body', {
+    h('gj-table-body', {
       props: {
         fixedType,
         tableData,
@@ -46,7 +46,7 @@ function renderFixed (h, $xetable, fixedType) {
       },
       ref: `${fixedType}Body`
     }),
-    showFooter ? h('jy-table-footer', {
+    showFooter ? h('gj-table-footer', {
       props: {
         footerTableData,
         tableColumn,
@@ -85,7 +85,7 @@ function handleUupdateResize (_vm) {
 }
 
 export default {
-  name: 'JyTable',
+  name: 'GjTable',
   mixins: [vSize],
   props: {
     /** 基本属性 */
@@ -965,8 +965,8 @@ export default {
     } = this
     const { leftList, rightList } = columnStore
     return h('div', {
-      class: ['jy-table', 'jy-table--render-default', `tid_${tId}`, vSize ? `size--${vSize}` : '', `border--${tableBorder}`, {
-        'jy-editable': !!editConfig,
+      class: ['gj-table', 'gj-table--render-default', `tid_${tId}`, vSize ? `size--${vSize}` : '', `border--${tableBorder}`, {
+        'gj-editable': !!editConfig,
         'cell--highlight': highlightCell,
         'cell--selected': mouseConfig && mouseOpts.selected,
         'cell--area': mouseConfig && mouseOpts.area,
@@ -996,14 +996,14 @@ export default {
        * 隐藏列
        */
       h('div', {
-        class: 'jy-table-slots',
+        class: 'gj-table-slots',
         ref: 'hideColumn'
       }, this.$slots.default),
       h('div', {
-        class: 'jy-table--render-wrapper'
+        class: 'gj-table--render-wrapper'
       }, [
         h('div', {
-          class: 'jy-table--main-wrapper'
+          class: 'gj-table--main-wrapper'
         }, [
           /**
            * 表头
@@ -1020,7 +1020,7 @@ export default {
           /**
            * 表体
            */
-          h('jy-table-body', {
+          h('gj-table-body', {
             ref: 'tableBody',
             props: {
               tableData,
@@ -1031,7 +1031,7 @@ export default {
           /**
            * 表尾
            */
-          showFooter ? h('jy-table-footer', {
+          showFooter ? h('gj-table-footer', {
             ref: 'tableFooter',
             props: {
               footerTableData,
@@ -1041,7 +1041,7 @@ export default {
           }) : _e()
         ]),
         h('div', {
-          class: 'jy-table--fixed-wrapper'
+          class: 'gj-table--fixed-wrapper'
         }, [
           /**
            * 左侧固定区域
@@ -1058,23 +1058,23 @@ export default {
        */
       h('div', {
         ref: 'emptyPlaceholder',
-        class: 'jy-table--empty-placeholder'
+        class: 'gj-table--empty-placeholder'
       }, [
         h('div', {
-          class: 'jy-table--empty-content'
+          class: 'gj-table--empty-content'
         }, renderEmptyContenet(h, this))
       ]),
       /**
        * 边框线
        */
       h('div', {
-        class: 'jy-table--border-line'
+        class: 'gj-table--border-line'
       }),
       /**
        * 列宽线
        */
       h('div', {
-        class: 'jy-table--resizable-bar',
+        class: 'gj-table--resizable-bar',
         style: overflowX ? {
           'padding-bottom': `${scrollbarHeight}px`
         } : null,
@@ -1084,12 +1084,12 @@ export default {
        * 加载中
        */
       h('div', {
-        class: ['jy-table--loading jy-loading jy-loading-mask', {
+        class: ['gj-table--loading gj-loading gj-loading-mask', {
           'is--visible': loading
         }]
       }, [
         h('div', {
-          class: 'jy-loading-spinner'
+          class: 'gj-loading-spinner'
         }, [
           h('i', {
             class: 'circular Gildata-loading'
@@ -1099,7 +1099,7 @@ export default {
       /**
        * 筛选
        */
-      initStore.filter ? h('jy-table-filter', {
+      initStore.filter ? h('gj-table-filter', {
         ref: 'filterWrapper',
         props: {
           filterStore
@@ -1108,7 +1108,7 @@ export default {
       /**
        * 导入
        */
-      initStore.import && this.importConfig ? h('jy-import-panel', {
+      initStore.import && this.importConfig ? h('gj-import-panel', {
         props: {
           defaultOptions: this.importParams,
           storeData: this.importStore
@@ -1136,7 +1136,7 @@ export default {
       /**
        * 通用提示
        */
-      hasTip ? h('jy-table-tooltip', {
+      hasTip ? h('gj-table-tooltip', {
         ref: 'commTip',
         props: {
           isArrow: false,
@@ -1146,16 +1146,16 @@ export default {
       /**
        * 工具提示
        */
-      hasTip ? h('jy-table-tooltip', {
+      hasTip ? h('gj-table-tooltip', {
         ref: 'tooltip',
         props: this.tipConfig
       }) : _e(),
       /**
        * 校验提示
        */
-      hasTip && this.editRules && validOpts.showMessage && (validOpts.message === 'default' ? !height : validOpts.message === 'tooltip') ? h('jy-table-tooltip', {
+      hasTip && this.editRules && validOpts.showMessage && (validOpts.message === 'default' ? !height : validOpts.message === 'tooltip') ? h('gj-table-tooltip', {
         ref: 'validTip',
-        class: 'jy-table--valid-error',
+        class: 'gj-table--valid-error',
         props: validOpts.message === 'tooltip' || tableData.length === 1 ? validTipOpts : null
       }) : _e()
     ])

@@ -29,13 +29,13 @@ function renderDateLabel (h, _vm, item, label) {
     const extraItem = festivalItem.extra ? (XEUtils.isString(festivalItem.extra) ? { label: festivalItem.extra } : festivalItem.extra) : null
     const labels = [
       h('span', {
-        class: ['jy-table-input--date-label', {
+        class: ['gj-table-input--date-label', {
           'is-notice': festivalItem.notice
         }]
       }, extraItem && extraItem.label ? [
         h('span', label),
         h('span', {
-          class: ['jy-table-input--date-label--extra', extraItem.important ? 'is-important' : '', extraItem.className],
+          class: ['gj-table-input--date-label--extra', extraItem.important ? 'is-important' : '', extraItem.className],
           style: extraItem.style
         }, XEUtils.toValueString(extraItem.label))
       ] : label)
@@ -46,13 +46,13 @@ function renderDateLabel (h, _vm, item, label) {
       const festivalLabels = XEUtils.toValueString(festivalLabel).split(',')
       labels.push(
         h('span', {
-          class: ['jy-table-input--date-festival', festivalItem.important ? 'is-important' : '', festivalItem.className],
+          class: ['gj-table-input--date-festival', festivalItem.important ? 'is-important' : '', festivalItem.className],
           style: festivalItem.style
         }, [
           festivalLabels.length > 1 ? h('span', {
-            class: ['jy-table-input--date-festival--overlap', `overlap--${festivalLabels.length}`]
+            class: ['gj-table-input--date-festival--overlap', `overlap--${festivalLabels.length}`]
           }, festivalLabels.map(label => h('span', label.substring(0, 3)))) : h('span', {
-            class: 'jy-table-input--date-festival--label'
+            class: 'gj-table-input--date-festival--label'
           }, festivalLabels[0].substring(0, 3))
         ])
       )
@@ -72,7 +72,7 @@ function renderDateDayTable (h, _vm) {
   const matchFormat = 'yyyy-MM-dd'
   return [
     h('table', {
-      class: `jy-table-input--date-${datePanelType}-view`,
+      class: `gj-table-input--date-${datePanelType}-view`,
       attrs: {
         cellspacing: 0,
         cellpadding: 0,
@@ -112,7 +112,7 @@ function renderDateWeekTable (h, _vm) {
   const matchFormat = 'yyyyMMdd'
   return [
     h('table', {
-      class: `jy-table-input--date-${datePanelType}-view`,
+      class: `gj-table-input--date-${datePanelType}-view`,
       attrs: {
         cellspacing: 0,
         cellpadding: 0,
@@ -154,7 +154,7 @@ function renderDateMonthTable (h, _vm) {
   const matchFormat = 'yyyyMM'
   return [
     h('table', {
-      class: `jy-table-input--date-${datePanelType}-view`,
+      class: `gj-table-input--date-${datePanelType}-view`,
       attrs: {
         cellspacing: 0,
         cellpadding: 0,
@@ -189,7 +189,7 @@ function renderDateQuarterTable (h, _vm) {
   const matchFormat = 'yyyyq'
   return [
     h('table', {
-      class: `jy-table-input--date-${datePanelType}-view`,
+      class: `gj-table-input--date-${datePanelType}-view`,
       attrs: {
         cellspacing: 0,
         cellpadding: 0,
@@ -224,7 +224,7 @@ function renderDateYearTable (h, _vm) {
   const matchFormat = 'yyyy'
   return [
     h('table', {
-      class: `jy-table-input--date-${datePanelType}-view`,
+      class: `gj-table-input--date-${datePanelType}-view`,
       attrs: {
         cellspacing: 0,
         cellpadding: 0,
@@ -273,25 +273,25 @@ function renderDatePanel (h, _vm) {
   const { datePanelType, selectDatePanelLabel, isDisabledPrevDateBtn, isDisabledNextDateBtn, multiple, supportMultiples } = _vm
   return [
     h('div', {
-      class: 'jy-table-input--date-picker-header'
+      class: 'gj-table-input--date-picker-header'
     }, [
       h('div', {
-        class: 'jy-table-input--date-picker-type-wrapper'
+        class: 'gj-table-input--date-picker-type-wrapper'
       }, [
         datePanelType === 'year' ? h('span', {
-          class: 'jy-table-input--date-picker-label'
+          class: 'gj-table-input--date-picker-label'
         }, selectDatePanelLabel) : h('span', {
-          class: 'jy-table-input--date-picker-btn',
+          class: 'gj-table-input--date-picker-btn',
           on: {
             click: _vm.dateToggleTypeEvent
           }
         }, selectDatePanelLabel)
       ]),
       h('div', {
-        class: 'jy-table-input--date-picker-btn-wrapper'
+        class: 'gj-table-input--date-picker-btn-wrapper'
       }, [
         h('span', {
-          class: ['jy-table-input--date-picker-btn jy-table-input--date-picker-prev-btn', {
+          class: ['gj-table-input--date-picker-btn gj-table-input--date-picker-prev-btn', {
             'is--disabled': isDisabledPrevDateBtn
           }],
           on: {
@@ -299,21 +299,21 @@ function renderDatePanel (h, _vm) {
           }
         }, [
           h('i', {
-            class: 'jy-table-icon--caret-left'
+            class: 'gj-table-icon--caret-left'
           })
         ]),
         h('span', {
-          class: 'jy-table-input--date-picker-btn jy-table-input--date-picker-current-btn',
+          class: 'gj-table-input--date-picker-btn gj-table-input--date-picker-current-btn',
           on: {
             click: _vm.dateTodayMonthEvent
           }
         }, [
           h('i', {
-            class: 'jy-table-icon--dot'
+            class: 'gj-table-icon--dot'
           })
         ]),
         h('span', {
-          class: ['jy-table-input--date-picker-btn jy-table-input--date-picker-next-btn', {
+          class: ['gj-table-input--date-picker-btn gj-table-input--date-picker-next-btn', {
             'is--disabled': isDisabledNextDateBtn
           }],
           on: {
@@ -321,14 +321,14 @@ function renderDatePanel (h, _vm) {
           }
         }, [
           h('i', {
-            class: 'jy-table-icon--caret-right'
+            class: 'gj-table-icon--caret-right'
           })
         ]),
         multiple && supportMultiples ? h('span', {
-          class: 'jy-table-input--date-picker-btn jy-table-input--date-picker-confirm-btn'
+          class: 'gj-table-input--date-picker-btn gj-table-input--date-picker-confirm-btn'
         }, [
           h('button', {
-            class: 'jy-table-input--date-picker-confirm',
+            class: 'gj-table-input--date-picker-confirm',
             attrs: {
               type: 'button'
             },
@@ -340,7 +340,7 @@ function renderDatePanel (h, _vm) {
       ])
     ]),
     h('div', {
-      class: 'jy-table-input--date-picker-body'
+      class: 'gj-table-input--date-picker-body'
     }, renderDateTable(h, _vm))
   ]
 }
@@ -349,13 +349,13 @@ function renderTimePanel (h, _vm) {
   const { dateTimeLabel, datetimePanelValue, hourList, minuteList, secondList } = _vm
   return [
     h('div', {
-      class: 'jy-table-input--time-picker-header'
+      class: 'gj-table-input--time-picker-header'
     }, [
       h('span', {
-        class: 'jy-table-input--time-picker-title'
+        class: 'gj-table-input--time-picker-title'
       }, dateTimeLabel),
       h('button', {
-        class: 'jy-table-input--time-picker-confirm',
+        class: 'gj-table-input--time-picker-confirm',
         attrs: {
           type: 'button'
         },
@@ -366,10 +366,10 @@ function renderTimePanel (h, _vm) {
     ]),
     h('div', {
       ref: 'timeBody',
-      class: 'jy-table-input--time-picker-body'
+      class: 'gj-table-input--time-picker-body'
     }, [
       h('ul', {
-        class: 'jy-table-input--time-picker-hour-list'
+        class: 'gj-table-input--time-picker-hour-list'
       }, hourList.map((item, index) => {
         return h('li', {
           key: index,
@@ -382,7 +382,7 @@ function renderTimePanel (h, _vm) {
         }, item.label)
       })),
       h('ul', {
-        class: 'jy-table-input--time-picker-minute-list'
+        class: 'gj-table-input--time-picker-minute-list'
       }, minuteList.map((item, index) => {
         return h('li', {
           key: index,
@@ -395,7 +395,7 @@ function renderTimePanel (h, _vm) {
         }, item.label)
       })),
       h('ul', {
-        class: 'jy-table-input--time-picker-second-list'
+        class: 'gj-table-input--time-picker-second-list'
       }, secondList.map((item, index) => {
         return h('li', {
           key: index,
@@ -418,32 +418,32 @@ function renderPanel (h, _vm) {
     if (type === 'datetime') {
       renders.push(
         h('div', {
-          class: 'jy-table-input--panel-layout-wrapper'
+          class: 'gj-table-input--panel-layout-wrapper'
         }, [
           h('div', {
-            class: 'jy-table-input--panel-left-wrapper'
+            class: 'gj-table-input--panel-left-wrapper'
           }, renderDatePanel(h, _vm)),
           h('div', {
-            class: 'jy-table-input--panel-right-wrapper'
+            class: 'gj-table-input--panel-right-wrapper'
           }, renderTimePanel(h, _vm))
         ])
       )
     } else if (type === 'time') {
       renders.push(
         h('div', {
-          class: 'jy-table-input--panel-wrapper'
+          class: 'gj-table-input--panel-wrapper'
         }, renderTimePanel(h, _vm))
       )
     } else {
       renders.push(
         h('div', {
-          class: 'jy-table-input--panel-wrapper'
+          class: 'gj-table-input--panel-wrapper'
         }, renderDatePanel(h, _vm))
       )
     }
     return h('div', {
       ref: 'panel',
-      class: ['jy-table-table--ignore-clear jy-table-input--panel', `type--${type}`, {
+      class: ['gj-table-table--ignore-clear gj-table-input--panel', `type--${type}`, {
         [`size--${vSize}`]: vSize,
         'is--transfer': transfer,
         'animat--leave': animatVisible,
@@ -460,10 +460,10 @@ function renderPanel (h, _vm) {
 
 function renderNumberIcon (h, _vm) {
   return h('span', {
-    class: 'jy-table-input--number-suffix'
+    class: 'gj-table-input--number-suffix'
   }, [
     h('span', {
-      class: ['jy-table-input--number-prev is--prev', {
+      class: ['gj-table-input--number-prev is--prev', {
         'is--disabled': _vm.isDisabledAddNumber
       }],
       on: {
@@ -473,11 +473,11 @@ function renderNumberIcon (h, _vm) {
       }
     }, [
       h('i', {
-        class: ['jy-table-input--number-prev-icon', GlobalConfig.icon.INPUT_PREV_NUM]
+        class: ['gj-table-input--number-prev-icon', GlobalConfig.icon.INPUT_PREV_NUM]
       })
     ]),
     h('span', {
-      class: ['jy-table-input--number-next is--next', {
+      class: ['gj-table-input--number-next is--next', {
         'is--disabled': _vm.isDisabledSubtractNumber
       }],
       on: {
@@ -487,7 +487,7 @@ function renderNumberIcon (h, _vm) {
       }
     }, [
       h('i', {
-        class: ['jy-table-input--number-next-icon', GlobalConfig.icon.INPUT_NEXT_NUM]
+        class: ['gj-table-input--number-next-icon', GlobalConfig.icon.INPUT_NEXT_NUM]
       })
     ])
   ])
@@ -495,26 +495,26 @@ function renderNumberIcon (h, _vm) {
 
 function renderDatePickerIcon (h, _vm) {
   return h('span', {
-    class: 'jy-table-input--date-picker-suffix',
+    class: 'gj-table-input--date-picker-suffix',
     on: {
       click: _vm.datePickerOpenEvent
     }
   }, [
     h('i', {
-      class: ['jy-table-input--date-picker-icon', GlobalConfig.icon.INPUT_DATE]
+      class: ['gj-table-input--date-picker-icon', GlobalConfig.icon.INPUT_DATE]
     })
   ])
 }
 
 function renderSearchIcon (h, _vm) {
   return h('span', {
-    class: 'jy-table-input--search-suffix',
+    class: 'gj-table-input--search-suffix',
     on: {
       click: _vm.searchEvent
     }
   }, [
     h('i', {
-      class: ['jy-table-input--search-icon', GlobalConfig.icon.INPUT_SEARCH]
+      class: ['gj-table-input--search-icon', GlobalConfig.icon.INPUT_SEARCH]
     })
   ])
 }
@@ -522,13 +522,13 @@ function renderSearchIcon (h, _vm) {
 function renderPasswordIcon (h, _vm) {
   const { showPwd } = _vm
   return h('span', {
-    class: 'jy-table-input--password-suffix',
+    class: 'gj-table-input--password-suffix',
     on: {
       click: _vm.passwordToggleEvent
     }
   }, [
     h('i', {
-      class: ['jy-table-input--password-icon', showPwd ? GlobalConfig.icon.INPUT_SHOW_PWD : GlobalConfig.icon.INPUT_PWD]
+      class: ['gj-table-input--password-icon', showPwd ? GlobalConfig.icon.INPUT_SHOW_PWD : GlobalConfig.icon.INPUT_PWD]
     })
   ])
 }
@@ -539,18 +539,18 @@ function rendePrefixIcon (h, _vm) {
   if ($scopedSlots.prefix) {
     icons.push(
       h('span', {
-        class: 'jy-table-input--prefix-icon'
+        class: 'gj-table-input--prefix-icon'
       }, $scopedSlots.prefix.call(this, {}, h))
     )
   } else if (prefixIcon) {
     icons.push(
       h('i', {
-        class: ['jy-table-input--prefix-icon', prefixIcon]
+        class: ['gj-table-input--prefix-icon', prefixIcon]
       })
     )
   }
   return icons.length ? h('span', {
-    class: 'jy-table-input--prefix',
+    class: 'gj-table-input--prefix',
     on: {
       click: _vm.clickPrefixEvent
     }
@@ -563,25 +563,25 @@ function renderSuffixIcon (h, _vm) {
   if ($scopedSlots.suffix) {
     icons.push(
       h('span', {
-        class: 'jy-table-input--suffix-icon'
+        class: 'gj-table-input--suffix-icon'
       }, $scopedSlots.suffix.call(this, {}, h))
     )
   } else if (suffixIcon) {
     icons.push(
       h('i', {
-        class: ['jy-table-input--suffix-icon', suffixIcon]
+        class: ['gj-table-input--suffix-icon', suffixIcon]
       })
     )
   }
   if (isClearable) {
     icons.push(
       h('i', {
-        class: ['jy-table-input--clear-icon', GlobalConfig.icon.INPUT_CLEAR]
+        class: ['gj-table-input--clear-icon', GlobalConfig.icon.INPUT_CLEAR]
       })
     )
   }
   return icons.length ? h('span', {
-    class: ['jy-table-input--suffix', {
+    class: ['gj-table-input--suffix', {
       'is--clear': isClearable && !disabled && !(inputValue === '' || XEUtils.eqNull(inputValue))
     }],
     on: {
@@ -605,7 +605,7 @@ function renderExtraSuffixIcon (h, _vm) {
     icons = renderSearchIcon(h, _vm)
   }
   return icons ? h('span', {
-    class: 'jy-table-input--extra-suffix'
+    class: 'gj-table-input--extra-suffix'
   }, [icons]) : null
 }
 
@@ -1132,7 +1132,7 @@ export default {
     childs.push(
       h('input', {
         ref: 'input',
-        class: 'jy-table-input--inner',
+        class: 'gj-table-input--inner',
         domProps: {
           value: inputValue
         },
@@ -1169,7 +1169,7 @@ export default {
       childs.push(renderPanel(h, this))
     }
     return h('div', {
-      class: ['jy-table-input', `type--${type}`, className, {
+      class: ['gj-table-input', `type--${type}`, className, {
         [`size--${vSize}`]: vSize,
         [`is--${align}`]: align,
         'is--controls': controls,

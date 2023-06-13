@@ -2,18 +2,18 @@
   <div>
     <p>子路由 2</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable"
       height="400"
       :loading="loading">
-      <jy-column type="radio" width="60"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="num2" title="Num2"></jy-column>
-      <jy-column field="rate" title="Rate"></jy-column>
-    </jy-table>
+      <gj-column type="radio" width="60"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="num2" title="Num2"></gj-column>
+      <gj-column field="rate" title="Rate"></gj-column>
+    </gj-table>
   </div>
 </template>
 

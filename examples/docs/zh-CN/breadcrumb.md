@@ -6,32 +6,32 @@
 
 适用广泛的基础用法。
 
-:::demo 在`jy-breadcrumb`中使用`jy-breadcrumb-item`标签表示从首页开始的每一级。GildataDesign 提供了一个`separator`属性，在`jy-breadcrumb`标签中设置它来决定分隔符，它只能是字符串，默认为斜杠`/`。
+:::demo 在`gj-breadcrumb`中使用`gj-breadcrumb-item`标签表示从首页开始的每一级。GildataDesign 提供了一个`separator`属性，在`gj-breadcrumb`标签中设置它来决定分隔符，它只能是字符串，默认为斜杠`/`。
 
 ```html
-<jy-breadcrumb separator="/">
-  <jy-breadcrumb-item>首页</jy-breadcrumb-item>
-  <jy-breadcrumb-item actived><a href="/">活动管理</a></jy-breadcrumb-item>
-  <jy-breadcrumb-item>活动列表</jy-breadcrumb-item>
-  <jy-breadcrumb-item disabled>活动详情</jy-breadcrumb-item>
-</jy-breadcrumb>
+<gj-breadcrumb separator="/">
+  <gj-breadcrumb-item>首页</gj-breadcrumb-item>
+  <gj-breadcrumb-item actived><a href="/">活动管理</a></gj-breadcrumb-item>
+  <gj-breadcrumb-item>活动列表</gj-breadcrumb-item>
+  <gj-breadcrumb-item disabled>活动详情</gj-breadcrumb-item>
+</gj-breadcrumb>
 ```
 
 :::
 
 ### 折叠面包屑
 
-:::demo 通过设置 collapse 开启折叠面包屑，默认 jy-breadcrumb-item 超过 5 项开始折叠，保留前两项和最后一项，其他中间项都放到下拉菜单中
+:::demo 通过设置 collapse 开启折叠面包屑，默认 gj-breadcrumb-item 超过 5 项开始折叠，保留前两项和最后一项，其他中间项都放到下拉菜单中
 
 ```html
-<jy-breadcrumb trigger="click" collapse :collapse-number="5">
-  <jy-breadcrumb-item>首页</jy-breadcrumb-item>
-  <jy-breadcrumb-item>活动管理</jy-breadcrumb-item>
-  <jy-breadcrumb-item>活动列表</jy-breadcrumb-item>
-  <jy-breadcrumb-item>活动详情</jy-breadcrumb-item>
-  <jy-breadcrumb-item>活动内容</jy-breadcrumb-item>
-  <jy-breadcrumb-item actived>活动时间</jy-breadcrumb-item>
-</jy-breadcrumb>
+<gj-breadcrumb trigger="click" collapse :collapse-number="5">
+  <gj-breadcrumb-item>首页</gj-breadcrumb-item>
+  <gj-breadcrumb-item>活动管理</gj-breadcrumb-item>
+  <gj-breadcrumb-item>活动列表</gj-breadcrumb-item>
+  <gj-breadcrumb-item>活动详情</gj-breadcrumb-item>
+  <gj-breadcrumb-item>活动内容</gj-breadcrumb-item>
+  <gj-breadcrumb-item actived>活动时间</gj-breadcrumb-item>
+</gj-breadcrumb>
 ```
 
 :::
@@ -41,12 +41,12 @@
 :::demo 通过设置 separator-class 可使用相应的 iconfont 作为分隔符，注意这将使 separator 设置失效
 
 ```html
-<jy-breadcrumb separator-class="Gildata-rightarrow">
-  <jy-breadcrumb-item :to="{ path: '/' }">首页</jy-breadcrumb-item>
-  <jy-breadcrumb-item>活动管理</jy-breadcrumb-item>
-  <jy-breadcrumb-item>活动列表</jy-breadcrumb-item>
-  <jy-breadcrumb-item actived>活动详情</jy-breadcrumb-item>
-</jy-breadcrumb>
+<gj-breadcrumb separator-class="Gildata-rightarrow">
+  <gj-breadcrumb-item :to="{ path: '/' }">首页</gj-breadcrumb-item>
+  <gj-breadcrumb-item>活动管理</gj-breadcrumb-item>
+  <gj-breadcrumb-item>活动列表</gj-breadcrumb-item>
+  <gj-breadcrumb-item actived>活动详情</gj-breadcrumb-item>
+</gj-breadcrumb>
 ```
 
 :::

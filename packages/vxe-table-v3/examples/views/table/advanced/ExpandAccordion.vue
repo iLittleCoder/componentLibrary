@@ -4,20 +4,20 @@
       手风琴展开效果，通过配置 expand-config={<table-api-link prop="accordion"/>} 属性来开启同一级的节点，每次只能展开一个
     </p>
 
-    <jy-table
+    <gj-table
       border
       :expand-config="{accordion: true}"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="expand" width="80">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="expand" width="80">
         <template #content="{ row, rowIndex }">
           <div v-if="rowIndex === 1" class="expand-wrapper">
-            <jy-table
+            <gj-table
               border
               :data="childData">
-              <jy-column field="role" title="Role"></jy-column>
-              <jy-column field="age" title="Age"></jy-column>
-            </jy-table>
+              <gj-column field="role" title="Role"></gj-column>
+              <gj-column field="age" title="Age"></gj-column>
+            </gj-table>
           </div>
           <div v-else class="expand-wrapper">
             <ul>
@@ -40,11 +40,11 @@
             </ul>
           </div>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -75,20 +75,20 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           :expand-config="{accordion: true}"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="expand" width="80">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="expand" width="80">
             <template #content="{ row, rowIndex }">
               <div v-if="rowIndex === 1" class="expand-wrapper">
-                <jy-table
+                <gj-table
                   border
                   :data="childData">
-                  <jy-column field="role" title="Role"></jy-column>
-                  <jy-column field="age" title="Age"></jy-column>
-                </jy-table>
+                  <gj-column field="role" title="Role"></gj-column>
+                  <gj-column field="age" title="Age"></gj-column>
+                </gj-table>
               </div>
               <div v-else class="expand-wrapper">
                 <ul>
@@ -111,11 +111,11 @@ export default {
                 </ul>
               </div>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {

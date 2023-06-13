@@ -9,25 +9,25 @@
 ```html
 <template>
   <div class="empty-box">
-    <jy-empty empty-type="noResult" description="无搜索结果"></jy-empty>
-    <jy-empty empty-type="noData"></jy-empty>
-    <jy-empty empty-type="noPermission">
-      <jy-button size="medium" type="text">申请权限</jy-button>
-    </jy-empty>
+    <gj-empty empty-type="noResult" description="无搜索结果"></gj-empty>
+    <gj-empty empty-type="noData"></gj-empty>
+    <gj-empty empty-type="noPermission">
+      <gj-button size="medium" type="text">申请权限</gj-button>
+    </gj-empty>
   </div>
   <div class="empty-box">
-    <jy-empty empty-type="noFreetime">
-      <jy-button size="medium" type="text">重试</jy-button>
-    </jy-empty>
-    <jy-empty empty-type="noWifi">
-      <jy-button size="medium" type="text">刷新</jy-button>
-    </jy-empty>
-    <jy-empty empty-type="noCollect">
-      <jy-button size="medium" type="text">随便看看</jy-button>
-    </jy-empty>
+    <gj-empty empty-type="noFreetime">
+      <gj-button size="medium" type="text">重试</gj-button>
+    </gj-empty>
+    <gj-empty empty-type="noWifi">
+      <gj-button size="medium" type="text">刷新</gj-button>
+    </gj-empty>
+    <gj-empty empty-type="noCollect">
+      <gj-button size="medium" type="text">随便看看</gj-button>
+    </gj-empty>
   </div>
   <div class="empty-box">
-    <jy-empty empty-type="noSubscribe"></jy-empty>
+    <gj-empty empty-type="noSubscribe"></gj-empty>
   </div>
 </template>
 ```
@@ -39,7 +39,7 @@
 :::demo
 
 ```html
-<jy-empty description="描述文字"></jy-empty>
+<gj-empty description="描述文字"></gj-empty>
 ```
 
 :::
@@ -51,9 +51,9 @@
 :::demo
 
 ```html
-<jy-empty
+<gj-empty
   image="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fstatic.julive.com%2Fm%2Fimages%2Fproject_home%2Fimg-detail-nodata.png%3Ft%3D20200929_171944&refer=http%3A%2F%2Fstatic.julive.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659690132&t=52358ed5cd4bb969c10f6fa3b56d624b"
-></jy-empty>
+></gj-empty>
 ```
 
 :::
@@ -65,7 +65,7 @@
 :::demo
 
 ```html
-<jy-empty :image-size="160"></jy-empty>
+<gj-empty :image-size="160"></gj-empty>
 ```
 
 :::
@@ -77,9 +77,9 @@
 :::demo
 
 ```html
-<jy-empty :image-size="160">
-  <jy-button type="primary">按钮</jy-button>
-</jy-empty>
+<gj-empty :image-size="160">
+  <gj-button type="primary">按钮</gj-button>
+</gj-empty>
 ```
 
 :::

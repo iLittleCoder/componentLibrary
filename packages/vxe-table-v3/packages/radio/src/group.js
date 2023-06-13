@@ -35,7 +35,7 @@ export default {
   render (h) {
     const { $scopedSlots } = this
     return h('div', {
-      class: 'jy-table-radio-group'
+      class: 'gj-table-radio-group'
     }, $scopedSlots.default ? $scopedSlots.default.call(this, {}) : [])
   },
   methods: {

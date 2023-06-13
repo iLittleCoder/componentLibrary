@@ -5,8 +5,8 @@
       @after-enter="handleAfterEnter"
       @after-leave="handleAfterLeave">
       <div
-        class="jy-popover jy-popper"
-        :class="[popperClass, content && 'jy-popover--plain']"
+        class="gj-popover gj-popper"
+        :class="[popperClass, content && 'gj-popover--plain']"
         ref="popper"
         v-show="!disabled && showPopper"
         :style="{ width: width + 'px' }"
@@ -14,13 +14,13 @@
         :id="tooltipId"
         :aria-hidden="(disabled || !showPopper) ? 'true' : 'false'"
       >
-        <div class="jy-popover__title" v-if="title" v-text="title"></div>
-        <div class="jy-popover__content">
+        <div class="gj-popover__title" v-if="title" v-text="title"></div>
+        <div class="gj-popover__content">
           <slot>{{ content }}</slot>
         </div>
       </div>
     </transition>
-    <span class="jy-popover__reference-wrapper" ref="wrapper" >
+    <span class="gj-popover__reference-wrapper" ref="wrapper" >
       <slot name="reference"></slot>
     </span>
   </span>
@@ -32,7 +32,7 @@ import { addClass, removeClass } from 'GildataDesign/src/utils/dom';
 import { generateId } from 'GildataDesign/src/utils/util';
 
 export default {
-  name: 'JyPopover',
+  name: 'GjPopover',
 
   mixins: [Popper],
 
@@ -75,7 +75,7 @@ export default {
 
   computed: {
     tooltipId() {
-      return `jy-popover-${generateId()}`;
+      return `gj-popover-${generateId()}`;
     }
   },
   watch: {
@@ -96,7 +96,7 @@ export default {
     }
     // 可访问性
     if (reference) {
-      addClass(reference, 'jy-popover__reference');
+      addClass(reference, 'gj-popover__reference');
       reference.setAttribute('aria-describedby', this.tooltipId);
       reference.setAttribute('tabindex', this.tabindex); // tab序列
       popper.setAttribute('tabindex', 0);

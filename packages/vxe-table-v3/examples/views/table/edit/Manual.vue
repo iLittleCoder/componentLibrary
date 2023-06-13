@@ -2,7 +2,7 @@
   <div>
     <p class="tip">设置 <table-api-link prop="edit-config"/>={trigger: 'manual', mode: 'row'} 启用行编辑的功能，还可以配合 <table-api-link prop="revertData"/> 函数实现取消就还原数据<br></p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -11,16 +11,16 @@
       :loading="loading"
       :data="tableData"
       :edit-config="{trigger: 'manual', mode: 'row'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></jy-column>
-      <jy-column field="role" title="Role" :edit-render="{name: 'input', attrs: {type: 'text', placeholder: '请输入昵称'}}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-      <jy-column field="sex2" title="多选下拉" :edit-render="{name: '$select', options: sexList, props: {multiple: true}}"></jy-column>
-      <jy-column field="num6" title="Number" :edit-render="{name: '$input', props: {type: 'number', placeholder: '请输入数值'}}"></jy-column>
-      <jy-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-      <jy-column field="date13" title="Week" :edit-render="{name: '$input', props: {type: 'week', placeholder: '请选择日期'}}"></jy-column>
-      <jy-column field="address" title="Address" :edit-render="{name: 'textarea'}"></jy-column>
-      <jy-column title="操作" width="160">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></gj-column>
+      <gj-column field="role" title="Role" :edit-render="{name: 'input', attrs: {type: 'text', placeholder: '请输入昵称'}}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+      <gj-column field="sex2" title="多选下拉" :edit-render="{name: '$select', options: sexList, props: {multiple: true}}"></gj-column>
+      <gj-column field="num6" title="Number" :edit-render="{name: '$input', props: {type: 'number', placeholder: '请输入数值'}}"></gj-column>
+      <gj-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+      <gj-column field="date13" title="Week" :edit-render="{name: '$input', props: {type: 'week', placeholder: '请选择日期'}}"></gj-column>
+      <gj-column field="address" title="Address" :edit-render="{name: 'textarea'}"></gj-column>
+      <gj-column title="操作" width="160">
         <template #default="{ row }">
           <template v-if="$refs.xTable.isActiveByRow(row)">
             <vxe-button @click="saveRowEvent(row)">保存</vxe-button>
@@ -30,8 +30,8 @@
             <vxe-button @click="editRowEvent(row)">编辑</vxe-button>
           </template>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -64,7 +64,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -73,16 +73,16 @@ export default {
           :loading="loading"
           :data="tableData"
           :edit-config="{trigger: 'manual', mode: 'row'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></jy-column>
-          <jy-column field="role" title="Role" :edit-render="{name: 'input', attrs: {type: 'text', placeholder: '请输入昵称'}}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-          <jy-column field="sex2" title="多选下拉" :edit-render="{name: '$select', options: sexList, props: {multiple: true}}"></jy-column>
-          <jy-column field="num6" title="Number" :edit-render="{name: '$input', props: {type: 'number', placeholder: '请输入数值'}}"></jy-column>
-          <jy-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-          <jy-column field="date13" title="Week" :edit-render="{name: '$input', props: {type: 'week', placeholder: '请选择日期'}}"></jy-column>
-          <jy-column field="address" title="Address" :edit-render="{name: 'textarea'}"></jy-column>
-          <jy-column title="操作" width="160">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></gj-column>
+          <gj-column field="role" title="Role" :edit-render="{name: 'input', attrs: {type: 'text', placeholder: '请输入昵称'}}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+          <gj-column field="sex2" title="多选下拉" :edit-render="{name: '$select', options: sexList, props: {multiple: true}}"></gj-column>
+          <gj-column field="num6" title="Number" :edit-render="{name: '$input', props: {type: 'number', placeholder: '请输入数值'}}"></gj-column>
+          <gj-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+          <gj-column field="date13" title="Week" :edit-render="{name: '$input', props: {type: 'week', placeholder: '请选择日期'}}"></gj-column>
+          <gj-column field="address" title="Address" :edit-render="{name: 'textarea'}"></gj-column>
+          <gj-column title="操作" width="160">
             <template #default="{ row }">
               <template v-if="$refs.xTable.isActiveByRow(row)">
                 <vxe-button @click="saveRowEvent(row)">保存</vxe-button>
@@ -92,8 +92,8 @@ export default {
                 <vxe-button @click="editRowEvent(row)">编辑</vxe-button>
               </template>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         export default {

@@ -5,17 +5,17 @@
       <span class="red">（具体请自行实现，该示例仅供参考）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell', activeMethod: activeCellMethod}"
       @edit-disabled="editDisabledEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -26,19 +26,19 @@
 
     <p class="tip">配合  <table-api-link prop="edit-actived"/> 事件，使用组件方式禁用编辑</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell'}"
       @edit-actived="editActivedEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {disabled: nameDisabled}}"></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {disabled: nameDisabled}}"></gj-column>
       <vxe-colgroup title="分组">
-        <jy-column field="sex" title="Sex" :edit-render="{name: '$select', props: {disabled: sexDisabled}, options: sexList}"></jy-column>
-        <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date', disabled: dateDisabled}}"></jy-column>
+        <gj-column field="sex" title="Sex" :edit-render="{name: '$select', props: {disabled: sexDisabled}, options: sexList}"></gj-column>
+        <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date', disabled: dateDisabled}}"></gj-column>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -73,17 +73,17 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell', activeMethod: activeCellMethod}"
           @edit-disabled="editDisabledEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -120,19 +120,19 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell'}"
           @edit-actived="editActivedEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {disabled: nameDisabled}}"></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {disabled: nameDisabled}}"></gj-column>
           <vxe-colgroup title="分组">
-            <jy-column field="sex" title="Sex" :edit-render="{name: '$select', props: {disabled: sexDisabled}, options: sexList}"></jy-column>
-            <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date', disabled: dateDisabled}}"></jy-column>
+            <gj-column field="sex" title="Sex" :edit-render="{name: '$select', props: {disabled: sexDisabled}, options: sexList}"></gj-column>
+            <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date', disabled: dateDisabled}}"></gj-column>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {

@@ -9,28 +9,28 @@
 :::demo
 
 ```html
-<p>jy-icon组件可以用来显示彩色和灰色图标</p>
-<jy-row>
-  <jy-icon name="Gildata-color-china"></jy-icon>
-  <jy-icon name="Gildata-color-pdf"></jy-icon>
-  <jy-icon name="Gildata-color-word"></jy-icon>
-  <jy-icon name="Gildata-upside"></jy-icon>
-  <jy-icon name="Gildata-place"></jy-icon>
-</jy-row>
+<p>gj-icon组件可以用来显示彩色和灰色图标</p>
+<gj-row>
+  <gj-icon name="Gildata-color-china"></gj-icon>
+  <gj-icon name="Gildata-color-pdf"></gj-icon>
+  <gj-icon name="Gildata-color-word"></gj-icon>
+  <gj-icon name="Gildata-upside"></gj-icon>
+  <gj-icon name="Gildata-place"></gj-icon>
+</gj-row>
 <p>i 标签只能用来显示灰色图标</p>
-<jy-row>
+<gj-row>
   <i class="Gildata-tick"></i>
   <i class="Gildata-star1"></i>
   <i class="Gildata-enlarged"></i>
   <i class="Gildata-screen"></i>
-</jy-row>
+</gj-row>
 ```
 
 :::
 
 ### Gildata 灰色图标集合
 
-<ul class="icon-list jy-icon-list">
+<ul class="icon-list gj-icon-list">
   <li v-for="name in $GlIcon" :key="name">
     <span>
       <i :class="'Gildata-' + name"></i>
@@ -41,10 +41,10 @@
 
 ### Gildata 彩色图标集合
 
-<ul class="icon-list jy-icon-list">
+<ul class="icon-list gj-icon-list">
   <li key="Gildata-color-china">
     <span>
-      <jy-icon name="Gildata-color-china"></jy-icon>
+      <gj-icon name="Gildata-color-china"></gj-icon>
       <br>
       <span class="icon-name">Gildata-color-china</span>
     </span>

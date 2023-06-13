@@ -32,15 +32,15 @@
     background-color: $--popper-background-color;
     border-color: $--border-color-base;
 
-    //.jy-message__content, .jy-message__subtitle {
+    //.gj-message__content, .gj-message__subtitle {
     //  color: $--color-info;
     //}
 
-    .jy-message__closeBtn, .jy-message__content, .jy-message__subtitle {
+    .gj-message__closeBtn, .gj-message__content, .gj-message__subtitle {
       color: $--color-info;
     }
 
-    .jy-message__closeBtn {
+    .gj-message__closeBtn {
       &:hover,
       &:focus {
         color: $--color-primary;
@@ -61,7 +61,7 @@
 
   @include when(center) {
     justify-content: center;
-    .jy-message__box {
+    .gj-message__box {
       flex: unset;
     }
   }
@@ -252,8 +252,8 @@
   }
 }
 
-.jy-message-fade-enter,
-.jy-message-fade-leave-active {
+.gj-message-fade-enter,
+.gj-message-fade-leave-active {
   opacity: 0;
   transform: translate(-50%, -100%);
 }

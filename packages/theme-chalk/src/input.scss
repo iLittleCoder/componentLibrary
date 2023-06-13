@@ -8,7 +8,7 @@
   vertical-align: bottom;
   font-size: $--font-size-base;
 
-  .jy-input__count__molecule{
+  .gj-input__count__molecule{
     color:$--color-info ;
   }
 
@@ -45,7 +45,7 @@
     
   }
 
-  & .jy-input__count {
+  & .gj-input__count {
     color: $--color-text-placeholder;
     background: transparent;
     position: absolute;
@@ -55,10 +55,10 @@
   }
 
   @include when(disabled) {
-    &.no-border .jy-textarea__inner{
+    &.no-border .gj-textarea__inner{
       background-color:transparent
     }
-    .jy-textarea__inner {
+    .gj-textarea__inner {
       background-color: $--input-disabled-fill;
       border-color: $--input-disabled-border;
       color: $--input-disabled-color;
@@ -71,11 +71,11 @@
   }
 
   @include when(exceed) {
-    .jy-textarea__inner {
+    .gj-textarea__inner {
       border-color: $--color-danger;
     }
 
-    .jy-input__count {
+    .gj-input__count {
       color: $--color-danger;
     }
   }
@@ -93,7 +93,7 @@
 
  
 
-  & .jy-input__clear {
+  & .gj-input__clear {
     color: $--input-icon-color;
     font-size: $--input-font-size;
     cursor: pointer;
@@ -112,7 +112,7 @@
 
   
 
-  & .jy-input__count {
+  & .gj-input__count {
     height: 100%;
     display: inline-flex;
     align-items: center;
@@ -121,12 +121,12 @@
 
     
 
-    .jy-input__count-inner {
+    .gj-input__count-inner {
       background: transparent;
       line-height: initial;
       display: inline-block;
       padding: 0 5px;
-      .jy-input__count__molecule{
+      .gj-input__count__molecule{
         color:$--color-info ;
       }
     }
@@ -244,14 +244,14 @@
   }
 
   @include when(active) {
-    .jy-input__inner {
+    .gj-input__inner {
       outline: none;
       border-color: $--input-focus-border;
     }
   }
 
   @include when(disabled) {
-    .jy-input__inner {
+    .gj-input__inner {
       background-color: $--input-disabled-fill;
       border-color: $--input-disabled-border;
       color: $--input-disabled-color;
@@ -264,11 +264,11 @@
       }
     }
 
-    .jy-input__icon {
+    .gj-input__icon {
       cursor: not-allowed;
       opacity: 0.3;
     }
-    .jy-input-group__prepend,.jy-input-group__append{
+    .gj-input-group__prepend,.gj-input-group__append{
       background-color: $--background-color-disabled;
       border-color: $--border-color-disabled;
       color: $--color-text-disabled;
@@ -276,7 +276,7 @@
   }
 
   @include when(border) {
-    .jy-input__inner {
+    .gj-input__inner {
         border:1px solid transparent;
       &:hover {
         border-color: $--input-hover-border;
@@ -290,25 +290,25 @@
   }
 
   @include when(exceed) {
-    .jy-input__inner {
+    .gj-input__inner {
       border-color: $--color-danger;
     }
 
-    .jy-input__suffix {
-      .jy-input__count {
+    .gj-input__suffix {
+      .gj-input__count {
         color: $--color-danger;
       }
     }
   }
 
   @include m(suffix) {
-    .jy-input__inner {
+    .gj-input__inner {
       padding-right: 30px;
     }
   }
 
   @include m(prefix) {
-    .jy-input__inner {
+    .gj-input__inner {
       padding-left: 28px;
     }
    
@@ -322,27 +322,27 @@
       line-height: $--input-medium-height;
       padding: 0 10px;
     }
-    &.jy-input--prefix{
-      .jy-input__inner{
+    &.gj-input--prefix{
+      .gj-input__inner{
         padding-left: 32px;
       }
       & [class^=Gildata-],  & [class*=" Gildata-"] {
         line-height:  $--input-medium-height;
       }
     }
-    &.jy-input--suffix{
-      .jy-input__inner{
+    &.gj-input--suffix{
+      .gj-input__inner{
         padding-right: 32px;
       }
     }
 
-    .jy-input__suffix-inner ,.jy-input__icon {
+    .gj-input__suffix-inner ,.gj-input__icon {
       line-height: $--input-medium-height;
     }
-    .jy-input__suffix{
+    .gj-input__suffix{
       right: 8px;
     }
-    .jy-input__prefix{
+    .gj-input__prefix{
       left: 8px;
     }
   }
@@ -355,28 +355,28 @@
       padding: 0 12px;
     }
 
-    &.jy-input--prefix{
-      .jy-input__inner{
+    &.gj-input--prefix{
+      .gj-input__inner{
         padding-left: 36px;
       }
       & [class^=Gildata-],   & [class*=" Gildata-"] {
         line-height: $--input-large-height;
       }
     }
-    &.jy-input--suffix{
-      .jy-input__inner{
+    &.gj-input--suffix{
+      .gj-input__inner{
         padding-right: 36px;
       }
     }
 
 
-   .jy-input__suffix-inner, .jy-input__icon {
+   .gj-input__suffix-inner, .gj-input__icon {
       line-height: $--input-large-height;
     }
-    .jy-input__suffix{
+    .gj-input__suffix{
       right: 10px;
     }
-    .jy-input__prefix{
+    .gj-input__prefix{
       left: 10px;
     }
   }
@@ -389,27 +389,27 @@
       padding: 0 6px;
     }
 
-    &.jy-input--prefix{
-      .jy-input__inner{
+    &.gj-input--prefix{
+      .gj-input__inner{
         padding-left: 24px;
       }
       & [class^=Gildata-],  & [class*=" Gildata-"] {
         line-height: $--input-mini-height;
       }
     }
-    &.jy-input--suffix{
-      .jy-input__inner{
+    &.gj-input--suffix{
+      .gj-input__inner{
         padding-right: 24px;
       }
     }
 
-    .jy-input__suffix-inner,.jy-input__icon {
+    .gj-input__suffix-inner,.gj-input__icon {
       line-height: $--input-mini-height;
     }
-    .jy-input__suffix{
+    .gj-input__suffix{
       right: 4px;
     }
-    .jy-input__prefix{
+    .gj-input__prefix{
       left: 4px;
     }
   }
@@ -420,7 +420,7 @@
       border-color:  $--color-danger;
     }
 
-    .jy-input__icon {
+    .gj-input__icon {
      color: $--color-danger;
     }
   }
@@ -430,7 +430,7 @@
       border-color: $--color-warning;
     }
 
-    .jy-input__icon {
+    .gj-input__icon {
      color: $--color-warning;
     }
   }
@@ -441,7 +441,7 @@
       border-color: $--border-color-base;
     }
 
-    .jy-input__icon {
+    .gj-input__icon {
      color: $--color-success;
     }
   }
@@ -455,7 +455,7 @@
   border-collapse: separate;
   border-spacing:0;
 
-  > .jy-input__inner {
+  > .gj-input__inner {
     vertical-align: middle;
     display: table-cell;
   }
@@ -477,22 +477,22 @@
       outline: none;
       border: 1px solid $--color-primary;
     }
-    .jy-select{
+    .gj-select{
       margin: 0 -20px;
      
     }
-    button.jy-button{
+    button.gj-button{
       color: $--color-white;
        border-color: transparent;
        background-color: transparent;
        border-top: 0;
        border-bottom: 0;
     }
-    .jy-button,
-    .jy-input {
+    .gj-button,
+    .gj-input {
       font-size: inherit;
     }
-    div.jy-select .jy-input__inner::placeholder {
+    div.gj-select .gj-input__inner::placeholder {
       color: $--color-text-secondary;
     }
   }
@@ -502,7 +502,7 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 
-    .jy-select-new-main{
+    .gj-select-new-main{
       border-right-color: transparent;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -511,12 +511,12 @@
       //   border: 1px solid $--color-primary;
       // }
     }
-    .select-option-show .jy-select-new-main{
+    .select-option-show .gj-select-new-main{
       border-color: $--border-color-base;
     }
 
     &:hover{
-      .jy-select-new-main:not(.is-disabled) {
+      .gj-select-new-main:not(.is-disabled) {
         border: 1px solid $--color-primary;
       }
      
@@ -531,7 +531,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 
-    .jy-select-new-main{
+    .gj-select-new-main{
       border-left-color: transparent;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -540,12 +540,12 @@
       //   border: 1px solid $--color-primary;
       // }
     }
-    .select-option-show .jy-select-new-main{
+    .select-option-show .gj-select-new-main{
       border-color: $--border-color-base;
     }
 
     &:hover{
-      .jy-select-new-main:not(.is-disabled) {
+      .gj-select-new-main:not(.is-disabled) {
         border: 1px solid $--color-primary;
       }
     }
@@ -554,14 +554,14 @@
   }
 
   @include m(prepend) {
-    .jy-input__inner {
+    .gj-input__inner {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
   }
 
   @include m(append) {
-    .jy-input__inner {
+    .gj-input__inner {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
@@ -569,7 +569,7 @@
 }
 
 /** disalbe default clear on IE */
-.jy-input__inner::-ms-clear {
+.gj-input__inner::-ms-clear {
   display: none;
   width: 0;
   height: 0;

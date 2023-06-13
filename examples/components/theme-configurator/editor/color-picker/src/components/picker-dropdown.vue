@@ -1,33 +1,33 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="doDestroy">
-    <div class="jy-color-dropdown" v-show="showPopper">
-      <div class="jy-color-dropdown__main-wrapper">
+  <transition name="gj-zoom-in-top" @after-leave="doDestroy">
+    <div class="gj-color-dropdown" v-show="showPopper">
+      <div class="gj-color-dropdown__main-wrapper">
         <hue-slider ref="hue" :color="color" vertical style="float: right;"></hue-slider>
         <sv-panel ref="sl" :color="color"></sv-panel>
       </div>
       <alpha-slider v-if="showAlpha" ref="alpha" :color="color"></alpha-slider>
       <predefine v-if="predefine" :color="color" :colors="predefine"></predefine>
-      <div class="jy-color-dropdown__btns">
-        <span class="jy-color-dropdown__value">
-          <jy-input
+      <div class="gj-color-dropdown__btns">
+        <span class="gj-color-dropdown__value">
+          <gj-input
             v-model="customInput"
             @keyup.native.enter="handleConfirm"
             @blur="handleConfirm"
             :validate-event="false"
             size="mini"
           >
-          </jy-input>
+          </gj-input>
         </span>
-        <!-- <jy-button
+        <!-- <gj-button
           size="mini"
           type="text"
-          class="jy-color-dropdown__link-btn"
+          class="gj-color-dropdown__link-btn"
           @click="$emit('clear')">
           {{ t('el.colorpicker.clear') }}
-        </jy-button> -->
-        <jy-button plain size="mini" type="primary" class="jy-color-dropdown__btn" @click="confirmValue">
+        </gj-button> -->
+        <gj-button plain size="mini" type="primary" class="gj-color-dropdown__btn" @click="confirmValue">
           {{ t('el.colorpicker.confirm') }}
-        </jy-button>
+        </gj-button>
       </div>
       <color-list
         v-if="colorList && colorList.length > 0"
@@ -51,7 +51,7 @@ import ElInput from 'GildataDesign/packages/input';
 import ElButton from 'GildataDesign/packages/button';
 
 export default {
-  name: 'jy-color-picker-dropdown',
+  name: 'gj-color-picker-dropdown',
 
   mixins: [Popper, Locale],
 

@@ -90,11 +90,11 @@
         </template>
       </vxe-toolbar>
 
-      <jy-table ref="xTable" :data="tableData">
-        <jy-table field="name" title="Name"></jy-table>
-        <jy-table field="role" title="Role"></jy-table>
-        <jy-table field="sex" title="Sex"></jy-table>
-      </jy-table>
+      <gj-table ref="xTable" :data="tableData">
+        <gj-table field="name" title="Name"></gj-table>
+        <gj-table field="role" title="Role"></gj-table>
+        <gj-table field="sex" title="Sex"></gj-table>
+      </gj-table>
     </p>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -207,11 +207,11 @@ export default {
             </template>
           </vxe-toolbar>
 
-          <jy-table ref="xTable" :data="tableData">
-            <jy-table field="name" title="Name"></jy-table>
-            <jy-table field="role" title="Role"></jy-table>
-            <jy-table field="sex" title="Sex"></jy-table>
-          </jy-table>
+          <gj-table ref="xTable" :data="tableData">
+            <gj-table field="name" title="Name"></gj-table>
+            <gj-table field="role" title="Role"></gj-table>
+            <gj-table field="sex" title="Sex"></gj-table>
+          </gj-table>
         </p>
         `,
         `

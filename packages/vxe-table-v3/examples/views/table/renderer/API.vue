@@ -2,47 +2,47 @@
   <div>
     <h1>{{ $t('app.aside.nav.renderer') }}</h1>
     <p class="tip">
-      通过渲染器你可以轻松实现筛选、单元格的复用，可以根据不同业务实现不一样的渲染器，这个功能将非常实用；比如这些插件 <a class="link" href="https://www.npmjs.com/package/jy-table-plugin-element" target="_blank">jy-table-plugin-element</a><br>
+      通过渲染器你可以轻松实现筛选、单元格的复用，可以根据不同业务实现不一样的渲染器，这个功能将非常实用；比如这些插件 <a class="link" href="https://www.npmjs.com/package/gj-table-plugin-element" target="_blank">gj-table-plugin-element</a><br>
       <span class="orange">渲染器：抽象一切可复用的功能（类似组件的概念），实现非常简单的可配置化；</span><br>
       <span class="orange">插槽：自定义程度高，但需要重复写冗余代码，比较繁琐；</span><br>
       <span class="red">支持通过 JSX 自定义渲染，返回数组格式的 JSX</span><br>
       <span class="red">（注：实际开发中应该将业务封装成一个组件，不要把复杂的渲染逻辑写在渲染器中，渲染器只负责表格与自定义组件之间的对接关系）</span>
     </p>
     <h2>API</h2>
-    <jy-table
+    <gj-table
       resizable
       highlight-hover-row
       :data="tableData">
-      <jy-column field="name" title="app.api.title.prop" min-width="280" tree-node></jy-column>
-      <jy-column field="desc" title="app.api.title.desc" min-width="200"></jy-column>
-      <jy-column field="type" title="app.api.title.type" min-width="140"></jy-column>
-      <jy-column field="enum" title="app.api.title.enum" min-width="150"></jy-column>
-      <jy-column field="defVal" title="app.api.title.defVal" min-width="160"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="app.api.title.prop" min-width="280" tree-node></gj-column>
+      <gj-column field="desc" title="app.api.title.desc" min-width="200"></gj-column>
+      <gj-column field="type" title="app.api.title.type" min-width="140"></gj-column>
+      <gj-column field="enum" title="app.api.title.enum" min-width="150"></gj-column>
+      <gj-column field="defVal" title="app.api.title.defVal" min-width="160"></gj-column>
+    </gj-table>
     <h2>原生渲染器</h2>
-    <jy-table
+    <gj-table
       resizable
       highlight-hover-row
       :data="nativeRenderList">
-      <jy-column field="name" title="渲染器名称" min-width="100">
+      <gj-column field="name" title="渲染器名称" min-width="100">
         <template #default="{ row }">
           <a class="link" :href="row.apiUrl" target="_blank">{{ row.name }}</a>
         </template>
-      </jy-column>
-      <jy-column field="desc" title="说明" min-width="280"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="desc" title="说明" min-width="280"></gj-column>
+    </gj-table>
     <h2>内置渲染器</h2>
-    <jy-table
+    <gj-table
       resizable
       highlight-hover-row
       :data="xRenderList">
-      <jy-column field="name" title="渲染器名称" min-width="100">
+      <gj-column field="name" title="渲染器名称" min-width="100">
         <template #default="{ row }">
           <router-link class="link" :to="{name: 'VXEAPI', params: { name: row.compName }}">{{ row.name }}</router-link>
         </template>
-      </jy-column>
-      <jy-column field="desc" title="说明" min-width="280"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="desc" title="说明" min-width="280"></gj-column>
+    </gj-table>
   </div>
 </template>
 

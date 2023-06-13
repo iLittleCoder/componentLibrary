@@ -24,7 +24,7 @@ const getPanel = function(type) {
 export default {
   mixins: [Picker],
 
-  name: 'JyDatePicker',
+  name: 'GjDatePicker',
 
   props: {
     type: {

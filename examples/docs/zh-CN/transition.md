@@ -4,19 +4,19 @@
 
 ### fade 淡入淡出
 
-:::demo 提供 `jy-fade-in-linear` 和 `jy-fade-in` 两种效果。
+:::demo 提供 `gj-fade-in-linear` 和 `gj-fade-in` 两种效果。
 
 ```html
 <template>
   <div>
-    <jy-button @click="show = !show">Click Me</jy-button>
+    <gj-button @click="show = !show">Click Me</gj-button>
 
     <div style="display: flex; margin-top: 20px; height: 100px;">
-      <transition name="jy-fade-in-linear">
-        <div v-show="show" class="transition-box">.jy-fade-in-linear</div>
+      <transition name="gj-fade-in-linear">
+        <div v-show="show" class="transition-box">.gj-fade-in-linear</div>
       </transition>
-      <transition name="jy-fade-in">
-        <div v-show="show" class="transition-box">.jy-fade-in</div>
+      <transition name="gj-fade-in">
+        <div v-show="show" class="transition-box">.gj-fade-in</div>
       </transition>
     </div>
   </div>
@@ -50,24 +50,24 @@
 
 ### zoom 缩放
 
-:::demo 提供 `jy-zoom-in-center`，`jy-zoom-in-top` 和 `jy-zoom-in-bottom` 三种效果。
+:::demo 提供 `gj-zoom-in-center`，`gj-zoom-in-top` 和 `gj-zoom-in-bottom` 三种效果。
 
 ```html
 <template>
   <div>
-    <jy-button @click="show2 = !show2">Click Me</jy-button>
+    <gj-button @click="show2 = !show2">Click Me</gj-button>
 
     <div style="display: flex; margin-top: 20px; height: 100px;">
-      <transition name="jy-zoom-in-center">
-        <div v-show="show2" class="transition-box">.jy-zoom-in-center</div>
+      <transition name="gj-zoom-in-center">
+        <div v-show="show2" class="transition-box">.gj-zoom-in-center</div>
       </transition>
 
-      <transition name="jy-zoom-in-top">
-        <div v-show="show2" class="transition-box">.jy-zoom-in-top</div>
+      <transition name="gj-zoom-in-top">
+        <div v-show="show2" class="transition-box">.gj-zoom-in-top</div>
       </transition>
 
-      <transition name="jy-zoom-in-bottom">
-        <div v-show="show2" class="transition-box">.jy-zoom-in-bottom</div>
+      <transition name="gj-zoom-in-bottom">
+        <div v-show="show2" class="transition-box">.gj-zoom-in-bottom</div>
       </transition>
     </div>
   </div>
@@ -101,22 +101,22 @@
 
 ### collapse 展开折叠
 
-使用 `jy-collapse-transition` 组件实现折叠展开效果。
+使用 `gj-collapse-transition` 组件实现折叠展开效果。
 
 :::demo
 
 ```html
 <template>
   <div>
-    <jy-button @click="show3 = !show3">Click Me</jy-button>
+    <gj-button @click="show3 = !show3">Click Me</gj-button>
 
     <div style="margin-top: 20px; height: 200px;">
-      <jy-collapse-transition>
+      <gj-collapse-transition>
         <div v-show="show3">
-          <div class="transition-box">jy-collapse-transition</div>
-          <div class="transition-box">jy-collapse-transition</div>
+          <div class="transition-box">gj-collapse-transition</div>
+          <div class="transition-box">gj-collapse-transition</div>
         </div>
-      </jy-collapse-transition>
+      </gj-collapse-transition>
     </div>
   </div>
 </template>

@@ -4,7 +4,7 @@ export default {
     indexPath() {
       const path = [this.index];
       let parent = this.$parent;
-      while (parent.$options.componentName !== 'JyMenu') {
+      while (parent.$options.componentName !== 'GjMenu') {
         if (parent.index) {
           path.unshift(parent.index);
         }
@@ -16,7 +16,7 @@ export default {
       let parent = this.$parent;
       while (
         parent &&
-        ['JyMenu', 'JySubmenu'].indexOf(parent.$options.componentName) === -1
+        ['GjMenu', 'GjSubmenu'].indexOf(parent.$options.componentName) === -1
       ) {
         parent = parent.$parent;
       }
@@ -32,8 +32,8 @@ export default {
       if (this.rootMenu.collapse) { // 折叠导航
         padding = 8;
       } else {
-        while (parent && parent.$options.componentName !== 'JyMenu') {
-          if (parent.$options.componentName === 'JySubmenu') {
+        while (parent && parent.$options.componentName !== 'GjMenu') {
+          if (parent.$options.componentName === 'GjSubmenu') {
             if (index === 0) {
               padding += 24;
             } else {

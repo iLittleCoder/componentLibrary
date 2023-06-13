@@ -189,7 +189,7 @@ export default {
     return (
       <table
         class={{
-          'jy-calendar-table': true,
+          'gj-calendar-table': true,
           'is-range': this.isInRange
         }}
         cellspacing="0"
@@ -200,8 +200,8 @@ export default {
           {this.rows.map((row, index) => (
             <tr
               class={{
-                'jy-calendar-table__row': true,
-                'jy-calendar-table__row--hide-border':
+                'gj-calendar-table__row': true,
+                'gj-calendar-table__row--hide-border':
                   index === 0 && this.hideHeader
               }}
               key={index}
@@ -212,7 +212,7 @@ export default {
                   class={this.getCellClass(cell)}
                   onClick={this.pickDay.bind(this, cell)}
                 >
-                  <div class="jy-calendar-day">
+                  <div class="gj-calendar-day">
                     {this.cellRenderProxy(cell)}
                   </div>
                 </td>

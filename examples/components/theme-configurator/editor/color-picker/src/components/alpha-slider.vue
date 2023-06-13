@@ -1,7 +1,7 @@
 <template>
-  <div class="jy-color-alpha-slider" :class="{ 'is-vertical': vertical }">
+  <div class="gj-color-alpha-slider" :class="{ 'is-vertical': vertical }">
     <div
-      class="jy-color-alpha-slider__bar"
+      class="gj-color-alpha-slider__bar"
       @click="handleClick"
       ref="bar"
       :style="{
@@ -9,7 +9,7 @@
       }"
     ></div>
     <div
-      class="jy-color-alpha-slider__thumb"
+      class="gj-color-alpha-slider__thumb"
       ref="thumb"
       :style="{
         left: thumbLeft + 'px',
@@ -23,7 +23,7 @@
 import draggable from '../draggable';
 
 export default {
-  name: 'jy-color-alpha-slider',
+  name: 'gj-color-alpha-slider',
 
   props: {
     color: {

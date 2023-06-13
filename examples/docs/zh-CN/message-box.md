@@ -12,10 +12,10 @@
 
 ```html
 <template>
-  <jy-button type="primary" @click="open('info')">消息Message Box</jy-button>
-  <jy-button type="success" @click="open('success')">成功Message Box</jy-button>
-  <jy-button type="warning" @click="open('warning')">警告Message Box</jy-button>
-  <jy-button type="danger" @click="open('error')">错误Message Box</jy-button>
+  <gj-button type="primary" @click="open('info')">消息Message Box</gj-button>
+  <gj-button type="success" @click="open('success')">成功Message Box</gj-button>
+  <gj-button type="warning" @click="open('warning')">警告Message Box</gj-button>
+  <gj-button type="danger" @click="open('error')">错误Message Box</gj-button>
 </template>
 
 <script>
@@ -45,7 +45,7 @@
 
 ```html
 <template>
-  <jy-button type="text" @click="open">点击打开 Message Box</jy-button>
+  <gj-button type="text" @click="open">点击打开 Message Box</gj-button>
 </template>
 
 <script>
@@ -77,7 +77,7 @@
 
 ```html
 <template>
-  <jy-button type="text" @click="open">点击打开 Message Box</jy-button>
+  <gj-button type="text" @click="open">点击打开 Message Box</gj-button>
 </template>
 
 <script>
@@ -118,7 +118,7 @@
 
 ```html
 <template>
-  <jy-button type="text" @click="open">点击打开 Message Box</jy-button>
+  <gj-button type="text" @click="open">点击打开 Message Box</gj-button>
 </template>
 
 <script>
@@ -157,7 +157,7 @@
 
 ```html
 <template>
-  <jy-button type="text" @click="open">点击打开 Message Box</jy-button>
+  <gj-button type="text" @click="open">点击打开 Message Box</gj-button>
 </template>
 
 <script>
@@ -214,7 +214,7 @@
 
 ```html
 <template>
-  <jy-button type="text" @click="open">点击打开 Message Box</jy-button>
+  <gj-button type="text" @click="open">点击打开 Message Box</gj-button>
 </template>
 
 <script>
@@ -244,7 +244,7 @@
 
 ```html
 <template>
-  <jy-button type="text" @click="open">点击打开 Message Box</jy-button>
+  <gj-button type="text" @click="open">点击打开 Message Box</gj-button>
 </template>
 
 <script>
@@ -289,7 +289,7 @@
 
 ```html
 <template>
-  <jy-button type="text" @click="open">点击打开 Message Box</jy-button>
+  <gj-button type="text" @click="open">点击打开 Message Box</gj-button>
 </template>
 
 <script>

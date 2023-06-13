@@ -20,7 +20,7 @@
     }
   }
 
-  .jy-dropdown {
+  .gj-dropdown {
     .Gildata-more {
       cursor: pointer;
       line-height: 18px !important;
@@ -90,7 +90,7 @@
 
     &:last-child {
 
-      .jy-breadcrumb__separator {
+      .gj-breadcrumb__separator {
         display: none;
       }
     }
@@ -98,8 +98,8 @@
   }
 }
 
-.jy-breadcrumb__dropdown {
-  .jy-breadcrumb__inner {
+.gj-breadcrumb__dropdown {
+  .gj-breadcrumb__inner {
     color: $--color-info;
   }
 }

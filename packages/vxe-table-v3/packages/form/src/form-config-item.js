@@ -59,7 +59,7 @@ const VxeFormConfigItem = {
         })
       })
       return childVNs.length ? h('div', {
-        class: ['jy-table-form--gather jy-row', item.id, span ? `jy-col--${span} is--span` : '', className ? (XEUtils.isFunction(className) ? className(params) : className) : '']
+        class: ['gj-table-form--gather gj-row', item.id, span ? `gj-col--${span} is--span` : '', className ? (XEUtils.isFunction(className) ? className(params) : className) : '']
       }, childVNs) : _e()
     }
     if (!itemVisibleMethod && compConf && compConf.itemVisibleMethod) {
@@ -88,7 +88,7 @@ const VxeFormConfigItem = {
       mouseleave: $xeform.handleTitleTipLeaveEvent
     } : {}
     return h('div', {
-      class: ['jy-table-form--item', item.id, span ? `jy-table-col--${span} is--span` : null, className ? (XEUtils.isFunction(className) ? className(params) : className) : '', {
+      class: ['gj-table-form--item', item.id, span ? `gj-table-col--${span} is--span` : null, className ? (XEUtils.isFunction(className) ? className(params) : className) : '', {
         'is--title': title,
         'is--colon': titleColon,
         'is--asterisk': titleAsterisk,
@@ -103,10 +103,10 @@ const VxeFormConfigItem = {
       key: item.id
     }, [
       h('div', {
-        class: 'jy-table-form--item-inner'
+        class: 'gj-table-form--item-inner'
       }, [
         title || (slots && slots.title) ? h('div', {
-          class: ['jy-table-form--item-title', titleAlign ? `align--${titleAlign}` : null, {
+          class: ['gj-table-form--item-title', titleAlign ? `align--${titleAlign}` : null, {
             'is--ellipsis': hasEllipsis
           }],
           style: titleWidth ? {
@@ -118,24 +118,24 @@ const VxeFormConfigItem = {
           on: ons
         }, renderTitle(h, $xeform, item)) : null,
         h('div', {
-          class: ['jy-table-form--item-content', align ? `align--${align}` : null]
+          class: ['gj-table-form--item-content', align ? `align--${align}` : null]
         }, contentVNs.concat(
           [
             collapseNode ? h('div', {
-              class: 'jy-table-form--item-trigger-node',
+              class: 'gj-table-form--item-trigger-node',
               on: {
                 click: $xeform.toggleCollapseEvent
               }
             }, [
               h('span', {
-                class: 'jy-table-form--item-trigger-text'
+                class: 'gj-table-form--item-trigger-text'
               }, collapseAll ? GlobalConfig.i18n('vxe.form.unfolding') : GlobalConfig.i18n('vxe.form.folding')),
               h('i', {
-                class: ['jy-table-form--item-trigger-icon', collapseAll ? GlobalConfig.icon.FORM_FOLDING : GlobalConfig.icon.FORM_UNFOLDING]
+                class: ['gj-table-form--item-trigger-icon', collapseAll ? GlobalConfig.icon.FORM_FOLDING : GlobalConfig.icon.FORM_UNFOLDING]
               })
             ]) : null,
             errRule && validOpts.showMessage ? h('div', {
-              class: 'jy-table-form--item-valid',
+              class: 'gj-table-form--item-valid',
               style: errRule.maxWidth ? {
                 width: `${errRule.maxWidth}px`
               } : null

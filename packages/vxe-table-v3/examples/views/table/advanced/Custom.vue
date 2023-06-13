@@ -14,16 +14,16 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable1"
       height="200"
       :data="tableData">
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex" :visible="false"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex" :visible="false"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -40,18 +40,18 @@
       </template>
     </p>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable2"
       height="200"
       :loading="loading"
       :data="tableData">
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -70,23 +70,23 @@
       <vxe-button @click="$refs.xTable3.resetColumn()">重置自定义列</vxe-button>
     </p>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable3"
       height="300"
       :data="tableData">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name" :visible="false"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name" :visible="false"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
       <vxe-colgroup title="基本信息">
-        <jy-column field="sex" title="Sex" :visible="false"></jy-column>
-        <jy-column field="age" title="Age"></jy-column>
+        <gj-column field="sex" title="Sex" :visible="false"></gj-column>
+        <gj-column field="age" title="Age"></gj-column>
         <vxe-colgroup title="其他信息">
-          <jy-column field="rate" title="Rate"></jy-column>
-          <jy-column field="flag" title="Flag"></jy-column>
+          <gj-column field="rate" title="Rate"></gj-column>
+          <gj-column field="flag" title="Flag"></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -97,29 +97,29 @@
 
     <p class="tip">实现折叠列</p>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable4"
       height="200"
       :data="tableData">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name" width="200">
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name" width="200">
         <template #header>
           <i :class="collapsable1 ? 'fa fa-minus-square' : 'fa fa-plus-square'" @click="collapsable1Event"></i>
           <span>Name</span>
         </template>
-      </jy-column>
-      <jy-column field="role" title="Role" :visible="false" width="200"></jy-column>
-      <jy-column field="sex" title="Sex" :visible="false" width="200"></jy-column>
-      <jy-column field="age" title="Age" width="200">
+      </gj-column>
+      <gj-column field="role" title="Role" :visible="false" width="200"></gj-column>
+      <gj-column field="sex" title="Sex" :visible="false" width="200"></gj-column>
+      <gj-column field="age" title="Age" width="200">
         <template #header>
           <i :class="collapsable2 ? 'fa fa-minus-square-o' : 'fa fa-plus-square-o'" @click="collapsable2Event"></i>
           <span>Age</span>
         </template>
-      </jy-column>
-      <jy-column field="rate" title="Rate" :visible="false" width="200"></jy-column>
-      <jy-column field="address" title="Address" :visible="false" width="200"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="rate" title="Rate" :visible="false" width="200"></gj-column>
+      <gj-column field="address" title="Address" :visible="false" width="200"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -160,16 +160,16 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable1"
           height="200"
           :data="tableData">
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="sex" title="Sex" :visible="false"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="sex" title="Sex" :visible="false"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -196,18 +196,18 @@ export default {
           </template>
         </p>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable2"
           height="200"
           :loading="loading"
           :data="tableData">
-          <jy-column type="seq" title="序号" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          <gj-column type="seq" title="序号" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -256,23 +256,23 @@ export default {
           <vxe-button @click="$refs.xTable3.resetColumn()">重置自定义列</vxe-button>
         </p>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable3"
           height="300"
           :data="tableData">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name" :visible="false"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name" :visible="false"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
           <vxe-colgroup title="基本信息">
-            <jy-column field="sex" title="Sex" :visible="false"></jy-column>
-            <jy-column field="age" title="Age"></jy-column>
+            <gj-column field="sex" title="Sex" :visible="false"></gj-column>
+            <gj-column field="age" title="Age"></gj-column>
             <vxe-colgroup title="其他信息">
-              <jy-column field="rate" title="Rate"></jy-column>
-              <jy-column field="flag" title="Flag"></jy-column>
+              <gj-column field="rate" title="Rate"></gj-column>
+              <gj-column field="flag" title="Flag"></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {
@@ -300,29 +300,29 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           ref="xTable4"
           height="200"
           :data="tableData">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name" width="200">
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name" width="200">
             <template #header>
               <i :class="collapsable1 ? 'fa fa-minus-square' : 'fa fa-plus-square'" @click="collapsable1Event"></i>
               <span>Name</span>
             </template>
-          </jy-column>
-          <jy-column field="role" title="Role" :visible="false" width="200"></jy-column>
-          <jy-column field="sex" title="Sex" :visible="false" width="200"></jy-column>
-          <jy-column field="age" title="Age" width="200">
+          </gj-column>
+          <gj-column field="role" title="Role" :visible="false" width="200"></gj-column>
+          <gj-column field="sex" title="Sex" :visible="false" width="200"></gj-column>
+          <gj-column field="age" title="Age" width="200">
             <template #header>
               <i :class="collapsable2 ? 'fa fa-minus-square-o' : 'fa fa-plus-square-o'" @click="collapsable2Event"></i>
               <span>Age</span>
             </template>
-          </jy-column>
-          <jy-column field="rate" title="Rate" :visible="false" width="200"></jy-column>
-          <jy-column field="address" title="Address" :visible="false" width="200"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="rate" title="Rate" :visible="false" width="200"></gj-column>
+          <gj-column field="address" title="Address" :visible="false" width="200"></gj-column>
+        </gj-table>
         `,
         `
         export default {

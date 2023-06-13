@@ -1,8 +1,8 @@
-import JyButtonGroup from '../button/src/button-group';
+import GjButtonGroup from '../button/src/button-group';
 
 /* istanbul ignore next */
-JyButtonGroup.install = function(Vue) {
-  Vue.component(JyButtonGroup.name, JyButtonGroup);
+GjButtonGroup.install = function(Vue) {
+  Vue.component(GjButtonGroup.name, GjButtonGroup);
 };
 
-export default JyButtonGroup;
+export default GjButtonGroup;

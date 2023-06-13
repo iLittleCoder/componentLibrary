@@ -3,7 +3,7 @@
     <h2>{{ $t('app.aside.nav.global') }}</h2>
     <pre>
       <pre-code class="javascript">
-        import VXETable from 'jy-table'
+        import VXETable from 'gj-table'
 
         VXETable.setup({
           // size: null, // 全局尺寸

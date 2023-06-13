@@ -2,16 +2,16 @@
   <div>
     <p class="tip">通过设置 <table-api-link prop="resizable"/> 属性启用列宽拖动功能</p>
 
-    <jy-table
+    <gj-table
       resizable
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="最小列宽" min-width="20%"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="time" title="Time"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="最小列宽" min-width="20%"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="time" title="Time"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -22,18 +22,18 @@
 
     <p class="tip">横向滚动条</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       highlight-hover-row
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="sex" title="最小列宽" min-width="300"></jy-column>
-      <jy-column field="age" title="Age" width="300"></jy-column>
-      <jy-column field="time" title="Time" width="300"></jy-column>
-      <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="sex" title="最小列宽" min-width="300"></gj-column>
+      <gj-column field="age" title="Age" width="300"></gj-column>
+      <gj-column field="time" title="Time" width="300"></gj-column>
+      <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -44,21 +44,21 @@
 
     <p class="tip">固定左列宽拖动（固定左不允许超过表格右边距）</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :data="tableData">
-      <jy-column type="seq" width="60" fixed="left"></jy-column>
-      <jy-column field="name" title="Name" width="100" fixed="left"></jy-column>
-      <jy-column field="sex" title="Sex" width="100" fixed="left"></jy-column>
-      <jy-column field="age" title="Age" width="100" fixed="left"></jy-column>
-      <jy-column field="atrr1" title="atrr1" width="200"></jy-column>
-      <jy-column field="atrr2" title="atrr2" width="200"></jy-column>
-      <jy-column field="atrr3" title="atrr3" width="200"></jy-column>
-      <jy-column field="atrr4" title="atrr4" width="200"></jy-column>
-      <jy-column field="time" title="Time" width="200"></jy-column>
-      <jy-column field="address" title="Address" width="200" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60" fixed="left"></gj-column>
+      <gj-column field="name" title="Name" width="100" fixed="left"></gj-column>
+      <gj-column field="sex" title="Sex" width="100" fixed="left"></gj-column>
+      <gj-column field="age" title="Age" width="100" fixed="left"></gj-column>
+      <gj-column field="atrr1" title="atrr1" width="200"></gj-column>
+      <gj-column field="atrr2" title="atrr2" width="200"></gj-column>
+      <gj-column field="atrr3" title="atrr3" width="200"></gj-column>
+      <gj-column field="atrr4" title="atrr4" width="200"></gj-column>
+      <gj-column field="time" title="Time" width="200"></gj-column>
+      <gj-column field="address" title="Address" width="200" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -69,22 +69,22 @@
 
     <p class="tip">固定右列宽拖动（固定右不允许超过表格左边距）</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" width="200"></jy-column>
-      <jy-column field="attr7" title="Attr7" width="200"></jy-column>
-      <jy-column field="age" title="Age" width="200"></jy-column>
-      <jy-column field="atrr1" title="atrr1" width="200"></jy-column>
-      <jy-column field="atrr2" title="atrr2" width="200"></jy-column>
-      <jy-column field="atrr3" title="atrr3" width="200"></jy-column>
-      <jy-column field="atrr4" title="atrr4" width="200"></jy-column>
-      <jy-column field="role" title="Role" width="100" fixed="right"></jy-column>
-      <jy-column field="atrr6" title="Atrr6" width="100" fixed="right"></jy-column>
-      <jy-column field="sex" title="Sex" width="100" fixed="right"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" width="200"></gj-column>
+      <gj-column field="attr7" title="Attr7" width="200"></gj-column>
+      <gj-column field="age" title="Age" width="200"></gj-column>
+      <gj-column field="atrr1" title="atrr1" width="200"></gj-column>
+      <gj-column field="atrr2" title="atrr2" width="200"></gj-column>
+      <gj-column field="atrr3" title="atrr3" width="200"></gj-column>
+      <gj-column field="atrr4" title="atrr4" width="200"></gj-column>
+      <gj-column field="role" title="Role" width="100" fixed="right"></gj-column>
+      <gj-column field="atrr6" title="Atrr6" width="100" fixed="right"></gj-column>
+      <gj-column field="sex" title="Sex" width="100" fixed="right"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -95,23 +95,23 @@
 
     <p class="tip">左右固定列宽拖动（固定左不允许超过固定右，固定右不允许超过固定左）</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
       :data="tableData">
-      <jy-column type="seq" width="60" fixed="left"></jy-column>
-      <jy-column field="name" title="Name" width="100" fixed="left"></jy-column>
-      <jy-column field="sex" title="Sex" width="100" fixed="left"></jy-column>
-      <jy-column field="age" title="Age" width="100" fixed="left"></jy-column>
-      <jy-column field="atrr1" title="atrr1" width="200"></jy-column>
-      <jy-column field="atrr2" title="atrr2 其他2" width="200"></jy-column>
-      <jy-column field="atrr3" title="atrr3" width="200"></jy-column>
-      <jy-column field="atrr4" title="atrr4 其他4" width="200"></jy-column>
-      <jy-column field="date" title="Date" width="100" fixed="right"></jy-column>
-      <jy-column field="time" title="Time" width="100" fixed="right"></jy-column>
-      <jy-column field="address" title="Address" width="100" fixed="right"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60" fixed="left"></gj-column>
+      <gj-column field="name" title="Name" width="100" fixed="left"></gj-column>
+      <gj-column field="sex" title="Sex" width="100" fixed="left"></gj-column>
+      <gj-column field="age" title="Age" width="100" fixed="left"></gj-column>
+      <gj-column field="atrr1" title="atrr1" width="200"></gj-column>
+      <gj-column field="atrr2" title="atrr2 其他2" width="200"></gj-column>
+      <gj-column field="atrr3" title="atrr3" width="200"></gj-column>
+      <gj-column field="atrr4" title="atrr4 其他4" width="200"></gj-column>
+      <gj-column field="date" title="Date" width="100" fixed="right"></gj-column>
+      <gj-column field="time" title="Time" width="100" fixed="right"></gj-column>
+      <gj-column field="address" title="Address" width="100" fixed="right"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -122,24 +122,24 @@
 
     <p class="tip">分组表头拖动（只允许列拖动，不允许分组标题拖动）</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :data="tableData">
       <vxe-colgroup title="基本信息">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name"></jy-column>
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="更多信息">
-        <jy-column field="role" title="Role"></jy-column>
-        <jy-column field="age" title="Age"></jy-column>
+        <gj-column field="role" title="Role"></gj-column>
+        <gj-column field="age" title="Age"></gj-column>
         <vxe-colgroup title="详细信息">
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="date" title="Date" width="140" show-overflow></jy-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="date" title="Date" width="140" show-overflow></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
-      <jy-column field="address" title="Address" width="200" show-overflow></jy-column>
-    </jy-table>
+      <gj-column field="address" title="Address" width="200" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -150,27 +150,27 @@
 
     <p class="tip">左右固定列的分组表头拖动（只允许列拖动，不允许分组标题拖动）</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :data="tableData">
       <vxe-colgroup title="基本信息" fixed="left">
-        <jy-column type="seq" width="60" fixed="left"></jy-column>
-        <jy-column field="name" title="Name" fixed="left" width="100"></jy-column>
+        <gj-column type="seq" width="60" fixed="left"></gj-column>
+        <gj-column field="name" title="Name" fixed="left" width="100"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="更多信息">
-        <jy-column field="role" title="Role" width="300"></jy-column>
-        <jy-column field="attr1" title="Attr1" width="300"></jy-column>
+        <gj-column field="role" title="Role" width="300"></gj-column>
+        <gj-column field="attr1" title="Attr1" width="300"></gj-column>
         <vxe-colgroup title="详细信息">
-          <jy-column field="sex" title="Sex" width="300"></jy-column>
-          <jy-column field="date" title="Date" width="300"></jy-column>
+          <gj-column field="sex" title="Sex" width="300"></gj-column>
+          <gj-column field="date" title="Date" width="300"></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
       <vxe-colgroup title="其他信息" fixed="right">
-        <jy-column field="age" title="Age" width="100" fixed="right" show-overflow></jy-column>
-        <jy-column field="address" title="Address" width="100" fixed="right" show-overflow></jy-column>
+        <gj-column field="age" title="Age" width="100" fixed="right" show-overflow></gj-column>
+        <gj-column field="address" title="Address" width="100" fixed="right" show-overflow></gj-column>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -193,16 +193,16 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           resizable
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="最小列宽" min-width="20%"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="time" title="Time"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="最小列宽" min-width="20%"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="time" title="Time"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -219,18 +219,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           resizable
           highlight-hover-row
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" width="300"></jy-column>
-          <jy-column field="sex" title="最小列宽" min-width="300"></jy-column>
-          <jy-column field="age" title="Age" width="300"></jy-column>
-          <jy-column field="time" title="Time" width="300"></jy-column>
-          <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" width="300"></gj-column>
+          <gj-column field="sex" title="最小列宽" min-width="300"></gj-column>
+          <gj-column field="age" title="Age" width="300"></gj-column>
+          <gj-column field="time" title="Time" width="300"></gj-column>
+          <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -247,21 +247,21 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           resizable
           :data="tableData">
-          <jy-column type="seq" width="60" fixed="left"></jy-column>
-          <jy-column field="name" title="Name" width="100" fixed="left"></jy-column>
-          <jy-column field="sex" title="Sex" width="100" fixed="left"></jy-column>
-          <jy-column field="age" title="Age" width="100" fixed="left"></jy-column>
-          <jy-column field="atrr1" title="atrr1" width="200"></jy-column>
-          <jy-column field="atrr2" title="atrr2" width="200"></jy-column>
-          <jy-column field="atrr3" title="atrr3" width="200"></jy-column>
-          <jy-column field="atrr4" title="atrr4" width="200"></jy-column>
-          <jy-column field="time" title="Time" width="200"></jy-column>
-          <jy-column field="address" title="Address" width="200" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60" fixed="left"></gj-column>
+          <gj-column field="name" title="Name" width="100" fixed="left"></gj-column>
+          <gj-column field="sex" title="Sex" width="100" fixed="left"></gj-column>
+          <gj-column field="age" title="Age" width="100" fixed="left"></gj-column>
+          <gj-column field="atrr1" title="atrr1" width="200"></gj-column>
+          <gj-column field="atrr2" title="atrr2" width="200"></gj-column>
+          <gj-column field="atrr3" title="atrr3" width="200"></gj-column>
+          <gj-column field="atrr4" title="atrr4" width="200"></gj-column>
+          <gj-column field="time" title="Time" width="200"></gj-column>
+          <gj-column field="address" title="Address" width="200" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -278,22 +278,22 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           resizable
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" width="200"></jy-column>
-          <jy-column field="sex" title="Sex" width="200"></jy-column>
-          <jy-column field="age" title="Age" width="200"></jy-column>
-          <jy-column field="atrr1" title="atrr1" width="200"></jy-column>
-          <jy-column field="atrr2" title="atrr2" width="200"></jy-column>
-          <jy-column field="atrr3" title="atrr3" width="200"></jy-column>
-          <jy-column field="atrr4" title="atrr4" width="200"></jy-column>
-          <jy-column field="date" title="Date" width="100" fixed="right"></jy-column>
-          <jy-column field="time" title="Time" width="100" fixed="right"></jy-column>
-          <jy-column field="address" title="Address" width="100" fixed="right"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" width="200"></gj-column>
+          <gj-column field="sex" title="Sex" width="200"></gj-column>
+          <gj-column field="age" title="Age" width="200"></gj-column>
+          <gj-column field="atrr1" title="atrr1" width="200"></gj-column>
+          <gj-column field="atrr2" title="atrr2" width="200"></gj-column>
+          <gj-column field="atrr3" title="atrr3" width="200"></gj-column>
+          <gj-column field="atrr4" title="atrr4" width="200"></gj-column>
+          <gj-column field="date" title="Date" width="100" fixed="right"></gj-column>
+          <gj-column field="time" title="Time" width="100" fixed="right"></gj-column>
+          <gj-column field="address" title="Address" width="100" fixed="right"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -310,23 +310,23 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
           :data="tableData">
-          <jy-column type="seq" width="60" fixed="left"></jy-column>
-          <jy-column field="name" title="Name" width="100" fixed="left"></jy-column>
-          <jy-column field="sex" title="Sex" width="100" fixed="left"></jy-column>
-          <jy-column field="age" title="Age" width="100" fixed="left"></jy-column>
-          <jy-column field="atrr1" title="atrr1" width="200"></jy-column>
-          <jy-column field="atrr2" title="atrr2 其他2" width="200"></jy-column>
-          <jy-column field="atrr3" title="atrr3" width="200"></jy-column>
-          <jy-column field="atrr4" title="atrr4 其他4" width="200"></jy-column>
-          <jy-column field="date" title="Date" width="100" fixed="right"></jy-column>
-          <jy-column field="time" title="Time" width="100" fixed="right"></jy-column>
-          <jy-column field="address" title="Address" width="100" fixed="right"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60" fixed="left"></gj-column>
+          <gj-column field="name" title="Name" width="100" fixed="left"></gj-column>
+          <gj-column field="sex" title="Sex" width="100" fixed="left"></gj-column>
+          <gj-column field="age" title="Age" width="100" fixed="left"></gj-column>
+          <gj-column field="atrr1" title="atrr1" width="200"></gj-column>
+          <gj-column field="atrr2" title="atrr2 其他2" width="200"></gj-column>
+          <gj-column field="atrr3" title="atrr3" width="200"></gj-column>
+          <gj-column field="atrr4" title="atrr4 其他4" width="200"></gj-column>
+          <gj-column field="date" title="Date" width="100" fixed="right"></gj-column>
+          <gj-column field="time" title="Time" width="100" fixed="right"></gj-column>
+          <gj-column field="address" title="Address" width="100" fixed="right"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -343,24 +343,24 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           resizable
           :data="tableData">
           <vxe-colgroup title="基本信息">
-            <jy-column type="seq" width="60"></jy-column>
-            <jy-column field="name" title="Name"></jy-column>
+            <gj-column type="seq" width="60"></gj-column>
+            <gj-column field="name" title="Name"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="更多信息">
-            <jy-column field="role" title="Role"></jy-column>
-            <jy-column field="age" title="Age"></jy-column>
+            <gj-column field="role" title="Role"></gj-column>
+            <gj-column field="age" title="Age"></gj-column>
             <vxe-colgroup title="详细信息">
-              <jy-column field="sex" title="Sex"></jy-column>
-              <jy-column field="date" title="Date" width="140" show-overflow></jy-column>
+              <gj-column field="sex" title="Sex"></gj-column>
+              <gj-column field="date" title="Date" width="140" show-overflow></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
-          <jy-column field="address" title="Address" width="200" show-overflow></jy-column>
-        </jy-table>
+          <gj-column field="address" title="Address" width="200" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -377,27 +377,27 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           resizable
           :data="tableData">
           <vxe-colgroup title="基本信息" fixed="left">
-            <jy-column type="seq" width="60" fixed="left"></jy-column>
-            <jy-column field="name" title="Name" fixed="left" width="100"></jy-column>
+            <gj-column type="seq" width="60" fixed="left"></gj-column>
+            <gj-column field="name" title="Name" fixed="left" width="100"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="更多信息">
-            <jy-column field="role" title="Role" width="300"></jy-column>
-            <jy-column field="attr1" title="Attr1" width="300"></jy-column>
+            <gj-column field="role" title="Role" width="300"></gj-column>
+            <gj-column field="attr1" title="Attr1" width="300"></gj-column>
             <vxe-colgroup title="详细信息">
-              <jy-column field="sex" title="Sex" width="300"></jy-column>
-              <jy-column field="date" title="Date" width="300"></jy-column>
+              <gj-column field="sex" title="Sex" width="300"></gj-column>
+              <gj-column field="date" title="Date" width="300"></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
           <vxe-colgroup title="其他信息" fixed="right">
-            <jy-column field="age" title="Age" width="100" fixed="right" show-overflow></jy-column>
-            <jy-column field="address" title="Address" width="100" fixed="right" show-overflow></jy-column>
+            <gj-column field="age" title="Age" width="100" fixed="right" show-overflow></gj-column>
+            <gj-column field="address" title="Address" width="100" fixed="right" show-overflow></gj-column>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {

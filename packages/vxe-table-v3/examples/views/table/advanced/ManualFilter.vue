@@ -17,21 +17,21 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       ref="xTable"
       height="400"
       :loading="loading"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column
         field="name"
         title="Name"
         sortable
         :filters="[{ label: '包含 6', value: '6' }, { label: '包含 4', value: '4' }]"
-        :filter-method="filterNameMethod"></jy-column>
-      <jy-column
+        :filter-method="filterNameMethod"></gj-column>
+      <gj-column
         field="role"
         title="Role"
         sortable
@@ -42,22 +42,22 @@
             <option v-for="(label, cIndex) in roleList" :key="cIndex" :value="label">{{ label }}</option>
           </select>
         </template>
-      </jy-column>
-      <jy-column
+      </gj-column>
+      <gj-column
         field="sex"
         title="Sex"
         sortable
         :filter-multiple="false"
-        :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></jy-column>
-      <jy-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod" :filter-recover-method="filterAgeRecoverMethod">
+        :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></gj-column>
+      <gj-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod" :filter-recover-method="filterAgeRecoverMethod">
         <template #filter="{ $panel, column }">
           <template v-for="(option, index) in column.filters">
             <input class="my-input" type="type" :key="index" v-model="option.data" @input="$panel.changeOption($event, !!option.data, option)" @keyup.enter="$panel.confirmFilter()" placeholder="按回车确认筛选">
           </template>
         </template>
-      </jy-column>
-      <jy-column field="amount" title="Amount" sortable></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="amount" title="Amount" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -90,21 +90,21 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           ref="xTable"
           height="400"
           :loading="loading"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column
             field="name"
             title="Name"
             sortable
             :filters="[{ label: '包含 6', value: '6' }, { label: '包含 4', value: '4' }]"
-            :filter-method="filterNameMethod"></jy-column>
-          <jy-column
+            :filter-method="filterNameMethod"></gj-column>
+          <gj-column
             field="role"
             title="Role"
             sortable
@@ -115,22 +115,22 @@ export default {
                 <option v-for="(label, cIndex) in roleList" :key="cIndex" :value="label">{{ label }}</option>
               </select>
             </template>
-          </jy-column>
-          <jy-column
+          </gj-column>
+          <gj-column
             field="sex"
             title="Sex"
             sortable
             :filter-multiple="false"
-            :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></jy-column>
-          <jy-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod" :filter-recover-method="filterAgeRecoverMethod">
+            :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></gj-column>
+          <gj-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod" :filter-recover-method="filterAgeRecoverMethod">
             <template #filter="{ $panel, column }">
               <template v-for="(option, index) in column.filters">
                 <input class="my-input" type="type" :key="index" v-model="option.data" @input="$panel.changeOption($event, !!option.data, option)" @keyup.enter="$panel.confirmFilter()" placeholder="按回车确认筛选">
               </template>
             </template>
-          </jy-column>
-          <jy-column field="amount" title="Amount" sortable></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="amount" title="Amount" sortable></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

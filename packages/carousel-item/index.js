@@ -1,8 +1,8 @@
-import JyCarouselItem from '../carousel/src/item';
+import GjCarouselItem from '../carousel/src/item';
 
 /* istanbul ignore next */
-JyCarouselItem.install = function(Vue) {
-  Vue.component(JyCarouselItem.name, JyCarouselItem);
+GjCarouselItem.install = function(Vue) {
+  Vue.component(GjCarouselItem.name, GjCarouselItem);
 };
 
-export default JyCarouselItem;
+export default GjCarouselItem;

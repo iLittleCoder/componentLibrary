@@ -5790,9 +5790,9 @@ just-extend@^4.0.2:
   resolved "https://registry.npmjs.org/just-extend/-/just-extend-4.2.1.tgz"
   integrity sha512-g3UB796vUFIY90VIv/WX3L2c8CS2MdWUww3CNrYmqza1Fg0DURc2K/O4YrnklBdQarSJ/y8JnJYDGc+1iumQjg==
 
-jy-monitor@^1.0.6:
+gj-monitor@^1.0.6:
   version "1.0.6"
-  resolved "https://repo.gildata.com:443/artifactory/api/npm/npmhundsun/jy-monitor/-/jy-monitor-1.0.6.tgz#935da55ad5dae118bf272c644073f2eeea5f89b1"
+  resolved "https://repo.gildata.com:443/artifactory/api/npm/npmhundsun/gj-monitor/-/gj-monitor-1.0.6.tgz#935da55ad5dae118bf272c644073f2eeea5f89b1"
   integrity sha1-k12lWtXa4Ri/JyxkQHPy7upfibE=
   dependencies:
     core-js "^3.19.1"

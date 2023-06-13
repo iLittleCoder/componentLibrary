@@ -11,12 +11,12 @@
 ```html
 <template>
     <div>
-     <jy-tabs v-model="activeName" @tab-click="handleClick">
-        <jy-tab-pane label="用户管理" name="first">用户管理</jy-tab-pane>
-        <jy-tab-pane label="配置管理" name="second">配置管理</jy-tab-pane>
-        <jy-tab-pane label="角色管理" name="third">角色管理</jy-tab-pane>
-        <jy-tab-pane label="定时任务补偿" disabled name="fourth">定时任务补偿</jy-tab-pane>
-      </jy-tabs>
+     <gj-tabs v-model="activeName" @tab-click="handleClick">
+        <gj-tab-pane label="用户管理" name="first">用户管理</gj-tab-pane>
+        <gj-tab-pane label="配置管理" name="second">配置管理</gj-tab-pane>
+        <gj-tab-pane label="角色管理" name="third">角色管理</gj-tab-pane>
+        <gj-tab-pane label="定时任务补偿" disabled name="fourth">定时任务补偿</gj-tab-pane>
+      </gj-tabs>
 
 </div>
  
@@ -46,12 +46,12 @@
 
 ```html
 <template>
-  <jy-tabs v-model="activeName" type="card" @tab-click="handleClick">
-    <jy-tab-pane label="用户管理" name="first">用户管理</jy-tab-pane>
-    <jy-tab-pane label="配置管理" name="second">配置管理</jy-tab-pane>
-    <jy-tab-pane label="角色管理" name="third">角色管理</jy-tab-pane>
-    <jy-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</jy-tab-pane>
-  </jy-tabs>
+  <gj-tabs v-model="activeName" type="card" @tab-click="handleClick">
+    <gj-tab-pane label="用户管理" name="first">用户管理</gj-tab-pane>
+    <gj-tab-pane label="配置管理" name="second">配置管理</gj-tab-pane>
+    <gj-tab-pane label="角色管理" name="third">角色管理</gj-tab-pane>
+    <gj-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</gj-tab-pane>
+  </gj-tabs>
 </template>
 <script>
   export default {
@@ -77,12 +77,12 @@
  
  :::demo 将`type`设置为`border-card`。
  ```html
- <jy-tabs type="border-card">
-   <jy-tab-pane label="用户管理">用户管理</jy-tab-pane>
-   <jy-tab-pane label="配置管理">配置管理</jy-tab-pane>
-   <jy-tab-pane label="角色管理">角色管理</jy-tab-pane>
-   <jy-tab-pane label="定时任务补偿">定时任务补偿</jy-tab-pane>
- </jy-tabs>
+ <gj-tabs type="border-card">
+   <gj-tab-pane label="用户管理">用户管理</gj-tab-pane>
+   <gj-tab-pane label="配置管理">配置管理</gj-tab-pane>
+   <gj-tab-pane label="角色管理">角色管理</gj-tab-pane>
+   <gj-tab-pane label="定时任务补偿">定时任务补偿</gj-tab-pane>
+ </gj-tabs>
  ```
  :::
 -->
@@ -96,19 +96,19 @@
 
 ```html
 <template>
-  <jy-radio-group v-model="tabPosition">
-    <jy-radio-button label="top">top</jy-radio-button>
-    <jy-radio-button label="right">right</jy-radio-button>
-    <jy-radio-button label="bottom">bottom</jy-radio-button>
-    <jy-radio-button label="left">left</jy-radio-button>
-  </jy-radio-group>
+  <gj-radio-group v-model="tabPosition">
+    <gj-radio-button label="top">top</gj-radio-button>
+    <gj-radio-button label="right">right</gj-radio-button>
+    <gj-radio-button label="bottom">bottom</gj-radio-button>
+    <gj-radio-button label="left">left</gj-radio-button>
+  </gj-radio-group>
 
-  <jy-tabs :tab-position="tabPosition">
-    <jy-tab-pane label="用户管理">用户管理</jy-tab-pane>
-    <jy-tab-pane label="配置管理">配置管理</jy-tab-pane>
-    <jy-tab-pane label="角色管理">角色管理</jy-tab-pane>
-    <jy-tab-pane label="定时任务补偿">定时任务补偿</jy-tab-pane>
-  </jy-tabs>
+  <gj-tabs :tab-position="tabPosition">
+    <gj-tab-pane label="用户管理">用户管理</gj-tab-pane>
+    <gj-tab-pane label="配置管理">配置管理</gj-tab-pane>
+    <gj-tab-pane label="角色管理">角色管理</gj-tab-pane>
+    <gj-tab-pane label="定时任务补偿">定时任务补偿</gj-tab-pane>
+  </gj-tabs>
 </template>
 <script>
   export default {
@@ -128,15 +128,15 @@
 
 :::demo
 ```html
-<jy-tabs type="border-card">
-  <jy-tab-pane>
+<gj-tabs type="border-card">
+  <gj-tab-pane>
     <span slot="label"><i class="Gildata-calendar"></i> 我的行程</span>
     我的行程
-  </jy-tab-pane>
-  <jy-tab-pane label="消息中心">消息中心</jy-tab-pane>
-  <jy-tab-pane label="角色管理">角色管理</jy-tab-pane>
-  <jy-tab-pane label="定时任务补偿">定时任务补偿</jy-tab-pane>
-</jy-tabs>
+  </gj-tab-pane>
+  <gj-tab-pane label="消息中心">消息中心</gj-tab-pane>
+  <gj-tab-pane label="角色管理">角色管理</gj-tab-pane>
+  <gj-tab-pane label="定时任务补偿">定时任务补偿</gj-tab-pane>
+</gj-tabs>
 ```
 :::
 
@@ -146,16 +146,16 @@
 
 :::demo
 ```html
-<jy-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-  <jy-tab-pane
+<gj-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+  <gj-tab-pane
     :key="item.name"
     v-for="(item, index) in editableTabs"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </jy-tab-pane>
-</jy-tabs>
+  </gj-tab-pane>
+</gj-tabs>
 <script>
   export default {
     data() {
@@ -213,23 +213,23 @@
 :::demo
 ```html
 <div style="margin-bottom: 20px;">
-  <jy-button
+  <gj-button
     size="small"
     @click="addTab(editableTabsValue)"
   >
     add tab
-  </jy-button>
+  </gj-button>
 </div>
-<jy-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
-  <jy-tab-pane
+<gj-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+  <gj-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </jy-tab-pane>
-</jy-tabs>
+  </gj-tab-pane>
+</gj-tabs>
 <script>
   export default {
     data() {

@@ -1,7 +1,7 @@
 export default {
-  name: 'JyRow',
+  name: 'GjRow',
 
-  componentName: 'JyRow',
+  componentName: 'GjRow',
 
   props: {
     tag: {
@@ -33,10 +33,10 @@ export default {
   render(h) {
     return h(this.tag, {
       class: [
-        'jy-row',
+        'gj-row',
         this.justify !== 'start' ? `is-justify-${this.justify}` : '',
         this.align ? `is-align-${this.align}` : '',
-        { 'jy-row--flex': this.type === 'flex' }
+        { 'gj-row--flex': this.type === 'flex' }
       ],
       style: this.style
     }, this.$slots.default);

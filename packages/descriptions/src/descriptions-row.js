@@ -1,5 +1,5 @@
 export default {
-  name: 'JyDescriptionsRow',
+  name: 'GjDescriptionsRow',
   props: {
     row: {
       type: Array

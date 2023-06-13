@@ -2,19 +2,19 @@
 /**Variable**/
 @import './helpers/mixin.scss';
 
-.jy-table-pulldown {
+.gj-table-pulldown {
   position: relative;
   display: inline-block;
-  color: $jy-font-color;
+  color: $gj-font-color;
   text-align: left;
 }
 
-.jy-table-pulldown--panel {
+.gj-table-pulldown--panel {
   display: none;
   position: absolute;
   left: 0;
   padding: 4px 0;
-  color: $jy-font-color;
+  color: $gj-font-color;
   text-align: left;
   &:not(.is--transfer) {
     min-width: 100%;
@@ -39,20 +39,20 @@
     transform: scaleY(1);
   }
 }
-.jy-table-pulldown--wrapper {
-  background-color: $jy-pulldown-panel-background-color;
+.gj-table-pulldown--wrapper {
+  background-color: $gj-pulldown-panel-background-color;
 }
 
-.jy-table-pulldown,
-.jy-table-pulldown--panel {
-  font-size: $jy-font-size;
+.gj-table-pulldown,
+.gj-table-pulldown--panel {
+  font-size: $gj-font-size;
   &.size--medium {
-    font-size: $jy-font-size-medium;
+    font-size: $gj-font-size-medium;
   }
   &.size--small {
-    font-size: $jy-font-size-small;
+    font-size: $gj-font-size-small;
   }
   &.size--mini {
-    font-size: $jy-font-size-mini;
+    font-size: $gj-font-size-mini;
   }
 }

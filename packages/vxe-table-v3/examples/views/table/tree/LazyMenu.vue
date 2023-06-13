@@ -4,7 +4,7 @@
       树表格的懒加载和右键菜单，通过调用 <table-api-link prop="clearTreeExpandLoaded"/> 方法清除加载完成状态，通过调用 <table-api-link prop="reloadTreeExpand"/> 方法重新加载子节点
     </p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       ref="xTree"
@@ -13,11 +13,11 @@
       :tree-config="{transform: true, lazy: true, hasChild: 'hasChild', loadMethod: loadChildrenMethod}"
       :data="tableData"
       @menu-click="contextMenuClickEvent">
-      <jy-column field="name" title="Name" width="400" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name" width="400" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -48,7 +48,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           ref="xTree"
@@ -57,11 +57,11 @@ export default {
           :tree-config="{transform: true, lazy: true, hasChild: 'hasChild', loadMethod: loadChildrenMethod}"
           :data="tableData"
           @menu-click="contextMenuClickEvent">
-          <jy-column field="name" title="Name" width="400" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="Name" width="400" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {

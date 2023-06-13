@@ -1,17 +1,17 @@
 <template>
   <section class="config" :key="displayName">
     <div class="config-label">
-      <jy-tooltip :content="displayName" placement="top">
+      <gj-tooltip :content="displayName" placement="top">
         <span>{{displayKeyName}}</span>
-      </jy-tooltip>
-      <jy-button
+      </gj-tooltip>
+      <gj-button
         class="plus-button" 
         size="mini" 
         round 
         icon="el-icon-plus"
         @click.stop="onAddShadow"
       >
-      </jy-button>
+      </gj-button>
     </div>
     <div class="config-content" v-for="(each, key) in valueArr" :key="key">
       <div class="content-10">
@@ -61,12 +61,12 @@
         <span class="content-tip">Blur</span>
       </div>
       <div class="content-10">
-        <jy-button
+        <gj-button
           size="mini" 
           round 
           icon="el-icon-minus"
           @click.stop="val => onMinusShadow(key)"
-        ></jy-button>
+        ></gj-button>
       </div>
     </div>
   </section>
@@ -98,7 +98,7 @@
   padding: 5px 0;
 }
 /* Element buton style override */
-.jy-button--mini.is-round {
+.gj-button--mini.is-round {
   padding: 3px 3px;  
 }
 </style>

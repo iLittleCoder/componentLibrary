@@ -1,20 +1,20 @@
 /**Variable**/
 
 /*tppltip*/
-.jy-table--tooltip-wrapper {
+.gj-table--tooltip-wrapper {
   display: none;
   position: absolute;
   top: -100%;
   left: -100%;
   font-size: 12px;
   max-width: 600px;
-  border-radius: $jy-border-radius;
+  border-radius: $gj-border-radius;
   padding: 8px 12px;
   white-space: normal;
   word-break: break-word;
   box-shadow:$--popper-box-shadow;
-  color: $jy-font-color;
-  font-family: $jy-font-family;
+  color: $gj-font-color;
+  font-family: $gj-font-family;
   &:not(.is--enterable) {
     pointer-events: none;
   }
@@ -22,7 +22,7 @@
     display: block;
   }
   &.is--arrow {
-    .jy-table--tooltip-arrow {
+    .gj-table--tooltip-arrow {
       display: block;
     }
   }
@@ -36,10 +36,10 @@
       background-color: transparent;
     }
   }
-  .jy-table--tooltip-content {
+  .gj-table--tooltip-content {
     white-space: pre-line;
   }
-  .jy-table--tooltip-arrow {
+  .gj-table--tooltip-arrow {
     display: none;
     position: absolute;
     border-color: transparent;
@@ -62,7 +62,7 @@
         bottom: -6px;
       }
     }
-    .jy-table--tooltip-arrow {
+    .gj-table--tooltip-arrow {
       bottom: -12px;
       &:before {
         top: -7px;
@@ -75,7 +75,7 @@
         top: -6px;
       }
     }
-    .jy-table--tooltip-arrow {
+    .gj-table--tooltip-arrow {
       top: -12px;
       &:before {
         top: -4px;
@@ -83,43 +83,43 @@
     }
   }
 }
-.jy-table--tooltip-wrapper {
+.gj-table--tooltip-wrapper {
   &.theme--light {
-    background-color: $jy-tooltip-light-background-color;
-    border: 1px solid $jy-input-border-color;
+    background-color: $gj-tooltip-light-background-color;
+    border: 1px solid $gj-input-border-color;
     &.placement--top {
-      .jy-table--tooltip-arrow {
-        border-top-color: $jy-input-border-color;
+      .gj-table--tooltip-arrow {
+        border-top-color: $gj-input-border-color;
         &:before {
-          border-top-color: $jy-tooltip-light-background-color;
+          border-top-color: $gj-tooltip-light-background-color;
         }
       }
     }
     &.placement--bottom {
-      .jy-table--tooltip-arrow {
-        border-bottom-color: $jy-input-border-color;
+      .gj-table--tooltip-arrow {
+        border-bottom-color: $gj-input-border-color;
         &:before {
-          border-bottom-color: $jy-tooltip-light-background-color;
+          border-bottom-color: $gj-tooltip-light-background-color;
         }
       }
     }
   }
   &.theme--dark {
-    background: $jy-tooltip-dark-background-color;
-    color: $jy-tooltip-dark-color;
+    background: $gj-tooltip-dark-background-color;
+    color: $gj-tooltip-dark-color;
     &.placement--top {
-      .jy-table--tooltip-arrow {
-        border-top-color: $jy-tooltip-dark-background-color;
+      .gj-table--tooltip-arrow {
+        border-top-color: $gj-tooltip-dark-background-color;
         &:before {
-          border-top-color: $jy-tooltip-dark-background-color;
+          border-top-color: $gj-tooltip-dark-background-color;
         }
       }
     }
     &.placement--bottom {
-      .jy-table--tooltip-arrow {
-        border-bottom-color: $jy-tooltip-dark-background-color;
+      .gj-table--tooltip-arrow {
+        border-bottom-color: $gj-tooltip-dark-background-color;
         &:before {
-          border-bottom-color: $jy-tooltip-dark-background-color;
+          border-bottom-color: $gj-tooltip-dark-background-color;
         }
       }
     }
@@ -127,9 +127,9 @@
 }
 
 /*valid error*/
-.jy-table--tooltip-wrapper {
-  &.jy-table--valid-error {
-    background-color: $jy-tooltip-validate-error-background-color;
-    color: $jy-tooltip-validate-error-color;
+.gj-table--tooltip-wrapper {
+  &.gj-table--valid-error {
+    background-color: $gj-tooltip-validate-error-background-color;
+    color: $gj-tooltip-validate-error-color;
   }
 }

@@ -4,7 +4,7 @@ export const Colgroup = Object.assign(VxeTableColgroup, {
   install (Vue) {
     Vue.component(VxeTableColgroup.name, VxeTableColgroup)
     // 兼容旧用法
-    Vue.component('JyColgroup', VxeTableColgroup)
+    Vue.component('GjColgroup', VxeTableColgroup)
   }
 })
 

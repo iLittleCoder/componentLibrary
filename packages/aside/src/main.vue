@@ -1,14 +1,14 @@
 <template>
-  <aside class="jy-aside" :style="{ width }">
+  <aside class="gj-aside" :style="{ width }">
     <slot></slot>
   </aside>
 </template>
 
 <script>
   export default {
-    name: 'JyAside',
+    name: 'GjAside',
 
-    componentName: 'JyAside',
+    componentName: 'GjAside',
 
     props: {
       width: {

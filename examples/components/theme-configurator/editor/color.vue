@@ -1,13 +1,13 @@
 <template>
   <section class="config" :key="displayName">
     <div class="config-label">
-      <jy-tooltip :content="displayName" placement="top">
+      <gj-tooltip :content="displayName" placement="top">
         <span>{{ displayKeyName }}</span>
-      </jy-tooltip>
+      </gj-tooltip>
     </div>
     <div class="config-content">
       <div class="content-80">
-        <jy-input size="medium" :value="displayValue" readonly slot="reference" @click.native="onInputClick"></jy-input>
+        <gj-input size="medium" :value="displayValue" readonly slot="reference" @click.native="onInputClick"></gj-input>
       </div>
       <div class="content-20">
         <color-picker

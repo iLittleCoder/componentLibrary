@@ -5,7 +5,7 @@
   import { addClass, removeClass, hasClass } from 'GildataDesign/src/utils/dom';
 
   export default {
-    name: 'JyMenu',
+    name: 'GjMenu',
 
     render (h) {
       const component = (
@@ -14,10 +14,10 @@
           key={ +this.collapse }
           style={{ backgroundColor: this.backgroundColor || '' }}
           class={{
-            'jy-menu--vertical': this.mode === 'vertical',
-            'jy-menu--horizontal': this.mode === 'horizontal',
-            'jy-menu--collapse': this.collapse,
-            "jy-menu": true
+            'gj-menu--vertical': this.mode === 'vertical',
+            'gj-menu--horizontal': this.mode === 'horizontal',
+            'gj-menu--collapse': this.collapse,
+            "gj-menu": true
           }}
         >
           { this.$slots.default }
@@ -26,16 +26,16 @@
 
       if (this.collapseTransition) {
         return (
-          <jy-menu-collapse-transition>
+          <gj-menu-collapse-transition>
             { component }
-          </jy-menu-collapse-transition>
+          </gj-menu-collapse-transition>
         );
       } else {
         return component;
       }
     },
 
-    componentName: 'JyMenu',
+    componentName: 'GjMenu',
 
     mixins: [emitter, Migrating],
 
@@ -46,7 +46,7 @@
     },
 
     components: {
-      'jy-menu-collapse-transition': {
+      'gj-menu-collapse-transition': {
         functional: true,
         render(createElement, context) {
           const data = {
@@ -59,28 +59,28 @@
               },
 
               enter(el) {
-                addClass(el, 'jy-opacity-transition');
+                addClass(el, 'gj-opacity-transition');
                 el.style.opacity = 1;
               },
 
               afterEnter(el) {
-                removeClass(el, 'jy-opacity-transition');
+                removeClass(el, 'gj-opacity-transition');
                 el.style.opacity = '';
               },
 
               beforeLeave(el) {
                 if (!el.dataset) el.dataset = {};
 
-                if (hasClass(el, 'jy-menu--collapse')) {
-                  removeClass(el, 'jy-menu--collapse');
+                if (hasClass(el, 'gj-menu--collapse')) {
+                  removeClass(el, 'gj-menu--collapse');
                   el.dataset.oldOverflow = el.style.overflow;
                   el.dataset.scrollWidth = el.clientWidth;
-                  addClass(el, 'jy-menu--collapse');
+                  addClass(el, 'gj-menu--collapse');
                 } else {
-                  addClass(el, 'jy-menu--collapse');
+                  addClass(el, 'gj-menu--collapse');
                   el.dataset.oldOverflow = el.style.overflow;
                   el.dataset.scrollWidth = el.clientWidth;
-                  removeClass(el, 'jy-menu--collapse');
+                  removeClass(el, 'gj-menu--collapse');
                 }
 
                 el.style.width = el.scrollWidth + 'px';
@@ -155,7 +155,7 @@
 
       collapse(value) {
         if (value) this.openedMenus = [];
-        this.broadcast('JySubmenu', 'toggle-collapse', value);
+        this.broadcast('GjSubmenu', 'toggle-collapse', value);
       }
     },
     methods: {

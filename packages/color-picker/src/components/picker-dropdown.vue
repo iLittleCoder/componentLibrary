@@ -1,5 +1,5 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="doDestroy">
+  <transition name="gj-zoom-in-top" @after-leave="doDestroy">
     <div
       class="el-color-dropdown"
       v-show="showPopper">

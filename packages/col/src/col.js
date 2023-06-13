@@ -1,5 +1,5 @@
 export default {
-  name: 'JyCol',
+  name: 'GjCol',
 
   props: {
     span: {
@@ -23,7 +23,7 @@ export default {
   computed: {
     gutter() {
       let parent = this.$parent;
-      while (parent && parent.$options.componentName !== 'JyRow') {
+      while (parent && parent.$options.componentName !== 'GjRow') {
         parent = parent.$parent;
       }
       return parent ? parent.gutter : 0;
@@ -42,29 +42,29 @@ export default {
       if (this[prop] || this[prop] === 0) {
         classList.push(
           prop !== 'span'
-            ? `jy-col-${prop}-${this[prop]}`
-            : `jy-col-${this[prop]}`
+            ? `gj-col-${prop}-${this[prop]}`
+            : `gj-col-${this[prop]}`
         );
       }
     });
 
     ['xs', 'sm', 'md', 'lg', 'xl'].forEach(size => {
       if (typeof this[size] === 'number') {
-        classList.push(`jy-col-${size}-${this[size]}`);
+        classList.push(`gj-col-${size}-${this[size]}`);
       } else if (typeof this[size] === 'object') {
         let props = this[size];
         Object.keys(props).forEach(prop => {
           classList.push(
             prop !== 'span'
-              ? `jy-col-${size}-${prop}-${props[prop]}`
-              : `jy-col-${size}-${props[prop]}`
+              ? `gj-col-${size}-${prop}-${props[prop]}`
+              : `gj-col-${size}-${props[prop]}`
           );
         });
       }
     });
 
     return h(this.tag, {
-      class: ['jy-col', classList],
+      class: ['gj-col', classList],
       style
     }, this.$slots.default);
   }

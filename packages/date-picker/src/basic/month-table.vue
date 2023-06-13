@@ -5,7 +5,7 @@
     cellspacing="0"
     @click="handleMonthTableClick"
     @mousemove="handleMouseMove"
-    class="jy-month-table"
+    class="gj-month-table"
   >
     <tbody>
       <tr v-for="(row, key) in rows" :key="key">

@@ -1,33 +1,33 @@
 <template>
   <div
     :class="[
-      type === 'textarea' ? 'jy-textarea' : 'jy-input',
-      inputSize ? 'jy-input--' + inputSize : '',
+      type === 'textarea' ? 'gj-textarea' : 'gj-input',
+      inputSize ? 'gj-input--' + inputSize : '',
       {
         'is-disabled': inputDisabled,
         'is-exceed': inputExceed,
-        'jy-input-group': $slots.prepend || $slots.append,
-        'jy-input-group--append': $slots.append,
-        'jy-input-group--prepend': $slots.prepend,
-        'jy-input--prefix': $slots.prefix || prefixIcon,
-        'jy-input--suffix':
+        'gj-input-group': $slots.prepend || $slots.append,
+        'gj-input-group--append': $slots.append,
+        'gj-input-group--prepend': $slots.prepend,
+        'gj-input--prefix': $slots.prefix || prefixIcon,
+        'gj-input--suffix':
           $slots.suffix || suffixIcon || clearable || showPassword,
         'is-border': noBorder
       },
-      'jy-input--' + state
+      'gj-input--' + state
     ]"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false"
   >
     <template v-if="type !== 'textarea'">
       <!-- 前置元素 -->
-      <div class="jy-input-group__prepend" v-if="$slots.prepend">
+      <div class="gj-input-group__prepend" v-if="$slots.prepend">
         <slot name="prepend"></slot>
       </div>
       <input
         :tabindex="tabindex"
         v-if="type !== 'textarea'"
-        class="jy-input__inner"
+        class="gj-input__inner"
         v-bind="$attrs"
         :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
         :disabled="inputDisabled"
@@ -44,37 +44,37 @@
         :aria-label="label"
       />
       <!-- 前置内容 -->
-      <span class="jy-input__prefix" v-if="$slots.prefix || prefixIcon">
+      <span class="gj-input__prefix" v-if="$slots.prefix || prefixIcon">
         <slot name="prefix"></slot>
-        <i class="jy-input__icon" v-if="prefixIcon" :class="prefixIcon"> </i>
+        <i class="gj-input__icon" v-if="prefixIcon" :class="prefixIcon"> </i>
       </span>
       <!-- 后置内容 -->
-      <span class="jy-input__suffix" v-if="getSuffixVisible()">
-        <span class="jy-input__suffix-inner">
+      <span class="gj-input__suffix" v-if="getSuffixVisible()">
+        <span class="gj-input__suffix-inner">
           <i
             v-if="showClear"
-            class="jy-input__icon Gildata-clean jy-input__clear"
+            class="gj-input__icon Gildata-clean gj-input__clear"
             @mousedown.prevent
             @click="clear"
           ></i>
           <template v-if="!showClear || !showPwdVisible || !isWordLimitVisible">
             <slot name="suffix"></slot>
-            <i class="jy-input__icon " v-if="suffixIcon" :class="suffixIcon">
+            <i class="gj-input__icon " v-if="suffixIcon" :class="suffixIcon">
             </i>
           </template>
 
           <i
             v-if="showPwdVisible"
-            class="jy-input__icon jy-input__clear"
+            class="gj-input__icon gj-input__clear"
             :class="[passwordVisible ? 'Gildata-eye' : 'Gildata-eyeInvisible']"
             @click="handlePasswordVisible"
           ></i>
 
-          <span v-if="isWordLimitVisible" class="jy-input__count">
-            <span class="jy-input__count-inner">
+          <span v-if="isWordLimitVisible" class="gj-input__count">
+            <span class="gj-input__count-inner">
               <span
                 :class="[
-                  value && value.length > 0 ? 'jy-input__count__molecule' : ''
+                  value && value.length > 0 ? 'gj-input__count__molecule' : ''
                 ]"
                 >{{ textLength }}</span
               >
@@ -83,27 +83,27 @@
           </span>
         </span>
         <i
-          class="jy-input__icon"
+          class="gj-input__icon"
           v-if="validateState && validateState === 'validating'"
-          :class="['jy-input__validateIcon', validateIcon]"
+          :class="['gj-input__validateIcon', validateIcon]"
         >
         </i>
 
-        <jy-icon
+        <gj-icon
           v-if="validateState && validateState !== 'validating'"
-          class="jy-input__icon jy-input__validateIcon"
+          class="gj-input__icon gj-input__validateIcon"
           :name="validateIcon"
-        ></jy-icon>
+        ></gj-icon>
       </span>
       <!-- 后置元素 -->
-      <div class="jy-input-group__append" v-if="$slots.append">
+      <div class="gj-input-group__append" v-if="$slots.append">
         <slot name="append"></slot>
       </div>
     </template>
     <textarea
       v-else
       :tabindex="tabindex"
-      class="jy-textarea__inner"
+      class="gj-textarea__inner"
       @compositionstart="handleCompositionStart"
       @compositionupdate="handleCompositionUpdate"
       @compositionend="handleCompositionEnd"
@@ -122,10 +122,10 @@
     </textarea>
     <span
       v-if="isWordLimitVisible && type === 'textarea'"
-      class="jy-input__count"
+      class="gj-input__count"
     >
       <span
-        :class="[value && value.length > 0 ? 'jy-input__count__molecule' : '']"
+        :class="[value && value.length > 0 ? 'gj-input__count__molecule' : '']"
         >{{ textLength }}</span
       >
       <span>/{{ upperLimit }}</span>
@@ -140,19 +140,19 @@ import merge from 'GildataDesign/src/utils/merge';
 import { isKorean } from 'GildataDesign/src/utils/shared';
 
 export default {
-  name: 'JyInput',
+  name: 'GjInput',
 
-  componentName: 'JyInput',
+  componentName: 'GjInput',
 
   mixins: [emitter, Migrating],
 
   inheritAttrs: false,
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
@@ -224,13 +224,13 @@ export default {
 
   computed: {
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
     validateState() {
-      return this.jyFormItem ? this.jyFormItem.validateState : '';
+      return this.GjFormItem ? this.GjFormItem.validateState : '';
     },
     needStatusIcon() {
-      return this.jyForm ? this.jyForm.statusIcon : false;
+      return this.GjForm ? this.GjForm.statusIcon : false;
     },
     validateIcon() {
       return {
@@ -246,7 +246,7 @@ export default {
       return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
     },
     inputDisabled() {
-      return this.disabled || (this.jyForm || {}).disabled;
+      return this.disabled || (this.GjForm || {}).disabled;
     },
     nativeInputValue() {
       return this.value === null || this.value === undefined
@@ -300,7 +300,7 @@ export default {
     value(val) {
       this.$nextTick(this.resizeTextarea);
       if (this.validateEvent) {
-        this.dispatch('JyFormItem', 'el.form.change', [val]);
+        this.dispatch('GjFormItem', 'el.form.change', [val]);
       }
     },
     // native input value is set explicitly
@@ -343,7 +343,7 @@ export default {
       this.focused = false;
       this.$emit('blur', event);
       if (this.validateEvent) {
-        this.dispatch('JyFormItem', 'el.form.blur', [this.value]);
+        this.dispatch('GjFormItem', 'el.form.blur', [this.value]);
       }
     },
     select() {
@@ -415,7 +415,7 @@ export default {
     },
     calcIconOffset(place) {
       let elList = [].slice.call(
-        this.$el.querySelectorAll(`.jy-input__${place}`) || []
+        this.$el.querySelectorAll(`.gj-input__${place}`) || []
       );
       if (!elList.length) return;
       let el = null;
@@ -435,7 +435,7 @@ export default {
       if (this.$slots[pendant]) {
         setTimeout(() => {
           el.style.transform = `translateX(${place === 'suffix' ? '-' : ''}${
-            this.$el.querySelector(`.jy-input-group__${pendant}`).offsetWidth
+            this.$el.querySelector(`.gj-input-group__${pendant}`).offsetWidth
           }px)`;
         }, 100);
       } else {

@@ -211,8 +211,8 @@
       } = this;
       const scrollBtn = scrollable
         ? [
-          <span class={['jy-tabs__nav-prev', scrollable.prev ? '' : 'is-disabled']} on-click={scrollPrev}><i class="Gildata-leftarrow"></i></span>,
-          <span class={['jy-tabs__nav-next', scrollable.next ? '' : 'is-disabled']} on-click={scrollNext}><i class="Gildata-rightarrow"></i></span>
+          <span class={['gj-tabs__nav-prev', scrollable.prev ? '' : 'is-disabled']} on-click={scrollPrev}><i class="Gildata-leftarrow"></i></span>,
+          <span class={['gj-tabs__nav-next', scrollable.next ? '' : 'is-disabled']} on-click={scrollNext}><i class="Gildata-rightarrow"></i></span>
         ] : null;
 
       const tabs = this._l(panes, (pane, index) => {
@@ -230,7 +230,7 @@
         return (
           <div
             class={{
-              'jy-tabs__item': true,
+              'gj-tabs__item': true,
               [`is-${ this.rootTabs.tabPosition }`]: true,
               'is-active': pane.active,
               'is-disabled': pane.disabled,
@@ -256,11 +256,11 @@
         );
       });
       return (
-        <div class={['jy-tabs__nav-wrap', scrollable ? 'is-scrollable' : '', `is-${ this.rootTabs.tabPosition }`]}>
+        <div class={['gj-tabs__nav-wrap', scrollable ? 'is-scrollable' : '', `is-${ this.rootTabs.tabPosition }`]}>
           {scrollBtn}
-          <div class={['jy-tabs__nav-scroll']} ref="navScroll">
+          <div class={['gj-tabs__nav-scroll']} ref="navScroll">
             <div
-              class={['jy-tabs__nav', `is-${ this.rootTabs.tabPosition }`, stretch && ['top', 'bottom'].indexOf(this.rootTabs.tabPosition) !== -1 ? 'is-stretch' : '']}
+              class={['gj-tabs__nav', `is-${ this.rootTabs.tabPosition }`, stretch && ['top', 'bottom'].indexOf(this.rootTabs.tabPosition) !== -1 ? 'is-stretch' : '']}
               ref="nav"
               style={navStyle}
               role="tablist"

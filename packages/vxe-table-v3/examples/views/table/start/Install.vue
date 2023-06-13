@@ -7,13 +7,13 @@
     </p>
     <pre>
       <pre-code class="shell">
-        npm install xe-utils@3 jy-table@3
+        npm install xe-utils@3 gj-table@3
       </pre-code>
       <pre-code class="javascript">
         import Vue from 'vue'
         import 'xe-utils'
-        import VXETable from 'jy-table'
-        import 'jy-table/lib/style.css'
+        import VXETable from 'gj-table'
+        import 'gj-table/lib/style.css'
 
         Vue.use(VXETable)
 
@@ -26,16 +26,16 @@
     </pre>
     <h2>CDN</h2>
     <p class="tip">
-      可以通过 <a class="link" href="https://unpkg.com/jy-table/">unpkg</a> 或 <a class="link" href="https://cdn.jsdelivr.net/npm/jy-table/">cdnjs</a> 获取到最新版本的资源，并在页面上引入即可<br>
+      可以通过 <a class="link" href="https://unpkg.com/gj-table/">unpkg</a> 或 <a class="link" href="https://cdn.jsdelivr.net/npm/gj-table/">cdnjs</a> 获取到最新版本的资源，并在页面上引入即可<br>
       <span class="red">（注：使用 cdn 引用方式需要注意是否锁定版本，默认指向最新版本）</span>
     </p>
     <pre>
       <pre-code class="xml">
         &lt;!-- 引入样式 --&gt;
-        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jy-table/lib/style.css"&gt;
+        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gj-table/lib/style.css"&gt;
         &lt;!-- 引入脚本 --&gt;
         &lt;script src="https://cdn.jsdelivr.net/npm/xe-utils"&gt;&lt;/script&gt;
-        &lt;script src="https://cdn.jsdelivr.net/npm/jy-table"&gt;&lt;/script&gt;
+        &lt;script src="https://cdn.jsdelivr.net/npm/gj-table"&gt;&lt;/script&gt;
       </pre-code>
     </pre>
   </div>

@@ -9,69 +9,69 @@
 :::demo
 
 ```html
-<jy-row>
-  <jy-button type="primary">主要按钮</jy-button>
-  <jy-button type="primary" loading>主要按钮</jy-button>
-  <jy-button type="primary" disabled>禁用状态</jy-button>
-</jy-row>
-<jy-row>
-  <jy-button secondary type="primary">次要按钮</jy-button>
-  <jy-button secondary type="primary" loading>次要按钮</jy-button>
-  <jy-button secondary type="primary" disabled>禁用状态</jy-button>
-</jy-row>
-<jy-row>
-  <jy-button>辅助按钮</jy-button>
-  <jy-button loading>辅助按钮</jy-button>
-  <jy-button disabled>禁用状态</jy-button>
-</jy-row>
-<jy-row>
-  <jy-button type="danger">功能按钮</jy-button>
-  <jy-button type="danger" loading>辅助按钮</jy-button>
-  <jy-button type="danger" disabled>禁用状态</jy-button>
-</jy-row>
-<jy-row>
-  <jy-button type="text">文字按钮</jy-button>
-  <jy-button type="text" disabled>文字按钮</jy-button>
-</jy-row>
-<jy-row>
-  <jy-button no-border icon="Gildata-download2"></jy-button>
-  <jy-button no-border icon="Gildata-download2" disabled></jy-button>
-</jy-row>
-<jy-row>
-  <jy-button secondary type="primary">
+<gj-row>
+  <gj-button type="primary">主要按钮</gj-button>
+  <gj-button type="primary" loading>主要按钮</gj-button>
+  <gj-button type="primary" disabled>禁用状态</gj-button>
+</gj-row>
+<gj-row>
+  <gj-button secondary type="primary">次要按钮</gj-button>
+  <gj-button secondary type="primary" loading>次要按钮</gj-button>
+  <gj-button secondary type="primary" disabled>禁用状态</gj-button>
+</gj-row>
+<gj-row>
+  <gj-button>辅助按钮</gj-button>
+  <gj-button loading>辅助按钮</gj-button>
+  <gj-button disabled>禁用状态</gj-button>
+</gj-row>
+<gj-row>
+  <gj-button type="danger">功能按钮</gj-button>
+  <gj-button type="danger" loading>辅助按钮</gj-button>
+  <gj-button type="danger" disabled>禁用状态</gj-button>
+</gj-row>
+<gj-row>
+  <gj-button type="text">文字按钮</gj-button>
+  <gj-button type="text" disabled>文字按钮</gj-button>
+</gj-row>
+<gj-row>
+  <gj-button no-border icon="Gildata-download2"></gj-button>
+  <gj-button no-border icon="Gildata-download2" disabled></gj-button>
+</gj-row>
+<gj-row>
+  <gj-button secondary type="primary">
     <i class="Gildata-screen" slot="left"></i>
     <span>筛选按钮</span>
-  </jy-button>
-  <jy-button secondary type="primary">
+  </gj-button>
+  <gj-button secondary type="primary">
     <i class="Gildata-screen" slot="right"></i>
     <span>筛选按钮</span>
-  </jy-button>
-  <jy-button secondary type="primary">
-    <i class="Gildata-screen" slot="left"></i>
-    <span>筛选按钮</span>
-    <i class="Gildata-screen" slot="right"></i>
-  </jy-button>
-</jy-row>
-<jy-row>
-  <jy-button size="large" type="primary">
-    <i class="Gildata-screen" slot="left"></i>
-    <span>筛选按钮</span>
-  </jy-button>
-  <jy-button size="medium" type="primary">
-    <i class="Gildata-screen" slot="right"></i>
-    <span>筛选按钮</span>
-  </jy-button>
-  <jy-button type="primary">
+  </gj-button>
+  <gj-button secondary type="primary">
     <i class="Gildata-screen" slot="left"></i>
     <span>筛选按钮</span>
     <i class="Gildata-screen" slot="right"></i>
-  </jy-button>
-  <jy-button size="mini" type="primary">
+  </gj-button>
+</gj-row>
+<gj-row>
+  <gj-button size="large" type="primary">
+    <i class="Gildata-screen" slot="left"></i>
+    <span>筛选按钮</span>
+  </gj-button>
+  <gj-button size="medium" type="primary">
+    <i class="Gildata-screen" slot="right"></i>
+    <span>筛选按钮</span>
+  </gj-button>
+  <gj-button type="primary">
     <i class="Gildata-screen" slot="left"></i>
     <span>筛选按钮</span>
     <i class="Gildata-screen" slot="right"></i>
-  </jy-button>
-</jy-row>
+  </gj-button>
+  <gj-button size="mini" type="primary">
+    <i class="Gildata-screen" slot="left"></i>
+    <span>筛选按钮</span>
+    <i class="Gildata-screen" slot="right"></i>
+  </gj-button>
+</gj-row>
 ```
 
 :::
@@ -85,43 +85,43 @@
 :::demo 使用`type`、`secondary`、`plain`、`round`和`circle`属性来定义 Button 的样式。
 
 ```html
-<jy-row>
-  <jy-button>默认按钮</jy-button>
-  <jy-button type="primary">主要按钮</jy-button>
-  <jy-button type="success">成功按钮</jy-button>
-  <jy-button type="warning">警告按钮</jy-button>
-  <jy-button type="danger">危险按钮</jy-button>
-</jy-row>
+<gj-row>
+  <gj-button>默认按钮</gj-button>
+  <gj-button type="primary">主要按钮</gj-button>
+  <gj-button type="success">成功按钮</gj-button>
+  <gj-button type="warning">警告按钮</gj-button>
+  <gj-button type="danger">危险按钮</gj-button>
+</gj-row>
 
-<jy-row>
-  <jy-button plain>朴素按钮</jy-button>
-  <jy-button type="primary" plain>主要按钮</jy-button>
-  <jy-button type="success" plain>成功按钮</jy-button>
-  <jy-button type="warning" plain>警告按钮</jy-button>
-  <jy-button type="danger" plain>危险按钮</jy-button>
-</jy-row>
+<gj-row>
+  <gj-button plain>朴素按钮</gj-button>
+  <gj-button type="primary" plain>主要按钮</gj-button>
+  <gj-button type="success" plain>成功按钮</gj-button>
+  <gj-button type="warning" plain>警告按钮</gj-button>
+  <gj-button type="danger" plain>危险按钮</gj-button>
+</gj-row>
 
-<jy-row>
-  <jy-button type="primary" secondary>次要按钮</jy-button>
-  <jy-button type="success" secondary>成功次要按钮</jy-button>
-  <jy-button type="warning" secondary>警告次要按钮</jy-button>
-  <jy-button type="danger" secondary>危险次要按钮</jy-button>
-</jy-row>
+<gj-row>
+  <gj-button type="primary" secondary>次要按钮</gj-button>
+  <gj-button type="success" secondary>成功次要按钮</gj-button>
+  <gj-button type="warning" secondary>警告次要按钮</gj-button>
+  <gj-button type="danger" secondary>危险次要按钮</gj-button>
+</gj-row>
 
-<jy-row>
-  <jy-button round>圆角按钮</jy-button>
-  <jy-button type="primary" round>主要按钮</jy-button>
-  <jy-button type="success" round>成功按钮</jy-button>
-  <jy-button type="warning" round>警告按钮</jy-button>
-  <jy-button type="danger" round>危险按钮</jy-button>
-</jy-row>
+<gj-row>
+  <gj-button round>圆角按钮</gj-button>
+  <gj-button type="primary" round>主要按钮</gj-button>
+  <gj-button type="success" round>成功按钮</gj-button>
+  <gj-button type="warning" round>警告按钮</gj-button>
+  <gj-button type="danger" round>危险按钮</gj-button>
+</gj-row>
 
-<jy-row>
-  <jy-button icon="Gildata-search1" circle></jy-button>
-  <jy-button type="primary" icon="Gildata-eye" circle></jy-button>
-  <jy-button type="warning" icon="Gildata-tick" circle></jy-button>
-  <jy-button type="success" icon="Gildata-prohibit" circle></jy-button>
-</jy-row>
+<gj-row>
+  <gj-button icon="Gildata-search1" circle></gj-button>
+  <gj-button type="primary" icon="Gildata-eye" circle></gj-button>
+  <gj-button type="warning" icon="Gildata-tick" circle></gj-button>
+  <gj-button type="success" icon="Gildata-prohibit" circle></gj-button>
+</gj-row>
 ```
 
 :::
@@ -133,21 +133,21 @@
 :::demo 你可以使用`disabled`属性来定义按钮是否可用，它接受一个`Boolean`值。
 
 ```html
-<jy-row>
-  <jy-button disabled>默认按钮</jy-button>
-  <jy-button type="primary" disabled>主要按钮</jy-button>
-  <jy-button type="success" disabled>成功按钮</jy-button>
-  <jy-button type="warning" disabled>警告按钮</jy-button>
-  <jy-button type="danger" disabled>危险按钮</jy-button>
-</jy-row>
+<gj-row>
+  <gj-button disabled>默认按钮</gj-button>
+  <gj-button type="primary" disabled>主要按钮</gj-button>
+  <gj-button type="success" disabled>成功按钮</gj-button>
+  <gj-button type="warning" disabled>警告按钮</gj-button>
+  <gj-button type="danger" disabled>危险按钮</gj-button>
+</gj-row>
 
-<jy-row>
-  <jy-button secondary disabled>次要按钮</jy-button>
-  <jy-button type="primary" secondary disabled>主要按钮</jy-button>
-  <jy-button type="success" secondary disabled>成功按钮</jy-button>
-  <jy-button type="warning" secondary disabled>警告按钮</jy-button>
-  <jy-button type="danger" secondary disabled>危险按钮</jy-button>
-</jy-row>
+<gj-row>
+  <gj-button secondary disabled>次要按钮</gj-button>
+  <gj-button type="primary" secondary disabled>主要按钮</gj-button>
+  <gj-button type="success" secondary disabled>成功按钮</gj-button>
+  <gj-button type="warning" secondary disabled>警告按钮</gj-button>
+  <gj-button type="danger" secondary disabled>危险按钮</gj-button>
+</gj-row>
 ```
 
 :::
@@ -161,15 +161,15 @@
 :::demo 新增：文字按钮支持不同的主题色，使用 textType 来定义文字按钮的样式。
 
 ```html
-<jy-button type="text">文字按钮</jy-button>
-<jy-button type="text" disabled>文字按钮</jy-button>
+<gj-button type="text">文字按钮</gj-button>
+<gj-button type="text" disabled>文字按钮</gj-button>
 
-<jy-row>
-  <jy-button textType="primary" type="text">主要按钮</jy-button>
-  <jy-button textType="success" type="text">成功按钮</jy-button>
-  <jy-button textType="warning" type="text">警告按钮</jy-button>
-  <jy-button textType="danger" type="text">危险按钮</jy-button>
-</jy-row>
+<gj-row>
+  <gj-button textType="primary" type="text">主要按钮</gj-button>
+  <gj-button textType="success" type="text">成功按钮</gj-button>
+  <gj-button textType="warning" type="text">警告按钮</gj-button>
+  <gj-button textType="danger" type="text">危险按钮</gj-button>
+</gj-row>
 ```
 
 :::
@@ -181,21 +181,21 @@
 :::demo 设置`icon`属性即可，icon 的列表可以参考 GildataDesign 的 icon 组件，也可以设置在文字右边的 icon ，只要使用`i`标签即可，可以使用自定义图标。
 
 ```html
-<jy-row>
-  <jy-button type="primary" icon="Gildata-edit"></jy-button>
-  <jy-button type="primary" icon="Gildata-share"></jy-button>
-  <jy-button type="primary" icon="Gildata-delete"></jy-button>
-  <jy-button type="primary" icon="Gildata-search1">搜索</jy-button>
-  <jy-button type="primary">上传 <i class="Gildata-upload"></i></jy-button>
-</jy-row>
+<gj-row>
+  <gj-button type="primary" icon="Gildata-edit"></gj-button>
+  <gj-button type="primary" icon="Gildata-share"></gj-button>
+  <gj-button type="primary" icon="Gildata-delete"></gj-button>
+  <gj-button type="primary" icon="Gildata-search1">搜索</gj-button>
+  <gj-button type="primary">上传 <i class="Gildata-upload"></i></gj-button>
+</gj-row>
 
-<jy-row>
-  <jy-button type="primary" secondary icon="Gildata-edit"></jy-button>
-  <jy-button type="primary" secondary icon="Gildata-share"></jy-button>
-  <jy-button type="primary" secondary icon="Gildata-delete"></jy-button>
-  <jy-button type="primary" secondary icon="Gildata-search1">搜索</jy-button>
-  <jy-button type="primary" secondary>上传 <i class="Gildata-upload"></i></jy-button>
-</jy-row>
+<gj-row>
+  <gj-button type="primary" secondary icon="Gildata-edit"></gj-button>
+  <gj-button type="primary" secondary icon="Gildata-share"></gj-button>
+  <gj-button type="primary" secondary icon="Gildata-delete"></gj-button>
+  <gj-button type="primary" secondary icon="Gildata-search1">搜索</gj-button>
+  <gj-button type="primary" secondary>上传 <i class="Gildata-upload"></i></gj-button>
+</gj-row>
 ```
 
 :::
@@ -207,57 +207,57 @@
 :::demo 通过`no-border`属性来设置按钮是否有边框
 
 ```html
-<jy-row>
-  <!-- <jy-button no-border icon="Gildata-edit"></jy-button>
-  <jy-button no-border icon="Gildata-share"></jy-button>
-  <jy-button no-border icon="Gildata-delete"></jy-button>
-  <jy-button no-border icon="Gildata-search1"></jy-button> 
-  <jy-button no-border icon="Gildata-search1" disabled></jy-button>-->
-</jy-row>
+<gj-row>
+  <!-- <gj-button no-border icon="Gildata-edit"></gj-button>
+  <gj-button no-border icon="Gildata-share"></gj-button>
+  <gj-button no-border icon="Gildata-delete"></gj-button>
+  <gj-button no-border icon="Gildata-search1"></gj-button> 
+  <gj-button no-border icon="Gildata-search1" disabled></gj-button>-->
+</gj-row>
 
-<jy-row class="flex-row shaixuan-content">
+<gj-row class="flex-row shaixuan-content">
   <div class="shaixuan-item">
-    <jy-button no-border icon="Gildata-screen1" class="shaixuan-btn "></jy-button>
+    <gj-button no-border icon="Gildata-screen1" class="shaixuan-btn "></gj-button>
     <div><span class="shaixuan-desc">Normal</span></div>
   </div>
   <div class="shaixuan-item">
-    <jy-button no-border icon="Gildata-screen1" class="shaixuan-btn hover"></jy-button>
+    <gj-button no-border icon="Gildata-screen1" class="shaixuan-btn hover"></gj-button>
     <div><span class="shaixuan-desc">Hover</span></div>
   </div>
   <div class="shaixuan-item">
-    <jy-button no-border icon="Gildata-screen1" class="shaixuan-btn pressed"></jy-button>
+    <gj-button no-border icon="Gildata-screen1" class="shaixuan-btn pressed"></gj-button>
     <div><span class="shaixuan-desc">Pressed</span></div>
   </div>
   <div class="shaixuan-item">
-    <jy-button no-border icon="Gildata-screenSelected1" class="shaixuan-btn selected"></jy-button>
+    <gj-button no-border icon="Gildata-screenSelected1" class="shaixuan-btn selected"></gj-button>
     <div><span class="shaixuan-desc">Selected</span></div>
   </div>
   <div class="shaixuan-item">
-    <jy-button no-border icon="Gildata-screen1" disabled></jy-button>
+    <gj-button no-border icon="Gildata-screen1" disabled></gj-button>
     <div><span class="shaixuan-desc">Disabled</span></div>
   </div>
-</jy-row>
+</gj-row>
 
-<jy-row>
-  <jy-button
+<gj-row>
+  <gj-button
     class="special-press"
     no-border
     icon="Gildata-menuopen"
     v-if="menuopen"
     @click="changeMenuOpen"
-  ></jy-button>
-  <jy-button
+  ></gj-button>
+  <gj-button
     class="special-press"
     no-border
     icon="Gildata-menufold"
     v-if="!menuopen"
     @click="changeMenuOpen"
-  ></jy-button>
-</jy-row>
+  ></gj-button>
+</gj-row>
 
-<jy-row>
-  <jy-button no-border icon="Gildata-download2" class="special-press"></jy-button>
-</jy-row>
+<gj-row>
+  <gj-button no-border icon="Gildata-download2" class="special-press"></gj-button>
+</gj-row>
 
 <script>
   export default {
@@ -327,32 +327,32 @@
 
 以按钮组的方式出现，常用于多项类似操作。
 
-:::demo 使用`<jy-button-group>`标签来嵌套你的按钮。
+:::demo 使用`<gj-button-group>`标签来嵌套你的按钮。
 
 ```html
-<jy-button-group>
-  <jy-button type="primary">按钮左</jy-button>
-  <jy-button type="primary">按钮中</jy-button>
-  <jy-button type="primary">按钮右</jy-button>
-</jy-button-group>
+<gj-button-group>
+  <gj-button type="primary">按钮左</gj-button>
+  <gj-button type="primary">按钮中</gj-button>
+  <gj-button type="primary">按钮右</gj-button>
+</gj-button-group>
 
-<jy-button-group>
-  <jy-button type="primary" secondary>按钮左</jy-button>
-  <jy-button type="primary" secondary>按钮中</jy-button>
-  <jy-button type="primary" secondary>按钮右</jy-button>
-</jy-button-group>
+<gj-button-group>
+  <gj-button type="primary" secondary>按钮左</gj-button>
+  <gj-button type="primary" secondary>按钮中</gj-button>
+  <gj-button type="primary" secondary>按钮右</gj-button>
+</gj-button-group>
 
-<jy-button-group class="demo-iconBtn-group">
-  <jy-button type="primary" icon="Gildata-edit"></jy-button>
-  <jy-button type="primary" icon="Gildata-share"></jy-button>
-  <jy-button type="primary" icon="Gildata-delete"></jy-button>
-</jy-button-group>
+<gj-button-group class="demo-iconBtn-group">
+  <gj-button type="primary" icon="Gildata-edit"></gj-button>
+  <gj-button type="primary" icon="Gildata-share"></gj-button>
+  <gj-button type="primary" icon="Gildata-delete"></gj-button>
+</gj-button-group>
 
-<jy-button-group class="demo-iconBtn-group">
-  <jy-button icon="Gildata-edit"></jy-button>
-  <jy-button icon="Gildata-share"></jy-button>
-  <jy-button icon="Gildata-delete"></jy-button>
-</jy-button-group>
+<gj-button-group class="demo-iconBtn-group">
+  <gj-button icon="Gildata-edit"></gj-button>
+  <gj-button icon="Gildata-share"></gj-button>
+  <gj-button icon="Gildata-delete"></gj-button>
+</gj-button-group>
 ```
 
 :::
@@ -364,9 +364,9 @@
 :::demo 要设置为 loading 状态，只要设置`loading`属性为`true`即可。
 
 ```html
-<jy-button type="primary" loading>加载中</jy-button>
-<jy-button type="primary" secondary loading>加载中</jy-button>
-<jy-button type="danger" loading>加载中</jy-button>
+<gj-button type="primary" loading>加载中</gj-button>
+<gj-button type="primary" secondary loading>加载中</gj-button>
+<gj-button type="danger" loading>加载中</gj-button>
 ```
 
 :::
@@ -378,12 +378,12 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 :::demo 额外的尺寸：`medium`、`small`、`mini`，通过设置`size`属性来配置它们。
 
 ```html
-<jy-row>
-  <jy-button size="large">大按钮</jy-button>
-  <jy-button size="medium">中等按钮</jy-button>
-  <jy-button>默认按钮</jy-button>
-  <jy-button size="mini">超小按钮</jy-button>
-</jy-row>
+<gj-row>
+  <gj-button size="large">大按钮</gj-button>
+  <gj-button size="medium">中等按钮</gj-button>
+  <gj-button>默认按钮</gj-button>
+  <gj-button size="mini">超小按钮</gj-button>
+</gj-row>
 ```
 
 :::
@@ -393,14 +393,14 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 :::demo 彩色 icon 的交互。
 
 ```html
-<jy-row>
-  <jy-icon name="Gildata-color-pdf" style="cursor:pointer;margin-right:20px"></jy-icon>
-  <jy-icon name="Gildata-color-word" style="cursor:pointer;margin-right:20px"></jy-icon>
-  <jy-icon name="Gildata-color-excel" style="cursor:pointer;margin-right:20px"></jy-icon>
-  <jy-icon name="Gildata-color-code" style="cursor:pointer;margin-right:20px"></jy-icon>
+<gj-row>
+  <gj-icon name="Gildata-color-pdf" style="cursor:pointer;margin-right:20px"></gj-icon>
+  <gj-icon name="Gildata-color-word" style="cursor:pointer;margin-right:20px"></gj-icon>
+  <gj-icon name="Gildata-color-excel" style="cursor:pointer;margin-right:20px"></gj-icon>
+  <gj-icon name="Gildata-color-code" style="cursor:pointer;margin-right:20px"></gj-icon>
 
-  <jy-icon disbaled name="Gildata-color-code" style="cursor:not-allowed; opacity:0.3"></jy-icon>
-</jy-row>
+  <gj-icon disbaled name="Gildata-color-code" style="cursor:not-allowed; opacity:0.3"></gj-icon>
+</gj-row>
 ```
 
 :::

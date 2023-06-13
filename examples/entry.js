@@ -19,7 +19,7 @@ import './assets/styles/common.scss';
 import './assets/styles/fonts/style.css';
 import icon from './icon.json';
 import Bus from './bus';
-// import jymonitor from 'jy-monitor';
+// import jymonitor from 'gj-monitor';
 // Vue.prototype.$handReport = jymonitor.handReport;
 // Vue.use(jymonitor, {
 //   monitorUrl: 'http://10.106.0.138:8083/webLogs/logstorage/common/handleLogEvent/Communal_MONITOR_LOGSC', // 上报地址

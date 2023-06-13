@@ -8,7 +8,7 @@
   border-spacing: 0 4px;
 
   @include when(week-mode) {
-    .jy-date-table__row {
+    .gj-date-table__row {
       &:hover {
         td:not(.week):not(.in-range) div {
           // background-color: #3D2F19 $--color-neutral-hover;
@@ -38,7 +38,7 @@
       }
     }
     &-showweeknumber {
-      .jy-date-table__row:hover {
+      .gj-date-table__row:hover {
         .week + td {
           div {
             border-top-left-radius: $--datepicker-cell-border-radius;

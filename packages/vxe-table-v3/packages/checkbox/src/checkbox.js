@@ -43,7 +43,7 @@ export default {
       attrs.title = title
     }
     return h('label', {
-      class: ['.jy-table-checkbox', {
+      class: ['.gj-table-checkbox', {
         [`size--${vSize}`]: vSize,
         'is--indeterminate': indeterminate,
         'is--disabled': isDisabled
@@ -51,7 +51,7 @@ export default {
       attrs
     }, [
       h('input', {
-        class: '.jy-table-checkbox--input',
+        class: '.gj-table-checkbox--input',
         attrs: {
           type: 'checkbox',
           disabled: isDisabled
@@ -64,10 +64,10 @@ export default {
         }
       }),
       h('span', {
-        class: '.jy-table-checkbox--icon'
+        class: '.gj-table-checkbox--icon'
       }),
       h('span', {
-        class: '.jy-table-checkbox--label'
+        class: '.gj-table-checkbox--label'
       }, $scopedSlots.default ? $scopedSlots.default.call(this, {}) : [getFuncText(content)])
     ])
   },

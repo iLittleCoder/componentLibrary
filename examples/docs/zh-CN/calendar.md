@@ -7,10 +7,10 @@
 :::demo 设置 `value` 来指定当前显示的月份。如果 `value` 未指定，则显示当月。`value` 支持 `v-model` 双向绑定,通过设置`year-show-date`来显示详细日历。
 
 ```html
-<jy-calendar class="calendar-demo" v-model="value" :year-show-date="true">
-</jy-calendar>
-<jy-calendar class="calendar-demo" v-model="value2" :year-show-date="false">
-</jy-calendar>
+<gj-calendar class="calendar-demo" v-model="value" :year-show-date="true">
+</gj-calendar>
+<gj-calendar class="calendar-demo" v-model="value2" :year-show-date="false">
+</gj-calendar>
 
 <script>
   export default {
@@ -31,16 +31,16 @@
 :::demo 通过设置名为 `dateCell` 的 `scoped-slot` 来自定义日历单元格中显示的内容。在 `scoped-slot` 可以获取到 date（当前单元格的日期）, data（包括 type，isSelected，day 属性）。详情解释参考下方的 API 文档。
 
 ```html
-<jy-calendar class="calendar-demo">
+<gj-calendar class="calendar-demo">
   <!-- 这里使用的是 2.5 slot 语法，对于新项目请使用 2.6 slot 语法-->
   <template slot="dateCell" slot-scope="{date, data}">
     <p :class="data.isSelected ? 'is-selected' : 'is-not-selected'">
       {{ data.day.split('-').slice(1).join('-') }}
     </p>
   </template>
-</jy-calendar>
+</gj-calendar>
 
-<jy-calendar class="calendar-demo">
+<gj-calendar class="calendar-demo">
   <!-- 这里使用的是 2.5 slot 语法，对于新项目请使用 2.6 slot 语法-->
   <template slot="dateCell" slot-scope="{date, data}">
     <div>{{data.day.split('-')[2]}}</div>
@@ -76,7 +76,7 @@
               {{cell.text.split('-')[1]}}
             </span>
           </div>
-          <jy-scrollbar>
+          <gj-scrollbar>
             <div
               class="calendar-class-text"
               v-for="(ele,key) in item.data"
@@ -87,17 +87,17 @@
                   class="calendar-class-bot"
                   :class="'calendar-class-bot-'+ ele.type"
                 ></span>
-                <jy-tooltip :content="ele.content" placement="top">
+                <gj-tooltip :content="ele.content" placement="top">
                   <span>{{ele.content}}</span>
-                </jy-tooltip>
+                </gj-tooltip>
               </span>
             </div>
-          </jy-scrollbar>
+          </gj-scrollbar>
         </div>
       </template>
     </div>
   </template>
-</jy-calendar>
+</gj-calendar>
 
 <script>
   export default {
@@ -176,8 +176,8 @@
 :::demo 设置 `range` 属性指定日历的显示范围。开始时间必须是周起始日，结束时间必须是周结束日，且时间跨度不能超过两个月。
 
 ```html
-<jy-calendar :range="['2019-03-04', '2019-03-24']" :first-day-of-week="1">
-</jy-calendar>
+<gj-calendar :range="['2019-03-04', '2019-03-24']" :first-day-of-week="1">
+</gj-calendar>
 ```
 
 :::

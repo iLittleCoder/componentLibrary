@@ -2,14 +2,14 @@
 @import './helpers/mixin.scss';
 
 /*pager*/
-.jy-table-pager {
+.gj-table-pager {
   position: relative;
   display: flex;
   align-items: center;
-  color: $jy-font-color;
-  font-family: $jy-font-family;
+  color: $gj-font-color;
+  font-family: $gj-font-family;
   text-align: right;
-  background-color: $jy-pager-background-color;
+  background-color: $gj-pager-background-color;
   &.is--hidden {
     display: none;
   }
@@ -27,259 +27,259 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: $jy-loading-z-index;
+      z-index: $gj-loading-z-index;
       user-select: none;
-      background-color: $jy-loading-background-color;
+      background-color: $gj-loading-background-color;
     }
   }
-  .jy-table-pager--prev-btn,
-  .jy-table-pager--next-btn,
-  .jy-table-pager--num-btn,
-  .jy-table-pager--jump-prev,
-  .jy-table-pager--jump-next {
+  .gj-table-pager--prev-btn,
+  .gj-table-pager--next-btn,
+  .gj-table-pager--num-btn,
+  .gj-table-pager--jump-prev,
+  .gj-table-pager--jump-next {
     color: inherit;
     outline: 0;
     border: 1px solid transparent;
     &:not(.is--disabled) {
       &:focus {
-        box-shadow: 0 0 0.25em 0 $jy-primary-color;
+        box-shadow: 0 0 0.25em 0 $gj-primary-color;
       }
       &:hover {
-        color: $jy-primary-color;
+        color: $gj-primary-color;
       }
       &:active {
-        background-color: $jy-button-default-background-color;
+        background-color: $gj-button-default-background-color;
       }
     }
   }
   &.is--border,
   &.is--perfect {
     &:not(.is--background) {
-      .jy-table-pager--prev-btn,
-      .jy-table-pager--next-btn,
-      .jy-table-pager--num-btn,
-      .jy-table-pager--jump-prev,
-      .jy-table-pager--jump-next {
-        border-color: $jy-input-border-color;
+      .gj-table-pager--prev-btn,
+      .gj-table-pager--next-btn,
+      .gj-table-pager--num-btn,
+      .gj-table-pager--jump-prev,
+      .gj-table-pager--jump-next {
+        border-color: $gj-input-border-color;
       }
     }
   }
   &.is--background,
   &.is--perfect {
-    .jy-table-pager--prev-btn,
-    .jy-table-pager--next-btn,
-    .jy-table-pager--jump-prev,
-    .jy-table-pager--num-btn,
-    .jy-table-pager--jump-next {
-      background-color: $jy-pager-perfect-button-background-color;
+    .gj-table-pager--prev-btn,
+    .gj-table-pager--next-btn,
+    .gj-table-pager--jump-prev,
+    .gj-table-pager--num-btn,
+    .gj-table-pager--jump-next {
+      background-color: $gj-pager-perfect-button-background-color;
     }
-    .jy-table-pager--jump-prev,
-    .jy-table-pager--num-btn,
-    .jy-table-pager--jump-next {
+    .gj-table-pager--jump-prev,
+    .gj-table-pager--num-btn,
+    .gj-table-pager--jump-next {
       &:not(.is--disabled) {
         &.is--active {
           color: #fff;
-          background-color: $jy-primary-color;
+          background-color: $gj-primary-color;
           &:hover {
-            background-color: $jy-primary-color;
+            background-color: $gj-primary-color;
           }
           &:focus {
-            border-color: $jy-primary-color;
+            border-color: $gj-primary-color;
           }
           &:active {
-            border-color: $jy-primary-color;
-            background-color: $jy-primary-color;
+            border-color: $gj-primary-color;
+            background-color: $gj-primary-color;
           }
         }
       }
     }
   }
   &.is--perfect {
-    border: 1px solid $jy-table-border-color;
+    border: 1px solid $gj-table-border-color;
     border-top-width: 0;
-    background-color: $jy-pager-perfect-background-color;
+    background-color: $gj-pager-perfect-background-color;
   }
   &.is--border {
-    .jy-table-pager--num-btn {
+    .gj-table-pager--num-btn {
       &.is--active {
-        border-color: $jy-primary-color;
+        border-color: $gj-primary-color;
       }
     }
   }
-  .jy-table-pager--wrapper {
+  .gj-table-pager--wrapper {
     flex-grow: 1;
   }
-  .jy-table-pager--jump-icon,
-  .jy-table-pager--btn-icon {
+  .gj-table-pager--jump-icon,
+  .gj-table-pager--btn-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .jy-table-pager--left-wrapper,
-  .jy-table-pager--right-wrapper,
-  .jy-table-pager--total,
-  .jy-table-pager--prev-btn,
-  .jy-table-pager--next-btn,
-  .jy-table-pager--jump,
-  .jy-table-pager--jump-prev,
-  .jy-table-pager--jump-next,
-  .jy-table-pager--count,
-  .jy-table-pager--sizes {
+  .gj-table-pager--left-wrapper,
+  .gj-table-pager--right-wrapper,
+  .gj-table-pager--total,
+  .gj-table-pager--prev-btn,
+  .gj-table-pager--next-btn,
+  .gj-table-pager--jump,
+  .gj-table-pager--jump-prev,
+  .gj-table-pager--jump-next,
+  .gj-table-pager--count,
+  .gj-table-pager--sizes {
     margin: 0 0.4em;
     vertical-align: middle;
     display: inline-block;
   }
-  .jy-table-pager--prev-btn,
-  .jy-table-pager--jump-prev,
-  .jy-table-pager--num-btn,
-  .jy-table-pager--jump-next,
-  .jy-table-pager--next-btn {
+  .gj-table-pager--prev-btn,
+  .gj-table-pager--jump-prev,
+  .gj-table-pager--num-btn,
+  .gj-table-pager--jump-next,
+  .gj-table-pager--next-btn {
     position: relative;
     cursor: pointer;
   }
-  .jy-table-pager--left-wrapper,
-  .jy-table-pager--right-wrapper,
-  .jy-table-pager--count,
-  .jy-table-pager--prev-btn,
-  .jy-table-pager--next-btn,
-  .jy-table-pager--jump-prev,
-  .jy-table-pager--num-btn,
-  .jy-table-pager--jump-next {
+  .gj-table-pager--left-wrapper,
+  .gj-table-pager--right-wrapper,
+  .gj-table-pager--count,
+  .gj-table-pager--prev-btn,
+  .gj-table-pager--next-btn,
+  .gj-table-pager--jump-prev,
+  .gj-table-pager--num-btn,
+  .gj-table-pager--jump-next {
     height: 2.15em;
     line-height: 2em;
     display: inline-block;
   }
-  .jy-table-pager--jump .jy-table-pager--goto,
-  .jy-table-pager--sizes > .jy-table-input {
+  .gj-table-pager--jump .gj-table-pager--goto,
+  .gj-table-pager--sizes > .gj-table-input {
     height: 2.15em;
   }
-  .jy-table-pager--sizes > .jy-table-select--panel .jy-table-select-option {
+  .gj-table-pager--sizes > .gj-table-select--panel .gj-table-select-option {
     text-align: center;
   }
-  .jy-table-pager--jump-prev,
-  .jy-table-pager--prev-btn,
-  .jy-table-pager--next-btn,
-  .jy-table-pager--jump-next,
-  .jy-table-pager--num-btn,
-  .jy-table-pager--count {
+  .gj-table-pager--jump-prev,
+  .gj-table-pager--prev-btn,
+  .gj-table-pager--next-btn,
+  .gj-table-pager--jump-next,
+  .gj-table-pager--num-btn,
+  .gj-table-pager--count {
     min-width: 2.15em;
   }
-  .jy-table-pager--btn-wrapper {
+  .gj-table-pager--btn-wrapper {
     padding: 0;
     margin: 0;
     display: inline-block;
     text-align: center;
-    .jy-table-pager--jump-prev,
-    .jy-table-pager--jump-next {
+    .gj-table-pager--jump-prev,
+    .gj-table-pager--jump-next {
       &:hover {
-        .jy-table-pager--jump-more-icon {
+        .gj-table-pager--jump-more-icon {
           display: none;
         }
-        .jy-table-pager--jump-icon {
+        .gj-table-pager--jump-icon {
           display: inline-block;
         }
       }
     }
-    .jy-table-pager--jump-icon {
+    .gj-table-pager--jump-icon {
       display: none;
     }
   }
-  .jy-table-pager--jump-prev,
-  .jy-table-pager--prev-btn,
-  .jy-table-pager--next-btn,
-  .jy-table-pager--jump-next,
-  .jy-table-pager--num-btn {
+  .gj-table-pager--jump-prev,
+  .gj-table-pager--prev-btn,
+  .gj-table-pager--next-btn,
+  .gj-table-pager--jump-next,
+  .gj-table-pager--num-btn {
     text-align: center;
-    border-radius: $jy-border-radius;
+    border-radius: $gj-border-radius;
     margin: 0 0.25em;
     user-select: none;
-    background-color: $jy-pager-background-color;
+    background-color: $gj-pager-background-color;
     &:not(.is--disabled) {
       &:hover {
-        color: $jy-primary-color;
+        color: $gj-primary-color;
       }
       &.is--active,
       &:focus {
-        color: $jy-primary-color;
+        color: $gj-primary-color;
       }
       &:active {
-        color: $jy-primary-color;
+        color: $gj-primary-color;
       }
     }
     &.is--disabled {
       cursor: no-drop;
-      color: $jy-disabled-color;
+      color: $gj-disabled-color;
       &:hover {
-        color: $jy-disabled-color;
+        color: $gj-disabled-color;
       }
     }
   }
-  .jy-table-pager--num-btn {
+  .gj-table-pager--num-btn {
     vertical-align: middle;
     &.is--active {
       font-weight: 500;
     }
   }
-  .jy-table-pager--sizes {
+  .gj-table-pager--sizes {
     width: 7em;
     text-align: center;
     cursor: pointer;
-    & .jy-table-input--inner {
+    & .gj-table-input--inner {
       text-align: center;
     }
   }
-  .jy-table-pager--count {
+  .gj-table-pager--count {
     text-align: center;
     & > span {
       vertical-align: middle;
     }
-    .jy-table-pager--separator {
+    .gj-table-pager--separator {
       margin-right: 0.2em;
       &:before {
         content: '/';
       }
     }
   }
-  .jy-table-pager--jump .jy-table-pager--goto {
-    border-radius: $jy-border-radius;
-    border: 1px solid $jy-input-border-color;
-    color: $jy-font-color;
+  .gj-table-pager--jump .gj-table-pager--goto {
+    border-radius: $gj-border-radius;
+    border: 1px solid $gj-input-border-color;
+    color: $gj-font-color;
     transition: border 0.2s ease-in-out;
     padding: 0 0.4em;
-    background-color: $jy-input-background-color;
+    background-color: $gj-input-background-color;
     &:focus {
-      border: 1px solid $jy-primary-color;
+      border: 1px solid $gj-primary-color;
       outline: 0;
     }
   }
-  .jy-table-pager--jump {
-    .jy-table-pager--goto-text {
+  .gj-table-pager--jump {
+    .gj-table-pager--goto-text {
       margin-right: 0.25em;
     }
-    .jy-table-pager--classifier-text {
+    .gj-table-pager--classifier-text {
       margin-left: 0.25em;
     }
-    .jy-table-pager--goto {
+    .gj-table-pager--goto {
       width: 3.2em;
       text-align: center;
     }
   }
 }
 
-.jy-table-pager {
-  font-size: $jy-font-size;
-  height: $jy-table-row-height-default;
+.gj-table-pager {
+  font-size: $gj-font-size;
+  height: $gj-table-row-height-default;
   &.size--medium {
-    font-size: $jy-font-size-medium;
-    height: $jy-table-row-height-medium;
+    font-size: $gj-font-size-medium;
+    height: $gj-table-row-height-medium;
   }
   &.size--small {
-    font-size: $jy-font-size-small;
-    height: $jy-table-row-height-small;
+    font-size: $gj-font-size-small;
+    height: $gj-table-row-height-small;
   }
   &.size--mini {
-    font-size: $jy-font-size-mini;
-    height: $jy-table-row-height-mini;
+    font-size: $gj-font-size-mini;
+    height: $gj-table-row-height-mini;
   }
 }

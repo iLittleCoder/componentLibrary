@@ -4,13 +4,13 @@
       树表格与展开行同时使用，非常简单就能实现很复杂的树形展开行
     </p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :tree-config="{transform: true}"
       :data="tableData">
-      <jy-column field="name" title="Name" tree-node></jy-column>
-      <jy-column type="expand" title="Details" width="80">
+      <gj-column field="name" title="Name" tree-node></gj-column>
+      <gj-column type="expand" title="Details" width="80">
         <template #content="{ row }">
           <ul class="expand-wrapper">
             <li>
@@ -27,11 +27,11 @@
             </li>
           </ul>
         </template>
-      </jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -69,13 +69,13 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           :tree-config="{transform: true}"
           :data="tableData">
-          <jy-column field="name" title="Name" tree-node></jy-column>
-          <jy-column type="expand" width="60">
+          <gj-column field="name" title="Name" tree-node></gj-column>
+          <gj-column type="expand" width="60">
             <template #content="{ row, rowIndex }">
               <ul class="expand-wrapper">
                 <li>
@@ -92,11 +92,11 @@ export default {
                 </li>
               </ul>
             </template>
-          </jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {

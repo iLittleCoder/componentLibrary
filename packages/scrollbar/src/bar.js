@@ -26,11 +26,11 @@ export default {
 
     return (
       <div
-        class={ ['jy-scrollbar__bar', 'is-' + bar.key, {'is-size': size}] }
+        class={ ['gj-scrollbar__bar', 'is-' + bar.key, {'is-size': size}] }
         onMousedown={ this.clickTrackHandler } >
         <div
           ref="thumb"
-          class="jy-scrollbar__thumb"
+          class="gj-scrollbar__thumb"
           onMousedown={ this.clickThumbHandler }
           style={ renderThumbStyle({ size, move, bar }) }>
         </div>

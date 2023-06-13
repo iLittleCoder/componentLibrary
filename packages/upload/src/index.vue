@@ -1,18 +1,18 @@
 <script>
 import UploadList from './upload-list';
 import Upload from './upload';
-import JyProgress from 'GildataDesign/packages/progress';
+import GjProgress from 'GildataDesign/packages/progress';
 import Migrating from 'GildataDesign/src/mixins/migrating';
 
 function noop() {}
 
 export default {
-  name: 'JyUpload',
+  name: 'GjUpload',
 
   mixins: [Migrating],
 
   components: {
-    JyProgress,
+    GjProgress,
     UploadList,
     Upload
   },
@@ -24,7 +24,7 @@ export default {
   },
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     }
   },
@@ -117,7 +117,7 @@ export default {
 
   computed: {
     uploadDisabled() {
-      return this.disabled || (this.jyForm || {}).disabled;
+      return this.disabled || (this.GjForm || {}).disabled;
     }
   },
 

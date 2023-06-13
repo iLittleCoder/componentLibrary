@@ -7,7 +7,7 @@
   background-color: $--tree-node-hover-background-color;
   border-radius: 4px;
 
-  // .jy-tree-node__content{
+  // .gj-tree-node__content{
   //   margin-bottom: 0;
   // }
 }
@@ -52,19 +52,19 @@
   outline: none;
   &:focus {
     /* focus */
-    > .jy-tree-node__content:not(.is-disabled) {
+    > .gj-tree-node__content:not(.is-disabled) {
       background-color: $--tree-node-hover-background-color;
     }
   }
 
   &.is-showCheckbox {
-    .jy-tree-node__label {
+    .gj-tree-node__label {
       padding-left: 8px;
     }
   }
 
   @include when(drop-inner) {
-    > .jy-tree-node__content .jy-tree-node__label {
+    > .gj-tree-node__content .gj-tree-node__label {
       background-color: $--color-primary;
       color: #fff;
     }
@@ -81,13 +81,13 @@
     padding-left: 4px;
 
     @include when(rightIcon) {
-      > .jy-tree-node__label {
+      > .gj-tree-node__label {
         flex: 1;
       }
     }
 
     @include when(disabled) {
-      .jy-tree-node__label {
+      .gj-tree-node__label {
         color: $--color-text-disabled !important;
       }
 
@@ -105,7 +105,7 @@
       background-color: $--color-neutral-pressed;
     }
 
-    .jy-tree.is-dragging & {
+    .gj-tree.is-dragging & {
       cursor: move;
 
       & * {
@@ -113,14 +113,14 @@
       }
     }
 
-    .jy-tree.is-dragging.is-drop-not-allow & {
+    .gj-tree.is-dragging.is-drop-not-allow & {
       cursor: not-allowed;
     }
 
-    .jy-checkbox {
+    .gj-checkbox {
       margin-left: 8px;
       height: 22px;
-      .jy-checkbox__input {
+      .gj-checkbox__input {
         padding: 4px 0;
       }
     }
@@ -155,12 +155,12 @@
     color: $--color-primary;
   }
 
-  .jy-tree-custom-leftIcon {
+  .gj-tree-custom-leftIcon {
     margin-left: 8px;
     color: $--color-text-placeholder;
   }
 
-  .jy-tree-custom-rightIcon {
+  .gj-tree-custom-rightIcon {
     color: $--color-text-regular;
     &:hover,
     &:focus {
@@ -171,24 +171,24 @@
     }
   }
 
-  & > .jy-tree-node__children {
+  & > .gj-tree-node__children {
     overflow: hidden;
     background-color: transparent;
   }
 
-  &.is-expanded > .jy-tree-node__children {
+  &.is-expanded > .gj-tree-node__children {
     display: block;
   }
 }
 
-.jy-tree--highlight-current .jy-tree-node.is-current > .jy-tree-node__content {
+.gj-tree--highlight-current .gj-tree-node.is-current > .gj-tree-node__content {
   background: $--background-primary-color;
   color: $--color-primary;
-  //.jy-tree-node__expand-icon {
+  //.gj-tree-node__expand-icon {
   //  color: $--color-primary;
   //}
-  .jy-tree-custom-leftIcon,
-  .jy-tree-custom-rightIcon {
+  .gj-tree-custom-leftIcon,
+  .gj-tree-custom-rightIcon {
     color: $--color-primary;
   }
 }

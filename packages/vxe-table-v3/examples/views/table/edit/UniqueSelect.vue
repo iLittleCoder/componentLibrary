@@ -8,7 +8,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -17,11 +17,11 @@
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}"
       @edit-actived="editActivedEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="role" title="Role" :edit-render="{name: '$select', options: roleList, props: {clearable: true}, events: {change: roleChangeEvent}}"></jy-column>
-      <jy-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="role" title="Role" :edit-render="{name: '$select', options: roleList, props: {clearable: true}, events: {change: roleChangeEvent}}"></gj-column>
+      <gj-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -76,7 +76,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -85,11 +85,11 @@ export default {
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'row'}"
           @edit-actived="editActivedEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="role" title="Role" :edit-render="{name: '$select', options: roleList, props: {clearable: true}, events: {change: roleChangeEvent}}"></jy-column>
-          <jy-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="role" title="Role" :edit-render="{name: '$select', options: roleList, props: {clearable: true}, events: {change: roleChangeEvent}}"></gj-column>
+          <gj-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

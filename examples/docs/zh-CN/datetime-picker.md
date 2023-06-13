@@ -14,17 +14,17 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，`Picker Options` 或者其
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-date-picker
+    <gj-date-picker
       :style="{ width: !!value1 ? '150px' : '110px' }"
       v-model="value1"
       type="datetime"
       placeholder="选择日期时间"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">带快捷选项</span>
-    <jy-date-picker
+    <gj-date-picker
       :style="{ width: !!value2 ? '150px' : '110px' }"
       v-model="value2"
       type="datetime"
@@ -32,18 +32,18 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，`Picker Options` 或者其
       align="right"
       :picker-options="pickerOptions"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">设置默认时间</span>
-    <jy-date-picker
+    <gj-date-picker
       :style="{ width: !!value3 ? '150px' : '110px' }"
       v-model="value3"
       type="datetime"
       placeholder="选择日期时间"
       default-time="12:00:00"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
 </template>
 
@@ -96,7 +96,7 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，`Picker Options` 或者其
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-date-picker
+    <gj-date-picker
       :style="{ width: !!value1 ? '330px' : '210px' }"
       v-model="value1"
       type="datetimerange"
@@ -104,11 +104,11 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，`Picker Options` 或者其
       start-placeholder="开始日期"
       end-placeholder="结束日期"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">带快捷选项</span>
-    <jy-date-picker
+    <gj-date-picker
       :style="{ width: !!value2 ? '330px' : '210px' }"
       v-model="value2"
       type="datetimerange"
@@ -118,7 +118,7 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，`Picker Options` 或者其
       end-placeholder="结束日期"
       align="right"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
 </template>
 
@@ -175,7 +175,7 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，`Picker Options` 或者其
 <template>
   <div class="block">
     <span class="demonstration">起始日期时刻为 12:00:00</span>
-    <jy-date-picker
+    <gj-date-picker
       :style="{ width: !!value1 ? '330px' : '210px' }"
       v-model="value1"
       type="datetimerange"
@@ -183,11 +183,11 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，`Picker Options` 或者其
       end-placeholder="结束日期"
       :default-time="['12:00:00']"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">起始日期时刻为 12:00:00，结束日期时刻为 08:00:00</span>
-    <jy-date-picker
+    <gj-date-picker
       :style="{ width: !!value2 ? '330px' : '210px' }"
       v-model="value2"
       type="datetimerange"
@@ -196,7 +196,7 @@ DateTimePicker 由 DatePicker 和 TimePicker 派生，`Picker Options` 或者其
       end-placeholder="结束日期"
       :default-time="['12:00:00', '08:00:00']"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
 </template>
 

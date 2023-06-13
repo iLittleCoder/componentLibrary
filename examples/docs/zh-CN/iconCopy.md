@@ -9,20 +9,20 @@
 :::demo
 ```html
 
-<p>jy-icon组件可以用来显示彩色和灰色标签</p>
-<jy-row>
-  <jy-icon name="Gildata-color-pdf"></jy-icon>
-  <jy-icon name="Gildata-color-word"></jy-icon>
-  <jy-icon name="el-icon-star-off"></jy-icon>
-  <jy-icon name="Gildata-place"></jy-icon>
-</jy-row>
+<p>gj-icon组件可以用来显示彩色和灰色标签</p>
+<gj-row>
+  <gj-icon name="Gildata-color-pdf"></gj-icon>
+  <gj-icon name="Gildata-color-word"></gj-icon>
+  <gj-icon name="el-icon-star-off"></gj-icon>
+  <gj-icon name="Gildata-place"></gj-icon>
+</gj-row>
 <p>i 标签只能用来显示灰色标签</p>
-<jy-row>
+<gj-row>
   <i class="Gildata-tick"></i>
   <i class="Gildata-star1"></i>
   <i class="el-icon-edit"></i>
   <i class="el-icon-share"></i>
-</jy-row>
+</gj-row>
 ```
 :::
 

@@ -7,36 +7,36 @@
 :::demo
 
 ```html
-<jy-row>
-  <jy-col :sm="12" :lg="6">
-    <jy-result icon="success" title="成功提示" subTitle="请根据提示进行操作">
+<gj-row>
+  <gj-col :sm="12" :lg="6">
+    <gj-result icon="success" title="成功提示" subTitle="请根据提示进行操作">
       <template slot="extra">
-        <jy-button type="primary">返回</jy-button>
+        <gj-button type="primary">返回</gj-button>
       </template>
-    </jy-result>
-  </jy-col>
-  <jy-col :sm="12" :lg="6">
-    <jy-result icon="warning" title="警告提示" subTitle="请根据提示进行操作">
+    </gj-result>
+  </gj-col>
+  <gj-col :sm="12" :lg="6">
+    <gj-result icon="warning" title="警告提示" subTitle="请根据提示进行操作">
       <template slot="extra">
-        <jy-button type="primary">返回</jy-button>
+        <gj-button type="primary">返回</gj-button>
       </template>
-    </jy-result>
-  </jy-col>
-  <jy-col :sm="12" :lg="6">
-    <jy-result icon="error" title="错误提示" subTitle="请根据提示进行操作">
+    </gj-result>
+  </gj-col>
+  <gj-col :sm="12" :lg="6">
+    <gj-result icon="error" title="错误提示" subTitle="请根据提示进行操作">
       <template slot="extra">
-        <jy-button type="primary">返回</jy-button>
+        <gj-button type="primary">返回</gj-button>
       </template>
-    </jy-result>
-  </jy-col>
-  <jy-col :sm="12" :lg="6">
-    <jy-result icon="info" title="信息提示" subTitle="请根据提示进行操作">
+    </gj-result>
+  </gj-col>
+  <gj-col :sm="12" :lg="6">
+    <gj-result icon="info" title="信息提示" subTitle="请根据提示进行操作">
       <template slot="extra">
-        <jy-button type="primary">返回</jy-button>
+        <gj-button type="primary">返回</gj-button>
       </template>
-    </jy-result>
-  </jy-col>
-</jy-row>
+    </gj-result>
+  </gj-col>
+</gj-row>
 ```
 
 :::
@@ -46,14 +46,14 @@
 :::demo
 
 ```html
-<jy-result title="404" subTitle="抱歉，请求错误">
+<gj-result title="404" subTitle="抱歉，请求错误">
   <template slot="icon">
-    <jy-image style="width: 160px;" :src="src"></jy-image>
+    <gj-image style="width: 160px;" :src="src"></gj-image>
   </template>
   <template slot="extra">
-    <jy-button type="primary" size="medium">返回</jy-button>
+    <gj-button type="primary" size="medium">返回</gj-button>
   </template>
-</jy-result>
+</gj-result>
 
 <script>
   export default {

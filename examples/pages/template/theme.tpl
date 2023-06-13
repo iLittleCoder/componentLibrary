@@ -66,17 +66,17 @@
         </li>
       </ul>
     </section>
-    <jy-dialog :visible.sync="copyDialogVisible">
-      <jy-form :model="copyForm" ref="copyForm" :rules="copyFormRule">
-        <jy-form-item label="<%= 3 >" prop="name">
-          <jy-input v-model="copyForm.name"></jy-input>
-        </jy-form-item>
-      </jy-form>
+    <gj-dialog :visible.sync="copyDialogVisible">
+      <gj-form :model="copyForm" ref="copyForm" :rules="copyFormRule">
+        <gj-form-item label="<%= 3 >" prop="name">
+          <gj-input v-model="copyForm.name"></gj-input>
+        </gj-form-item>
+      </gj-form>
       <div slot="footer" class="dialog-footer">
-        <jy-button @click="closeCopyForm">{{getActionDisplayName('cancel')}}</jy-button>
-        <jy-button type="primary" @click="copyToUser">{{getActionDisplayName('confirm')}}</jy-button>
+        <gj-button @click="closeCopyForm">{{getActionDisplayName('cancel')}}</gj-button>
+        <gj-button type="primary" @click="copyToUser">{{getActionDisplayName('confirm')}}</gj-button>
       </div>
-    </jy-dialog>
+    </gj-dialog>
   </div>
 </template>
 <script>

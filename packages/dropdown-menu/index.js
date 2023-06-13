@@ -1,8 +1,8 @@
-import JyDropdownMenu from '../dropdown/src/dropdown-menu';
+import GjDropdownMenu from '../dropdown/src/dropdown-menu';
 
 /* istanbul ignore next */
-JyDropdownMenu.install = function(Vue) {
-  Vue.component(JyDropdownMenu.name, JyDropdownMenu);
+GjDropdownMenu.install = function(Vue) {
+  Vue.component(GjDropdownMenu.name, GjDropdownMenu);
 };
 
-export default JyDropdownMenu;
+export default GjDropdownMenu;

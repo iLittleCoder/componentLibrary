@@ -1,17 +1,17 @@
 <template>
   <div
-    class="jy-slider"
-    :class="{ 'is-vertical': vertical, 'jy-slider--with-input': showInput }"
+    class="gj-slider"
+    :class="{ 'is-vertical': vertical, 'gj-slider--with-input': showInput }"
     role="slider"
     :aria-valuemin="min"
     :aria-valuemax="max"
     :aria-orientation="vertical ? 'vertical' : 'horizontal'"
     :aria-disabled="sliderDisabled"
   >
-    <jy-input-number
+    <gj-input-number
       v-model="firstValue"
       v-if="showInput && !range"
-      class="jy-slider__input"
+      class="gj-slider__input"
       ref="input"
       @change="emitChange"
       :step="step"
@@ -22,15 +22,15 @@
       :debounce="debounce"
       :size="inputSize"
     >
-    </jy-input-number>
+    </gj-input-number>
     <div
-      class="jy-slider__runway"
+      class="gj-slider__runway"
       :class="{ 'show-input': showInput, disabled: sliderDisabled }"
       :style="runwayStyle"
       @click="onSliderClick"
       ref="slider"
     >
-      <div class="jy-slider__bar" :style="barStyle"></div>
+      <div class="gj-slider__bar" :style="barStyle"></div>
       <slider-button
         :vertical="vertical"
         v-model="firstValue"
@@ -47,29 +47,29 @@
       >
       </slider-button>
       <template v-if="showStops">
-        <div class="jy-slider__start">{{ startValue }}</div>
-        <div class="jy-slider__end">{{ max }}</div>
+        <div class="gj-slider__start">{{ startValue }}</div>
+        <div class="gj-slider__end">{{ max }}</div>
 
         <div
-          class="jy-slider__stop"
+          class="gj-slider__stop"
           v-for="(item, key) in stops"
           :key="key"
           :style="getStopStyle(item)"
-          :class="[isSelected(item) ? 'jy-slider__stop-selected' : '']"
+          :class="[isSelected(item) ? 'gj-slider__stop-selected' : '']"
         ></div>
       </template>
 
       <template v-if="markList.length > 0">
         <div>
-          <!-- jy-slider__stop -->
+          <!-- gj-slider__stop -->
           <div
             v-for="(item, key) in markList"
             :style="getStopStyle(item.position)"
-            class="jy-slider__marks-stop"
+            class="gj-slider__marks-stop"
             :key="key"
           ></div>
         </div>
-        <div class="jy-slider__marks">
+        <div class="gj-slider__marks">
           <slider-marker
             :mark="item.mark"
             v-for="(item, key) in markList"
@@ -84,18 +84,18 @@
 </template>
 
 <script type="text/babel">
-import JyInputNumber from 'GildataDesign/packages/input-number';
+import GjInputNumber from 'GildataDesign/packages/input-number';
 import SliderButton from './button.vue';
 import SliderMarker from './marker';
 import Emitter from 'GildataDesign/src/mixins/emitter';
 
 export default {
-  name: 'JySlider',
+  name: 'GjSlider',
 
   mixins: [Emitter],
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     }
   },
@@ -165,7 +165,7 @@ export default {
   },
 
   components: {
-    JyInputNumber,
+    GjInputNumber,
     SliderButton,
     SliderMarker
   },
@@ -255,7 +255,7 @@ export default {
           this.firstValue = val[0];
           this.secondValue = val[1];
           if (this.valueChanged()) {
-            this.dispatch('JyFormItem', 'el.form.change', [
+            this.dispatch('GjFormItem', 'el.form.change', [
               this.minValue,
               this.maxValue
             ]);
@@ -270,7 +270,7 @@ export default {
         } else {
           this.firstValue = val;
           if (this.valueChanged()) {
-            this.dispatch('JyFormItem', 'el.form.change', val);
+            this.dispatch('GjFormItem', 'el.form.change', val);
             this.oldValue = val;
           }
         }
@@ -448,7 +448,7 @@ export default {
     },
 
     sliderDisabled() {
-      return this.disabled || (this.jyForm || {}).disabled;
+      return this.disabled || (this.GjForm || {}).disabled;
     }
   },
 

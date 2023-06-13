@@ -2,7 +2,7 @@
   <div>
     <p class="tip">高亮单元格编辑，通过 <table-api-link prop="highlight-cell"/> 属性设置<span class="red">（注：仅支持部分组件）</span></p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       highlight-cell
@@ -12,13 +12,13 @@
       :mouse-config="{selected: true}"
       :keyboard-config="{isArrow: true, isDel: true, isTab: true, isEdit: true}"
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="nickname" title="Nickname" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-      <jy-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'integer'}}"></jy-column>
-      <jy-column field="address" title="Address" :edit-render="{name: 'textarea'}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="nickname" title="Nickname" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+      <gj-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'integer'}}"></gj-column>
+      <gj-column field="address" title="Address" :edit-render="{name: 'textarea'}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -49,7 +49,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           highlight-cell
@@ -59,13 +59,13 @@ export default {
           :mouse-config="{selected: true}"
           :keyboard-config="{isArrow: true, isDel: true, isTab: true, isEdit: true}"
           :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="nickname" title="Nickname" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-          <jy-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'integer'}}"></jy-column>
-          <jy-column field="address" title="Address" :edit-render="{name: 'textarea'}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="nickname" title="Nickname" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+          <gj-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'integer'}}"></gj-column>
+          <gj-column field="address" title="Address" :edit-render="{name: 'textarea'}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

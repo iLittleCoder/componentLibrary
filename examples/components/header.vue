@@ -31,7 +31,7 @@
           </li>
           <div class="nav-item-box">
             <li class="nav-item">
-              <jy-button secondary type="primary" @click="changeTheme">换肤</jy-button>
+              <gj-button secondary type="primary" @click="changeTheme">换肤</gj-button>
             </li>
             <li class="nav-item">
               <router-link active-class="active" :to="`/${lang}/guide`">{{ langConfig.guide }} </router-link>
@@ -47,20 +47,20 @@
             </li>
             <!--             版本选择器 -->
             <li class="nav-item">
-              <jy-dropdown trigger="click" class="nav-dropdown" :class="{ 'is-active': verDropdownVisible }">
+              <gj-dropdown trigger="click" class="nav-dropdown" :class="{ 'is-active': verDropdownVisible }">
                 <div class="nav-version">
                   <span>{{ version }}</span> <i class="Gildata-downarrow el-icon--right" />
                 </div>
-                <jy-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleVerDropdownToggle">
-                  <jy-dropdown-item
+                <gj-dropdown-menu slot="dropdown" class="nav-dropdown-list" @input="handleVerDropdownToggle">
+                  <gj-dropdown-item
                     v-for="item in Object.keys(versions)"
                     :key="item"
                     @click.native="switchVersion(item)"
                   >
                     {{ item }}
-                  </jy-dropdown-item>
-                </jy-dropdown-menu>
-              </jy-dropdown>
+                  </gj-dropdown-item>
+                </gj-dropdown-menu>
+              </gj-dropdown>
             </li>
           </div>
 
@@ -87,7 +87,7 @@
 
           <!-- 语言选择器 -->
           <!--          <li class="nav-item lang-item">-->
-          <!--            <jy-dropdown-->
+          <!--            <gj-dropdown-->
           <!--              trigger="click"-->
           <!--              class="nav-dropdown nav-lang"-->
           <!--              :class="{ 'is-active': langDropdownVisible }">-->
@@ -95,18 +95,18 @@
           <!--                {{ displayedLang }}-->
           <!--                <i class="el-icon-arrow-down el-icon&#45;&#45;right"></i>-->
           <!--              </span>-->
-          <!--              <jy-dropdown-menu-->
+          <!--              <gj-dropdown-menu-->
           <!--                slot="dropdown"-->
           <!--                class="nav-dropdown-list"-->
           <!--                @input="handleLangDropdownToggle">-->
-          <!--                <jy-dropdown-item-->
+          <!--                <gj-dropdown-item-->
           <!--                  v-for="(value, key) in langs"-->
           <!--                  :key="key"-->
           <!--                  @click.native="switchLang(key)">-->
           <!--                  {{ value }}-->
-          <!--                </jy-dropdown-item>-->
-          <!--              </jy-dropdown-menu>-->
-          <!--            </jy-dropdown>-->
+          <!--                </gj-dropdown-item>-->
+          <!--              </gj-dropdown-menu>-->
+          <!--            </gj-dropdown>-->
           <!--          </li>-->
         </ul>
       </div>

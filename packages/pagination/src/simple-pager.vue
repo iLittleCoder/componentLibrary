@@ -1,6 +1,6 @@
 <template>
-  <span class="jy-simple-pager" ref="simplePager">
-    <jy-select
+  <span class="gj-simple-pager" ref="simplePager">
+    <gj-select
       v-if="pageList.length > 1"
       :popper-append-to-body="false"
       popper-class="simple-pager-select"
@@ -9,7 +9,7 @@
       v-model="pageValue"
       placeholder="请选择"
     >
-      <jy-option
+      <gj-option
         v-for="item in pageList"
         :key="item.value"
         :label="item.label"
@@ -22,14 +22,14 @@
           ></i
           >{{ item.option }}</span
         >
-      </jy-option>
-    </jy-select>
-    <span class="jy-simple-one-pager" v-else>1/1</span>
+      </gj-option>
+    </gj-select>
+    <span class="gj-simple-one-pager" v-else>1/1</span>
   </span>
 </template>
 <script type="text/babel">
 export default {
-  name: 'JySimplePager',
+  name: 'GjSimplePager',
   data() {
     return {
       pageList: [],

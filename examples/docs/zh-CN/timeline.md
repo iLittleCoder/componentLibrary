@@ -13,62 +13,62 @@ Timeline 可拆分成多个按照时间戳正序或倒序排列的 activity，�
   <span class="timeline-title">
     类型：
   </span>
-  <jy-radio-group size="mini" v-model="timelineType" :show-background="false">
-    <jy-radio-button label="left">左 </jy-radio-button>
-    <jy-radio-button label="right">右</jy-radio-button>
-    <jy-radio-button label="top">上</jy-radio-button>
-    <jy-radio-button label="bottom">下 </jy-radio-button>
-  </jy-radio-group>
+  <gj-radio-group size="mini" v-model="timelineType" :show-background="false">
+    <gj-radio-button label="left">左 </gj-radio-button>
+    <gj-radio-button label="right">右</gj-radio-button>
+    <gj-radio-button label="top">上</gj-radio-button>
+    <gj-radio-button label="bottom">下 </gj-radio-button>
+  </gj-radio-group>
 </div>
 
 <div class="block" style="min-height: 210px">
-  <jy-timeline :direction="timelineType">
-    <jy-timeline-item v-for="(activity, index) in activities1" :key="index" :timestamp="activity.timestamp">
+  <gj-timeline :direction="timelineType">
+    <gj-timeline-item v-for="(activity, index) in activities1" :key="index" :timestamp="activity.timestamp">
       {{activity.content}}
-    </jy-timeline-item>
-  </jy-timeline>
+    </gj-timeline-item>
+  </gj-timeline>
 </div>
 
 <div style="margin-bottom:20px; ">
   <span class="timeline-title">
     交替：
   </span>
-  <jy-radio-group size="mini" v-model="turnsDirection" :show-background="false">
-    <jy-radio-button label="left">左右 </jy-radio-button>
-    <jy-radio-button label="top">上下</jy-radio-button>
-  </jy-radio-group>
+  <gj-radio-group size="mini" v-model="turnsDirection" :show-background="false">
+    <gj-radio-button label="left">左右 </gj-radio-button>
+    <gj-radio-button label="top">上下</gj-radio-button>
+  </gj-radio-group>
 </div>
 
 <div class="block" style="min-height: 210px">
-  <jy-timeline :direction="turnsDirection" :turns="true">
-    <jy-timeline-item v-for="(activity, index) in activities1" :key="index" :timestamp="activity.timestamp">
+  <gj-timeline :direction="turnsDirection" :turns="true">
+    <gj-timeline-item v-for="(activity, index) in activities1" :key="index" :timestamp="activity.timestamp">
       {{activity.content}}
-    </jy-timeline-item>
-  </jy-timeline>
+    </gj-timeline-item>
+  </gj-timeline>
 </div>
 
 <div style="margin-bottom:20px">
   <span class="timeline-title">
     时间：
   </span>
-  <jy-radio-group size="mini" v-model="timeDirection" :show-background="false">
-    <jy-radio-button label="left">时间左 </jy-radio-button>
-    <jy-radio-button label="right">时间右</jy-radio-button>
-    <jy-radio-button label="turn">时间交替</jy-radio-button>
-  </jy-radio-group>
+  <gj-radio-group size="mini" v-model="timeDirection" :show-background="false">
+    <gj-radio-button label="left">时间左 </gj-radio-button>
+    <gj-radio-button label="right">时间右</gj-radio-button>
+    <gj-radio-button label="turn">时间交替</gj-radio-button>
+  </gj-radio-group>
 </div>
 
 <div class="block">
-  <jy-timeline :turns="true">
-    <jy-timeline-item
+  <gj-timeline :turns="true">
+    <gj-timeline-item
       v-for="(activity, index) in activities1"
       :key="index"
       :timestamp="activity.timestamp"
       :placement="timeDirection"
     >
       {{activity.content}}
-    </jy-timeline-item>
-  </jy-timeline>
+    </gj-timeline-item>
+  </gj-timeline>
 </div>
 
 <script>
@@ -127,14 +127,14 @@ Timeline 可拆分成多个按照时间戳正序或倒序排列的 activity，�
     <span class="timeline-title">
       线的虚实:
     </span>
-    <jy-radio-group size="mini" v-model="lineType" :show-background="false">
-      <jy-radio-button :label="false">实线 </jy-radio-button>
-      <jy-radio-button :label="true">虚线</jy-radio-button>
-    </jy-radio-group>
+    <gj-radio-group size="mini" v-model="lineType" :show-background="false">
+      <gj-radio-button :label="false">实线 </gj-radio-button>
+      <gj-radio-button :label="true">虚线</gj-radio-button>
+    </gj-radio-group>
   </div>
 
-  <jy-timeline :dashed="lineType">
-    <jy-timeline-item
+  <gj-timeline :dashed="lineType">
+    <gj-timeline-item
       v-for="(activity, index) in activities"
       :key="index"
       :icon="activity.icon"
@@ -146,10 +146,10 @@ Timeline 可拆分成多个按照时间戳正序或倒序排列的 activity，�
     >
       {{activity.content}}
       <span v-if="activity.isHaveRightIcon">
-        <jy-icon name="Gildata-color-warning2"></jy-icon>
+        <gj-icon name="Gildata-color-warning2"></gj-icon>
       </span>
-    </jy-timeline-item>
-  </jy-timeline>
+    </gj-timeline-item>
+  </gj-timeline>
 </div>
 
 <script>
@@ -213,26 +213,26 @@ Timeline 可拆分成多个按照时间戳正序或倒序排列的 activity，�
 
 ```html
 <div class="block">
-  <jy-timeline>
-    <jy-timeline-item timestamp="2018/4/12" placement="top">
-      <jy-card>
+  <gj-timeline>
+    <gj-timeline-item timestamp="2018/4/12" placement="top">
+      <gj-card>
         <h4>更新 Github 模板</h4>
         <p>王小虎 提交于 2018/4/12 20:46</p>
-      </jy-card>
-    </jy-timeline-item>
-    <jy-timeline-item timestamp="2018/4/3" placement="top">
-      <jy-card>
+      </gj-card>
+    </gj-timeline-item>
+    <gj-timeline-item timestamp="2018/4/3" placement="top">
+      <gj-card>
         <h4>更新 Github 模板</h4>
         <p>王小虎 提交于 2018/4/3 20:46</p>
-      </jy-card>
-    </jy-timeline-item>
-    <jy-timeline-item timestamp="2018/4/2" placement="top">
-      <jy-card>
+      </gj-card>
+    </gj-timeline-item>
+    <gj-timeline-item timestamp="2018/4/2" placement="top">
+      <gj-card>
         <h4>更新 Github 模板</h4>
         <p>王小虎 提交于 2018/4/2 20:46</p>
-      </jy-card>
-    </jy-timeline-item>
-  </jy-timeline>
+      </gj-card>
+    </gj-timeline-item>
+  </gj-timeline>
 </div>
 ```
 

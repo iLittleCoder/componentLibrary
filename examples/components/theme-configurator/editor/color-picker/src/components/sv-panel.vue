@@ -1,14 +1,14 @@
 <template>
   <div
-    class="jy-color-svpanel"
+    class="gj-color-svpanel"
     :style="{
       backgroundColor: background
     }"
   >
-    <div class="jy-color-svpanel__white"></div>
-    <div class="jy-color-svpanel__black"></div>
+    <div class="gj-color-svpanel__white"></div>
+    <div class="gj-color-svpanel__black"></div>
     <div
-      class="jy-color-svpanel__cursor"
+      class="gj-color-svpanel__cursor"
       :style="{
         top: cursorTop + 'px',
         left: cursorLeft + 'px'

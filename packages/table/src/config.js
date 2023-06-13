@@ -9,7 +9,7 @@ export const cellStarts = {
     minWidth: 48,
     realWidth: 48,
     order: '',
-    className: 'jy-table-column--selection'
+    className: 'gj-table-column--selection'
   },
   expand: {
     width: 48,
@@ -29,14 +29,14 @@ export const cellStarts = {
 export const cellForced = {
   selection: {
     renderHeader: function(h, { store }) {
-      return <jy-checkbox
+      return <gj-checkbox
         disabled={ store.states.data && store.states.data.length === 0 }
         indeterminate={ store.states.selection.length > 0 && !this.isAllSelected }
         on-input={ this.toggleAllSelection }
         value={ this.isAllSelected } />;
     },
     renderCell: function(h, { row, column, isSelected, store, $index }) {
-      return <jy-checkbox
+      return <gj-checkbox
         nativeOn-click={ (event) => event.stopPropagation() }
         value={ isSelected }
         disabled={ column.selectable ? !column.selectable.call(null, row, $index) : false }
@@ -69,9 +69,9 @@ export const cellForced = {
       return column.label || '';
     },
     renderCell: function(h, { row, store, isExpanded }) {
-      const classes = ['jy-table__expand-icon'];
+      const classes = ['gj-table__expand-icon'];
       if (isExpanded) {
-        classes.push('jy-table__expand-icon--expanded');
+        classes.push('gj-table__expand-icon--expanded');
       }
       const callback = function(e) {
         e.stopPropagation();
@@ -84,7 +84,7 @@ export const cellForced = {
     },
     sortable: false,
     resizable: false,
-    className: 'jy-table__expand-column'
+    className: 'gj-table__expand-column'
   }
 };
 
@@ -105,10 +105,10 @@ export function treeCellPrefix(h, { row, treeNode, store }) {
     store.loadOrToggle(row);
   };
   if (treeNode.indent) {
-    ele.push(<span class="jy-table__indent" style={{'padding-left': treeNode.indent + 'px'}}></span>);
+    ele.push(<span class="gj-table__indent" style={{'padding-left': treeNode.indent + 'px'}}></span>);
   }
   if (typeof treeNode.expanded === 'boolean' && !treeNode.noLazyChildren) {
-    const expandClasses = ['jy-table__expand-icon', treeNode.expanded ? 'jy-table__expand-icon--expanded' : ''];
+    const expandClasses = ['gj-table__expand-icon', treeNode.expanded ? 'gj-table__expand-icon--expanded' : ''];
     let iconClasses = ['el-icon-arrow-right'];
     if (treeNode.loading) {
       iconClasses = ['Gildata-loading'];
@@ -118,7 +118,7 @@ export function treeCellPrefix(h, { row, treeNode, store }) {
       <i class={ iconClasses }></i>
     </div>);
   } else {
-    ele.push(<span class="jy-table__placeholder"></span>);
+    ele.push(<span class="gj-table__placeholder"></span>);
   }
   return ele;
 }

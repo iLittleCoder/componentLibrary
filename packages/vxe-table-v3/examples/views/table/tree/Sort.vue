@@ -4,19 +4,19 @@
       实现树结构深层排序<br>
     </p>
 
-    <jy-table
+    <gj-table
       max-height="600"
       :loading="loading"
       :data="tableData"
       :sort-config="{remote: true}"
       :tree-config="{children: 'children'}"
       @sort-change="sortChangeEvent">
-      <jy-column field="id" title="ID" width="80"></jy-column>
-      <jy-column field="name" title="名称" tree-node></jy-column>
-      <jy-column field="size" title="大小" width="140"></jy-column>
-      <jy-column field="type" title="类型" width="140"></jy-column>
-      <jy-column field="date" title="修改日期" width="260" sortable></jy-column>
-    </jy-table>
+      <gj-column field="id" title="ID" width="80"></gj-column>
+      <gj-column field="name" title="名称" tree-node></gj-column>
+      <gj-column field="size" title="大小" width="140"></gj-column>
+      <gj-column field="type" title="类型" width="140"></gj-column>
+      <gj-column field="date" title="修改日期" width="260" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -50,19 +50,19 @@ export default {
       tableData: [],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           max-height="600"
           :loading="loading"
           :data="tableData"
           :sort-config="{remote: true}"
           :tree-config="{children: 'children'}"
           @sort-change="sortChangeEvent">
-          <jy-column field="id" title="ID" width="80"></jy-column>
-          <jy-column field="name" title="名称" tree-node></jy-column>
-          <jy-column field="size" title="大小" width="140"></jy-column>
-          <jy-column field="type" title="类型" width="140"></jy-column>
-          <jy-column field="date" title="修改日期" width="260" sortable></jy-column>
-        </jy-table>
+          <gj-column field="id" title="ID" width="80"></gj-column>
+          <gj-column field="name" title="名称" tree-node></gj-column>
+          <gj-column field="size" title="大小" width="140"></gj-column>
+          <gj-column field="type" title="类型" width="140"></gj-column>
+          <gj-column field="date" title="修改日期" width="260" sortable></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

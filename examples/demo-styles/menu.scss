@@ -1,18 +1,18 @@
 .demo-block.demo-menu {
   background-color: #F7F7F7;
 
-  .jy-menu-vertical-demo {
+  .gj-menu-vertical-demo {
     width: 160px;
   }
-  .jy-menu-vertical-demo-last:not(.jy-menu--collapse) {
+  .gj-menu-vertical-demo-last:not(.gj-menu--collapse) {
     width: 200px;
     min-height: 400px;
   }
 
-  .jy-menu-demo {
+  .gj-menu-demo {
     padding-left: 55px;
   }
-  .jy-menu-vertical-demo:not(.jy-menu--collapse) {
+  .gj-menu-vertical-demo:not(.gj-menu--collapse) {
     width: 160px;
     min-height: 400px;
   }
@@ -29,7 +29,7 @@
   .tac {
     text-align: center;
 
-    .jy-menu-vertical-demo {
+    .gj-menu-vertical-demo {
       display: inline-block;
       text-align: left;
     }

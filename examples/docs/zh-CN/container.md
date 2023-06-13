@@ -1,75 +1,75 @@
 ## Container 布局容器
 用于布局的容器组件，方便快速搭建页面的基本结构：
 
-`<jy-container>`：外层容器。当子元素中包含 `<jy-header>` 或 `<jy-footer>` 时，全部子元素会垂直上下排列，否则会水平左右排列。
+`<gj-container>`：外层容器。当子元素中包含 `<gj-header>` 或 `<gj-footer>` 时，全部子元素会垂直上下排列，否则会水平左右排列。
 
-`<jy-header>`：顶栏容器。
+`<gj-header>`：顶栏容器。
 
-`<jy-aside>`：侧边栏容器。
+`<gj-aside>`：侧边栏容器。
 
-`<jy-main>`：主要区域容器。
+`<gj-main>`：主要区域容器。
 
-`<jy-footer>`：底栏容器。
+`<gj-footer>`：底栏容器。
 
 :::tip
-以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，`<jy-container>` 的子元素只能是后四者，后四者的父元素也只能是 `<jy-container>`。
+以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，`<gj-container>` 的子元素只能是后四者，后四者的父元素也只能是 `<gj-container>`。
 :::
 
 ### 常见页面布局
 
 :::demo
 ```html
-<jy-container>
-  <jy-header>Header</jy-header>
-  <jy-main>Content</jy-main>
-</jy-container>
+<gj-container>
+  <gj-header>Header</gj-header>
+  <gj-main>Content</gj-main>
+</gj-container>
 
-<jy-container>
-  <jy-header>Header</jy-header>
-  <jy-main>Content</jy-main>
-  <jy-footer>Footer</jy-footer>
-</jy-container>
+<gj-container>
+  <gj-header>Header</gj-header>
+  <gj-main>Content</gj-main>
+  <gj-footer>Footer</gj-footer>
+</gj-container>
 
-<jy-container>
-  <jy-aside width="200px">Aside</jy-aside>
-  <jy-main>Content</jy-main>
-</jy-container>
+<gj-container>
+  <gj-aside width="200px">Aside</gj-aside>
+  <gj-main>Content</gj-main>
+</gj-container>
 
-<jy-container>
-  <jy-header>Header</jy-header>
-  <jy-container>
-    <jy-aside width="200px">Aside</jy-aside>
-    <jy-main>Content</jy-main>
-  </jy-container>
-</jy-container>
+<gj-container>
+  <gj-header>Header</gj-header>
+  <gj-container>
+    <gj-aside width="200px">Aside</gj-aside>
+    <gj-main>Content</gj-main>
+  </gj-container>
+</gj-container>
 
-<jy-container>
-  <jy-header>Header</jy-header>
-  <jy-container>
-    <jy-aside width="200px" style="line-height: 260px;">Aside</jy-aside>
-    <jy-container>
-      <jy-main>Content</jy-main>
-      <jy-footer>Footer</jy-footer>
-    </jy-container>
-  </jy-container>
-</jy-container>
+<gj-container>
+  <gj-header>Header</gj-header>
+  <gj-container>
+    <gj-aside width="200px" style="line-height: 260px;">Aside</gj-aside>
+    <gj-container>
+      <gj-main>Content</gj-main>
+      <gj-footer>Footer</gj-footer>
+    </gj-container>
+  </gj-container>
+</gj-container>
 
-<jy-container>
-  <jy-aside width="200px" style="line-height: 260px;">Aside</jy-aside>
-  <jy-container>
-    <jy-header>Header</jy-header>
-    <jy-main>Content</jy-main>
-  </jy-container>
-</jy-container>
+<gj-container>
+  <gj-aside width="200px" style="line-height: 260px;">Aside</gj-aside>
+  <gj-container>
+    <gj-header>Header</gj-header>
+    <gj-main>Content</gj-main>
+  </gj-container>
+</gj-container>
 
-<jy-container>
-  <jy-aside width="200px" style="line-height: 320px;">Aside</jy-aside>
-  <jy-container>
-    <jy-header>Header</jy-header>
-    <jy-main>Content</jy-main>
-    <jy-footer>Footer</jy-footer>
-  </jy-container>
-</jy-container>
+<gj-container>
+  <gj-aside width="200px" style="line-height: 320px;">Aside</gj-aside>
+  <gj-container>
+    <gj-header>Header</gj-header>
+    <gj-main>Content</gj-main>
+    <gj-footer>Footer</gj-footer>
+  </gj-container>
+</gj-container>
 ```
 :::
 
@@ -78,82 +78,82 @@
 
 :::demo
 ```html
-<jy-container style="height: 500px; border: 1px solid #eee">
-  <jy-aside width="200px" style="background-color: rgb(238, 241, 246)">
-    <jy-menu :default-openeds="['1', '3']">
-      <jy-submenu index="1">
+<gj-container style="height: 500px; border: 1px solid #eee">
+  <gj-aside width="200px" style="background-color: rgb(238, 241, 246)">
+    <gj-menu :default-openeds="['1', '3']">
+      <gj-submenu index="1">
         <template slot="title"><i class="el-icon-message"></i>导航一</template>
-        <jy-menu-item-group>
+        <gj-menu-item-group>
           <template slot="title">分组一</template>
-          <jy-menu-item index="1-1">选项1</jy-menu-item>
-          <jy-menu-item index="1-2">选项2</jy-menu-item>
-        </jy-menu-item-group>
-        <jy-menu-item-group title="分组2">
-          <jy-menu-item index="1-3">选项3</jy-menu-item>
-        </jy-menu-item-group>
-        <jy-submenu index="1-4">
+          <gj-menu-item index="1-1">选项1</gj-menu-item>
+          <gj-menu-item index="1-2">选项2</gj-menu-item>
+        </gj-menu-item-group>
+        <gj-menu-item-group title="分组2">
+          <gj-menu-item index="1-3">选项3</gj-menu-item>
+        </gj-menu-item-group>
+        <gj-submenu index="1-4">
           <template slot="title">选项4</template>
-          <jy-menu-item index="1-4-1">选项4-1</jy-menu-item>
-        </jy-submenu>
-      </jy-submenu>
-      <jy-submenu index="2">
+          <gj-menu-item index="1-4-1">选项4-1</gj-menu-item>
+        </gj-submenu>
+      </gj-submenu>
+      <gj-submenu index="2">
         <template slot="title"><i class="el-icon-menu"></i>导航二</template>
-        <jy-menu-item-group>
+        <gj-menu-item-group>
           <template slot="title">分组一</template>
-          <jy-menu-item index="2-1">选项1</jy-menu-item>
-          <jy-menu-item index="2-2">选项2</jy-menu-item>
-        </jy-menu-item-group>
-        <jy-menu-item-group title="分组2">
-          <jy-menu-item index="2-3">选项3</jy-menu-item>
-        </jy-menu-item-group>
-        <jy-submenu index="2-4">
+          <gj-menu-item index="2-1">选项1</gj-menu-item>
+          <gj-menu-item index="2-2">选项2</gj-menu-item>
+        </gj-menu-item-group>
+        <gj-menu-item-group title="分组2">
+          <gj-menu-item index="2-3">选项3</gj-menu-item>
+        </gj-menu-item-group>
+        <gj-submenu index="2-4">
           <template slot="title">选项4</template>
-          <jy-menu-item index="2-4-1">选项4-1</jy-menu-item>
-        </jy-submenu>
-      </jy-submenu>
-      <jy-submenu index="3">
+          <gj-menu-item index="2-4-1">选项4-1</gj-menu-item>
+        </gj-submenu>
+      </gj-submenu>
+      <gj-submenu index="3">
         <template slot="title"><i class="el-icon-setting"></i>导航三</template>
-        <jy-menu-item-group>
+        <gj-menu-item-group>
           <template slot="title">分组一</template>
-          <jy-menu-item index="3-1">选项1</jy-menu-item>
-          <jy-menu-item index="3-2">选项2</jy-menu-item>
-        </jy-menu-item-group>
-        <jy-menu-item-group title="分组2">
-          <jy-menu-item index="3-3">选项3</jy-menu-item>
-        </jy-menu-item-group>
-        <jy-submenu index="3-4">
+          <gj-menu-item index="3-1">选项1</gj-menu-item>
+          <gj-menu-item index="3-2">选项2</gj-menu-item>
+        </gj-menu-item-group>
+        <gj-menu-item-group title="分组2">
+          <gj-menu-item index="3-3">选项3</gj-menu-item>
+        </gj-menu-item-group>
+        <gj-submenu index="3-4">
           <template slot="title">选项4</template>
-          <jy-menu-item index="3-4-1">选项4-1</jy-menu-item>
-        </jy-submenu>
-      </jy-submenu>
-    </jy-menu>
-  </jy-aside>
+          <gj-menu-item index="3-4-1">选项4-1</gj-menu-item>
+        </gj-submenu>
+      </gj-submenu>
+    </gj-menu>
+  </gj-aside>
   
-  <jy-container>
-    <jy-header style="text-align: right; font-size: 12px">
-      <jy-dropdown>
+  <gj-container>
+    <gj-header style="text-align: right; font-size: 12px">
+      <gj-dropdown>
         <i class="el-icon-setting" style="margin-right: 15px"></i>
-        <jy-dropdown-menu slot="dropdown">
-          <jy-dropdown-item>查看</jy-dropdown-item>
-          <jy-dropdown-item>新增</jy-dropdown-item>
-          <jy-dropdown-item>删除</jy-dropdown-item>
-        </jy-dropdown-menu>
-      </jy-dropdown>
+        <gj-dropdown-menu slot="dropdown">
+          <gj-dropdown-item>查看</gj-dropdown-item>
+          <gj-dropdown-item>新增</gj-dropdown-item>
+          <gj-dropdown-item>删除</gj-dropdown-item>
+        </gj-dropdown-menu>
+      </gj-dropdown>
       <span>王小虎</span>
-    </jy-header>
+    </gj-header>
     
-    <jy-main>
-      <jy-table :data="tableData">
-        <jy-column field="date" title="日期" width="140">
-        </jy-column>
-        <jy-column field="name" title="姓名" width="120">
-        </jy-column>
-        <jy-column field="address" title="地址">
-        </jy-column>
-      </jy-table>
-    </jy-main>
-  </jy-container>
-</jy-container>
+    <gj-main>
+      <gj-table :data="tableData">
+        <gj-column field="date" title="日期" width="140">
+        </gj-column>
+        <gj-column field="name" title="姓名" width="120">
+        </gj-column>
+        <gj-column field="address" title="地址">
+        </gj-column>
+      </gj-table>
+    </gj-main>
+  </gj-container>
+</gj-container>
 
 <script>
   export default {
@@ -177,7 +177,7 @@
 ### Container Attributes
 | 参数    | 说明     | 类型    | 可选值      | 默认值 |
 |---------|----------|---------|-------------|--------|
-| direction | 子元素的排列方向 | string | horizontal / vertical | 子元素中有 `jy-header` 或 `jy-footer` 时为 vertical，否则为 horizontal |
+| direction | 子元素的排列方向 | string | horizontal / vertical | 子元素中有 `gj-header` 或 `gj-footer` 时为 vertical，否则为 horizontal |
 
 ### Header Attributes
 | 参数    | 说明     | 类型    | 可选值      | 默认值 |

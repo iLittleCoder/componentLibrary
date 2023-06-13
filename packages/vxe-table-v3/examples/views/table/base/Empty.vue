@@ -2,14 +2,14 @@
   <div>
     <p class="tip">当数据为空时，通过 <table-api-link prop="empty-text"/> 设置空数据提示文本，可以使用 <router-link class="link" :to="{name: 'RendererEmpty'}">渲染器</router-link> 实现全局复用</p>
 
-    <jy-table
+    <gj-table
       empty-text="没有更多数据了！"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -20,22 +20,22 @@
 
     <p class="tip">可以通过 slot=<table-api-link prop="empty"/> 自定义提示语</p>
 
-    <jy-table
+    <gj-table
       border
       :loading="loading"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
       <template #empty>
         <span style="color: red;">
-          <img src="/jy-table/static/other/img2.gif">
+          <img src="/gj-table/static/other/img2.gif">
           <p>没有更多数据了！</p>
         </span>
       </template>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -46,24 +46,24 @@
 
     <p class="tip">出现滚动条</p>
 
-    <jy-table
+    <gj-table
       border
       height="300"
       :loading="loading"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="sex" title="Sex" width="300"></jy-column>
-      <jy-column field="age" title="Age" width="300"></jy-column>
-      <jy-column field="date12" title="Date" width="300"></jy-column>
-      <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="sex" title="Sex" width="300"></gj-column>
+      <gj-column field="age" title="Age" width="300"></gj-column>
+      <gj-column field="date12" title="Date" width="300"></gj-column>
+      <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
       <template #empty>
         <span style="color: red;">
-          <img src="/jy-table/static/other/img1.gif">
+          <img src="/gj-table/static/other/img1.gif">
           <p>不用再看了，没有更多数据了！</p>
         </span>
       </template>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -83,14 +83,14 @@ export default {
       tableData2: [],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           empty-text="没有更多数据了！"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -107,22 +107,22 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           :loading="loading"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
           <template #empty>
             <span style="color: red;">
-              <img src="/jy-table/static/other/img2.gif">
+              <img src="/gj-table/static/other/img2.gif">
               <p>没有更多数据了！</p>
             </span>
           </template>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {
@@ -142,24 +142,24 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           height="300"
           :loading="loading"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" width="300"></jy-column>
-          <jy-column field="sex" title="Sex" width="300"></jy-column>
-          <jy-column field="age" title="Age" width="300"></jy-column>
-          <jy-column field="date12" title="Date" width="300"></jy-column>
-          <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" width="300"></gj-column>
+          <gj-column field="sex" title="Sex" width="300"></gj-column>
+          <gj-column field="age" title="Age" width="300"></gj-column>
+          <gj-column field="date12" title="Date" width="300"></gj-column>
+          <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
           <template #empty>
             <span style="color: red;">
-              <img src="/jy-table/static/other/img1.gif">
+              <img src="/gj-table/static/other/img1.gif">
               <p>不用再看了，没有更多数据了！</p>
             </span>
           </template>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {

@@ -8,10 +8,10 @@
 <div class="demo-image">
   <div class="block" v-for="fit in fits" :key="fit">
     <span class="demonstration">{{ fit }}</span>
-    <jy-image
+    <gj-image
       style="width: 100px; height: 100px"
       :src="url"
-      :fit="fit"></jy-image>
+      :fit="fit"></gj-image>
   </div>
 </div>
 
@@ -35,16 +35,16 @@
 <div class="demo-image__placeholder">
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-image ref="jyImage" @load="load" :src="src"></jy-image>
+    <gj-image ref="jyImage" @load="load" :src="src"></gj-image>
   </div>
   <div class="block">
     <span class="demonstration">自定义</span>
-    <jy-image ref="jyImage1" @load="load" :src="src">
+    <gj-image ref="jyImage1" @load="load" :src="src">
       <div slot="placeholder"  class="image-slot">
         <i class="Gildata-loading"></i>
         <span>加载中</span>
       </div>
-    </jy-image>
+    </gj-image>
   </div>
 </div>
 
@@ -74,16 +74,16 @@
 <div class="demo-image__error">
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-image></jy-image>
+    <gj-image></gj-image>
   </div>
   <div class="block">
     <span class="demonstration">自定义</span>
-    <jy-image>
+    <gj-image>
       <div slot="error" class="image-slot">
         <i class="Gildata-p-loadfailed"></i>
         <span>加载失败</span>
       </div>
-    </jy-image>
+    </gj-image>
   </div>
 </div>
 ```
@@ -93,9 +93,9 @@
 
 :::demo 可通过`lazy`开启懒加载功能，当图片滚动到可视范围内才会加载。可通过`scroll-container`来设置滚动容器，若未定义，则为最近一个`overflow`值为`auto`或`scroll`的父元素。
 ```html
-<jy-scrollbar style="height: 400px">
-  <jy-image v-for="(url, key) in urls" :key="key" :src="url" lazy></jy-image>
-</jy-scrollbar>
+<gj-scrollbar style="height: 400px">
+  <gj-image v-for="(url, key) in urls" :key="key" :src="url" lazy></gj-image>
+</gj-scrollbar>
 
 <script>
   export default {
@@ -118,11 +118,11 @@
 :::demo 可通过 `previewSrcList` 开启预览大图的功能。
 ```html
 <div class="demo-image__preview">
-  <jy-image 
+  <gj-image 
     style="width: 100px; height: 100px"
     :src="url" 
     :preview-src-list="srcList">
-  </jy-image>
+  </gj-image>
 </div>
 
 <script>

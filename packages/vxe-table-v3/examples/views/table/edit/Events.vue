@@ -2,24 +2,24 @@
   <div>
     <p class="tip">通过 <table-column-api-link prop="events"/> 自定义目标组件的事件<br><span class="red">（注：具体请查看目标组件所支持的事件）</span></p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', events: {input: nameChangeEvent}}"></jy-column>
-      <jy-column field="role" title="Role" :edit-render="{name: '$input', events: {input: roleChangeEvent}}"></jy-column>
-      <jy-column
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', events: {input: nameChangeEvent}}"></gj-column>
+      <gj-column field="role" title="Role" :edit-render="{name: '$input', events: {input: roleChangeEvent}}"></gj-column>
+      <gj-column
         field="nickname"
         title="Nickname"
         :filters="[{ data: '' }]"
         :filter-render="{name: 'input', attrs: {placeholder: '按回车确认筛选'}, events: {keyup: enterFilterEvent}}"
-        :edit-render="{name: 'input', events: {focus: roleFocusEvent}}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList, events: {change: sexChangeEvent}}"></jy-column>
-      <jy-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}, events: {change: dateChangeEvent}}"></jy-column>
-    </jy-table>
+        :edit-render="{name: 'input', events: {focus: roleFocusEvent}}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList, events: {change: sexChangeEvent}}"></gj-column>
+      <gj-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}, events: {change: dateChangeEvent}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -48,24 +48,24 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', events: {input: nameChangeEvent}}"></jy-column>
-          <jy-column field="role" title="Role" :edit-render="{name: '$input', events: {input: roleChangeEvent}}"></jy-column>
-          <jy-column
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', events: {input: nameChangeEvent}}"></gj-column>
+          <gj-column field="role" title="Role" :edit-render="{name: '$input', events: {input: roleChangeEvent}}"></gj-column>
+          <gj-column
             field="nickname"
             title="Nickname"
             :filters="[{ data: '' }]"
             :filter-render="{name: 'input', attrs: {placeholder: '按回车确认筛选'}, events: {keyup: enterFilterEvent}}"
-            :edit-render="{name: 'input', events: {focus: roleFocusEvent}}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList, events: {change: sexChangeEvent}}"></jy-column>
-          <jy-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}, events: {change: dateChangeEvent}}"></jy-column>
-        </jy-table>
+            :edit-render="{name: 'input', events: {focus: roleFocusEvent}}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList, events: {change: sexChangeEvent}}"></gj-column>
+          <gj-column field="date12" title="Date" :edit-render="{name: '$input', props: {type: 'date'}, events: {change: dateChangeEvent}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

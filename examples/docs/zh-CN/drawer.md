@@ -9,18 +9,18 @@
 :::demo 需要设置 `visible` 属性，它的**类型**是 `boolean`,当为 **true** 时显示 Drawer。Drawer 分为两个部分：`title` 和 `body`，`title` 需要具名为 **title** 的 `slot`, 也可以通过 `title` 属性来定义，默认值为空。需要注意的是, Drawer 默认是从右往左打开, 当然可以设置对应的 `direction`, 详细请参考 `direction` 用法 最后，本例还展示了 `before-close` 的用法
 
 ```html
-<jy-radio-group v-model="direction">
-  <jy-radio label="ltr">从左往右开</jy-radio>
-  <jy-radio label="rtl">从右往左开</jy-radio>
-  <jy-radio label="ttb">从上往下开</jy-radio>
-  <jy-radio label="btt">从下往上开</jy-radio>
-</jy-radio-group>
+<gj-radio-group v-model="direction">
+  <gj-radio label="ltr">从左往右开</gj-radio>
+  <gj-radio label="rtl">从右往左开</gj-radio>
+  <gj-radio label="ttb">从上往下开</gj-radio>
+  <gj-radio label="btt">从下往上开</gj-radio>
+</gj-radio-group>
 
-<jy-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<gj-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</jy-button>
+</gj-button>
 
-<jy-drawer
+<gj-drawer
   title="我是标题"
   :visible.sync="drawer"
   :direction="direction"
@@ -28,12 +28,12 @@
 >
   <span>我来啦!</span>
   <span slot="footer">
-    <jy-button secondary type="primary" @click="drawer = false"
-      >取 消</jy-button
+    <gj-button secondary type="primary" @click="drawer = false"
+      >取 消</gj-button
     >
-    <jy-button type="primary" @click="drawer = false">确 定</jy-button>
+    <gj-button type="primary" @click="drawer = false">确 定</gj-button>
   </span>
-</jy-drawer>
+</gj-drawer>
 
 <script>
   export default {
@@ -61,19 +61,19 @@
 :::demo 当遇到不需要 title 的场景时, 可以通过 `withHeader` 这个属性来关闭掉 title 的显示, 这样可以留出更大的空间给到用户, 为了用户的可访问性, 请务必设定 `title` 的值
 
 ```html
-<jy-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<gj-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</jy-button>
+</gj-button>
 
-<jy-drawer title="我是标题" :visible.sync="drawer" :with-header="false">
+<gj-drawer title="我是标题" :visible.sync="drawer" :with-header="false">
   <span>我来啦!</span>
   <span slot="footer">
-    <jy-button secondary type="primary" @click="drawer = false"
-      >取 消</jy-button
+    <gj-button secondary type="primary" @click="drawer = false"
+      >取 消</gj-button
     >
-    <jy-button type="primary" @click="drawer = false">确 定</jy-button>
+    <gj-button type="primary" @click="drawer = false">确 定</gj-button>
   </span>
-</jy-drawer>
+</gj-drawer>
 
 <script>
   export default {
@@ -95,28 +95,28 @@
 :::demo
 
 ```html
-<jy-button type="text" @click="table = true">打开嵌套表格的 Drawer</jy-button>
-<jy-button type="text" @click="dialog = true"
-  >打开嵌套 Form 的 Drawer</jy-button
+<gj-button type="text" @click="table = true">打开嵌套表格的 Drawer</gj-button>
+<gj-button type="text" @click="dialog = true"
+  >打开嵌套 Form 的 Drawer</gj-button
 >
-<jy-drawer
+<gj-drawer
   title="我嵌套了表格!"
   :visible.sync="table"
   direction="rtl"
   size="50%"
 >
-  <jy-table :data="gridData">
-    <jy-column field="name" title="name"></jy-column>
-    <jy-column field="date" title="date"></jy-column>
-    <jy-column field="address" title="address"></jy-column>
-  </jy-table>
+  <gj-table :data="gridData">
+    <gj-column field="name" title="name"></gj-column>
+    <gj-column field="date" title="date"></gj-column>
+    <gj-column field="address" title="address"></gj-column>
+  </gj-table>
   <span slot="footer">
-    <jy-button secondary type="primary" @click="table = false">取 消</jy-button>
-    <jy-button type="primary" @click="table = false">确 定</jy-button>
+    <gj-button secondary type="primary" @click="table = false">取 消</gj-button>
+    <gj-button type="primary" @click="table = false">确 定</gj-button>
   </span>
-</jy-drawer>
+</gj-drawer>
 
-<jy-drawer
+<gj-drawer
   title="我嵌套了 Form !"
   :before-close="handleClose"
   :visible.sync="dialog"
@@ -125,38 +125,38 @@
   ref="drawer"
 >
   <div class="demo-drawer__content">
-    <jy-form :model="form" size="medium">
-      <jy-form-item label="活动名称" :label-width="formLabelWidth">
-        <jy-input
+    <gj-form :model="form" size="medium">
+      <gj-form-item label="活动名称" :label-width="formLabelWidth">
+        <gj-input
           style="width: 186px;"
           v-model="form.name"
           placeholder="请输入活动名称"
           autocomplete="off"
-        ></jy-input>
-      </jy-form-item>
-      <jy-form-item label="活动区域" :label-width="formLabelWidth">
-        <jy-select
+        ></gj-input>
+      </gj-form-item>
+      <gj-form-item label="活动区域" :label-width="formLabelWidth">
+        <gj-select
           style="width: 186px;"
           v-model="form.region"
           placeholder="请选择活动区域"
           border
         >
-          <jy-option label="区域一" value="shanghai"></jy-option>
-          <jy-option label="区域二" value="beijing"></jy-option>
-        </jy-select>
-      </jy-form-item>
-    </jy-form>
-    <div class="jy-drawer__footer">
-      <jy-button secondary type="primary" @click="cancelForm">取 消</jy-button>
-      <jy-button
+          <gj-option label="区域一" value="shanghai"></gj-option>
+          <gj-option label="区域二" value="beijing"></gj-option>
+        </gj-select>
+      </gj-form-item>
+    </gj-form>
+    <div class="gj-drawer__footer">
+      <gj-button secondary type="primary" @click="cancelForm">取 消</gj-button>
+      <gj-button
         type="primary"
         @click="$refs.drawer.closeDrawer()"
         :loading="loading"
-        >{{ loading ? '提交中 ...' : '确 定' }}</jy-button
+        >{{ loading ? '提交中 ...' : '确 定' }}</gj-button
       >
     </div>
   </div>
-</jy-drawer>
+</gj-drawer>
 
 <script>
   export default {
@@ -238,14 +238,14 @@
 :::demo 同样, 如果你需要嵌套多层 `Drawer` 请一定要设置 `append-to-body` 属性为 **true**
 
 ```html
-<jy-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<gj-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   点我打开
-</jy-button>
+</gj-button>
 
-<jy-drawer title="我是外面的 Drawer" :visible.sync="drawer" size="50%">
+<gj-drawer title="我是外面的 Drawer" :visible.sync="drawer" size="50%">
   <div>
-    <jy-button @click="innerDrawer = true">打开里面的!</jy-button>
-    <jy-drawer
+    <gj-button @click="innerDrawer = true">打开里面的!</gj-button>
+    <gj-drawer
       title="我是里面的"
       :append-to-body="true"
       :before-close="handleClose"
@@ -253,20 +253,20 @@
     >
       <div>里面内容</div>
       <span slot="footer">
-        <jy-button secondary type="primary" @click="innerDrawer = false"
-          >取 消</jy-button
+        <gj-button secondary type="primary" @click="innerDrawer = false"
+          >取 消</gj-button
         >
-        <jy-button type="primary" @click="innerDrawer = false">确 定</jy-button>
+        <gj-button type="primary" @click="innerDrawer = false">确 定</gj-button>
       </span>
-    </jy-drawer>
+    </gj-drawer>
   </div>
   <span slot="footer">
-    <jy-button secondary type="primary" @click="drawer = false"
-      >取 消</jy-button
+    <gj-button secondary type="primary" @click="drawer = false"
+      >取 消</gj-button
     >
-    <jy-button type="primary" @click="drawer = false">确 定</jy-button>
+    <gj-button type="primary" @click="drawer = false">确 定</gj-button>
   </span>
-</jy-drawer>
+</gj-drawer>
 
 <script>
   export default {

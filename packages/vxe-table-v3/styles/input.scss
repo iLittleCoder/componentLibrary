@@ -3,25 +3,25 @@
 
 $iconWidth: 1.6em;
 
-.jy-table-input--inner {
+.gj-table-input--inner {
   width: 100%;
   height: 100%;
-  border-radius: $jy-border-radius;
+  border-radius: $gj-border-radius;
   outline: 0;
   margin: 0;
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
   padding: 0 0.6em;
-  color: $jy-font-color;
-  border: 1px solid $jy-input-border-color;
-  background-color: $jy-input-background-color;
+  color: $gj-font-color;
+  border: 1px solid $gj-input-border-color;
+  background-color: $gj-input-background-color;
   box-shadow: none;
   &::placeholder {
-    color: $jy-input-placeholder-color;
+    color: $gj-input-placeholder-color;
   }
   &::-webkit-autofill {
-    background-color: $jy-input-background-color;
+    background-color: $gj-input-background-color;
   }
   &[type="number"] {
     appearance: none;
@@ -35,40 +35,40 @@ $iconWidth: 1.6em;
   }
   &[disabled] {
     cursor: not-allowed;
-    color: $jy-disabled-color;
-    background-color: $jy-input-disabled-background-color;
+    color: $gj-disabled-color;
+    background-color: $gj-input-disabled-background-color;
   }
 }
 
-.jy-table-input {
+.gj-table-input {
   display: inline-block;
   position: relative;
   width: 180px;
   &.is--disabled {
-    .jy-table-input--date-picker-suffix,
-    .jy-table-input--search-suffix,
-    .jy-table-input--suffix,
-    .jy-table-input--password-suffix,
-    .jy-table-input--number-suffix {
+    .gj-table-input--date-picker-suffix,
+    .gj-table-input--search-suffix,
+    .gj-table-input--suffix,
+    .gj-table-input--password-suffix,
+    .gj-table-input--number-suffix {
       cursor: no-drop;
     }
   }
   &:not(.is--disabled) {
-    .jy-table-input--search-suffix,
-    .jy-table-input--clear-icon,
-    .jy-table-input--password-suffix,
-    .jy-table-input--number-suffix {
+    .gj-table-input--search-suffix,
+    .gj-table-input--clear-icon,
+    .gj-table-input--password-suffix,
+    .gj-table-input--number-suffix {
       cursor: pointer;
     }
     &.is--active {
-      .jy-table-input--inner {
-        border: 1px solid $jy-primary-color;
+      .gj-table-input--inner {
+        border: 1px solid $gj-primary-color;
       }
     }
   }
-  .jy-table-input--prefix,
-  .jy-table-input--suffix,
-  .jy-table-input--extra-suffix {
+  .gj-table-input--prefix,
+  .gj-table-input--suffix,
+  .gj-table-input--extra-suffix {
     display: flex;
     position: absolute;
     top: 0;
@@ -77,48 +77,48 @@ $iconWidth: 1.6em;
     user-select: none;
     align-items: center;
     justify-content: center;
-    color: $jy-table-column-icon-border-color;
+    color: $gj-table-column-icon-border-color;
   }
 }
 
 // 前缀图标
-.jy-table-input {
-  .jy-table-input--prefix {
+.gj-table-input {
+  .gj-table-input--prefix {
     left: 0.2em;
   }
   &.is--prefix {
-    .jy-table-input--inner {
+    .gj-table-input--inner {
       padding-left: $iconWidth + 0.2em;
     }
   }
 }
 
 // 后缀图标
-.jy-table-input {
-  .jy-table-input--clear-icon {
+.gj-table-input {
+  .gj-table-input--clear-icon {
     display: none;
   }
-  .jy-table-input--suffix,
-  .jy-table-input--extra-suffix {
+  .gj-table-input--suffix,
+  .gj-table-input--extra-suffix {
     right: 0.2em;
   }
   &.is--suffix {
-    .jy-table-input--inner {
+    .gj-table-input--inner {
       padding-right: $iconWidth + 0.2em;
     }
   }
   &.is--left {
-    .jy-table-input--inner {
+    .gj-table-input--inner {
       text-align: left;
     }
   }
   &.is--center {
-    .jy-table-input--inner {
+    .gj-table-input--inner {
       text-align: center;
     }
   }
   &.is--right {
-    .jy-table-input--inner {
+    .gj-table-input--inner {
       text-align: right;
     }
   }
@@ -135,10 +135,10 @@ $iconWidth: 1.6em;
     &.type--quarter,
     &.type--year,
     &.type--time {
-      .jy-table-input--inner {
+      .gj-table-input--inner {
         padding-right: $iconWidth + 0.2em;
       }
-      .jy-table-input--suffix {
+      .gj-table-input--suffix {
         right: $iconWidth;
       }
     }
@@ -157,7 +157,7 @@ $iconWidth: 1.6em;
       &.type--quarter,
       &.type--year,
       &.type--time {
-        .jy-table-input--inner {
+        .gj-table-input--inner {
           padding-right: $iconWidth * 2;
         }
       }
@@ -165,12 +165,12 @@ $iconWidth: 1.6em;
   }
   &.is--suffix {
     &:hover {
-      .jy-table-input--suffix {
+      .gj-table-input--suffix {
         &.is--clear {
-          .jy-table-input--suffix-icon {
+          .gj-table-input--suffix-icon {
             display: none;
           }
-          .jy-table-input--clear-icon {
+          .gj-table-input--clear-icon {
             display: inline;
           }
         }
@@ -178,105 +178,105 @@ $iconWidth: 1.6em;
     }
   }
   &:not(.is--disabled) {
-    .jy-table-input--suffix {
+    .gj-table-input--suffix {
       &:hover {
-        .jy-table-input--clear-icon {
-          color: $jy-font-color;
+        .gj-table-input--clear-icon {
+          color: $gj-font-color;
         }
       }
       &:active {
-        .jy-table-input--clear-icon {
-          color: $jy-primary-color;
+        .gj-table-input--clear-icon {
+          color: $gj-primary-color;
         }
       }
     }
-    .jy-table-input--extra-suffix {
+    .gj-table-input--extra-suffix {
       &:hover {
-        .jy-table-input--search-suffix,
-        .jy-table-input--password-suffix {
-          color: $jy-font-color;
+        .gj-table-input--search-suffix,
+        .gj-table-input--password-suffix {
+          color: $gj-font-color;
         }
       }
       &:active {
-        .jy-table-input--search-suffix,
-        .jy-table-input--password-suffix {
-          color: $jy-primary-color;
+        .gj-table-input--search-suffix,
+        .gj-table-input--password-suffix {
+          color: $gj-primary-color;
         }
       }
     }
-    .jy-table-input--number-prev,
-    .jy-table-input--number-next {
+    .gj-table-input--number-prev,
+    .gj-table-input--number-next {
       &:hover {
-        color: $jy-font-color;
+        color: $gj-font-color;
       }
       &:active {
-        color: $jy-primary-color;
+        color: $gj-primary-color;
       }
       &.is--disabled {
         cursor: no-drop;
-        color: $jy-input-number-disabled-color;
+        color: $gj-input-number-disabled-color;
       }
     }
   }
 }
 
-.jy-table-input {
-  .jy-table-input--password-suffix,
-  .jy-table-input--number-suffix,
-  .jy-table-input--date-picker-suffix,
-  .jy-table-input--search-suffix {
+.gj-table-input {
+  .gj-table-input--password-suffix,
+  .gj-table-input--number-suffix,
+  .gj-table-input--date-picker-suffix,
+  .gj-table-input--search-suffix {
     position: relative;
     width: 100%;
     height: 100%;
   }
 
-  .jy-table-input--date-picker-icon,
-  .jy-table-input--search-icon,
-  .jy-table-input--password-icon {
+  .gj-table-input--date-picker-icon,
+  .gj-table-input--search-icon,
+  .gj-table-input--password-icon {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
 
-  .jy-table-input--date-picker-suffix {
+  .gj-table-input--date-picker-suffix {
     display: flex;
     align-items: center;
     justify-content: center;
-    .jy-table-input--panel-icon {
+    .gj-table-input--panel-icon {
       @include animatTransition(transform, .2s);
     }
   }
 
-  .jy-table-input--number-prev,
-  .jy-table-input--number-next {
+  .gj-table-input--number-prev,
+  .gj-table-input--number-next {
     position: relative;
     display: block;
     height: 50%;
     width: 100%;
     text-align: center;
   }
-  .jy-table-input--number-prev-icon,
-  .jy-table-input--number-next-icon {
+  .gj-table-input--number-prev-icon,
+  .gj-table-input--number-next-icon {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
-  .jy-table-input--number-prev-icon {
+  .gj-table-input--number-prev-icon {
     bottom: 0;
   }
-  .jy-table-input--number-next-icon {
+  .gj-table-input--number-next-icon {
     top: 0;
   }
 }
 
-.jy-table-input--panel {
+.gj-table-input--panel {
   display: none;
   position: absolute;
   left: 0;
   padding: 4px 0;
-  color: $jy-font-color;
-  font-size: $jy-font-size;
+  color: $gj-font-color;
+  font-size: $gj-font-size;
   text-align: left;
   &:not(.is--transfer) {
     min-width: 100%;
@@ -302,25 +302,25 @@ $iconWidth: 1.6em;
   }
 }
 
-.jy-table-input--panel-wrapper,
-.jy-table-input--panel-layout-wrapper {
-  background-color: $jy-input-panel-background-color;
-  border: 1px solid $jy-table-popup-border-color;
+.gj-table-input--panel-wrapper,
+.gj-table-input--panel-layout-wrapper {
+  background-color: $gj-input-panel-background-color;
+  border: 1px solid $gj-table-popup-border-color;
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
-  border-radius: $jy-border-radius;
+  border-radius: $gj-border-radius;
 }
 
-.jy-table-input--panel-wrapper {
+.gj-table-input--panel-wrapper {
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-.jy-table-input--panel-layout-wrapper {
+.gj-table-input--panel-layout-wrapper {
   display: flex;
   flex-direction: row;
 }
 
-.jy-table-input--panel {
+.gj-table-input--panel {
   &.type--date,
   &.type--week,
   &.type--month,
@@ -329,22 +329,22 @@ $iconWidth: 1.6em;
     user-select: none;
   }
   &.type--datetime {
-    .jy-table-input--panel-right-wrapper {
+    .gj-table-input--panel-right-wrapper {
       display: flex;
       flex-direction: column;
-      border-left: 1px solid $jy-input-border-color;
+      border-left: 1px solid $gj-input-border-color;
     }
   }
   &.type--date,
   &.type--datetime {
-    .jy-table-input--date-picker-body {
+    .gj-table-input--date-picker-body {
       th {
         width: 14.28571%;
       }
     }
   }
   &.type--week {
-    .jy-table-input--date-picker-body {
+    .gj-table-input--date-picker-body {
       table {
         th {
           width: 12%;
@@ -356,7 +356,7 @@ $iconWidth: 1.6em;
     }
   }
   &.type--quarter {
-    .jy-table-input--date-picker-body {
+    .gj-table-input--date-picker-body {
       table {
         th {
           width: 50%;
@@ -366,7 +366,7 @@ $iconWidth: 1.6em;
   }
   &.type--month,
   &.type--year {
-    .jy-table-input--date-picker-body {
+    .gj-table-input--date-picker-body {
       td {
         width: 25%;
       }
@@ -374,90 +374,90 @@ $iconWidth: 1.6em;
   }
 }
 
-.jy-table-input--time-picker-title {
+.gj-table-input--time-picker-title {
   display: inline-block;
   text-align: center;
-  border: 1px solid $jy-input-border-color;
-  border-radius: $jy-border-radius;
+  border: 1px solid $gj-input-border-color;
+  border-radius: $gj-border-radius;
 }
-.jy-table-input--time-picker-confirm {
+.gj-table-input--time-picker-confirm {
   position: absolute;
   right: 0;
   top: 0;
 }
-.jy-table-input--time-picker-confirm,
-.jy-table-input--date-picker-confirm {
+.gj-table-input--time-picker-confirm,
+.gj-table-input--date-picker-confirm {
   outline: 0;
-  border: 1px solid $jy-input-border-color;
-  border-radius: $jy-border-radius;
+  border: 1px solid $gj-input-border-color;
+  border-radius: $gj-border-radius;
   cursor: pointer;
-  color: $jy-input-date-time-confirm-button-color;
-  border-color: $jy-primary-color;
-  background-color: $jy-primary-color;
+  color: $gj-input-date-time-confirm-button-color;
+  border-color: $gj-primary-color;
+  background-color: $gj-primary-color;
   &:hover {
-    background-color: $jy-primary-color;
-    border-color: $jy-primary-color;
+    background-color: $gj-primary-color;
+    border-color: $gj-primary-color;
   }
   &:active {
-    background-color: $jy-primary-color;
-    border-color: $jy-primary-color;
+    background-color: $gj-primary-color;
+    border-color: $gj-primary-color;
   }
 }
 
-.jy-table-input--time-picker-header {
+.gj-table-input--time-picker-header {
   display: flex;
   position: relative;
   flex-shrink: 0;
 }
 
-.jy-table-input--date-picker-header {
+.gj-table-input--date-picker-header {
   display: flex;
   flex-direction: row;
   user-select: none;
-  .jy-table-input--date-picker-type-wrapper {
+  .gj-table-input--date-picker-type-wrapper {
     flex-grow: 1;
   }
-  .jy-table-input--date-picker-btn-wrapper {
+  .gj-table-input--date-picker-btn-wrapper {
     flex-shrink: 0;
     text-align: center;
   }
 }
-.jy-table-input--date-picker-type-wrapper {
-  .jy-table-input--date-picker-label,
-  .jy-table-input--date-picker-btn {
+.gj-table-input--date-picker-type-wrapper {
+  .gj-table-input--date-picker-label,
+  .gj-table-input--date-picker-btn {
     display: inline-block;
   }
 }
-.jy-table-input--date-picker-btn-wrapper {
+.gj-table-input--date-picker-btn-wrapper {
   display: flex;
   flex-direction: row;
 }
-.jy-table-input--date-picker-label,
-.jy-table-input--date-picker-btn {
+.gj-table-input--date-picker-label,
+.gj-table-input--date-picker-btn {
   display: inline-block;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $jy-button-default-background-color;
+  background-color: $gj-button-default-background-color;
 }
-.jy-table-input--date-picker-btn {
+.gj-table-input--date-picker-btn {
   &.is--disabled {
-    color: $jy-disabled-color;
+    color: $gj-disabled-color;
     cursor: no-drop;
   }
   &:not(.is--disabled) {
     cursor: pointer;
     &:hover {
-      background-color: $jy-button-default-background-color;
+      background-color: $gj-button-default-background-color;
     }
     &:active {
-      background-color: $jy-button-default-background-color;
+      background-color: $gj-button-default-background-color;
     }
   }
 }
-.jy-table-input--date-picker-body {
-  border-radius: $jy-border-radius;
-  border: 1px solid $jy-table-popup-border-color;
+.gj-table-input--date-picker-body {
+  border-radius: $gj-border-radius;
+  border: 1px solid $gj-table-popup-border-color;
   user-select: none;
   table {
     border: 0;
@@ -472,47 +472,47 @@ $iconWidth: 1.6em;
     font-weight: normal;
   }
   th {
-    box-shadow: inset 0 -1px 0 0 $jy-table-popup-border-color;
+    box-shadow: inset 0 -1px 0 0 $gj-table-popup-border-color;
   }
   td {
     &.is--prev,
     &.is--next {
-      color: $jy-disabled-color;
-      .jy-table-input--date-label,
-      .jy-table-input--date-festival {
-        color: $jy-disabled-color;
+      color: $gj-disabled-color;
+      .gj-table-input--date-label,
+      .gj-table-input--date-festival {
+        color: $gj-disabled-color;
       }
     }
     &.is--now {
-      box-shadow: inset 0 0 0 1px $jy-table-popup-border-color;
+      box-shadow: inset 0 0 0 1px $gj-table-popup-border-color;
       &:not(.is--selected) {
         &.is--current {
-          color: $jy-primary-color;
-          .jy-table-input--date-label,
-          .jy-table-input--date-festival {
-            color: $jy-primary-color;
+          color: $gj-primary-color;
+          .gj-table-input--date-label,
+          .gj-table-input--date-festival {
+            color: $gj-primary-color;
           }
         }
       }
     }
     &.is--hover {
-      background-color: $jy-input-date-picker-hover-background-color;
+      background-color: $gj-input-date-picker-hover-background-color;
     }
     &.is--selected {
-      color: $jy-input-date-picker-selected-color;
-      background-color: $jy-primary-color;
+      color: $gj-input-date-picker-selected-color;
+      background-color: $gj-primary-color;
       &.is--prev,
       &.is--next {
-        background-color:$jy-primary-color;
+        background-color:$gj-primary-color;
       }
-      .jy-table-input--date-label,
-      .jy-table-input--date-festival {
-        color: $jy-input-date-picker-festival-selected-color;
+      .gj-table-input--date-label,
+      .gj-table-input--date-festival {
+        color: $gj-input-date-picker-festival-selected-color;
       }
-      .jy-table-input--date-label {
+      .gj-table-input--date-label {
         &.is-notice {
           &:before {
-            background-color: $jy-input-date-picker-notice-selected-background-color;
+            background-color: $gj-input-date-picker-notice-selected-background-color;
           }
         }
       }
@@ -522,36 +522,36 @@ $iconWidth: 1.6em;
     }
     &.is--disabled {
       cursor: no-drop;
-      color: $jy-input-disabled-color;
-      background-color: $jy-input-disabled-background-color;
-      .jy-table-input--date-label,
-      .jy-table-input--date-festival {
-        color: $jy-input-disabled-color;
+      color: $gj-input-disabled-color;
+      background-color: $gj-input-disabled-background-color;
+      .gj-table-input--date-label,
+      .gj-table-input--date-festival {
+        color: $gj-input-disabled-color;
       }
     }
   }
 }
 
-.jy-table-input--date-week-view {
+.gj-table-input--date-week-view {
   th {
     &:first-child {
-      box-shadow: inset -1px -1px 0 0 $jy-table-popup-border-color;
+      box-shadow: inset -1px -1px 0 0 $gj-table-popup-border-color;
     }
   }
   td {
     &:first-child {
-      box-shadow: inset -1px 0 0 0 $jy-table-popup-border-color;
+      box-shadow: inset -1px 0 0 0 $gj-table-popup-border-color;
     }
   }
 }
 
-.jy-table-input--date-label,
-.jy-table-input--date-festival {
+.gj-table-input--date-label,
+.gj-table-input--date-festival {
   display: block;
   overflow: hidden;
 }
 
-.jy-table-input--date-label {
+.gj-table-input--date-label {
   position: relative;
   &.is-notice {
     &:before {
@@ -563,33 +563,33 @@ $iconWidth: 1.6em;
       top: 0.1em;
       transform: translateX(-50%);
       border-radius: 100%;
-      background-color: $jy-input-date-notice-background-color;
+      background-color: $gj-input-date-notice-background-color;
     }
   }
 }
-.jy-table-input--date-label--extra {
+.gj-table-input--date-label--extra {
   position: absolute;
   right: 0.1em;
   top: -0.2em;
   font-size: 12px;
   line-height: 12px;
   transform: scale(0.7);
-  color: $jy-input-date-extra-color;
+  color: $gj-input-date-extra-color;
   &.is-important {
-    color: $jy-input-date-extra-important-color;
+    color: $gj-input-date-extra-important-color;
   }
 }
 
-.jy-table-input--date-festival {
-  color: $jy-input-date-festival-color;
+.gj-table-input--date-festival {
+  color: $gj-input-date-festival-color;
   height: 14px;
   line-height: 1;
   overflow: hidden;
   &.is-important {
-    color: $jy-input-date-festival-important-color;
+    color: $gj-input-date-festival-important-color;
   }
 }
-.jy-table-input--date-festival--label {
+.gj-table-input--date-festival--label {
   display: block;
   font-size: 12px;
   transform: scale(0.8);
@@ -616,7 +616,7 @@ $iconWidth: 1.6em;
   }
 }
 
-.jy-table-input--date-festival--overlap {
+.gj-table-input--date-festival--overlap {
   display: block;
   font-size: 12px;
   &.overlap--2 {
@@ -632,13 +632,13 @@ $iconWidth: 1.6em;
   }
 }
 
-.jy-table-input--time-picker-body {
+.gj-table-input--time-picker-body {
   position: relative;
   display: flex;
   flex-direction: row;
-  border: 1px solid $jy-table-popup-border-color;
+  border: 1px solid $gj-table-popup-border-color;
   flex-grow: 1;
-  border-radius: $jy-border-radius;
+  border-radius: $gj-border-radius;
   user-select: none;
   & > ul {
     height: 100%;
@@ -656,27 +656,27 @@ $iconWidth: 1.6em;
     & > li {
       display: block;
       &:hover {
-        background-color: $jy-input-date-picker-hover-background-color;
+        background-color: $gj-input-date-picker-hover-background-color;
         cursor: pointer;
       }
       &.is--selected {
         font-weight: 500;
-        color: $jy-primary-color;
+        color: $gj-primary-color;
       }
     }
   }
-  .jy-table-input--time-picker-minute-list {
-    border-left: 1px solid $jy-table-popup-border-color;
+  .gj-table-input--time-picker-minute-list {
+    border-left: 1px solid $gj-table-popup-border-color;
   }
-  .jy-table-input--time-picker-second-list {
-    border-left: 1px solid $jy-table-popup-border-color;
+  .gj-table-input--time-picker-second-list {
+    border-left: 1px solid $gj-table-popup-border-color;
   }
 }
 
-.jy-table-input {
-  font-size: $jy-font-size;
-  height: $jy-input-height-default;
-  .jy-table-input--inner {
+.gj-table-input {
+  font-size: $gj-font-size;
+  height: $gj-input-height-default;
+  .gj-table-input--inner {
     &[type="date"]::-webkit-inner-spin-button,
     &[type="month"]::-webkit-inner-spin-button,
     &[type="week"]::-webkit-inner-spin-button {
@@ -690,9 +690,9 @@ $iconWidth: 1.6em;
     }
   }
   &.size--medium {
-    font-size: $jy-font-size-medium;
-    height: $jy-input-height-medium;
-    .jy-table-input--inner {
+    font-size: $gj-font-size-medium;
+    height: $gj-input-height-medium;
+    .gj-table-input--inner {
       &[type="date"]::-webkit-inner-spin-button,
       &[type="month"]::-webkit-inner-spin-button,
       &[type="week"]::-webkit-inner-spin-button {
@@ -701,9 +701,9 @@ $iconWidth: 1.6em;
     }
   }
   &.size--small {
-    font-size: $jy-font-size-small;
-    height: $jy-input-height-small;
-    .jy-table-input--inner {
+    font-size: $gj-font-size-small;
+    height: $gj-input-height-small;
+    .gj-table-input--inner {
       &[type="date"]::-webkit-inner-spin-button,
       &[type="month"]::-webkit-inner-spin-button,
       &[type="week"]::-webkit-inner-spin-button {
@@ -712,9 +712,9 @@ $iconWidth: 1.6em;
     }
   }
   &.size--mini {
-    font-size: $jy-font-size-mini;
-    height: $jy-input-height-mini;
-    .jy-table-input--inner {
+    font-size: $gj-font-size-mini;
+    height: $gj-input-height-mini;
+    .gj-table-input--inner {
       &[type="date"]::-webkit-inner-spin-button,
       &[type="month"]::-webkit-inner-spin-button,
       &[type="week"]::-webkit-inner-spin-button {
@@ -725,14 +725,14 @@ $iconWidth: 1.6em;
 }
 
 @mixin getPanelStyle ($sizeIndex) {
-  $fontSizeList: $jy-font-size, $jy-font-size-medium, $jy-font-size-small, $jy-font-size-mini;
-  $timeWeekRowHeightList: $jy-input-date-time-week-row-height-default, $jy-input-date-time-week-row-height-medium, $jy-input-date-time-week-row-height-small, $jy-input-date-time-week-row-height-mini;
-  $monthYearRowHeightList: $jy-input-date-month-year-row-height-default, $jy-input-date-month-year-row-height-medium, $jy-input-date-month-year-row-height-small, $jy-input-date-month-year-row-height-mini;
-  $quarterRowHeightList: $jy-input-date-quarter-row-height-default, $jy-input-date-quarter-row-height-medium, $jy-input-date-quarter-row-height-small, $jy-input-date-quarter-row-height-mini;
-  $titleRowHeightList: $jy-input-date-title-height-default, $jy-input-date-title-height-medium, $jy-input-date-title-height-small, $jy-input-date-title-height-mini;
+  $fontSizeList: $gj-font-size, $gj-font-size-medium, $gj-font-size-small, $gj-font-size-mini;
+  $timeWeekRowHeightList: $gj-input-date-time-week-row-height-default, $gj-input-date-time-week-row-height-medium, $gj-input-date-time-week-row-height-small, $gj-input-date-time-week-row-height-mini;
+  $monthYearRowHeightList: $gj-input-date-month-year-row-height-default, $gj-input-date-month-year-row-height-medium, $gj-input-date-month-year-row-height-small, $gj-input-date-month-year-row-height-mini;
+  $quarterRowHeightList: $gj-input-date-quarter-row-height-default, $gj-input-date-quarter-row-height-medium, $gj-input-date-quarter-row-height-small, $gj-input-date-quarter-row-height-mini;
+  $titleRowHeightList: $gj-input-date-title-height-default, $gj-input-date-title-height-medium, $gj-input-date-title-height-small, $gj-input-date-title-height-mini;
 
   font-size: nth($fontSizeList, $sizeIndex);
-  .jy-table-input--panel-wrapper {
+  .gj-table-input--panel-wrapper {
     max-height: 400px - $sizeIndex * 20;
   }
   &.type--date,
@@ -741,7 +741,7 @@ $iconWidth: 1.6em;
   &.type--month,
   &.type--quarter,
   &.type--year {
-    .jy-table-input--panel-wrapper {
+    .gj-table-input--panel-wrapper {
       padding: 12px - $sizeIndex;
     }
   }
@@ -749,71 +749,71 @@ $iconWidth: 1.6em;
   &.type--month,
   &.type--quarter,
   &.type--year {
-    .jy-table-input--panel-wrapper {
+    .gj-table-input--panel-wrapper {
       $widthList: 336px, 336px, 312px, 288px;
       width: nth($widthList, $sizeIndex);
     }
   }
   &.type--week {
-    .jy-table-input--panel-wrapper {
+    .gj-table-input--panel-wrapper {
       $widthList: 380px, 380px, 354px, 326px;
       width: nth($widthList, $sizeIndex);
     }
   }
   &.type--time {
-    .jy-table-input--panel-wrapper {
+    .gj-table-input--panel-wrapper {
       $widthList: 170px, 168px, 154px, 146px;
       width: nth($widthList, $sizeIndex);
     }
   }
   &.type--datetime {
-    .jy-table-input--panel-left-wrapper {
+    .gj-table-input--panel-left-wrapper {
       $widthList: 336px, 336px, 312px, 288px;
       width: nth($widthList, $sizeIndex);
     }
-    .jy-table-input--panel-left-wrapper,
-    .jy-table-input--panel-right-wrapper {
+    .gj-table-input--panel-left-wrapper,
+    .gj-table-input--panel-right-wrapper {
       padding: 12px - $sizeIndex;
     }
   }
-  .jy-table-input--time-picker-title {
+  .gj-table-input--time-picker-title {
     height: 31px - $sizeIndex;
     line-height: 31px - $sizeIndex;
     padding: 0 12px - $sizeIndex;
   }
-  .jy-table-input--date-picker-label,
-  .jy-table-input--date-picker-btn {
+  .gj-table-input--date-picker-label,
+  .gj-table-input--date-picker-btn {
     height: 31px - $sizeIndex;
     line-height: 31px - $sizeIndex;
   }
-  .jy-table-input--date-picker-btn-wrapper {
-    .jy-table-input--date-picker-btn {
+  .gj-table-input--date-picker-btn-wrapper {
+    .gj-table-input--date-picker-btn {
       margin-left: 9px - $sizeIndex;
     }
-    .jy-table-input--date-picker-prev-btn,
-    .jy-table-input--date-picker-current-btn,
-    .jy-table-input--date-picker-next-btn {
+    .gj-table-input--date-picker-prev-btn,
+    .gj-table-input--date-picker-current-btn,
+    .gj-table-input--date-picker-next-btn {
       width: 31px - $sizeIndex;
-      border-radius: $jy-border-radius;
-      border: 1px solid $jy-input-border-color;
+      border-radius: $gj-border-radius;
+      border: 1px solid $gj-input-border-color;
     }
   }
-  .jy-table-input--date-picker-type-wrapper {
-    .jy-table-input--date-picker-label,
-    .jy-table-input--date-picker-btn {
+  .gj-table-input--date-picker-type-wrapper {
+    .gj-table-input--date-picker-label,
+    .gj-table-input--date-picker-btn {
       padding: 0 10px - $sizeIndex;
     }
   }
-  .jy-table-input--time-picker-header,
-  .jy-table-input--date-picker-header {
+  .gj-table-input--time-picker-header,
+  .gj-table-input--date-picker-header {
     $paddingBottomList: 8px, 7px, 6px, 5px;
     padding-bottom: nth($paddingBottomList, $sizeIndex);
   }
-  .jy-table-input--date-picker-body table,
-  .jy-table-input--time-picker-body {
+  .gj-table-input--date-picker-body table,
+  .gj-table-input--time-picker-body {
     height: nth($timeWeekRowHeightList, $sizeIndex) * 6 + nth($titleRowHeightList, $sizeIndex);
   }
-  .jy-table-input--time-picker-body {
+  .gj-table-input--time-picker-body {
     $ulWidthList: 48px, 48px, 44px, 42px;
     & > ul {
       width: nth($ulWidthList, $sizeIndex);
@@ -827,46 +827,46 @@ $iconWidth: 1.6em;
         padding-left: 10px - $sizeIndex;
       }
     }
-    .jy-table-input--time-picker-minute-list {
+    .gj-table-input--time-picker-minute-list {
       left: nth($ulWidthList, $sizeIndex);
     }
-    .jy-table-input--time-picker-second-list {
+    .gj-table-input--time-picker-second-list {
       left: nth($ulWidthList, $sizeIndex) * 2;
     }
   }
-  .jy-table-input--date-day-view,
-  .jy-table-input--date-week-view {
+  .gj-table-input--date-day-view,
+  .gj-table-input--date-week-view {
     td {
       height: nth($timeWeekRowHeightList, $sizeIndex);
     }
   }
-  .jy-table-input--date-quarter-view {
+  .gj-table-input--date-quarter-view {
     td {
       height: nth($quarterRowHeightList, $sizeIndex);
     }
   }
-  .jy-table-input--date-month-view,
-  .jy-table-input--date-year-view {
+  .gj-table-input--date-month-view,
+  .gj-table-input--date-year-view {
     td {
       height: nth($monthYearRowHeightList, $sizeIndex);
     }
   }
-  .jy-table-input--date-picker-body {
+  .gj-table-input--date-picker-body {
     th {
       height: nth($titleRowHeightList, $sizeIndex);
     }
   }
-  .jy-table-input--time-picker-confirm,
-  .jy-table-input--date-picker-confirm {
+  .gj-table-input--time-picker-confirm,
+  .gj-table-input--date-picker-confirm {
     height: 31px - $sizeIndex;
     padding: 0 10px - $sizeIndex;
   }
-  .jy-table-input--date-label {
+  .gj-table-input--date-label {
     line-height: nth($fontSizeList, $sizeIndex) + 1;
   }
 }
 
-.jy-table-input--panel {
+.gj-table-input--panel {
   @include getPanelStyle(1);
   &.size--medium {
     @include getPanelStyle(2);

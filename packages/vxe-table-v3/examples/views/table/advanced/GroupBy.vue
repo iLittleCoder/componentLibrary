@@ -2,17 +2,17 @@
   <div>
     <p class="tip">行分组<span class="red">（具体请自行实现，该示例仅供参考）</span></p>
 
-    <jy-table
+    <gj-table
       resizable
       ref="xTable"
       height="400"
       :tree-config="{}"
       :data="tableData">
-      <jy-column field="name" title="Name" tree-node></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="date14" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name" tree-node></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="date14" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -32,17 +32,17 @@ export default {
       tableData: [],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           resizable
           ref="xTable"
           height="400"
           :tree-config="{}"
           :data="tableData">
-          <jy-column field="name" title="Name" tree-node></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="date14" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="Name" tree-node></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="date14" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

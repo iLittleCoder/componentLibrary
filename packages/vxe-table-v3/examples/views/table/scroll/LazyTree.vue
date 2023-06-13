@@ -4,7 +4,7 @@
       树表格的懒加载和右键菜单，通过调用 <table-api-link prop="clearTreeExpandLoaded"/> 方法清除加载完成状态，通过调用 <table-api-link prop="reloadTreeExpand"/> 方法重新加载子节点
     </p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       height="400"
@@ -14,11 +14,11 @@
       :tree-config="{lazy: true, transform: true, rowField: 'id', parentField: 'parentId', hasChild: 'hasChild', loadMethod: loadChildrenMethod}"
       :data="tableData"
       @menu-click="contextMenuClickEvent">
-      <jy-column field="id" title="ID" width="400" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="id" title="ID" width="400" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -54,7 +54,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           height="400"
@@ -64,11 +64,11 @@ export default {
           :tree-config="{lazy: true, transform: true, rowField: 'id', parentField: 'parentId', hasChild: 'hasChild', loadMethod: loadChildrenMethod}"
           :data="tableData"
           @menu-click="contextMenuClickEvent">
-          <jy-column field="id" title="ID" width="400" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="id" title="ID" width="400" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         let key = 1

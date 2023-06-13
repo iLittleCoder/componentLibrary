@@ -32,40 +32,40 @@
       cursor: not-allowed;
     }
 
-    & + .jy-checkbox.is-bordered {
+    & + .gj-checkbox.is-bordered {
       margin-left: 10px;
     }
 
-    &.jy-checkbox--large {
+    &.gj-checkbox--large {
       padding: $--checkbox-bordered-large-padding;
       height: 40px;
     }
-    .jy-checkbox__label {
+    .gj-checkbox__label {
       line-height: $--font-line-height-base;
     }
 
-    &.jy-checkbox--medium {
+    &.gj-checkbox--medium {
       padding: $--checkbox-bordered-medium-padding;
       border-radius: $--button-medium-border-radius;
       height: $--checkbox-bordered-medium-height;
 
-      .jy-checkbox__label {
+      .gj-checkbox__label {
         line-height: 17px;
         font-size: $--button-medium-font-size;
       }
     }
 
-    &.jy-checkbox--small {
+    &.gj-checkbox--small {
       padding: $--checkbox-bordered-small-padding;
       border-radius: $--button-small-border-radius;
       height: $--checkbox-bordered-small-height;
 
-      .jy-checkbox__label {
+      .gj-checkbox__label {
         line-height: 15px;
         font-size: $--button-small-font-size;
       }
 
-      .jy-checkbox__inner {
+      .gj-checkbox__inner {
         &::after {
           height: 6px;
           width: 2px;
@@ -73,17 +73,17 @@
       }
     }
 
-    &.jy-checkbox--mini {
+    &.gj-checkbox--mini {
       padding: $--checkbox-bordered-mini-padding;
       border-radius: $--button-mini-border-radius;
       height: $--checkbox-bordered-mini-height;
 
-      .jy-checkbox__label {
+      .gj-checkbox__label {
         line-height: 12px;
         font-size: $--button-mini-font-size;
       }
 
-      .jy-checkbox__inner {
+      .gj-checkbox__inner {
         &::after {
           height: 6px;
           width: 2px;
@@ -102,7 +102,7 @@
     vertical-align: middle;
 
     @include when(disabled) {
-      .jy-checkbox__inner {
+      .gj-checkbox__inner {
         background-color: $--checkbox-disabled-checked-input-fill;
         border-color: $--border-color-disabled;
         cursor: not-allowed;
@@ -112,13 +112,13 @@
           border-color: $--checkbox-disabled-icon-color;
         }
 
-        & + .jy-checkbox__label {
+        & + .gj-checkbox__label {
           cursor: not-allowed;
         }
       }
 
       &.is-checked {
-        .jy-checkbox__inner {
+        .gj-checkbox__inner {
           background-color: $--checkbox-disabled-checked-input-fill;
           border-color: $--border-color-disabled;
 
@@ -129,7 +129,7 @@
       }
 
       &.is-indeterminate {
-        .jy-checkbox__inner {
+        .gj-checkbox__inner {
           background-color: $--checkbox-disabled-checked-input-fill;
           // border-color: $--checkbox-disabled-checked-input-border-color;
           border-color: $--border-color-disabled;
@@ -141,14 +141,14 @@
         }
       }
 
-      & + span.jy-checkbox__label {
+      & + span.gj-checkbox__label {
         color: $--disabled-color-base;
         cursor: not-allowed;
       }
     }
 
     @include when(checked) {
-      .jy-checkbox__inner {
+      .gj-checkbox__inner {
         background-color: $--checkbox-checked-background-color;
         border-color: $--checkbox-checked-input-border-color;
 
@@ -157,18 +157,18 @@
         }
       }
 
-      // & + .jy-checkbox__label {
+      // & + .gj-checkbox__label {
       //   color: $--checkbox-checked-font-color;
       // }
     }
     @include when(focus) {
       /*focus时 视觉上区分*/
-      .jy-checkbox__inner {
+      .gj-checkbox__inner {
         border-color: $--checkbox-input-border-color-hover;
       }
     }
     @include when(indeterminate) {
-      .jy-checkbox__inner {
+      .gj-checkbox__inner {
         background-color: $--color-neutral;
         border-color: $--border-color-base;
 
@@ -304,19 +304,19 @@
   }
 
   &.is-checked {
-    & .jy-checkbox-button__inner {
+    & .gj-checkbox-button__inner {
       color: $--checkbox-button-checked-font-color;
       background-color: $--checkbox-button-checked-background-color;
       border-color: $--checkbox-button-checked-border-color;
       // box-shadow: -1px 0 0 0 $--color-primary-light-4;
     }
-    &:first-child .jy-checkbox-button__inner {
+    &:first-child .gj-checkbox-button__inner {
       border-left-color: $--checkbox-button-checked-border-color;
     }
   }
 
   &.is-disabled {
-    & .jy-checkbox-button__inner {
+    & .gj-checkbox-button__inner {
       color: $--color-text-disabled;
       cursor: not-allowed;
       background-image: none;
@@ -324,13 +324,13 @@
       border-color: $--border-color-disabled;
       box-shadow: none;
     }
-    &:first-child .jy-checkbox-button__inner {
+    &:first-child .gj-checkbox-button__inner {
       border-left-color: $--border-color-disabled;
     }
   }
 
   &:first-child {
-    .jy-checkbox-button__inner {
+    .gj-checkbox-button__inner {
       border-left: $--border-base;
       border-radius: $--border-radius-base 0 0 $--border-radius-base;
       box-shadow: none !important;
@@ -338,12 +338,12 @@
   }
 
   &:last-child {
-    .jy-checkbox-button__inner {
+    .gj-checkbox-button__inner {
       border-radius: 0 $--border-radius-base $--border-radius-base 0;
     }
   }
   @include m(medium) {
-    .jy-checkbox-button__inner {
+    .gj-checkbox-button__inner {
       @include button-size(
         $--button-medium-padding-vertical,
         $--button-medium-padding-horizontal,
@@ -353,7 +353,7 @@
     }
   }
   @include m(small) {
-    .jy-checkbox-button__inner {
+    .gj-checkbox-button__inner {
       @include button-size(
         $--button-small-padding-vertical,
         $--button-small-padding-horizontal,
@@ -363,7 +363,7 @@
     }
   }
   @include m(mini) {
-    .jy-checkbox-button__inner {
+    .gj-checkbox-button__inner {
       @include button-size(
         $--button-mini-padding-vertical,
         $--button-mini-padding-horizontal,

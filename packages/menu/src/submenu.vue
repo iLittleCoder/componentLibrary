@@ -1,5 +1,5 @@
 <script>
-  import JyCollapseTransition from 'GildataDesign/src/transitions/collapse-transition';
+  import GjCollapseTransition from 'GildataDesign/src/transitions/collapse-transition';
   import menuMixin from './menu-mixin';
   import Emitter from 'GildataDesign/src/mixins/emitter';
   import Popper from 'GildataDesign/src/utils/vue-popper';
@@ -21,13 +21,13 @@
   };
 
   export default {
-    name: 'JySubmenu',
+    name: 'GjSubmenu',
 
-    componentName: 'JySubmenu',
+    componentName: 'GjSubmenu',
 
     mixins: [menuMixin, Emitter, poperMixins],
 
-    components: { JyCollapseTransition },
+    components: { GjCollapseTransition },
 
     props: {
       index: {
@@ -76,7 +76,7 @@
           : this.popperAppendToBody;
       },
       menuTransitionName() {
-        return this.rootMenu.collapse ? 'jy-zoom-in-left' : 'jy-zoom-in-top';
+        return this.rootMenu.collapse ? 'gj-zoom-in-left' : 'gj-zoom-in-top';
       },
       opened() {
         return this.rootMenu.openedMenus.indexOf(this.index) > -1;
@@ -137,7 +137,7 @@
         let isFirstLevel = true;
         let parent = this.$parent;
         while (parent && parent !== this.rootMenu) {
-          if (['JySubmenu', 'JyMenuItemGroup'].indexOf(parent.$options.componentName) > -1) {
+          if (['GjSubmenu', 'GjMenuItemGroup'].indexOf(parent.$options.componentName) > -1) {
             isFirstLevel = false;
             break;
           } else {
@@ -176,7 +176,7 @@
         ) {
           return;
         }
-        this.dispatch('JyMenu', 'submenu-click', this);
+        this.dispatch('GjMenu', 'submenu-click', this);
       },
       handleMouseenter(event, showTimeout = this.showTimeout) {
 
@@ -192,7 +192,7 @@
         ) {
           return;
         }
-        this.dispatch('JySubmenu', 'mouse-enter-child');
+        this.dispatch('GjSubmenu', 'mouse-enter-child');
         clearTimeout(this.timeout);
         this.timeout = setTimeout(() => {
           this.rootMenu.openMenu(this.index, this.indexPath);
@@ -210,14 +210,14 @@
         ) {
           return;
         }
-        this.dispatch('JySubmenu', 'mouse-leave-child');
+        this.dispatch('GjSubmenu', 'mouse-leave-child');
         clearTimeout(this.timeout);
         this.timeout = setTimeout(() => {
           !this.mouseInChild && this.rootMenu.closeMenu(this.index);
         }, this.hideTimeout);
 
         if (this.appendToBody && deepDispatch) {
-          if (this.$parent.$options.name === 'JySubmenu') {
+          if (this.$parent.$options.name === 'GjSubmenu') {
             this.$parent.handleMouseleave(true);
           }
         }
@@ -285,13 +285,13 @@
           <div
             ref="menu"
             v-show={opened}
-            class={[`jy-menu--${mode}`, popperClass]}
+            class={[`gj-menu--${mode}`, popperClass]}
             on-mouseenter={($event) => this.handleMouseenter($event, 100)}
             on-mouseleave={() => this.handleMouseleave(true)}
             on-focus={($event) => this.handleMouseenter($event, 100)}>
             <ul
               role="menu"
-              class={['jy-menu jy-menu--popup', `jy-menu--popup-${currentPlacement}`]}
+              class={['gj-menu gj-menu--popup', `gj-menu--popup-${currentPlacement}`]}
               style={{ backgroundColor: rootMenu.backgroundColor || '' }}>
               {$slots.default}
             </ul>
@@ -300,15 +300,15 @@
       );
 
       const inlineMenu = (
-        <jy-collapse-transition>
+        <gj-collapse-transition>
           <ul
             role="menu"
-            class="jy-menu jy-menu--inline"
+            class="gj-menu gj-menu--inline"
             v-show={opened}
             style={{ backgroundColor: rootMenu.backgroundColor || '' }}>
             {$slots.default}
           </ul>
-        </jy-collapse-transition>
+        </gj-collapse-transition>
       );
       const submenuTitleIcon = (
         rootMenu.mode === 'horizontal' && isFirstLevel ||
@@ -317,7 +317,7 @@
       return (
         <li
           class={{
-            'jy-submenu': true,
+            'gj-submenu': true,
             'is-active': active,
             'is-opened': opened,
             'is-disabled': disabled
@@ -330,7 +330,7 @@
           on-focus={this.handleMouseenter}
         >
           <div
-            class="jy-submenu__title"
+            class="gj-submenu__title"
             ref="submenu-title"
             on-click={this.handleClick}
             on-mouseenter={this.handleTitleMouseenter}
@@ -338,7 +338,7 @@
             style={[paddingStyle, titleStyle, { backgroundColor }]}
           >
             {$slots.title}
-            <i class={[ 'jy-submenu__icon-arrow', submenuTitleIcon ]}></i>
+            <i class={[ 'gj-submenu__icon-arrow', submenuTitleIcon ]}></i>
           </div>
           {this.isMenuPopup ? popupMenu : inlineMenu}
         </li>

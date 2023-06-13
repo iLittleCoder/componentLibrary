@@ -5,7 +5,7 @@ import TimeRangePanel from '../panel/time-range';
 export default {
   mixins: [Picker],
 
-  name: 'JyTimePicker',
+  name: 'GjTimePicker',
 
   props: {
     isRange: Boolean,

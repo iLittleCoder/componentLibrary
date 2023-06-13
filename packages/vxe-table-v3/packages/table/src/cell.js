@@ -10,7 +10,7 @@ function renderHelpIcon (h, params) {
   const titlePrefix = column.titlePrefix || column.titleHelp
   return titlePrefix ? [
     h('i', {
-      class: ['jy-cell-help-icon', titlePrefix.icon || GlobalConfig.icon.TABLE_HELP],
+      class: ['gj-cell-help-icon', titlePrefix.icon || GlobalConfig.icon.TABLE_HELP],
       on: {
         mouseenter (evnt) {
           $table.triggerHeaderHelpEvent(evnt, params)
@@ -56,13 +56,13 @@ function renderTitleContent (h, params, content) {
   }
   return [
     type === 'html' && XEUtils.isString(content) ? h('span', {
-      class: 'jy-cell--title',
+      class: 'gj-cell--title',
       domProps: {
         innerHTML: content
       },
       on: ons
     }) : h('span', {
-      class: 'jy-cell--title',
+      class: 'gj-cell--title',
       on: ons
     }, content)
   ]
@@ -178,11 +178,11 @@ export const Cell = {
     const cellPlaceholder = editRender ? editRender.placeholder : ''
     return [
       h('span', {
-        class: 'jy-cell--label'
+        class: 'gj-cell--label'
       }, editRender && eqEmptyValue(cellValue) ? [
         // 如果设置占位符
         h('span', {
-          class: 'jy-cell--placeholder'
+          class: 'gj-cell--placeholder'
         }, UtilTools.formatText(getFuncText(cellPlaceholder), 1))
       ] : UtilTools.formatText(cellValue, 1))
     ]
@@ -193,7 +193,7 @@ export const Cell = {
   renderDefaultFooter (h, params) {
     return [
       h('span', {
-        class: 'jy-cell--item'
+        class: 'gj-cell--item'
       }, getFooterContent(h, params))
     ]
   },
@@ -227,7 +227,7 @@ export const Cell = {
     }
     return [
       h('div', {
-        class: ['jy-cell--tree-node', {
+        class: ['gj-cell--tree-node', {
           'is--active': isAceived
         }],
         style: {
@@ -236,16 +236,16 @@ export const Cell = {
       }, [
         showIcon && ((rowChilds && rowChilds.length) || hasLazyChilds) ? [
           h('div', {
-            class: 'jy-tree--btn-wrapper',
+            class: 'gj-tree--btn-wrapper',
             on
           }, [
             h('i', {
-              class: ['jy-tree--node-btn', isLazyLoaded ? (iconLoaded || GlobalConfig.icon.TABLE_TREE_LOADED) : (isAceived ? (iconOpen || GlobalConfig.icon.TABLE_TREE_OPEN) : (iconClose || GlobalConfig.icon.TABLE_TREE_CLOSE))]
+              class: ['gj-tree--node-btn', isLazyLoaded ? (iconLoaded || GlobalConfig.icon.TABLE_TREE_LOADED) : (isAceived ? (iconOpen || GlobalConfig.icon.TABLE_TREE_OPEN) : (iconClose || GlobalConfig.icon.TABLE_TREE_CLOSE))]
             })
           ])
         ] : null,
         h('div', {
-          class: 'jy-tree-cell'
+          class: 'gj-tree-cell'
         }, cellVNodes)
       ])
     ]
@@ -285,7 +285,7 @@ export const Cell = {
     const titleSlot = slots ? slots.title : null
     return renderTitleContent(h, params, headerSlot ? $table.callSlot(headerSlot, params, h) : [
       h('span', {
-        class: 'jy-radio--label'
+        class: 'gj-radio--label'
       }, titleSlot ? $table.callSlot(titleSlot, params, h) : UtilTools.formatText(column.getTitle(), 1))
     ])
   },
@@ -321,23 +321,23 @@ export const Cell = {
     if (isVisible) {
       radioVNs.push(
         h('span', {
-          class: 'jy-radio--icon jy-radio--checked-icon'
+          class: 'gj-radio--icon gj-radio--checked-icon'
         }),
         h('span', {
-          class: 'jy-radio--icon jy-radio--unchecked-icon'
+          class: 'gj-radio--icon gj-radio--unchecked-icon'
         })
       )
     }
     if (defaultSlot || labelField) {
       radioVNs.push(
         h('span', {
-          class: 'jy-radio--label'
+          class: 'gj-radio--label'
         }, defaultSlot ? $table.callSlot(defaultSlot, radioParams, h) : XEUtils.get(row, labelField))
       )
     }
     return [
       h('span', {
-        class: ['jy-cell--radio', {
+        class: ['gj-cell--radio', {
           'is--checked': isChecked,
           'is--disabled': isDisabled
         }],
@@ -377,13 +377,13 @@ export const Cell = {
     if (checkboxOpts.checkStrictly ? !checkboxOpts.showHeader : checkboxOpts.showHeader === false) {
       return renderTitleContent(h, checkboxParams, [
         h('span', {
-          class: 'jy-checkbox--label'
+          class: 'gj-checkbox--label'
         }, titleSlot ? $table.callSlot(titleSlot, checkboxParams, h) : headerTitle)
       ])
     }
     return renderTitleContent(h, checkboxParams, [
       h('span', {
-        class: ['jy-cell--checkbox', {
+        class: ['gj-cell--checkbox', {
           'is--checked': isAllCheckboxSelected,
           'is--disabled': isAllCheckboxDisabled,
           'is--indeterminate': isAllCheckboxIndeterminate
@@ -394,17 +394,17 @@ export const Cell = {
         on
       }, [
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--checked-icon'
+          class: 'gj-checkbox--icon gj-checkbox--checked-icon'
         }),
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--unchecked-icon'
+          class: 'gj-checkbox--icon gj-checkbox--unchecked-icon'
         }),
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--indeterminate-icon'
+          class: 'gj-checkbox--icon gj-checkbox--indeterminate-icon'
         })
       ].concat(titleSlot || headerTitle ? [
         h('span', {
-          class: 'jy-checkbox--label'
+          class: 'gj-checkbox--label'
         }, titleSlot ? $table.callSlot(titleSlot, checkboxParams, h) : headerTitle)
       ] : []))
     ])
@@ -445,26 +445,26 @@ export const Cell = {
     if (isVisible) {
       checkVNs.push(
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--checked-icon'
+          class: 'gj-checkbox--icon gj-checkbox--checked-icon'
         }),
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--unchecked-icon'
+          class: 'gj-checkbox--icon gj-checkbox--unchecked-icon'
         }),
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--indeterminate-icon'
+          class: 'gj-checkbox--icon gj-checkbox--indeterminate-icon'
         })
       )
     }
     if (defaultSlot || labelField) {
       checkVNs.push(
         h('span', {
-          class: 'jy-checkbox--label'
+          class: 'gj-checkbox--label'
         }, defaultSlot ? $table.callSlot(defaultSlot, checkboxParams, h) : XEUtils.get(row, labelField))
       )
     }
     return [
       h('span', {
-        class: ['jy-cell--checkbox', {
+        class: ['gj-cell--checkbox', {
           'is--checked': isChecked,
           'is--disabled': isDisabled,
           'is--indeterminate': indeterminate
@@ -512,26 +512,26 @@ export const Cell = {
     if (isVisible) {
       checkVNs.push(
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--checked-icon'
+          class: 'gj-checkbox--icon gj-checkbox--checked-icon'
         }),
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--unchecked-icon'
+          class: 'gj-checkbox--icon gj-checkbox--unchecked-icon'
         }),
         h('span', {
-          class: 'jy-checkbox--icon jy-checkbox--indeterminate-icon'
+          class: 'gj-checkbox--icon gj-checkbox--indeterminate-icon'
         })
       )
     }
     if (defaultSlot || labelField) {
       checkVNs.push(
         h('span', {
-          class: 'jy-checkbox--label'
+          class: 'gj-checkbox--label'
         }, defaultSlot ? $table.callSlot(defaultSlot, checkboxParams, h) : XEUtils.get(row, labelField))
       )
     }
     return [
       h('span', {
-        class: ['jy-cell--checkbox', {
+        class: ['gj-cell--checkbox', {
           'is--checked': isChecked,
           'is--disabled': isDisabled,
           'is--indeterminate': halfField && !isChecked ? row[halfField] : indeterminate
@@ -566,7 +566,7 @@ export const Cell = {
     }
     return [
       showIcon && (!visibleMethod || visibleMethod(params)) ? h('span', {
-        class: ['jy-table--expanded', {
+        class: ['gj-table--expanded', {
           'is--active': isAceived
         }],
         on: {
@@ -576,11 +576,11 @@ export const Cell = {
         }
       }, [
         h('i', {
-          class: ['jy-table--expand-btn', isLazyLoaded ? (iconLoaded || GlobalConfig.icon.TABLE_EXPAND_LOADED) : (isAceived ? (iconOpen || GlobalConfig.icon.TABLE_EXPAND_OPEN) : (iconClose || GlobalConfig.icon.TABLE_EXPAND_CLOSE))]
+          class: ['gj-table--expand-btn', isLazyLoaded ? (iconLoaded || GlobalConfig.icon.TABLE_EXPAND_LOADED) : (isAceived ? (iconOpen || GlobalConfig.icon.TABLE_EXPAND_OPEN) : (iconClose || GlobalConfig.icon.TABLE_EXPAND_CLOSE))]
         })
       ]) : null,
       defaultSlot || labelField ? h('span', {
-        class: 'jy-table--expand-label'
+        class: 'gj-table--expand-label'
       }, defaultSlot ? $table.callSlot(defaultSlot, params, h) : XEUtils.get(row, labelField)) : null
     ]
   },
@@ -610,7 +610,7 @@ export const Cell = {
     }
     return [
       h('span', {
-        class: 'jy-cell--html',
+        class: 'gj-cell--html',
         domProps: {
           innerHTML: getDefaultCellLabel(params)
         }
@@ -641,10 +641,10 @@ export const Cell = {
     const { showIcon, iconAsc, iconDesc } = $table.sortOpts
     return showIcon ? [
       h('span', {
-        class: 'jy-cell--sort'
+        class: 'gj-cell--sort'
       }, [
         h('i', {
-          class: ['jy-sort--asc-btn', iconAsc || GlobalConfig.icon.TABLE_SORT_ASC, {
+          class: ['gj-sort--asc-btn', iconAsc || GlobalConfig.icon.TABLE_SORT_ASC, {
             'sort--active': column.order === 'asc'
           }],
           attrs: {
@@ -657,7 +657,7 @@ export const Cell = {
           }
         }),
         h('i', {
-          class: ['jy-sort--desc-btn', iconDesc || GlobalConfig.icon.TABLE_SORT_DESC, {
+          class: ['gj-sort--desc-btn', iconDesc || GlobalConfig.icon.TABLE_SORT_DESC, {
             'sort--active': column.order === 'desc'
           }],
           attrs: {
@@ -685,12 +685,12 @@ export const Cell = {
     const { showIcon, iconNone, iconMatch } = filterOpts
     return showIcon ? [
       h('span', {
-        class: ['jy-cell--filter', {
+        class: ['gj-cell--filter', {
           'is--active': filterStore.visible && filterStore.column === column
         }]
       }, [
         h('i', {
-          class: ['jy-filter--btn', hasFilter ? (iconMatch || GlobalConfig.icon.TABLE_FILTER_MATCH) : (iconNone || GlobalConfig.icon.TABLE_FILTER_NONE)],
+          class: ['gj-filter--btn', hasFilter ? (iconMatch || GlobalConfig.icon.TABLE_FILTER_MATCH) : (iconNone || GlobalConfig.icon.TABLE_FILTER_NONE)],
           attrs: {
             title: GlobalConfig.i18n('vxe.table.filter')
           },
@@ -720,10 +720,10 @@ export const Cell = {
     }
     return (isEnableConf(editConfig) ? [
       isRequired && editOpts.showAsterisk ? h('i', {
-        class: 'jy-cell--required-icon'
+        class: 'gj-cell--required-icon'
       }) : null,
       isEnableConf(editRender) && editOpts.showIcon ? h('i', {
-        class: ['jy-cell--edit-icon', editOpts.icon || GlobalConfig.icon.TABLE_EDIT]
+        class: ['gj-cell--edit-icon', editOpts.icon || GlobalConfig.icon.TABLE_EDIT]
       }) : null
     ] : []).concat(Cell.renderDefaultHeader(h, params))
       .concat(sortable || remoteSort ? Cell.renderSortIcon(h, params) : [])
@@ -765,7 +765,7 @@ export const Cell = {
     if (formatter) {
       return [
         h('span', {
-          class: 'jy-cell--label'
+          class: 'gj-cell--label'
         }, [getDefaultCellLabel(params)])
       ]
     }

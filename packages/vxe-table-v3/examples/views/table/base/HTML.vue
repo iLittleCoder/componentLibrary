@@ -5,12 +5,12 @@
       <span class="red">（动态渲染任意 HTML 是非常危险的，很容易导致 <a class="link" href="https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%B6%B2%E7%AB%99%E6%8C%87%E4%BB%A4%E7%A2%BC">XSS</a> 攻击，请确保内容是可信的）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column
         field="describeHtml"
         title="<span class=red>HTML 标签与筛选</span>"
         type="html"
@@ -18,9 +18,9 @@
         sortable
         :filters="[{label:'包含 aa', value: 'aa'}, {label:'包含 bb', value: 'bb'}]"
         :filter-method="filterDescribeMethod">
-      </jy-column>
-      <jy-column field="role" type="html" title="<span class=green>HTML 标签与格式化</span>" :formatter="formatRole"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="role" type="html" title="<span class=green>HTML 标签与格式化</span>" :formatter="formatRole"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -45,12 +45,12 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column
             field="describeHtml"
             title="<span class=red>HTML 标签与筛选</span>"
             type="html"
@@ -58,9 +58,9 @@ export default {
             sortable
             :filters="[{label:'包含 aa', value: 'aa'}, {label:'包含 bb', value: 'bb'}]"
             :filter-method="filterDescribeMethod">
-          </jy-column>
-          <jy-column field="role" type="html" title="<span class=green>HTML 标签与格式化</span>" :formatter="formatRole"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="role" type="html" title="<span class=green>HTML 标签与格式化</span>" :formatter="formatRole"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'
@@ -78,7 +78,7 @@ export default {
           },
           methods: {
             formatRole ({ cellValue }) {
-              return \`<a href="https://github.com/x-extends/jy-table" class="link" target="_black" style="color: orange">链接 \${cellValue}</a>\`
+              return \`<a href="https://github.com/x-extends/gj-table" class="link" target="_black" style="color: orange">链接 \${cellValue}</a>\`
             },
             filterDescribeMethod ({ value, row, column }) {
               return XEUtils.toValueString(row.html1).indexOf(value) > -1
@@ -91,7 +91,7 @@ export default {
   },
   methods: {
     formatRole ({ cellValue }) {
-      return `<a href="https://github.com/x-extends/jy-table" class="link" target="_black" style="color: orange">链接 ${cellValue}</a>`
+      return `<a href="https://github.com/x-extends/gj-table" class="link" target="_black" style="color: orange">链接 ${cellValue}</a>`
     },
     filterDescribeMethod ({ value, row }) {
       return XEUtils.toValueString(row.html1).indexOf(value) > -1

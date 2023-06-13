@@ -5,19 +5,19 @@
       <span class="red">（注：<table-api-link prop="footer-span-method"/> ，不能用于虚拟滚动、树形结构、展开行、固定列，合并的逻辑都是自行实现的，该示例仅供参考）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       height="400"
       :merge-footer-items="mergeFooterItems"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="rate" title="Rate" footer-align="center"></jy-column>
-      <jy-column field="age" title="Age" footer-align="center"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="rate" title="Rate" footer-align="center"></gj-column>
+      <gj-column field="age" title="Age" footer-align="center"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -28,19 +28,19 @@
 
     <p class="tip">合并列</p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       height="400"
       :footer-span-method="footerColspanMethod"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="rate" title="Rate" footer-align="center"></jy-column>
-      <jy-column field="age" title="Age" footer-align="center"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="rate" title="Rate" footer-align="center"></gj-column>
+      <gj-column field="age" title="Age" footer-align="center"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -51,19 +51,19 @@
 
     <p class="tip">合并行</p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       height="400"
       :footer-span-method="footerRowspanMethod"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="rate" title="Rate" footer-align="center"></jy-column>
-      <jy-column field="age" title="Age" footer-align="center"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="rate" title="Rate" footer-align="center"></gj-column>
+      <gj-column field="age" title="Age" footer-align="center"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -93,19 +93,19 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-footer
           height="400"
           :merge-footer-items="mergeFooterItems"
           :footer-method="footerMethod"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="role" title="Role" sortable></jy-column>
-          <jy-column field="rate" title="Rate" footer-align="center"></jy-column>
-          <jy-column field="age" title="Age" footer-align="center"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="role" title="Role" sortable></gj-column>
+          <gj-column field="rate" title="Rate" footer-align="center"></gj-column>
+          <gj-column field="age" title="Age" footer-align="center"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -174,19 +174,19 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-footer
           height="400"
           :footer-span-method="footerColspanMethod"
           :footer-method="footerMethod"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="role" title="Role" sortable></jy-column>
-          <jy-column field="rate" title="Rate" footer-align="center"></jy-column>
-          <jy-column field="age" title="Age" footer-align="center"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="role" title="Role" sortable></gj-column>
+          <gj-column field="rate" title="Rate" footer-align="center"></gj-column>
+          <gj-column field="age" title="Age" footer-align="center"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -267,19 +267,19 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-footer
           height="400"
           :footer-span-method="footerRowspanMethod"
           :footer-method="footerMethod"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="role" title="Role" sortable></jy-column>
-          <jy-column field="rate" title="Rate" footer-align="center"></jy-column>
-          <jy-column field="age" title="Age" footer-align="center"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="role" title="Role" sortable></gj-column>
+          <gj-column field="rate" title="Rate" footer-align="center"></gj-column>
+          <gj-column field="age" title="Age" footer-align="center"></gj-column>
+        </gj-table>
         `,
         `
         export default {

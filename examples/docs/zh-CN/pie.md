@@ -10,7 +10,7 @@
 
 ```html
 <template>
-  <jy-pie :themeType="theme" width="560px" :chartOptions="chartOptions"></jy-pie>
+  <gj-pie :themeType="theme" width="560px" :chartOptions="chartOptions"></gj-pie>
 </template>
 
 <script>

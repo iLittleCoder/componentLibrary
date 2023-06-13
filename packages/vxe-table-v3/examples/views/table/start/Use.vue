@@ -15,7 +15,7 @@
             [
               "import",
               {
-                "libraryName": "jy-table",
+                "libraryName": "gj-table",
                 "style": true // 样式是否也按需加载
               }
             ]
@@ -71,8 +71,8 @@
 
           // 表格
           Table
-        } from 'jy-table'
-        import zhCN from 'jy-table/lib/locale/lang/zh-CN'
+        } from 'gj-table'
+        import zhCN from 'gj-table/lib/locale/lang/zh-CN'
 
         // 按需加载的方式默认是不带国际化的，自定义国际化需要自行解析占位符 '{0}'，例如：
         VXETable.setup({

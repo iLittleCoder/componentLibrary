@@ -4,11 +4,11 @@
 3、蓝湖设计稿上的全局卡片需要用户自己开发（组件无法控制body的内容）
 -->
 <template>
-  <div class="jy-card" :class="shadow ? 'is-' + shadow + '-shadow' : 'is-always-shadow'">
-    <div class="jy-card__header" :style="headerStyle" v-if="$slots.header || header">
+  <div class="gj-card" :class="shadow ? 'is-' + shadow + '-shadow' : 'is-always-shadow'">
+    <div class="gj-card__header" :style="headerStyle" v-if="$slots.header || header">
       <slot name="header">{{ header }}</slot>
     </div>
-    <div class="jy-card__body" :style="bodyStyle">
+    <div class="gj-card__body" :style="bodyStyle">
       <slot></slot>
     </div>
   </div>
@@ -16,7 +16,7 @@
 
 <script>
   export default {
-    name: 'JyCard',
+    name: 'GjCard',
     props: {
       header: {},
       bodyStyle: {},

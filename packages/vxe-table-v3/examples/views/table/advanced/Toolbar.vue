@@ -7,25 +7,25 @@
 
     <vxe-toolbar ref="xToolbar1" custom print></vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       height="300"
       ref="xTable1"
       :print-config="{}"
       :data="tableData1">
-      <jy-column type="seq" width="60"></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
       <vxe-colgroup title="分组信息">
         <vxe-colgroup title="基本信息">
-          <jy-column field="name" title="app.body.label.name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
+          <gj-column field="name" title="app.body.label.name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
         </vxe-colgroup>
-        <jy-column field="sex" title="app.body.label.sex"></jy-column>
+        <gj-column field="sex" title="app.body.label.sex"></gj-column>
       </vxe-colgroup>
-      <jy-column field="age" title="app.body.label.age"></jy-column>
+      <gj-column field="age" title="app.body.label.age"></gj-column>
       <vxe-colgroup title="其他信息">
-        <jy-column field="rate" title="Rate"></jy-column>
+        <gj-column field="rate" title="Rate"></gj-column>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -36,7 +36,7 @@
 
     <p class="tip">工具栏和表格默认是上下相邻关系，通过调用 <table-api-link prop="connect"/>() 方法与表格进行关联，就可以开启相关的功能</p>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable2"
       height="300"
@@ -44,13 +44,13 @@
       :loading="loading"
       :data="tableData"
       @custom="toolbarCustomEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="app.body.label.name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="app.body.label.sex"></jy-column>
-      <jy-column field="age" title="app.body.label.age"></jy-column>
-      <jy-column field="rate" title="Rate"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="app.body.label.name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="app.body.label.sex"></gj-column>
+      <gj-column field="age" title="app.body.label.age"></gj-column>
+      <gj-column field="rate" title="Rate"></gj-column>
+    </gj-table>
 
     <div>
       <p>工具栏位置随意放</p>
@@ -105,25 +105,25 @@ export default {
         `
         <vxe-toolbar ref="xToolbar1" custom print></vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           height="300"
           ref="xTable1"
           :print-config="{}"
           :data="tableData1">
-          <jy-column type="seq" width="60"></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
           <vxe-colgroup title="分组信息">
             <vxe-colgroup title="基本信息">
-              <jy-column field="name" title="app.body.label.name"></jy-column>
-              <jy-column field="role" title="Role"></jy-column>
+              <gj-column field="name" title="app.body.label.name"></gj-column>
+              <gj-column field="role" title="Role"></gj-column>
             </vxe-colgroup>
-            <jy-column field="sex" title="app.body.label.sex"></jy-column>
+            <gj-column field="sex" title="app.body.label.sex"></gj-column>
           </vxe-colgroup>
-          <jy-column field="age" title="app.body.label.age"></jy-column>
+          <gj-column field="age" title="app.body.label.age"></gj-column>
           <vxe-colgroup title="其他信息">
-            <jy-column field="rate" title="Rate"></jy-column>
+            <gj-column field="rate" title="Rate"></gj-column>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {
@@ -150,7 +150,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           ref="xTable2"
           height="300"
@@ -158,13 +158,13 @@ export default {
           :loading="loading"
           :data="tableData"
           @custom="toolbarCustomEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="app.body.label.name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="sex" title="app.body.label.sex"></jy-column>
-          <jy-column field="age" title="app.body.label.age"></jy-column>
-          <jy-column field="rate" title="Rate"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="app.body.label.name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="sex" title="app.body.label.sex"></gj-column>
+          <gj-column field="age" title="app.body.label.age"></gj-column>
+          <gj-column field="rate" title="Rate"></gj-column>
+        </gj-table>
 
         <div>
           <p>工具栏位置随意放</p>

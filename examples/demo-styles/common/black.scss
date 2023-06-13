@@ -106,33 +106,33 @@
     }
   }
   //   布局
-  .jy-header,
-  .jy-footer {
+  .gj-header,
+  .gj-footer {
     background-color: rgba(255, 255, 255, 0.3);
     color: #ffffff;
   }
-  .jy-aside {
+  .gj-aside {
     color: #ffffff;
   }
   .demo-container {
-    .jy-container {
+    .gj-container {
       background: $--color-primary;
-      .jy-header {
+      .gj-header {
         background-color: rgba(255, 255, 255, 0.3);
       }
     }
   }
 
   #chang-jian-ye-mian-bu-ju + .demo-container {
-    .jy-header,
-    .jy-footer {
+    .gj-header,
+    .gj-footer {
       background-color: rgba(255, 255, 255, 0.3);
     }
-    .jy-aside {
+    .gj-aside {
       background-color: rgba(255, 255, 255, 0.4);
     }
 
-    .jy-main {
+    .gj-main {
       background-color: $--color-primary;
       color: #ffffff;
     }
@@ -140,11 +140,11 @@
 
   // 滚动条
   .demo-scrollbar {
-    .jy-card {
-      .jy-card__header {
+    .gj-card {
+      .gj-card__header {
         background-color:  $--color-neutral;
       }
-      .jy-card__body {
+      .gj-card__body {
         div {
           color: rgba($--color-info, 0.65);
           background-color: rgba($--color-info, 0.04);

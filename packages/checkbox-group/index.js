@@ -1,8 +1,8 @@
-import JyCheckboxGroup from '../checkbox/src/checkbox-group.vue';
+import GjCheckboxGroup from '../checkbox/src/checkbox-group.vue';
 
 /* istanbul ignore next */
-JyCheckboxGroup.install = function(Vue) {
-  Vue.component(JyCheckboxGroup.name, JyCheckboxGroup);
+GjCheckboxGroup.install = function(Vue) {
+  Vue.component(GjCheckboxGroup.name, GjCheckboxGroup);
 };
 
-export default JyCheckboxGroup;
+export default GjCheckboxGroup;

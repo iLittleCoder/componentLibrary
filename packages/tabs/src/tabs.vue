@@ -2,7 +2,7 @@
   import TabNav from './tab-nav';
 
   export default {
-    name: 'JyTabs',
+    name: 'GjTabs',
 
     components: {
       TabNav
@@ -58,7 +58,7 @@
       calcPaneInstances(isForceUpdate = false) {
         if (this.$slots.default) {
           const paneSlots = this.$slots.default.filter(vnode => vnode.tag &&
-            vnode.componentOptions && vnode.componentOptions.Ctor.options.name === 'JyTabPane');
+            vnode.componentOptions && vnode.componentOptions.Ctor.options.name === 'GjTabPane');
           // update indeed
           const panes = paneSlots.map(({ componentInstance }) => componentInstance);
           const panesChanged = !(panes.length === this.panes.length && panes.every((pane, index) => pane === this.panes[index]));
@@ -126,7 +126,7 @@
       const newButton = editable || addable
         ? (
           <span slot='newBtn'
-            class="jy-tabs__new-tab"
+            class="gj-tabs__new-tab"
             on-click={ handleTabAdd }
             tabindex="0"
             on-keydown={ (ev) => { if (ev.keyCode === 13) { handleTabAdd(); }} }
@@ -149,22 +149,22 @@
         ref: 'nav'
       };
       const header = (
-        <div class={['jy-tabs__header', `is-${tabPosition}`]}>
+        <div class={['gj-tabs__header', `is-${tabPosition}`]}>
           <tab-nav { ...navData }>{newButton}</tab-nav>
         </div>
       );
       const panels = (
-        <div class="jy-tabs__content">
+        <div class="gj-tabs__content">
           {this.$slots.default}
         </div>
       );
 
       return (
         <div class={{
-          'jy-tabs': true,
-          'jy-tabs--card': type === 'card',
-          [`jy-tabs--${tabPosition}`]: true,
-          'jy-tabs--border-card': type === 'border-card'
+          'gj-tabs': true,
+          'gj-tabs--card': type === 'card',
+          [`gj-tabs--${tabPosition}`]: true,
+          'gj-tabs--border-card': type === 'border-card'
         }}>
           { tabPosition !== 'bottom' ? [header, panels] : [panels, header] }
         </div>

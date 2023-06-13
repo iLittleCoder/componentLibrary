@@ -2,14 +2,14 @@
   <div>
     <p class="tip">展开行</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="expand" width="60">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="expand" width="60">
         <template #content="{ row }">
           <ul class="expand-form">
             <li>
@@ -32,11 +32,11 @@
             </li>
           </ul>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -60,14 +60,14 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="expand" width="60">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="expand" width="60">
             <template #content="{ row, rowIndex }">
               <ul class="expand-form">
                 <li>
@@ -90,11 +90,11 @@ export default {
                 </li>
               </ul>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

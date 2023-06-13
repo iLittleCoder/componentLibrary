@@ -1,28 +1,28 @@
 <template>
-  <div class="jy-result">
-    <div class="jy-result__icon">
+  <div class="gj-result">
+    <div class="gj-result__icon">
       <slot name="icon">
-        <jy-icon :name="iconElement"></jy-icon>
+        <gj-icon :name="iconElement"></gj-icon>
 <!--        <component :is="iconElement" :class="iconElement" />-->
       </slot>
     </div>
-    <div v-if="title || $slots.title" class="jy-result__title">
+    <div v-if="title || $slots.title" class="gj-result__title">
       <slot name="title">
-        <div class="jy-result__title_content">{{ title }}</div>
+        <div class="gj-result__title_content">{{ title }}</div>
       </slot>
     </div>
-    <div v-if="subTitle || $slots.subTitle" class="jy-result__subtitle">
+    <div v-if="subTitle || $slots.subTitle" class="gj-result__subtitle">
       <slot name="subTitle">
-        <div class="jy-result__subTitle_content">{{ subTitle }}</div>
+        <div class="gj-result__subTitle_content">{{ subTitle }}</div>
       </slot>
     </div>
-    <div v-if="$slots.extra" class="jy-result__extra">
+    <div v-if="$slots.extra" class="gj-result__extra">
       <slot name="extra"></slot>
     </div>
   </div>
 </template>
 <script>
-import JyIcon from 'GildataDesign/packages/icon';
+import GjIcon from 'GildataDesign/packages/icon';
 
 const IconMap = {
   success: 'Gildata-color-correct1',
@@ -32,9 +32,9 @@ const IconMap = {
 };
 
 export default {
-  name: 'JyResult',
+  name: 'GjResult',
   components: {
-    JyIcon
+    GjIcon
   },
   props: {
     title: {

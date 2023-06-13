@@ -1,5 +1,5 @@
 export default {
-  name: 'JyTableRow',
+  name: 'GjTableRow',
   props: [
     'columns',
     'row',

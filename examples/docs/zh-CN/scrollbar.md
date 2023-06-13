@@ -7,16 +7,16 @@
 ```html
 
 <div class="demo-scroll-bar">
-    <jy-scrollbar class="scroll-bar" wrap-class="self-wrap">
-        <jy-card>
+    <gj-scrollbar class="scroll-bar" wrap-class="self-wrap">
+        <gj-card>
             <div slot="header" class="card-title">
-                <jy-icon name="Gildata-color-title"></jy-icon>
+                <gj-icon name="Gildata-color-title"></gj-icon>
                 <span class="text">标题名称</span>
             </div>
             
             <div v-for="item in 100">{{item}}</div>
-        </jy-card>
-    </jy-scrollbar>
+        </gj-card>
+    </gj-scrollbar>
 </div>
 
 
@@ -32,22 +32,22 @@
 
 <template>
     <div class="demo-scroll-table">
-        <jy-scrollbar noresize class="table-scrollbar" wrap-class="self-wrap">
-            <jy-table
+        <gj-scrollbar noresize class="table-scrollbar" wrap-class="self-wrap">
+            <gj-table
                     :align="allAlign"
                     :data="tableData"
                     :resizable="false"
                     border="none"
             >
-                <jy-column type="seq" width="60"></jy-column>
-                <jy-column field="name" width="100" title="Name"></jy-column>
-                <jy-column field="sex" width="100" title="Sex"></jy-column>
-                <jy-column field="age" width="100" title="Age"></jy-column>
-                <jy-column field="phone" width="120" title="Phone"></jy-column>
-                <jy-column field="role" width="100" title="Role"></jy-column>
-                <jy-column field="address" width="130" title="Address"></jy-column>
-            </jy-table>
-        </jy-scrollbar>
+                <gj-column type="seq" width="60"></gj-column>
+                <gj-column field="name" width="100" title="Name"></gj-column>
+                <gj-column field="sex" width="100" title="Sex"></gj-column>
+                <gj-column field="age" width="100" title="Age"></gj-column>
+                <gj-column field="phone" width="120" title="Phone"></gj-column>
+                <gj-column field="role" width="100" title="Role"></gj-column>
+                <gj-column field="address" width="130" title="Address"></gj-column>
+            </gj-table>
+        </gj-scrollbar>
     </div>
 
 </template>

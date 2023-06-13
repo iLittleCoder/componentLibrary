@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="tip">
-      <table-api-link name="jy-table"/> 基础表格，基于模板方式使用非常简单、便捷<br>
+      <table-api-link name="gj-table"/> 基础表格，基于模板方式使用非常简单、便捷<br>
       <span class="red">（注：每一列 field 字段属性不可更改）</span>
     </p>
 
@@ -12,7 +12,7 @@
         <vxe-button @click="allAlign = 'right'">居右</vxe-button>
       </template>
     </vxe-toolbar>
-    <jy-table
+    <gj-table
       :align="allAlign"
       :data="tableData"
       :resizable="false"
@@ -21,27 +21,27 @@
       }"
       border="none"
     >
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="tip">使用 <table-api-link prop="highlight-hover-row"/> 属性启用 hover 行高亮</p>
 
-    <jy-table
+    <gj-table
       border
       show-header-overflow
       show-overflow
       highlight-hover-row
       :align="allAlign"
       :data="tableData">
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address"></jy-column>
-    </jy-table>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address"></gj-column>
+    </gj-table>
   </div>
 </template>
 

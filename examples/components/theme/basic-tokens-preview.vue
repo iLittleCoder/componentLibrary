@@ -23,8 +23,8 @@
   <div class="component-preview">
     <h4>Color</h4>
     <div class="color">
-      <jy-row :gutter="12">
-        <jy-col :span="4" v-for="(color, key) in colorLine" :key="key">
+      <gj-row :gutter="12">
+        <gj-col :span="4" v-for="(color, key) in colorLine" :key="key">
           <div class="demo-color-box" :style="{ background: dataProxy(color) }">
             {{ color }}
             <div class="value">{{ dataProxy(color) }}</div>
@@ -40,38 +40,38 @@
               </div>
             </div>
           </div>
-        </jy-col>
-      </jy-row>
+        </gj-col>
+      </gj-row>
 
-      <jy-row :gutter="12" class="demo-color-text">
-        <jy-col :span="4">
+      <gj-row :gutter="12" class="demo-color-text">
+        <gj-col :span="4">
           <div class="demo-color-box demo-color-box-other" :style="{ background: color_info }">
             Primary Text
             <div class="value">{{ color_info }}</div>
           </div>
-        </jy-col>
-        <jy-col :span="4">
+        </gj-col>
+        <gj-col :span="4">
           <div class="demo-color-box demo-color-box-other" :style="{ background: tintColor(color_info, 0.65) }">
             Regular Text
             <div class="value">{{ tintColor(color_info, 0.65) }}</div>
           </div>
-        </jy-col>
-        <jy-col :span="4">
+        </gj-col>
+        <gj-col :span="4">
           <div class="demo-color-box demo-color-box-other" :style="{ background: tintColor(color_info, 0.45) }">
             Tip Text
             <div class="value">{{ tintColor(color_info, 0.45) }}</div>
           </div>
-        </jy-col>
-        <jy-col :span="4">
+        </gj-col>
+        <gj-col :span="4">
           <div class="demo-color-box demo-color-box-other" :style="{ background: tintColor(color_info, 0.3) }">
             Disabled
             <div class="value">{{ tintColor(color_info, 0.3) }}</div>
           </div>
-        </jy-col>
-      </jy-row>
+        </gj-col>
+      </gj-row>
 
-      <jy-row :gutter="12">
-        <jy-col :span="4">
+      <gj-row :gutter="12">
+        <gj-col :span="4">
           <div
             class="demo-color-box demo-color-box-other demo-color-box-lite"
             :style="{ background: table_border_color }"
@@ -79,8 +79,8 @@
             Border Base
             <div class="value">{{ table_border_color }}</div>
           </div>
-        </jy-col>
-        <!-- <jy-col :span="4">
+        </gj-col>
+        <!-- <gj-col :span="4">
           <div
             class="demo-color-box demo-color-box-other demo-color-box-lite"
             :style="{ background: tintColor(color_info, 0.04) }"
@@ -88,17 +88,17 @@
             Border Disabled
             <div class="value">{{ tintColor(color_info, 0.04) }}</div>
           </div>
-        </jy-col> -->
-      </jy-row>
+        </gj-col> -->
+      </gj-row>
 
-      <jy-row :gutter="12">
-        <jy-col :span="4">
+      <gj-row :gutter="12">
+        <gj-col :span="4">
           <div class="demo-color-box demo-color-box-other" :style="{ background: color_black }">
             Background B
             <div class="value">{{ color_black }}</div>
           </div>
-        </jy-col>
-        <jy-col :span="4">
+        </gj-col>
+        <gj-col :span="4">
           <div
             class="demo-color-box demo-color-box-other"
             :style="{ background: color_white, color: '#303133', border: '1px solid #eee' }"
@@ -106,8 +106,8 @@
             Background W
             <div class="value">{{ color_white }}</div>
           </div>
-        </jy-col>
-      </jy-row>
+        </gj-col>
+      </gj-row>
     </div>
   </div>
 </template>

@@ -2,14 +2,14 @@
 import Emitter from 'GildataDesign/src/mixins/emitter';
 
 export default {
-  name: 'JyCheckboxGroup',
+  name: 'GjCheckboxGroup',
 
-  componentName: 'JyCheckboxGroup',
+  componentName: 'GjCheckboxGroup',
 
   mixins: [Emitter],
 
   inject: {
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
@@ -26,7 +26,7 @@ export default {
 
   computed: {
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
     checkboxGroupSize() {
       return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
@@ -35,14 +35,14 @@ export default {
 
   watch: {
     value(value) {
-      this.dispatch('JyFormItem', 'el.form.change', [value]);
+      this.dispatch('GjFormItem', 'el.form.change', [value]);
     }
   }
 };
 </script>
 
 <template>
-  <div class="jy-checkbox-group" role="group" aria-label="checkbox-group">
+  <div class="gj-checkbox-group" role="group" aria-label="checkbox-group">
     <slot></slot>
   </div>
 </template>

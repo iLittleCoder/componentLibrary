@@ -24,10 +24,10 @@
   }
 
   @include when(dark) {
-    .jy-alert__closebtn {
+    .gj-alert__closebtn {
       color: $--color-white;
     }
-    .jy-alert__description {
+    .gj-alert__description {
       color: $--color-white;
     }
   }
@@ -49,7 +49,7 @@
       background-color: $--background-main-color;
       border-color: $--border-main-color;
 
-      .jy-alert__closebtn {
+      .gj-alert__closebtn {
         color: $--color-main;
       }
     }
@@ -65,7 +65,7 @@
         margin-right: 4px;
       }
 
-      .jy-alert__description {
+      .gj-alert__description {
         color: $--color-main;
       }
     }
@@ -76,7 +76,7 @@
       background-color: $--background-success-color;
       border-color: $--border-success-color;
 
-      .jy-alert__closebtn {
+      .gj-alert__closebtn {
         color: $--color-success;
       }
     }
@@ -92,7 +92,7 @@
         margin-right: 4px;
       }
 
-      .jy-alert__description {
+      .gj-alert__description {
         color: $--color-success;
       }
     }
@@ -103,7 +103,7 @@
   //     background-color: $--background-info-color;
   //     border-color: $--border-info-color;
 
-  //     .jy-alert__closebtn {
+  //     .gj-alert__closebtn {
   //       color: $--color-text-placeholder;
   //     }
   //   }
@@ -119,7 +119,7 @@
   //       margin-right: 4px;
   //     }
 
-  //     .jy-alert__description {
+  //     .gj-alert__description {
   //       color: $--color-text-placeholder;
   //     }
   //   }
@@ -130,7 +130,7 @@
       background-color: $--background-warning-color;
       border-color: $--border-warning-color;
 
-      .jy-alert__closebtn {
+      .gj-alert__closebtn {
         color: $--color-warning;
       }
     }
@@ -147,7 +147,7 @@
         margin-right: 4px;
       }
 
-      .jy-alert__description {
+      .gj-alert__description {
         color: $--color-warning;
       }
     }
@@ -158,7 +158,7 @@
       background-color: $--background-danger-color;
       border-color: $--border-danger-color;
 
-      .jy-alert__closebtn {
+      .gj-alert__closebtn {
         color: $--color-danger;
       }
     }
@@ -174,7 +174,7 @@
         margin-right: 4px;
       }
 
-      .jy-alert__description {
+      .gj-alert__description {
         color: $--color-danger;
       }
     }
@@ -204,7 +204,7 @@
     }
   }
 
-  & .jy-alert__description {
+  & .gj-alert__description {
     font-size: $--alert-description-font-size;
     color: $--color-info;
     margin: 4px 0 0 0;

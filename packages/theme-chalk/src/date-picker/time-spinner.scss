@@ -2,7 +2,7 @@
 
 @include b(time-spinner) {
   &.has-seconds {
-    .jy-time-spinner__wrapper {
+    .gj-time-spinner__wrapper {
       width: 33.3%;
     }
   }
@@ -22,7 +22,7 @@
     vertical-align: top;
     position: relative;
 
-    & .jy-scrollbar__wrap:not(.jy-scrollbar__wrap--hidden-default) {
+    & .gj-scrollbar__wrap:not(.gj-scrollbar__wrap--hidden-default) {
       padding-bottom: 15px;
     }
    
@@ -32,11 +32,11 @@
       text-align: center;
       overflow: hidden;
 
-      .jy-time-spinner__list {
+      .gj-time-spinner__list {
         transform: translateY(-32px);
       }
 
-      .jy-time-spinner__item:hover:not(.disabled):not(.active) {
+      .gj-time-spinner__item:hover:not(.disabled):not(.active) {
         background: transparent;
         cursor: default;
       }
@@ -69,10 +69,10 @@
   }
 
   @include e(input) {
-    &.jy-input {
+    &.gj-input {
       width: 70%;
 
-      .jy-input__inner {
+      .gj-input__inner {
         padding: 0;
         text-align: center;
       }

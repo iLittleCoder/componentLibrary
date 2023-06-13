@@ -46,13 +46,13 @@ function renderContent (h, _vm) {
   if ($scopedSlots.content) {
     return h('div', {
       key: 1,
-      class: 'jy-table--tooltip-content'
+      class: 'gj-table--tooltip-content'
     }, $scopedSlots.content.call(this, {}))
   }
   if (useHTML) {
     return h('div', {
       key: 2,
-      class: 'jy-table--tooltip-content',
+      class: 'gj-table--tooltip-content',
       domProps: {
         innerHTML: tipContent
       }
@@ -60,12 +60,12 @@ function renderContent (h, _vm) {
   }
   return h('div', {
     key: 3,
-    class: 'jy-table--tooltip-content'
+    class: 'gj-table--tooltip-content'
   }, UtilTools.formatText(tipContent))
 }
 
 export default {
-  name: 'JyTableTooltip',
+  name: 'GjTableTooltip',
   mixins: [vSize],
   props: {
     value: Boolean,
@@ -168,7 +168,7 @@ export default {
       }
     }
     return h('div', {
-      class: ['jy-table--tooltip-wrapper', `theme--${theme}`, {
+      class: ['gj-table--tooltip-wrapper', `theme--${theme}`, {
         [`size--${vSize}`]: vSize,
         [`placement--${tipStore.placement}`]: tipStore.placement,
         'is--enterable': enterable,
@@ -182,7 +182,7 @@ export default {
     }, [
       renderContent(h, this),
       h('div', {
-        class: 'jy-table--tooltip-arrow',
+        class: 'gj-table--tooltip-arrow',
         style: tipStore.arrowStyle
       })
     ].concat($scopedSlots.default ? $scopedSlots.default.call(this, {}) : []))

@@ -14,18 +14,18 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       highlight-hover-row
       ref="xTable"
       height="400"
       :export-config="{}"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex" :formatter="formatterSex"></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex" :formatter="formatterSex"></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -64,18 +64,18 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           highlight-hover-row
           ref="xTable"
           height="400"
           :export-config="{}"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex" :formatter="formatterSex"></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex" :formatter="formatterSex"></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {

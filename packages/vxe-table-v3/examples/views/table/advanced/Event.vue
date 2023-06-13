@@ -2,7 +2,7 @@
   <div>
     <p class="tip">表格事件绑定，通过设置 <table-api-link prop="cell-click"/>、<table-api-link prop="cell-dblclick"/> ...等常用事件</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       show-overflow
@@ -20,13 +20,13 @@
       @cell-mouseleave="cellMouseleaveEvent"
       @cell-menu="cellContextMenuEvent"
       @scroll="scrollEvent">
-      <jy-column type="seq" title="序号" width="60" fixed="left"></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="role" title="Role" width="300"></jy-column>
-      <jy-column field="sex" title="Sex" width="300"></jy-column>
-      <jy-column field="date" title="Date" width="300"></jy-column>
-      <jy-column field="address" title="Address" fixed="right" width="300"></jy-column>
-    </jy-table>
+      <gj-column type="seq" title="序号" width="60" fixed="left"></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="role" title="Role" width="300"></gj-column>
+      <gj-column field="sex" title="Sex" width="300"></gj-column>
+      <gj-column field="date" title="Date" width="300"></gj-column>
+      <gj-column field="address" title="Address" fixed="right" width="300"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -53,7 +53,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           show-overflow
@@ -71,13 +71,13 @@ export default {
           @cell-mouseleave="cellMouseleaveEvent"
           @cell-menu="cellContextMenuEvent"
           @scroll="scrollEvent">
-          <jy-column type="seq" title="序号" width="60" fixed="left"></jy-column>
-          <jy-column field="name" title="Name" width="300"></jy-column>
-          <jy-column field="role" title="Role" width="300"></jy-column>
-          <jy-column field="sex" title="Sex" width="300"></jy-column>
-          <jy-column field="date" title="Date" width="300"></jy-column>
-          <jy-column field="address" title="Address" fixed="right" width="300"></jy-column>
-        </jy-table>
+          <gj-column type="seq" title="序号" width="60" fixed="left"></gj-column>
+          <gj-column field="name" title="Name" width="300"></gj-column>
+          <gj-column field="role" title="Role" width="300"></gj-column>
+          <gj-column field="sex" title="Sex" width="300"></gj-column>
+          <gj-column field="date" title="Date" width="300"></gj-column>
+          <gj-column field="address" title="Address" fixed="right" width="300"></gj-column>
+        </gj-table>
         `,
         `
         export default {

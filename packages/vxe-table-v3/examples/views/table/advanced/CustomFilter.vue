@@ -2,37 +2,37 @@
   <div>
     <p class="tip">自定义筛选，可以通过设置选项状态和调用 <table-api-link prop="updateData"/> 方法更新筛选条件</p>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable"
       height="400"
       :filter-config="{showIcon: false}"
       :loading="loading"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
       <vxe-colgroup title="文本">
-        <jy-column field="name" :filters="[{data: ''}]" :filter-method="customStringFilterMethod">
+        <gj-column field="name" :filters="[{data: ''}]" :filter-method="customStringFilterMethod">
           <template #header="{ column }">
             <vxe-input type="text" v-for="(option, index) in column.filters" :key="index" v-model="option.data" @change="filterEvent(option)" placeholder="请输入" clearable></vxe-input>
           </template>
-        </jy-column>
+        </gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="日期">
-        <jy-column field="date" :filters="[{data: ''}]" :filter-method="customDateFilterMethod">
+        <gj-column field="date" :filters="[{data: ''}]" :filter-method="customDateFilterMethod">
           <template #header="{ column }">
             <vxe-input type="date" v-for="(option, index) in column.filters" :key="index" v-model="option.data" @change="filterEvent(option)" placeholder="请选择" clearable transfer></vxe-input>
           </template>
-        </jy-column>
+        </gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="下拉框">
-        <jy-column field="sex" :filters="[{data: ''}]" :filter-method="customEqualFilterMethod" :formatter="formatterSex">
+        <gj-column field="sex" :filters="[{data: ''}]" :filter-method="customEqualFilterMethod" :formatter="formatterSex">
           <template #header="{ column }">
             <vxe-select v-for="(option, index) in column.filters" :key="index" v-model="option.data" :options="sexList" @change="filterEvent(option)" placeholder="请选择" clearable transfer></vxe-select>
           </template>
-        </jy-column>
+        </gj-column>
       </vxe-colgroup>
-      <jy-column field="address" title="Address" sortable></jy-column>
-    </jy-table>
+      <gj-column field="address" title="Address" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -57,37 +57,37 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           ref="xTable"
           height="400"
           :filter-config="{showIcon: false}"
           :loading="loading"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
           <vxe-colgroup title="文本">
-            <jy-column field="name" :filters="[{data: ''}]" :filter-method="customStringFilterMethod">
+            <gj-column field="name" :filters="[{data: ''}]" :filter-method="customStringFilterMethod">
               <template #header="{ column }">
                 <vxe-input type="text" v-for="(option, index) in column.filters" :key="index" v-model="option.data" @change="filterEvent(option)" placeholder="请输入" clearable></vxe-input>
               </template>
-            </jy-column>
+            </gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="日期">
-            <jy-column field="date" :filters="[{data: ''}]" :filter-method="customDateFilterMethod">
+            <gj-column field="date" :filters="[{data: ''}]" :filter-method="customDateFilterMethod">
               <template #header="{ column }">
                 <vxe-input type="date" v-for="(option, index) in column.filters" :key="index" v-model="option.data" @change="filterEvent(option)" placeholder="请选择" clearable transfer></vxe-input>
               </template>
-            </jy-column>
+            </gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="下拉框">
-            <jy-column field="sex" :filters="[{data: ''}]" :filter-method="customEqualFilterMethod" :formatter="formatterSex">
+            <gj-column field="sex" :filters="[{data: ''}]" :filter-method="customEqualFilterMethod" :formatter="formatterSex">
               <template #header="{ column }">
                 <vxe-select v-for="(option, index) in column.filters" :key="index" v-model="option.data" :options="sexList" @change="filterEvent(option)" placeholder="请选择" clearable transfer></vxe-select>
               </template>
-            </jy-column>
+            </gj-column>
           </vxe-colgroup>
-          <jy-column field="address" title="Address" sortable></jy-column>
-        </jy-table>
+          <gj-column field="address" title="Address" sortable></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

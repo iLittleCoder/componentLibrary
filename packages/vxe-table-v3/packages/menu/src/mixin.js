@@ -87,7 +87,7 @@ export default {
         // 分别匹配表尾、内容、表尾的快捷菜单
         for (let index = 0; index < layoutList.length; index++) {
           const layout = layoutList[index]
-          const columnTargetNode = DomTools.getEventTargetNode(evnt, this.$el, `jy-${layout}--column`, target => {
+          const columnTargetNode = DomTools.getEventTargetNode(evnt, this.$el, `gj-${layout}--column`, target => {
             // target=td|th，直接向上找 table 去匹配即可
             return target.parentNode.parentNode.parentNode.getAttribute('xid') === tId
           })
@@ -114,7 +114,7 @@ export default {
               this.emitEvent(`${typePrefix}cell-menu`, params, evnt)
             }
             return
-          } else if (DomTools.getEventTargetNode(evnt, this.$el, `jy-table--${layout}-wrapper`, target => target.getAttribute('xid') === tId).flag) {
+          } else if (DomTools.getEventTargetNode(evnt, this.$el, `gj-table--${layout}-wrapper`, target => target.getAttribute('xid') === tId).flag) {
             if (ctxMenuOpts.trigger === 'cell') {
               evnt.preventDefault()
             } else {

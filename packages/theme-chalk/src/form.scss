@@ -4,7 +4,7 @@
 
 @include b(form) {
   @include m(label-left) {
-    & .jy-form-item__label {
+    & .gj-form-item__label {
       text-align: left;
       &--flex{
         justify-content: start;
@@ -12,7 +12,7 @@
     }
   }
   @include m(label-right) {
-    & .jy-form-item__label {
+    & .gj-form-item__label {
       text-align: right;
       &--flex{
         justify-content: end;
@@ -20,7 +20,7 @@
     }
   }
   @include m(label-top) {
-    & .jy-form-item__label {
+    & .gj-form-item__label {
       margin-top: 14px;
       float: none;
       display: inline-block;
@@ -30,20 +30,20 @@
     }
   }
   @include m(inline) {
-    & .jy-form-item {
+    & .gj-form-item {
       display: inline-block;
       margin-right: 10px;
       vertical-align: top;
     }
-    & .jy-form-item__label {
+    & .gj-form-item__label {
       float: none;
       display: inline-block;
     }
-    & .jy-form-item__content {
+    & .gj-form-item__content {
       display: inline-block;
       vertical-align: top;
     }
-    &.jy-form--label-top .jy-form-item__content {
+    &.gj-form--label-top .gj-form-item__content {
       display: block;
     }
   }
@@ -52,63 +52,63 @@
   margin-bottom: 16px;
   @include utils-clearfix;
 
-  & .jy-form-item {
+  & .gj-form-item {
     margin-bottom: 0;
   }
 
-  & .jy-input__validateIcon {
+  & .gj-input__validateIcon {
     display: none;
   }
 
   @include m(large) {
-    .jy-form-item__label {
+    .gj-form-item__label {
       line-height: 40px;
     }
-    .jy-form-item__content {
+    .gj-form-item__content {
       line-height: 40px;
     }
-    &.jy-form-item {
+    &.gj-form-item {
       margin-bottom: 24px;
     }
   }
   @include m(medium) {
-    .jy-form-item__label {
+    .gj-form-item__label {
       line-height: 32px;
       padding-right: 20px;
     }
-    .jy-form-item__content {
+    .gj-form-item__content {
       line-height: 32px;
-      .jy-form-item__error--inline{
+      .gj-form-item__error--inline{
         line-height: 32px;
       }
     }
-    &.jy-form-item {
+    &.gj-form-item {
       margin-bottom: 20px;
     }
   }
   @include m(mini) {
-    .jy-form-item__label {
+    .gj-form-item__label {
       line-height: 22px;
       padding-right: 12px;
     }
-    .jy-form-item__content {
+    .gj-form-item__content {
       line-height: 22px;
-      .jy-form-item__error--inline{
+      .gj-form-item__error--inline{
         line-height: 22px;
       }
 
     }
-    &.jy-form-item {
+    &.gj-form-item {
       margin-bottom: 12px;
     }
-    .jy-form-item__error {
+    .gj-form-item__error {
       padding-top: 1px;
     }
   }
 
   @include e(label-wrap) {
     float: left;
-    .jy-form-item__label {
+    .gj-form-item__label {
       display: inline-block;
       float: none;
     }
@@ -139,13 +139,13 @@
     font-size: 14px;
     @include utils-clearfix;
 
-    .jy-input-group {
+    .gj-input-group {
       vertical-align: top;
     }
     &-line{
       display: flex;
     }
-    .jy-form-item__error--inline{
+    .gj-form-item__error--inline{
       line-height: 28px;
       width: 120px;
     }
@@ -176,8 +176,8 @@
 
   // @include when(required) {
   //   @include pseudo('not(.is-no-asterisk)') {
-  //     & > .jy-form-item__label:before,
-  //     & .jy-form-item__label-wrap > .jy-form-item__label:before {
+  //     & > .gj-form-item__label:before,
+  //     & .gj-form-item__label-wrap > .gj-form-item__label:before {
   //       content: '*';
   //       color: $--color-danger;
   //       margin-right: 4px;
@@ -187,25 +187,25 @@
 
   @include when(error) {
     margin-bottom: 30px;
-    & .jy-input__inner,
-    & .jy-textarea__inner {
+    & .gj-input__inner,
+    & .gj-textarea__inner {
       &, &:focus {
         border-color: $--color-danger;
       }
     }
-    & .jy-input-group__append,
-    & .jy-input-group__prepend {
-      & .jy-input__inner {
+    & .gj-input-group__append,
+    & .gj-input-group__prepend {
+      & .gj-input__inner {
         border-color: transparent;
       }
     }
-    .jy-input__validateIcon {
+    .gj-input__validateIcon {
       color: $--color-danger;
     }
   }
 
   @include m(feedback) {
-    .jy-input__validateIcon {
+    .gj-input__validateIcon {
       display: inline-block;
     }
   }

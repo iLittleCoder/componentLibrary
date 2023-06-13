@@ -1,5 +1,5 @@
 <template>
-  <jy-input
+  <gj-input
     @keyup.enter.native="onUpdate"
     v-model="value"
     @blur="onUpdate"
@@ -8,7 +8,7 @@
     <template slot="suffix">
       <slot name="suffix"></slot>
     </template>
-  </jy-input>
+  </gj-input>
 </template>
 
 <script>

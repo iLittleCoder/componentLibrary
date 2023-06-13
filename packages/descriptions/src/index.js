@@ -2,7 +2,7 @@ import DescriptionsRow from './descriptions-row';
 import { isFunction } from 'GildataDesign/src/utils/types';
 
 export default {
-  name: 'JyDescriptions',
+  name: 'GjDescriptions',
   components: {
     [DescriptionsRow.name]: DescriptionsRow
   },

@@ -1,7 +1,7 @@
 <template>
   <transition name="el-alert-fade">
     <div
-      class="jy-alert"
+      class="gj-alert"
       :class="[
         typeClass,
         center ? 'is-center' : '',
@@ -15,16 +15,16 @@
       v-show="visible"
       role="alert"
     >
-      <svg v-if="showIcon" class="jy-alert__icon svg-icon" :class="[isBigIcon]" aria-hidden="true">
+      <svg v-if="showIcon" class="gj-alert__icon svg-icon" :class="[isBigIcon]" aria-hidden="true">
         <use :xlink:href="'#' + iconClass"></use>
       </svg>
-      <div class="jy-alert__content">
-        <span class="jy-alert__title" v-if="title || $slots.title">
+      <div class="gj-alert__content">
+        <span class="gj-alert__title" v-if="title || $slots.title">
           <slot name="title">{{ title }}</slot>
         </span>
-        <p class="jy-alert__description" v-if="$slots.default && !description"><slot></slot></p>
-        <p class="jy-alert__description" v-if="description && !$slots.default">{{ description }}</p>
-        <span class="jy-alert__closebtn" :class="{ 'is-customed': closeText !== '' }" @click="close()"
+        <p class="gj-alert__description" v-if="$slots.default && !description"><slot></slot></p>
+        <p class="gj-alert__description" v-if="description && !$slots.default">{{ description }}</p>
+        <span class="gj-alert__closebtn" :class="{ 'is-customed': closeText !== '' }" @click="close()"
           ><span v-if="closeText">{{ closeText }}</span
           ><i v-if="closable" class="Gildata-close"></i
         ></span>
@@ -51,7 +51,7 @@ const TYPE_Light = {
 };
 
 export default {
-  name: 'JyAlert',
+  name: 'GjAlert',
 
   props: {
     title: {
@@ -121,7 +121,7 @@ export default {
 
   computed: {
     typeClass() {
-      return `jy-alert--${this.type}`;
+      return `gj-alert--${this.type}`;
     },
 
     iconClass() {

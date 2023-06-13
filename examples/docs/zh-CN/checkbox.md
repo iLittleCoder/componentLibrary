@@ -6,12 +6,12 @@
 
 单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。
 
-:::demo 在`jy-checkbox`元素中定义`v-model`绑定变量，单一的`checkbox`中，默认绑定变量的值会是`Boolean`，选中为`true`。
+:::demo 在`gj-checkbox`元素中定义`v-model`绑定变量，单一的`checkbox`中，默认绑定变量的值会是`Boolean`，选中为`true`。
 
 ```html
 <template>
   <!-- `checked` 为 true 或 false -->
-  <jy-checkbox v-model="checked">备选项</jy-checkbox>
+  <gj-checkbox v-model="checked">备选项</gj-checkbox>
 </template>
 <script>
   export default {
@@ -34,8 +34,8 @@
 
 ```html
 <template>
-  <jy-checkbox v-model="checked1" disabled>备选项1</jy-checkbox>
-  <jy-checkbox v-model="checked2" disabled>备选项</jy-checkbox>
+  <gj-checkbox v-model="checked1" disabled>备选项1</gj-checkbox>
+  <gj-checkbox v-model="checked2" disabled>备选项</gj-checkbox>
 </template>
 <script>
   export default {
@@ -55,17 +55,17 @@
 
 适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。
 
-:::demo `checkbox-group`元素能把多个 checkbox 管理为一组，只需要在 Group 中使用`v-model`绑定`Array`类型的变量即可。 `jy-checkbox` 的 `label`属性是该 checkbox 对应的值，若该标签中无内容，则该属性也充当 checkbox 按钮后的介绍。`label`与数组中的元素值相对应，如果存在指定的值则为选中状态，否则为不选中。
+:::demo `checkbox-group`元素能把多个 checkbox 管理为一组，只需要在 Group 中使用`v-model`绑定`Array`类型的变量即可。 `gj-checkbox` 的 `label`属性是该 checkbox 对应的值，若该标签中无内容，则该属性也充当 checkbox 按钮后的介绍。`label`与数组中的元素值相对应，如果存在指定的值则为选中状态，否则为不选中。
 
 ```html
 <template>
-  <jy-checkbox-group v-model="checkList">
-    <jy-checkbox label="复选框 A"></jy-checkbox>
-    <jy-checkbox label="复选框 B"></jy-checkbox>
-    <jy-checkbox label="复选框 C"></jy-checkbox>
-    <jy-checkbox label="禁用" disabled></jy-checkbox>
-    <jy-checkbox label="选中且禁用" disabled></jy-checkbox>
-  </jy-checkbox-group>
+  <gj-checkbox-group v-model="checkList">
+    <gj-checkbox label="复选框 A"></gj-checkbox>
+    <gj-checkbox label="复选框 B"></gj-checkbox>
+    <gj-checkbox label="复选框 C"></gj-checkbox>
+    <gj-checkbox label="禁用" disabled></gj-checkbox>
+    <gj-checkbox label="选中且禁用" disabled></gj-checkbox>
+  </gj-checkbox-group>
 </template>
 
 <script>
@@ -89,24 +89,24 @@
 
 ```html
 <template>
-  <jy-checkbox
+  <gj-checkbox
     :indeterminate="isIndeterminate"
     v-model="checkAll"
     @change="handleCheckAllChange"
-    >全选</jy-checkbox
+    >全选</gj-checkbox
   >
-  <jy-checkbox disabled :indeterminate="isIndeterminate" v-model="checkAll"
-    >全选</jy-checkbox
+  <gj-checkbox disabled :indeterminate="isIndeterminate" v-model="checkAll"
+    >全选</gj-checkbox
   >
   <div style="margin: 15px 0;"></div>
-  <jy-checkbox-group
+  <gj-checkbox-group
     v-model="checkedCities"
     @change="handleCheckedCitiesChange"
   >
-    <jy-checkbox v-for="city in cities" :label="city" :key="city"
-      >{{city}}</jy-checkbox
+    <gj-checkbox v-for="city in cities" :label="city" :key="city"
+      >{{city}}</gj-checkbox
     >
-  </jy-checkbox-group>
+  </gj-checkbox-group>
 </template>
 <script>
   const cityOptions = ['上海', '北京', '广州', '深圳'];
@@ -145,11 +145,11 @@
 
 ```html
 <template>
-  <jy-checkbox-group v-model="checkedCities" :min="1" :max="2">
-    <jy-checkbox v-for="city in cities" :label="city" :key="city"
-      >{{city}}</jy-checkbox
+  <gj-checkbox-group v-model="checkedCities" :min="1" :max="2">
+    <gj-checkbox v-for="city in cities" :label="city" :key="city"
+      >{{city}}</gj-checkbox
     >
-  </jy-checkbox-group>
+  </gj-checkbox-group>
 </template>
 <script>
   const cityOptions = ['上海', '北京', '广州', '深圳'];
@@ -170,37 +170,37 @@
 
 按钮样式的多选组合。
 
-:::demo 只需要把`jy-checkbox`元素替换为`jy-checkbox-button`元素即可。此外，GildataDesign 还提供了`size`属性。
+:::demo 只需要把`gj-checkbox`元素替换为`gj-checkbox-button`元素即可。此外，GildataDesign 还提供了`size`属性。
 
 ```html
 <template>
   <div>
-    <jy-checkbox-group v-model="checkboxGroup1">
-      <jy-checkbox-button v-for="city in cities" :label="city" :key="city"
-        >{{city}}</jy-checkbox-button
+    <gj-checkbox-group v-model="checkboxGroup1">
+      <gj-checkbox-button v-for="city in cities" :label="city" :key="city"
+        >{{city}}</gj-checkbox-button
       >
-    </jy-checkbox-group>
+    </gj-checkbox-group>
   </div>
   <div style="margin-top: 20px">
-    <jy-checkbox-group v-model="checkboxGroup2" size="medium">
-      <jy-checkbox-button v-for="city in cities" :label="city" :key="city"
-        >{{city}}</jy-checkbox-button
+    <gj-checkbox-group v-model="checkboxGroup2" size="medium">
+      <gj-checkbox-button v-for="city in cities" :label="city" :key="city"
+        >{{city}}</gj-checkbox-button
       >
-    </jy-checkbox-group>
+    </gj-checkbox-group>
   </div>
   <div style="margin-top: 20px">
-    <jy-checkbox-group v-model="checkboxGroup3" size="small">
-      <jy-checkbox-button v-for="city in cities" :label="city" :key="city"
-        >{{city}}</jy-checkbox-button
+    <gj-checkbox-group v-model="checkboxGroup3" size="small">
+      <gj-checkbox-button v-for="city in cities" :label="city" :key="city"
+        >{{city}}</gj-checkbox-button
       >
-    </jy-checkbox-group>
+    </gj-checkbox-group>
   </div>
   <div style="margin-top: 20px">
-    <jy-checkbox-group v-model="checkboxGroup4" size="mini" disabled>
-      <jy-checkbox-button v-for="city in cities" :label="city" :key="city"
-        >{{city}}</jy-checkbox-button
+    <gj-checkbox-group v-model="checkboxGroup4" size="mini" disabled>
+      <gj-checkbox-button v-for="city in cities" :label="city" :key="city"
+        >{{city}}</gj-checkbox-button
       >
-    </jy-checkbox-group>
+    </gj-checkbox-group>
   </div>
 </template>
 <script>
@@ -228,53 +228,53 @@
 ```html
 <template>
   <div>
-    <jy-checkbox
+    <gj-checkbox
       v-model="checked1"
       label="备选项1"
       border
       size="large"
-    ></jy-checkbox>
-    <jy-checkbox
+    ></gj-checkbox>
+    <gj-checkbox
       v-model="checked2"
       label="备选项2"
       border
       size="large"
-    ></jy-checkbox>
+    ></gj-checkbox>
   </div>
   <div style="margin-top: 20px">
-    <jy-checkbox
+    <gj-checkbox
       v-model="checked3"
       label="备选项1"
       border
       size="medium"
       style="margin-right: 34px"
-    ></jy-checkbox>
-    <jy-checkbox
+    ></gj-checkbox>
+    <gj-checkbox
       v-model="checked4"
       label="备选项2"
       border
       size="medium"
-    ></jy-checkbox>
+    ></gj-checkbox>
   </div>
   <div style="margin-top: 20px">
-    <jy-checkbox-group v-model="checkboxGroup1">
-      <jy-checkbox
+    <gj-checkbox-group v-model="checkboxGroup1">
+      <gj-checkbox
         label="备选项1"
         border
         style="margin-right: 42px"
-      ></jy-checkbox>
-      <jy-checkbox label="备选项2" border disabled></jy-checkbox>
-    </jy-checkbox-group>
+      ></gj-checkbox>
+      <gj-checkbox label="备选项2" border disabled></gj-checkbox>
+    </gj-checkbox-group>
   </div>
   <div style="margin-top: 20px">
-    <jy-checkbox-group v-model="checkboxGroup2" size="mini" disabled>
-      <jy-checkbox
+    <gj-checkbox-group v-model="checkboxGroup2" size="mini" disabled>
+      <gj-checkbox
         label="备选项1"
         border
         style="margin-right: 48px"
-      ></jy-checkbox>
-      <jy-checkbox label="备选项2" border></jy-checkbox>
-    </jy-checkbox-group>
+      ></gj-checkbox>
+      <gj-checkbox label="备选项2" border></gj-checkbox>
+    </gj-checkbox-group>
   </div>
 </template>
 

@@ -7,10 +7,10 @@
 :::demo autocomplete 是一个可带输入建议的输入框组件，`fetch-suggestions` 是一个返回输入建议的方法属性，如 querySearch(queryString, cb)，在该方法中你可以在你的输入建议数据准备好时通过 cb(data) 返回到 autocomplete 组件中。
 
 ```html
-<jy-row class="demo-autocomplete">
-  <jy-col :span="12">
+<gj-row class="demo-autocomplete">
+  <gj-col :span="12">
     <div class="sub-title">激活即列出输入建议</div>
-    <jy-autocomplete
+    <gj-autocomplete
       ref="autoComplete"
       :noHighLight="false"
       class="inline-input"
@@ -18,20 +18,20 @@
       :fetch-suggestions="querySearch"
       placeholder="请输入内容"
       @select="handleSelect"
-    ></jy-autocomplete>
-  </jy-col>
-  <jy-col :span="12">
+    ></gj-autocomplete>
+  </gj-col>
+  <gj-col :span="12">
     <div class="sub-title">输入后匹配输入建议</div>
-    <jy-autocomplete
+    <gj-autocomplete
       class="inline-input"
       v-model="state2"
       :fetch-suggestions="querySearch"
       placeholder="请输入内容"
       :trigger-on-focus="false"
       @select="handleSelect"
-    ></jy-autocomplete>
-  </jy-col>
-</jy-row>
+    ></gj-autocomplete>
+  </gj-col>
+</gj-row>
 <script>
   export default {
     data() {
@@ -99,20 +99,20 @@
 :::demo 使用`scoped slot`自定义输入建议的模板。该 scope 的参数为`item`，表示当前输入建议对象。
 
 ```html
-<jy-autocomplete
+<gj-autocomplete
   popper-class="my-autocomplete"
   v-model="state"
   :fetch-suggestions="querySearch"
   placeholder="请输入内容"
   @select="handleSelect"
 >
-  <i class="Gildata-edit jy-input__icon" slot="suffix" @click="handleIconClick">
+  <i class="Gildata-edit gj-input__icon" slot="suffix" @click="handleIconClick">
   </i>
   <template slot-scope="{ item }">
     <div class="name">{{ item.value }}</div>
     <span class="addr">{{ item.address }}</span>
   </template>
-</jy-autocomplete>
+</gj-autocomplete>
 
 <style>
   .my-autocomplete {
@@ -199,12 +199,12 @@
 :::demo
 
 ```html
-<jy-autocomplete
+<gj-autocomplete
   v-model="state"
   :fetch-suggestions="querySearchAsync"
   placeholder="请输入内容"
   @select="handleSelect"
-></jy-autocomplete>
+></gj-autocomplete>
 <script>
   export default {
     data() {

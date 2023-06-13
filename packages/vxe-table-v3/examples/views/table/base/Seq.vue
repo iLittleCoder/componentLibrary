@@ -2,16 +2,16 @@
   <div>
     <p class="tip">设置 <table-column-api-link prop="type"/>=<table-column-api-link prop="seq"/> 开启序号列</p>
 
-    <jy-table
+    <gj-table
       border
       height="300"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -22,18 +22,18 @@
 
     <p class="tip">使用 <table-api-link prop="seq-config"/>={<table-api-link prop="startIndex"/>} 自定义起始序号</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       height="300"
       :seq-config="{startIndex: 100}"
       :data="tableData">
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -44,18 +44,18 @@
 
     <p class="tip">使用 <table-api-link prop="seq-config"/>={<table-api-link prop="seqMethod"/>} 自定义方法</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       height="300"
       :seq-config="{seqMethod}"
       :data="tableData">
-      <jy-column type="seq" title="序号" width="80"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" title="序号" width="80"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -82,16 +82,16 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           height="300"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -112,18 +112,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           height="300"
           :seq-config="{startIndex: 100}"
           :data="tableData">
-          <jy-column type="seq" title="序号" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" title="序号" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -144,18 +144,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           height="300"
           :seq-config="{seqMethod}"
           :data="tableData">
-          <jy-column type="seq" title="序号" width="80"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" title="序号" width="80"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {

@@ -19,11 +19,11 @@ export default {
     const $xetable = this.$parent
     const { _e, ctxMenuOpts, ctxMenuStore } = this
     return h('div', {
-      class: ['jy-table--context-menu-wrapper', ctxMenuOpts.className],
+      class: ['gj-table--context-menu-wrapper', ctxMenuOpts.className],
       style: ctxMenuStore.style
     }, ctxMenuStore.list.map((options, gIndex) => {
       return options.every(item => item.visible === false) ? _e() : h('ul', {
-        class: 'jy-table-context-menu--option-wrapper',
+        class: 'gj-table-context-menu--option-wrapper',
         key: gIndex
       }, options.map((item, index) => {
         const hasChildMenus = item.children && item.children.some((child) => child.visible !== false)
@@ -35,7 +35,7 @@ export default {
           key: `${gIndex}_${index}`
         }, [
           h('a', {
-            class: 'jy-context-menu--link',
+            class: 'gj-context-menu--link',
             on: {
               click (evnt) {
                 $xetable.ctxMenuLinkEvent(evnt, item)
@@ -49,17 +49,17 @@ export default {
             }
           }, [
             h('i', {
-              class: ['jy-context-menu--link-prefix', item.prefixIcon]
+              class: ['gj-context-menu--link-prefix', item.prefixIcon]
             }),
             h('span', {
-              class: 'jy-context-menu--link-content'
+              class: 'gj-context-menu--link-content'
             }, getFuncText(item.name)),
             h('i', {
-              class: ['jy-context-menu--link-suffix', hasChildMenus ? item.suffixIcon || 'suffix--haschild' : item.suffixIcon]
+              class: ['gj-context-menu--link-suffix', hasChildMenus ? item.suffixIcon || 'suffix--haschild' : item.suffixIcon]
             })
           ]),
           hasChildMenus ? h('ul', {
-            class: ['jy-table--context-menu-clild-wrapper', {
+            class: ['gj-table--context-menu-clild-wrapper', {
               'is--show': item === ctxMenuStore.selected && ctxMenuStore.showChild
             }]
           }, item.children.map((child, cIndex) => {
@@ -71,7 +71,7 @@ export default {
               key: `${gIndex}_${index}_${cIndex}`
             }, [
               h('a', {
-                class: 'jy-table-context-menu--link',
+                class: 'gj-table-context-menu--link',
                 on: {
                   click (evnt) {
                     $xetable.ctxMenuLinkEvent(evnt, child)
@@ -85,10 +85,10 @@ export default {
                 }
               }, [
                 h('i', {
-                  class: ['jy-table-context-menu--link-prefix', child.prefixIcon]
+                  class: ['gj-table-context-menu--link-prefix', child.prefixIcon]
                 }),
                 h('span', {
-                  class: 'jy-table-context-menu--link-content'
+                  class: 'gj-table-context-menu--link-content'
                 }, getFuncText(child.name))
               ])
             ])

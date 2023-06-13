@@ -5,7 +5,7 @@
        <span class="red">（注：连接线不支持虚拟滚动）</span>
     </p>
 
-    <jy-table
+    <gj-table
       resizable
       show-overflow
       highlight-hover-row
@@ -13,15 +13,15 @@
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId', line: true}"
       :data="tableData1"
       :scroll-y="{enabled: false}">
-      <jy-column field="name" title="Name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="tip">复选框</p>
 
-    <jy-table
+    <gj-table
       resizable
       show-overflow
       highlight-hover-row
@@ -32,15 +32,15 @@
       :checkbox-config="{labelField: 'name'}"
       :data="tableData2"
       :scroll-y="{enabled: false}">
-      <jy-column type="checkbox" title="Name" width="280" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="Name" width="280" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="tip">自定义图标，通过设置 <table-api-link prop="tree-config"/>={<table-api-link prop="iconOpen"/>, <table-api-link prop="iconClose"/>} 局部替换默认的图标</p>
 
-    <jy-table
+    <gj-table
       resizable
       show-overflow
       highlight-hover-row
@@ -50,15 +50,15 @@
       :tree-config="{accordion: true, line: true, iconOpen: 'vxe-icon--remove', iconClose: 'vxe-icon--circle-plus'}"
       :data="tableData3"
       :scroll-y="{enabled: false}">
-      <jy-column type="radio" title="Name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="radio" title="Name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="tip">更多自定义</p>
 
-    <jy-table
+    <gj-table
       resizable
       show-overflow
       highlight-hover-row
@@ -69,7 +69,7 @@
       :tree-config="{line: true, iconOpen: 'vxe-icon--remove', iconClose: 'vxe-icon--circle-plus'}"
       :data="tableData4"
       :scroll-y="{enabled: false}">
-      <jy-column type="checkbox" title="Name" tree-node>
+      <gj-column type="checkbox" title="Name" tree-node>
         <template #default="{ row }">
           <span>
             <template v-if="row.children && row.children.length">
@@ -81,11 +81,11 @@
             <span>{{ row.name }}</span>
           </span>
         </template>
-      </jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
   </div>
 </template>

@@ -1,35 +1,35 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="doDestroy">
+  <transition name="gj-zoom-in-top" @after-leave="doDestroy">
     <div
       v-show="showPopper"
-      class="jy-autocomplete-suggestion jy-popper"
+      class="gj-autocomplete-suggestion gj-popper"
       :class="{ 'is-loading': !parent.hideLoading && parent.loading }"
       :style="{ width: dropdownWidth }"
       role="region"
     >
-      <jy-scrollbar
+      <gj-scrollbar
         tag="ul"
-        wrap-class="jy-autocomplete-suggestion__wrap"
-        view-class="jy-autocomplete-suggestion__list"
+        wrap-class="gj-autocomplete-suggestion__wrap"
+        view-class="gj-autocomplete-suggestion__list"
       >
         <li v-if="!parent.hideLoading && parent.loading">
           <i class="Gildata-loading"></i>
         </li>
         <slot v-else> </slot>
-      </jy-scrollbar>
+      </gj-scrollbar>
     </div>
   </transition>
 </template>
 <script>
 import Popper from 'GildataDesign/src/utils/vue-popper';
 import Emitter from 'GildataDesign/src/mixins/emitter';
-import JyScrollbar from 'GildataDesign/packages/scrollbar';
+import GjScrollbar from 'GildataDesign/packages/scrollbar';
 
 export default {
-  components: { JyScrollbar },
+  components: { GjScrollbar },
   mixins: [Popper, Emitter],
 
-  componentName: 'JyAutocompleteSuggestions',
+  componentName: 'GjAutocompleteSuggestions',
 
   data() {
     return {
@@ -51,7 +51,7 @@ export default {
 
   methods: {
     select(item) {
-      this.dispatch('JyAutocomplete', 'item-click', item);
+      this.dispatch('GjAutocomplete', 'item-click', item);
     }
   },
 
@@ -67,7 +67,7 @@ export default {
       this.$parent.$refs.input.$refs.input ||
       this.$parent.$refs.input.$refs.textarea;
     this.referenceList = this.$el.querySelector(
-      '.jy-autocomplete-suggestion__list'
+      '.gj-autocomplete-suggestion__list'
     );
     this.referenceList.setAttribute('role', 'listbox');
     this.referenceList.setAttribute('id', this.id);

@@ -1,19 +1,19 @@
 /**Variable**/
 
-.jy-table--footer-wrapper {
-  color: $jy-table-footer-font-color;
+.gj-table--footer-wrapper {
+  color: $gj-table-footer-font-color;
   margin-top: -1px;
   &.body--wrapper{
     overflow-x: auto;
   }
 }
 
-.jy-footer--column {
+.gj-footer--column {
   &.col--ellipsis {
-    & > .jy-cell {
+    & > .gj-cell {
       display: flex;
       align-items: center;
-      .jy-cell--item {
+      .gj-cell--item {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

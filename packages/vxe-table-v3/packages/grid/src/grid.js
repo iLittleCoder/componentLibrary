@@ -331,7 +331,7 @@ export default {
       /**
        * 渲染表格
        */
-      h('jy-table', {
+      h('gj-table', {
         props: this.tableProps,
         on: getTableOns(this),
         scopedSlots: $scopedSlots,

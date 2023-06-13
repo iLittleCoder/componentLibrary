@@ -47,7 +47,7 @@
   }
 
   &:first-child {
-    .jy-radio-button__inner {
+    .gj-radio-button__inner {
       border-left: $--border-base;
       border-radius: $--border-radius-base 0 0 $--border-radius-base;
       box-shadow: none !important;
@@ -61,7 +61,7 @@
     z-index: -1;
 
     &:checked {
-      & + .jy-radio-button__inner {
+      & + .gj-radio-button__inner {
         color: $--radio-button-checked-font-color;
         background-color: $--radio-button-checked-background-color;
         border-color: $--radio-button-checked-border-color;
@@ -70,7 +70,7 @@
     }
 
     &:disabled {
-      & + .jy-radio-button__inner {
+      & + .gj-radio-button__inner {
         color: $--color-text-disabled;
         cursor: not-allowed;
         background-image: none;
@@ -78,36 +78,36 @@
         border-color: $--border-color-disabled;
         box-shadow: none;
       }
-      &:checked + .jy-radio-button__inner {
+      &:checked + .gj-radio-button__inner {
         background-color: $--radio-button-disabled-checked-fill;
       }
     }
   }
 
   &:last-child {
-    .jy-radio-button__inner {
+    .gj-radio-button__inner {
       border-radius: 0 $--border-radius-base $--border-radius-base 0;
     }
   }
 
   &:first-child:last-child {
-    .jy-radio-button__inner {
+    .gj-radio-button__inner {
       border-radius: $--border-radius-base;
     }
   }
 
   @include m(medium) {
-    & .jy-radio-button__inner {
+    & .gj-radio-button__inner {
       @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, 0);
     }
   }
   @include m(small) {
-    & .jy-radio-button__inner {
+    & .gj-radio-button__inner {
       @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, 0);
     }
   }
   @include m(mini) {
-    & .jy-radio-button__inner {
+    & .gj-radio-button__inner {
       @include button-size($--button-mini-padding-vertical, $--button-mini-padding-horizontal, $--button-mini-font-size, 0);
     }
   }

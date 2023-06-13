@@ -17,24 +17,24 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       highlight-hover-row
       ref="xTable1"
       height="300"
       :show-overflow="showOverflow1"
       :export-config="{}"
       :data="tableData1">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
       <vxe-colgroup title="Group1">
-        <jy-column field="name" title="Name"></jy-column>
+        <gj-column field="name" title="Name"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="Group2">
-        <jy-column field="attr1" title="自动转换"></jy-column>
-        <jy-column field="amount" title="导出数值" cell-type="number"></jy-column>
-        <jy-column field="num" title="导出字符串" cell-type="string" sortable></jy-column>
+        <gj-column field="attr1" title="自动转换"></gj-column>
+        <gj-column field="amount" title="导出数值" cell-type="number"></gj-column>
+        <gj-column field="num" title="导出字符串" cell-type="string" sortable></gj-column>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -51,17 +51,17 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       highlight-hover-row
       ref="xTable2"
       height="300"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -78,19 +78,19 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       show-footer
       highlight-hover-row
       height="300"
       ref="xTable3"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex" :formatter="formatterSex"></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex" :formatter="formatterSex"></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -109,7 +109,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       highlight-hover-row
@@ -118,12 +118,12 @@
       :loading="loading"
       :footer-method="footerMethod"
       :data="tableData4">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex" :formatter="formatterSex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column type="html" field="html1" title="Html片段"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex" :formatter="formatterSex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column type="html" field="html1" title="Html片段"></gj-column>
+    </gj-table>
 
     <vxe-pager
       :loading="loading"
@@ -185,24 +185,24 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           highlight-hover-row
           ref="xTable1"
           height="300"
           :show-overflow="showOverflow1"
           :export-config="{}"
           :data="tableData1">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
           <vxe-colgroup title="Group1">
-            <jy-column field="name" title="Name"></jy-column>
+            <gj-column field="name" title="Name"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="Group2">
-            <jy-column field="attr1" title="自动转换"></jy-column>
-            <jy-column field="amount" title="导出数值" cell-type="number"></jy-column>
-            <jy-column field="num" title="导出字符串" cell-type="string" sortable></jy-column>
+            <gj-column field="attr1" title="自动转换"></gj-column>
+            <gj-column field="amount" title="导出数值" cell-type="number"></gj-column>
+            <gj-column field="num" title="导出字符串" cell-type="string" sortable></gj-column>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {
@@ -242,17 +242,17 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           highlight-hover-row
           ref="xTable2"
           height="300"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -287,19 +287,19 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           show-footer
           highlight-hover-row
           height="300"
           ref="xTable3"
           :footer-method="footerMethod"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex" :formatter="formatterSex"></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex" :formatter="formatterSex"></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -365,7 +365,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-footer
           highlight-hover-row
@@ -374,12 +374,12 @@ export default {
           :loading="loading"
           :footer-method="footerMethod"
           :data="tableData4">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex" :formatter="formatterSex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column type="html" field="html1" title="Html片段"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex" :formatter="formatterSex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column type="html" field="html1" title="Html片段"></gj-column>
+        </gj-table>
 
         <vxe-pager
           :loading="loading"

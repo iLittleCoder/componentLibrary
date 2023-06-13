@@ -5,13 +5,13 @@ export default {
     updateAll: Boolean
   },
 
-  inject: ['jyForm', 'jyFormItem'],
+  inject: ['GjForm', 'GjFormItem'],
 
   render() {
     const slots = this.$slots.default;
     if (!slots) return null;
     if (this.isAutoWidth) {
-      const autoLabelWidth = this.jyForm.autoLabelWidth;
+      const autoLabelWidth = this.GjForm.autoLabelWidth;
       const style = {};
       if (autoLabelWidth && autoLabelWidth !== 'auto') {
         const marginLeft = parseInt(autoLabelWidth, 10) - this.computedWidth;
@@ -20,7 +20,7 @@ export default {
         }
       }
       return (
-        <div class="jy-form-item__label-wrap" style={style}>
+        <div class="gj-form-item__label-wrap" style={style}>
           {slots}
         </div>
       );
@@ -49,7 +49,7 @@ export default {
         if (action === 'update') {
           this.computedWidth = this.getLabelWidth();
         } else if (action === 'remove') {
-          this.jyForm.deregisterLabelWidth(this.computedWidth);
+          this.GjForm.deregisterLabelWidth(this.computedWidth);
         }
       }
     }
@@ -58,8 +58,8 @@ export default {
   watch: {
     computedWidth(val, oldVal) {
       if (this.updateAll) {
-        this.jyForm.registerLabelWidth(val, oldVal);
-        this.jyFormItem.updateComputedLabelWidth(val);
+        this.GjForm.registerLabelWidth(val, oldVal);
+        this.GjFormItem.updateComputedLabelWidth(val);
       }
     }
   },

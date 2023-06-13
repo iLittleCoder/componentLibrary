@@ -5,20 +5,20 @@
       <span class="red">（组件不支持改动原生滚动条，各种兼容性问题可自行实现，该示例仅供参考）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       class="mytable-scrollbar"
       height="400"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="seq" width="60" fixed="left"></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="sex" title="Sex" width="250"></jy-column>
-      <jy-column field="age" title="Age" width="250"></jy-column>
-      <jy-column field="role" title="Role" width="300"></jy-column>
-      <jy-column field="address" title="Address" width="350" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60" fixed="left"></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="sex" title="Sex" width="250"></gj-column>
+      <gj-column field="age" title="Age" width="250"></gj-column>
+      <gj-column field="role" title="Role" width="300"></gj-column>
+      <gj-column field="address" title="Address" width="350" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -46,20 +46,20 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-footer
           class="mytable-scrollbar"
           height="400"
           :footer-method="footerMethod"
           :data="tableData">
-          <jy-column type="seq" width="60" fixed="left"></jy-column>
-          <jy-column field="name" title="Name" width="300"></jy-column>
-          <jy-column field="sex" title="Sex" width="250"></jy-column>
-          <jy-column field="age" title="Age" width="250"></jy-column>
-          <jy-column field="role" title="Role" width="300"></jy-column>
-          <jy-column field="address" title="Address" width="350" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60" fixed="left"></gj-column>
+          <gj-column field="name" title="Name" width="300"></gj-column>
+          <gj-column field="sex" title="Sex" width="250"></gj-column>
+          <gj-column field="age" title="Age" width="250"></gj-column>
+          <gj-column field="role" title="Role" width="300"></gj-column>
+          <gj-column field="address" title="Address" width="350" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {

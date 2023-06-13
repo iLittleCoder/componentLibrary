@@ -2,17 +2,17 @@
   <div>
     <p>子路由 1</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable"
       height="400"
       :loading="loading">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <transition name="jy-fade-in">
+  <transition name="gj-fade-in">
     <div
       v-if="visible"
       @click.stop="handleClick"
@@ -7,7 +7,7 @@
         'right': styleRight,
         'bottom': styleBottom
       }"
-      class="jy-backtop">
+      class="gj-backtop">
       <slot>
         <i class="Gildata-topping"></i>
       </slot>
@@ -24,7 +24,7 @@ const easeInOutCubic = value => value < 0.5
   : 1 - cubic((1 - value) * 2) / 2;
 
 export default {
-  name: 'JyBacktop',
+  name: 'GjBacktop',
 
   props: {
     visibilityHeight: {

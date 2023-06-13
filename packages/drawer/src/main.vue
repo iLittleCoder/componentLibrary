@@ -1,47 +1,47 @@
 <template>
   <transition
-    name="jy-drawer-fade"
+    name="gj-drawer-fade"
     @after-enter="afterEnter"
     @after-leave="afterLeave">
     <div
-      class="jy-drawer__wrapper"
+      class="gj-drawer__wrapper"
       tabindex="-1"
       v-show="visible">
       <div
-        class="jy-drawer__container"
-        :class="visible && 'jy-drawer__open'"
+        class="gj-drawer__container"
+        :class="visible && 'gj-drawer__open'"
         @click.self="handleWrapperClick"
         role="document"
         tabindex="-1">
         <div
           aria-modal="true"
-          aria-labelledby="jy-drawer__title"
+          aria-labelledby="gj-drawer__title"
           :aria-label="title"
-          class="jy-drawer"
+          class="gj-drawer"
           :class="[direction, customClass]"
           :style="isHorizontal ? `width: ${drawerSize}` : `height: ${drawerSize}`"
           ref="drawer"
           role="dialog"
           tabindex="-1"
           >
-          <header class="jy-drawer__header" id="jy-drawer__title" v-if="withHeader">
+          <header class="gj-drawer__header" id="gj-drawer__title" v-if="withHeader">
             <slot name="title">
               <span role="heading" :title="title">{{ title }}</span>
             </slot>
 <!--            <button-->
 <!--              :aria-label="`close ${title || 'drawer'}`"-->
-<!--              class="jy-drawer__close-btn"-->
+<!--              class="gj-drawer__close-btn"-->
 <!--              type="button"-->
 <!--              v-if="showClose"-->
 <!--              @click="closeDrawer">-->
 <!--            </button>-->
-            <i v-if="showClose" class="jy-icon Gildata-close" @click="closeDrawer"></i>
+            <i v-if="showClose" class="gj-icon Gildata-close" @click="closeDrawer"></i>
           </header>
-          <section class="jy-drawer__body" v-if="rendered">
+          <section class="gj-drawer__body" v-if="rendered">
             <slot></slot>
           </section>
           <!--底部内容-->
-          <div class="jy-drawer__footer" v-if="$slots.footer">
+          <div class="gj-drawer__footer" v-if="$slots.footer">
             <slot name="footer"></slot>
           </div>
         </div>
@@ -53,13 +53,13 @@
 <script>
 import Popup from 'GildataDesign/src/utils/popup';
 import emitter from 'GildataDesign/src/mixins/emitter';
-import JyButton from 'GildataDesign/packages/button';
+import GjButton from 'GildataDesign/packages/button';
 
 export default {
-  name: 'JyDrawer',
+  name: 'GjDrawer',
   mixins: [Popup, emitter],
   components: {
-    JyButton
+    GjButton
   },
   props: {
     appendToBody: {

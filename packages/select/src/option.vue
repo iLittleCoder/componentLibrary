@@ -2,7 +2,7 @@
   <li
     @mouseenter="hoverItem"
     @click.stop="selectOptionClick"
-    class="jy-select-dropdown__item"
+    class="gj-select-dropdown__item"
     v-show="visible"
     :class="{
       selected: itemSelected,
@@ -12,13 +12,13 @@
   >
     <slot>
       <i class="Gildata-tick optionChecked" v-if="itemSelected && !selectMultiple"></i>
-      <jy-checkbox
+      <gj-checkbox
         :disabled="disabled"
         v-if="selectMultiple"
         :value="itemSelected"
         :selectCheck="true"
         @click.native.stop.prevent="selectOptionClick"
-      ></jy-checkbox>
+      ></gj-checkbox>
 
       <span>{{ currentLabel }}</span>
     </slot>
@@ -27,19 +27,19 @@
 
 <script type="text/babel">
 import Emitter from 'GildataDesign/src/mixins/emitter';
-import JyCheckbox from 'GildataDesign/packages/checkbox';
+import GjCheckbox from 'GildataDesign/packages/checkbox';
 import { getValueByPath, escapeRegexpString } from 'GildataDesign/src/utils/util';
 
 export default {
   mixins: [Emitter],
 
   components: {
-    JyCheckbox
+    GjCheckbox
   },
 
-  name: 'JyOption',
+  name: 'GjOption',
 
-  componentName: 'JyOption',
+  componentName: 'GjOption',
 
   inject: ['select'],
 
@@ -112,7 +112,7 @@ export default {
   watch: {
     currentLabel() {
       if (!this.created && !this.select.remote) {
-        this.dispatch('JySelect', 'setSelected');
+        this.dispatch('GjSelect', 'setSelected');
       }
     },
     value(val, oldVal) {
@@ -121,7 +121,7 @@ export default {
         if (valueKey && typeof val === 'object' && typeof oldVal === 'object' && val[valueKey] === oldVal[valueKey]) {
           return;
         }
-        this.dispatch('JySelect', 'setSelected');
+        this.dispatch('GjSelect', 'setSelected');
       }
     }
   },
@@ -162,7 +162,7 @@ export default {
 
     selectOptionClick() {
       if (this.disabled !== true && this.groupDisabled !== true) {
-        this.dispatch('JySelect', 'handleOptionClick', [this, true]);
+        this.dispatch('GjSelect', 'handleOptionClick', [this, true]);
       }
     },
     handleChange(value, e) {

@@ -10,36 +10,36 @@
 <div>
   <div>
     <div style="margin-bottom:20px">
-      <jy-radio-group
+      <gj-radio-group
         size="mini"
         v-model="progressSize"
         :show-background="false"
       >
-        <jy-radio-button label="small">size M </jy-radio-button>
-        <jy-radio-button label="large">size L</jy-radio-button>
-      </jy-radio-group>
+        <gj-radio-button label="small">size M </gj-radio-button>
+        <gj-radio-button label="large">size L</gj-radio-button>
+      </gj-radio-group>
     </div>
-    <jy-progress :percentage="50" :size="progressSize"></jy-progress>
-    <jy-progress
+    <gj-progress :percentage="50" :size="progressSize"></gj-progress>
+    <gj-progress
       :percentage="100"
       :format="format"
       :size="progressSize"
-    ></jy-progress>
-    <jy-progress
+    ></gj-progress>
+    <gj-progress
       :percentage="100"
       status="success"
       :size="progressSize"
-    ></jy-progress>
-    <jy-progress
+    ></gj-progress>
+    <gj-progress
       :percentage="100"
       status="warning"
       :size="progressSize"
-    ></jy-progress>
-    <jy-progress
+    ></gj-progress>
+    <gj-progress
       :percentage="50"
       status="exception"
       :size="progressSize"
-    ></jy-progress>
+    ></gj-progress>
   </div>
 </div>
 
@@ -71,16 +71,16 @@
 :::demo
 
 ```html
-<jy-progress :percentage="percentage" :color="customColor"></jy-progress>
+<gj-progress :percentage="percentage" :color="customColor"></gj-progress>
 
-<jy-progress :percentage="percentage" :color="customColorMethod"></jy-progress>
+<gj-progress :percentage="percentage" :color="customColorMethod"></gj-progress>
 
-<jy-progress :percentage="percentage" :color="customColors"></jy-progress>
+<gj-progress :percentage="percentage" :color="customColors"></gj-progress>
 <div>
-  <jy-button-group>
-    <jy-button icon="Gildata-minussign" @click="decrease"></jy-button>
-    <jy-button icon="Gildata-plus" @click="increase"></jy-button>
-  </jy-button-group>
+  <gj-button-group>
+    <gj-button icon="Gildata-minussign" @click="decrease"></gj-button>
+    <gj-button icon="Gildata-plus" @click="increase"></gj-button>
+  </gj-button-group>
 </div>
 
 <script>
@@ -136,44 +136,44 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 ```html
 <div>
   <div style="margin-bottom:20px">
-    <jy-radio-group size="mini" v-model="progressSize" :show-background="false">
-      <jy-radio-button label="small">size M </jy-radio-button>
-      <jy-radio-button label="large">size L</jy-radio-button>
-    </jy-radio-group>
+    <gj-radio-group size="mini" v-model="progressSize" :show-background="false">
+      <gj-radio-button label="small">size M </gj-radio-button>
+      <gj-radio-button label="large">size L</gj-radio-button>
+    </gj-radio-group>
   </div>
 
-  <!-- <jy-progress type="circle" :percentage="0"></jy-progress>
-  <jy-progress type="circle" :percentage="25"></jy-progress>
-  <jy-progress type="circle" :percentage="100" status="success"></jy-progress>
-  <jy-progress type="circle" :percentage="70" status="warning"></jy-progress>
-  <jy-progress type="circle" :percentage="50" status="exception"></jy-progress> -->
+  <!-- <gj-progress type="circle" :percentage="0"></gj-progress>
+  <gj-progress type="circle" :percentage="25"></gj-progress>
+  <gj-progress type="circle" :percentage="100" status="success"></gj-progress>
+  <gj-progress type="circle" :percentage="70" status="warning"></gj-progress>
+  <gj-progress type="circle" :percentage="50" status="exception"></gj-progress> -->
 </div>
 
 <div>
-  <jy-progress type="circle" :percentage="0" :size="progressSize"></jy-progress>
-  <jy-progress
+  <gj-progress type="circle" :percentage="0" :size="progressSize"></gj-progress>
+  <gj-progress
     type="circle"
     :percentage="25"
     :size="progressSize"
-  ></jy-progress>
-  <jy-progress
+  ></gj-progress>
+  <gj-progress
     type="circle"
     :percentage="100"
     status="success"
     :size="progressSize"
-  ></jy-progress>
-  <jy-progress
+  ></gj-progress>
+  <gj-progress
     type="circle"
     :percentage="70"
     status="warning"
     :size="progressSize"
-  ></jy-progress>
-  <jy-progress
+  ></gj-progress>
+  <gj-progress
     type="circle"
     :percentage="50"
     status="exception"
     :size="progressSize"
-  ></jy-progress>
+  ></gj-progress>
 </div>
 
 <script>
@@ -202,17 +202,17 @@ Progress 组件可通过 `type` 属性来指定使用环形进度条，在环形
 :::demo 通过 `type` 属性来指定使用仪表盘形进度条。
 
 ```html
-<jy-progress
+<gj-progress
   type="dashboard"
   :percentage="percentage"
   :color="colors"
   size="large"
-></jy-progress>
+></gj-progress>
 <div>
-  <jy-button-group>
-    <jy-button icon="el-icon-minus" @click="decrease"></jy-button>
-    <jy-button icon="el-icon-plus" @click="increase"></jy-button>
-  </jy-button-group>
+  <gj-button-group>
+    <gj-button icon="el-icon-minus" @click="decrease"></gj-button>
+    <gj-button icon="el-icon-plus" @click="increase"></gj-button>
+  </gj-button-group>
 </div>
 
 <script>

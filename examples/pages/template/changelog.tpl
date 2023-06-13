@@ -6,7 +6,7 @@
       float: right;
       padding: 0;
 
-      &.jy-button {
+      &.gj-button {
         transform: translateY(-3px);
       }
 

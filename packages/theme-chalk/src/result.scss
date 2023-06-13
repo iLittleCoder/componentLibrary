@@ -20,7 +20,7 @@
   @include e(title) {
     margin-top: $--result-title-margin-top;
 
-    .jy-result__title_content {
+    .gj-result__title_content {
       margin: 0;
       font-weight: 500;
       font-size: $--result-title-font-size;
@@ -32,7 +32,7 @@
   @include e(subtitle) {
     margin-top: $--result-subtitle-margin-top;
 
-    .jy-result__subTitle_content {
+    .gj-result__subTitle_content {
       margin: 0;
       font-size: $--font-size-base;
       color: $--color-text-regular;

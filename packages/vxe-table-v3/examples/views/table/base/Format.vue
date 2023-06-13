@@ -5,15 +5,15 @@
       <span class="red">（注：<table-column-api-link prop="formatter"/> 只会在指定的 <table-column-api-link prop="field"/> 值发生改变时触发格式化，如果想要多字段关联变化请使用<router-link class="nav-link" :to="{name: 'TableTemplate'}">自定义模板</router-link>）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="num" title="Num" :formatter="formatterNum" sortable></jy-column>
-      <jy-column field="sex" title="Sex" :formatter="formatterSex" sortable></jy-column>
-      <jy-column field="time" title="Time" :formatter="formatTime"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="num" title="Num" :formatter="formatterNum" sortable></gj-column>
+      <gj-column field="sex" title="Sex" :formatter="formatterSex" sortable></gj-column>
+      <gj-column field="time" title="Time" :formatter="formatTime"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -27,19 +27,19 @@
       <span class="green">（用于实现业务中统一的格式化处理，这对于很多场景非常有用，减少很多不必要的重复代码）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="date" title="转日期" width="180" formatter="formatDate"></jy-column>
-      <jy-column field="time" title="转日期格式" width="140" :formatter="['formatDate', 'yyyy-MM-dd']"></jy-column>
-      <jy-column field="amount" title="格式化金额" formatter="formatAmount"></jy-column>
-      <jy-column field="bankCard" title="银行卡" width="180" formatter="formatBankcard"></jy-column>
-      <jy-column field="num7" title="数值"></jy-column>
-      <jy-column field="num8" title="截取2位数" formatter="formatCutNumber"></jy-column>
-      <jy-column field="num9" title="四舍五入2位数" formatter="formatFixedNumber"></jy-column>
-      <jy-column field="sex" title="格式化性别" formatter="formatSex"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="date" title="转日期" width="180" formatter="formatDate"></gj-column>
+      <gj-column field="time" title="转日期格式" width="140" :formatter="['formatDate', 'yyyy-MM-dd']"></gj-column>
+      <gj-column field="amount" title="格式化金额" formatter="formatAmount"></gj-column>
+      <gj-column field="bankCard" title="银行卡" width="180" formatter="formatBankcard"></gj-column>
+      <gj-column field="num7" title="数值"></gj-column>
+      <gj-column field="num8" title="截取2位数" formatter="formatCutNumber"></gj-column>
+      <gj-column field="num9" title="四舍五入2位数" formatter="formatFixedNumber"></gj-column>
+      <gj-column field="sex" title="格式化性别" formatter="formatSex"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -79,15 +79,15 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="num" title="Num" :formatter="formatterNum" sortable></jy-column>
-          <jy-column field="sex" title="Sex" :formatter="formatterSex" sortable></jy-column>
-          <jy-column field="time" title="Time" :formatter="formatTime"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="num" title="Num" :formatter="formatterNum" sortable></gj-column>
+          <gj-column field="sex" title="Sex" :formatter="formatterSex" sortable></gj-column>
+          <gj-column field="time" title="Time" :formatter="formatTime"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'
@@ -166,19 +166,19 @@ export default {
         })
         `,
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="date" title="转日期" width="180" formatter="formatDate"></jy-column>
-          <jy-column field="time" title="转日期格式" width="140" :formatter="['formatDate', 'yyyy-MM-dd']"></jy-column>
-          <jy-column field="amount" title="格式化金额" formatter="formatAmount"></jy-column>
-          <jy-column field="bankCard" title="银行卡" width="180" formatter="formatBankcard"></jy-column>
-          <jy-column field="num7" title="数值"></jy-column>
-          <jy-column field="num8" title="截取2位数" formatter="formatCutNumber"></jy-column>
-          <jy-column field="num9" title="四舍五入2位数" formatter="formatFixedNumber"></jy-column>
-          <jy-column field="sex" title="格式化性别" formatter="formatSex"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="date" title="转日期" width="180" formatter="formatDate"></gj-column>
+          <gj-column field="time" title="转日期格式" width="140" :formatter="['formatDate', 'yyyy-MM-dd']"></gj-column>
+          <gj-column field="amount" title="格式化金额" formatter="formatAmount"></gj-column>
+          <gj-column field="bankCard" title="银行卡" width="180" formatter="formatBankcard"></gj-column>
+          <gj-column field="num7" title="数值"></gj-column>
+          <gj-column field="num8" title="截取2位数" formatter="formatCutNumber"></gj-column>
+          <gj-column field="num9" title="四舍五入2位数" formatter="formatFixedNumber"></gj-column>
+          <gj-column field="sex" title="格式化性别" formatter="formatSex"></gj-column>
+        </gj-table>
         `,
         `
         export default {

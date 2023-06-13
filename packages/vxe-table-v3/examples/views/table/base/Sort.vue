@@ -16,20 +16,20 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       ref="xTable"
       height="300"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="num" title="字符串" sort-type="string" sortable></jy-column>
-      <jy-column field="num2" title="数值" sort-type="number" sortable></jy-column>
-      <jy-column field="address" title="Address" sortable></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="num" title="字符串" sort-type="string" sortable></gj-column>
+      <gj-column field="num2" title="数值" sort-type="number" sortable></gj-column>
+      <gj-column field="address" title="Address" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -40,21 +40,21 @@
 
     <p class="tip">配置 <table-column-api-link prop="sort-by"/> 指定字段排序、或者方法返回自定义排序的值；例如：当使用格式化函数时，排序还是使用原始值</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       height="300"
       :data="tableData2">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :sort-by="sortNameMethod2" sortable>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :sort-by="sortNameMethod2" sortable>
         <template #default="{ row }">
           <span style="color: red;">名字：{{ row.name }}</span>
         </template>
-      </jy-column>
-      <jy-column field="num" title="Num" sortable></jy-column>
-      <jy-column field="num1" title="分离格式化与数值字段" sort-by="num1" sortable :formatter="formatterNum2"></jy-column>
-      <jy-column field="num2" title="分离格式化与字符串字段" sort-by="num2" sort-type="number" sortable :formatter="formatterNum2"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="num" title="Num" sortable></gj-column>
+      <gj-column field="num1" title="分离格式化与数值字段" sort-by="num1" sortable :formatter="formatterNum2"></gj-column>
+      <gj-column field="num2" title="分离格式化与字符串字段" sort-by="num2" sort-type="number" sortable :formatter="formatterNum2"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -65,18 +65,18 @@
 
     <p class="tip">配置 <table-api-link prop="sort-config"/>.<table-api-link prop="sortMethod"/> 自定义排序</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       height="300"
       :data="tableData3"
       :sort-config="{sortMethod: customSortMethod}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="num1" title="Num1"></jy-column>
-      <jy-column field="num2" title="Num2"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="num1" title="Num1"></gj-column>
+      <gj-column field="num2" title="Num2"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -87,18 +87,18 @@
 
     <p class="tip">配置 <table-api-link prop="multiple"/> 启用多字段组合排序</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       height="300"
       :sort-config="{multiple: true}"
       :data="tableData4"
       @sort-change="sortChangeEvent3">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="num" title="Num" sortable></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="num" title="Num" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -109,7 +109,7 @@
 
     <p class="tip">点击表头排序，通过 <table-api-link prop="defaultSort"/> 默认排序、<table-api-link prop="orders"/> 自定义轮转顺序、通过配置 <table-api-link prop="trigger"/> 设置触发源</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       highlight-hover-column
@@ -117,13 +117,13 @@
       :data="tableData"
       :sort-config="{trigger: 'cell', defaultSort: {field: 'age', order: 'desc'}, orders: ['desc', 'asc', null]}"
       @sort-change="sortChangeEvent4">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="sex" title="Sex" sortable></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="address" title="Address" sortable></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="sex" title="Sex" sortable></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="address" title="Address" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -225,20 +225,20 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           ref="xTable"
           height="300"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="role" title="Role" sortable></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="num" title="字符串" sort-type="string" sortable></jy-column>
-          <jy-column field="num2" title="数值" sort-type="number" sortable></jy-column>
-          <jy-column field="address" title="Address" sortable></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="role" title="Role" sortable></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="num" title="字符串" sort-type="string" sortable></gj-column>
+          <gj-column field="num2" title="数值" sort-type="number" sortable></gj-column>
+          <gj-column field="address" title="Address" sortable></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -259,21 +259,21 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           height="300"
           :data="tableData2">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :sort-by="sortNameMethod2" sortable>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :sort-by="sortNameMethod2" sortable>
             <template #default="{ row }">
               <span style="color: red;">名字：{{ row.name }}</span>
             </template>
-          </jy-column>
-          <jy-column field="num" title="Num" sortable></jy-column>
-          <jy-column field="num1" title="分离格式化与数值字段" sort-by="num1" sortable :formatter="formatterNum2"></jy-column>
-          <jy-column field="num2" title="分离格式化与字符串字段" sort-by="num2" sort-type="number" sortable :formatter="formatterNum2"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="num" title="Num" sortable></gj-column>
+          <gj-column field="num1" title="分离格式化与数值字段" sort-by="num1" sortable :formatter="formatterNum2"></gj-column>
+          <gj-column field="num2" title="分离格式化与字符串字段" sort-by="num2" sort-type="number" sortable :formatter="formatterNum2"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'
@@ -317,18 +317,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           height="300"
           :data="tableData3"
           :sort-config="{sortMethod: customSortMethod}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="num1" title="Num1"></jy-column>
-          <jy-column field="num2" title="Num2"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="num1" title="Num1"></gj-column>
+          <gj-column field="num2" title="Num2"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -398,18 +398,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           height="300"
           :sort-config="{multiple: true}"
           :data="tableData4"
           @sort-change="sortChangeEvent3">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="role" title="Role" sortable></jy-column>
-          <jy-column field="num" title="Num" sortable></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="role" title="Role" sortable></gj-column>
+          <gj-column field="num" title="Num" sortable></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -447,7 +447,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           highlight-hover-column
@@ -455,13 +455,13 @@ export default {
           :data="tableData"
           :sort-config="{trigger: 'cell', defaultSort: {field: 'age', order: 'desc'}, orders: ['desc', 'asc', null]}"
           @sort-change="sortChangeEvent4">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role" sortable></jy-column>
-          <jy-column field="sex" title="Sex" sortable></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="address" title="Address" sortable></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role" sortable></gj-column>
+          <gj-column field="sex" title="Sex" sortable></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="address" title="Address" sortable></gj-column>
+        </gj-table>
         `,
         `
         export default {

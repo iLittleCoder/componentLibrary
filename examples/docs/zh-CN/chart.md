@@ -12,7 +12,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" ref="chart" type="bar" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" ref="chart" type="bar" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -45,11 +45,11 @@
         this.theme = val;
       });
       // 添加点击事件
-      this.$refs.chart.jyChart.on('click', () => {
+      this.$refs.chart.GjChart.on('click', () => {
         console.log('点击');
       });
       // 添加finished事件
-      this.$refs.chart.jyChart.on('finished', () => {
+      this.$refs.chart.GjChart.on('finished', () => {
         console.log('渲染完成');
       });
     }
@@ -61,11 +61,11 @@
 
 ### 正负柱状图
 
-:::demo 直接通过\$refs.chart.jyChart 获取对应 echartsInstance，并绑定 legendselectchanged 事件
+:::demo 直接通过\$refs.chart.GjChart 获取对应 echartsInstance，并绑定 legendselectchanged 事件
 
 ```html
 <template>
-  <jy-chart :theme="theme" ref="chart" type="bar" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" ref="chart" type="bar" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -107,7 +107,7 @@
         this.theme = val;
       });
       // 添加legendselectchanged事件
-      this.$refs.chart.jyChart.on('legendselectchanged', (selected) => {
+      this.$refs.chart.GjChart.on('legendselectchanged', (selected) => {
         console.log(selected, 'legend change');
       });
     }
@@ -123,7 +123,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="bar" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="bar" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -192,7 +192,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="line" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="line" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -262,7 +262,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="line" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="line" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -325,7 +325,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="line" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="line" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -374,7 +374,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" width="760px" type="pie" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" width="760px" type="pie" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -443,7 +443,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="scatter" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="scatter" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -498,7 +498,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="bubble" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="bubble" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -559,7 +559,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="gauge" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="gauge" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -644,7 +644,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="gauge" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="gauge" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -714,7 +714,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="radar" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="radar" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -774,7 +774,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="chinaMap" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="chinaMap" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -902,7 +902,7 @@
 
 ```html
 <template>
-  <jy-chart :theme="theme" type="bar" :copy-config="{ getUrlMethod: getUrl, copyWidth: 800, copyHeight: 360, isClear: true }" :chartOptions="chartOptions"></jy-chart>
+  <gj-chart :theme="theme" type="bar" :copy-config="{ getUrlMethod: getUrl, copyWidth: 800, copyHeight: 360, isClear: true }" :chartOptions="chartOptions"></gj-chart>
 </template>
 
 <script>
@@ -977,6 +977,6 @@
 
 ### Chart Methods
 
-通过获取 echarts 实例绑定对应的方法，如 this.\$refs.chart.jyChart.on('click', () => {})绑定点击事件
+通过获取 echarts 实例绑定对应的方法，如 this.\$refs.chart.GjChart.on('click', () => {})绑定点击事件
 
 <font class='a-in-componet-primary-color' >[echarts 官方文档](https://echarts.apache.org/zh/option.html#title)</font>

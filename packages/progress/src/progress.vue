@@ -1,14 +1,14 @@
 <template>
   <div
-    class="jy-progress"
+    class="gj-progress"
     :class="[
-      'jy-progress--' + type,
+      'gj-progress--' + type,
       status ? 'is-' + status : '',
       {
-        'jy-progress--without-text': !showText,
-        'jy-progress--text-inside': textInside
+        'gj-progress--without-text': !showText,
+        'gj-progress--text-inside': textInside
       },
-      'jy-progress__' + size
+      'gj-progress__' + size
     ]"
     :style="{ width: type === 'line' ? width + 'px' : '' }"
     role="progressbar"
@@ -16,26 +16,26 @@
     aria-valuemin="0"
     aria-valuemax="100"
   >
-    <div class="jy-progress-bar" v-if="type === 'line'">
-      <div class="jy-progress-bar__outer">
-        <div class="jy-progress-bar__inner" :style="barStyle">
-          <div class="jy-progress-bar__innerText" v-if="showText && textInside">
+    <div class="gj-progress-bar" v-if="type === 'line'">
+      <div class="gj-progress-bar__outer">
+        <div class="gj-progress-bar__inner" :style="barStyle">
+          <div class="gj-progress-bar__innerText" v-if="showText && textInside">
             {{ content }}
           </div>
         </div>
       </div>
     </div>
-    <div class="jy-progress-circle" v-else>
+    <div class="gj-progress-circle" v-else>
       <svg viewBox="0 0 100 100">
         <path
-          class="jy-progress-circle__track"
+          class="gj-progress-circle__track"
           :d="trackPath"
           :stroke-width="relativeStrokeWidth"
           fill="none"
           :style="trailPathStyle"
         ></path>
         <path
-          class="jy-progress-circle__path"
+          class="gj-progress-circle__path"
           :d="trackPath"
           :stroke="stroke"
           fill="none"
@@ -46,24 +46,24 @@
       </svg>
     </div>
     <div
-      class="jy-progress__text"
+      class="gj-progress__text"
       v-if="showText && !textInside"
       :style="{ fontSize: type === 'line' ? '14px' : '12px' }"
     >
       <template v-if="!status">{{ content }}</template>
       <template v-else>
-        <jy-icon :name="iconClass"></jy-icon>
+        <gj-icon :name="iconClass"></gj-icon>
       </template>
     </div>
   </div>
 </template>
 <script>
-import JyIcon from 'GildataDesign/packages/icon';
+import GjIcon from 'GildataDesign/packages/icon';
 export default {
   components: {
-    JyIcon
+    GjIcon
   },
-  name: 'JyProgress',
+  name: 'GjProgress',
   props: {
     size: {
       type: String,

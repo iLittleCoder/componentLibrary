@@ -6,7 +6,7 @@
       <span class="red">（注：<table-api-link prop="footer-method"/> 表尾的数据都是自行生成的，该示例仅供参考）</span>
     </p>
 
-    <jy-table
+    <gj-table
       class="mytable-footer"
       border
       highlight-hover-row
@@ -14,12 +14,12 @@
       max-height="400"
       :footer-method="footerMethod1"
       :data="tableData1">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="amount" title="Amount"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="amount" title="Amount"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -30,7 +30,7 @@
 
     <p class="tip">还可以配合 <table-api-link prop="footer-cell-class-name"/> 自定义不同列颜色</p>
 
-    <jy-table
+    <gj-table
       class="mytable-footer"
       border
       show-footer
@@ -38,12 +38,12 @@
       :footer-method="footerMethod"
       :footer-cell-class-name="footerCellClassName2"
       :data="tableData2">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="amount" title="Amount"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="amount" title="Amount"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -62,7 +62,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       class="mytable-footer"
       border
       height="400"
@@ -72,14 +72,14 @@
       :footer-method="footerMethod"
       :footer-cell-class-name="footerCellClassName3"
       :data="tableData3">
-      <jy-column type="seq" width="60" fixed="left"></jy-column>
+      <gj-column type="seq" width="60" fixed="left"></gj-column>
       <vxe-colgroup title="基本信息">
-        <jy-column field="name" title="Name" min-width="600" sortable></jy-column>
-        <jy-column field="age" title="Age" min-width="600"></jy-column>
+        <gj-column field="name" title="Name" min-width="600" sortable></gj-column>
+        <gj-column field="age" title="Age" min-width="600"></gj-column>
       </vxe-colgroup>
-      <jy-column field="date" title="Date" min-width="600"></jy-column>
-      <jy-column field="amount" title="Amount" width="200" fixed="right"></jy-column>
-    </jy-table>
+      <gj-column field="date" title="Date" min-width="600"></gj-column>
+      <gj-column field="amount" title="Amount" width="200" fixed="right"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -130,7 +130,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           class="mytable-footer"
           border
           highlight-hover-row
@@ -138,12 +138,12 @@ export default {
           max-height="400"
           :footer-method="footerMethod1"
           :data="tableData1">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="amount" title="Amount"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="amount" title="Amount"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -171,7 +171,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           class="mytable-footer"
           border
           show-footer
@@ -179,12 +179,12 @@ export default {
           :footer-method="footerMethod"
           :footer-cell-class-name="footerCellClassName2"
           :data="tableData2">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="amount" title="Amount"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="amount" title="Amount"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -278,7 +278,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           class="mytable-footer"
           border
           height="400"
@@ -288,14 +288,14 @@ export default {
           :footer-method="footerMethod"
           :footer-cell-class-name="footerCellClassName3"
           :data="tableData3">
-          <jy-column type="seq" width="60" fixed="left"></jy-column>
+          <gj-column type="seq" width="60" fixed="left"></gj-column>
           <vxe-colgroup title="基本信息">
-            <jy-column field="name" title="Name" min-width="600" sortable></jy-column>
-            <jy-column field="age" title="Age" min-width="600"></jy-column>
+            <gj-column field="name" title="Name" min-width="600" sortable></gj-column>
+            <gj-column field="age" title="Age" min-width="600"></gj-column>
           </vxe-colgroup>
-          <jy-column field="date" title="Date" min-width="600"></jy-column>
-          <jy-column field="rate" title="Rate" width="200" fixed="right"></jy-column>
-        </jy-table>
+          <gj-column field="date" title="Date" min-width="600"></gj-column>
+          <gj-column field="rate" title="Rate" width="200" fixed="right"></gj-column>
+        </gj-table>
         `,
         `
         export default {

@@ -1,5 +1,5 @@
 <template>
-  <div class="jy-transfer">
+  <div class="gj-transfer">
     <transfer-panel
       v-bind="$props"
       ref="leftPanel"
@@ -14,34 +14,34 @@
     >
       <slot name="left-footer"></slot>
     </transfer-panel>
-    <div class="jy-transfer__buttons">
-      <jy-button
+    <div class="gj-transfer__buttons">
+      <gj-button
         v-if="!oneWay"
         type="primary"
-        :class="['jy-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
+        :class="['gj-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToLeft"
         :disabled="rightChecked.length === 0"
       >
         <i class="Gildata-leftarrow"></i>
         <span
-          class=" jy-transfer__direction-mr jy-transfer__left "
+          class=" gj-transfer__direction-mr gj-transfer__left "
           v-if="buttonTexts[0] !== undefined"
           >{{ buttonTexts[0] }}</span
         >
-      </jy-button>
-      <jy-button
+      </gj-button>
+      <gj-button
         type="primary"
-        :class="['jy-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
+        :class="['gj-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToRight"
         :disabled="leftChecked.length === 0"
       >
         <span
-          class="jy-transfer__direction-ml jy-transfer__right "
+          class="gj-transfer__direction-ml gj-transfer__right "
           v-if="buttonTexts[1] !== undefined"
           >{{ buttonTexts[1] }}</span
         >
-        <i class="Gildata-rightarrow jy-transfer__direction-icon-ml"></i>
-      </jy-button>
+        <i class="Gildata-rightarrow gj-transfer__direction-icon-ml"></i>
+      </gj-button>
     </div>
     <transfer-panel
       v-bind="$props"
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import JyButton from 'GildataDesign/packages/button';
+import GjButton from 'GildataDesign/packages/button';
 import Message from 'GildataDesign/packages/message';
 import Emitter from 'GildataDesign/src/mixins/emitter';
 import Locale from 'GildataDesign/src/mixins/locale';
@@ -70,13 +70,13 @@ import TransferPanel from './transfer-panel.vue';
 import Migrating from 'GildataDesign/src/mixins/migrating';
 
 export default {
-  name: 'JyTransfer',
+  name: 'GjTransfer',
 
   mixins: [Emitter, Locale, Migrating],
 
   components: {
     TransferPanel,
-    JyButton
+    GjButton
   },
 
   props: {
@@ -198,7 +198,7 @@ export default {
 
   watch: {
     value(val) {
-      this.dispatch('JyFormItem', 'el.form.change', val);
+      this.dispatch('GjFormItem', 'el.form.change', val);
     }
   },
 

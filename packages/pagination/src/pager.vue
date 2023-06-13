@@ -1,5 +1,5 @@
 <template>
-  <ul @click="onPagerClick" class="jy-pager">
+  <ul @click="onPagerClick" class="gj-pager">
     <li
       :class="{ active: currentPage === 1, disabled }"
       v-if="pageCount > 0"
@@ -32,7 +32,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'JyPager',
+    name: 'GjPager',
 
     props: {
       currentPage: Number, // 当前所在页码

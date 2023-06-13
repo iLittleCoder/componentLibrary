@@ -40,13 +40,13 @@
         </template>
         <template #dropdown>
           <div class="my-dropdown3">
-            <jy-table
+            <gj-table
               auto-resize
               :data="tableData3">
-              <jy-table field="name" title="Name"></jy-table>
-              <jy-table field="role" title="Role"></jy-table>
-              <jy-table field="sex" title="Sex"></jy-table>
-            </jy-table>
+              <gj-table field="name" title="Name"></gj-table>
+              <gj-table field="role" title="Role"></gj-table>
+              <gj-table field="sex" title="Sex"></gj-table>
+            </gj-table>
           </div>
         </template>
       </vxe-pulldown>
@@ -159,13 +159,13 @@ export default {
             </template>
             <template #dropdown>
               <div class="my-dropdown3">
-                <jy-table
+                <gj-table
                   auto-resize
                   :data="tableData3">
-                  <jy-table field="name" title="Name"></jy-table>
-                  <jy-table field="role" title="Role"></jy-table>
-                  <jy-table field="sex" title="Sex"></jy-table>
-                </jy-table>
+                  <gj-table field="name" title="Name"></gj-table>
+                  <gj-table field="role" title="Role"></gj-table>
+                  <gj-table field="sex" title="Sex"></gj-table>
+                </gj-table>
               </div>
             </template>
           </vxe-pulldown>

@@ -4,7 +4,7 @@ import DomTools, { browse } from '../../tools/dom'
 function getTargetOffset (target, container) {
   let offsetTop = 0
   let offsetLeft = 0
-  const triggerCheckboxLabel = !browse.firefox && DomTools.hasClass(target, 'jy-checkbox--label')
+  const triggerCheckboxLabel = !browse.firefox && DomTools.hasClass(target, 'gj-checkbox--label')
   if (triggerCheckboxLabel) {
     const checkboxLabelStyle = getComputedStyle(target)
     offsetTop -= XEUtils.toNumber(checkboxLabelStyle.paddingTop)
@@ -175,8 +175,8 @@ export default {
       const { mouseConfig, mouseOpts } = this
       if (mouseConfig && mouseOpts.area && this.handleHeaderCellAreaEvent) {
         const cell = evnt.currentTarget
-        const triggerSort = DomTools.getEventTargetNode(evnt, cell, 'jy-cell--sort').flag
-        const triggerFilter = DomTools.getEventTargetNode(evnt, cell, 'jy-cell--filter').flag
+        const triggerSort = DomTools.getEventTargetNode(evnt, cell, 'gj-cell--sort').flag
+        const triggerFilter = DomTools.getEventTargetNode(evnt, cell, 'gj-cell--filter').flag
         this.handleHeaderCellAreaEvent(evnt, Object.assign({ cell, triggerSort, triggerFilter }, params))
       }
       this.focus()
@@ -215,7 +215,7 @@ export default {
         const disX = evnt.clientX
         const disY = evnt.clientY
         const bodyWrapperElem = elemStore[`${column.fixed || 'main'}-body-wrapper`] || elemStore['main-body-wrapper']
-        const checkboxRangeElem = bodyWrapperElem.querySelector('.jy-table--checkbox-range')
+        const checkboxRangeElem = bodyWrapperElem.querySelector('.gj-table--checkbox-range')
         const domMousemove = document.onmousemove
         const domMouseup = document.onmouseup
         const trElem = cell.parentNode

@@ -10,7 +10,7 @@
 
 ```html
 <template>
-  <jy-scatter :themeType="theme" :chartOptions="chartOptions"></jy-scatter>
+  <gj-scatter :themeType="theme" :chartOptions="chartOptions"></gj-scatter>
 </template>
 
 <script>

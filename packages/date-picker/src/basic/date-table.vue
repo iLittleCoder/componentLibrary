@@ -2,7 +2,7 @@
   <table
     cellspacing="0"
     cellpadding="0"
-    class="jy-date-table"
+    class="gj-date-table"
     @click="handleClick"
     @mousemove="handleMouseMove"
     :class="{
@@ -18,7 +18,7 @@
           {{ t('el.datepicker.weeks.' + week) }}
         </th>
       </tr>
-      <tr class="jy-date-table__row" v-for="(row, key) in rows" :class="{ current: isWeekActive(row[1]) }" :key="key">
+      <tr class="gj-date-table__row" v-for="(row, key) in rows" :class="{ current: isWeekActive(row[1]) }" :key="key">
         <td v-for="(cell, key) in row" :class="getCellClasses(cell)" :key="key">
           <div>
             <span>

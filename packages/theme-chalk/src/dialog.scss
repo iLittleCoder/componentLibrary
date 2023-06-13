@@ -50,7 +50,7 @@
     font-size: $--font-size-medium;
     border-radius: $--border-radius-base;
 
-    .jy-dialog__close {
+    .gj-dialog__close {
       color: $--color-text-regular;
       font-size: $--font-size-extra-large;
       border-radius: 4px;
@@ -84,7 +84,7 @@
     box-sizing: border-box;
 
     > .dialog-footer {
-      .jy-button {
+      .gj-button {
         padding: 4px 11px 4px 10px !important;
 
         //&:first-of-type {

@@ -15,7 +15,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable"
@@ -26,13 +26,13 @@
       :menu-config="tableMenu"
       :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true, isChecked: true}"
       :edit-config="{trigger: 'dblclick', mode: 'cell'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="role" title="Role" :edit-render="{name: '$input'}"></jy-column>
-      <jy-column field="num" title="Number" :edit-render="{name: '$input', props: {type: 'number'}}"></jy-column>
-      <jy-column field="address" title="Address" :edit-render="{name: 'input'}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="role" title="Role" :edit-render="{name: '$input'}"></gj-column>
+      <gj-column field="num" title="Number" :edit-render="{name: '$input', props: {type: 'number'}}"></gj-column>
+      <gj-column field="address" title="Address" :edit-render="{name: 'input'}"></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -115,7 +115,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           ref="xTable"
@@ -126,13 +126,13 @@ export default {
           :menu-config="tableMenu"
           :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true, isChecked: true}"
           :edit-config="{trigger: 'dblclick', mode: 'cell'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="role" title="Role" :edit-render="{name: '$input'}"></jy-column>
-          <jy-column field="num" title="Number" :edit-render="{name: '$input', props: {type: 'number'}}"></jy-column>
-          <jy-column field="address" title="Address" :edit-render="{name: 'input'}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="role" title="Role" :edit-render="{name: '$input'}"></gj-column>
+          <gj-column field="num" title="Number" :edit-render="{name: '$input', props: {type: 'number'}}"></gj-column>
+          <gj-column field="address" title="Address" :edit-render="{name: 'input'}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

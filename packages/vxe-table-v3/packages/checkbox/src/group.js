@@ -28,7 +28,7 @@ export default {
   render (h) {
     const { $scopedSlots } = this
     return h('div', {
-      class: '.jy-table-checkbox-group'
+      class: '.gj-table-checkbox-group'
     }, $scopedSlots.default ? $scopedSlots.default.call(this, {}) : [])
   },
   methods: {

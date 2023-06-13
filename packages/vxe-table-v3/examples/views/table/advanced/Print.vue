@@ -13,7 +13,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       ref="xTable"
@@ -21,17 +21,17 @@
       :print-config="tablePrint"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
       <vxe-colgroup title="Group1">
-        <jy-column field="name" title="Name"></jy-column>
+        <gj-column field="name" title="Name"></gj-column>
         <vxe-colgroup title="Group2">
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
         </vxe-colgroup>
-        <jy-column field="address" title="Address"></jy-column>
+        <gj-column field="address" title="Address"></gj-column>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -59,22 +59,22 @@ export default {
       tablePrint: {
         // 自定义打印的样式示例
         style: `
-        .jy-table {
+        .gj-table {
           color: #000000; // 修改表格默认颜色
           font-size: 12px; // 修改表格默认字体大小
           font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu; // 修改表格默认字体
         }
-        .jy-table,
-        .jy-table thead th,
-        .jy-table tbody td,
-        .jy-table tfoot td  {
+        .gj-table,
+        .gj-table thead th,
+        .gj-table tbody td,
+        .gj-table tfoot td  {
           border-color: #000000; // 修改表格边框颜色
         }
-        .jy-table thead th {
+        .gj-table thead th {
           color: green; // 修改表头字体颜色
           font-size: 14px; // 修改表头默认字体大小
         }
-        .jy-table tfoot td {
+        .gj-table tfoot td {
           color: red; // 修改表尾字体颜色
         }
         `
@@ -89,7 +89,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-footer
           ref="xTable"
@@ -97,17 +97,17 @@ export default {
           :print-config="tablePrint"
           :footer-method="footerMethod"
           :data="tableData">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
           <vxe-colgroup title="Group1">
-            <jy-column field="name" title="Name"></jy-column>
+            <gj-column field="name" title="Name"></gj-column>
             <vxe-colgroup title="Group2">
-              <jy-column field="role" title="Role"></jy-column>
-              <jy-column field="age" title="Age"></jy-column>
+              <gj-column field="role" title="Role"></gj-column>
+              <gj-column field="age" title="Age"></gj-column>
             </vxe-colgroup>
-            <jy-column field="address" title="Address"></jy-column>
+            <gj-column field="address" title="Address"></gj-column>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {
@@ -126,22 +126,22 @@ export default {
               tablePrint: {
                 // 自定义打印的样式示例
                 style: \`
-                .jy-table {
+                .gj-table {
                   color: #000000; // 修改表格默认颜色
                   font-size: 12px; // 修改表格默认字体大小
                   font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu; // 修改表格默认字体
                 }
-                .jy-table,
-                .jy-table thead th,
-                .jy-table tbody td,
-                .jy-table tfoot td  {
+                .gj-table,
+                .gj-table thead th,
+                .gj-table tbody td,
+                .gj-table tfoot td  {
                   border-color: #000000; // 修改表格边框颜色
                 }
-                .jy-table thead th {
+                .gj-table thead th {
                   color: green; // 修改表头字体颜色
                   font-size: 14px; // 修改表头默认字体大小
                 }
-                .jy-table tfoot td {
+                .gj-table tfoot td {
                   color: red; // 修改表尾字体颜色
                 }
                 \`

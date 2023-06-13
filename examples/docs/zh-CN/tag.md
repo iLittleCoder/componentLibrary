@@ -8,30 +8,30 @@
 
 ```html
 <div class="demo-layout">
-  <jy-row>
-    <jy-tag>标签文字</jy-tag>
-    <jy-tag type="success">标签文字</jy-tag>
-    <jy-tag type="info">标签文字</jy-tag>
-    <jy-tag type="warning">标签文字</jy-tag>
-    <jy-tag type="danger">标签文字</jy-tag>
-  </jy-row>
-  <jy-row>
-    <jy-tag
+  <gj-row>
+    <gj-tag>标签文字</gj-tag>
+    <gj-tag type="success">标签文字</gj-tag>
+    <gj-tag type="info">标签文字</gj-tag>
+    <gj-tag type="warning">标签文字</gj-tag>
+    <gj-tag type="danger">标签文字</gj-tag>
+  </gj-row>
+  <gj-row>
+    <gj-tag
       v-for="tag in tags"
       :key="tag.type"
       left-icon="Gildata-folder"
       :type="tag.type"
     >
       {{tag.name}}
-    </jy-tag>
-  </jy-row>
-  <jy-row>
-    <jy-tag v-for="tag in tags" :key="tag.type" closable :type="tag.type">
+    </gj-tag>
+  </gj-row>
+  <gj-row>
+    <gj-tag v-for="tag in tags" :key="tag.type" closable :type="tag.type">
       {{tag.name}}
-    </jy-tag>
-  </jy-row>
-  <jy-row>
-    <jy-tag
+    </gj-tag>
+  </gj-row>
+  <gj-row>
+    <gj-tag
       operable
       v-for="tag in tags"
       :key="tag.type"
@@ -39,10 +39,10 @@
       :type="tag.type"
     >
       {{tag.name}}
-    </jy-tag>
-  </jy-row>
-  <jy-row>
-    <jy-tag
+    </gj-tag>
+  </gj-row>
+  <gj-row>
+    <gj-tag
       v-for="tag in tags"
       :key="tag.type"
       left-icon="Gildata-upload"
@@ -51,8 +51,8 @@
       :type="tag.type"
     >
       {{tag.name}}
-    </jy-tag>
-  </jy-row>
+    </gj-tag>
+  </gj-row>
 </div>
 
 <script>
@@ -79,11 +79,11 @@
 :::demo 由`type`属性来选择 tag 的类型，也可以通过`color`属性来自定义背景色。
 
 ```html
-<jy-tag>标签一</jy-tag>
-<jy-tag type="success">标签二</jy-tag>
-<jy-tag type="info">标签三</jy-tag>
-<jy-tag type="warning">标签四</jy-tag>
-<jy-tag type="danger">标签五</jy-tag>
+<gj-tag>标签一</gj-tag>
+<gj-tag type="success">标签二</gj-tag>
+<gj-tag type="info">标签三</gj-tag>
+<gj-tag type="warning">标签四</gj-tag>
+<gj-tag type="danger">标签五</gj-tag>
 ```
 
 :::
@@ -93,9 +93,9 @@
 :::demo 设置`closable`属性可以定义一个标签是否可移除。默认的标签移除时会附带渐变动画，如果不想使用，可以设置`disable-transitions`属性，它接受一个`Boolean`，true 为关闭。
 
 ```html
-<jy-tag v-for="tag in tags" :key="tag.name" closable :type="tag.type">
+<gj-tag v-for="tag in tags" :key="tag.name" closable :type="tag.type">
   {{tag.name}}
-</jy-tag>
+</gj-tag>
 
 <script>
   export default {
@@ -121,7 +121,7 @@
 :::demo 设置`operable`属性可以定义一个标签是否可操作，点击有按键效果
 
 ```html
-<jy-tag
+<gj-tag
   v-for="tag in tags"
   :key="tag.name"
   operable
@@ -129,7 +129,7 @@
   :type="tag.type"
 >
   {{tag.name}}
-</jy-tag>
+</gj-tag>
 
 <script>
   export default {
@@ -157,7 +157,7 @@
 :::demo
 
 ```html
-<jy-tag
+<gj-tag
   :key="tag"
   v-for="tag in dynamicTags"
   closable
@@ -165,8 +165,8 @@
   @close="handleClose(tag)"
 >
   {{tag}}
-</jy-tag>
-<jy-input
+</gj-tag>
+<gj-input
   class="input-new-tag"
   v-if="inputVisible"
   v-model="inputValue"
@@ -175,13 +175,13 @@
   @keyup.enter.native="handleInputConfirm"
   @blur="handleInputConfirm"
 >
-</jy-input>
-<jy-button v-else class="button-new-tag" size="mini" @click="showInput"
-  ><i class="Gildata-plus" slot="left"></i><span>Add Tag</span></jy-button
+</gj-input>
+<gj-button v-else class="button-new-tag" size="mini" @click="showInput"
+  ><i class="Gildata-plus" slot="left"></i><span>Add Tag</span></gj-button
 >
 
 <style>
-  .jy-tag + .jy-tag {
+  .gj-tag + .gj-tag {
     margin-left: 10px;
   }
   .button-new-tag {
@@ -241,9 +241,9 @@ Tag 组件提供除了默认值以外的三种尺寸，可以在不同场景下�
 :::demo 额外的尺寸：`medium`、`small`、`mini`，通过设置`size`属性来配置它们。
 
 ```html
-<jy-tag size="medium" closable>中等标签</jy-tag>
-<jy-tag size="small" closable>默认标签</jy-tag>
-<jy-tag size="mini" closable>超小标签</jy-tag>
+<gj-tag size="medium" closable>中等标签</gj-tag>
+<gj-tag size="small" closable>默认标签</gj-tag>
+<gj-tag size="mini" closable>超小标签</gj-tag>
 ```
 
 :::
@@ -257,23 +257,23 @@ Tag 组件提供除了默认值以外的三种尺寸，可以在不同场景下�
  ```html
  <div class="tag-group">
    <span class="tag-group__title">Dark</span>
-   <jy-tag
+   <gj-tag
      v-for="item in items"
      :key="item.label"
      :type="item.type"
      effect="dark">
      {{ item.label }}
-   </jy-tag>
+   </gj-tag>
  </div>
  <div class="tag-group">
    <span class="tag-group__title">Plain</span>
-   <jy-tag
+   <gj-tag
      v-for="item in items"
      :key="item.label"
      :type="item.type"
      effect="plain">
      {{ item.label }}
-   </jy-tag>
+   </gj-tag>
  </div>
 
  <script>

@@ -10,7 +10,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable1"
       height="300"
@@ -18,15 +18,15 @@
       :radio-config="{highlight: true}"
       @cell-click="cellClickEvent"
       @radio-change="radioChangeEvent">
-      <jy-column type="radio" width="60">
+      <gj-column type="radio" width="60">
         <template #header>
           <vxe-button type="text" @click="clearRadioRowEevnt" :disabled="!selectRow">取消</vxe-button>
         </template>
-      </jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -47,17 +47,17 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable2"
       height="300"
       :radio-config="{labelField: 'name', checkMethod: checkRadioMethod}"
       :data="tableData">
-      <jy-column type="radio" title="请选择" width="100"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" title="请选择" width="100"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -71,18 +71,18 @@
       <span class="red">（注：默认行为只会在 reload 之后触发一次）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       height="300"
       :row-config="{keyField: 'id'}"
       :data="tableData"
       :radio-config="{checkRowKey: defaultSelecteRow}">
-      <jy-column type="radio" width="60"></jy-column>
-      <jy-column field="id" title="ID"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" width="60"></gj-column>
+      <gj-column field="id" title="ID"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -93,18 +93,18 @@
 
     <p class="tip">单选的默认行为是不允许取消的，可以通过设置 <table-api-link prop="radio-config"/>.<table-api-link prop="strict"/>=false 允许取消</p>
 
-    <jy-table
+    <gj-table
       border
       height="300"
       :radio-config="{strict: false}"
       :data="tableData"
       @radio-change="radioChangeEvent4">
-      <jy-column type="radio" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -115,18 +115,18 @@
 
     <p class="tip">两种方式混合使用</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-current-row
       height="300"
       :radio-config="{labelField: 'name'}"
       :data="tableData">
-      <jy-column type="radio" title="还可以这样" width="120"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" title="还可以这样" width="120"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -137,19 +137,19 @@
 
     <p class="tip">当然也可以两种方式同时使用</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       highlight-current-row
       height="300"
       :radio-config="{labelField: 'name', trigger: 'row'}"
       :data="tableData">
-      <jy-column type="radio" title="还可以这样" width="120"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="radio" title="还可以这样" width="120"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -186,7 +186,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable1"
           height="300"
@@ -194,15 +194,15 @@ export default {
           :radio-config="{highlight: true}"
           @cell-click="cellClickEvent"
           @radio-change="radioChangeEvent">
-          <jy-column type="radio" width="60">
+          <gj-column type="radio" width="60">
             <template #header>
               <vxe-button type="text" @click="clearRadioRowEevnt" :disabled="!selectRow">取消</vxe-button>
             </template>
-          </jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -248,17 +248,17 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable2"
           height="300"
           :radio-config="{labelField: 'name', checkMethod: checkRadioMethod}"
           :data="tableData">
-          <jy-column type="radio" title="请选择" width="100"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="radio" title="请选择" width="100"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -284,18 +284,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           height="300"
           row-id="id"
           :data="tableData"
           :radio-config="{checkRowKey: defaultSelecteRow}">
-          <jy-column type="radio" width="60"></jy-column>
-          <jy-column field="id" title="ID"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="radio" width="60"></gj-column>
+          <gj-column field="id" title="ID"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -317,18 +317,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           height="300"
           :radio-config="{strict: false}"
           :data="tableData"
           @radio-change="radioChangeEvent4">
-          <jy-column type="radio" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="radio" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -354,18 +354,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-current-row
           height="300"
           :radio-config="{labelField: 'name'}"
           :data="tableData">
-          <jy-column type="radio" title="还可以这样" width="120"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="radio" title="还可以这样" width="120"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -386,19 +386,19 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           highlight-current-row
           height="300"
           :radio-config="{labelField: 'name', trigger: 'row'}"
           :data="tableData">
-          <jy-column type="radio" title="还可以这样" width="120"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="radio" title="还可以这样" width="120"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {

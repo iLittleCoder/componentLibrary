@@ -9,11 +9,11 @@
 
 ```html
 <div class="demo-link">
-  <jy-link href="https://element.eleme.io" target="_blank">默认链接</jy-link>
-  <jy-link type="primary">主要链接</jy-link>
-  <jy-link type="success">成功链接</jy-link>
-  <jy-link type="warning">警告链接</jy-link>
-  <jy-link type="danger">危险链接</jy-link>
+  <gj-link href="https://element.eleme.io" target="_blank">默认链接</gj-link>
+  <gj-link type="primary">主要链接</gj-link>
+  <gj-link type="success">成功链接</gj-link>
+  <gj-link type="warning">警告链接</gj-link>
+  <gj-link type="danger">危险链接</gj-link>
 </div>
 ```
 
@@ -26,11 +26,11 @@
 
 ```html
 <div class="demo-link">
-  <jy-link disabled>默认链接</jy-link>
-  <jy-link type="primary" disabled>主要链接</jy-link>
-  <jy-link type="success" disabled>成功链接</jy-link>
-  <jy-link type="warning" disabled>警告链接</jy-link>
-  <jy-link type="danger" disabled>危险链接</jy-link>
+  <gj-link disabled>默认链接</gj-link>
+  <gj-link type="primary" disabled>主要链接</gj-link>
+  <gj-link type="success" disabled>成功链接</gj-link>
+  <gj-link type="warning" disabled>警告链接</gj-link>
+  <gj-link type="danger" disabled>危险链接</gj-link>
 </div>
 ```
 
@@ -43,8 +43,8 @@
 
 ```html
 <div class="demo-link">
-  <jy-link :underline="false">无下划线</jy-link>
-  <jy-link>有下划线</jy-link>
+  <gj-link :underline="false">无下划线</gj-link>
+  <gj-link>有下划线</gj-link>
 </div>
 ```
 
@@ -57,8 +57,8 @@
 
 ```html
 <div class="demo-link">
-  <jy-link icon="Gildata-edit">编辑</jy-link>
-  <jy-link><span class="mr-4">查看</span><i class="Gildata-stackedareachart"></i> </jy-link>
+  <gj-link icon="Gildata-edit">编辑</gj-link>
+  <gj-link><span class="mr-4">查看</span><i class="Gildata-stackedareachart"></i> </gj-link>
 </div>
 ```
 

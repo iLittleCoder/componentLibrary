@@ -2,21 +2,21 @@
   <div>
     <p class="tip">单元格点击编辑，还可以通过 <table-column-api-link prop="autoselect"/> 开启默认选中</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell'}">
-      <jy-column type="seq" width="60"></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
       <vxe-colgroup title="分组1">
-        <jy-column field="name" title="Name" :edit-render="{name: 'input', autoselect: true}"></jy-column>
-        <jy-column field="sex" title="Sex" :edit-render="{name: '$select', optionGroups: sexGriupList}"></jy-column>
+        <gj-column field="name" title="Name" :edit-render="{name: 'input', autoselect: true}"></gj-column>
+        <gj-column field="sex" title="Sex" :edit-render="{name: '$select', optionGroups: sexGriupList}"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="分组1">
-        <jy-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}, autoselect: true}"></jy-column>
+        <gj-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}, autoselect: true}"></gj-column>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -63,21 +63,21 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell'}">
-          <jy-column type="seq" width="60"></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
           <vxe-colgroup title="分组1">
-            <jy-column field="name" title="Name" :edit-render="{name: 'input', autoselect: true}"></jy-column>
-            <jy-column field="sex" title="Sex" :edit-render="{name: '$select', optionGroups: sexGriupList}"></jy-column>
+            <gj-column field="name" title="Name" :edit-render="{name: 'input', autoselect: true}"></gj-column>
+            <gj-column field="sex" title="Sex" :edit-render="{name: '$select', optionGroups: sexGriupList}"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="分组1">
-            <jy-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}, autoselect: true}"></jy-column>
+            <gj-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}, autoselect: true}"></gj-column>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {

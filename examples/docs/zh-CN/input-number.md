@@ -4,17 +4,17 @@
 
 ### 基础用法
 
-:::demo 要使用它，只需要在`jy-input-number`元素中使用`v-model`绑定变量即可，变量的初始值即为默认值。
+:::demo 要使用它，只需要在`gj-input-number`元素中使用`v-model`绑定变量即可，变量的初始值即为默认值。
 
 ```html
 <template>
-  <jy-input-number
+  <gj-input-number
     v-model="num"
     @change="handleChange"
     :min="1"
     :max="10"
     label="描述文字"
-  ></jy-input-number>
+  ></gj-input-number>
 </template>
 <script>
   export default {
@@ -40,7 +40,7 @@
 
 ```html
 <template>
-  <jy-input-number v-model="num" :disabled="true"></jy-input-number>
+  <gj-input-number v-model="num" :disabled="true"></gj-input-number>
 </template>
 <script>
   export default {
@@ -63,9 +63,9 @@
 
 ```html
 <template>
-  <jy-input-number v-model="num">
+  <gj-input-number v-model="num">
     <span slot="pretext">￥</span>
-  </jy-input-number>
+  </gj-input-number>
 </template>
 <script>
   export default {
@@ -86,11 +86,11 @@
 
 ```html
 <template>
-  <jy-input-number v-model="num" :step="2" step-strictly>
+  <gj-input-number v-model="num" :step="2" step-strictly>
     <template slot="appendtext">
       <span>%</span>
     </template>
-  </jy-input-number>
+  </gj-input-number>
 </template>
 <script>
   export default {
@@ -111,12 +111,12 @@
 
 ```html
 <template>
-  <jy-input-number
+  <gj-input-number
     v-model="num"
     :precision="2"
     :step="0.1"
     :max="10"
-  ></jy-input-number>
+  ></gj-input-number>
 </template>
 <script>
   export default {
@@ -143,23 +143,23 @@
 
 ```html
 <template>
-  <jy-input-number size="large" v-model="num2"></jy-input-number>
-  <jy-input-number size="medium" v-model="num3"></jy-input-number>
-  <jy-input-number v-model="num1"></jy-input-number>
-  <jy-input-number size="mini" v-model="num4"></jy-input-number>
+  <gj-input-number size="large" v-model="num2"></gj-input-number>
+  <gj-input-number size="medium" v-model="num3"></gj-input-number>
+  <gj-input-number v-model="num1"></gj-input-number>
+  <gj-input-number size="mini" v-model="num4"></gj-input-number>
 
   <div style="margin-top:20px">
-    <jy-input-number size="large" v-model="num2"
-      ><span slot="pretext">￥</span></jy-input-number
+    <gj-input-number size="large" v-model="num2"
+      ><span slot="pretext">￥</span></gj-input-number
     >
-    <jy-input-number size="medium" v-model="num3"
-      ><span slot="pretext">￥</span></jy-input-number
+    <gj-input-number size="medium" v-model="num3"
+      ><span slot="pretext">￥</span></gj-input-number
     >
-    <jy-input-number v-model="num1"
-      ><span slot="pretext">￥</span></jy-input-number
+    <gj-input-number v-model="num1"
+      ><span slot="pretext">￥</span></gj-input-number
     >
-    <jy-input-number size="mini" v-model="num4"
-      ><span slot="pretext">￥</span></jy-input-number
+    <gj-input-number size="mini" v-model="num4"
+      ><span slot="pretext">￥</span></gj-input-number
     >
   </div>
 </template>
@@ -185,13 +185,13 @@
 
 ```html
 <template>
-  <jy-input-number
+  <gj-input-number
     v-model="num"
     controls-position="right"
     @change="handleChange"
     :min="1"
     :max="10"
-  ></jy-input-number>
+  ></gj-input-number>
 </template>
 <script>
   export default {

@@ -219,19 +219,19 @@
             <span>{{config.name}}</span>
             <span class="right" v-if="isOfficial">by {{config.author}}</span>
             <span class="right more" v-else>
-              <jy-dropdown @command="actionClick">
+              <gj-dropdown @command="actionClick">
                 <i class="Gildata-more"></i>
-                <jy-dropdown-menu slot="dropdown">
-                  <jy-dropdown-item command="rename">{{getActionDisplayName('rename-theme')}}</jy-dropdown-item>
-                  <jy-dropdown-item command="copy">{{getActionDisplayName('copy-theme')}}</jy-dropdown-item>
-                  <jy-dropdown-item
+                <gj-dropdown-menu slot="dropdown">
+                  <gj-dropdown-item command="rename">{{getActionDisplayName('rename-theme')}}</gj-dropdown-item>
+                  <gj-dropdown-item command="copy">{{getActionDisplayName('copy-theme')}}</gj-dropdown-item>
+                  <gj-dropdown-item
                       command="delete"
                       style="color: #F56C6C;"
                     >
                       {{getActionDisplayName('delete-theme')}}
-                    </jy-dropdown-item>
-                </jy-dropdown-menu>
-              </jy-dropdown>
+                    </gj-dropdown-item>
+                </gj-dropdown-menu>
+              </gj-dropdown>
             </span>
           </div>
           <div class="description" v-if="isOfficial">{{getActionDisplayName(getDescriptionKey(config.name))}} </div>

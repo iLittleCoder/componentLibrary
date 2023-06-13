@@ -18,12 +18,12 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable"
       height="300"
       :data="tableData">
-      <jy-column
+      <gj-column
         v-for="config in tableColumn"
         :key="config.key"
         :type="config.type"
@@ -32,8 +32,8 @@
         :fixed="config.fixed"
         :width="config.width"
         :filters="config.filters">
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -81,12 +81,12 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable"
           height="300"
           :data="tableData">
-          <jy-column
+          <gj-column
             v-for="config in tableColumn"
             :key="config.key"
             :type="config.type"
@@ -95,8 +95,8 @@ export default {
             :fixed="config.fixed"
             :width="config.width"
             :filters="config.filters">
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         export default {

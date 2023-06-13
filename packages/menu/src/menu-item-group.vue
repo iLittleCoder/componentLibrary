@@ -1,6 +1,6 @@
 <template>
-  <li class="jy-menu-item-group">
-    <div class="jy-menu-item-group__title" :style="{paddingLeft: levelPadding + 'px'}">
+  <li class="gj-menu-item-group">
+    <div class="gj-menu-item-group__title" :style="{paddingLeft: levelPadding + 'px'}">
       <template v-if="!$slots.title">{{title}}</template>
       <slot v-else name="title"></slot>
     </div>
@@ -11,9 +11,9 @@
 </template>
 <script>
   export default {
-    name: 'JyMenuItemGroup',
+    name: 'GjMenuItemGroup',
 
-    componentName: 'JyMenuItemGroup',
+    componentName: 'GjMenuItemGroup',
 
     inject: ['rootMenu'],
     props: {
@@ -31,8 +31,8 @@
         let padding = 8;
         let parent = this.$parent;
         if (this.rootMenu.collapse) return 8;
-        while (parent && parent.$options.componentName !== 'JyMenu') {
-          if (parent.$options.componentName === 'JySubmenu') {
+        while (parent && parent.$options.componentName !== 'GjMenu') {
+          if (parent.$options.componentName === 'GjSubmenu') {
             padding += 24;
           }
           parent = parent.$parent;

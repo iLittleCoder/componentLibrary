@@ -1,7 +1,7 @@
 export default {
   bind(el, binding, vnode, oldVnode) {
-    const dialogHeaderEl = el.querySelector('.jy-dialog__header');
-    const dragDom = el.querySelector('.jy-dialog');
+    const dialogHeaderEl = el.querySelector('.gj-dialog__header');
+    const dragDom = el.querySelector('.gj-dialog');
     // dialogHeaderEl.style.cursor = 'move';
     if(!dialogHeaderEl) return;
     dialogHeaderEl.style.cssText += ';cursor:move;';

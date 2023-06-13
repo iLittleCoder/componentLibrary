@@ -2,14 +2,14 @@
 @import './base/checked.scss';
 
 /*toolbar*/
-.jy-table-toolbar {
+.gj-table-toolbar {
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: $jy-font-color;
-  font-family: $jy-font-family;
-  background-color: $jy-toolbar-background-color;
+  color: $gj-font-color;
+  font-family: $gj-font-family;
+  background-color: $gj-toolbar-background-color;
   &:after {
     content: "";
     display: block;
@@ -19,9 +19,9 @@
     visibility: hidden;
   }
   &.is--perfect {
-    border: 1px solid $jy-table-border-color;
+    border: 1px solid $gj-table-border-color;
     border-bottom-width: 0;
-    background-color: $jy-table-header-background-color;
+    background-color: $gj-table-header-background-color;
   }
   &.is--loading {
     &:before {
@@ -31,84 +31,84 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: $jy-loading-z-index;
+      z-index: $gj-loading-z-index;
       user-select: none;
-      background-color: $jy-loading-background-color;
+      background-color: $gj-loading-background-color;
     }
   }
-  .jy-table-buttons--wrapper {
+  .gj-table-buttons--wrapper {
     flex-grow: 1;
-    & > .jy-table-button+.jy-table-button--item,
-    & > .jy-table-button--item+.jy-table-button,
-    & > .jy-table-button--item+.jy-table-button--item {
+    & > .gj-table-button+.gj-table-button--item,
+    & > .gj-table-button--item+.gj-table-button,
+    & > .gj-table-button--item+.gj-table-button--item {
       margin-left: 0.8em;
     }
-    & > .jy-table-button--item {
+    & > .gj-table-button--item {
       display: inline-block;
     }
   }
-  .jy-table-tools--wrapper {
-    & > .jy-table-button+.jy-table-tool--item,
-    & > .jy-table-tool--item+.jy-table-button,
-    & > .jy-table-tool--item+.jy-table-tool--item {
+  .gj-table-tools--wrapper {
+    & > .gj-table-button+.gj-table-tool--item,
+    & > .gj-table-tool--item+.gj-table-button,
+    & > .gj-table-tool--item+.gj-table-tool--item {
       margin-left: 0.8em;
     }
-    & > .jy-table-tool--item {
+    & > .gj-table-tool--item {
       display: inline-block;
     }
   }
-  .jy-table-tools--wrapper {
-    & > .jy-table-button {
+  .gj-table-tools--wrapper {
+    & > .gj-table-button {
       display: flex;
       align-items: center;
       justify-content: center;
     }
   }
-  .jy-table-tools--wrapper,
-  .jy-table-tools--operate {
+  .gj-table-tools--wrapper,
+  .gj-table-tools--operate {
     display: flex;
     flex-shrink: 0;
     align-items: center;
   }
-  .jy-table-custom--wrapper {
+  .gj-table-custom--wrapper {
     position: relative;
     margin-left: 0.8em;
     &.is--active {
-      & > .jy-table-button {
-        background-color: $jy-toolbar-custom-active-background-color;
+      & > .gj-table-button {
+        background-color: $gj-toolbar-custom-active-background-color;
         border-radius: 50%;
       }
-      .jy-table-custom--option-wrapper {
+      .gj-table-custom--option-wrapper {
         display: block;
       }
     }
   }
-  .jy-table-custom--option-wrapper {
+  .gj-table-custom--option-wrapper {
     display: none;
     position: absolute;
     right: 2px;
     text-align: left;
-    background-color: $jy-toolbar-panel-background-color;
+    background-color: $gj-toolbar-panel-background-color;
     z-index: 19;
-    border: 1px solid $jy-table-border-color;
-    border-radius: $jy-border-radius;
+    border: 1px solid $gj-table-border-color;
+    border-radius: $gj-border-radius;
     box-shadow: 0 1px 6px rgba(0,0,0,.2);
-    .jy-table-custom--header {
+    .gj-table-custom--header {
       padding: 0.28em 0;
       font-weight: 500;
-      border-bottom: 1px solid $jy-table-popup-border-color;
+      border-bottom: 1px solid $gj-table-popup-border-color;
     }
-    .jy-table-custom--body {
+    .gj-table-custom--body {
       padding: 0.2em 0;
       max-height: 17.6em;
-      .jy-table-custom--option {
+      .gj-table-custom--option {
         &:hover {
-          background-color: $jy-table-row-hover-background-color;
+          background-color: $gj-table-row-hover-background-color;
         }
       }
     }
-    .jy-table-custom--header,
-    .jy-table-custom--body {
+    .gj-table-custom--header,
+    .gj-table-custom--body {
       & > li {
         max-width: 16em;
         min-width: 12.5em;
@@ -117,37 +117,37 @@
           $interval: $i - 1 + 0.2;
           &.level--#{$i}{
             padding-left: #{$interval + 2.3}em;
-            .jy-table-checkbox--icon {
+            .gj-table-checkbox--icon {
               left: #{$interval + 0.6}em;
             }
           }
         }
       }
     }
-    .jy-table-custom--footer {
-      border-top: 1px solid $jy-table-popup-border-color;
+    .gj-table-custom--footer {
+      border-top: 1px solid $gj-table-popup-border-color;
       text-align: right;
       button {
         background-color: transparent;
         width: 50%;
         height: 2.5em;
         border: 0;
-        color: $jy-font-color;
+        color: $gj-font-color;
         text-align: center;
         cursor: pointer;
         &:focus {
           outline: none;
         }
         &:hover {
-          color: $jy-primary-color;
+          color: $gj-primary-color;
         }
       }
     }
   }
 }
 
-.jy-table-custom--option-wrapper .jy-table-custom--header,
-.jy-table-custom--option-wrapper .jy-table-custom--body {
+.gj-table-custom--option-wrapper .gj-table-custom--header,
+.gj-table-custom--option-wrapper .gj-table-custom--body {
   list-style-type: none;
   overflow-x: hidden;
   overflow-y: auto;
@@ -161,46 +161,46 @@
   }
 }
 
-.jy-table-custom--option {
+.gj-table-custom--option {
   @extend %XECheckbox;
-  .jy-table-checkbox--icon {
+  .gj-table-checkbox--icon {
     left: 0.6em;
     top: 0.38em;
   }
 }
 
-.jy-table-toolbar {
-  font-size: $jy-font-size;
-  height: $jy-toolbar-height-default;
-  .jy-table-custom--option {
-    & > .jy-table-checkbox--icon {
-      font-size: $jy-checkbox-font-size-default;
+.gj-table-toolbar {
+  font-size: $gj-font-size;
+  height: $gj-toolbar-height-default;
+  .gj-table-custom--option {
+    & > .gj-table-checkbox--icon {
+      font-size: $gj-checkbox-font-size-default;
     }
   }
   &.size--medium {
-    font-size: $jy-font-size-medium;
-    height: $jy-toolbar-height-medium;
-    .jy-table-custom--option {
-      & > .jy-table-checkbox--icon {
-        font-size: $jy-checkbox-font-size-medium;
+    font-size: $gj-font-size-medium;
+    height: $gj-toolbar-height-medium;
+    .gj-table-custom--option {
+      & > .gj-table-checkbox--icon {
+        font-size: $gj-checkbox-font-size-medium;
       }
     }
   }
   &.size--small {
-    font-size: $jy-font-size-small;
-    height: $jy-toolbar-height-small;
-    .jy-table-custom--option {
-      & > .jy-table-checkbox--icon {
-        font-size: $jy-checkbox-font-size-small;
+    font-size: $gj-font-size-small;
+    height: $gj-toolbar-height-small;
+    .gj-table-custom--option {
+      & > .gj-table-checkbox--icon {
+        font-size: $gj-checkbox-font-size-small;
       }
     }
   }
   &.size--mini {
-    font-size: $jy-font-size-mini;
-    height: $jy-toolbar-height-mini;
-    .jy-table-custom--option {
-      & > .jy-table-checkbox--icon {
-        font-size: $jy-checkbox-font-size-mini;
+    font-size: $gj-font-size-mini;
+    height: $gj-toolbar-height-mini;
+    .gj-table-custom--option {
+      & > .gj-table-checkbox--icon {
+        font-size: $gj-checkbox-font-size-mini;
       }
     }
   }

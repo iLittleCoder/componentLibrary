@@ -1,18 +1,18 @@
 <template>
   <transition name="msgbox-fade">
     <div
-      class="jy-message-box__wrapper"
+      class="gj-message-box__wrapper"
       tabindex="-1"
       v-show="visible"
       @click.self="handleWrapperClick"
       role="dialog"
       aria-modal="true"
       :aria-label="title || 'dialog'">
-      <div class="jy-message-box" :class="[customClass, center && 'jy-message-box--center']">
-        <div class="jy-message-box__header" v-if="title !== null">
-          <div class="jy-message-box__title" :class="[showClose && 'is-showClose']">
+      <div class="gj-message-box" :class="[customClass, center && 'gj-message-box--center']">
+        <div class="gj-message-box__header" v-if="title !== null">
+          <div class="gj-message-box__title" :class="[showClose && 'is-showClose']">
             <div
-              :class="['jy-message-box__status', icon]"
+              :class="['gj-message-box__status', icon]"
               v-if="icon && !icon.includes('Gildata-color')">
             </div>
             <svg v-else-if="icon.includes('Gildata-color')"
@@ -23,39 +23,39 @@
           </div>
           <button
             type="button"
-            class="jy-message-box__headerbtn"
+            class="gj-message-box__headerbtn"
             aria-label="Close"
             v-if="showClose"
             @click="handleAction(distinguishCancelAndClose ? 'close' : 'cancel')"
             @keydown.enter="handleAction(distinguishCancelAndClose ? 'close' : 'cancel')">
-            <i class="jy-message-box__close Gildata-close"></i>
+            <i class="gj-message-box__close Gildata-close"></i>
           </button>
         </div>
-        <div class="jy-message-box__content" :class="{'is-noIcon': !icon}">
-          <div class="jy-message-box__container">
+        <div class="gj-message-box__content" :class="{'is-noIcon': !icon}">
+          <div class="gj-message-box__container">
 <!--            <div-->
-<!--              :class="['jy-message-box__status', icon]"-->
+<!--              :class="['gj-message-box__status', icon]"-->
 <!--              v-if="icon && !center && message !== ''">-->
 <!--            </div>-->
-            <div class="jy-message-box__message" v-if="message !== ''">
+            <div class="gj-message-box__message" v-if="message !== ''">
               <slot>
                 <p v-if="!dangerouslyUseHTMLString">{{ message }}</p>
                 <p v-else v-html="message"></p>
               </slot>
             </div>
           </div>
-          <div class="jy-message-box__input" v-show="showInput">
-            <jy-input
+          <div class="gj-message-box__input" v-show="showInput">
+            <gj-input
               v-model="inputValue"
               :type="inputType"
               @keydown.enter.native="handleInputEnter"
               :placeholder="inputPlaceholder"
-              ref="input"></jy-input>
-            <div class="jy-message-box__errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
+              ref="input"></gj-input>
+            <div class="gj-message-box__errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
           </div>
         </div>
-        <div class="jy-message-box__btns">
-          <jy-button
+        <div class="gj-message-box__btns">
+          <gj-button
             secondary
             type="primary"
             :loading="cancelButtonLoading"
@@ -66,8 +66,8 @@
             @click.native="handleAction('cancel')"
             @keydown.enter="handleAction('cancel')">
             {{ cancelButtonText || t('el.messagebox.cancel') }}
-          </jy-button>
-          <jy-button
+          </gj-button>
+          <gj-button
             :loading="confirmButtonLoading"
             ref="confirm"
             :class="[ confirmButtonClasses ]"
@@ -77,7 +77,7 @@
             @click.native="handleAction('confirm')"
             @keydown.enter="handleAction('confirm')">
             {{ confirmButtonText || t('el.messagebox.confirm') }}
-          </jy-button>
+          </gj-button>
         </div>
       </div>
     </div>
@@ -87,8 +87,8 @@
 <script type="text/babel">
   import Popup from 'GildataDesign/src/utils/popup';
   import Locale from 'GildataDesign/src/mixins/locale';
-  import JyInput from 'GildataDesign/packages/input';
-  import JyButton from 'GildataDesign/packages/button';
+  import GjInput from 'GildataDesign/packages/input';
+  import GjButton from 'GildataDesign/packages/button';
   import { addClass, removeClass } from 'GildataDesign/src/utils/dom';
   import { t } from 'GildataDesign/src/locale';
   import Dialog from 'GildataDesign/src/utils/aria-dialog';
@@ -135,8 +135,8 @@
     },
 
     components: {
-      JyInput,
-      JyButton
+      GjInput,
+      GjButton
     },
 
     computed: {
@@ -147,7 +147,7 @@
       },
 
       confirmButtonClasses() {
-        return `jy-button--primary ${ this.confirmButtonClass }`;
+        return `gj-button--primary ${ this.confirmButtonClass }`;
       },
       cancelButtonClasses() {
         return `${ this.cancelButtonClass }`;
@@ -233,8 +233,8 @@
         return true;
       },
       getFirstFocus() {
-        const btn = this.$el.querySelector('.jy-message-box__btns .jy-button');
-        const title = this.$el.querySelector('.jy-message-box__btns .jy-message-box__title');
+        const btn = this.$el.querySelector('.gj-message-box__btns .gj-button');
+        const title = this.$el.querySelector('.gj-message-box__btns .gj-message-box__title');
         return btn || title;
       },
       getInputElement() {

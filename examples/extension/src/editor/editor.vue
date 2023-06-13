@@ -3,24 +3,24 @@
     <img class="entrance touch-icon" src="./icon-entrance.png" v-show="!showSidebar" @click="toggleSidebar" />
     <img class="close touch-icon" src="./icon-close.png" v-show="showSidebar" @click="toggleSidebar" />
     <div class="editor" :style="{height: `${height}px`}" v-show="showSidebar">
-      <jy-tabs v-model="activeTab" @tab-click="onTabClick">
-        <jy-tab-pane label="Config" name="config">
+      <gj-tabs v-model="activeTab" @tab-click="onTabClick">
+        <gj-tab-pane label="Config" name="config">
           <theme-configurator
             :themeConfig="themeConfig"
             :previewConfig="previewConfig"
             :onUserConfigUpdate="onUserConfigUpdate"
             from="extension"
           ></theme-configurator>
-        </jy-tab-pane>
-        <jy-tab-pane label="Gallery" name="gallery">
+        </gj-tab-pane>
+        <gj-tab-pane label="Gallery" name="gallery">
           <gallery 
             ref='gallery'
             :height="height"
             :width="width - 7"
             @action="onGalleryAction"
           />
-        </jy-tab-pane>
-      </jy-tabs>
+        </gj-tab-pane>
+      </gj-tabs>
     </div>
   </div>
 </template>

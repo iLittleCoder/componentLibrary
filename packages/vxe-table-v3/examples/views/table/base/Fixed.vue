@@ -5,17 +5,17 @@
       当横向内容过多时，将列固定在左右两侧
     </p>
 
-    <jy-table
+    <gj-table
       border="inner"
       show-overflow
       :data="tableData">
-      <jy-column type="seq" width="60" fixed="left"></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="role" title="Role" width="300"></jy-column>
-      <jy-column field="sex" title="Sex" width="300"></jy-column>
-      <jy-column field="date" title="Date" width="300"></jy-column>
-      <jy-column field="address" title="Address" fixed="right" width="300"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60" fixed="left"></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="role" title="Role" width="300"></gj-column>
+      <gj-column field="sex" title="Sex" width="300"></gj-column>
+      <gj-column field="date" title="Date" width="300"></gj-column>
+      <gj-column field="address" title="Address" fixed="right" width="300"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -26,17 +26,17 @@
 
     <p class="tip">如果列宽足够的情况下，固定列不会浮动</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       :data="tableData">
-      <jy-column type="seq" width="60" fixed="left"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" fixed="right" width="300"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60" fixed="left"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" fixed="right" width="300"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -59,17 +59,17 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border="inner"
           show-overflow
           :data="tableData">
-          <jy-column type="seq" width="60" fixed="left"></jy-column>
-          <jy-column field="name" title="Name" width="300"></jy-column>
-          <jy-column field="role" title="Role" width="300"></jy-column>
-          <jy-column field="sex" title="Sex" width="300"></jy-column>
-          <jy-column field="date" title="Date" width="300"></jy-column>
-          <jy-column field="address" title="Address" fixed="right" width="300"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60" fixed="left"></gj-column>
+          <gj-column field="name" title="Name" width="300"></gj-column>
+          <gj-column field="role" title="Role" width="300"></gj-column>
+          <gj-column field="sex" title="Sex" width="300"></gj-column>
+          <gj-column field="date" title="Date" width="300"></gj-column>
+          <gj-column field="address" title="Address" fixed="right" width="300"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -86,17 +86,17 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           :data="tableData">
-          <jy-column type="seq" width="60" fixed="left"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" fixed="right" width="300"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60" fixed="left"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" fixed="right" width="300"></gj-column>
+        </gj-table>
         `,
         `
         export default {

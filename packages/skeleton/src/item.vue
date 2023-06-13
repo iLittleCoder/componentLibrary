@@ -8,7 +8,7 @@
   import ImgPlaceholder from './img-placeholder';
 
   export default {
-    name: 'JySkeletonItem',
+    name: 'GjSkeletonItem',
     props: {
       variant: {
         type: String,

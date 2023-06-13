@@ -5,20 +5,20 @@
       <span class="red">（注：当自定义样式之后可能会覆盖表格的样式，比如选中行..等，记得自行处理好相关样式）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       class="mytable-style"
       :header-cell-class-name="headerCellClassName"
       :row-class-name="rowClassName"
       :cell-class-name="cellClassName"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="attr1" title="Attr1"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="attr1" title="Attr1"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -30,19 +30,19 @@
 
     <p class="tip">通过 <table-api-link prop="cell-click"/> 事件点击改变颜色</p>
 
-    <jy-table
+    <gj-table
       border
       class="mytable-style"
       :cell-class-name="cellClassName2"
       :data="tableData"
       @cell-click="cellClickEvent2">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="attr1" title="Attr1"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="attr1" title="Attr1"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -72,20 +72,20 @@ export default {
       selectColumn: null,
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           class="mytable-style"
           :header-cell-class-name="headerCellClassName"
           :row-class-name="rowClassName"
           :cell-class-name="cellClassName"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="attr1" title="Attr1"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="attr1" title="Attr1"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -129,37 +129,37 @@ export default {
         }
         `,
         `
-        .mytable-style .jy-body--row.row-green {
+        .mytable-style .gj-body--row.row-green {
           background-color: #187;
           color: #fff;
         }
-        .mytable-style .jy-header--column.col-blue {
+        .mytable-style .gj-header--column.col-blue {
           background-color: #2db7f5;
           color: #fff;
         }
-        .mytable-style .jy-body--column.col-red {
+        .mytable-style .gj-body--column.col-red {
           background-color: red;
           color: #fff;
         }
-        .mytable-style .jy-body--column.col-orange {
+        .mytable-style .gj-body--column.col-orange {
           background-color: #f60;
           color: #fff;
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           class="mytable-style"
           :cell-class-name="cellClassName"
           :data="tableData"
           @cell-click="cellClickEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="attr1" title="Attr1"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="attr1" title="Attr1"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -193,19 +193,19 @@ export default {
         }
         `,
         `
-        .mytable-style.jy-table .jy-body--row.row-green {
+        .mytable-style.gj-table .gj-body--row.row-green {
           background-color: #187;
           color: #fff;
         }
-        .mytable-style.jy-table .jy-header--column.col-blue {
+        .mytable-style.gj-table .gj-header--column.col-blue {
           background-color: #2db7f5;
           color: #fff;
         }
-        .mytable-style.jy-table .jy-body--column.col-red {
+        .mytable-style.gj-table .gj-body--column.col-red {
           background-color: red;
           color: #fff;
         }
-        .mytable-style.jy-table .jy-body--column.col-orange {
+        .mytable-style.gj-table .gj-body--column.col-orange {
           background-color: #f60;
           color: #fff;
         }
@@ -247,19 +247,19 @@ export default {
 </script>
 
 <style>
-.mytable-style.jy-table .jy-body--row.row-green {
+.mytable-style.gj-table .gj-body--row.row-green {
   background-color: #187;
   color: #fff;
 }
-.mytable-style.jy-table .jy-header--column.col-blue {
+.mytable-style.gj-table .gj-header--column.col-blue {
   background-color: #2db7f5;
   color: #fff;
 }
-.mytable-style.jy-table .jy-body--column.col-red {
+.mytable-style.gj-table .gj-body--column.col-red {
   background-color: red;
   color: #fff;
 }
-.mytable-style.jy-table .jy-body--column.col-orange {
+.mytable-style.gj-table .gj-body--column.col-orange {
   background-color: #f60;
   color: #fff;
 }

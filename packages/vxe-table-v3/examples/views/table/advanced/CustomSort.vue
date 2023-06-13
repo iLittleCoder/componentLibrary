@@ -2,7 +2,7 @@
   <div>
     <p class="tip">自定义列头排序的实现，你可以把表格封装成子组件进行定制，通过 <table-column-api-link prop="slot"/> 就可以实现自定义排序，通过设置 <table-column-api-link prop="showIcon"/> 可以去掉内置排序图标，例如第三方图标库：font-awesome、inconfont<br><span class="red">（具体请自行实现，该示例仅供参考）</span></p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       highlight-hover-row
@@ -13,33 +13,33 @@
       :data="tableData"
       :sort-config="{showIcon: false}"
       @header-cell-click="headerCellClickEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod">
         <template #header="{ column }">
           <span>{{ column.title }}</span>
           <span class="custom-sort" :class="{'is-order': column.order}">
             <i class="fa" :class="[column.order ? `fa-sort-alpha-${column.order}` : 'fa-long-arrow-down']"></i>
           </span>
         </template>
-      </jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age" sortable>
+      </gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age" sortable>
         <template #header="{ column }">
           <span>{{ column.title }}</span>
           <span class="custom-sort" :class="{'is-order': column.order}">
             <i class="fa" :class="[column.order ? `fa-sort-numeric-${column.order}` : 'fa-long-arrow-down']"></i>
           </span>
         </template>
-      </jy-column>
-      <jy-column field="amount" title="Amount" :formatter="formatAmount" sortable>
+      </gj-column>
+      <gj-column field="amount" title="Amount" :formatter="formatAmount" sortable>
         <template #header="{ column }">
           <span>{{ column.title }}</span>
           <span class="custom-sort" :class="{'is-order': column.order}">
             <i class="fa" :class="[column.order ? `fa-sort-amount-${column.order}` : 'fa-long-arrow-down']"></i>
           </span>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -69,7 +69,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           highlight-hover-row
@@ -80,33 +80,33 @@ export default {
           :data="tableData"
           :sort-config="{showIcon: false}"
           @header-cell-click="headerCellClickEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable :filters="[{label: 'id大于10', value: 10}, {label: 'id大于40', value: 40}]" :filter-method="filterNameMethod">
             <template #header="{ column }">
               <span>{{ column.title }}</span>
               <span class="custom-sort" :class="{'is-order': column.order}">
                 <i class="fa" :class="[column.order ? \`fa-sort-alpha-\${column.order}\` : 'fa-long-arrow-down']"></i>
               </span>
             </template>
-          </jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age" sortable>
+          </gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age" sortable>
             <template #header="{ column }">
               <span>{{ column.title }}</span>
               <span class="custom-sort" :class="{'is-order': column.order}">
                 <i class="fa" :class="[column.order ? \`fa-sort-numeric-\${column.order}\` : 'fa-long-arrow-down']"></i>
               </span>
             </template>
-          </jy-column>
-          <jy-column field="amount" title="Amount" :formatter="formatAmount" sortable>
+          </gj-column>
+          <gj-column field="amount" title="Amount" :formatter="formatAmount" sortable>
             <template #header="{ column }">
               <span>{{ column.title }}</span>
               <span class="custom-sort" :class="{'is-order': column.order}">
                 <i class="fa" :class="[column.order ? \`fa-sort-amount-\${column.order}\` : 'fa-long-arrow-down']"></i>
               </span>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

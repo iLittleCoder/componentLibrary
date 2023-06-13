@@ -1,6 +1,6 @@
 <template>
   <div
-    class="jy-slider__button-wrapper"
+    class="gj-slider__button-wrapper"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
     @mousedown="onButtonDown"
@@ -16,7 +16,7 @@
     @keydown.down.prevent="onLeftKeyDown"
     @keydown.up.prevent="onRightKeyDown"
   >
-    <jy-tooltip
+    <gj-tooltip
       placement="top"
       ref="tooltip"
       :popper-class="tooltipClass"
@@ -24,21 +24,21 @@
     >
       <span slot="content">{{ formatValue }}</span>
       <div
-        class="jy-slider__button"
+        class="gj-slider__button"
         :class="{ hover: hovering, dragging: dragging }"
       ></div>
-    </jy-tooltip>
+    </gj-tooltip>
   </div>
 </template>
 
 <script>
-import JyTooltip from 'GildataDesign/packages/tooltip';
+import GjTooltip from 'GildataDesign/packages/tooltip';
 
 export default {
-  name: 'JySliderButton',
+  name: 'GjSliderButton',
 
   components: {
-    JyTooltip
+    GjTooltip
   },
 
   props: {

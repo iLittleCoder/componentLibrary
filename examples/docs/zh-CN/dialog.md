@@ -8,18 +8,18 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 :::demo 需要设置`visible`属性，它接收`Boolean`，当为`true`时显示 Dialog。Dialog 分为两个部分：`body`和`footer`，`footer`需要具名为`footer`的`slot`。`title`属性用于定义标题，它是可选的，默认值为空。最后，本例还展示了`before-close`的用法。
 
 ```html
-<jy-button type="text" @click="dialogVisible = true">点击打开 Dialog</jy-button>
+<gj-button type="text" @click="dialogVisible = true">点击打开 Dialog</gj-button>
 
-<jy-dialog
+<gj-dialog
   title="简历"
   :visible.sync="dialogVisible"
   width="30%">
   <div class="text">林**，男，1971年生，中国国籍，无境外居留权，学士。历仼职于中国银行广西分行隶属贵港分行支行行长、河池分行副行长，广西启泰投资集团有限公司董事。2019年10月15日至今，任公司财务总监</div>
   <span slot="footer" class="dialog-footer">
-    <jy-button secondary type="primary" @click="dialogVisible = false">取 消</jy-button>
-    <jy-button type="primary" @click="dialogVisible = false">确 定</jy-button>
+    <gj-button secondary type="primary" @click="dialogVisible = false">取 消</gj-button>
+    <gj-button type="primary" @click="dialogVisible = false">确 定</gj-button>
   </span>
-</jy-dialog>
+</gj-dialog>
 
 <script>
   export default {
@@ -43,19 +43,19 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 :::demo 通过v-dialogDrag指令，可使弹框屏幕内拖动
 
 ```html
-<jy-button type="text" @click="dialogVisible = true">拖拽 Dialog</jy-button>
+<gj-button type="text" @click="dialogVisible = true">拖拽 Dialog</gj-button>
 
-<jy-dialog
+<gj-dialog
   v-dialogDrag
   title="提示"
   :visible.sync="dialogVisible"
   width="30%">
   <span>可拖拽的弹框</span>
   <span slot="footer" class="dialog-footer">
-    <jy-button secondary type="primary" @click="dialogVisible = false">取 消</jy-button>
-    <jy-button type="primary" @click="dialogVisible = false">确 定</jy-button>
+    <gj-button secondary type="primary" @click="dialogVisible = false">取 消</gj-button>
+    <gj-button type="primary" @click="dialogVisible = false">确 定</gj-button>
   </span>
-</jy-dialog>
+</gj-dialog>
 
 <script>
   export default {
@@ -80,36 +80,36 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 :::demo
 ```html
 <!-- Table -->
-<jy-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</jy-button>
+<gj-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</gj-button>
 
-<jy-dialog title="收货地址" :visible.sync="dialogTableVisible">
-  <jy-table :data="gridData">
-    <jy-column field="date" title="日期" width="100"></jy-column>
-    <jy-column field="name" title="姓名" width="100"></jy-column>
-    <jy-column field="address" title="地址"></jy-column>
-  </jy-table>
-</jy-dialog>
+<gj-dialog title="收货地址" :visible.sync="dialogTableVisible">
+  <gj-table :data="gridData">
+    <gj-column field="date" title="日期" width="100"></gj-column>
+    <gj-column field="name" title="姓名" width="100"></gj-column>
+    <gj-column field="address" title="地址"></gj-column>
+  </gj-table>
+</gj-dialog>
 
 <!-- Form -->
-<jy-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</jy-button>
+<gj-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</gj-button>
 
-<jy-dialog title="收货地址" :visible.sync="dialogFormVisible">
-  <jy-form :model="form" size="medium">
-    <jy-form-item label="活动名称" :label-width="formLabelWidth">
-      <jy-input v-model="form.name" autocomplete="off"></jy-input>
-    </jy-form-item>
-    <jy-form-item label="活动区域" :label-width="formLabelWidth">
-      <jy-select border v-model="form.region" placeholder="请选择活动区域">
-        <jy-option label="区域一" value="shanghai"></jy-option>
-        <jy-option label="区域二" value="beijing"></jy-option>
-      </jy-select>
-    </jy-form-item>
-  </jy-form>
+<gj-dialog title="收货地址" :visible.sync="dialogFormVisible">
+  <gj-form :model="form" size="medium">
+    <gj-form-item label="活动名称" :label-width="formLabelWidth">
+      <gj-input v-model="form.name" autocomplete="off"></gj-input>
+    </gj-form-item>
+    <gj-form-item label="活动区域" :label-width="formLabelWidth">
+      <gj-select border v-model="form.region" placeholder="请选择活动区域">
+        <gj-option label="区域一" value="shanghai"></gj-option>
+        <gj-option label="区域二" value="beijing"></gj-option>
+      </gj-select>
+    </gj-form-item>
+  </gj-form>
   <div slot="footer" class="dialog-footer">
-    <jy-button secondary type="primary" @click="dialogFormVisible = false">取 消</jy-button>
-    <jy-button type="primary" @click="dialogFormVisible = false">确 定</jy-button>
+    <gj-button secondary type="primary" @click="dialogFormVisible = false">取 消</gj-button>
+    <gj-button type="primary" @click="dialogFormVisible = false">确 定</gj-button>
   </div>
-</jy-dialog>
+</gj-dialog>
 
 <script>
   export default {
@@ -157,21 +157,21 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 :::demo 正常情况下，我们不建议使用嵌套的 Dialog，如果需要在页面上同时显示多个 Dialog，可以将它们平级放置。对于确实需要嵌套 Dialog 的场景，我们提供了`append-to-body`属性。将内层 Dialog 的该属性设置为 true，它就会插入至 body 元素上，从而保证内外层 Dialog 和遮罩层级关系的正确。
 ```html
 <template>
-  <jy-button type="text" @click="outerVisible = true">点击打开外层 Dialog</jy-button>
+  <gj-button type="text" @click="outerVisible = true">点击打开外层 Dialog</gj-button>
   
-  <jy-dialog title="外层 Dialog" :visible.sync="outerVisible">
-    <jy-dialog
+  <gj-dialog title="外层 Dialog" :visible.sync="outerVisible">
+    <gj-dialog
       width="30%"
       title="内层 Dialog"
       :visible.sync="innerVisible"
       append-to-body>
       <div>这里是内层的信息</div>
-    </jy-dialog>
+    </gj-dialog>
     <div slot="footer" class="dialog-footer">
-      <jy-button secondary type="primary" @click="outerVisible = false">取 消</jy-button>
-      <jy-button type="primary" @click="innerVisible = true">打开内层 Dialog</jy-button>
+      <gj-button secondary type="primary" @click="outerVisible = false">取 消</gj-button>
+      <gj-button type="primary" @click="innerVisible = true">打开内层 Dialog</gj-button>
     </div>
-  </jy-dialog>
+  </gj-dialog>
 </template>
 
 <script>

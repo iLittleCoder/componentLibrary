@@ -9,7 +9,7 @@
   width: 180px;
   line-height: #{$--input-height - 2};
 
-  .jy-input {
+  .gj-input {
     display: block;
 
     &__inner {
@@ -37,7 +37,7 @@
         background: $--color-neutral-hover;
       }
 
-      &:not(.is-disabled) ~ .jy-input .jy-input__inner:not(.is-disabled) {
+      &:not(.is-disabled) ~ .gj-input .gj-input__inner:not(.is-disabled) {
         border-color: $--input-focus-border;
       }
     }
@@ -86,7 +86,7 @@
       font-size: $--input-medium-font-size;
     }
 
-    .jy-input__inner {
+    .gj-input__inner {
       padding-left: #{$--input-medium-height + 7};
       padding-right: #{$--input-medium-height + 7};
     }
@@ -106,7 +106,7 @@
       }
     }
 
-    .jy-input__inner {
+    .gj-input__inner {
       padding-left: #{$--input-large-height + 7};
       padding-right: #{$--input-large-height + 7};
     }
@@ -125,21 +125,21 @@
       }
     }
 
-    .jy-input__inner {
+    .gj-input__inner {
       padding-left: #{$--input-mini-height + 7};
       padding-right: #{$--input-mini-height + 7};
     }
   }
 
   @include when(without-controls) {
-    .jy-input__inner {
+    .gj-input__inner {
       padding-left: 15px;
       padding-right: 15px;
     }
   }
 
   @include when(controls-right) {
-    .jy-input__inner {
+    .gj-input__inner {
       padding-left: 8px;
       padding-right: #{$--input-height + 10};
     }
@@ -169,7 +169,7 @@
     }
 
     &[class*=medium] {
-      .jy-input__inner {
+      .gj-input__inner {
         padding-left: 10px;
       }
       
@@ -179,7 +179,7 @@
     }
 
     &[class*=large] {
-      .jy-input__inner {
+      .gj-input__inner {
         padding-left: 12px;
       }
       [class*=increase], [class*=decrease] {
@@ -188,7 +188,7 @@
     }
 
     &[class*=mini] {
-      .jy-input__inner {
+      .gj-input__inner {
         padding-left: 6px;
       }
       [class*=increase], [class*=decrease] {
@@ -211,46 +211,46 @@
     right: 38px;
   }
   @include when(pretext){
-    .jy-input__inner{
+    .gj-input__inner{
       padding-left: 28px
     }
     &[class*=large] {
-      .jy-input__inner{
+      .gj-input__inner{
         padding-left: 36px
       }
-      .jy-input-number__pretext{
+      .gj-input-number__pretext{
         line-height: 40px;
         left: 12px;
       }
     }
     &[class*=medium] {
-      .jy-input__inner{
+      .gj-input__inner{
         padding-left: 32px
       }
-      .jy-input-number__pretext{
+      .gj-input-number__pretext{
         line-height: 32px;
         left: 10px;
       }
     }
     &[class*=mini] {
-      .jy-input__inner{
+      .gj-input__inner{
         padding-left: 24px
       }
-      .jy-input-number__pretext{
+      .gj-input-number__pretext{
         line-height: 22px;
         left: 6px;
       }
     }
   }
   @include when(appendtext){
-    .jy-input__inner{
+    .gj-input__inner{
       padding-right: 55px
     }
     &[class*=large] {
       [class*=appendtext] {
         right: 45px;
       }
-      .jy-input__inner{
+      .gj-input__inner{
         padding-right: 60px
       }
     }
@@ -259,7 +259,7 @@
       [class*=appendtext] {
         right: 30px;
       }
-      .jy-input__inner{
+      .gj-input__inner{
         padding-right: 35px
       }
     }

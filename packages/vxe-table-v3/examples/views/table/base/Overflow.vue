@@ -7,22 +7,22 @@
       <table-column-api-link prop="tooltip"/> 当内容溢出时显示为省略号并用 tooltip 显示<br>
     </p>
 
-    <jy-table
+    <gj-table
       show-footer
       highlight-hover-row
       :footer-method="footerMethod"
       :data="tableData1">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="名称" show-overflow="ellipsis"></jy-column>
-      <jy-column field="role" title="角色" show-overflow></jy-column>
-      <jy-column field="date" title="标题溢出，显示为 tooltip xxxxxxxxxx" show-header-overflow show-overflow="title" show-footer-overflow></jy-column>
-      <jy-column field="rate" title="Rate" show-header-overflow="title">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="名称" show-overflow="ellipsis"></gj-column>
+      <gj-column field="role" title="角色" show-overflow></gj-column>
+      <gj-column field="date" title="标题溢出，显示为 tooltip xxxxxxxxxx" show-header-overflow show-overflow="title" show-footer-overflow></gj-column>
+      <gj-column field="rate" title="Rate" show-header-overflow="title">
         <template #header>
           <span>标题显示原生 title ___________________________</span>
         </template>
-      </jy-column>
-      <jy-column field="address" title="不换行不换行不换行不换行不换行不换行不换行不换行不换行" width="160"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="address" title="不换行不换行不换行不换行不换行不换行不换行不换行不换行" width="160"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -36,7 +36,7 @@
       还可以通过 <table-api-link prop="enterable"/> 开启鼠标是否可进入到 tooltip 中
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       show-header-overflow
@@ -45,10 +45,10 @@
       :footer-method="footerMethod"
       :data="tableData2"
       :tooltip-config="{contentMethod: showTooltipMethod, enterable: true}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="名称"></jy-column>
-      <jy-column field="role" title="标题溢出直接隐藏 xxxxxxxxxxxxxxxxxxxxxxxxxxx" show-header-overflow="ellipsis"></jy-column>
-      <jy-column field="date" title="Date" show-header-overflow show-overflow show-footer-overflow></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="名称"></gj-column>
+      <gj-column field="role" title="标题溢出直接隐藏 xxxxxxxxxxxxxxxxxxxxxxxxxxx" show-header-overflow="ellipsis"></gj-column>
+      <gj-column field="date" title="Date" show-header-overflow show-overflow show-footer-overflow></gj-column>
       <vxe-colgroup title="基本信息">
         <vxe-colgroup field="rate" show-header-overflow="title">
           <template #header>
@@ -56,10 +56,10 @@
           </template>
         </vxe-colgroup>
         <vxe-colgroup title="详细信息">
-          <jy-column type="html" field="address" title="标题溢出显示tooltip内容内容内容内容内容内容" width="160" show-header-overflow show-overflow></jy-column>
+          <gj-column type="html" field="address" title="标题溢出显示tooltip内容内容内容内容内容内容" width="160" show-header-overflow show-overflow></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -97,22 +97,22 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           show-footer
           highlight-hover-row
           :footer-method="footerMethod"
           :data="tableData1">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="名称" show-overflow="ellipsis"></jy-column>
-          <jy-column field="role" title="角色" show-overflow></jy-column>
-          <jy-column field="date" title="标题溢出，显示为 tooltip xxxxxxxxxx" show-header-overflow show-overflow="title" show-footer-overflow></jy-column>
-          <jy-column field="rate" title="Rate" show-header-overflow="title">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="名称" show-overflow="ellipsis"></gj-column>
+          <gj-column field="role" title="角色" show-overflow></gj-column>
+          <gj-column field="date" title="标题溢出，显示为 tooltip xxxxxxxxxx" show-header-overflow show-overflow="title" show-footer-overflow></gj-column>
+          <gj-column field="rate" title="Rate" show-header-overflow="title">
             <template #header>
               <span>标题显示原生 title ___________________________</span>
             </template>
-          </jy-column>
-          <jy-column field="address" title="不换行不换行不换行不换行不换行不换行不换行不换行不换行" width="160"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="address" title="不换行不换行不换行不换行不换行不换行不换行不换行不换行" width="160"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -149,7 +149,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-footer
           show-header-overflow
@@ -158,10 +158,10 @@ export default {
           :footer-method="footerMethod"
           :data="tableData2"
           :tooltip-config="{contentMethod: showTooltipMethod, enterable: true}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="名称"></jy-column>
-          <jy-column field="role" title="标题溢出直接隐藏 xxxxxxxxxxxxxxxxxxxxxxxxxxx" show-header-overflow="ellipsis"></jy-column>
-          <jy-column field="date" title="Date" show-header-overflow show-overflow show-footer-overflow></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="名称"></gj-column>
+          <gj-column field="role" title="标题溢出直接隐藏 xxxxxxxxxxxxxxxxxxxxxxxxxxx" show-header-overflow="ellipsis"></gj-column>
+          <gj-column field="date" title="Date" show-header-overflow show-overflow show-footer-overflow></gj-column>
           <vxe-colgroup title="基本信息">
             <vxe-colgroup field="rate" show-header-overflow="title">
               <template #header>
@@ -169,10 +169,10 @@ export default {
               </template>
             </vxe-colgroup>
             <vxe-colgroup title="详细信息">
-              <jy-column type="html" field="address" title="标题溢出显示tooltip内容内容内容内容内容内容" width="160" show-header-overflow show-overflow></jy-column>
+              <gj-column type="html" field="address" title="标题溢出显示tooltip内容内容内容内容内容内容" width="160" show-header-overflow show-overflow></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {

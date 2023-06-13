@@ -9,11 +9,11 @@
 ```html
 <div class="block">
   <span class="demonstration">默认不区分颜色</span>
-  <jy-rate v-model="value1"></jy-rate>
+  <gj-rate v-model="value1"></gj-rate>
 </div>
 <div class="block">
   <span class="demonstration">区分颜色</span>
-  <jy-rate v-model="value2" :colors="colors"> </jy-rate>
+  <gj-rate v-model="value2" :colors="colors"> </gj-rate>
 </div>
 
 <script>
@@ -38,7 +38,7 @@
 :::demo 为组件设置 `show-text` 属性会在右侧显示辅助文字。通过设置 `texts` 可以为每一个分值指定对应的辅助文字。`texts` 为一个数组，长度应等于最大值 `max`。
 
 ```html
-<jy-rate v-model="value" show-text :text-color="theme === 'Black' ? '#e6e6e6' : '#202020'"> </jy-rate>
+<gj-rate v-model="value" show-text :text-color="theme === 'Black' ? '#e6e6e6' : '#202020'"> </gj-rate>
 
 <script>
   export default {
@@ -67,7 +67,7 @@
 :::demo 设置`icon-classes`属性可以自定义不同分段的图标。若传入数组，共有 3 个元素，为 3 个分段所对应的类名；若传入对象，可自定义分段，键名为分段的界限值，键值为对应的类名。本例还使用`void-icon-class`指定了未选中时的图标类名。
 
 ```html
-<jy-rate
+<gj-rate
   v-model="value"
   allowHalf
   :icon-classes="iconClasses"
@@ -75,7 +75,7 @@
   void-icon-class="Gildata-heart2"
   :colors="['#ee5640', '#ee5640', '#ee5640']"
 >
-</jy-rate>
+</gj-rate>
 
 <script>
   export default {
@@ -98,7 +98,7 @@
 :::demo 为组件设置 `disabled` 属性表示组件为只读，支持小数分值。此时若设置 `show-score`，则会在右侧显示目前的分值。可以提供 `score-template` 作为显示模板，模板为一个包含了 `{value}` 的字符串，`{value}` 会被解析为分值。
 
 ```html
-<jy-rate
+<gj-rate
   v-model="value"
   disabled
   show-score
@@ -106,7 +106,7 @@
   score-template="{value}"
   iconHalfColor="var(--color-neutral)"
 >
-</jy-rate>
+</gj-rate>
 
 <script>
   export default {

@@ -1,8 +1,8 @@
 <template>
   <label
-    class="jy-radio"
+    class="gj-radio"
     :class="[
-      border && radioSize ? 'jy-radio--' + radioSize : '',
+      border && radioSize ? 'gj-radio--' + radioSize : '',
       { 'is-disabled': isDisabled },
       { 'is-focus': focus },
       { 'is-bordered': border },
@@ -15,16 +15,16 @@
     @keydown.space.stop.prevent="model = isDisabled ? model : label"
   >
     <span
-      class="jy-radio__input"
+      class="gj-radio__input"
       :class="{
         'is-disabled': isDisabled,
         'is-checked': model === label
       }"
     >
-      <span class="jy-radio__inner"></span>
+      <span class="gj-radio__inner"></span>
       <input
         ref="radio"
-        class="jy-radio__original"
+        class="gj-radio__original"
         :value="label"
         type="radio"
         aria-hidden="true"
@@ -38,7 +38,7 @@
         autocomplete="off"
       />
     </span>
-    <span class="jy-radio__label" @keydown.stop>
+    <span class="gj-radio__label" @keydown.stop>
       <slot></slot>
       <template v-if="!$slots.default">{{ label }}</template>
     </span>
@@ -48,21 +48,21 @@
 import Emitter from 'GildataDesign/src/mixins/emitter';
 
 export default {
-  name: 'JyRadio',
+  name: 'GjRadio',
 
   mixins: [Emitter],
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
 
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
 
-  componentName: 'JyRadio',
+  componentName: 'GjRadio',
 
   props: {
     value: {},
@@ -82,7 +82,7 @@ export default {
     isGroup() {
       let parent = this.$parent;
       while (parent) {
-        if (parent.$options.componentName !== 'JyRadioGroup') {
+        if (parent.$options.componentName !== 'GjRadioGroup') {
           parent = parent.$parent;
         } else {
           this._radioGroup = parent;
@@ -97,7 +97,7 @@ export default {
       },
       set(val) {
         if (this.isGroup) {
-          this.dispatch('JyRadioGroup', 'input', [val]);
+          this.dispatch('GjRadioGroup', 'input', [val]);
         } else {
           this.$emit('input', val);
         }
@@ -106,7 +106,7 @@ export default {
       }
     },
     _elFormItemSize() {
-      return (this.jyFormItem || {}).elFormItemSize;
+      return (this.GjFormItem || {}).elFormItemSize;
     },
     radioSize() {
       const temRadioSize =
@@ -119,8 +119,8 @@ export default {
       return this.isGroup
         ? this._radioGroup.disabled ||
             this.disabled ||
-            (this.jyForm || {}).disabled
-        : this.disabled || (this.jyForm || {}).disabled;
+            (this.GjForm || {}).disabled
+        : this.disabled || (this.GjForm || {}).disabled;
     },
     tabIndex() {
       return this.isDisabled || (this.isGroup && this.model !== this.label)
@@ -134,7 +134,7 @@ export default {
       this.$nextTick(() => {
         this.$emit('change', this.model);
         this.isGroup &&
-          this.dispatch('JyRadioGroup', 'handleChange', this.model);
+          this.dispatch('GjRadioGroup', 'handleChange', this.model);
       });
     }
   }

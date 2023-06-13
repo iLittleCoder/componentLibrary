@@ -9,32 +9,32 @@
 :::demo 通过 row 和 col 组件，并通过 col 组件的 `span` 属性我们就可以自由地组合布局。
 
 ```html
-<jy-row>
-  <jy-col :span="24"><div class="grid-content bg-purple-dark"></div></jy-col>
-</jy-row>
-<jy-row>
-  <jy-col :span="12"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="12"><div class="grid-content bg-purple-light"></div></jy-col>
-</jy-row>
-<jy-row>
-  <jy-col :span="8"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="8"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="8"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple-light"></div></jy-col>
-</jy-row>
-<jy-row>
-  <jy-col :span="4"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="4"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="4"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="4"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="4"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="4"><div class="grid-content bg-purple-light"></div></jy-col>
-</jy-row>
+<gj-row>
+  <gj-col :span="24"><div class="grid-content bg-purple-dark"></div></gj-col>
+</gj-row>
+<gj-row>
+  <gj-col :span="12"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="12"><div class="grid-content bg-purple-light"></div></gj-col>
+</gj-row>
+<gj-row>
+  <gj-col :span="8"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="8"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="8"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple-light"></div></gj-col>
+</gj-row>
+<gj-row>
+  <gj-col :span="4"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="4"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="4"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="4"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="4"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="4"><div class="grid-content bg-purple-light"></div></gj-col>
+</gj-row>
 
 <style>
   .el-row {
@@ -75,12 +75,12 @@
 :::demo Row 组件 提供 `gutter` 属性来指定每一栏之间的间隔，默认间隔为 0。
 
 ```html
-<jy-row :gutter="20">
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
+<gj-row :gutter="20">
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
 
 <style>
   .el-row {
@@ -121,21 +121,21 @@
 :::demo
 
 ```html
-<jy-row :gutter="20">
-  <jy-col :span="16"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="8"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row :gutter="20">
-  <jy-col :span="8"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="8"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="4"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="4"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row :gutter="20">
-  <jy-col :span="4"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="16"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="4"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
+<gj-row :gutter="20">
+  <gj-col :span="16"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="8"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row :gutter="20">
+  <gj-col :span="8"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="8"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="4"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="4"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row :gutter="20">
+  <gj-col :span="4"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="16"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="4"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
 
 <style>
   .el-row {
@@ -176,17 +176,17 @@
 :::demo 通过制定 col 组件的 `offset` 属性可以指定分栏偏移的栏数。
 
 ```html
-<jy-row :gutter="20">
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row :gutter="20">
-  <jy-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row :gutter="20">
-  <jy-col :span="12" :offset="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
+<gj-row :gutter="20">
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row :gutter="20">
+  <gj-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row :gutter="20">
+  <gj-col :span="12" :offset="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
 
 <style>
   .el-row {
@@ -227,31 +227,31 @@
 :::demo 将 `type` 属性赋值为 'flex'，可以启用 flex 布局，并可通过 `justify` 属性来指定 start, center, end, space-between, space-around 其中的值来定义子元素的排版方式。
 
 ```html
-<jy-row type="flex" class="row-bg">
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row type="flex" class="row-bg" justify="center">
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row type="flex" class="row-bg" justify="end">
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row type="flex" class="row-bg" justify="space-between">
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
-<jy-row type="flex" class="row-bg" justify="space-around">
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :span="6"><div class="grid-content bg-purple"></div></jy-col>
-</jy-row>
+<gj-row type="flex" class="row-bg">
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row type="flex" class="row-bg" justify="center">
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row type="flex" class="row-bg" justify="end">
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row type="flex" class="row-bg" justify="space-between">
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
+<gj-row type="flex" class="row-bg" justify="space-around">
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :span="6"><div class="grid-content bg-purple"></div></gj-col>
+</gj-row>
 
 <style>
   .el-row {
@@ -292,12 +292,12 @@
 :::demo
 
 ```html
-<jy-row :gutter="10">
-  <jy-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple-light"></div></jy-col>
-  <jy-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple"></div></jy-col>
-  <jy-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple-light"></div></jy-col>
-</jy-row>
+<gj-row :gutter="10">
+  <gj-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple-light"></div></gj-col>
+  <gj-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple"></div></gj-col>
+  <gj-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple-light"></div></gj-col>
+</gj-row>
 
 <style>
   .el-col {

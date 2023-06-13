@@ -5,8 +5,8 @@
 -->
 
 <template>
-  <div class="jy-empty">
-    <div class="jy-empty__image" :style="imageStyle">
+  <div class="gj-empty">
+    <div class="gj-empty__image" :style="imageStyle">
       <img ref="image" v-if="image" :src="image" ondragstart="return false" />
       <slot v-else name="image">
         <!--        <img-empty />-->
@@ -20,13 +20,13 @@
       </slot>
     </div>
     <div
-      class="jy-empty__description"
+      class="gj-empty__description"
       :class="[!imageSize || imageSize <= 160 ? 'empty-mini' : '']"
     >
       <slot v-if="$slots.description" name="description"></slot>
       <div v-else>{{ emptyDescription }}</div>
     </div>
-    <div v-if="$slots.default" class="jy-empty__bottom">
+    <div v-if="$slots.default" class="gj-empty__bottom">
       <slot></slot>
     </div>
   </div>
@@ -65,7 +65,7 @@ const descriptionType = {
   }
 };
 export default {
-  name: 'JyEmpty',
+  name: 'GjEmpty',
   components: { [ImgEmpty.name]: ImgEmpty },
   data() {
     return {

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="jy-tree-node"
+    class="gj-tree-node"
     @contextmenu="($event) => this.handleContextMenu($event)"
     v-show="node.visible"
     :class="{
@@ -23,7 +23,7 @@
     ref="node"
   >
     <div
-      class="jy-tree-node__content"
+      class="gj-tree-node__content"
       @mouseenter="onMouseEnter"
       @mouseleave="onMouseLeave"
       @click.stop="handleClick('single', $event)"
@@ -36,7 +36,7 @@
     >
       <span
         v-if="tree.iconClassPosition === 'left'"
-        class="jy-tree-node__expand-icon Gildata-s-rightarrow"
+        class="gj-tree-node__expand-icon Gildata-s-rightarrow"
         @click.stop="handleExpandIconClick"
         :class="[
           {
@@ -49,11 +49,11 @@
       </span>
       <i
         v-if="tree.iconLeftClass"
-        class="jy-tree-custom-leftIcon "
+        class="gj-tree-custom-leftIcon "
         :class="[tree.iconLeftClass ? tree.iconLeftClass : '']"
       >
       </i>
-      <jy-checkbox
+      <gj-checkbox
         v-if="showCheckbox"
         v-model="node.checked"
         :indeterminate="node.indeterminate"
@@ -61,16 +61,16 @@
         @click.native.stop
         @change="handleCheckChange"
       >
-      </jy-checkbox>
+      </gj-checkbox>
       <span
         v-if="node.loading"
-        class="jy-tree-node__loading-icon Gildata-loading"
+        class="gj-tree-node__loading-icon Gildata-loading"
       >
       </span>
       <node-content :node="node"></node-content>
       <span
         v-if="tree.iconClassPosition === 'right'"
-        class="jy-tree-node__expand-icon el-icon-caret-right"
+        class="gj-tree-node__expand-icon el-icon-caret-right"
         @click.stop="handleExpandIconClick"
         :class="{ 'is-leaf': node.isLeaf, expanded: !node.isLeaf && expanded }"
       >
@@ -78,7 +78,7 @@
       <!-- 可拖拽默认存在右侧图标 并且选中的情况下或hover状态时 才显示 -->
       <i
         v-if="tree.draggable && (tree.store.currentNode === node || isHover)"
-        class="jy-tree-custom-rightIcon"
+        class="gj-tree-custom-rightIcon"
         :class="[tree.iconRightClass ? tree.iconRightClass : 'Gildata-drag2']"
       >
       </i>
@@ -87,20 +87,20 @@
         v-show="
           tree.iconRightClass && (tree.store.currentNode === node || isHover)
         "
-        class="jy-tree-custom-rightIcon"
+        class="gj-tree-custom-rightIcon"
         :class="[tree.iconRightClass ? tree.iconRightClass : '']"
       >
       </i>
     </div>
-    <jy-collapse-transition>
+    <gj-collapse-transition>
       <div
-        class="jy-tree-node__children"
+        class="gj-tree-node__children"
         v-if="!renderAfterExpand || childNodeRendered"
         v-show="expanded"
         role="group"
         :aria-expanded="expanded"
       >
-        <jy-tree-node
+        <gj-tree-node
           :render-content="renderContent"
           v-for="child in node.childNodes"
           :render-after-expand="renderAfterExpand"
@@ -111,21 +111,21 @@
           :nodeDoubleClick="nodeDoubleClick"
           @node-expand="handleChildNodeExpand"
         >
-        </jy-tree-node>
+        </gj-tree-node>
       </div>
-    </jy-collapse-transition>
+    </gj-collapse-transition>
   </div>
 </template>
 
 <script type="text/jsx">
-import JyCollapseTransition from 'GildataDesign/src/transitions/collapse-transition';
-import JyCheckbox from 'GildataDesign/packages/checkbox';
+import GjCollapseTransition from 'GildataDesign/src/transitions/collapse-transition';
+import GjCheckbox from 'GildataDesign/packages/checkbox';
 import emitter from 'GildataDesign/src/mixins/emitter';
 import { getNodeKey, sleep } from './model/util';
 
 export default {
-  name: 'JyTreeNode',
-  componentName: 'JyTreeNode',
+  name: 'GjTreeNode',
+  componentName: 'GjTreeNode',
   mixins: [emitter],
   props: {
     node: {
@@ -153,8 +153,8 @@ export default {
     },
   },
   components: {
-    JyCollapseTransition,
-    JyCheckbox,
+    GjCollapseTransition,
+    GjCheckbox,
     NodeContent: {
       props: {
         node: {
@@ -176,7 +176,7 @@ export default {
         ) : tree.$scopedSlots.default ? (
           tree.$scopedSlots.default({ node, data })
         ) : (
-          <span class="jy-tree-node__label">{node.label}</span>
+          <span class="gj-tree-node__label">{node.label}</span>
         )
       }
     }
@@ -325,7 +325,7 @@ export default {
     },
 
     handleChildNodeExpand(nodeData, node, instance) {
-      this.broadcast('JyTreeNode', 'tree-node-expand', node);
+      this.broadcast('GjTreeNode', 'tree-node-expand', node);
       this.tree.$emit('node-expand', nodeData, node, instance);
     },
 

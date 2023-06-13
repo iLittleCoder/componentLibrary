@@ -2,24 +2,24 @@
   <div>
     <p class="tip">自定义单选框，通过插槽 <table-column-api-link prop="radio"/> 自定义模板</p>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable"
       height="400"
       :data="tableData">
-      <jy-column type="radio" width="60">
+      <gj-column type="radio" width="60">
         <template #radio="{ row, checked }">
           <span class="custom-radio" @click.stop="$refs.xTable.setRadioRow(row)">
             <span v-if="checked">🌝</span>
             <span v-else>🌚</span>
           </span>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -47,24 +47,24 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           ref="xTable"
           height="400"
           :data="tableData">
-          <jy-column type="radio" width="60">
+          <gj-column type="radio" width="60">
             <template #radio="{ row, checked }">
               <span class="custom-radio" @click.stop="$refs.xTable.setRadioRow(row)">
                 <span v-if="checked">🌝</span>
                 <span v-else>🌚</span>
               </span>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address"></gj-column>
+        </gj-table>
         `,
         `
         export default {

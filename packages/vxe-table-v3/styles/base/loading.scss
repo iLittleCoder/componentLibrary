@@ -1,5 +1,5 @@
 /*加载中*/
-.jy-loading {
+.gj-loading {
   display: none;
   position: absolute;
   width: 100%;
@@ -13,7 +13,7 @@
   &.is--visible {
     display: block;
   }
-  .jy-loading--spinner {
+  .gj-loading--spinner {
     width: 56px;
     height: 56px;
     position: absolute;
@@ -31,24 +31,24 @@
 }
 
 .size--mini {
-  .jy-loading {
-    .jy-loading--spinner {
+  .gj-loading {
+    .gj-loading--spinner {
       width: 38px;
       height: 38px;
     }
   }
 }
 .size--small {
-  .jy-loading {
-    .jy-loading--spinner {
+  .gj-loading {
+    .gj-loading--spinner {
       width: 44px;
       height: 44px;
     }
   }
 }
 .size--medium {
-  .jy-loading {
-    .jy-loading--spinner {
+  .gj-loading {
+    .gj-loading--spinner {
       width: 50px;
       height: 50px;
     }

@@ -200,26 +200,26 @@
     background: $--color-neutral;
   }
   @include m(card) {
-    > .jy-tabs__header {
+    > .gj-tabs__header {
       border-bottom: 1px solid $--border-color-normal;
     }
-    > .jy-tabs__header .jy-tabs__nav-wrap::after {
+    > .gj-tabs__header .gj-tabs__nav-wrap::after {
       content: none;
     }
-    > .jy-tabs__header .jy-tabs__nav {
+    > .gj-tabs__header .gj-tabs__nav {
       border-radius: 4px 4px 0 0;
       box-sizing: border-box;
       padding: 0;
     }
-    > .jy-tabs__header .jy-tabs__new-tab {
+    > .gj-tabs__header .gj-tabs__new-tab {
       border: 1px solid $--border-color-normal;
       border-bottom-color: transparent;
     }
-    > .jy-tabs__header .jy-tabs__active-bar {
+    > .gj-tabs__header .gj-tabs__active-bar {
       display: none;
     }
 
-    > .jy-tabs__header .jy-tabs__item .Gildata-close {
+    > .gj-tabs__header .gj-tabs__item .Gildata-close {
       position: relative;
       vertical-align: middle;
       overflow: hidden;
@@ -235,10 +235,10 @@
         color: $--color-primary-pressed;
       }
     }
-    > .jy-tabs__header .jy-tabs__item i {
+    > .gj-tabs__header .gj-tabs__item i {
       vertical-align: middle;
     }
-    > .jy-tabs__header .jy-tabs__item {
+    > .gj-tabs__header .gj-tabs__item {
       border: 1px solid $--border-color-normal;
       border-radius: 4px 4px 0px 0px;
       margin: 0 4px 0 0 !important;
@@ -274,21 +274,21 @@
     border: 1px solid $--border-color-base;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
 
-    > .jy-tabs__content {
+    > .gj-tabs__content {
       padding: 15px;
     }
-    > .jy-tabs__header {
+    > .gj-tabs__header {
       background-color: $--avatar-background-color;
       border-bottom: 1px solid $--border-color-normal;
       margin: 0;
     }
-    > .jy-tabs__header .jy-tabs__nav {
+    > .gj-tabs__header .gj-tabs__nav {
       padding: 0;
     }
-    > .jy-tabs__header .jy-tabs__nav-wrap::after {
+    > .gj-tabs__header .gj-tabs__nav-wrap::after {
       content: none;
     }
-    > .jy-tabs__header .jy-tabs__item {
+    > .gj-tabs__header .gj-tabs__item {
       padding: 5px 16px;
       transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
       border: 1px solid transparent;
@@ -305,7 +305,7 @@
         margin-left: -1px;
       }
 
-      & + .jy-tabs__item {
+      & + .gj-tabs__item {
         margin-left: -1px;
       }
 
@@ -323,52 +323,52 @@
       }
     }
 
-    > .jy-tabs__header .is-scrollable .jy-tabs__item:first-child {
+    > .gj-tabs__header .is-scrollable .gj-tabs__item:first-child {
       margin-left: 0;
     }
   }
   @include m((top, bottom)) {
-    .jy-tabs__item.is-top:nth-child(2),
-    .jy-tabs__item.is-bottom:nth-child(2) {
+    .gj-tabs__item.is-top:nth-child(2),
+    .gj-tabs__item.is-bottom:nth-child(2) {
       //padding-left: 0;
     }
-    .jy-tabs__item.is-top:last-child,
-    .jy-tabs__item.is-bottom:last-child {
+    .gj-tabs__item.is-top:last-child,
+    .gj-tabs__item.is-bottom:last-child {
       //padding-right: 0;
     }
 
-    &.jy-tabs--border-card,
-    &.jy-tabs--card,
-    .jy-tabs--left,
-    .jy-tabs--right {
-      > .jy-tabs__header {
-        .jy-tabs__item:nth-child(2) {
+    &.gj-tabs--border-card,
+    &.gj-tabs--card,
+    .gj-tabs--left,
+    .gj-tabs--right {
+      > .gj-tabs__header {
+        .gj-tabs__item:nth-child(2) {
           //padding-left: 20px;
         }
-        .jy-tabs__item:last-child {
+        .gj-tabs__item:last-child {
           //padding-right: 20px;
         }
       }
     }
   }
   @include m(bottom) {
-    .jy-tabs__header.is-bottom {
+    .gj-tabs__header.is-bottom {
       margin-bottom: 0;
       margin-top: 10px;
     }
-    &.jy-tabs--border-card {
-      .jy-tabs__header.is-bottom {
+    &.gj-tabs--border-card {
+      .gj-tabs__header.is-bottom {
         border-bottom: 0;
         border-top: 1px solid $--border-color-base;
       }
-      .jy-tabs__nav-wrap.is-bottom {
+      .gj-tabs__nav-wrap.is-bottom {
         margin-top: -1px;
         margin-bottom: 0;
       }
-      .jy-tabs__item.is-bottom:not(.is-active) {
+      .gj-tabs__item.is-bottom:not(.is-active) {
         border: 1px solid transparent;
       }
-      .jy-tabs__item.is-bottom {
+      .gj-tabs__item.is-bottom {
         margin: 0 -1px -1px -1px;
       }
     }
@@ -376,28 +376,28 @@
   @include m((left, right)) {
     overflow: hidden;
 
-    .jy-tabs__header.is-left,
-    .jy-tabs__header.is-right,
-    .jy-tabs__nav-wrap.is-left,
-    .jy-tabs__nav-wrap.is-right,
-    .jy-tabs__nav-scroll {
+    .gj-tabs__header.is-left,
+    .gj-tabs__header.is-right,
+    .gj-tabs__nav-wrap.is-left,
+    .gj-tabs__nav-wrap.is-right,
+    .gj-tabs__nav-scroll {
       height: 100%;
     }
 
-    .jy-tabs__active-bar.is-left,
-    .jy-tabs__active-bar.is-right {
+    .gj-tabs__active-bar.is-left,
+    .gj-tabs__active-bar.is-right {
       top: 0;
       bottom: auto;
       width: 2px;
       height: auto;
     }
 
-    .jy-tabs__nav-wrap.is-left,
-    .jy-tabs__nav-wrap.is-right {
+    .gj-tabs__nav-wrap.is-left,
+    .gj-tabs__nav-wrap.is-right {
       margin-bottom: 0;
 
-      > .jy-tabs__nav-prev,
-      > .jy-tabs__nav-next {
+      > .gj-tabs__nav-prev,
+      > .gj-tabs__nav-next {
         height: 30px;
         line-height: 30px;
         width: 100%;
@@ -408,11 +408,11 @@
           transform: rotateZ(90deg);
         }
       }
-      > .jy-tabs__nav-prev {
+      > .gj-tabs__nav-prev {
         left: auto;
         top: 0;
       }
-      > .jy-tabs__nav-next {
+      > .gj-tabs__nav-next {
         right: auto;
         bottom: 0;
       }
@@ -429,25 +429,25 @@
       }
     }
 
-    .jy-tabs__nav.is-left,
-    .jy-tabs__nav.is-right {
+    .gj-tabs__nav.is-left,
+    .gj-tabs__nav.is-right {
       float: none;
     }
-    .jy-tabs__item.is-left,
-    .jy-tabs__item.is-right {
+    .gj-tabs__item.is-left,
+    .gj-tabs__item.is-right {
       display: block;
     }
   }
   @include m(left) {
-    .jy-tabs__content {
+    .gj-tabs__content {
       padding: 24px 12px;
     }
 
-    .jy-tabs__header.is-left {
+    .gj-tabs__header.is-left {
       float: left;
       margin-bottom: 0;
     }
-    .jy-tabs__nav-wrap.is-left {
+    .gj-tabs__nav-wrap.is-left {
       margin-right: -1px;
       &::after {
         left: auto;
@@ -456,7 +456,7 @@
         height: calc(100% - 24px - 24px);
       }
     }
-    .jy-tabs__nav.is-left {
+    .gj-tabs__nav.is-left {
       padding: 24px;
       text-align: right;
       display: flex;
@@ -464,11 +464,11 @@
       align-items: end;
     }
 
-    .jy-tabs__active-bar.is-left {
+    .gj-tabs__active-bar.is-left {
       right: 0;
       left: auto;
     }
-    .jy-tabs__item.is-left {
+    .gj-tabs__item.is-left {
       text-align: right;
       margin: 0 0 8px 0;
       &:last-of-type {
@@ -480,22 +480,22 @@
       }
     }
 
-    &.jy-tabs--card {
-      .jy-tabs__active-bar.is-left {
+    &.gj-tabs--card {
+      .gj-tabs__active-bar.is-left {
         display: none;
       }
-      .jy-tabs__item.is-left {
+      .gj-tabs__item.is-left {
         border-left: none;
         border-right: 1px solid $--border-color-light;
         border-bottom: none;
         border-top: 1px solid $--border-color-light;
         text-align: left;
       }
-      .jy-tabs__item.is-left:first-child {
+      .gj-tabs__item.is-left:first-child {
         border-right: 1px solid $--border-color-light;
         border-top: none;
       }
-      .jy-tabs__item.is-left.is-active {
+      .gj-tabs__item.is-left.is-active {
         border: 1px solid $--border-color-light;
         border-right-color: #fff;
         border-left: none;
@@ -509,18 +509,18 @@
         }
       }
 
-      .jy-tabs__nav {
+      .gj-tabs__nav {
         border-radius: 4px 0 0 4px;
         border-bottom: 1px solid $--border-color-light;
         border-right: none;
       }
     }
 
-    &.jy-tabs--border-card {
-      .jy-tabs__header.is-left {
+    &.gj-tabs--border-card {
+      .gj-tabs__header.is-left {
         border-right: 1px solid #dfe4ed;
       }
-      .jy-tabs__item.is-left {
+      .gj-tabs__item.is-left {
         border: 1px solid transparent;
         margin: -1px 0 -1px -1px;
 
@@ -533,16 +533,16 @@
     }
   }
   @include m(right) {
-    .jy-tabs__content {
+    .gj-tabs__content {
       padding: 24px 12px;
     }
 
-    .jy-tabs__header.is-right {
+    .gj-tabs__header.is-right {
       float: right;
       margin-bottom: 0;
     }
 
-    .jy-tabs__nav-wrap.is-right {
+    .gj-tabs__nav-wrap.is-right {
       margin-left: -1px;
       &::after {
         left: 0;
@@ -552,7 +552,7 @@
       }
     }
 
-    .jy-tabs__nav.is-right {
+    .gj-tabs__nav.is-right {
       padding: 24px;
       text-align: left;
       display: flex;
@@ -560,7 +560,7 @@
       align-items: start;
     }
 
-    .jy-tabs__item.is-right {
+    .gj-tabs__item.is-right {
       text-align: left;
       margin: 0 0 8px 0;
       &:last-of-type {
@@ -572,23 +572,23 @@
       }
     }
 
-    .jy-tabs__active-bar.is-right {
+    .gj-tabs__active-bar.is-right {
       left: 0;
     }
 
-    &.jy-tabs--card {
-      .jy-tabs__active-bar.is-right {
+    &.gj-tabs--card {
+      .gj-tabs__active-bar.is-right {
         display: none;
       }
-      .jy-tabs__item.is-right {
+      .gj-tabs__item.is-right {
         border-bottom: none;
         border-top: 1px solid $--border-color-light;
       }
-      .jy-tabs__item.is-right:first-child {
+      .gj-tabs__item.is-right:first-child {
         border-left: 1px solid $--border-color-light;
         border-top: none;
       }
-      .jy-tabs__item.is-right.is-active {
+      .gj-tabs__item.is-right.is-active {
         border: 1px solid $--border-color-light;
         border-left-color: #fff;
         border-right: none;
@@ -602,17 +602,17 @@
         }
       }
 
-      .jy-tabs__nav {
+      .gj-tabs__nav {
         border-radius: 0 4px 4px 0;
         border-bottom: 1px solid $--border-color-light;
         border-left: none;
       }
     }
-    &.jy-tabs--border-card {
-      .jy-tabs__header.is-right {
+    &.gj-tabs--border-card {
+      .gj-tabs__header.is-right {
         border-left: 1px solid #dfe4ed;
       }
-      .jy-tabs__item.is-right {
+      .gj-tabs__item.is-right {
         border: 1px solid transparent;
         margin: -1px -1px -1px 0;
 

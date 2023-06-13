@@ -1,13 +1,13 @@
 <template>
-  <div class="jy-badge">
+  <div class="gj-badge">
     <slot></slot>
-    <transition name="jy-zoom-in-center">
+    <transition name="gj-zoom-in-center">
       <sup
         v-show="!hidden && (content || content === 0 || isDot)"
         v-text="content"
-        class="jy-badge__content"
+        class="gj-badge__content"
         :class="[
-          type ? 'jy-badge__content--' + type : null,
+          type ? 'gj-badge__content--' + type : null,
           {
             'is-fixed': $slots.default,
             'is-dot': isDot
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'JyBadge',
+  name: 'GjBadge',
 
   props: {
     value: [String, Number],

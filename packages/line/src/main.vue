@@ -8,8 +8,8 @@
 -->
 
 <template>
-  <div class="jy-line">
-    <div class="jy-line--chart"
+  <div class="gj-line">
+    <div class="gj-line--chart"
          ref="lineChart"
          :style="{
             width: width,
@@ -31,7 +31,7 @@
 
   let colorData = {};
   export default {
-    name: 'JyLine',
+    name: 'GjLine',
 
     data() {
       this.myChart = null;

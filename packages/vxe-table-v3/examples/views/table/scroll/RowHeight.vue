@@ -2,7 +2,7 @@
   <div>
     <p class="tip">虚拟滚动启用后需要等行高，可以通过 <table-api-link prop="row-config"/>.height 修改行的高度</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -11,22 +11,22 @@
       :row-config="{height: 120}"
       :scroll-y="{gt: 0}"
       :loading="loading">
-      <jy-column type="seq" title="序号" width="100"></jy-column>
-      <jy-column title="图片" width="140" align="center">
+      <gj-column type="seq" title="序号" width="100"></gj-column>
+      <gj-column title="图片" width="140" align="center">
         <template #default>
-          <img src="/jy-table/static/other/img1.gif" style="width: 100px;">
+          <img src="/gj-table/static/other/img1.gif" style="width: 100px;">
         </template>
-      </jy-column>
-      <jy-column title="基本信息">
+      </gj-column>
+      <gj-column title="基本信息">
         <template #default="{ row }">
           <div class="label-ellipsis">{{ row.name }}</div>
           <div class="label-ellipsis">{{ row.num }}</div>
           <div class="label-ellipsis">{{ row.address }}</div>
         </template>
-      </jy-column>
-      <jy-column field="num" title="Num" width="200"></jy-column>
-      <jy-column field="time" title="Time" width="200"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="num" title="Num" width="200"></gj-column>
+      <gj-column field="time" title="Time" width="200"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -45,7 +45,7 @@ export default {
       loading: false,
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -54,22 +54,22 @@ export default {
           :row-config="{height: 120}"
           :scroll-y="{gt: 0}"
           :loading="loading">
-          <jy-column type="seq" title="序号" width="100"></jy-column>
-          <jy-column title="图片" width="140" align="center">
+          <gj-column type="seq" title="序号" width="100"></gj-column>
+          <gj-column title="图片" width="140" align="center">
             <template #default>
-              <img src="/jy-table/static/other/img1.gif" style="width: 100px;">
+              <img src="/gj-table/static/other/img1.gif" style="width: 100px;">
             </template>
-          </jy-column>
-          <jy-column title="基本信息">
+          </gj-column>
+          <gj-column title="基本信息">
             <template #default="{ row }">
               <div class="label-ellipsis">{{ row.name }}</div>
               <div class="label-ellipsis">{{ row.num }}</div>
               <div class="label-ellipsis">{{ row.address }}</div>
             </template>
-          </jy-column>
-          <jy-column field="num" title="Num" width="200"></jy-column>
-          <jy-column field="time" title="Time" width="200"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="num" title="Num" width="200"></gj-column>
+          <gj-column field="time" title="Time" width="200"></gj-column>
+        </gj-table>
         `,
         `
         export default {

@@ -5,7 +5,7 @@
     cellspacing="0"
     @click="handleYearTableClick"
     @mousemove="handleMouseMove"
-    class="jy-year-table"
+    class="gj-year-table"
   >
     <!-- <tbody>
       <tr>

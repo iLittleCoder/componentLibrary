@@ -19,7 +19,7 @@ function mergeFooterMethod (mergeFooterList, _rowIndex, _columnIndex) {
 }
 
 export default {
-  name: 'JyTableFooter',
+  name: 'GjTableFooter',
   props: {
     footerTableData: Array,
     tableColumn: Array,
@@ -91,7 +91,7 @@ export default {
       }
     }
     return h('div', {
-      class: ['jy-table--footer-wrapper', fixedType ? `fixed-${fixedType}--wrapper` : 'body--wrapper'],
+      class: ['gj-table--footer-wrapper', fixedType ? `fixed-${fixedType}--wrapper` : 'body--wrapper'],
       attrs: {
         xid: tId
       },
@@ -100,11 +100,11 @@ export default {
       }
     }, [
       fixedType ? _e() : h('div', {
-        class: 'jy-body--x-space',
+        class: 'gj-body--x-space',
         ref: 'xSpace'
       }),
       h('table', {
-        class: 'jy-table--footer',
+        class: 'gj-table--footer',
         attrs: {
           xid: tId,
           cellspacing: 0,
@@ -140,7 +140,7 @@ export default {
         }, footerTableData.map((list, _rowIndex) => {
           const $rowIndex = _rowIndex
           return h('tr', {
-            class: ['jy-footer--row', footerRowClassName ? XEUtils.isFunction(footerRowClassName) ? footerRowClassName({ $table: $xetable, _rowIndex, $rowIndex, fixed: fixedType, type: cellType }) : footerRowClassName : ''],
+            class: ['gj-footer--row', footerRowClassName ? XEUtils.isFunction(footerRowClassName) ? footerRowClassName({ $table: $xetable, _rowIndex, $rowIndex, fixed: fixedType, type: cellType }) : footerRowClassName : ''],
             style: footerRowStyle ? (XEUtils.isFunction(footerRowStyle) ? footerRowStyle({ $table: $xetable, _rowIndex, $rowIndex, fixed: fixedType, type: cellType }) : footerRowStyle) : null
           }, tableColumn.map((column, $columnIndex) => {
             const { type, showFooterOverflow, footerAlign, align, footerClassName } = column
@@ -218,7 +218,7 @@ export default {
               }
             }
             return h('td', {
-              class: ['jy-footer--column', column.id, {
+              class: ['gj-footer--column', column.id, {
                 [`col--${footAlign}`]: footAlign,
                 [`col--${type}`]: type,
                 'col--last': $columnIndex === tableColumn.length - 1,
@@ -232,7 +232,7 @@ export default {
               key: columnKey || columnOpts.useKey ? column.id : $columnIndex
             }, [
               h('div', {
-                class: ['jy-cell', {
+                class: ['gj-cell', {
                   'c--title': showTitle,
                   'c--tooltip': showTooltip,
                   'c--ellipsis': showEllipsis
@@ -241,7 +241,7 @@ export default {
             ])
           }).concat(scrollbarWidth ? [
             h('td', {
-              class: 'jy-footer--gutter col--gutter'
+              class: 'gj-footer--gutter col--gutter'
             })
           ] : []))
         }))

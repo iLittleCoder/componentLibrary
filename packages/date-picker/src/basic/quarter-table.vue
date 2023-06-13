@@ -5,7 +5,7 @@
     cellspacing="0"
     @click="handleQuarterTableClick"
     @mousemove="handleMouseMove"
-    class="jy-quarter-table"
+    class="gj-quarter-table"
   >
     <!-- <tbody>
       <tr>

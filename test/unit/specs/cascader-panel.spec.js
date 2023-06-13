@@ -105,10 +105,10 @@ const options3 = [
   }
 ];
 
-const getMenus = el => el.querySelectorAll('.jy-cascader-menu');
-const getOptions = (el, menuIndex) => getMenus(el)[menuIndex].querySelectorAll('.jy-cascader-node');
-const getValidOptions = (el, menuIndex) => getMenus(el)[menuIndex].querySelectorAll('.jy-cascader-node[tabindex="-1"]');
-const getLabel = el => el.querySelector('.jy-cascader-node__label').textContent;
+const getMenus = el => el.querySelectorAll('.gj-cascader-menu');
+const getOptions = (el, menuIndex) => getMenus(el)[menuIndex].querySelectorAll('.gj-cascader-node');
+const getValidOptions = (el, menuIndex) => getMenus(el)[menuIndex].querySelectorAll('.gj-cascader-node[tabindex="-1"]');
+const getLabel = el => el.querySelector('.gj-cascader-node__label').textContent;
 
 describe('CascaderPanel', () => {
   let vm;
@@ -124,10 +124,10 @@ describe('CascaderPanel', () => {
   it('expand and check', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           ref="panel"
           v-model="value"
-          :options="options"></jy-cascader-panel>
+          :options="options"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -166,10 +166,10 @@ describe('CascaderPanel', () => {
   it('with default value', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           ref="panel"
           v-model="value"
-          :options="options"></jy-cascader-panel>
+          :options="options"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -191,10 +191,10 @@ describe('CascaderPanel', () => {
   it('disabled options', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           ref="panel"
           :value="value"
-          :options="options"></jy-cascader-panel>
+          :options="options"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -223,9 +223,9 @@ describe('CascaderPanel', () => {
   it('expand by hover', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           :options="options"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -252,11 +252,11 @@ describe('CascaderPanel', () => {
   it('emit value only', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           ref="panel"
           v-model="value"
           :options="options"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -285,10 +285,10 @@ describe('CascaderPanel', () => {
   it('multiple mode', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -302,23 +302,23 @@ describe('CascaderPanel', () => {
     }, true);
 
     const el = vm.$el;
-    const checkbox = getOptions(el, 0)[0].querySelector('.jy-checkbox');
+    const checkbox = getOptions(el, 0)[0].querySelector('.gj-checkbox');
     expect(checkbox).to.exist;
-    expect(checkbox.querySelector('.jy-checkbox__input').className).to.not.includes('is-checked');
+    expect(checkbox.querySelector('.gj-checkbox__input').className).to.not.includes('is-checked');
     checkbox.querySelector('input').click();
 
     await waitImmediate();
-    expect(checkbox.querySelector('.jy-checkbox__input').className).to.includes('is-checked');
+    expect(checkbox.querySelector('.gj-checkbox__input').className).to.includes('is-checked');
     expect(vm.value.length).to.equal(3);
   });
 
   it('multiple mode with disabled default value', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -332,15 +332,15 @@ describe('CascaderPanel', () => {
     }, true);
 
     const el = vm.$el;
-    const checkbox = getOptions(el, 0)[0].querySelector('.jy-checkbox');
+    const checkbox = getOptions(el, 0)[0].querySelector('.gj-checkbox');
 
     await waitImmediate();
     expect(checkbox).to.exist;
-    expect(checkbox.querySelector('.jy-checkbox__input').className).to.includes('is-indeterminate');
+    expect(checkbox.querySelector('.gj-checkbox__input').className).to.includes('is-indeterminate');
     checkbox.querySelector('input').click();
 
     await waitImmediate();
-    expect(checkbox.querySelector('.jy-checkbox__input').className).to.includes('is-checked');
+    expect(checkbox.querySelector('.gj-checkbox__input').className).to.includes('is-checked');
     expect(vm.value.length).to.equal(4);
 
     getOptions(el, 1)[1].click();
@@ -353,10 +353,10 @@ describe('CascaderPanel', () => {
   it('check strictly in single mode', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -387,10 +387,10 @@ describe('CascaderPanel', () => {
   it('check strictly in multiple mode', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -424,10 +424,10 @@ describe('CascaderPanel', () => {
   it('custom props', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -467,10 +467,10 @@ describe('CascaderPanel', () => {
   it('value key is same as label key', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           v-model="value"
           :options="options"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         return {
@@ -507,9 +507,9 @@ describe('CascaderPanel', () => {
   it('dynamic loading', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           v-model="value"
-          :props="props"></jy-cascader-panel>
+          :props="props"></gj-cascader-panel>
       `,
       data() {
         let id = 0;
@@ -553,10 +553,10 @@ describe('CascaderPanel', () => {
   it('click leaf hidden children', async() => {
     vm = createVue({
       template: `
-        <jy-cascader-panel
+        <gj-cascader-panel
           ref="panel"
           v-model="value"
-          :options="options"></jy-cascader-panel>
+          :options="options"></gj-cascader-panel>
       `,
       data() {
         return {

@@ -148,8 +148,8 @@ Gildata Design 为了避免视觉传达差异，使用一套特定的调色板�
 
 Gildata Design 主要品牌颜色是鲜艳、友好的蓝色。
 
-<jy-row :gutter="12">
-  <jy-col :span="6" :xs="{span: 12}">
+<gj-row :gutter="12">
+  <gj-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box" :style="{ background: primary }">主色
       <div class="value">{{ theme === 'White' ? '#256DFF' : '#F5BA63' }}</div>
       <div class="bg-color-sub">
@@ -162,15 +162,15 @@ Gildata Design 主要品牌颜色是鲜艳、友好的蓝色。
           </div>
       </div>
     </div>
-  </jy-col>
-</jy-row>
+  </gj-col>
+</gj-row>
 
 ### 辅助色
 
 除了主色外的场景色，需要在不同的场景中使用（例如危险色表示危险的操作）。
 
-<jy-row :gutter="12">
-  <jy-col :span="6" :xs="{span: 12}">
+<gj-row :gutter="12">
+  <gj-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box"
     :style="{ background: success }"
     >Success<div class="value">#35B55F</div>
@@ -184,8 +184,8 @@ Gildata Design 主要品牌颜色是鲜艳、友好的蓝色。
       </div>
       </div>
     </div>
-  </jy-col>
-  <jy-col :span="6" :xs="{span: 12}">
+  </gj-col>
+  <gj-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box"
     :style="{ background: warning }"
     >Warning<div class="value">#FFAA0E</div>
@@ -199,8 +199,8 @@ Gildata Design 主要品牌颜色是鲜艳、友好的蓝色。
         </div>
       </div>
     </div>
-  </jy-col>
-  <jy-col :span="6" :xs="{span: 12}">
+  </gj-col>
+  <gj-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box"
     :style="{ background: danger }"
     >Danger<div class="value">#EE5640</div>
@@ -214,8 +214,8 @@ Gildata Design 主要品牌颜色是鲜艳、友好的蓝色。
         </div>
       </div>
     </div>
-  </jy-col>
-  <jy-col :span="6" :xs="{span: 12}">
+  </gj-col>
+  <gj-col :span="6" :xs="{span: 12}">
     <div class="demo-color-box"
     :style="{ background: info }"
     >Info<div class="value">{{ theme === 'White' ? '#202020' : '#E6E6E6' }}</div>
@@ -229,99 +229,99 @@ Gildata Design 主要品牌颜色是鲜艳、友好的蓝色。
         </div>
       </div>
     </div>
-  </jy-col>
-</jy-row>
+  </gj-col>
+</gj-row>
 
 ### 文字色
 
-<jy-row :gutter="12">
+<gj-row :gutter="12">
   <template v-for="(item, key) in textMap[theme]">
-    <jy-col :span="4" :xs="{span: 4}">
+    <gj-col :span="4" :xs="{span: 4}">
       <div class="demo-color-list-box" :class="[ theme === 'Black' && key === 0 && 'demo-black-color', theme === 'Black' && 'demo-dark-color' ]" :style="{ background: item.color }">
         <div>{{item.text}}</div>
         <div>{{item.color}}</div>
       </div>
-    </jy-col>
+    </gj-col>
   </template>
-</jy-row>
+</gj-row>
 
 ### 背景色
 
-<jy-row :gutter="12">
+<gj-row :gutter="12">
   <template v-for="(item, key) in bgMap[theme]">
-    <jy-col :span="4" :xs="{span: 4}">
+    <gj-col :span="4" :xs="{span: 4}">
       <div class="demo-color-list-box demo-dark-color" :class="[ theme === 'Black' && key === 4 && 'demo-black-color', theme === 'White' && key === 4 && 'demo-white-color' ]" :style="{ background: item.color }">
         <div>{{item.text}}</div>
         <div>{{item.color}}</div>
       </div>
-    </jy-col>
+    </gj-col>
   </template>
-</jy-row>
+</gj-row>
 
 ### 边框线条色
 
-<jy-row :gutter="12">
+<gj-row :gutter="12">
   <template v-for="(item, key) in borderMap[theme]">
-    <jy-col :span="4" :xs="{span: 4}">
+    <gj-col :span="4" :xs="{span: 4}">
       <div class="demo-color-list-box demo-dark-color" :class="[ theme === 'Black' && key === 3 && 'demo-white-color' ]" :style="{ background: item.color }">
         <div>{{item.text}}</div>
         <div>{{item.color}}</div>
       </div>
-    </jy-col>
+    </gj-col>
   </template>
-</jy-row>
+</gj-row>
 
 ### Other
 
 中性悬浮、中性按下、滚动条颜色
 
-<jy-row :gutter="12">
-  <jy-col :span="4" :xs="{span: 4}">
+<gj-row :gutter="12">
+  <gj-col :span="4" :xs="{span: 4}">
     <div class="demo-color-list-box demo-dark-color" :style="{ background: theme === 'Black' ? 'rgba(230, 230, 230, 0.12)' : '#F0F0F0'}">
       <div>中性悬浮</div>
       <div>{{theme === 'Black' ? 'rgba(230, 230, 230, 0.12)' : '#F0F0F0'}}</div>
     </div>
-  </jy-col>
-  <jy-col :span="4" :xs="{span: 4}">
+  </gj-col>
+  <gj-col :span="4" :xs="{span: 4}">
     <div class="demo-color-list-box demo-dark-color" :style="{background: theme === 'Black' ? 'rgba(230, 230, 230, 0.06)' : '#E1E1E1'}">
       <div>中性按下</div>
       <div>{{theme === 'Black' ? 'rgba(230, 230, 230, 0.06)' : '#E1E1E1'}}</div>
     </div>
-  </jy-col>
-  <jy-col :span="4" :xs="{span: 4}">
+  </gj-col>
+  <gj-col :span="4" :xs="{span: 4}">
      <div class="demo-color-list-box demo-dark-color" :style="{background: theme === 'Black' ? 'rgba(230, 230, 230, 0.3)' : 'rgba(32, 32, 32, 0.5)'}">
        <div>滚动条色</div>
        <div>{{ theme === 'Black' ? 'rgba(230, 230, 230, 0.3)' : 'rgba(32, 32, 32, 0.5)'}}</div>
      </div>
-  </jy-col>
-</jy-row>
+  </gj-col>
+</gj-row>
 
 ### 图表色
 
 用于各种图表颜色
 
-<jy-row :gutter="12">
+<gj-row :gutter="12">
   <template v-for="(item, key) in chartList">
-    <jy-col :span="2" :xs="{span: 4}">
+    <gj-col :span="2" :xs="{span: 4}">
       <div class="demo-color-list-box" :style="{ background: item }">
         <div>图表{{key+1}}</div>
         <div>{{item}}</div>
       </div>
-    </jy-col>
+    </gj-col>
   </template>
-</jy-row>
+</gj-row>
 
 ### 标签色
 
 用于各种标签颜色
 
-<jy-row :gutter="12">
+<gj-row :gutter="12">
   <template v-for="(item, key) in tagList[theme]">
-    <jy-col :span="2" :xs="{span: 4}">
+    <gj-col :span="2" :xs="{span: 4}">
       <div class="demo-color-list-box" :style="{ background: tagList[theme].length - 1 === key ? tagList.bgLast[theme] : item}">
         <div>字/线</div>
         <div>{{item}}</div>
       </div>
-    </jy-col>
+    </gj-col>
   </template>
-</jy-row>
+</gj-row>

@@ -2,20 +2,20 @@
   <div>
     <p>子路由 3</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable"
       height="400"
       :loading="loading">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="num" title="Num"></jy-column>
-      <jy-column field="num2" title="Num2"></jy-column>
-      <jy-column field="rate" title="Rate"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="num" title="Num"></gj-column>
+      <gj-column field="num2" title="Num2"></gj-column>
+      <gj-column field="rate" title="Rate"></gj-column>
+    </gj-table>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <script>
-  import JyCheckbox from 'GildataDesign/packages/checkbox';
-  import JyRadio from 'GildataDesign/packages/radio';
+  import GjCheckbox from 'GildataDesign/packages/checkbox';
+  import GjRadio from 'GildataDesign/packages/radio';
   import { isEqual } from 'GildataDesign/src/utils/util';
 
   const stopPropagation = e => e.stopPropagation();
@@ -9,8 +9,8 @@
     inject: ['panel'],
 
     components: {
-      JyCheckbox,
-      JyRadio
+      GjCheckbox,
+      GjRadio
     },
 
     props: {
@@ -130,12 +130,12 @@
         }
 
         return (
-          <jy-checkbox
+          <gj-checkbox
             value={ node.checked }
             indeterminate={ node.indeterminate }
             disabled={ isDisabled }
             { ...events }
-          ></jy-checkbox>
+          ></gj-checkbox>
         );
       },
 
@@ -148,7 +148,7 @@
         }
 
         return (
-          <jy-radio
+          <gj-radio
             value={ checkedValue }
             label={ value }
             disabled={ isDisabled }
@@ -156,25 +156,25 @@
             nativeOnClick={ stopPropagation }>
             {/* add an empty element to avoid render label */}
             <span></span>
-          </jy-radio>
+          </gj-radio>
         );
       },
 
       renderCheckIcon(h) {
         return (
-          <i class="Gildata-tick jy-cascader-node__prefix"></i>
+          <i class="Gildata-tick gj-cascader-node__prefix"></i>
         );
       },
 
       renderLoadingIcon(h) {
         return (
-          <i class="Gildata-loading jy-cascader-node__postfix"></i>
+          <i class="Gildata-loading gj-cascader-node__postfix"></i>
         );
       },
 
       renderExpandIcon(h) {
         return (
-          <i class="el-icon-arrow-right jy-cascader-node__postfix"></i>
+          <i class="el-icon-arrow-right gj-cascader-node__postfix"></i>
         );
       },
 
@@ -186,7 +186,7 @@
           : null;
 
         return (
-          <span class="jy-cascader-node__label">{ vnode || node.label }</span>
+          <span class="gj-cascader-node__label">{ vnode || node.label }</span>
         );
       }
     },
@@ -228,7 +228,7 @@
           aria-expanded={ inActivePath }
           tabindex={ disabled ? null : -1 }
           class={{
-            'jy-cascader-node': true,
+            'gj-cascader-node': true,
             'is-selectable': checkStrictly,
             'in-active-path': inActivePath,
             'in-checked-path': inCheckedPath,

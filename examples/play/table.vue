@@ -12,19 +12,19 @@
                     row-key
                     row-id="id"
             >
-                <jy-column type="seq" title="Name" width="160" fixed="left"></jy-column>
+                <gj-column type="seq" title="Name" width="160" fixed="left"></gj-column>
                 <template v-for="item in headDataT[T]">
-                    <jy-column width="160" :field="item.key" :title="item.title" :fixed="item.fixed">
+                    <gj-column width="160" :field="item.key" :title="item.title" :fixed="item.fixed">
                         <template v-slot="{row}">
                             {{item.key}} 123
                         </template>
-                    </jy-column>
+                    </gj-column>
                 </template>
                 <template v-for="item in headDataT[T]">
-                    <jy-column width="160" :field="item.key" :title="item.title"></jy-column>
+                    <gj-column width="160" :field="item.key" :title="item.title"></gj-column>
                 </template>
                 <template v-for="item in headDataT[T]">
-                    <jy-column width="160" :field="item.key" :title="item.title"></jy-column>
+                    <gj-column width="160" :field="item.key" :title="item.title"></gj-column>
                 </template>
             </vxe-table>
         </div>

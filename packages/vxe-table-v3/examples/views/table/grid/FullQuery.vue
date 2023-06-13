@@ -15,7 +15,7 @@
       <!--自定义空数据模板-->
       <template #empty>
         <span style="color: red;">
-          <img src="/jy-table/static/other/img1.gif">
+          <img src="/gj-table/static/other/img1.gif">
           <p>没有更多数据了！</p>
         </span>
       </template>
@@ -159,7 +159,7 @@ export default {
           <!--自定义空数据模板-->
           <template #empty>
             <span style="color: red;">
-              <img src="/jy-table/static/other/img1.gif">
+              <img src="/gj-table/static/other/img1.gif">
               <p>没有更多数据了！</p>
             </span>
           </template>

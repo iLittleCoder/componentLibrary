@@ -1,5 +1,5 @@
 export default {
-  name: 'JyDescriptionsItem',
+  name: 'GjDescriptionsItem',
   props: {
     label: {
       type: String,

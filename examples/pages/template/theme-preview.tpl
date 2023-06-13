@@ -39,7 +39,7 @@
 }
 </style>
 <template>
-  <jy-scrollbar>
+  <gj-scrollbar>
     <div class="page-container page-theme-preview" ref="themePreview">
       <section class="display">
         <basic-tokens-preview> </basic-tokens-preview>
@@ -52,10 +52,10 @@
           :class="{ fixed: isFixed }"
         >
           <div class="side-right">
-            <jy-button round @click="onReset">重置</jy-button>
-            <jy-button round type="primary" @click="onDownload">下载</jy-button>
+            <gj-button round @click="onReset">重置</gj-button>
+            <gj-button round type="primary" @click="onDownload">下载</gj-button>
           </div>
-          <jy-scrollbar>
+          <gj-scrollbar>
             <main-panel
               :style="{ height: `${editorHeight - 90}px` }"
               v-if="defaultConfig"
@@ -65,11 +65,11 @@
               :globalValue="globalValue"
               @onChange="userConfigChange"
             ></main-panel>
-          </jy-scrollbar>
+          </gj-scrollbar>
         </section>
       </aside>
     </div>
-  </jy-scrollbar>
+  </gj-scrollbar>
 </template>
 <script>
 import ThemeConfigurator from '../../components/theme-configurator';

@@ -1,10 +1,10 @@
 <template>
   <div
     v-show="ready"
-    class="jy-carousel__item"
+    class="gj-carousel__item"
     :class="{
       'is-active': active,
-      'jy-carousel__item--card': $parent.type === 'card',
+      'gj-carousel__item--card': $parent.type === 'card',
       'is-in-stage': inStage,
       'is-hover': hover,
       'is-animating': animating
@@ -14,7 +14,7 @@
     <div
       v-if="$parent.type === 'card'"
       v-show="!active"
-      class="jy-carousel__mask">
+      class="gj-carousel__mask">
     </div>
     <slot></slot>
   </div>
@@ -24,7 +24,7 @@
   import { autoprefixer } from 'GildataDesign/src/utils/util';
   const CARD_SCALE = 0.83;
   export default {
-    name: 'JyCarouselItem',
+    name: 'GjCarouselItem',
 
     props: {
       name: String,

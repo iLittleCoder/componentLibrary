@@ -1,9 +1,9 @@
 <template>
   <form
-    class="jy-form"
+    class="gj-form"
     :class="[
-      labelPosition ? 'jy-form--label-' + labelPosition : '',
-      { 'jy-form--inline': inline }
+      labelPosition ? 'gj-form--label-' + labelPosition : '',
+      { 'gj-form--inline': inline }
     ]"
   >
     <slot></slot>
@@ -13,13 +13,13 @@
 import objectAssign from 'GildataDesign/src/utils/merge';
 
 export default {
-  name: 'JyForm',
+  name: 'GjForm',
 
-  componentName: 'JyForm',
+  componentName: 'GjForm',
 
   provide() {
     return {
-      jyForm: this
+      GjForm: this
     };
   },
 

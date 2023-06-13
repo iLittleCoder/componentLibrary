@@ -1,17 +1,17 @@
 <template>
-  <div class="jy-collapse-item"
+  <div class="gj-collapse-item"
     :class="{'is-active': isActive, 'is-disabled': disabled }">
     <div
       role="tab"
       :aria-expanded="isActive"
-      :aria-controls="`jy-collapse-content-${id}`"
-      :aria-describedby ="`jy-collapse-content-${id}`"
+      :aria-controls="`gj-collapse-content-${id}`"
+      :aria-describedby ="`gj-collapse-content-${id}`"
     >
       <div
-        class="jy-collapse-item__header"
+        class="gj-collapse-item__header"
         @click="handleHeaderClick"
         role="button"
-        :id="`jy-collapse-head-${id}`"
+        :id="`gj-collapse-head-${id}`"
         :tabindex="disabled ? undefined : 0"
         @keyup.space.enter.stop="handleEnterClick"
         :class="{
@@ -22,42 +22,42 @@
         @blur="focusing = false"
       >
         <i
-          class="jy-collapse-item__arrow Gildata-s-rightarrow"
+          class="gj-collapse-item__arrow Gildata-s-rightarrow"
           :class="{'is-active': isActive}">
         </i>
         <slot name="title">{{title}}</slot>
-        <i @click.stop="handleRightIcon" v-if="rightIcon" :class="[ 'jy-collapse-item__right', rightIcon || '']" />
+        <i @click.stop="handleRightIcon" v-if="rightIcon" :class="[ 'gj-collapse-item__right', rightIcon || '']" />
       </div>
     </div>
-    <jy-collapse-transition>
+    <gj-collapse-transition>
       <div
-        class="jy-collapse-item__wrap"
+        class="gj-collapse-item__wrap"
         v-show="isActive"
         role="tabpanel"
         :aria-hidden="!isActive"
-        :aria-labelledby="`jy-collapse-head-${id}`"
-        :id="`jy-collapse-content-${id}`"
+        :aria-labelledby="`gj-collapse-head-${id}`"
+        :id="`gj-collapse-content-${id}`"
       >
-        <div class="jy-collapse-item__content">
+        <div class="gj-collapse-item__content">
           <slot></slot>
         </div>
       </div>
-    </jy-collapse-transition>
+    </gj-collapse-transition>
   </div>
 </template>
 <script>
-  import JyCollapseTransition from 'GildataDesign/src/transitions/collapse-transition';
+  import GjCollapseTransition from 'GildataDesign/src/transitions/collapse-transition';
   import Emitter from 'GildataDesign/src/mixins/emitter';
   import { generateId } from 'GildataDesign/src/utils/util';
 
   export default {
-    name: 'JyCollapseItem',
+    name: 'GjCollapseItem',
 
-    componentName: 'JyCollapseItem',
+    componentName: 'GjCollapseItem',
 
     mixins: [Emitter],
 
-    components: { JyCollapseTransition },
+    components: { GjCollapseTransition },
 
     data() {
       return {
@@ -94,7 +94,7 @@
 
     methods: {
       handleRightIcon() {
-        this.dispatch('JyCollapse', 'rightIcon-click', this);
+        this.dispatch('GjCollapse', 'rightIcon-click', this);
       },
       handleFocus() {
         setTimeout(() => {
@@ -107,12 +107,12 @@
       },
       handleHeaderClick() {
         if (this.disabled) return;
-        this.dispatch('JyCollapse', 'item-click', this);
+        this.dispatch('GjCollapse', 'item-click', this);
         this.focusing = false;
         this.isClick = true;
       },
       handleEnterClick() {
-        this.dispatch('JyCollapse', 'item-click', this);
+        this.dispatch('GjCollapse', 'item-click', this);
       }
     }
   };

@@ -8,22 +8,22 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       height="300"
       :data="list1">
-      <jy-column type="seq" width="80"></jy-column>
-      <jy-column field="name" title="Name" type="html"></jy-column>
-      <jy-column field="role" title="Role" type="html"></jy-column>
-      <jy-column field="age" title="Age" type="html"></jy-column>
-      <jy-column field="address" title="Address" type="html"></jy-column>
+      <gj-column type="seq" width="80"></gj-column>
+      <gj-column field="name" title="Name" type="html"></gj-column>
+      <gj-column field="role" title="Role" type="html"></gj-column>
+      <gj-column field="age" title="Age" type="html"></gj-column>
+      <gj-column field="address" title="Address" type="html"></gj-column>
       <template #empty>
         <span style="color: red;">
-          <img src="/jy-table/static/other/img2.gif">
+          <img src="/gj-table/static/other/img2.gif">
           <p>没有更多数据了！</p>
         </span>
       </template>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -41,23 +41,23 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       ref="xTree"
       max-height="400"
       :tree-config="{}"
       :data="list2">
-      <jy-column type="seq" width="220" title="序号" tree-node></jy-column>
-      <jy-column field="name" title="Name" type="html"></jy-column>
-      <jy-column field="size" title="Size" type="html"></jy-column>
-      <jy-column field="type" title="Type" type="html"></jy-column>
-      <jy-column field="date" title="Date" type="html"></jy-column>
+      <gj-column type="seq" width="220" title="序号" tree-node></gj-column>
+      <gj-column field="name" title="Name" type="html"></gj-column>
+      <gj-column field="size" title="Size" type="html"></gj-column>
+      <gj-column field="type" title="Type" type="html"></gj-column>
+      <gj-column field="date" title="Date" type="html"></gj-column>
       <template #empty>
         <span style="color: red;">
-          <img src="/jy-table/static/other/img1.gif">
+          <img src="/gj-table/static/other/img1.gif">
           <p>搜索不到数据，可能输入的关键字姿势不对！</p>
         </span>
       </template>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -127,22 +127,22 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           height="300"
           :data="list1">
-          <jy-column type="seq" width="80"></jy-column>
-          <jy-column field="name" title="Name" type="html"></jy-column>
-          <jy-column field="role" title="Role" type="html"></jy-column>
-          <jy-column field="age" title="Age" type="html"></jy-column>
-          <jy-column field="address" title="Address" type="html"></jy-column>
+          <gj-column type="seq" width="80"></gj-column>
+          <gj-column field="name" title="Name" type="html"></gj-column>
+          <gj-column field="role" title="Role" type="html"></gj-column>
+          <gj-column field="age" title="Age" type="html"></gj-column>
+          <gj-column field="address" title="Address" type="html"></gj-column>
           <template #empty>
             <span style="color: red;">
-              <img src="/jy-table/static/other/img2.gif">
+              <img src="/gj-table/static/other/img2.gif">
               <p>没有更多数据了！</p>
             </span>
           </template>
-        </jy-table>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'
@@ -203,23 +203,23 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           ref="xTree"
           max-height="400"
           :tree-config="{}"
           :data="list2">
-          <jy-column type="seq" width="220" title="序号" tree-node></jy-column>
-          <jy-column field="name" title="Name" type="html"></jy-column>
-          <jy-column field="size" title="Size" type="html"></jy-column>
-          <jy-column field="type" title="Type" type="html"></jy-column>
-          <jy-column field="date" title="Date" type="html"></jy-column>
+          <gj-column type="seq" width="220" title="序号" tree-node></gj-column>
+          <gj-column field="name" title="Name" type="html"></gj-column>
+          <gj-column field="size" title="Size" type="html"></gj-column>
+          <gj-column field="type" title="Type" type="html"></gj-column>
+          <gj-column field="date" title="Date" type="html"></gj-column>
           <template #empty>
             <span style="color: red;">
-              <img src="/jy-table/static/other/img1.gif">
+              <img src="/gj-table/static/other/img1.gif">
               <p>搜索不到数据，可能输入的关键字姿势不对！</p>
             </span>
           </template>
-        </jy-table>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

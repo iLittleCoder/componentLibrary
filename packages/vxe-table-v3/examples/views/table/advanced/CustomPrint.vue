@@ -13,19 +13,19 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable"
       height="300"
       :print-config="printConfig"
       :data="tableData">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -115,7 +115,7 @@ const topHtml = `
 <h1 class="title">出货单据</h1>
 <div class="my-top">
   <div class="my-list-row">
-    <div class="my-list-col">商品名称：jy-table</div>
+    <div class="my-list-col">商品名称：gj-table</div>
     <div class="my-list-col">发货单号：X2665847132654</div>
     <div class="my-list-col">发货日期：2020-09-20</div>
   </div>
@@ -165,7 +165,7 @@ export default {
         { name: 'vue 进阶用法', price: 188, code: 1201511842009 },
         { name: '某某xx2', price: 860, code: 1201543242003 },
         { name: 'js 从入门到精通', price: 99, code: 1201775849605 },
-        { name: 'jy-table pro test abc', price: 888, code: 1201775112606 },
+        { name: 'gj-table pro test abc', price: 888, code: 1201775112606 },
         { name: 'js 进阶宝典', price: 166, code: 1201775849608 }
       ],
       demoCodes: [
@@ -176,19 +176,19 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable"
           height="300"
           :print-config="printConfig"
           :data="tableData">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address"></gj-column>
+        </gj-table>
         `,
         `
         // 打印样式
@@ -223,7 +223,7 @@ export default {
         <h1 class="title">出货单据</h1>
         <div class="my-top">
           <div class="my-list-row">
-            <div class="my-list-col">商品名称：jy-table</div>
+            <div class="my-list-col">商品名称：gj-table</div>
             <div class="my-list-col">发货单号：X2665847132654</div>
             <div class="my-list-col">发货日期：2020-09-20</div>
           </div>
@@ -311,7 +311,7 @@ export default {
                 { name: 'vue 进阶用法', price: 188, code: 1201511842009 },
                 { name: '某某xx2', price: 860, code: 1201543242003 },
                 { name: 'js 从入门到精通', price: 99, code: 1201775849605 },
-                { name: 'jy-table pro test abc', price: 888, code: 1201775112606 },
+                { name: 'gj-table pro test abc', price: 888, code: 1201775112606 },
                 { name: 'js 进阶宝典', price: 166, code: 1201775849608 }
               ]
             }

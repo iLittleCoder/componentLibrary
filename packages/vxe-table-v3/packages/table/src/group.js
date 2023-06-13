@@ -1,7 +1,7 @@
 import VxeTableColumn from './column'
 
 export default {
-  name: 'JyColgroup',
+  name: 'GjColgroup',
   extends: VxeTableColumn,
   provide () {
     return {

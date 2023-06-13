@@ -11,7 +11,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       resizable
       show-footer
       ref="xTree"
@@ -21,11 +21,11 @@
       :span-method="colspanMethod"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column field="name" title="名称" tree-node :formatter="formatName"></jy-column>
-      <jy-column field="level" title="级别"></jy-column>
-      <jy-column field="age" title="年龄"></jy-column>
-      <jy-column field="rate" title="分数"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="名称" tree-node :formatter="formatName"></gj-column>
+      <gj-column field="level" title="级别"></gj-column>
+      <gj-column field="age" title="年龄"></gj-column>
+      <gj-column field="rate" title="分数"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -58,7 +58,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           resizable
           show-footer
           ref="xTree"
@@ -68,11 +68,11 @@ export default {
           :span-method="colspanMethod"
           :footer-method="footerMethod"
           :data="tableData">
-          <jy-column field="name" title="名称" tree-node :formatter="formatName"></jy-column>
-          <jy-column field="level" title="级别"></jy-column>
-          <jy-column field="age" title="年龄"></jy-column>
-          <jy-column field="rate" title="分数"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="名称" tree-node :formatter="formatName"></gj-column>
+          <gj-column field="level" title="级别"></gj-column>
+          <gj-column field="age" title="年龄"></gj-column>
+          <gj-column field="rate" title="分数"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

@@ -66,7 +66,7 @@
       margin-left: 4px;
     }
   }
-  &.jy-button--danger {
+  &.gj-button--danger {
     @include button-variant($--color-text-base, $--color-danger, $--color-danger, 'danger');
   }
 
@@ -127,7 +127,7 @@
       border-color: $--border-color-disabled;
     }
 
-    &.jy-button--text {
+    &.gj-button--text {
       background: transparent;
     }
 
@@ -289,7 +289,7 @@
 
     @at-root {
       @each $type in (primary, success, warning, danger, info, secondary) {
-        .jy-text-button--#{$type} {
+        .gj-text-button--#{$type} {
           @if $type == primary {
             color: $--color-primary;
           } @else if $type == success {
@@ -341,10 +341,10 @@
   display: inline-block;
   vertical-align: middle;
 
-  & > .jy-button {
+  & > .gj-button {
     float: left;
     position: relative;
-    & + .jy-button {
+    & + .gj-button {
       margin-left: 0;
     }
     &.is-disabled {
@@ -400,8 +400,8 @@
     }
   }
 
-  & > .jy-dropdown {
-    & > .jy-button {
+  & > .gj-dropdown {
+    & > .gj-button {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       border-left-color: rgba(255, 255, 255, 0.5);
@@ -409,7 +409,7 @@
   }
 
   @each $type in (primary, success, warning, danger, info) {
-    .jy-button--#{$type}:not(.is-secondary) {
+    .gj-button--#{$type}:not(.is-secondary) {
       &:first-child {
         border-right-color: rgba(255, 255, 255, 0.5);
       }

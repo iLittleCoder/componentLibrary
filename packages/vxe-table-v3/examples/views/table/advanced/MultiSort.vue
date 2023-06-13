@@ -2,19 +2,19 @@
   <div>
     <p class="tip">配置 <table-api-link prop="multiple"/> 启用多字段组合排序，如果是服务端排序，只需加上 <table-api-link prop="sort-config"/>.<table-api-link prop="remote"/> 和 <table-api-link prop="sort-change"/> 事件就可以实现</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-column
       height="300"
       :sort-config="{multiple: true, trigger: 'cell'}"
       :data="tableData"
       @sort-change="sortChangeEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role" sortable></jy-column>
-      <jy-column field="age" title="Age" sortable></jy-column>
-      <jy-column field="num" title="Num" sortable></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role" sortable></gj-column>
+      <gj-column field="age" title="Age" sortable></gj-column>
+      <gj-column field="num" title="Num" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -58,19 +58,19 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-column
           height="300"
           :sort-config="{multiple: true, trigger: 'cell'}"
           :data="tableData"
           @sort-change="sortChangeEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="role" title="Role" sortable></jy-column>
-          <jy-column field="age" title="Age" sortable></jy-column>
-          <jy-column field="num" title="Num" sortable></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="role" title="Role" sortable></gj-column>
+          <gj-column field="age" title="Age" sortable></gj-column>
+          <gj-column field="num" title="Num" sortable></gj-column>
+        </gj-table>
         `,
         `
         export default {

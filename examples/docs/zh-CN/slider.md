@@ -12,23 +12,23 @@
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-slider v-model="value1"></jy-slider>
+    <gj-slider v-model="value1"></gj-slider>
   </div>
   <div class="block">
     <span class="demonstration">自定义初始值</span>
-    <jy-slider v-model="value2"></jy-slider>
+    <gj-slider v-model="value2"></gj-slider>
   </div>
   <div class="block">
     <span class="demonstration">隐藏 Tooltip</span>
-    <jy-slider v-model="value3" :show-tooltip="false"></jy-slider>
+    <gj-slider v-model="value3" :show-tooltip="false"></gj-slider>
   </div>
   <div class="block">
     <span class="demonstration">格式化 Tooltip</span>
-    <jy-slider v-model="value4" :format-tooltip="formatTooltip"></jy-slider>
+    <gj-slider v-model="value4" :format-tooltip="formatTooltip"></gj-slider>
   </div>
   <div class="block">
     <span class="demonstration">禁用</span>
-    <jy-slider v-model="value5" disabled></jy-slider>
+    <gj-slider v-model="value5" disabled></gj-slider>
   </div>
 </template>
 
@@ -64,15 +64,15 @@
 <template>
   <div class="block">
     <span class="demonstration">不显示间断点</span>
-    <jy-slider v-model="value1" :step="10"> </jy-slider>
+    <gj-slider v-model="value1" :step="10"> </gj-slider>
   </div>
   <div class="block">
     <span class="demonstration">显示间断点</span>
-    <jy-slider v-model="value2" :step="10" show-stops> </jy-slider>
+    <gj-slider v-model="value2" :step="10" show-stops> </gj-slider>
   </div>
   <div class="block">
     <span class="demonstration">禁用</span>
-    <jy-slider v-model="value3" :step="10" show-stops disabled></jy-slider>
+    <gj-slider v-model="value3" :step="10" show-stops disabled></gj-slider>
   </div>
 </template>
 
@@ -100,7 +100,7 @@
 ```html
 <template>
   <div class="block">
-    <jy-slider v-model="value" show-input> </jy-slider>
+    <gj-slider v-model="value" show-input> </gj-slider>
   </div>
 </template>
 
@@ -126,7 +126,7 @@
 ```html
 <template>
   <div class="block">
-    <jy-slider v-model="value" range show-stops :max="10"> </jy-slider>
+    <gj-slider v-model="value" range show-stops :max="10"> </gj-slider>
   </div>
 </template>
 
@@ -150,7 +150,7 @@
 ```html
 <template>
   <div class="block">
-    <jy-slider v-model="value" vertical height="200px"> </jy-slider>
+    <gj-slider v-model="value" vertical height="200px"> </gj-slider>
   </div>
 </template>
 
@@ -174,7 +174,7 @@
 ```html
 <template>
   <div class="block">
-    <jy-slider v-model="value" range :marks="marks"> </jy-slider>
+    <gj-slider v-model="value" range :marks="marks"> </gj-slider>
   </div>
 </template>
 

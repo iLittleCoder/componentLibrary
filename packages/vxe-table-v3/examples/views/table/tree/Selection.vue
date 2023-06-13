@@ -4,18 +4,18 @@
       多选树表格<br>
     </p>
 
-    <jy-table
+    <gj-table
       resizable
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
       :data="tableData1"
       :checkbox-config="{labelField: 'id', highlight: true}"
       @checkbox-change="selectChangeEvent">
-      <jy-column type="checkbox" title="ID" width="280" tree-node></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="ID" width="280" tree-node></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -26,18 +26,18 @@
 
     <p class="tip">默认选中，通过指定 <table-api-link prop="checkRowKeys"/> 设置默认选中的行</p>
 
-    <jy-table
+    <gj-table
       resizable
       :row-config="{keyField: 'id'}"
       :data="tableData2"
       :tree-config="{transform: true}"
       :checkbox-config="{labelField: 'name', checkRowKeys: [10053, 23666]}"
       @checkbox-change="selectChangeEvent">
-      <jy-column type="checkbox" title="Sex" width="400" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="Sex" width="400" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -48,16 +48,16 @@
 
     <p class="tip">通过 <table-api-link prop="checkStrictly"/> 设置父子节点不互相关联，默认不显示头部复选框，可以通过 checkbox-config={<table-api-link prop="showHeader"/>} 设置</p>
 
-    <jy-table
+    <gj-table
       resizable
       :data="tableData3"
       :tree-config="{transform: true}"
       :checkbox-config="{labelField: 'name', checkStrictly: true}">
-      <jy-column type="checkbox" title="Name" width="280" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="Name" width="280" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -134,18 +134,18 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           resizable
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :data="tableData1"
           :checkbox-config="{labelField: 'id', highlight: true}"
           @checkbox-change="selectChangeEvent">
-          <jy-column type="checkbox" title="ID" width="280" tree-node></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" title="ID" width="280" tree-node></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -181,18 +181,18 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           resizable
           row-id="id"
           :data="tableData2"
           :tree-config="{transform: true}"
           :checkbox-config="{labelField: 'name', checkRowKeys: [10053, 23666]}"
           @checkbox-change="selectChangeEvent">
-          <jy-column type="checkbox" title="Sex" width="400" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" title="Sex" width="400" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -228,16 +228,16 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           resizable
           :data="tableData3"
           :tree-config="{transform: true}"
           :checkbox-config="{labelField: 'name', checkStrictly: true}">
-          <jy-column type="checkbox" title="Name" width="280" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" title="Name" width="280" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {

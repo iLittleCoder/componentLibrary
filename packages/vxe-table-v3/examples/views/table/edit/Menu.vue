@@ -10,7 +10,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -22,11 +22,11 @@
       :menu-config="tableMenu"
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
       @menu-click="contextMenuClickEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="age" title="Age" :edit-render="{name: 'input'}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="age" title="Age" :edit-render="{name: 'input'}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -77,7 +77,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -89,11 +89,11 @@ export default {
           :menu-config="tableMenu"
           :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
           @menu-click="contextMenuClickEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="age" title="Age" :edit-render="{name: 'input'}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="age" title="Age" :edit-render="{name: 'input'}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

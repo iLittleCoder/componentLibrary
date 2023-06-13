@@ -1,9 +1,9 @@
 <template>
-  <div ref="reference" :class="['jy-cascader', realSize && `jy-cascader--${realSize}`, { 'is-disabled': isDisabled }]">
-    <div class="jy-cascader__box" :class="['jy-cascader__box--' + (realSize ? realSize : 'small'), showBorder ? 'is-showBorder' : '', !!inputValue ? 'is-highlight' : '', dropDownVisible ? 'is-focus' : '', selfAdaption ? 'is-notAdaption' : '', !readonly ? 'is-filter' : '']" v-clickoutside="() => toggleDropDownVisible(false)" @mouseenter="inputHover = true" @mouseleave="inputHover = false" @click="() => toggleDropDownVisible(readonly ? undefined : true)" @keydown="handleKeyDown">
-      <div class="jy-cascader__box-content">
-        <span class="jy-cascader__input" :class="[!readonly ? 'is-filter' : '']">
-          <jy-input
+  <div ref="reference" :class="['gj-cascader', realSize && `gj-cascader--${realSize}`, { 'is-disabled': isDisabled }]">
+    <div class="gj-cascader__box" :class="['gj-cascader__box--' + (realSize ? realSize : 'small'), showBorder ? 'is-showBorder' : '', !!inputValue ? 'is-highlight' : '', dropDownVisible ? 'is-focus' : '', selfAdaption ? 'is-notAdaption' : '', !readonly ? 'is-filter' : '']" v-clickoutside="() => toggleDropDownVisible(false)" @mouseenter="inputHover = true" @mouseleave="inputHover = false" @click="() => toggleDropDownVisible(readonly ? undefined : true)" @keydown="handleKeyDown">
+      <div class="gj-cascader__box-content">
+        <span class="gj-cascader__input" :class="[!readonly ? 'is-filter' : '']">
+          <gj-input
             ref="input"
             v-model="inputValue"
             :size="realSize"
@@ -21,42 +21,42 @@
             @click="toggleDropDownVisible(true)"
             @keydown.delete="handleDelete"
           >
-          </jy-input>
+          </gj-input>
         </span>
-        <span class="jy-cascader__placeholder" v-if="placeholder && !inputValue">{{ placeholder }}</span>
-        <span class="jy-cascader__selected" v-if="!!inputValue">{{ inputValue }}</span>
+        <span class="gj-cascader__placeholder" v-if="placeholder && !inputValue">{{ placeholder }}</span>
+        <span class="gj-cascader__selected" v-if="!!inputValue">{{ inputValue }}</span>
       </div>
 
-      <span class="jy-cascader__icon">
-        <i v-if="clearBtnVisible" key="clear" class="jy-input__icon Gildata-clean" @click.stop="handleClear"></i>
-        <i v-else-if="dropDownVisible && filterable" :class="['jy-input__icon', 'Gildata-search1']"></i>
-        <i v-else key="arrow-down" :class="['jy-input__icon Gildata-downarrow', dropDownVisible && 'is-reverse']" @click.stop="toggleDropDownVisible()"></i>
+      <span class="gj-cascader__icon">
+        <i v-if="clearBtnVisible" key="clear" class="gj-input__icon Gildata-clean" @click.stop="handleClear"></i>
+        <i v-else-if="dropDownVisible && filterable" :class="['gj-input__icon', 'Gildata-search1']"></i>
+        <i v-else key="arrow-down" :class="['gj-input__icon Gildata-downarrow', dropDownVisible && 'is-reverse']" @click.stop="toggleDropDownVisible()"></i>
       </span>
     </div>
 
-    <transition name="jy-zoom-in-top" @after-leave="handleDropdownLeave">
-      <div v-show="dropDownVisible" ref="popper" :class="['jy-popper', 'jy-cascader__dropdown', popperClass]">
-        <div v-if="multiple && presentTags.length && !filtering" :class="{ 'jy-cascader__tagScroll': presentTags.length }" class="jy-cascader__tags" ref="tagScrollbar">
-          <jy-tag v-for="tag in presentTags" :key="tag.key" type="info" :size="tagSize" :hit="tag.hitState" :closable="tag.closable" disable-transitions @close="deleteTag(tag)">
+    <transition name="gj-zoom-in-top" @after-leave="handleDropdownLeave">
+      <div v-show="dropDownVisible" ref="popper" :class="['gj-popper', 'gj-cascader__dropdown', popperClass]">
+        <div v-if="multiple && presentTags.length && !filtering" :class="{ 'gj-cascader__tagScroll': presentTags.length }" class="gj-cascader__tags" ref="tagScrollbar">
+          <gj-tag v-for="tag in presentTags" :key="tag.key" type="info" :size="tagSize" :hit="tag.hitState" :closable="tag.closable" disable-transitions @close="deleteTag(tag)">
             {{ tag.text }}
-          </jy-tag>
+          </gj-tag>
         </div>
-        <jy-cascader-panel :class="{ 'is-multiple': multiple }" ref="panel" v-show="!filtering" v-model="checkedValue" :options="options" :props="config" :border="false" :render-label="$scopedSlots.default" @calcTagWidth="calcTagWidth" @expand-change="handleExpandChange" @close="toggleDropDownVisible(false)"> </jy-cascader-panel>
-        <jy-scrollbar ref="suggestionPanel" v-if="filterable" v-show="filtering" tag="ul" class="jy-cascader__suggestion-panel" view-class="jy-cascader__suggestion-list" @keydown.native="handleSuggestionKeyDown">
+        <gj-cascader-panel :class="{ 'is-multiple': multiple }" ref="panel" v-show="!filtering" v-model="checkedValue" :options="options" :props="config" :border="false" :render-label="$scopedSlots.default" @calcTagWidth="calcTagWidth" @expand-change="handleExpandChange" @close="toggleDropDownVisible(false)"> </gj-cascader-panel>
+        <gj-scrollbar ref="suggestionPanel" v-if="filterable" v-show="filtering" tag="ul" class="gj-cascader__suggestion-panel" view-class="gj-cascader__suggestion-list" @keydown.native="handleSuggestionKeyDown">
           <template v-if="suggestions.length">
-            <li v-for="(item, index) in suggestions" :key="item.uid" :class="['jy-cascader__suggestion-item', item.checked && 'is-checked']" :tabindex="-1" @click="handleSuggestionClick(index)">
+            <li v-for="(item, index) in suggestions" :key="item.uid" :class="['gj-cascader__suggestion-item', item.checked && 'is-checked']" :tabindex="-1" @click="handleSuggestionClick(index)">
               <i v-if="item.checked" class="Gildata-tick"></i>
               <span>{{ item.text }}</span>
             </li>
           </template>
           <slot v-else name="empty">
-            <jy-empty empty-type="noResult" :image-size="84"></jy-empty>
-            <!--            <li class="jy-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>-->
+            <gj-empty empty-type="noResult" :image-size="84"></gj-empty>
+            <!--            <li class="gj-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>-->
           </slot>
-        </jy-scrollbar>
-        <div class="jy-cascader__footer" v-if="!filtering && showFooter">
-          <jy-button type="text" text-type="secondary" @click.stop="handleClear">{{ cancelButtonText }}</jy-button>
-          <jy-button type="text" @click.stop="handleSubmit">{{ confirmButtonText }}</jy-button>
+        </gj-scrollbar>
+        <div class="gj-cascader__footer" v-if="!filtering && showFooter">
+          <gj-button type="text" text-type="secondary" @click.stop="handleClear">{{ cancelButtonText }}</gj-button>
+          <gj-button type="text" @click.stop="handleSubmit">{{ confirmButtonText }}</gj-button>
         </div>
       </div>
     </transition>
@@ -69,11 +69,11 @@ import Clickoutside from 'GildataDesign/src/utils/clickoutside';
 import Emitter from 'GildataDesign/src/mixins/emitter';
 import Locale from 'GildataDesign/src/mixins/locale';
 import Migrating from 'GildataDesign/src/mixins/migrating';
-import JyInput from 'GildataDesign/packages/input';
-import JyButton from 'GildataDesign/packages/button';
-import JyTag from 'GildataDesign/packages/tag';
-import JyScrollbar from 'GildataDesign/packages/scrollbar';
-import JyCascaderPanel from 'GildataDesign/packages/cascader-panel';
+import GjInput from 'GildataDesign/packages/input';
+import GjButton from 'GildataDesign/packages/button';
+import GjTag from 'GildataDesign/packages/tag';
+import GjScrollbar from 'GildataDesign/packages/scrollbar';
+import GjCascaderPanel from 'GildataDesign/packages/cascader-panel';
 import AriaUtils from 'GildataDesign/src/utils/aria-utils';
 import { t } from 'GildataDesign/src/locale';
 import { isEqual, isEmpty, kebabCase } from 'GildataDesign/src/utils/util';
@@ -127,27 +127,27 @@ const InputSizeMap = {
 };
 
 export default {
-  name: 'JyCascader',
+  name: 'GjCascader',
 
   directives: { Clickoutside },
 
   mixins: [PopperMixin, Emitter, Locale, Migrating],
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
 
   components: {
-    JyInput,
-    JyTag,
-    JyScrollbar,
-    JyCascaderPanel,
-    JyButton
+    GjInput,
+    GjTag,
+    GjScrollbar,
+    GjCascaderPanel,
+    GjButton
   },
 
   props: {
@@ -225,14 +225,14 @@ export default {
 
   computed: {
     realSize() {
-      const _elFormItemSize = (this.jyFormItem || {}).jyFormItemSize;
+      const _elFormItemSize = (this.GjFormItem || {}).GjFormItemSize;
       return this.size || _elFormItemSize || (this.$ELEMENT || {}).size;
     },
     tagSize() {
       return ['small', 'mini'].indexOf(this.realSize) > -1 ? 'mini' : 'small';
     },
     isDisabled() {
-      return this.disabled || (this.jyForm || {}).disabled;
+      return this.disabled || (this.GjForm || {}).disabled;
     },
     config() {
       const config = this.props || {};
@@ -274,7 +274,7 @@ export default {
 
   watch: {
     dropDownVisible(val) {
-      // 动态设置jy-cascader__tags的宽度
+      // 动态设置Gj-cascader__tags的宽度
       if (val) {
         if (this.showFooter) {
           this.checkedValue = JSON.parse(JSON.stringify(this.checkedValueStore));
@@ -319,7 +319,7 @@ export default {
      * 3、cascader-panel.vue中 通过handleCheckChange修改checkedValue的值
      * 4、cascader-panel.vue中 watch监听checkedValue的变化，触发this.$emit('input', val);
      * 5、this.$emit('input', val) 会修改cascader.vue中的checkedValue值
-     *   因为v-model语法糖本质是  :value="checkedValue" @input="checkedValue"  <jy-cascader-panel v-model="checkedValue">
+     *   因为v-model语法糖本质是  :value="checkedValue" @input="checkedValue"  <gj-cascader-panel v-model="checkedValue">
      * 6、cascader.vue中 监听checkedValue的变化，执行this.updateInfo(val);
      * 7、最终只有用户点击确定后，才会input框中才会显示对于的数据
      * */
@@ -338,7 +338,7 @@ export default {
 
           this.$emit('input', val);
           this.$emit('change', val);
-          this.dispatch('JyFormItem', 'el.form.change', [val]);
+          this.dispatch('GjFormItem', 'el.form.change', [val]);
         }
       } else {
         // 存在showFooter
@@ -435,7 +435,7 @@ export default {
     dispatchInfo(val) {
       this.$emit('input', val);
       this.$emit('change', val);
-      this.dispatch('JyFormItem', 'el.form.change', [val]);
+      this.dispatch('GjFormItem', 'el.form.change', [val]);
     },
     calcTagWidth() {
       this.$nextTick(() => {
@@ -545,10 +545,10 @@ export default {
         let firstNode = null;
 
         if (filtering && suggestionPanel) {
-          firstNode = suggestionPanel.$el.querySelector('.jy-cascader__suggestion-item');
+          firstNode = suggestionPanel.$el.querySelector('.gj-cascader__suggestion-item');
         } else {
-          const firstMenu = popper.querySelector('.jy-cascader-menu');
-          firstNode = firstMenu.querySelector('.jy-cascader-node[tabindex="-1"]');
+          const firstMenu = popper.querySelector('.gj-cascader-menu');
+          firstNode = firstMenu.querySelector('.gj-cascader-node[tabindex="-1"]');
         }
 
         if (firstNode) {
@@ -717,16 +717,16 @@ export default {
       if (this.$isServer || !$el) return;
 
       const { suggestionPanel } = this.$refs;
-      const inputInner = $el.querySelector('.jy-input__inner');
-      const cascaderBox = $el.querySelector('.jy-cascader__box');
+      const inputInner = $el.querySelector('.gj-input__inner');
+      const cascaderBox = $el.querySelector('.gj-cascader__box');
 
       if (!inputInner) return;
 
-      const tags = $el.querySelector('.jy-cascader__tags');
+      const tags = $el.querySelector('.gj-cascader__tags');
       let suggestionPanelEl = null;
 
       if (suggestionPanel && (suggestionPanelEl = suggestionPanel.$el)) {
-        const suggestionList = suggestionPanelEl.querySelector('.jy-cascader__suggestion-list');
+        const suggestionList = suggestionPanelEl.querySelector('.gj-cascader__suggestion-list');
         suggestionList.style.minWidth = cascaderBox.offsetWidth + 'px';
       }
 

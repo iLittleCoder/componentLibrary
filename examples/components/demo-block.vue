@@ -26,18 +26,18 @@
             <transition name="text-slide">
                 <span v-show="hovering">{{ controlText }}</span>
             </transition>
-            <jy-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
+            <gj-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
                 <transition name="text-slide">
-                    <jy-button
+                    <gj-button
                             v-show="hovering || isExpanded"
                             size="small"
                             type="text"
                             class="control-button"
                             @click.stop="goCodepen">
                         {{ langConfig['button-text'] }}
-                    </jy-button>
+                    </gj-button>
                 </transition>
-            </jy-tooltip>
+            </gj-tooltip>
         </div>
     </div>
 </template>
@@ -135,7 +135,7 @@
             &.is-fixed {
                 position: fixed;
                 bottom: 0;
-                width: 868px;
+                width: calc(100% - 462px);
             }
 
             i {
@@ -297,7 +297,7 @@
           return;
         }
         setTimeout(() => {
-          this.scrollParent = document.querySelector('.page-component__scroll > .jy-scrollbar__wrap');
+          this.scrollParent = document.querySelector('.page-component__scroll > .gj-scrollbar__wrap');
           this.scrollParent && this.scrollParent.addEventListener('scroll', this.scrollHandler);
           this.scrollHandler();
         }, 200);

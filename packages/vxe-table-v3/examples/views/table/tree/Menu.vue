@@ -4,7 +4,7 @@
 
     <vxe-toolbar custom></vxe-toolbar>
 
-    <jy-table
+    <gj-table
       resizable
       show-overflow
       keep-source
@@ -14,12 +14,12 @@
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
       :data="tableData"
       @menu-click="contextMenuClickEvent">
-      <jy-column type="checkbox" width="120" tree-node></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="size" title="Size" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="type" title="Type" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="120" tree-node></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="size" title="Size" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="type" title="Type" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -87,7 +87,7 @@ export default {
         `
         <vxe-toolbar custom></vxe-toolbar>
 
-        <jy-table
+        <gj-table
           resizable
           show-overflow
           keep-source
@@ -97,12 +97,12 @@ export default {
           :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
           :data="tableData"
           @menu-click="contextMenuClickEvent">
-          <jy-column type="checkbox" width="120" tree-node></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="size" title="Size" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="type" title="Type" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="120" tree-node></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="size" title="Size" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="type" title="Type" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

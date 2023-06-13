@@ -1,8 +1,8 @@
-import JyCheckboxButton from '../checkbox/src/checkbox-button.vue';
+import GjCheckboxButton from '../checkbox/src/checkbox-button.vue';
 
 /* istanbul ignore next */
-JyCheckboxButton.install = function(Vue) {
-  Vue.component(JyCheckboxButton.name, JyCheckboxButton);
+GjCheckboxButton.install = function(Vue) {
+  Vue.component(GjCheckboxButton.name, GjCheckboxButton);
 };
 
-export default JyCheckboxButton;
+export default GjCheckboxButton;

@@ -7,7 +7,7 @@
 
     <vxe-toolbar ref="xToolbar" print></vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-footer
@@ -20,55 +20,55 @@
       :merge-footer-items="mergeFooterItems"
       :footer-method="footerMethod"
       :data="tableData">
-      <jy-column field="a" title="名称"></jy-column>
+      <gj-column field="a" title="名称"></gj-column>
       <vxe-colgroup field="b" title="教育经费投入">
-        <jy-column field="c" title="总计"></jy-column>
+        <gj-column field="c" title="总计"></gj-column>
         <vxe-colgroup title="基本投入">
           <vxe-colgroup title="合计">
-            <jy-column field="d" title="合计"></jy-column>
-            <jy-column field="e" title="比上年增长"></jy-column>
+            <gj-column field="d" title="合计"></gj-column>
+            <gj-column field="e" title="比上年增长"></gj-column>
           </vxe-colgroup>
-          <jy-column field="f" title="人员经费"></jy-column>
-          <jy-column field="g" title="公用经费"></jy-column>
+          <gj-column field="f" title="人员经费"></gj-column>
+          <gj-column field="g" title="公用经费"></gj-column>
           <vxe-colgroup title="其他经费">
-            <jy-column field="w" title="合计"></jy-column>
+            <gj-column field="w" title="合计"></gj-column>
             <vxe-colgroup title="其中">
-              <jy-column field="h" title="标准化建设"></jy-column>
-              <jy-column field="i" title="信息化建设"></jy-column>
+              <gj-column field="h" title="标准化建设"></gj-column>
+              <gj-column field="i" title="信息化建设"></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
         </vxe-colgroup>
-        <jy-column field="j" title="附加信息"></jy-column>
+        <gj-column field="j" title="附加信息"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="其他投入">
         <vxe-colgroup title="投入">
-          <jy-column field="k" title="合计"></jy-column>
+          <gj-column field="k" title="合计"></gj-column>
           <vxe-colgroup title="其中">
-            <jy-column field="l" title="人员经费"></jy-column>
-            <jy-column field="m" title="教育经费"></jy-column>
-            <jy-column field="n" title="项目经费"></jy-column>
-            <jy-column field="o" title="基建投入"></jy-column>
+            <gj-column field="l" title="人员经费"></gj-column>
+            <gj-column field="m" title="教育经费"></gj-column>
+            <gj-column field="n" title="项目经费"></gj-column>
+            <gj-column field="o" title="基建投入"></gj-column>
           </vxe-colgroup>
         </vxe-colgroup>
         <vxe-colgroup title="社会捐款">
-          <jy-column field="p" title="合计"></jy-column>
+          <gj-column field="p" title="合计"></gj-column>
           <vxe-colgroup title="其中">
-            <jy-column field="q" title="项目经费"></jy-column>
-            <jy-column field="r" title="基建投入"></jy-column>
+            <gj-column field="q" title="项目经费"></gj-column>
+            <gj-column field="r" title="基建投入"></gj-column>
           </vxe-colgroup>
         </vxe-colgroup>
       </vxe-colgroup>
       <vxe-colgroup title="补充资料">
         <vxe-colgroup title="信息化建设">
-          <jy-column field="s" title="本年投入金额"></jy-column>
+          <gj-column field="s" title="本年投入金额"></gj-column>
           <vxe-colgroup title="其中">
-            <jy-column field="t" title="合计"></jy-column>
-            <jy-column field="u" title="建设数"></jy-column>
+            <gj-column field="t" title="合计"></gj-column>
+            <gj-column field="u" title="建设数"></gj-column>
           </vxe-colgroup>
-          <jy-column field="v" title="备注"></jy-column>
+          <gj-column field="v" title="备注"></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -90,7 +90,7 @@ export default {
         `
         <vxe-toolbar ref="xToolbar" print></vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-footer
@@ -103,55 +103,55 @@ export default {
           :merge-footer-items="mergeFooterItems"
           :footer-method="footerMethod"
           :data="tableData">
-          <jy-column field="a" title="名称"></jy-column>
+          <gj-column field="a" title="名称"></gj-column>
           <vxe-colgroup field="b" title="教育经费投入">
-            <jy-column field="c" title="总计"></jy-column>
+            <gj-column field="c" title="总计"></gj-column>
             <vxe-colgroup title="基本投入">
               <vxe-colgroup title="合计">
-                <jy-column field="d" title="合计"></jy-column>
-                <jy-column field="e" title="比上年增长"></jy-column>
+                <gj-column field="d" title="合计"></gj-column>
+                <gj-column field="e" title="比上年增长"></gj-column>
               </vxe-colgroup>
-              <jy-column field="f" title="人员经费"></jy-column>
-              <jy-column field="g" title="公用经费"></jy-column>
+              <gj-column field="f" title="人员经费"></gj-column>
+              <gj-column field="g" title="公用经费"></gj-column>
               <vxe-colgroup title="其他经费">
-                <jy-column field="w" title="合计"></jy-column>
+                <gj-column field="w" title="合计"></gj-column>
                 <vxe-colgroup title="其中">
-                  <jy-column field="h" title="标准化建设"></jy-column>
-                  <jy-column field="i" title="信息化建设"></jy-column>
+                  <gj-column field="h" title="标准化建设"></gj-column>
+                  <gj-column field="i" title="信息化建设"></gj-column>
                 </vxe-colgroup>
               </vxe-colgroup>
             </vxe-colgroup>
-            <jy-column field="j" title="附加信息"></jy-column>
+            <gj-column field="j" title="附加信息"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="其他投入">
             <vxe-colgroup title="投入">
-              <jy-column field="k" title="合计"></jy-column>
+              <gj-column field="k" title="合计"></gj-column>
               <vxe-colgroup title="其中">
-                <jy-column field="l" title="人员经费"></jy-column>
-                <jy-column field="m" title="教育经费"></jy-column>
-                <jy-column field="n" title="项目经费"></jy-column>
-                <jy-column field="o" title="基建投入"></jy-column>
+                <gj-column field="l" title="人员经费"></gj-column>
+                <gj-column field="m" title="教育经费"></gj-column>
+                <gj-column field="n" title="项目经费"></gj-column>
+                <gj-column field="o" title="基建投入"></gj-column>
               </vxe-colgroup>
             </vxe-colgroup>
             <vxe-colgroup title="社会捐款">
-              <jy-column field="p" title="合计"></jy-column>
+              <gj-column field="p" title="合计"></gj-column>
               <vxe-colgroup title="其中">
-                <jy-column field="q" title="项目经费"></jy-column>
-                <jy-column field="r" title="基建投入"></jy-column>
+                <gj-column field="q" title="项目经费"></gj-column>
+                <gj-column field="r" title="基建投入"></gj-column>
               </vxe-colgroup>
             </vxe-colgroup>
           </vxe-colgroup>
           <vxe-colgroup title="补充资料">
             <vxe-colgroup title="信息化建设">
-              <jy-column field="s" title="本年投入金额"></jy-column>
+              <gj-column field="s" title="本年投入金额"></gj-column>
               <vxe-colgroup title="其中">
-                <jy-column field="t" title="合计"></jy-column>
-                <jy-column field="u" title="建设数"></jy-column>
+                <gj-column field="t" title="合计"></gj-column>
+                <gj-column field="u" title="建设数"></gj-column>
               </vxe-colgroup>
-              <jy-column field="v" title="备注"></jy-column>
+              <gj-column field="v" title="备注"></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {

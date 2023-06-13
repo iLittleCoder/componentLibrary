@@ -7,7 +7,7 @@ import Bar from './bar';
 
 /* istanbul ignore next */
 export default {
-  name: 'JyScrollbar',
+  name: 'GjScrollbar',
 
   components: { Bar },
 
@@ -59,7 +59,7 @@ export default {
       }
     }
     const view = h(this.tag, {
-      class: ['jy-scrollbar__view', this.viewClass],
+      class: ['gj-scrollbar__view', this.viewClass],
       style: this.viewStyle,
       ref: 'resize'
     }, this.$slots.default);
@@ -68,7 +68,7 @@ export default {
         ref="wrap"
         style={ style }
         onScroll={ this.handleScroll }
-        class={ [this.wrapClass, 'jy-scrollbar__wrap', gutter ? '' : 'jy-scrollbar__wrap--hidden-default'] }>
+        class={ [this.wrapClass, 'gj-scrollbar__wrap', gutter ? '' : 'gj-scrollbar__wrap--hidden-default'] }>
         { [view] }
       </div>
     );
@@ -89,13 +89,13 @@ export default {
       nodes = ([
         <div
           ref="wrap"
-          class={ [this.wrapClass, 'jy-scrollbar__wrap'] }
+          class={ [this.wrapClass, 'gj-scrollbar__wrap'] }
           style={ style }>
           { [view] }
         </div>
       ]);
     }
-    return h('div', { class: 'jy-scrollbar' }, nodes);
+    return h('div', { class: 'gj-scrollbar' }, nodes);
   },
 
   methods: {

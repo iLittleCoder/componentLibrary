@@ -10,8 +10,8 @@
   height: $--switch-height;
   vertical-align: middle;
   @include when(disabled) {
-    & .jy-switch__core,
-    & .jy-switch__label {
+    & .gj-switch__core,
+    & .gj-switch__label {
       cursor: not-allowed;
     }
   }
@@ -81,7 +81,7 @@
   }
 
   @include when(checked) {
-    .jy-switch__core {
+    .gj-switch__core {
       border-color: $--switch-on-color;
       background-color: $--switch-on-color;
       &::after {
@@ -92,7 +92,7 @@
   }
 
   @include when(disabled) {
-    .jy-switch__core {
+    .gj-switch__core {
       border-color: transparent;
       background-color: $--background-color-disabled;
       &::after {
@@ -100,19 +100,19 @@
         margin-left: -$--switch-button-size - 1px;
       }
     }
-    .jy-switch__label {
+    .gj-switch__label {
       color: $--color-text-disabled;
     }
   }
 
   @include m(wide) {
-    .jy-switch__label {
-      &.jy-switch__label--left {
+    .gj-switch__label {
+      &.gj-switch__label--left {
         span {
           left: 10px;
         }
       }
-      &.jy-switch__label--right {
+      &.gj-switch__label--right {
         span {
           right: 10px;
         }
@@ -140,14 +140,14 @@
     }
 
     @include when(checked) {
-      .jy-switch__core {
+      .gj-switch__core {
         &::after {
           margin-left: -$--switch-button-mini-size - 1px;
         }
       }
     }
     @include when(disabled) {
-      .jy-switch__core {
+      .gj-switch__core {
         &::after {
           margin-left: -$--switch-button-mini-size - 1px;
         }

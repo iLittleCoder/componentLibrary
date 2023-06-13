@@ -1,8 +1,8 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="$emit('dodestroy')">
-    <div v-show="visible" class="jy-time-panel jy-popper" :class="popperClass">
+  <transition name="gj-zoom-in-top" @after-leave="$emit('dodestroy')">
+    <div v-show="visible" class="gj-time-panel gj-popper" :class="popperClass">
       <div
-        class="jy-time-panel__content"
+        class="gj-time-panel__content"
         :class="{ 'has-seconds': showSeconds }"
       >
         <time-spinner
@@ -17,17 +17,17 @@
         </time-spinner>
       </div>
 
-      <div class="jy-time-panel__footer">
+      <div class="gj-time-panel__footer">
         <!-- <button
           type="text"
-          class="jy-time-panel__btn cancel"
+          class="gj-time-panel__btn cancel"
           @click="handleCancel"
         >
           {{ t('el.datepicker.cancel') }}
         </button> -->
         <button
           type="text"
-          class="jy-time-panel__btn current"
+          class="gj-time-panel__btn current"
           :class="[!isAtSetRange ? 'disabled' : '']"
           @click="handleCurrent"
         >
@@ -35,7 +35,7 @@
         </button>
         <button
           type="button"
-          class="jy-time-panel__btn"
+          class="gj-time-panel__btn"
           :class="{ confirm: !disabled }"
           @click="handleConfirm()"
         >

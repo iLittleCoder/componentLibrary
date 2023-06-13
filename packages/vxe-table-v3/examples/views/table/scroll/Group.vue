@@ -2,7 +2,7 @@
   <div>
     <p class="tip">分组表头<br><span class="red">（注：分组表头不支持横向虚拟滚动，通过设置 scroll-x={enabled: false} 关闭即可）</span></p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -10,25 +10,25 @@
       height="500"
       :scroll-x="{enabled: false}"
       :loading="loading">
-      <jy-column type="seq" title="序号" width="100"></jy-column>
+      <gj-column type="seq" title="序号" width="100"></gj-column>
       <vxe-colgroup title="基本信息">
-        <jy-column field="name" title="Name" width="200" sortable></jy-column>
-        <jy-column field="age" title="Age" width="200"></jy-column>
-        <jy-column field="sex" title="Sex" width="200"></jy-column>
+        <gj-column field="name" title="Name" width="200" sortable></gj-column>
+        <gj-column field="age" title="Age" width="200"></gj-column>
+        <gj-column field="sex" title="Sex" width="200"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="详细信息">
         <vxe-colgroup title="分组">
-          <jy-column field="rate" title="Rate" width="200"></jy-column>
-          <jy-column field="region" title="Region" width="200"></jy-column>
+          <gj-column field="rate" title="Rate" width="200"></gj-column>
+          <gj-column field="region" title="Region" width="200"></gj-column>
         </vxe-colgroup>
         <vxe-colgroup title="其他">
-          <jy-column field="time" title="Time" width="200" sortable></jy-column>
-          <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
+          <gj-column field="time" title="Time" width="200" sortable></gj-column>
+          <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
-      <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-      <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-    </jy-table>
+      <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+      <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -46,7 +46,7 @@ export default {
       loading: false,
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -54,25 +54,25 @@ export default {
           height="500"
           :scroll-x="{enabled: false}"
           :loading="loading">
-          <jy-column type="seq" title="序号" width="100"></jy-column>
+          <gj-column type="seq" title="序号" width="100"></gj-column>
           <vxe-colgroup title="基本信息">
-            <jy-column field="name" title="Name" width="200" sortable></jy-column>
-            <jy-column field="age" title="Age" width="200"></jy-column>
-            <jy-column field="sex" title="Sex" width="200"></jy-column>
+            <gj-column field="name" title="Name" width="200" sortable></gj-column>
+            <gj-column field="age" title="Age" width="200"></gj-column>
+            <gj-column field="sex" title="Sex" width="200"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="详细信息">
             <vxe-colgroup title="分组">
-              <jy-column field="rate" title="Rate" width="200"></jy-column>
-              <jy-column field="region" title="Region" width="200"></jy-column>
+              <gj-column field="rate" title="Rate" width="200"></gj-column>
+              <gj-column field="region" title="Region" width="200"></gj-column>
             </vxe-colgroup>
             <vxe-colgroup title="其他">
-              <jy-column field="time" title="Time" width="200" sortable></jy-column>
-              <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
+              <gj-column field="time" title="Time" width="200" sortable></gj-column>
+              <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
-          <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-          <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-        </jy-table>
+          <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+          <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+        </gj-table>
         `,
         `
         export default {

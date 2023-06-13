@@ -1,6 +1,6 @@
 <template>
   <div
-    class="jy-select-dropdown jy-popper"
+    class="gj-select-dropdown gj-popper"
     :class="[{ 'is-multiple': $parent.multiple }, popperClass]"
     :style="{ minWidth: minWidth }"
   >
@@ -12,9 +12,9 @@
   import Popper from 'GildataDesign/src/utils/vue-popper';
 
   export default {
-    name: 'JySelectDropdown',
+    name: 'GjSelectDropdown',
 
-    componentName: 'JySelectDropdown',
+    componentName: 'GjSelectDropdown',
 
     mixins: [Popper],
 

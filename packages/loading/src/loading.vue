@@ -1,17 +1,17 @@
 <template>
-  <transition name="jy-loading-fade" @after-leave="handleAfterLeave">
+  <transition name="gj-loading-fade" @after-leave="handleAfterLeave">
     <div
       v-show="visible"
-      class="jy-loading-mask"
+      class="gj-loading-mask"
       :style="{ backgroundColor: background || '' }"
       :class="[customClass, { 'is-fullscreen': fullscreen }]">
-      <div class="jy-loading-spinner">
+      <div class="gj-loading-spinner">
 <!--        <svg v-if="!spinner" class="circular" viewBox="25 25 50 50">-->
 <!--          <circle class="path" cx="50" cy="50" r="20" fill="none"/>-->
 <!--        </svg>-->
         <i v-if="!spinner" class="circular Gildata-loading"></i>
         <i v-else :class="spinner"></i>
-        <p v-if="text" class="jy-loading-text">{{ text }}</p>
+        <p v-if="text" class="gj-loading-text">{{ text }}</p>
       </div>
     </div>
   </transition>

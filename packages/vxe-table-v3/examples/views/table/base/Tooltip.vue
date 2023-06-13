@@ -5,23 +5,23 @@
       还可以设置 <table-api-link prop="tooltip-config"/>.<table-api-link prop="enterable"/> 允许鼠标进入 tooltip 中，通过 <table-column-api-link prop="title-help"/> 设置列标题的帮助提示消息
     </p>
 
-    <jy-table
+    <gj-table
       show-footer
       :footer-method="footerMethod"
       :tooltip-config="{showAll: true, enterable: true, contentMethod: showTooltipMethod}"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="名称" :title-help="{message: '自定义帮助提示信息'}"></jy-column>
-      <jy-column field="role" title="角色" :title-help="{message: '自定义图标', icon: 'fa fa-bell'}"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-      <jy-column field="rate" title="Rate">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="名称" :title-help="{message: '自定义帮助提示信息'}"></gj-column>
+      <gj-column field="role" title="角色" :title-help="{message: '自定义图标', icon: 'fa fa-bell'}"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+      <gj-column field="rate" title="Rate">
         <template #header>
           <span>自定义标题</span>
         </template>
-      </jy-column>
-      <jy-column field="address" title="Address" width="160"></jy-column>
-      <jy-column type="html" field="content" title="Content" width="200"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="address" title="Address" width="160"></gj-column>
+      <gj-column type="html" field="content" title="Content" width="200"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -45,23 +45,23 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           show-footer
           :footer-method="footerMethod"
           :tooltip-config="{showAll: true, enterable: true, contentMethod: showTooltipMethod}"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="名称" :title-help="{message: '自定义帮助提示信息'}"></jy-column>
-          <jy-column field="role" title="角色" :title-help="{message: '自定义图标', icon: 'fa fa-bell'}"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-          <jy-column field="rate" title="Rate">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="名称" :title-help="{message: '自定义帮助提示信息'}"></gj-column>
+          <gj-column field="role" title="角色" :title-help="{message: '自定义图标', icon: 'fa fa-bell'}"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+          <gj-column field="rate" title="Rate">
             <template #header>
               <span>自定义标题</span>
             </template>
-          </jy-column>
-          <jy-column field="address" title="Address" width="160"></jy-column>
-          <jy-column type="html" field="content" title="Content" width="200"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="address" title="Address" width="160"></gj-column>
+          <gj-column type="html" field="content" title="Content" width="200"></gj-column>
+        </gj-table>
         `,
         `
         export default {

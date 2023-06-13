@@ -11,7 +11,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       resizable
       show-overflow
       keep-source
@@ -23,20 +23,20 @@
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
       :data="tableData">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name" tree-node></jy-column>
-      <jy-column field="size" title="Size" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="type" title="Type" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-      <jy-column title="操作" width="500">
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name" tree-node></gj-column>
+      <gj-column field="size" title="Size" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="type" title="Type" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+      <gj-column title="操作" width="500">
         <template #default="{ row }">
           <vxe-button type="text" status="primary" @click="insertRow(row, 'current')">插入节点</vxe-button>
           <vxe-button type="text" status="primary" @click="insertRow(row, 'top')">顶部插入节点</vxe-button>
           <vxe-button type="text" status="primary" @click="insertRow(row, 'bottom')">尾部插入子节点</vxe-button>
           <vxe-button type="text" status="primary" @click="removeRow(row)">删除节点</vxe-button>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -66,7 +66,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           resizable
           show-overflow
           keep-source
@@ -78,19 +78,19 @@ export default {
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
           :data="tableData">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name" tree-node></jy-column>
-          <jy-column field="size" title="Size" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="type" title="Type" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-          <jy-column title="操作" width="500">
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name" tree-node></gj-column>
+          <gj-column field="size" title="Size" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="type" title="Type" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+          <gj-column title="操作" width="500">
             <template #default="{ row }">
               <vxe-button type="text" status="primary" @click="insertRow(row)">顶部插入节点</vxe-button>
               <vxe-button type="text" status="primary" @click="insertRow(row, -1)">尾部插入节点</vxe-button>
               <vxe-button type="text" status="primary" @click="removeRow(row)">删除节点</vxe-button>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'
@@ -111,12 +111,12 @@ export default {
               return new Promise(resolve => {
                 setTimeout(() => {
                   this.tableData = [
-                    { id: 10000, parentId: null, name: 'jy-table test abc1', type: 'mp3', size: 1024, date: '2020-08-01' },
+                    { id: 10000, parentId: null, name: 'gj-table test abc1', type: 'mp3', size: 1024, date: '2020-08-01' },
                     { id: 10050, parentId: null, name: 'Test2', type: 'mp4', size: null, date: '2021-04-01' },
                     { id: 24300, parentId: 10050, name: 'Test3', type: 'avi', size: 1024, date: '2020-03-01' },
-                    { id: 20045, parentId: 24300, name: 'jy-table test abc4', type: 'html', size: 600, date: '2021-04-01' },
-                    { id: 10053, parentId: 24300, name: 'jy-table test abc96', type: 'avi', size: null, date: '2021-04-01' },
-                    { id: 24330, parentId: 10053, name: 'jy-table test abc5', type: 'txt', size: 25, date: '2021-10-01' },
+                    { id: 20045, parentId: 24300, name: 'gj-table test abc4', type: 'html', size: 600, date: '2021-04-01' },
+                    { id: 10053, parentId: 24300, name: 'gj-table test abc96', type: 'avi', size: null, date: '2021-04-01' },
+                    { id: 24330, parentId: 10053, name: 'gj-table test abc5', type: 'txt', size: 25, date: '2021-10-01' },
                     { id: 21011, parentId: 10053, name: 'Test6', type: 'pdf', size: 512, date: '2020-01-01' },
                     { id: 22200, parentId: 10053, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
                     { id: 23666, parentId: null, name: 'Test8', type: 'xlsx', size: 2048, date: '2020-11-01' },
@@ -126,7 +126,7 @@ export default {
                     { id: 23688, parentId: 23666, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
                     { id: 23681, parentId: 23688, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
                     { id: 23682, parentId: 23688, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
-                    { id: 24555, parentId: null, name: 'jy-table test abc9', type: 'avi', size: 224, date: '2020-10-01' },
+                    { id: 24555, parentId: null, name: 'gj-table test abc9', type: 'avi', size: 224, date: '2020-10-01' },
                     { id: 24566, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
                     { id: 24577, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' }
                   ]
@@ -219,12 +219,12 @@ export default {
       return new Promise(resolve => {
         setTimeout(() => {
           this.tableData = [
-            { id: 10000, parentId: null, name: 'jy-table test abc1', type: 'mp3', size: 1024, date: '2020-08-01' },
+            { id: 10000, parentId: null, name: 'gj-table test abc1', type: 'mp3', size: 1024, date: '2020-08-01' },
             { id: 10050, parentId: null, name: 'Test2', type: 'mp4', size: null, date: '2021-04-01' },
             { id: 24300, parentId: 10050, name: 'Test3', type: 'avi', size: 1024, date: '2020-03-01' },
-            { id: 20045, parentId: 24300, name: 'jy-table test abc4', type: 'html', size: 600, date: '2021-04-01' },
-            { id: 10053, parentId: 24300, name: 'jy-table test abc96', type: 'avi', size: null, date: '2021-04-01' },
-            { id: 24330, parentId: 10053, name: 'jy-table test abc5', type: 'txt', size: 25, date: '2021-10-01' },
+            { id: 20045, parentId: 24300, name: 'gj-table test abc4', type: 'html', size: 600, date: '2021-04-01' },
+            { id: 10053, parentId: 24300, name: 'gj-table test abc96', type: 'avi', size: null, date: '2021-04-01' },
+            { id: 24330, parentId: 10053, name: 'gj-table test abc5', type: 'txt', size: 25, date: '2021-10-01' },
             { id: 21011, parentId: 10053, name: 'Test6', type: 'pdf', size: 512, date: '2020-01-01' },
             { id: 22200, parentId: 10053, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
             { id: 23666, parentId: null, name: 'Test8', type: 'xlsx', size: 2048, date: '2020-11-01' },
@@ -234,7 +234,7 @@ export default {
             { id: 23688, parentId: 23666, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
             { id: 23681, parentId: 23688, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
             { id: 23682, parentId: 23688, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
-            { id: 24555, parentId: null, name: 'jy-table test abc9', type: 'avi', size: 224, date: '2020-10-01' },
+            { id: 24555, parentId: null, name: 'gj-table test abc9', type: 'avi', size: 224, date: '2020-10-01' },
             { id: 24566, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' },
             { id: 24577, parentId: 24555, name: 'Test7', type: 'js', size: 1024, date: '2021-06-01' }
           ]

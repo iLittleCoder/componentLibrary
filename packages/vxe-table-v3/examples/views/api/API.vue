@@ -9,7 +9,7 @@
       @cell-menu="cellContextMenuEvent"
       @menu-click="contextMenuClickEvent">
       <template #toolbar_buttons>
-        <vxe-input clearable class="search-input" v-model="filterName" type="search" :placeholder="`jy-${apiName} ${$t('app.api.apiSearch')}`" @keyup="searchEvent" @clear="searchEvent"></vxe-input>
+        <vxe-input clearable class="search-input" v-model="filterName" type="search" :placeholder="`gj-${apiName} ${$t('app.api.apiSearch')}`" @keyup="searchEvent" @clear="searchEvent"></vxe-input>
       </template>
 
       <template #default_version="{ row }">
@@ -69,9 +69,9 @@ import pulldownAPI from '../../api/pulldown'
 // const tags = window.tags = {}
 
 // const tagMaps = [
-//   ['vxe-table', tableAPI, { subtags: ['vxe-colgroup', 'jy-table'], description: '基础表格' }],
-//   ['vxe-colgroup', colgroupAPI, { subtags: ['jy-table'], description: '基础表格 - 分组列' }],
-//   ['jy-table', columnAPI, { description: '基础表格 - 列' }],
+//   ['vxe-table', tableAPI, { subtags: ['vxe-colgroup', 'gj-table'], description: '基础表格' }],
+//   ['vxe-colgroup', colgroupAPI, { subtags: ['gj-table'], description: '基础表格 - 分组列' }],
+//   ['gj-table', columnAPI, { description: '基础表格 - 列' }],
 //   ['vxe-grid', gridAPI, { description: '高级表格' }],
 //   ['vxe-toolbar', toolbarAPI, { description: '工具栏' }],
 //   ['vxe-pager', pagerAPI, { description: '分页' }],
@@ -86,7 +86,7 @@ import pulldownAPI from '../../api/pulldown'
 //   ['vxe-optgroup', optgroupAPI, { subtags: ['vxe-option'], description: '下拉框 - 分组' }],
 //   ['vxe-option', optionAPI, { description: '下拉框 - 选项' }],
 //   ['vxe-button', buttonAPI, { description: '按钮' }],
-//   ['jy-table-tooltip', tooltipAPI, { description: '工具提示' }],
+//   ['gj-table-tooltip', tooltipAPI, { description: '工具提示' }],
 //   ['vxe-modal', modalAPI, { description: '弹窗' }],
 //   ['vxe-form', formAPI, { subtags: ['vxe-form-item'], description: '表单' }],
 //   ['vxe-form-item', formItemAPI, { description: '表单 - 项' }],

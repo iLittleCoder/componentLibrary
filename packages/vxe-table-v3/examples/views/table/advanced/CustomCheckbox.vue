@@ -2,12 +2,12 @@
   <div>
     <p class="tip">自定义复选框，通过插槽 <table-column-api-link prop="header"/>、<table-column-api-link prop="checkbox"/> 自定义模板</p>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable"
       height="400"
       :data="tableData">
-      <jy-column type="checkbox" width="60">
+      <gj-column type="checkbox" width="60">
         <template #header="{ checked, indeterminate }">
           <span class="custom-checkbox" @click.stop="$refs.xTable.toggleAllCheckboxRow()">
             <i v-if="indeterminate" class="fa fa-minus-square-o"></i>
@@ -22,12 +22,12 @@
             <i v-else class="fa fa-square-o"></i>
           </span>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address"></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -55,12 +55,12 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           ref="xTable"
           height="400"
           :data="tableData">
-          <jy-column type="checkbox" width="60">
+          <gj-column type="checkbox" width="60">
             <template #header="{ checked, indeterminate }">
               <span class="custom-checkbox" @click.stop="$refs.xTable.toggleAllCheckboxRow()">
                 <i v-if="indeterminate" class="fa fa-minus-square-o"></i>
@@ -75,12 +75,12 @@ export default {
                 <i v-else class="fa fa-square-o"></i>
               </span>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address"></gj-column>
+        </gj-table>
         `,
         `
         export default {

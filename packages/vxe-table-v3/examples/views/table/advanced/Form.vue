@@ -24,18 +24,18 @@
       </vxe-form-item>
     </vxe-form>
 
-    <jy-table
+    <gj-table
       show-overflow
       height="400"
       :loading="loading"
       :data="tableData">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="rate" title="Rate"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="rate" title="Rate"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -89,18 +89,18 @@ export default {
           </vxe-form-item>
         </vxe-form>
 
-        <jy-table
+        <gj-table
           show-overflow
           height="400"
           :loading="loading"
           :data="tableData">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" title="序号" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="rate" title="Rate"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" title="序号" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="rate" title="Rate"></gj-column>
+        </gj-table>
         `,
         `
         export default {

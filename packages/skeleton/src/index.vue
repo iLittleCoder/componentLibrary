@@ -25,7 +25,7 @@
 </template>
 <script>
 export default {
-  name: 'JySkeleton',
+  name: 'GjSkeleton',
   props: {
     animated: {
       type: Boolean,

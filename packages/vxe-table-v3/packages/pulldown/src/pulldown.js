@@ -57,7 +57,7 @@ export default {
     const defaultSlot = $scopedSlots.default
     const downSlot = $scopedSlots.dropdown
     return h('div', {
-      class: ['jy-table-pulldown', {
+      class: ['gj-table-pulldown', {
         [`size--${vSize}`]: vSize,
         'is--visivle': visiblePanel,
         'is--disabled': disabled,
@@ -66,11 +66,11 @@ export default {
     }, [
       h('div', {
         ref: 'content',
-        class: 'jy-table-pulldown--content'
+        class: 'gj-table-pulldown--content'
       }, defaultSlot ? defaultSlot.call(this, { $pulldown: this }, h) : []),
       h('div', {
         ref: 'panel',
-        class: ['jy-table--ignore-clear jy-table-pulldown--panel', {
+        class: ['gj-table--ignore-clear gj-table-pulldown--panel', {
           [`size--${vSize}`]: vSize,
           'is--transfer': transfer,
           'animat--leave': animatVisible,
@@ -82,7 +82,7 @@ export default {
         style: panelStyle
       }, downSlot ? [
         h('div', {
-          class: 'jy-table-pulldown--wrapper'
+          class: 'gj-table-pulldown--wrapper'
         }, !inited || (destroyOnClose && !visiblePanel && !animatVisible) ? [] : downSlot.call(this, { $pulldown: this }, h))
       ] : [])
     ])

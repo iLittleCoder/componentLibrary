@@ -57,10 +57,10 @@ export const UtilTools = {
     columnConfig.slots = _vm.$scopedSlots
     if (groupConfig) {
       if (process.env.VUE_APP_VXE_TABLE_ENV === 'development') {
-        if ($xecolumn.$options._componentTag === 'jy-table-column') {
-          errLog('vxe.error.groupTag', [`<vxe-table-colgroup title=${$xecolumn.title} ...>`, `<jy-column title=${$xecolumn.title} ...>`])
-        } else if ($xecolumn.$options._componentTag === 'jy-column') {
-          warnLog('vxe.error.groupTag', [`<vxe-colgroup title=${$xecolumn.title} ...>`, `<jy-column title=${$xecolumn.title} ...>`])
+        if ($xecolumn.$options._componentTag === 'gj-table-column') {
+          errLog('vxe.error.groupTag', [`<vxe-table-colgroup title=${$xecolumn.title} ...>`, `<gj-column title=${$xecolumn.title} ...>`])
+        } else if ($xecolumn.$options._componentTag === 'gj-column') {
+          warnLog('vxe.error.groupTag', [`<vxe-colgroup title=${$xecolumn.title} ...>`, `<gj-column title=${$xecolumn.title} ...>`])
         }
       }
       if (!groupConfig.children) {

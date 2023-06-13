@@ -2,25 +2,25 @@
   <div>
     <p class="tip">实现弹框表单编辑功能<span class="red">（具体请自行实现，该示例仅供参考）</span></p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       highlight-hover-row
       highlight-current-row
       height="500"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="sex" title="Sex" :formatter="formatterSex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-      <jy-column title="操作" width="100" show-overflow>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="sex" title="Sex" :formatter="formatterSex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+      <gj-column title="操作" width="100" show-overflow>
         <template #default="{ row }">
           <vxe-button type="text" icon="fa fa-edit" @click="editEvent(row)"></vxe-button>
           <vxe-button type="text" icon="fa fa-trash-o"></vxe-button>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <vxe-modal ref="xModal" v-model="showEdit" title="编辑&保存" width="800" resize destroy-on-close>
       <template #default>
@@ -93,25 +93,25 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           highlight-hover-row
           highlight-current-row
           height="500"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="sex" title="Sex" :formatter="formatterSex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-          <jy-column title="操作" width="100" show-overflow>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="sex" title="Sex" :formatter="formatterSex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+          <gj-column title="操作" width="100" show-overflow>
             <template #default="{ row }">
               <vxe-button type="text" icon="fa fa-edit" @click="editEvent(row)"></vxe-button>
               <vxe-button type="text" icon="fa fa-trash-o"></vxe-button>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
 
         <vxe-modal ref="xModal" v-model="showEdit" title="编辑&保存" width="800" resize destroy-on-close>
           <template #default>

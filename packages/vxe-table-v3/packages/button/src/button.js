@@ -68,7 +68,7 @@ export default {
     }, [
       h('button', {
         ref: 'xBtn',
-        class: ['jy-table-button', `type--${btnType}`, {
+        class: ['gj-table-button', `type--${btnType}`, {
           [`size--${vSize}`]: vSize,
           [`theme--${status}`]: status,
           'is--round': this.round,
@@ -87,12 +87,12 @@ export default {
         }, XEUtils.objectMap($listeners, (cb, type) => evnt => this.$emit(type, { $event: evnt })))
       }, this.renderContent(h).concat([
         h('i', {
-          class: `jy-table-button--dropdown-arrow ${GlobalConfig.icon.BUTTON_DROPDOWN}`
+          class: `gj-table-button--dropdown-arrow ${GlobalConfig.icon.BUTTON_DROPDOWN}`
         })
       ])),
       h('div', {
         ref: 'panel',
-        class: ['jy-table-button--dropdown-panel', {
+        class: ['gj-table-button--dropdown-panel', {
           [`size--${vSize}`]: vSize,
           'animat--leave': animatVisible,
           'animat--enter': showPanel
@@ -103,7 +103,7 @@ export default {
         style: this.panelStyle
       }, inited ? [
         h('div', {
-          class: 'jy-table-button--dropdown-wrapper',
+          class: 'gj-table-button--dropdown-wrapper',
           on: {
             mousedown: this.mousedownDropdownEvent,
             click: this.clickDropdownEvent,
@@ -114,7 +114,7 @@ export default {
       ] : null)
     ]) : h('button', {
       ref: 'xBtn',
-      class: ['jy-table-button', `type--${btnType}`, className, {
+      class: ['gj-table-button', `type--${btnType}`, className, {
         [`size--${vSize}`]: vSize,
         [`theme--${status}`]: status,
         'is--round': this.round,
@@ -137,26 +137,26 @@ export default {
       if (loading) {
         contents.push(
           h('i', {
-            class: ['jy-table-button--loading-icon', GlobalConfig.icon.BUTTON_LOADING]
+            class: ['gj-table-button--loading-icon', GlobalConfig.icon.BUTTON_LOADING]
           })
         )
       } else if (icon) {
         contents.push(
           h('i', {
-            class: ['jy-table-button--icon', icon]
+            class: ['gj-table-button--icon', icon]
           })
         )
       }
       if ($scopedSlots.default) {
         contents.push(
           h('span', {
-            class: 'jy-table-button--content'
+            class: 'gj-table-button--content'
           }, $scopedSlots.default.call(this))
         )
       } else if (content) {
         contents.push(
           h('span', {
-            class: 'jy-table-button--content'
+            class: 'gj-table-button--content'
           }, [getFuncText(content)])
         )
       }

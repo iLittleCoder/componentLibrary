@@ -2,18 +2,18 @@
   <div>
     <h1>{{ $t('app.aside.nav.formats') }}</h1>
     <p class="tip">将列的格式化函数注册成全局可复用，通过 <table-column-api-link prop="formatter"/> 调用</p>
-    <jy-table
+    <gj-table
       resizable
       highlight-current-row
       highlight-hover-row
       highlight-current-column
       :data="tableData">
-      <jy-column field="name" title="app.api.title.prop" min-width="280" tree-node></jy-column>
-      <jy-column field="desc" title="app.api.title.desc" min-width="200"></jy-column>
-      <jy-column field="type" title="app.api.title.type" min-width="140"></jy-column>
-      <jy-column field="enum" title="app.api.title.enum" min-width="150"></jy-column>
-      <jy-column field="defVal" title="app.api.title.defVal" min-width="160"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="app.api.title.prop" min-width="280" tree-node></gj-column>
+      <gj-column field="desc" title="app.api.title.desc" min-width="200"></gj-column>
+      <gj-column field="type" title="app.api.title.type" min-width="140"></gj-column>
+      <gj-column field="enum" title="app.api.title.enum" min-width="150"></gj-column>
+      <gj-column field="defVal" title="app.api.title.defVal" min-width="160"></gj-column>
+    </gj-table>
     <h2>示例</h2>
     <pre>
       <pre-code class="html">{{ demoCodes[0] }}</pre-code>
@@ -57,18 +57,18 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="num1" title="默认两位小数" formatter="myAmount"></jy-column>
-          <jy-column field="num2" title="保留3位小数" :formatter="['myAmount', 3]"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="num1" title="默认两位小数" formatter="myAmount"></gj-column>
+          <gj-column field="num2" title="保留3位小数" :formatter="['myAmount', 3]"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'
-        import VXETable from 'jy-table'
+        import VXETable from 'gj-table'
 
         // 格式金额，默认2位数
         VXETable.formats.add('myAmount', ({ cellValue }, digits = 2) => {

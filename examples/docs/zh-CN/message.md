@@ -10,8 +10,8 @@
 
 ```html
 <template>
-  <jy-button :plain="true" @click="open">打开消息提示</jy-button>
-  <jy-button :plain="true" @click="openVn">VNode</jy-button>
+  <gj-button :plain="true" @click="open">打开消息提示</gj-button>
+  <gj-button :plain="true" @click="openVn">VNode</gj-button>
 </template>
 
 <script>
@@ -45,10 +45,10 @@
 
 ```html
 <template>
-  <jy-button type="primary" secondary @click="open1">默认</jy-button>
-  <jy-button type="success" secondary @click="open2">成功</jy-button>
-  <jy-button type="warning" secondary @click="open3">警告</jy-button>
-  <jy-button type="danger" secondary @click="open4">错误</jy-button>
+  <gj-button type="primary" secondary @click="open1">默认</gj-button>
+  <gj-button type="success" secondary @click="open2">成功</gj-button>
+  <gj-button type="warning" secondary @click="open3">警告</gj-button>
+  <gj-button type="danger" secondary @click="open4">错误</gj-button>
 </template>
 
 <script>
@@ -89,7 +89,7 @@
 
 ```html
 <template>
-  <jy-button type="primary" secondary @click="open">副标题</jy-button>
+  <gj-button type="primary" secondary @click="open">副标题</gj-button>
 </template>
 
 <script>
@@ -123,7 +123,7 @@
 
 ```html
 <template>
-  <jy-button type="primary" secondary @click="open">提醒文字描述</jy-button>
+  <gj-button type="primary" secondary @click="open">提醒文字描述</gj-button>
 </template>
 
 <script>
@@ -152,10 +152,10 @@
 
 ```html
 <template>
-  <jy-button type="primary" secondary @click="open1">消息</jy-button>
-  <jy-button type="success" secondary @click="open2">成功</jy-button>
-  <jy-button type="warning" secondary @click="open3">警告</jy-button>
-  <jy-button type="danger" secondary @click="open4">错误</jy-button>
+  <gj-button type="primary" secondary @click="open1">消息</gj-button>
+  <gj-button type="success" secondary @click="open2">成功</gj-button>
+  <gj-button type="warning" secondary @click="open3">警告</gj-button>
+  <gj-button type="danger" secondary @click="open4">错误</gj-button>
 </template>
 
 <script>
@@ -206,12 +206,12 @@
 
 ```html
 <template>
-  <jy-button type="primary" secondary @click="open1">消息</jy-button>
-  <jy-button type="success" secondary @click="open2">成功</jy-button>
-  <jy-button type="warning" secondary @click="open3">警告</jy-button>
-  <jy-button type="danger" secondary @click="open4">错误</jy-button>
-  <jy-button @click="open5">无Icon</jy-button>
-  <jy-button type="primary" secondary @click="open6">loading</jy-button>
+  <gj-button type="primary" secondary @click="open1">消息</gj-button>
+  <gj-button type="success" secondary @click="open2">成功</gj-button>
+  <gj-button type="warning" secondary @click="open3">警告</gj-button>
+  <gj-button type="danger" secondary @click="open4">错误</gj-button>
+  <gj-button @click="open5">无Icon</gj-button>
+  <gj-button type="primary" secondary @click="open6">loading</gj-button>
 </template>
 
 <script>
@@ -282,7 +282,7 @@
 
 ```html
 <template>
-  <jy-button :plain="true" @click="openCenter">文字居中</jy-button>
+  <gj-button :plain="true" @click="openCenter">文字居中</gj-button>
 </template>
 
 <script>
@@ -309,7 +309,7 @@
 
 ```html
 <template>
-  <jy-button :plain="true" @click="openHTML">使用 HTML 片段</jy-button>
+  <gj-button :plain="true" @click="openHTML">使用 HTML 片段</gj-button>
 </template>
 
 <script>

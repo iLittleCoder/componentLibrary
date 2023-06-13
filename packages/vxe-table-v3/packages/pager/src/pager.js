@@ -91,7 +91,7 @@ export default {
     if ($scopedSlots.left) {
       childNodes.push(
         h('span', {
-          class: 'jy-table-pager--left-wrapper'
+          class: 'gj-table-pager--left-wrapper'
         }, $scopedSlots.left.call(this, { $grid: $xegrid }))
       )
     }
@@ -101,12 +101,12 @@ export default {
     if ($scopedSlots.right) {
       childNodes.push(
         h('span', {
-          class: 'jy-table-pager--right-wrapper'
+          class: 'gj-table-pager--right-wrapper'
         }, $scopedSlots.right.call(this, { $grid: $xegrid }))
       )
     }
     return h('div', {
-      class: ['jy-table-pager', className ? (XEUtils.isFunction(className) ? className({ $pager: this }) : className) : '', {
+      class: ['gj-table-pager', className ? (XEUtils.isFunction(className) ? className({ $pager: this }) : className) : '', {
         [`size--${vSize}`]: vSize,
         [`align--${align}`]: align,
         'is--border': this.border,
@@ -117,7 +117,7 @@ export default {
       }]
     }, [
       h('div', {
-        class: 'jy-table-pager--wrapper'
+        class: 'gj-table-pager--wrapper'
       }, childNodes)
     ])
   },
@@ -125,7 +125,7 @@ export default {
     // 上一页
     renderPrevPage (h) {
       return h('button', {
-        class: ['jy-table-pager--prev-btn', {
+        class: ['gj-table-pager--prev-btn', {
           'is--disabled': this.currentPage <= 1
         }],
         attrs: {
@@ -137,14 +137,14 @@ export default {
         }
       }, [
         h('i', {
-          class: ['jy-table-pager--btn-icon', this.iconPrevPage || GlobalConfig.icon.PAGER_PREV_PAGE]
+          class: ['gj-table-pager--btn-icon', this.iconPrevPage || GlobalConfig.icon.PAGER_PREV_PAGE]
         })
       ])
     },
     // 向上翻页
     renderPrevJump (h, tagName) {
       return h(tagName || 'button', {
-        class: ['jy-table-pager--jump-prev', {
+        class: ['gj-table-pager--jump-prev', {
           'is--fixed': !tagName,
           'is--disabled': this.currentPage <= 1
         }],
@@ -157,29 +157,29 @@ export default {
         }
       }, [
         tagName ? h('i', {
-          class: ['jy-table-pager--jump-more-icon', this.iconJumpMore || GlobalConfig.icon.PAGER_JUMP_MORE]
+          class: ['gj-table-pager--jump-more-icon', this.iconJumpMore || GlobalConfig.icon.PAGER_JUMP_MORE]
         }) : null,
         h('i', {
-          class: ['jy-table-pager--jump-icon', this.iconJumpPrev || GlobalConfig.icon.PAGER_JUMP_PREV]
+          class: ['gj-table-pager--jump-icon', this.iconJumpPrev || GlobalConfig.icon.PAGER_JUMP_PREV]
         })
       ])
     },
     // number
     renderNumber (h) {
       return h('span', {
-        class: 'jy-table-pager--btn-wrapper'
+        class: 'gj-table-pager--btn-wrapper'
       }, this.renderPageBtn(h))
     },
     // jumpNumber
     renderJumpNumber (h) {
       return h('span', {
-        class: 'jy-table-pager--btn-wrapper'
+        class: 'gj-table-pager--btn-wrapper'
       }, this.renderPageBtn(h, true))
     },
     // 向下翻页
     renderNextJump (h, tagName) {
       return h(tagName || 'button', {
-        class: ['jy-table-pager--jump-next', {
+        class: ['gj-table-pager--jump-next', {
           'is--fixed': !tagName,
           'is--disabled': this.currentPage >= this.pageCount
         }],
@@ -192,17 +192,17 @@ export default {
         }
       }, [
         tagName ? h('i', {
-          class: ['jy-table-pager--jump-more-icon', this.iconJumpMore || GlobalConfig.icon.PAGER_JUMP_MORE]
+          class: ['gj-table-pager--jump-more-icon', this.iconJumpMore || GlobalConfig.icon.PAGER_JUMP_MORE]
         }) : null,
         h('i', {
-          class: ['jy-table-pager--jump-icon', this.iconJumpNext || GlobalConfig.icon.PAGER_JUMP_NEXT]
+          class: ['gj-table-pager--jump-icon', this.iconJumpNext || GlobalConfig.icon.PAGER_JUMP_NEXT]
         })
       ])
     },
     // 下一页
     renderNextPage (h) {
       return h('button', {
-        class: ['jy-table-pager--next-btn', {
+        class: ['gj-table-pager--next-btn', {
           'is--disabled': this.currentPage >= this.pageCount
         }],
         attrs: {
@@ -214,14 +214,14 @@ export default {
         }
       }, [
         h('i', {
-          class: ['jy-table-pager--btn-icon', this.iconNextPage || GlobalConfig.icon.PAGER_NEXT_PAGE]
+          class: ['gj-table-pager--btn-icon', this.iconNextPage || GlobalConfig.icon.PAGER_NEXT_PAGE]
         })
       ])
     },
     // sizes
     renderSizes (h) {
       return h('vxe-select', {
-        class: 'jy-table-pager--sizes',
+        class: 'gj-table-pager--sizes',
         props: {
           value: this.pageSize,
           placement: 'top',
@@ -242,13 +242,13 @@ export default {
     // Jump
     renderJump (h, isFull) {
       return h('span', {
-        class: 'jy-table-pager--jump'
+        class: 'gj-table-pager--jump'
       }, [
         isFull ? h('span', {
-          class: 'jy-table-pager--goto-text'
+          class: 'gj-table-pager--goto-text'
         }, GlobalConfig.i18n('vxe.pager.goto')) : null,
         h('input', {
-          class: 'jy-table-pager--goto',
+          class: 'gj-table-pager--goto',
           domProps: {
             value: this.inpCurrPage
           },
@@ -263,17 +263,17 @@ export default {
           }
         }),
         isFull ? h('span', {
-          class: 'jy-table-pager--classifier-text'
+          class: 'gj-table-pager--classifier-text'
         }, GlobalConfig.i18n('vxe.pager.pageClassifier')) : null
       ])
     },
     // PageCount
     renderPageCount (h) {
       return h('span', {
-        class: 'jy-table-pager--count'
+        class: 'gj-table-pager--count'
       }, [
         h('span', {
-          class: 'jy-table-pager--separator'
+          class: 'gj-table-pager--separator'
         }),
         h('span', this.pageCount)
       ])
@@ -281,7 +281,7 @@ export default {
     // total
     renderTotal (h) {
       return h('span', {
-        class: 'jy-table-pager--total'
+        class: 'gj-table-pager--total'
       }, GlobalConfig.i18n('vxe.pager.total', [this.total]))
     },
     // number
@@ -302,7 +302,7 @@ export default {
       if (showJump && isLt) {
         nums.push(
           h('button', {
-            class: 'jy-table-pager--num-btn',
+            class: 'gj-table-pager--num-btn',
             attrs: {
               type: 'button'
             },
@@ -318,7 +318,7 @@ export default {
         if (number <= pageCount) {
           nums.push(
             h('button', {
-              class: ['jy-table-pager--num-btn', {
+              class: ['gj-table-pager--num-btn', {
                 'is--active': currentPage === number
               }],
               attrs: {
@@ -336,7 +336,7 @@ export default {
         nums.push(
           this.renderNextJump(h, 'button'),
           h('button', {
-            class: 'jy-table-pager--num-btn',
+            class: 'gj-table-pager--num-btn',
             attrs: {
               type: 'button'
             },

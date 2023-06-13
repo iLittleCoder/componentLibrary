@@ -6,43 +6,43 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 :::demo `trigger`属性用于设置何时触发 Popover，支持四种触发方式：`hover`，`click`，`focus` 和 `manual`。对于触发 Popover 的元素，有两种写法：使用 `slot="reference"` 的具名插槽，或使用自定义指令`v-popover`指向 Popover 的索引`ref`。
 ```html
 <template>
-  <jy-popover
+  <gj-popover
     placement="top-start"
     title="标题"
     width="200"
     trigger="hover"
     content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-    <jy-button slot="reference">hover 激活</jy-button>
-  </jy-popover>
+    <gj-button slot="reference">hover 激活</gj-button>
+  </gj-popover>
 
-  <jy-popover
+  <gj-popover
     placement="bottom"
     title="标题"
     width="200"
     trigger="click"
     content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-    <jy-button slot="reference">click 激活</jy-button>
-  </jy-popover>
+    <gj-button slot="reference">click 激活</gj-button>
+  </gj-popover>
 
-  <jy-popover
+  <gj-popover
     ref="popover"
     placement="right"
     title="标题"
     width="200"
     trigger="focus"
     content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-  </jy-popover>
-  <jy-button v-popover:popover>focus 激活</jy-button>
+  </gj-popover>
+  <gj-button v-popover:popover>focus 激活</gj-button>
 
-  <jy-popover
+  <gj-popover
     placement="bottom"
     title="标题"
     width="200"
     trigger="manual"
     content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。"
     v-model="visible">
-    <jy-button slot="reference" @click="visible = !visible">手动激活</jy-button>
-  </jy-popover>
+    <gj-button slot="reference" @click="visible = !visible">手动激活</gj-button>
+  </gj-popover>
 </template>
 
 <script>
@@ -63,17 +63,17 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 
 :::demo 利用分发取代`content`属性
 ```html
-<jy-popover
+<gj-popover
   placement="right"
   width="360"
   trigger="click">
-  <jy-table :data="gridData">
-    <jy-column width="85" field="date" title="日期"></jy-column>
-    <jy-column width="60" field="name" title="姓名"></jy-column>
-    <jy-column width="190" field="address" title="地址"></jy-column>
-  </jy-table>
-  <jy-button slot="reference">click 激活</jy-button>
-</jy-popover>
+  <gj-table :data="gridData">
+    <gj-column width="85" field="date" title="日期"></gj-column>
+    <gj-column width="60" field="name" title="姓名"></gj-column>
+    <gj-column width="190" field="address" title="地址"></gj-column>
+  </gj-table>
+  <gj-button slot="reference">click 激活</gj-button>
+</gj-popover>
 
 <script>
   export default {
@@ -109,17 +109,17 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 
 :::demo
 ```html
-<jy-popover
+<gj-popover
   placement="top"
   width="160"
   v-model="visible">
   <div>这是一段内容这是一段内容确定删除吗？</div>
   <div style="text-align: right; margin-top: 12px;">
-    <jy-button size="mini" type="primary" secondary @click="visible = false">取消</jy-button>
-    <jy-button size="mini" type="primary"  @click="visible = false">确定</jy-button>
+    <gj-button size="mini" type="primary" secondary @click="visible = false">取消</gj-button>
+    <gj-button size="mini" type="primary"  @click="visible = false">确定</gj-button>
   </div>
-  <jy-button slot="reference">删除</jy-button>
-</jy-popover>
+  <gj-button slot="reference">删除</gj-button>
+</gj-popover>
 
 <script>
   export default {

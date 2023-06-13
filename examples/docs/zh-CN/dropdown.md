@@ -9,18 +9,18 @@
 :::demo 通过组件`slot`来设置下拉触发的元素以及需要通过具名`slot`为`dropdown` 来设置下拉菜单。默认情况下，下拉按钮只要`hover`即可，无需点击也会显示下拉菜单。
 
 ```html
-<jy-dropdown trigger="click">
-  <jy-button class="el-dropdown-link">
+<gj-dropdown trigger="click">
+  <gj-button class="el-dropdown-link">
     下拉菜单<i class="Gildata-downarrow el-icon--right"></i>
-  </jy-button>
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item>恒生电子</jy-dropdown-item>
-    <jy-dropdown-item>比亚迪</jy-dropdown-item>
-    <jy-dropdown-item>阿里巴巴</jy-dropdown-item>
-    <jy-dropdown-item disabled>平安银行</jy-dropdown-item>
-    <jy-dropdown-item divided>贵州茅台</jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
+  </gj-button>
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item>恒生电子</gj-dropdown-item>
+    <gj-dropdown-item>比亚迪</gj-dropdown-item>
+    <gj-dropdown-item>阿里巴巴</gj-dropdown-item>
+    <gj-dropdown-item disabled>平安银行</gj-dropdown-item>
+    <gj-dropdown-item divided>贵州茅台</gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
 ```
 :::
 
@@ -31,28 +31,28 @@
 :::demo 设置`split-button`属性来让触发下拉元素呈现为按钮组，左边是功能按钮，右边是触发下拉菜单的按钮，设置为`true`即可。
 
 ```html
-<jy-dropdown>
-  <jy-button type="primary">
+<gj-dropdown>
+  <gj-button type="primary">
     更多菜单<i class="Gildata-downarrow el-icon--right"></i>
-  </jy-button>
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item>恒生电子</jy-dropdown-item>
-    <jy-dropdown-item>比亚迪</jy-dropdown-item>
-    <jy-dropdown-item>阿里巴巴</jy-dropdown-item>
-    <jy-dropdown-item>平安银行</jy-dropdown-item>
-    <jy-dropdown-item>贵州茅台</jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
-<jy-dropdown split-button type="primary" @click="handleClick">
+  </gj-button>
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item>恒生电子</gj-dropdown-item>
+    <gj-dropdown-item>比亚迪</gj-dropdown-item>
+    <gj-dropdown-item>阿里巴巴</gj-dropdown-item>
+    <gj-dropdown-item>平安银行</gj-dropdown-item>
+    <gj-dropdown-item>贵州茅台</gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
+<gj-dropdown split-button type="primary" @click="handleClick">
   更多菜单
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item>恒生电子</jy-dropdown-item>
-    <jy-dropdown-item>比亚迪</jy-dropdown-item>
-    <jy-dropdown-item>阿里巴巴</jy-dropdown-item>
-    <jy-dropdown-item>平安银行</jy-dropdown-item>
-    <jy-dropdown-item>贵州茅台</jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item>恒生电子</gj-dropdown-item>
+    <gj-dropdown-item>比亚迪</gj-dropdown-item>
+    <gj-dropdown-item>阿里巴巴</gj-dropdown-item>
+    <gj-dropdown-item>平安银行</gj-dropdown-item>
+    <gj-dropdown-item>贵州茅台</gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
 
 <script>
   export default {
@@ -73,38 +73,38 @@
 
 :::demo 在`trigger`属性设置为`click`即可。
 ```html
-<jy-row class="block-col-2">
-  <jy-col :span="12">
+<gj-row class="block-col-2">
+  <gj-col :span="12">
     <span class="demonstration">hover 激活</span>
-    <jy-dropdown>
-      <jy-button class="el-dropdown-link">
+    <gj-dropdown>
+      <gj-button class="el-dropdown-link">
         下拉菜单<i class="Gildata-downarrow el-icon--right"></i>
-      </jy-button>
-      <jy-dropdown-menu slot="dropdown">
-        <jy-dropdown-item icon="Gildata-star1">恒生电子</jy-dropdown-item>
-        <jy-dropdown-item icon="Gildata-praise">比亚迪</jy-dropdown-item>
-        <jy-dropdown-item icon="Gildata-notice">阿里巴巴</jy-dropdown-item>
-        <jy-dropdown-item icon="Gildata-tick">平安银行</jy-dropdown-item>
-        <jy-dropdown-item icon="Gildata-help">贵州茅台</jy-dropdown-item>
-      </jy-dropdown-menu>
-    </jy-dropdown>
-  </jy-col>
-  <jy-col :span="12">
+      </gj-button>
+      <gj-dropdown-menu slot="dropdown">
+        <gj-dropdown-item icon="Gildata-star1">恒生电子</gj-dropdown-item>
+        <gj-dropdown-item icon="Gildata-praise">比亚迪</gj-dropdown-item>
+        <gj-dropdown-item icon="Gildata-notice">阿里巴巴</gj-dropdown-item>
+        <gj-dropdown-item icon="Gildata-tick">平安银行</gj-dropdown-item>
+        <gj-dropdown-item icon="Gildata-help">贵州茅台</gj-dropdown-item>
+      </gj-dropdown-menu>
+    </gj-dropdown>
+  </gj-col>
+  <gj-col :span="12">
     <span class="demonstration">click 激活</span>
-    <jy-dropdown trigger="click">
-      <jy-button class="el-dropdown-link">
+    <gj-dropdown trigger="click">
+      <gj-button class="el-dropdown-link">
         下拉菜单<i class="Gildata-downarrow el-icon--right"></i>
-      </jy-button>
-      <jy-dropdown-menu slot="dropdown">
-        <jy-dropdown-item icon="Gildata-piechart">恒生电子</jy-dropdown-item>
-        <jy-dropdown-item icon="Gildata-linechart2">比亚迪</jy-dropdown-item>
-        <jy-dropdown-item icon="Gildata-areachart">阿里巴巴</jy-dropdown-item>
-        <jy-dropdown-item icon="Gildata-linechart1">平安银行</jy-dropdown-item>
-        <jy-dropdown-item icon="Gildata-gauge">贵州茅台</jy-dropdown-item>
-      </jy-dropdown-menu>
-    </jy-dropdown>
-  </jy-col>
-</jy-row>
+      </gj-button>
+      <gj-dropdown-menu slot="dropdown">
+        <gj-dropdown-item icon="Gildata-piechart">恒生电子</gj-dropdown-item>
+        <gj-dropdown-item icon="Gildata-linechart2">比亚迪</gj-dropdown-item>
+        <gj-dropdown-item icon="Gildata-areachart">阿里巴巴</gj-dropdown-item>
+        <gj-dropdown-item icon="Gildata-linechart1">平安银行</gj-dropdown-item>
+        <gj-dropdown-item icon="Gildata-gauge">贵州茅台</gj-dropdown-item>
+      </gj-dropdown-menu>
+    </gj-dropdown>
+  </gj-col>
+</gj-row>
 ```
 :::
 
@@ -114,18 +114,18 @@
 
 :::demo 下拉菜单默认在点击菜单项后会被隐藏，将`hide-on-click`属性默认为`false`可以关闭此功能。
 ```html
-<jy-dropdown :hide-on-click="false">
-  <jy-button class="el-dropdown-link">
+<gj-dropdown :hide-on-click="false">
+  <gj-button class="el-dropdown-link">
     下拉菜单<i class="Gildata-downarrow el-icon--right"></i>
-  </jy-button>
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item>恒生电子</jy-dropdown-item>
-    <jy-dropdown-item>比亚迪</jy-dropdown-item>
-    <jy-dropdown-item>阿里巴巴</jy-dropdown-item>
-    <jy-dropdown-item disabled>平安银行</jy-dropdown-item>
-    <jy-dropdown-item divided>贵州茅台</jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
+  </gj-button>
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item>恒生电子</gj-dropdown-item>
+    <gj-dropdown-item>比亚迪</gj-dropdown-item>
+    <gj-dropdown-item>阿里巴巴</gj-dropdown-item>
+    <gj-dropdown-item disabled>平安银行</gj-dropdown-item>
+    <gj-dropdown-item divided>贵州茅台</gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
 
 ```
 :::
@@ -136,18 +136,18 @@
 
 :::demo
 ```html
-<jy-dropdown @command="handleCommand">
-  <jy-button class="el-dropdown-link">
+<gj-dropdown @command="handleCommand">
+  <gj-button class="el-dropdown-link">
     下拉菜单<i class="Gildata-downarrow el-icon--right"></i>
-  </jy-button>
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item command="a">恒生电子</jy-dropdown-item>
-    <jy-dropdown-item command="b">比亚迪</jy-dropdown-item>
-    <jy-dropdown-item command="c">阿里巴巴</jy-dropdown-item>
-    <jy-dropdown-item command="d" disabled>平安银行</jy-dropdown-item>
-    <jy-dropdown-item command="e" divided>贵州茅台</jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
+  </gj-button>
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item command="a">恒生电子</gj-dropdown-item>
+    <gj-dropdown-item command="b">比亚迪</gj-dropdown-item>
+    <gj-dropdown-item command="c">阿里巴巴</gj-dropdown-item>
+    <gj-dropdown-item command="d" disabled>平安银行</gj-dropdown-item>
+    <gj-dropdown-item command="e" divided>贵州茅台</gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
 
 <script>
   export default {
@@ -168,36 +168,36 @@ Dropdown 组件提供除了默认值以外的三种尺寸，可以在不同场�
 :::demo 额外的尺寸：`medium`、`small`、`mini`，通过设置`size`属性来配置它们。
 
 ```html
-<jy-dropdown size="medium" split-button type="primary">
+<gj-dropdown size="medium" split-button type="primary">
   中等尺寸
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item>恒生电子</jy-dropdown-item>
-    <jy-dropdown-item>比亚迪</jy-dropdown-item>
-    <jy-dropdown-item>阿里巴巴</jy-dropdown-item>
-    <jy-dropdown-item>平安银行</jy-dropdown-item>
-    <jy-dropdown-item>贵州茅台</jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
-<jy-dropdown split-button type="primary">
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item>恒生电子</gj-dropdown-item>
+    <gj-dropdown-item>比亚迪</gj-dropdown-item>
+    <gj-dropdown-item>阿里巴巴</gj-dropdown-item>
+    <gj-dropdown-item>平安银行</gj-dropdown-item>
+    <gj-dropdown-item>贵州茅台</gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
+<gj-dropdown split-button type="primary">
   默认尺寸
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item>恒生电子</jy-dropdown-item>
-    <jy-dropdown-item>比亚迪</jy-dropdown-item>
-    <jy-dropdown-item>阿里巴巴</jy-dropdown-item>
-    <jy-dropdown-item>平安银行</jy-dropdown-item>
-    <jy-dropdown-item>贵州茅台</jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
-<jy-dropdown size="mini" split-button type="primary">
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item>恒生电子</gj-dropdown-item>
+    <gj-dropdown-item>比亚迪</gj-dropdown-item>
+    <gj-dropdown-item>阿里巴巴</gj-dropdown-item>
+    <gj-dropdown-item>平安银行</gj-dropdown-item>
+    <gj-dropdown-item>贵州茅台</gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
+<gj-dropdown size="mini" split-button type="primary">
   超小尺寸
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item>恒生电子</jy-dropdown-item>
-    <jy-dropdown-item>狮子头</jy-dropdown-item>
-    <jy-dropdown-item>阿里巴巴</jy-dropdown-item>
-    <jy-dropdown-item>平安银行</jy-dropdown-item>
-    <jy-dropdown-item>贵州茅台</jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item>恒生电子</gj-dropdown-item>
+    <gj-dropdown-item>狮子头</gj-dropdown-item>
+    <gj-dropdown-item>阿里巴巴</gj-dropdown-item>
+    <gj-dropdown-item>平安银行</gj-dropdown-item>
+    <gj-dropdown-item>贵州茅台</gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
 ```
 :::
 
@@ -220,7 +220,7 @@ Dropdown 组件提供除了默认值以外的三种尺寸，可以在不同场�
 | Name | 说明 |
 |------|--------|
 | — | 触发下拉列表显示的元素。 注意： 必须是一个元素或者或者组件  |
-| dropdown | 下拉列表，通常是 `<jy-dropdown-menu>` 组件     |
+| dropdown | 下拉列表，通常是 `<gj-dropdown-menu>` 组件     |
 
 ### Dropdown Events
 | 事件名称      | 说明    | 回调参数      |

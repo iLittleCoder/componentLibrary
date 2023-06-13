@@ -5,20 +5,20 @@
       <span class="red">（注：如果设置为手动模式则不会自动关闭激活状态，需要手动调用 clearActived 关闭编辑状态）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       keep-source
       ref="xTable"
       :data="tableData"
       :edit-config="{ trigger: 'manual', mode: 'row', autoClear: false}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', immediate: true}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: 'input', immediate: true, attrs: { type: 'date' }}"></jy-column>
-      <jy-column field="num" title="Num" :edit-render="{name: 'input', immediate: true, attrs: {type: 'number'}}"></jy-column>
-      <jy-column field="address" title="Address" :edit-render="{name: 'textarea'}"></jy-column>
-      <jy-column title="操作">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', immediate: true}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: 'input', immediate: true, attrs: { type: 'date' }}"></gj-column>
+      <gj-column field="num" title="Num" :edit-render="{name: 'input', immediate: true, attrs: {type: 'number'}}"></gj-column>
+      <gj-column field="address" title="Address" :edit-render="{name: 'textarea'}"></gj-column>
+      <gj-column title="操作">
         <template #default="{ row }">
           <template v-if="$refs.xTable.isActiveByRow(row)">
             <vxe-button @click="saveRowEvent(row)">保存</vxe-button>
@@ -28,8 +28,8 @@
             <vxe-button @click="editRowEvent(row)">编辑</vxe-button>
           </template>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -58,20 +58,20 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           keep-source
           ref="xTable"
           :data="tableData"
           :edit-config="{ trigger: 'manual', mode: 'row', autoClear: false}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', immediate: true}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: 'input', immediate: true, attrs: { type: 'date' }}"></jy-column>
-          <jy-column field="num" title="Num" :edit-render="{name: 'input', immediate: true, attrs: {type: 'number'}}"></jy-column>
-          <jy-column field="address" title="Address" :edit-render="{name: 'textarea'}"></jy-column>
-          <jy-column title="操作">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', immediate: true}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: 'select', options: sexList}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: 'input', immediate: true, attrs: { type: 'date' }}"></gj-column>
+          <gj-column field="num" title="Num" :edit-render="{name: 'input', immediate: true, attrs: {type: 'number'}}"></gj-column>
+          <gj-column field="address" title="Address" :edit-render="{name: 'textarea'}"></gj-column>
+          <gj-column title="操作">
             <template #default="{ row }">
               <template v-if="$refs.xTable.isActiveByRow(row)">
                 <vxe-button @click="saveRowEvent(row)">保存</vxe-button>
@@ -81,8 +81,8 @@ export default {
                 <vxe-button @click="editRowEvent(row)">编辑</vxe-button>
               </template>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         export default {

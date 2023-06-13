@@ -19,7 +19,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -32,28 +32,28 @@
       :export-config="{}"
       :loading="loading"
       :checkbox-config="{checkField: 'checked'}">
-      <jy-column type="checkbox" width="60" fixed="left"></jy-column>
-      <jy-column type="seq" width="100" fixed="left"></jy-column>
-      <jy-column field="name" title="Name" sortable width="200" :filters="[{label: '50',value:50},{label: '120',value:120},{label: '220',value:220}]" :filter-method="filterNameMethod"></jy-column>
-      <jy-column field="sex" title="Sex" width="200"></jy-column>
-      <jy-column field="rate" title="Rate" width="200"></jy-column>
-      <jy-column field="region" title="Region" width="200"></jy-column>
-      <jy-column field="time" title="Time" width="200"></jy-column>
-      <jy-column field="address" title="Address" width="300"></jy-column>
-      <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-      <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-      <jy-column field="attr1" title="Attr1" width="200"></jy-column>
-      <jy-column field="attr2" title="Attr2" width="200"></jy-column>
-      <jy-column field="attr3" title="Attr3" width="200"></jy-column>
-      <jy-column field="attr4" title="Attr4" width="200"></jy-column>
-      <jy-column field="attr5" title="Attr5" width="200"></jy-column>
-      <jy-column field="attr6" title="Attr6" width="200"></jy-column>
-      <jy-column field="attr7" title="Attr7" width="200"></jy-column>
-      <jy-column field="attr8" title="Attr8" width="200"></jy-column>
-      <jy-column field="attr9" title="Attr9" width="200"></jy-column>
-      <jy-column field="attr10" title="Attr10" width="200"></jy-column>
-      <jy-column field="age" title="Age" width="200" fixed="right"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60" fixed="left"></gj-column>
+      <gj-column type="seq" width="100" fixed="left"></gj-column>
+      <gj-column field="name" title="Name" sortable width="200" :filters="[{label: '50',value:50},{label: '120',value:120},{label: '220',value:220}]" :filter-method="filterNameMethod"></gj-column>
+      <gj-column field="sex" title="Sex" width="200"></gj-column>
+      <gj-column field="rate" title="Rate" width="200"></gj-column>
+      <gj-column field="region" title="Region" width="200"></gj-column>
+      <gj-column field="time" title="Time" width="200"></gj-column>
+      <gj-column field="address" title="Address" width="300"></gj-column>
+      <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+      <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+      <gj-column field="attr1" title="Attr1" width="200"></gj-column>
+      <gj-column field="attr2" title="Attr2" width="200"></gj-column>
+      <gj-column field="attr3" title="Attr3" width="200"></gj-column>
+      <gj-column field="attr4" title="Attr4" width="200"></gj-column>
+      <gj-column field="attr5" title="Attr5" width="200"></gj-column>
+      <gj-column field="attr6" title="Attr6" width="200"></gj-column>
+      <gj-column field="attr7" title="Attr7" width="200"></gj-column>
+      <gj-column field="attr8" title="Attr8" width="200"></gj-column>
+      <gj-column field="attr9" title="Attr9" width="200"></gj-column>
+      <gj-column field="attr10" title="Attr10" width="200"></gj-column>
+      <gj-column field="age" title="Age" width="200" fixed="right"></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -97,7 +97,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -110,28 +110,28 @@ export default {
           :export-config="{}"
           :loading="loading"
           :checkbox-config="{checkField: 'checked'}">
-          <jy-column type="checkbox" width="60" fixed="left"></jy-column>
-          <jy-column type="seq" width="100" fixed="left"></jy-column>
-          <jy-column field="name" title="Name" sortable width="200"></jy-column>
-          <jy-column field="sex" title="Sex" width="200"></jy-column>
-          <jy-column field="rate" title="Rate" width="200"></jy-column>
-          <jy-column field="region" title="Region" width="200"></jy-column>
-          <jy-column field="time" title="Time" width="200"></jy-column>
-          <jy-column field="address" title="Address" width="300"></jy-column>
-          <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-          <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-          <jy-column field="attr1" title="Attr1" width="200"></jy-column>
-          <jy-column field="attr2" title="Attr2" width="200"></jy-column>
-          <jy-column field="attr3" title="Attr3" width="200"></jy-column>
-          <jy-column field="attr4" title="Attr4" width="200"></jy-column>
-          <jy-column field="attr5" title="Attr5" width="200"></jy-column>
-          <jy-column field="attr6" title="Attr6" width="200"></jy-column>
-          <jy-column field="attr7" title="Attr7" width="200"></jy-column>
-          <jy-column field="attr8" title="Attr8" width="200"></jy-column>
-          <jy-column field="attr9" title="Attr9" width="200"></jy-column>
-          <jy-column field="attr10" title="Attr10" width="200"></jy-column>
-          <jy-column field="age" title="Age" width="200" fixed="right"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60" fixed="left"></gj-column>
+          <gj-column type="seq" width="100" fixed="left"></gj-column>
+          <gj-column field="name" title="Name" sortable width="200"></gj-column>
+          <gj-column field="sex" title="Sex" width="200"></gj-column>
+          <gj-column field="rate" title="Rate" width="200"></gj-column>
+          <gj-column field="region" title="Region" width="200"></gj-column>
+          <gj-column field="time" title="Time" width="200"></gj-column>
+          <gj-column field="address" title="Address" width="300"></gj-column>
+          <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+          <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+          <gj-column field="attr1" title="Attr1" width="200"></gj-column>
+          <gj-column field="attr2" title="Attr2" width="200"></gj-column>
+          <gj-column field="attr3" title="Attr3" width="200"></gj-column>
+          <gj-column field="attr4" title="Attr4" width="200"></gj-column>
+          <gj-column field="attr5" title="Attr5" width="200"></gj-column>
+          <gj-column field="attr6" title="Attr6" width="200"></gj-column>
+          <gj-column field="attr7" title="Attr7" width="200"></gj-column>
+          <gj-column field="attr8" title="Attr8" width="200"></gj-column>
+          <gj-column field="attr9" title="Attr9" width="200"></gj-column>
+          <gj-column field="attr10" title="Attr10" width="200"></gj-column>
+          <gj-column field="age" title="Age" width="200" fixed="right"></gj-column>
+        </gj-table>
         `,
         `
         export default {

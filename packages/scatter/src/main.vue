@@ -1,6 +1,6 @@
 <template>
-  <div class="jy-scatter">
-    <div class="jy-scatter--chart"
+  <div class="gj-scatter">
+    <div class="gj-scatter--chart"
          :style="{ width: width, height: height}"
          ref="dotsChart"
          id="dots" />
@@ -17,7 +17,7 @@
   };
   let colorData = {};
   export default {
-    name: 'JyScatter',
+    name: 'GjScatter',
     data() {
       return {
         myChart: null,

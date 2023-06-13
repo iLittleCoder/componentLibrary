@@ -1,22 +1,22 @@
 <template>
-  <div class="jy-calendar">
-    <div class="jy-calendar__header">
-      <div class="jy-calendar__header-left">
+  <div class="gj-calendar">
+    <div class="gj-calendar__header">
+      <div class="gj-calendar__header-left">
         <span
-          class=" Gildata-leftarrow jy-calendar__header-prev"
+          class=" Gildata-leftarrow gj-calendar__header-prev"
           v-if="validatedRange.length === 0"
           @click="selectDate('prev-month')"
         >
         </span>
-        <span class="jy-calendar__title"> {{ i18nDate }} </span>
+        <span class="gj-calendar__title"> {{ i18nDate }} </span>
         <span
-          class=" Gildata-rightarrow jy-calendar__header-next"
+          class=" Gildata-rightarrow gj-calendar__header-next"
           v-if="validatedRange.length === 0"
           @click="selectDate('next-month')"
         >
         </span>
         <span
-          class="jy-calendar__header-today"
+          class="gj-calendar__header-today"
           v-if="validatedRange.length === 0"
           @click="selectDate('today')"
         >
@@ -24,31 +24,31 @@
         </span>
       </div>
 
-      <div class="jy-calendar__button-group" v-if="validatedRange.length === 0">
-        <jy-button-group>
-          <jy-button
+      <div class="gj-calendar__button-group" v-if="validatedRange.length === 0">
+        <gj-button-group>
+          <gj-button
             :class="[
-              selMonYear === 'month' ? 'jy-calendar__button-active' : ''
+              selMonYear === 'month' ? 'gj-calendar__button-active' : ''
             ]"
             :type="selMonYear === 'month' ? 'primary' : 'plain'"
             :secondary="selMonYear === 'month'"
             @click="selectMonthOrYear('month')"
           >
             月
-          </jy-button>
-          <jy-button
-            :class="[selMonYear === 'year' ? 'jy-calendar__button-active' : '']"
+          </gj-button>
+          <gj-button
+            :class="[selMonYear === 'year' ? 'gj-calendar__button-active' : '']"
             :type="selMonYear === 'year' ? 'primary' : 'plain'"
             :secondary="selMonYear === 'year'"
             @click="selectMonthOrYear('year')"
           >
             {{ t('el.datepicker.year') }}
-          </jy-button>
-        </jy-button-group>
+          </gj-button>
+        </gj-button-group>
       </div>
     </div>
     <div
-      class="jy-calendar__body"
+      class="gj-calendar__body"
       v-if="validatedRange.length === 0"
       key="no-range"
     >
@@ -73,7 +73,7 @@
         </year-table>
       </div>
     </div>
-    <div v-else class="jy-calendar__body" key="has-range">
+    <div v-else class="gj-calendar__body" key="has-range">
       <date-table
         v-for="(range, index) in validatedRange"
         :key="index"
@@ -91,8 +91,8 @@
 <script>
 import Locale from 'GildataDesign/src/mixins/locale';
 import fecha from 'GildataDesign/src/utils/date';
-import JyButton from 'GildataDesign/packages/button';
-import JyButtonGroup from 'GildataDesign/packages/button-group';
+import GjButton from 'GildataDesign/packages/button';
+import GjButtonGroup from 'GildataDesign/packages/button-group';
 import DateTable from './date-table';
 import YearTable from './year-table.vue';
 import { validateRangeInOneMonth } from 'GildataDesign/src/utils/date-util';
@@ -110,15 +110,15 @@ const weekDays = [
 const oneDay = 86400000;
 
 export default {
-  name: 'JyCalendar',
+  name: 'GjCalendar',
 
   mixins: [Locale],
 
   components: {
     DateTable,
     YearTable,
-    JyButton,
-    JyButtonGroup
+    GjButton,
+    GjButtonGroup
   },
 
   props: {

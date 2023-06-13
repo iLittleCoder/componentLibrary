@@ -2,17 +2,17 @@
   <div>
     <p>子路由 2</p>
 
-    <jy-table
+    <gj-table
       border
       height="400"
       :loading="loading"
       :data="tableData">
-      <jy-column type="radio" width="60"></jy-column>
-      <jy-column field="role" title="Rolw"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="amount" title="Amount"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-    </jy-table>
+      <gj-column type="radio" width="60"></gj-column>
+      <gj-column field="role" title="Rolw"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="amount" title="Amount"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+    </gj-table>
   </div>
 </template>
 

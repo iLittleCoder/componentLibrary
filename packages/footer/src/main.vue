@@ -1,14 +1,14 @@
 <template>
-  <footer class="jy-footer" :style="{ height }">
+  <footer class="gj-footer" :style="{ height }">
     <slot></slot>
   </footer>
 </template>
 
 <script>
   export default {
-    name: 'JyFooter',
+    name: 'GjFooter',
 
-    componentName: 'JyFooter',
+    componentName: 'GjFooter',
 
     props: {
       height: {

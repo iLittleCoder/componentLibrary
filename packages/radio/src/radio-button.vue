@@ -1,8 +1,8 @@
 <template>
   <label
-    class="jy-radio-button"
+    class="gj-radio-button"
     :class="[
-      size ? 'jy-radio-button--' + size : '',
+      size ? 'gj-radio-button--' + size : '',
       { 'is-active': value === label },
       { 'is-disabled': isDisabled },
       { 'is-focus': focus }
@@ -14,7 +14,7 @@
     @keydown.space.stop.prevent="value = isDisabled ? value : label"
   >
     <input
-      class="jy-radio-button__orig-radio"
+      class="gj-radio-button__orig-radio"
       :value="label"
       type="radio"
       v-model="value"
@@ -27,7 +27,7 @@
       autocomplete="off"
     />
     <span
-      class="jy-radio-button__inner"
+      class="gj-radio-button__inner"
       :style="value === label ? activeStyle : null"
       @keydown.stop
     >
@@ -40,15 +40,15 @@
 import Emitter from 'GildataDesign/src/mixins/emitter';
 
 export default {
-  name: 'JyRadioButton',
+  name: 'GjRadioButton',
 
   mixins: [Emitter],
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
@@ -75,7 +75,7 @@ export default {
     _radioGroup() {
       let parent = this.$parent;
       while (parent) {
-        if (parent.$options.componentName !== 'JyRadioGroup') {
+        if (parent.$options.componentName !== 'GjRadioGroup') {
           parent = parent.$parent;
         } else {
           return parent;
@@ -94,7 +94,7 @@ export default {
       };
     },
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
     size() {
       return (
@@ -107,7 +107,7 @@ export default {
       return (
         this.disabled ||
         this._radioGroup.disabled ||
-        (this.jyForm || {}).disabled
+        (this.GjForm || {}).disabled
       );
     },
     tabIndex() {
@@ -120,7 +120,7 @@ export default {
   methods: {
     handleChange() {
       this.$nextTick(() => {
-        this.dispatch('JyRadioGroup', 'handleChange', this.value);
+        this.dispatch('GjRadioGroup', 'handleChange', this.value);
       });
     }
   }

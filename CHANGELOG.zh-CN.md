@@ -20,7 +20,7 @@
 #### 优化
 
 - tabs 组件当只有一个的时候，active 状态异常
-- table 组件用 jy-checkbox，active 状态异常
+- table 组件用 gj-checkbox，active 状态异常
 - 页码标签去除 background 属性
 
 ### 1.2.4

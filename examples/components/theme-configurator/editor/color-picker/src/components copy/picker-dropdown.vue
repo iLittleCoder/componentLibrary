@@ -1,5 +1,5 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="doDestroy">
+  <transition name="gj-zoom-in-top" @after-leave="doDestroy">
     <div
       class="el-color-dropdown"
       v-show="showPopper">
@@ -11,29 +11,29 @@
       <predefine v-if="predefine" :color="color" :colors="predefine"></predefine>
       <div class="el-color-dropdown__btns">
         <span class="el-color-dropdown__value">
-          <jy-input
+          <gj-input
             v-model="customInput"
             @keyup.native.enter="handleConfirm"
             @blur="handleConfirm"
             :validate-event="false"
             size="mini">
-          </jy-input>
+          </gj-input>
         </span>
-        <!-- <jy-button
+        <!-- <gj-button
           size="mini"
           type="text"
           class="el-color-dropdown__link-btn"
           @click="$emit('clear')">
           {{ t('el.colorpicker.clear') }}
-        </jy-button> -->
-        <jy-button
+        </gj-button> -->
+        <gj-button
           plain
           size="mini"
           type="primary"
           class="el-color-dropdown__btn"
           @click="confirmValue">
           {{ t('el.colorpicker.confirm') }}
-        </jy-button>
+        </gj-button>
       </div>
       <color-list 
         v-if="colorList && colorList.length > 0" 

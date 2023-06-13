@@ -17,7 +17,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       keep-source
@@ -25,13 +25,13 @@
       max-height="400"
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell', icon: 'fa fa-pencil', showStatus: true}">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable :edit-render="{name: 'input', defaultValue: '默认的名字'}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-      <jy-column field="age" title="Age" sortable :edit-render="{name: 'input', defaultValue: 18}"></jy-column>
-      <jy-column field="date12" title="Date" sortable :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable :edit-render="{name: 'input', defaultValue: '默认的名字'}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+      <gj-column field="age" title="Age" sortable :edit-render="{name: 'input', defaultValue: 18}"></gj-column>
+      <gj-column field="date12" title="Date" sortable :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -70,7 +70,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           keep-source
@@ -78,13 +78,13 @@ export default {
           max-height="400"
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell', icon: 'fa fa-pencil', showStatus: true}">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable :edit-render="{name: 'input', defaultValue: '默认的名字'}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="age" title="Age" sortable :edit-render="{name: 'input', defaultValue: 18}"></jy-column>
-          <jy-column field="date12" title="Date" sortable :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable :edit-render="{name: 'input', defaultValue: '默认的名字'}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="age" title="Age" sortable :edit-render="{name: 'input', defaultValue: 18}"></gj-column>
+          <gj-column field="date12" title="Date" sortable :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

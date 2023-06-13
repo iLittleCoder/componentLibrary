@@ -1,6 +1,6 @@
 <template>
   <div
-    class="jy-upload-dragger"
+    class="gj-upload-dragger"
     :class="{
       'is-dragover': dragover
     }"
@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: 'JyUploadDrag',
+  name: 'GjUploadDrag',
   props: {
     disabled: Boolean
   },

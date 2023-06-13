@@ -4,43 +4,43 @@
 $btnThemeList: (
   (
     name: "primary",
-    textColor: $jy-primary-color,
+    textColor: $gj-primary-color,
     btnColor: #fff,
-    btnBackground: $jy-primary-color,
+    btnBackground: $gj-primary-color,
   ),
   (
     name: "success",
-    textColor: $jy-success-color,
+    textColor: $gj-success-color,
     btnColor: #fff,
-    btnBackground: $jy-success-color
+    btnBackground: $gj-success-color
   ),
   (
     name: "info",
-    textColor: $jy-info-color,
+    textColor: $gj-info-color,
     btnColor: #fff,
-    btnBackground: $jy-info-color
+    btnBackground: $gj-info-color
   ),
   (
     name: "warning",
-    textColor: $jy-warning-color,
+    textColor: $gj-warning-color,
     btnColor: #fff,
-    btnBackground: $jy-warning-color
+    btnBackground: $gj-warning-color
   ),
   (
     name: "danger",
-    textColor: $jy-danger-color,
+    textColor: $gj-danger-color,
     btnColor: #fff,
-    btnBackground: $jy-danger-color
+    btnBackground: $gj-danger-color
   ),
   (
     name: "perfect",
-    textColor: $jy-table-header-background-color,
-    btnColor: $jy-font-color,
-    btnBackground: $jy-table-header-background-color
+    textColor: $gj-table-header-background-color,
+    btnColor: $gj-font-color,
+    btnBackground: $gj-table-header-background-color
   )
 );
 
-.jy-table-button {
+.gj-table-button {
   position: relative;
   line-height: 1;
   white-space: nowrap;
@@ -59,11 +59,11 @@ $btnThemeList: (
 
   @include animatTransition(border, .2s);
   &:not(.is--disabled) {
-    color: $jy-font-color;
+    color: $gj-font-color;
     cursor: pointer;
-    .jy-table-button--icon {
-      &.jy-table-icon--zoomin {
-        border-color: $jy-font-color;
+    .gj-table-button--icon {
+      &.gj-table-icon--zoomin {
+        border-color: $gj-font-color;
       }
     }
   }
@@ -82,10 +82,10 @@ $btnThemeList: (
     }
   }
   &.is--disabled {
-    color: $jy-disabled-color;
-    .jy-table-button--icon {
-      &.jy-table-icon--zoomin {
-        border-color: $jy-disabled-color;
+    color: $gj-disabled-color;
+    .gj-table-button--icon {
+      &.gj-table-icon--zoomin {
+        border-color: $gj-disabled-color;
       }
     }
     &:not(.is--loading) {
@@ -99,10 +99,10 @@ $btnThemeList: (
     background-color: transparent;
     &:not(.is--disabled) {
       &:focus {
-        //box-shadow: 0 0 0.25em 0 $jy-primary-color;
+        //box-shadow: 0 0 0.25em 0 $gj-primary-color;
       }
       &:hover {
-        color: $jy-primary-color;
+        color: $gj-primary-color;
       }
     }
     @for $index from 0 to length($btnThemeList) {
@@ -123,18 +123,18 @@ $btnThemeList: (
   }
   &.type--button {
     font-family: inherit;
-    height: $jy-button-height-default;
+    height: $gj-button-height-default;
     line-height: 1;
-    border: 1px solid $jy-input-border-color;
+    border: 1px solid $gj-input-border-color;
     &.is--round {
-      border-radius: $jy-button-round-border-radius-default;
+      border-radius: $gj-button-round-border-radius-default;
     }
     &:not(.is--round) {
-      border-radius: $jy-border-radius;
+      border-radius: $gj-border-radius;
     }
     &.is--circle {
       padding: 0 0.5em;
-      min-width: $jy-button-height-default;
+      min-width: $gj-button-height-default;
       border-radius: 50%;
     }
     &:not(.is--circle) {
@@ -142,28 +142,28 @@ $btnThemeList: (
     }
     &:not(.is--disabled) {
       &:hover {
-        color: $jy-primary-color;
-        .jy-table-button--icon {
-          &.jy-table-icon--zoomin {
-            border-color: $jy-primary-color;
+        color: $gj-primary-color;
+        .gj-table-button--icon {
+          &.gj-table-icon--zoomin {
+            border-color: $gj-primary-color;
           }
         }
       }
       &:focus {
-        border-color: $jy-primary-color;
-       // box-shadow: 0 0 0.25em 0 $jy-primary-color;
+        border-color: $gj-primary-color;
+       // box-shadow: 0 0 0.25em 0 $gj-primary-color;
       }
       &:active {
-        color: $jy-primary-color;
-        border-color: $jy-primary-color;
-        background-color: $jy-button-default-background-color;
-        .jy-table-button--icon {
-          &.jy-table-icon--zoomin {
-            background-color: $jy-button-default-background-color;
+        color: $gj-primary-color;
+        border-color: $gj-primary-color;
+        background-color: $gj-button-default-background-color;
+        .gj-table-button--icon {
+          &.gj-table-icon--zoomin {
+            background-color: $gj-button-default-background-color;
           }
-          &.jy-table-icon--zoomout {
+          &.gj-table-icon--zoomout {
             &:after {
-              background-color: $jy-button-default-background-color;
+              background-color: $gj-button-default-background-color;
             }
           }
         }
@@ -175,8 +175,8 @@ $btnThemeList: (
       $btnBackground: map-get($item, btnBackground);
       &.theme--#{map-get($item, name)} {
         color: $btnColor;
-        .jy-table-button--icon {
-          &.jy-table-icon--zoomin {
+        .gj-table-button--icon {
+          &.gj-table-icon--zoomin {
             border-color: $btnColor;
           }
         }
@@ -187,8 +187,8 @@ $btnThemeList: (
             color: $btnColor;
             background-color: $btnBackground;
             border-color: $btnBackground;
-            .jy-table-button--icon {
-              &.jy-table-icon--zoomin {
+            .gj-table-button--icon {
+              &.gj-table-icon--zoomin {
                 border-color: $btnBackground;
               }
             }
@@ -197,10 +197,10 @@ $btnThemeList: (
             color: $btnColor;
             background-color: $btnBackground;
             border-color: $btnBackground;
-            &.jy-table-icon--zoomin {
+            &.gj-table-icon--zoomin {
               background-color: $btnBackground;
             }
-            &.jy-table-icon--zoomout {
+            &.gj-table-icon--zoomout {
               &:after {
                 background-color: $btnBackground;
               }
@@ -219,79 +219,79 @@ $btnThemeList: (
     }
   }
   &.size--medium {
-    font-size: $jy-font-size-medium;
+    font-size: $gj-font-size-medium;
     &.type--button {
-      height: $jy-button-height-medium;
+      height: $gj-button-height-medium;
       &.is--circle {
-        min-width: $jy-button-height-medium;
+        min-width: $gj-button-height-medium;
       }
       &.is--round {
-        border-radius: $jy-button-round-border-radius-medium;
+        border-radius: $gj-button-round-border-radius-medium;
       }
     }
-    .jy-table-button--loading-icon,
-    .jy-table-button--icon {
-      min-width: $jy-font-size-medium;
+    .gj-table-button--loading-icon,
+    .gj-table-button--icon {
+      min-width: $gj-font-size-medium;
     }
   }
   &.size--small {
-    font-size: $jy-font-size-small;
+    font-size: $gj-font-size-small;
     &.type--button {
-      height: $jy-button-height-small;
+      height: $gj-button-height-small;
       &.is--circle {
-        min-width: $jy-button-height-small;
+        min-width: $gj-button-height-small;
       }
       &.is--round {
-        border-radius: $jy-button-round-border-radius-small;
+        border-radius: $gj-button-round-border-radius-small;
       }
     }
-    .jy-table-button--loading-icon,
-    .jy-table-button--icon {
-      min-width: $jy-font-size-small;
+    .gj-table-button--loading-icon,
+    .gj-table-button--icon {
+      min-width: $gj-font-size-small;
     }
   }
   &.size--mini {
-    font-size: $jy-font-size-mini;
+    font-size: $gj-font-size-mini;
     &.type--button {
-      height: $jy-button-height-mini;
+      height: $gj-button-height-mini;
       &.is--circle {
-        min-width: $jy-button-height-mini;
+        min-width: $gj-button-height-mini;
       }
       &.is--round {
-        border-radius: $jy-button-round-border-radius-mini;
+        border-radius: $gj-button-round-border-radius-mini;
       }
     }
-    .jy-table-button--loading-icon,
-    .jy-table-button--icon {
-      min-width: $jy-font-size-mini;
+    .gj-table-button--loading-icon,
+    .gj-table-button--icon {
+      min-width: $gj-font-size-mini;
     }
   }
 }
-.jy-table-input,
-.jy-table-button {
-  &+.jy-table-button,
-  &+.jy-table-button--dropdown {
+.gj-table-input,
+.gj-table-button {
+  &+.gj-table-button,
+  &+.gj-table-button--dropdown {
     margin-left: 12px;
   }
 }
-.jy-table-button--loading-icon,
-.jy-table-button--icon {
-  min-width: $jy-font-size;
-  &+.jy-table-button--content {
+.gj-table-button--loading-icon,
+.gj-table-button--icon {
+  min-width: $gj-font-size;
+  &+.gj-table-button--content {
     margin-left: 4px;
   }
 }
-.jy-table-button--wrapper,
-.jy-table-button--dropdown {
+.gj-table-button--wrapper,
+.gj-table-button--dropdown {
   display: inline-block;
 }
-.jy-table-button--dropdown {
+.gj-table-button--dropdown {
   position: relative;
-  &+.jy-table-button,
-  &+.jy-table-button--dropdown {
+  &+.gj-table-button,
+  &+.gj-table-button--dropdown {
     margin-left: 12px;
   }
-  & > .jy-table-button {
+  & > .gj-table-button {
     &.type--button {
       @for $index from 0 to length($btnThemeList) {
         $item: nth($btnThemeList, $index + 1);
@@ -303,9 +303,9 @@ $btnThemeList: (
     }
   }
   &.is--active {
-    & > .jy-table-button {
+    & > .gj-table-button {
       &:not(.is--disabled) {
-        color: $jy-primary-color;
+        color: $gj-primary-color;
       }
       &.type--text {
         @for $index from 0 to length($btnThemeList) {
@@ -329,19 +329,19 @@ $btnThemeList: (
         }
       }
     }
-    .jy-table-button--dropdown-arrow {
+    .gj-table-button--dropdown-arrow {
       transform: rotate(180deg);
     }
   }
 }
 
-.jy-table-button--dropdown-arrow {
+.gj-table-button--dropdown-arrow {
   font-size: 12px;
   margin-left: 4px;
   @include animatTransition(transform, .2s);
 }
 
-.jy-table-button--dropdown-panel {
+.gj-table-button--dropdown-panel {
   display: none;
   position: absolute;
   right: 0;
@@ -363,13 +363,13 @@ $btnThemeList: (
     transform: scaleY(1);
   }
 }
-.jy-table-button--dropdown-wrapper {
+.gj-table-button--dropdown-wrapper {
   padding: 5px;
-  background-color: $jy-button-dropdown-panel-background-color;
-  border-radius: $jy-border-radius;
-  border: 1px solid $jy-input-border-color;
+  background-color: $gj-button-dropdown-panel-background-color;
+  border-radius: $gj-border-radius;
+  border: 1px solid $gj-input-border-color;
   //box-shadow: 0 1px 6px rgba(0,0,0,.2);
-  & > .jy-table-button {
+  & > .gj-table-button {
     margin-left: 0;
     margin-top: 0.4em;
     display: block;

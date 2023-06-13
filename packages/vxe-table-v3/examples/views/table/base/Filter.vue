@@ -10,23 +10,23 @@
       &nbsp;&nbsp;<span class="orange">resetFilter() 清除筛选条件</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       ref="xTable1"
       :data="tableData"
       @filter-visible="filterVisibleEvent"
       @filter-change="filterChangeEvent">
-      <jy-column field="id" title="ID"></jy-column>
-      <jy-column field="name" title="Name" sortable :filters="[]" :filter-method="filterNameMethod"></jy-column>
-      <jy-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]" :filter-multiple="false"></jy-column>
-      <jy-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
+      <gj-column field="id" title="ID"></gj-column>
+      <gj-column field="name" title="Name" sortable :filters="[]" :filter-method="filterNameMethod"></gj-column>
+      <gj-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]" :filter-multiple="false"></gj-column>
+      <gj-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
         <template #filter="{ $panel, column }">
           <input type="type" v-for="(option, index) in column.filters" :key="index" v-model="option.data" @input="$panel.changeOption($event, !!option.data, option)">
         </template>
-      </jy-column>
-      <jy-column field="time" title="Time" sortable></jy-column>
-    </jy-table>
+      </gj-column>
+      <gj-column field="time" title="Time" sortable></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -37,14 +37,14 @@
 
     <p class="tip">默认的筛选，通过 <table-column-api-link prop="checked"/> 属性设置默认的选中的选项</p>
 
-    <jy-table
+    <gj-table
       border
       highlight-hover-row
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
+      <gj-column type="seq" width="60"></gj-column>
       <vxe-colgroup title="基本信息">
-        <jy-column field="name" title="Name" sortable :filters="[{label: 'id大于10003', value: 10002}, {label: 'id大于10003', value: 10003, checked: true},{label: 'id大于10004', value: 10004},{label: 'id大于10005', value: 10005},{label: 'id大于10006', value: 10006},{label: 'id大于10007', value: 10007}]" :filter-method="filterNameMethod"></jy-column>
-        <jy-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></jy-column>
+        <gj-column field="name" title="Name" sortable :filters="[{label: 'id大于10003', value: 10002}, {label: 'id大于10003', value: 10003, checked: true},{label: 'id大于10004', value: 10004},{label: 'id大于10005', value: 10005},{label: 'id大于10006', value: 10006},{label: 'id大于10007', value: 10007}]" :filter-method="filterNameMethod"></gj-column>
+        <gj-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="其他">
         <vxe-colgroup title="详细信息">
@@ -55,8 +55,8 @@
           </vxe-colgroup>
         </vxe-colgroup>
       </vxe-colgroup>
-      <jy-column field="time" title="Time" sortable :filters="[{label: '本周', value: '1'}, {label: '上周', value: '2'}]"></jy-column>
-    </jy-table>
+      <gj-column field="time" title="Time" sortable :filters="[{label: '本周', value: '1'}, {label: '上周', value: '2'}]"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -81,23 +81,23 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           ref="xTable1"
           :data="tableData"
           @filter-visible="filterVisibleEvent"
           @filter-change="filterChangeEvent">
-          <jy-column field="id" title="ID"></jy-column>
-          <jy-column field="name" title="Name" sortable :filters="[]" :filter-method="filterNameMethod"></jy-column>
-          <jy-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]" :filter-multiple="false"></jy-column>
-          <jy-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
+          <gj-column field="id" title="ID"></gj-column>
+          <gj-column field="name" title="Name" sortable :filters="[]" :filter-method="filterNameMethod"></gj-column>
+          <gj-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]" :filter-multiple="false"></gj-column>
+          <gj-column field="age" title="Age" :filters="[{ data: '' }]" :filter-method="filterAgeMethod">
             <template #filter="{ $panel, column }">
               <input type="type" v-for="(option, index) in column.filters" :key="index" v-model="option.data" @input="$panel.changeOption($event, !!option.data, option)">
             </template>
-          </jy-column>
-          <jy-column field="time" title="Time" sortable></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="time" title="Time" sortable></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -145,14 +145,14 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           highlight-hover-row
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
+          <gj-column type="seq" width="60"></gj-column>
           <vxe-colgroup title="基本信息">
-            <jy-column field="name" title="Name" sortable :filters="[{label: 'id大于10003', value: 10002}, {label: 'id大于10003', value: 10003, checked: true},{label: 'id大于10004', value: 10004},{label: 'id大于10005', value: 10005},{label: 'id大于10006', value: 10006},{label: 'id大于10007', value: 10007}]" :filter-method="filterNameMethod"></jy-column>
-            <jy-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></jy-column>
+            <gj-column field="name" title="Name" sortable :filters="[{label: 'id大于10003', value: 10002}, {label: 'id大于10003', value: 10003, checked: true},{label: 'id大于10004', value: 10004},{label: 'id大于10005', value: 10005},{label: 'id大于10006', value: 10006},{label: 'id大于10007', value: 10007}]" :filter-method="filterNameMethod"></gj-column>
+            <gj-column field="sex" title="Sex" sortable :filters="[{label: 'Man', value: '1'}, {label: 'Woman', value: '0'}]"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="其他">
             <vxe-colgroup title="详细信息">
@@ -163,8 +163,8 @@ export default {
               </vxe-colgroup>
             </vxe-colgroup>
           </vxe-colgroup>
-          <jy-column field="time" title="Time" sortable :filters="[{label: '本周', value: '1'}, {label: '上周', value: '2'}]"></jy-column>
-        </jy-table>
+          <gj-column field="time" title="Time" sortable :filters="[{label: '本周', value: '1'}, {label: '上周', value: '2'}]"></gj-column>
+        </gj-table>
         `,
         `
         export default {

@@ -1,6 +1,6 @@
 <template>
-  <div class="jy-color-predefine color-list-container">
-    <div class="jy-color-predefine__colors color-list">
+  <div class="gj-color-predefine color-list-container">
+    <div class="gj-color-predefine__colors color-list">
       <div
         class="color-list-item"
         :class="{ selected: item.selected, 'is-alpha': item._alpha < 100 }"

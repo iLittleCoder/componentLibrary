@@ -45,7 +45,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -57,18 +57,18 @@
       :mouse-config="{selected: true}"
       :edit-config="{trigger: 'dblclick', mode: 'cell', showStatus: true}"
       :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true}">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="100"></jy-column>
-      <jy-column field="name" title="Name" sortable width="200" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="age" title="Age" width="200" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="sex" title="Sex" width="200" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="rate" title="Rate" width="200"></jy-column>
-      <jy-column field="region" title="Region" width="200"></jy-column>
-      <jy-column field="time" title="Time" width="200"></jy-column>
-      <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
-      <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-      <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="100"></gj-column>
+      <gj-column field="name" title="Name" sortable width="200" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="age" title="Age" width="200" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="sex" title="Sex" width="200" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="rate" title="Rate" width="200"></gj-column>
+      <gj-column field="region" title="Region" width="200"></gj-column>
+      <gj-column field="time" title="Time" width="200"></gj-column>
+      <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
+      <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+      <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -159,7 +159,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -171,18 +171,18 @@ export default {
           :mouse-config="{selected: true}"
           :edit-config="{trigger: 'dblclick', mode: 'cell', showStatus: true}"
           :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true}">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="100"></jy-column>
-          <jy-column field="name" title="Name" sortable width="200" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="age" title="Age" width="200" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="sex" title="Sex" width="200" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="rate" title="Rate" width="200"></jy-column>
-          <jy-column field="region" title="Region" width="200"></jy-column>
-          <jy-column field="time" title="Time" width="200"></jy-column>
-          <jy-column field="address" title="Address" width="300" show-overflow></jy-column>
-          <jy-column field="updateTime" title="UpdateTime" width="200"></jy-column>
-          <jy-column field="createTime" title="CreateTime" width="200"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="100"></gj-column>
+          <gj-column field="name" title="Name" sortable width="200" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="age" title="Age" width="200" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="sex" title="Sex" width="200" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="rate" title="Rate" width="200"></gj-column>
+          <gj-column field="region" title="Region" width="200"></gj-column>
+          <gj-column field="time" title="Time" width="200"></gj-column>
+          <gj-column field="address" title="Address" width="300" show-overflow></gj-column>
+          <gj-column field="updateTime" title="UpdateTime" width="200"></gj-column>
+          <gj-column field="createTime" title="CreateTime" width="200"></gj-column>
+        </gj-table>
         `,
         `
         export default {

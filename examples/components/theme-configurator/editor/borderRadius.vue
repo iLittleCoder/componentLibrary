@@ -1,9 +1,9 @@
 <template>
   <section class="config" :key="displayName">
     <div class="config-label">
-      <jy-tooltip :content="displayName" placement="top">
+      <gj-tooltip :content="displayName" placement="top">
         <span>{{displayKeyName}}</span>
-      </jy-tooltip>
+      </gj-tooltip>
     </div>
     <div class="config-content">
       <theme-input 
@@ -11,20 +11,20 @@
         :val="value"
         @change="onChange"
       ></theme-input>
-      <jy-select
+      <gj-select
         size="medium"
         v-if="!isGlobal"
         v-model="value" 
         class="select"
         @change="onSelectChange"
       >
-        <jy-option
+        <gj-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item.value">
-        </jy-option>
-      </jy-select>
+        </gj-option>
+      </gj-select>
     </div>
   </section>
 </template>

@@ -1,8 +1,8 @@
 <template>
-  <div class="jy-color-predefine">
-    <div class="jy-color-predefine__colors">
+  <div class="gj-color-predefine">
+    <div class="gj-color-predefine__colors">
       <div
-        class="jy-color-predefine__color-selector"
+        class="gj-color-predefine__color-selector"
         :class="{ selected: item.selected, 'is-alpha': item._alpha < 100 }"
         v-for="(item, index) in rgbaColors"
         :key="colors[index]"

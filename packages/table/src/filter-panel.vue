@@ -1,21 +1,21 @@
 <template>
-  <transition name="jy-zoom-in-top">
+  <transition name="gj-zoom-in-top">
     <div
-      class="jy-table-filter"
+      class="gj-table-filter"
       v-if="multiple"
       v-clickoutside="handleOutsideClick"
       v-show="showPopper">
-      <div class="jy-table-filter__content">
-        <jy-scrollbar wrap-class="jy-table-filter__wrap">
-          <jy-checkbox-group class="jy-table-filter__checkbox-group" v-model="filteredValue">
-            <jy-checkbox
+      <div class="gj-table-filter__content">
+        <gj-scrollbar wrap-class="gj-table-filter__wrap">
+          <gj-checkbox-group class="gj-table-filter__checkbox-group" v-model="filteredValue">
+            <gj-checkbox
               v-for="filter in filters"
               :key="filter.value"
-              :label="filter.value">{{ filter.text }}</jy-checkbox>
-          </jy-checkbox-group>
-        </jy-scrollbar>
+              :label="filter.value">{{ filter.text }}</gj-checkbox>
+          </gj-checkbox-group>
+        </gj-scrollbar>
       </div>
-      <div class="jy-table-filter__bottom">
+      <div class="gj-table-filter__bottom">
         <button @click="handleConfirm"
           :class="{ 'is-disabled': filteredValue.length === 0 }"
           :disabled="filteredValue.length === 0">{{ t('el.table.confirmFilter') }}</button>
@@ -23,15 +23,15 @@
       </div>
     </div>
     <div
-      class="jy-table-filter"
+      class="gj-table-filter"
       v-else
       v-clickoutside="handleOutsideClick"
       v-show="showPopper">
-      <ul class="jy-table-filter__list">
-        <li class="jy-table-filter__list-item"
+      <ul class="gj-table-filter__list">
+        <li class="gj-table-filter__list-item"
             :class="{ 'is-active': filterValue === undefined || filterValue === null }"
             @click="handleSelect(null)">{{ t('el.table.clearFilter') }}</li>
-        <li class="jy-table-filter__list-item"
+        <li class="gj-table-filter__list-item"
             v-for="filter in filters"
             :label="filter.value"
             :key="filter.value"
@@ -53,7 +53,7 @@
   import ElScrollbar from 'GildataDesign/packages/scrollbar';
 
   export default {
-    name: 'JyTableFilterPanel',
+    name: 'GjTableFilterPanel',
 
     mixins: [Popper, Locale],
 

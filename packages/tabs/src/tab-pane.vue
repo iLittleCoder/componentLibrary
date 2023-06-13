@@ -1,6 +1,6 @@
 <template>
   <div
-    class="jy-tab-pane"
+    class="gj-tab-pane"
     v-if="(!lazy || loaded) || active"
     v-show="active"
     role="tabpanel"
@@ -13,9 +13,9 @@
 </template>
 <script>
   export default {
-    name: 'JyTabPane',
+    name: 'GjTabPane',
 
-    componentName: 'JyTabPane',
+    componentName: 'GjTabPane',
 
     props: {
       label: String,

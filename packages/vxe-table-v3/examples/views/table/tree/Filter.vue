@@ -2,18 +2,18 @@
   <div>
     <p class="tip">树结构筛选</p>
 
-    <jy-table
+    <gj-table
       ref="xTree"
       height="400"
       :data="tableData"
       :tree-config="{transform: true}"
       :scroll-y="{gt: 1000}">
-      <jy-column type="seq" width="140" tree-node></jy-column>
-      <jy-column field="name" title="名称"></jy-column>
-      <jy-column field="size" title="大小" width="140"></jy-column>
-      <jy-column field="type" title="类型" width="140" :filters="[{label: 'js', value: 'js'}, {label: 'mp3', value: 'mp3'}, {label: 'avi', value: 'avi'}]"></jy-column>
-      <jy-column field="date" title="修改日期" width="260"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="140" tree-node></gj-column>
+      <gj-column field="name" title="名称"></gj-column>
+      <gj-column field="size" title="大小" width="140"></gj-column>
+      <gj-column field="type" title="类型" width="140" :filters="[{label: 'js', value: 'js'}, {label: 'mp3', value: 'mp3'}, {label: 'avi', value: 'avi'}]"></gj-column>
+      <gj-column field="date" title="修改日期" width="260"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -53,22 +53,22 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           ref="xTree"
           max-height="600"
           :loading="loading"
           :data="tableData"
           :tree-config="{children: 'children'}">
-          <jy-column field="name" title="名称" tree-node>
+          <gj-column field="name" title="名称" tree-node>
             <template #header="{ row }">
               <div>名称</div>
               <input v-model="filterName" type="type" placeholder="Filter" @keyup="searchEvent">
             </template>
-          </jy-column>
-          <jy-column field="size" title="大小" width="140"></jy-column>
-          <jy-column field="type" title="类型" width="140"></jy-column>
-          <jy-column field="date" title="修改日期" width="260"></jy-column>
-        </jy-table>
+          </gj-column>
+          <gj-column field="size" title="大小" width="140"></gj-column>
+          <gj-column field="type" title="类型" width="140"></gj-column>
+          <gj-column field="date" title="修改日期" width="260"></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

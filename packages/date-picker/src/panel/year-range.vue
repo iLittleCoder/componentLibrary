@@ -1,20 +1,20 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="$emit('dodestroy')">
+  <transition name="gj-zoom-in-top" @after-leave="$emit('dodestroy')">
     <div
       v-show="visible"
-      class="jy-picker-panel jy-date-range-picker jy-popper jy-year-range-picker"
+      class="gj-picker-panel gj-date-range-picker gj-popper gj-year-range-picker"
       :class="[popperClass]"
     >
-      <div class="jy-picker-panel__body-wrapper">
-        <slot name="sidebar" class="jy-picker-panel__sidebar"></slot>
+      <div class="gj-picker-panel__body-wrapper">
+        <slot name="sidebar" class="gj-picker-panel__sidebar"></slot>
 
-        <div class="jy-picker-panel__body">
-          <div class="jy-picker-panel__content jy-date-range-picker__content is-left">
-            <div class="jy-date-range-picker__header">
+        <div class="gj-picker-panel__body">
+          <div class="gj-picker-panel__content gj-date-range-picker__content is-left">
+            <div class="gj-date-range-picker__header">
               <button
                 type="button"
                 @click="leftPreBtn"
-                class="jy-picker-panel__icon-btn Gildata-d-leftarrow btn-float-left"
+                class="gj-picker-panel__icon-btn Gildata-d-leftarrow btn-float-left"
               ></button>
               <button
                 type="button"
@@ -22,7 +22,7 @@
                 @click="leftNextYear"
                 :disabled="!enableYearArrow"
                 :class="{ 'is-disabled': !enableYearArrow }"
-                class="jy-picker-panel__icon-btn Gildata-d-rightarrow btn-float-right"
+                class="gj-picker-panel__icon-btn Gildata-d-rightarrow btn-float-right"
               ></button>
               <div>{{ leftLabel }}</div>
             </div>
@@ -39,20 +39,20 @@
             >
             </year-table>
           </div>
-          <div class="jy-picker-panel__content jy-date-range-picker__content is-right">
-            <div class="jy-date-range-picker__header">
+          <div class="gj-picker-panel__content gj-date-range-picker__content is-right">
+            <div class="gj-date-range-picker__header">
               <button
                 type="button"
                 v-if="unlinkPanels"
                 @click="rightPreBtn"
                 :disabled="!enableYearArrow"
                 :class="{ 'is-disabled': !enableYearArrow }"
-                class="jy-picker-panel__icon-btn Gildata-d-leftarrow btn-float-left"
+                class="gj-picker-panel__icon-btn Gildata-d-leftarrow btn-float-left"
               ></button>
               <button
                 type="button"
                 @click="rightNextYear"
-                class="jy-picker-panel__icon-btn Gildata-d-rightarrow btn-float-right"
+                class="gj-picker-panel__icon-btn Gildata-d-rightarrow btn-float-right"
               ></button>
               <div>{{ rightLabel }}</div>
             </div>
@@ -72,10 +72,10 @@
           </div>
         </div>
       </div>
-      <div class="jy-picker-panel__shortcut--footer" v-if="shortcuts">
-        <jy-button size="mini" v-for="(shortcut, key) in shortcuts" :key="key" @click="handleShortcutClick(shortcut)">{{
+      <div class="gj-picker-panel__shortcut--footer" v-if="shortcuts">
+        <gj-button size="mini" v-for="(shortcut, key) in shortcuts" :key="key" @click="handleShortcutClick(shortcut)">{{
           shortcut.text
-        }}</jy-button>
+        }}</gj-button>
       </div>
     </div>
   </transition>

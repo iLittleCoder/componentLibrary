@@ -1,7 +1,7 @@
 /**Variable**/
 @import './base/checked.scss';
 
-.jy-export--panel-column > ul {
+.gj-export--panel-column > ul {
   list-style-type: none;
   overflow: auto;
   margin: 0;
@@ -15,7 +15,7 @@
   }
 }
 
-.jy-export--panel {
+.gj-export--panel {
   & > table {
     width: 100%;
     border: 0;
@@ -32,21 +32,21 @@
         &:nth-child(2) {
           width: 70%;
         }
-        & > .jy-input,
-        & > .jy-select {
+        & > .gj-input,
+        & > .gj-select {
           width: 80%;
         }
-        & > .jy-export--panel-option-row {
+        & > .gj-export--panel-option-row {
           padding: 0.25em 0;
         }
       }
     }
   }
-  .jy-export--panel-column {
+  .gj-export--panel-column {
     width: 80%;
-    border: 1px solid $jy-input-border-color;
+    border: 1px solid $gj-input-border-color;
     margin: 3px 0;
-    border-radius: $jy-border-radius;
+    border-radius: $gj-border-radius;
     user-select: none;
     & > ul {
       & > li {
@@ -55,26 +55,26 @@
           $interval: $i - 1 + 0.2;
           &.level--#{$i}{
             padding-left: #{$interval + 2.3}em;
-            .jy-checkbox--icon {
+            .gj-checkbox--icon {
               left: #{$interval + 0.6}em;
             }
           }
         }
       }
     }
-    .jy-export--panel-column-header {
+    .gj-export--panel-column-header {
       padding: 0.1em 0;
-      background-color: $jy-table-header-background-color;
+      background-color: $gj-table-header-background-color;
       font-weight: 500;
-      border-bottom: 1px solid $jy-table-border-color;
+      border-bottom: 1px solid $gj-table-border-color;
     }
-    .jy-export--panel-column-body {
+    .gj-export--panel-column-body {
       padding: 0.2em 0;
       min-height: 10em;
       max-height: 17.6em;
     }
   }
-  .jy-import-selected--file {
+  .gj-import-selected--file {
     padding-right: 40px;
     position: relative;
     overflow: hidden;
@@ -94,67 +94,67 @@
       & > i {
         display: block;
       }
-      color: $jy-primary-color;
+      color: $gj-primary-color;
     }
   }
-  .jy-import-select--file {
-    border: 1px dashed $jy-input-border-color;
+  .gj-import-select--file {
+    border: 1px dashed $gj-input-border-color;
     padding: 6px 34px;
     outline: 0;
-    border-radius: $jy-border-radius;
-    background-color: $jy-input-background-color;
+    border-radius: $gj-border-radius;
+    background-color: $gj-input-background-color;
     user-select: none;
     cursor: pointer;
     &:focus {
-      border-color: $jy-primary-color;
-      box-shadow: 0 0 0.25em 0 $jy-primary-color;
+      border-color: $gj-primary-color;
+      box-shadow: 0 0 0.25em 0 $gj-primary-color;
     }
     &:hover {
-      color: $jy-primary-color;
-      border-color: $jy-primary-color;
+      color: $gj-primary-color;
+      border-color: $gj-primary-color;
     }
   }
-  .jy-export--panel-btns {
+  .gj-export--panel-btns {
     text-align: right;
     padding: 0.25em;
   }
 }
 
-.jy-export--panel-column-option {
+.gj-export--panel-column-option {
   @extend %XECheckbox;
-  .jy-checkbox--icon {
+  .gj-checkbox--icon {
     left: 0.6em;
     top: 0.38em;
   }
   &:hover {
-    background-color: $jy-table-row-hover-background-color;
+    background-color: $gj-table-row-hover-background-color;
   }
 }
 
-.jy-modal--wrapper {
-  .jy-export--panel-column-option {
-    & > .jy-checkbox--icon {
-      font-size: $jy-checkbox-font-size-default;
+.gj-modal--wrapper {
+  .gj-export--panel-column-option {
+    & > .gj-checkbox--icon {
+      font-size: $gj-checkbox-font-size-default;
     }
   }
   &.size--medium {
-    .jy-export--panel-column-option {
-      & > .jy-checkbox--icon {
-        font-size: $jy-checkbox-font-size-medium;
+    .gj-export--panel-column-option {
+      & > .gj-checkbox--icon {
+        font-size: $gj-checkbox-font-size-medium;
       }
     }
   }
   &.size--small {
-    .jy-export--panel-column-option {
-      & > .jy-checkbox--icon {
-        font-size: $jy-checkbox-font-size-small;
+    .gj-export--panel-column-option {
+      & > .gj-checkbox--icon {
+        font-size: $gj-checkbox-font-size-small;
       }
     }
   }
   &.size--mini {
-    .jy-export--panel-column-option {
-      & > .jy-checkbox--icon {
-        font-size: $jy-checkbox-font-size-mini;
+    .gj-export--panel-column-option {
+      & > .gj-checkbox--icon {
+        font-size: $gj-checkbox-font-size-mini;
       }
     }
   }

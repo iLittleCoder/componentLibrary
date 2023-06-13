@@ -10,7 +10,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       resizable
@@ -20,11 +20,11 @@
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
       :tree-config="{transform: true, lazy: true, hasChild: 'hasChild', loadMethod: loadChildrenMethod}"
       :data="tableData">
-      <jy-column field="name" title="Name" width="260" tree-node :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="size" title="Size" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="type" title="Type" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="Name" width="260" tree-node :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="size" title="Size" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="type" title="Type" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -53,7 +53,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           resizable
@@ -63,11 +63,11 @@ export default {
           :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
           :tree-config="{transform: true, lazy: true, hasChild: 'hasChild', loadMethod: loadChildrenMethod}"
           :data="tableData">
-          <jy-column field="name" title="Name" width="260" tree-node :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="size" title="Size" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="type" title="Type" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="Name" width="260" tree-node :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="size" title="Size" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="type" title="Type" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

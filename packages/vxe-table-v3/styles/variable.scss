@@ -3,263 +3,263 @@
 @import './helpers/mixin.scss';
 
 /*font*/
-$jy-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !default;
-$jy-font-color: $--color-text-primary !default;
-$jy-font-size: $--font-size-base !default;
-$jy-font-size-medium: $--font-size-base!default;
-$jy-font-size-small: $--font-size-base !default;
-$jy-font-size-mini: $--font-size-base !default;
+$gj-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !default;
+$gj-font-color: $--color-text-primary !default;
+$gj-font-size: $--font-size-base !default;
+$gj-font-size-medium: $--font-size-base!default;
+$gj-font-size-small: $--font-size-base !default;
+$gj-font-size-mini: $--font-size-base !default;
 
 /*size*/
-$jy-border-radius: $--border-radius-base !default;
+$gj-border-radius: $--border-radius-base !default;
 
 /*icon*/
-$jy-icon-font-family: Verdana,Arial,Tahoma !default;
-$jy-icon-background-color: #fff !default;
+$gj-icon-font-family: Verdana,Arial,Tahoma !default;
+$gj-icon-background-color: #fff !default;
 
 /*color*/
-$jy-primary-color: $--color-primary !default;
-$jy-success-color: $--color-success !default;
-$jy-info-color: $--color-info !default;
-$jy-warning-color: $--color-warning !default;
-$jy-danger-color: $--color-danger !default;
-$jy-disabled-color: $--color-text-disabled !default;
-$jy-primary-disabled-color:$--color-text-disabled !default;
+$gj-primary-color: $--color-primary !default;
+$gj-success-color: $--color-success !default;
+$gj-info-color: $--color-info !default;
+$gj-warning-color: $--color-warning !default;
+$gj-danger-color: $--color-danger !default;
+$gj-disabled-color: $--color-text-disabled !default;
+$gj-primary-disabled-color:$--color-text-disabled !default;
 
 /*input/radio/checkbox*/
-$jy-input-border-color: $--border-color-base !default;
-$jy-input-disabled-color: $--input-disabled-color !default;
-$jy-input-disabled-background-color: $--radio-input-background-color !default;
-$jy-input-placeholder-color: $--input-placeholder-color!default;
+$gj-input-border-color: $--border-color-base !default;
+$gj-input-disabled-color: $--input-disabled-color !default;
+$gj-input-disabled-background-color: $--radio-input-background-color !default;
+$gj-input-placeholder-color: $--input-placeholder-color!default;
 
 /*popup*/
-$jy-table-popup-border-color: $--border-color-base !default;
+$gj-table-popup-border-color: $--border-color-base !default;
 
 /*table*/
-$jy-table-font-color: $--table-font-color !default;
-$jy-table-header-font-color: $--table-header-font-color !default;
-$jy-table-footer-font-color: $--table-font-color !default;
-$jy-table-border-radius: $jy-border-radius !default;
-$jy-table-border-width: 1px !default;
-$jy-table-border-color: $--table-border-color !default;
-$jy-table-resizable-line-color: $--border-color-base !default;
-$jy-table-resizable-drag-line-color:$--border-color-base !default;
-$jy-table-header-background-color: $--table-header-background-color!default;
-$jy-table-body-background-color:  $--table-body-background-color!default;
-$jy-table-footer-background-color: $--table-header-background-color !default;
-$jy-table-tree-node-line-color:$--table-border-color !default;
-$jy-table-tree-node-line-style: dotted !default;
-$jy-table-header-font-weight: 500 !default;
+$gj-table-font-color: $--table-font-color !default;
+$gj-table-header-font-color: $--table-header-font-color !default;
+$gj-table-footer-font-color: $--table-font-color !default;
+$gj-table-border-radius: $gj-border-radius !default;
+$gj-table-border-width: 1px !default;
+$gj-table-border-color: $--table-border-color !default;
+$gj-table-resizable-line-color: $--border-color-base !default;
+$gj-table-resizable-drag-line-color:$--border-color-base !default;
+$gj-table-header-background-color: $--table-header-background-color!default;
+$gj-table-body-background-color:  $--table-body-background-color!default;
+$gj-table-footer-background-color: $--table-header-background-color !default;
+$gj-table-tree-node-line-color:$--table-border-color !default;
+$gj-table-tree-node-line-style: dotted !default;
+$gj-table-header-font-weight: 500 !default;
 
-$jy-table-row-height-default: 32px !default;
-$jy-table-row-height-medium: 32px !default;
-$jy-table-row-height-small: 32px !default;
-$jy-table-row-height-mini: 32px !default;
-$jy-table-row-line-height: 20px !default;
-$jy-table-row-hover-background-color: $--table-row-hover-background-color !default;
-$jy-table-head-row-hover-background-color: $--table-row-hover-background-color !default;
+$gj-table-row-height-default: 32px !default;
+$gj-table-row-height-medium: 32px !default;
+$gj-table-row-height-small: 32px !default;
+$gj-table-row-height-mini: 32px !default;
+$gj-table-row-line-height: 20px !default;
+$gj-table-row-hover-background-color: $--table-row-hover-background-color !default;
+$gj-table-head-row-hover-background-color: $--table-row-hover-background-color !default;
 /*斑马纹颜色*/
-$jy-table-row-striped-background-color: $--background-primary-color-light !default;
+$gj-table-row-striped-background-color: $--background-primary-color-light !default;
 /*hover斑马纹*/
-$jy-table-row-hover-striped-background-color: $--table-row-hover-background-color !default;
+$gj-table-row-hover-striped-background-color: $--table-row-hover-background-color !default;
 /*radio色*/
-$jy-table-row-radio-checked-background-color: $--table-current-row-background-color !default;
-$jy-table-row-hover-radio-checked-background-color: $--table-row-hover-background-color !default;
-$jy-table-row-checkbox-checked-background-color: $--table-current-row-background-color !default;
-$jy-table-row-hover-checkbox-checked-background-color: $--table-row-hover-background-color !default;
-$jy-table-row-current-background-color: $--table-current-row-background-color !default;
-$jy-table-row-hover-current-background-color: $--table-current-row-background-color !default;
+$gj-table-row-radio-checked-background-color: $--table-current-row-background-color !default;
+$gj-table-row-hover-radio-checked-background-color: $--table-row-hover-background-color !default;
+$gj-table-row-checkbox-checked-background-color: $--table-current-row-background-color !default;
+$gj-table-row-hover-checkbox-checked-background-color: $--table-row-hover-background-color !default;
+$gj-table-row-current-background-color: $--table-current-row-background-color !default;
+$gj-table-row-hover-current-background-color: $--table-current-row-background-color !default;
 /*列*/
-$jy-table-column-padding-default: 6px 0 !default;
-$jy-table-column-padding-medium: 6px 0 !default;
-$jy-table-column-padding-small: 6px 0 !default;
-$jy-table-column-padding-mini: 6px 0 !default;
-$jy-table-column-hover-background-color: $--table-row-hover-background-color !default;
+$gj-table-column-padding-default: 6px 0 !default;
+$gj-table-column-padding-medium: 6px 0 !default;
+$gj-table-column-padding-small: 6px 0 !default;
+$gj-table-column-padding-mini: 6px 0 !default;
+$gj-table-column-hover-background-color: $--table-row-hover-background-color !default;
 //高亮列
-$jy-table-column-current-background-color:$--table-row-hover-background-color !default;
-$jy-table-column-icon-border-color: $--color-text-regular !default;
-$jy-table-column-icon-border-hover-color: $--color-text-primary !default;
+$gj-table-column-current-background-color:$--table-row-hover-background-color !default;
+$gj-table-column-icon-border-color: $--color-text-regular !default;
+$gj-table-column-icon-border-hover-color: $--color-text-primary !default;
 
-$jy-table-cell-placeholder-color: $--color-text-placeholder !default;
-$jy-table-cell-padding-left: 10px !default;
-$jy-table-cell-padding-right: 10px !default;
-$jy-table-cell-input-height-default: $jy-table-row-height-default - 6 !default;
-$jy-table-cell-input-height-medium: $jy-table-row-height-medium - 6 !default;
-$jy-table-cell-input-height-small: $jy-table-row-height-small - 6 !default;
-$jy-table-cell-input-height-mini: $jy-table-row-height-mini - 6 !default;
-$jy-table-cell-dirty-width: 5px !default;
-$jy-table-cell-dirty-update-color: $--color-primary !default;
-$jy-table-cell-dirty-insert-color:$--color-primary !default;
-$jy-table-cell-area-border-color: $jy-primary-color !default;
-$jy-table-cell-area-border-width: 1px !default;
-$jy-table-cell-main-area-extension-border-color:$--color-white !default;
-$jy-table-cell-main-area-extension-background-color: $jy-primary-color !default;
-$jy-table-cell-extend-area-border-width: 2px !default;
-$jy-table-cell-copy-area-border-width: 3px !default;
-$jy-table-cell-active-area-border-width: 2px !default;
-$jy-table-cell-copy-area-border-color: $jy-table-cell-area-border-color !default;
-$jy-table-cell-extend-area-border-color: $jy-table-cell-area-border-color !default;
-$jy-table-cell-active-area-border-color: $jy-table-cell-area-border-color !default;
-$jy-table-cell-area-background-color: rgba(64,158,255,0.2) !default;
+$gj-table-cell-placeholder-color: $--color-text-placeholder !default;
+$gj-table-cell-padding-left: 10px !default;
+$gj-table-cell-padding-right: 10px !default;
+$gj-table-cell-input-height-default: $gj-table-row-height-default - 6 !default;
+$gj-table-cell-input-height-medium: $gj-table-row-height-medium - 6 !default;
+$gj-table-cell-input-height-small: $gj-table-row-height-small - 6 !default;
+$gj-table-cell-input-height-mini: $gj-table-row-height-mini - 6 !default;
+$gj-table-cell-dirty-width: 5px !default;
+$gj-table-cell-dirty-update-color: $--color-primary !default;
+$gj-table-cell-dirty-insert-color:$--color-primary !default;
+$gj-table-cell-area-border-color: $gj-primary-color !default;
+$gj-table-cell-area-border-width: 1px !default;
+$gj-table-cell-main-area-extension-border-color:$--color-white !default;
+$gj-table-cell-main-area-extension-background-color: $gj-primary-color !default;
+$gj-table-cell-extend-area-border-width: 2px !default;
+$gj-table-cell-copy-area-border-width: 3px !default;
+$gj-table-cell-active-area-border-width: 2px !default;
+$gj-table-cell-copy-area-border-color: $gj-table-cell-area-border-color !default;
+$gj-table-cell-extend-area-border-color: $gj-table-cell-area-border-color !default;
+$gj-table-cell-active-area-border-color: $gj-table-cell-area-border-color !default;
+$gj-table-cell-area-background-color: rgba(64,158,255,0.2) !default;
 
-$jy-table-checkbox-range-border-width: 1px !default;
-$jy-table-checkbox-range-border-color: $--checkbox-background-color !default;
-$jy-table-checkbox-range-background-color:$--checkbox-checked-background-color !default;
+$gj-table-checkbox-range-border-width: 1px !default;
+$gj-table-checkbox-range-border-color: $--checkbox-background-color !default;
+$gj-table-checkbox-range-background-color:$--checkbox-checked-background-color !default;
 
-$jy-table-fixed-left-scrolling-box-shadow:$--table-fixed-box-shadow!default;
-$jy-table-fixed-right-scrolling-box-shadow: $--table-fixed-box-shadow!default;
+$gj-table-fixed-left-scrolling-box-shadow:$--table-fixed-box-shadow!default;
+$gj-table-fixed-right-scrolling-box-shadow: $--table-fixed-box-shadow!default;
 
 /*filter*/
-$jy-table-filter-panel-background-color: $--color-neutral !default;
+$gj-table-filter-panel-background-color: $--color-neutral !default;
 
 /*menu*/
-$jy-table-menu-item-width: 178px !default;
-$jy-table-menu-background-color: $--color-neutral !default;
+$gj-table-menu-item-width: 178px !default;
+$gj-table-menu-background-color: $--color-neutral !default;
 
 /*loading*/
-$jy-loading-background-color: $--loading-spinner-background-color !default;
-$jy-loading-z-index: 999 !default;
+$gj-loading-background-color: $--loading-spinner-background-color !default;
+$gj-loading-z-index: 999 !default;
 
 /*validate*/
-$jy-table-validate-error-color: #f56c6c !default;
-$jy-table-validate-tooltip-error-color: $--color-neutral !default;
-$jy-table-validate-tooltip-error-background-color: $jy-table-validate-error-color !default;
+$gj-table-validate-error-color: #f56c6c !default;
+$gj-table-validate-tooltip-error-color: $--color-neutral !default;
+$gj-table-validate-tooltip-error-background-color: $gj-table-validate-error-color !default;
 
 /*grid*/
-$jy-grid-maximize-background-color: $--color-neutral !default;
+$gj-grid-maximize-background-color: $--color-neutral !default;
 
 /*toolbar*/
-$jy-toolbar-background-color: $--color-neutral !default;
-$jy-toolbar-height-default: 52px !default;
-$jy-toolbar-height-medium: 50px !default;
-$jy-toolbar-height-small: 48px !default;
-$jy-toolbar-height-mini: 46px !default;
-$jy-toolbar-custom-active-background-color: #D9DADB !default;
-$jy-toolbar-panel-background-color: $--color-neutral !default;
+$gj-toolbar-background-color: $--color-neutral !default;
+$gj-toolbar-height-default: 52px !default;
+$gj-toolbar-height-medium: 50px !default;
+$gj-toolbar-height-small: 48px !default;
+$gj-toolbar-height-mini: 46px !default;
+$gj-toolbar-custom-active-background-color: #D9DADB !default;
+$gj-toolbar-panel-background-color: $--color-neutral !default;
 
 /*tooltip*/
-$jy-tooltip-dark-color: $--tooltip-color !default;
-$jy-tooltip-dark-background-color: $--tooltip-fill !default;
-$jy-tooltip-light-background-color: $--tooltip-color !default;
-$jy-tooltip-validate-error-color: $--color-neutral !default;
-$jy-tooltip-validate-error-background-color: #f56c6c !default;
+$gj-tooltip-dark-color: $--tooltip-color !default;
+$gj-tooltip-dark-background-color: $--tooltip-fill !default;
+$gj-tooltip-light-background-color: $--tooltip-color !default;
+$gj-tooltip-validate-error-color: $--color-neutral !default;
+$gj-tooltip-validate-error-background-color: #f56c6c !default;
 
 /*pager*/
-$jy-pager-background-color: $--color-neutral !default;
-$jy-pager-perfect-background-color: $--color-neutral !default;
-$jy-pager-perfect-button-background-color: #f4f4f5 !default;
+$gj-pager-background-color: $--color-neutral !default;
+$gj-pager-perfect-background-color: $--color-neutral !default;
+$gj-pager-perfect-button-background-color: #f4f4f5 !default;
 
 /*modal*/
-$jy-modal-header-background-color: #F8F8F8 !default;
-$jy-modal-body-background-color: $--color-neutral !default;
-$jy-modal-border-color: #ebeef5 !default;
+$gj-modal-header-background-color: #F8F8F8 !default;
+$gj-modal-body-background-color: $--color-neutral !default;
+$gj-modal-border-color: #ebeef5 !default;
 
 /*checkbox*/
-$jy-checkbox-font-size-default:$--checkbox-font-size!default;
-$jy-checkbox-font-size-medium: $--checkbox-font-size!default;
-$jy-checkbox-font-size-small: $--checkbox-font-size !default;
-$jy-checkbox-font-size-mini: $--checkbox-font-size !default;
-$jy-checkbox-checked-width: 5.49px !default;
-$jy-checkbox-checked-height: 8.49px !default;
-$jy-checkbox-indeterminate-width: 0.6em !default;
-$jy-checkbox-indeterminate-height: 2px !default;
-$jy-checkbox-border-width: 2px !default;
-$jy-checkbox-border-radius: 1px !default;
-$jy-checkbox-icon-background-color: $--color-neutral !default;
-$jy-checkbox-checked-icon-border-color: $--color-neutral !default;
-$jy-checkbox-indeterminate-icon-background-color: $--color-neutral !default;
+$gj-checkbox-font-size-default:$--checkbox-font-size!default;
+$gj-checkbox-font-size-medium: $--checkbox-font-size!default;
+$gj-checkbox-font-size-small: $--checkbox-font-size !default;
+$gj-checkbox-font-size-mini: $--checkbox-font-size !default;
+$gj-checkbox-checked-width: 5.49px !default;
+$gj-checkbox-checked-height: 8.49px !default;
+$gj-checkbox-indeterminate-width: 0.6em !default;
+$gj-checkbox-indeterminate-height: 2px !default;
+$gj-checkbox-border-width: 2px !default;
+$gj-checkbox-border-radius: 1px !default;
+$gj-checkbox-icon-background-color: $--color-neutral !default;
+$gj-checkbox-checked-icon-border-color: $--color-neutral !default;
+$gj-checkbox-indeterminate-icon-background-color: $--color-neutral !default;
 
 /*radio*/
-$jy-radio-font-size-default: $jy-checkbox-font-size-default !default;
-$jy-radio-font-size-medium: $jy-checkbox-font-size-medium !default;
-$jy-radio-font-size-small: $jy-checkbox-font-size-small !default;
-$jy-radio-font-size-mini: $jy-checkbox-font-size-mini !default;
-$jy-radio-border-width: $jy-checkbox-border-width !default;
-$jy-radio-icon-background-color: $--color-neutral !default;
-$jy-radio-checked-icon-background-color: $--color-primary !default;
-$jy-radio-indeterminate-icon-background-color: $--color-neutral !default;
-$jy-radio-button-default-background-color: $--color-neutral !default;
+$gj-radio-font-size-default: $gj-checkbox-font-size-default !default;
+$gj-radio-font-size-medium: $gj-checkbox-font-size-medium !default;
+$gj-radio-font-size-small: $gj-checkbox-font-size-small !default;
+$gj-radio-font-size-mini: $gj-checkbox-font-size-mini !default;
+$gj-radio-border-width: $gj-checkbox-border-width !default;
+$gj-radio-icon-background-color: $--color-neutral !default;
+$gj-radio-checked-icon-background-color: $--color-primary !default;
+$gj-radio-indeterminate-icon-background-color: $--color-neutral !default;
+$gj-radio-button-default-background-color: $--color-neutral !default;
 
 /*button*/
-$jy-button-max-width: 500px !default;
-$jy-button-default-background-color: $--background-color-white !default;
-$jy-button-dropdown-panel-background-color: $--color-neutral !default;
-$jy-button-height-default: 34px !default;
-$jy-button-height-medium: 32px !default;
-$jy-button-height-small: 30px !default;
-$jy-button-height-mini: 28px !default;
-$jy-button-round-border-radius-default: 17px !default;
-$jy-button-round-border-radius-medium: 16px !default;
-$jy-button-round-border-radius-small: 15px !default;
-$jy-button-round-border-radius-mini: 14px !default;
+$gj-button-max-width: 500px !default;
+$gj-button-default-background-color: $--background-color-white !default;
+$gj-button-dropdown-panel-background-color: $--color-neutral !default;
+$gj-button-height-default: 34px !default;
+$gj-button-height-medium: 32px !default;
+$gj-button-height-small: 30px !default;
+$gj-button-height-mini: 28px !default;
+$gj-button-round-border-radius-default: 17px !default;
+$gj-button-round-border-radius-medium: 16px !default;
+$gj-button-round-border-radius-small: 15px !default;
+$gj-button-round-border-radius-mini: 14px !default;
 
 /*input*/
-$jy-input-background-color: $--input-background-color !default;
-$jy-input-panel-background-color: $jy-input-background-color !default;
-$jy-input-number-disabled-color: $--input-color-disabled !default;
-$jy-input-date-festival-color: $--datepicker-font-color !default;
-$jy-input-date-festival-important-color: $jy-primary-color !default;
-$jy-input-date-notice-background-color: #FF0000 !default;
-$jy-input-date-picker-hover-background-color: #f2f6fc !default;
-$jy-input-date-picker-selected-color: $--color-neutral !default;
-$jy-input-date-time-confirm-button-color: $--color-neutral !default;
-$jy-input-date-picker-festival-selected-color: $jy-input-date-picker-selected-color !default;
-$jy-input-date-picker-notice-selected-background-color: $jy-input-date-picker-selected-color !default;
-$jy-input-date-extra-color: #67c23a !default;
-$jy-input-date-extra-important-color: #fd2222 !default;
-$jy-input-date-title-height-default: 34px !default;
-$jy-input-date-title-height-medium: 29px !default;
-$jy-input-date-title-height-small: 28px !default;
-$jy-input-date-title-height-mini: 26px !default;
-$jy-input-date-time-week-row-height-default: 42px !default;
-$jy-input-date-time-week-row-height-medium: 36px !default;
-$jy-input-date-time-week-row-height-small: 34px !default;
-$jy-input-date-time-week-row-height-mini: 32px !default;
-$jy-input-date-month-year-row-height-default: 52px !default;
-$jy-input-date-month-year-row-height-medium: 46px !default;
-$jy-input-date-month-year-row-height-small: 44px !default;
-$jy-input-date-month-year-row-height-mini: 42px !default;
-$jy-input-date-quarter-row-height-default: 64px !default;
-$jy-input-date-quarter-row-height-medium: 58px !default;
-$jy-input-date-quarter-row-height-small: 56px !default;
-$jy-input-date-quarter-row-height-mini: 54px !default;
-$jy-input-height-default: $jy-button-height-default !default;
-$jy-input-height-medium: $jy-button-height-medium !default;
-$jy-input-height-small: $jy-button-height-small !default;
-$jy-input-height-mini: $jy-button-height-mini !default;
+$gj-input-background-color: $--input-background-color !default;
+$gj-input-panel-background-color: $gj-input-background-color !default;
+$gj-input-number-disabled-color: $--input-color-disabled !default;
+$gj-input-date-festival-color: $--datepicker-font-color !default;
+$gj-input-date-festival-important-color: $gj-primary-color !default;
+$gj-input-date-notice-background-color: #FF0000 !default;
+$gj-input-date-picker-hover-background-color: #f2f6fc !default;
+$gj-input-date-picker-selected-color: $--color-neutral !default;
+$gj-input-date-time-confirm-button-color: $--color-neutral !default;
+$gj-input-date-picker-festival-selected-color: $gj-input-date-picker-selected-color !default;
+$gj-input-date-picker-notice-selected-background-color: $gj-input-date-picker-selected-color !default;
+$gj-input-date-extra-color: #67c23a !default;
+$gj-input-date-extra-important-color: #fd2222 !default;
+$gj-input-date-title-height-default: 34px !default;
+$gj-input-date-title-height-medium: 29px !default;
+$gj-input-date-title-height-small: 28px !default;
+$gj-input-date-title-height-mini: 26px !default;
+$gj-input-date-time-week-row-height-default: 42px !default;
+$gj-input-date-time-week-row-height-medium: 36px !default;
+$gj-input-date-time-week-row-height-small: 34px !default;
+$gj-input-date-time-week-row-height-mini: 32px !default;
+$gj-input-date-month-year-row-height-default: 52px !default;
+$gj-input-date-month-year-row-height-medium: 46px !default;
+$gj-input-date-month-year-row-height-small: 44px !default;
+$gj-input-date-month-year-row-height-mini: 42px !default;
+$gj-input-date-quarter-row-height-default: 64px !default;
+$gj-input-date-quarter-row-height-medium: 58px !default;
+$gj-input-date-quarter-row-height-small: 56px !default;
+$gj-input-date-quarter-row-height-mini: 54px !default;
+$gj-input-height-default: $gj-button-height-default !default;
+$gj-input-height-medium: $gj-button-height-medium !default;
+$gj-input-height-small: $gj-button-height-small !default;
+$gj-input-height-mini: $gj-button-height-mini !default;
 
 /*textarea*/
-$jy-textarea-line-height: 1.5715 !default;
-$jy-textarea-background-color: $--color-neutral !default;
-$jy-textarea-count-color: #999 !default;
-$jy-textarea-count-background-color: $--color-neutral !default;
-$jy-textarea-count-error-color: $jy-table-validate-error-color !default;
+$gj-textarea-line-height: 1.5715 !default;
+$gj-textarea-background-color: $--color-neutral !default;
+$gj-textarea-count-color: #999 !default;
+$gj-textarea-count-background-color: $--color-neutral !default;
+$gj-textarea-count-error-color: $gj-table-validate-error-color !default;
 
 /*form*/
-$jy-form-item-min-height-default: 36px !default;
-$jy-form-item-min-height-medium: 34px !default;
-$jy-form-item-min-height-small: 32px !default;
-$jy-form-item-min-height-mini: 30px !default;
-$jy-form-background-color: $--color-neutral !default;
-$jy-form-validate-error-color: $jy-table-validate-error-color !default;
-$jy-form-validate-error-background-color: inherit !default;
+$gj-form-item-min-height-default: 36px !default;
+$gj-form-item-min-height-medium: 34px !default;
+$gj-form-item-min-height-small: 32px !default;
+$gj-form-item-min-height-mini: 30px !default;
+$gj-form-background-color: $--color-neutral !default;
+$gj-form-validate-error-color: $gj-table-validate-error-color !default;
+$gj-form-validate-error-background-color: inherit !default;
 
 /*select*/
-$jy-select-option-height-default: 30px !default;
-$jy-select-option-height-medium: 28px !default;
-$jy-select-option-height-small: 26px !default;
-$jy-select-option-height-mini: 24px !default;
-$jy-select-option-hover-background-color: #f5f7fa !default;
-$jy-select-panel-background-color: $--color-neutral !default;
-$jy-select-empty-color: #C0C4CC !default;
-$jy-optgroup-title-color:#909399 !default;
+$gj-select-option-height-default: 30px !default;
+$gj-select-option-height-medium: 28px !default;
+$gj-select-option-height-small: 26px !default;
+$gj-select-option-height-mini: 24px !default;
+$gj-select-option-hover-background-color: #f5f7fa !default;
+$gj-select-panel-background-color: $--color-neutral !default;
+$gj-select-empty-color: #C0C4CC !default;
+$gj-optgroup-title-color:#909399 !default;
 
 /*switch*/
-$jy-switch-font-color: $--color-neutral !default;
-$jy-switch-icon-background-color: $--color-neutral !default;
-$jy-switch-open-background-color: $jy-primary-color !default;
-$jy-switch-close-background-color: rgba(0,0,0,0.35) !default;
-$jy-switch-disabled-background-color: rgba(0,0,0,0.15) !default;
+$gj-switch-font-color: $--color-neutral !default;
+$gj-switch-icon-background-color: $--color-neutral !default;
+$gj-switch-open-background-color: $gj-primary-color !default;
+$gj-switch-close-background-color: rgba(0,0,0,0.35) !default;
+$gj-switch-disabled-background-color: rgba(0,0,0,0.15) !default;
 
 /*pulldown*/
-$jy-pulldown-panel-background-color: $--color-neutral !default;
+$gj-pulldown-panel-background-color: $--color-neutral !default;

@@ -1,5 +1,5 @@
 <template>
-  <div class="jy-tabs__active-bar" :class="`is-${ rootTabs.tabPosition }`" :style="barStyle"></div>
+  <div class="gj-tabs__active-bar" :class="`is-${ rootTabs.tabPosition }`" :style="barStyle"></div>
 </template>
 <script>
   import { arrayFind } from 'GildataDesign/src/utils/util';

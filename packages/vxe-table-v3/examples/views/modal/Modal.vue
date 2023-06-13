@@ -94,32 +94,32 @@
       <vxe-button @click="value5 = true">基本窗口</vxe-button>
       <vxe-modal v-model="value5" width="600" show-footer>
         <template #default>
-          <jy-table
+          <gj-table
             show-overflow
             auto-resize
             height="300"
             :data="tableData">
-            <jy-table type="seq" width="60"></jy-table>
-            <jy-table field="name" title="app.body.label.name"></jy-table>
-            <jy-table field="sex" title="app.body.label.sex"></jy-table>
-            <jy-table field="age" title="app.body.label.age"></jy-table>
-          </jy-table>
+            <gj-table type="seq" width="60"></gj-table>
+            <gj-table field="name" title="app.body.label.name"></gj-table>
+            <gj-table field="sex" title="app.body.label.sex"></gj-table>
+            <gj-table field="age" title="app.body.label.age"></gj-table>
+          </gj-table>
         </template>
       </vxe-modal>
 
       <vxe-button @click="value6 = true">窗口初始位置</vxe-button>
       <vxe-modal v-model="value6" width="600" :position="{top: 200, left: 200}">
         <template #default>
-          <jy-table
+          <gj-table
             show-overflow
             auto-resize
             height="300"
             :data="tableData">
-            <jy-table type="seq" width="60"></jy-table>
-            <jy-table field="name" title="app.body.label.name"></jy-table>
-            <jy-table field="sex" title="app.body.label.sex"></jy-table>
-            <jy-table field="age" title="app.body.label.age"></jy-table>
-          </jy-table>
+            <gj-table type="seq" width="60"></gj-table>
+            <gj-table field="name" title="app.body.label.name"></gj-table>
+            <gj-table field="sex" title="app.body.label.sex"></gj-table>
+            <gj-table field="age" title="app.body.label.age"></gj-table>
+          </gj-table>
         </template>
       </vxe-modal>
 
@@ -172,18 +172,18 @@
       <vxe-button @click="value10 = true">阻止关闭</vxe-button>
       <vxe-modal v-model="value10" title="阻止关闭" width="800" height="400" :before-hide-method="beforeHideMethod" show-zoom resize>
         <template #default>
-          <jy-table
+          <gj-table
             border
             resizable
             show-overflow
             auto-resize
             height="auto"
             :data="tableData">
-            <jy-table type="seq" width="60"></jy-table>
-            <jy-table field="name" title="app.body.label.name"></jy-table>
-            <jy-table field="sex" title="app.body.label.sex"></jy-table>
-            <jy-table field="age" title="app.body.label.age"></jy-table>
-          </jy-table>
+            <gj-table type="seq" width="60"></gj-table>
+            <gj-table field="name" title="app.body.label.name"></gj-table>
+            <gj-table field="sex" title="app.body.label.sex"></gj-table>
+            <gj-table field="age" title="app.body.label.age"></gj-table>
+          </gj-table>
         </template>
       </vxe-modal>
 
@@ -404,32 +404,32 @@ export default {
           <vxe-button @click="value5 = true">基本窗口</vxe-button>
           <vxe-modal v-model="value5" width="600" show-footer>
             <template #default>
-              <jy-table
+              <gj-table
                 show-overflow
                 auto-resize
                 height="300"
                 :data="tableData">
-                <jy-table type="seq" width="60"></jy-table>
-                <jy-table field="name" title="app.body.label.name"></jy-table>
-                <jy-table field="sex" title="app.body.label.sex"></jy-table>
-                <jy-table field="age" title="app.body.label.age"></jy-table>
-              </jy-table>
+                <gj-table type="seq" width="60"></gj-table>
+                <gj-table field="name" title="app.body.label.name"></gj-table>
+                <gj-table field="sex" title="app.body.label.sex"></gj-table>
+                <gj-table field="age" title="app.body.label.age"></gj-table>
+              </gj-table>
             </template>
           </vxe-modal>
 
           <vxe-button @click="value6 = true">窗口初始位置</vxe-button>
           <vxe-modal v-model="value6" width="600" :position="{top: 200, left: 200}">
             <template #default>
-              <jy-table
+              <gj-table
                 show-overflow
                 auto-resize
                 height="300"
                 :data="tableData">
-                <jy-table type="seq" width="60"></jy-table>
-                <jy-table field="name" title="app.body.label.name"></jy-table>
-                <jy-table field="sex" title="app.body.label.sex"></jy-table>
-                <jy-table field="age" title="app.body.label.age"></jy-table>
-              </jy-table>
+                <gj-table type="seq" width="60"></gj-table>
+                <gj-table field="name" title="app.body.label.name"></gj-table>
+                <gj-table field="sex" title="app.body.label.sex"></gj-table>
+                <gj-table field="age" title="app.body.label.age"></gj-table>
+              </gj-table>
             </template>
           </vxe-modal>
 
@@ -482,18 +482,18 @@ export default {
           <vxe-button @click="value10 = true">阻止关闭</vxe-button>
           <vxe-modal v-model="value10" title="阻止关闭" width="800" height="400" :before-hide-method="beforeHideMethod" show-zoom resize>
             <template #default>
-              <jy-table
+              <gj-table
                 border
                 resizable
                 show-overflow
                 auto-resize
                 height="auto"
                 :data="tableData">
-                <jy-table type="seq" width="60"></jy-table>
-                <jy-table field="name" title="app.body.label.name"></jy-table>
-                <jy-table field="sex" title="app.body.label.sex"></jy-table>
-                <jy-table field="age" title="app.body.label.age"></jy-table>
-              </jy-table>
+                <gj-table type="seq" width="60"></gj-table>
+                <gj-table field="name" title="app.body.label.name"></gj-table>
+                <gj-table field="sex" title="app.body.label.sex"></gj-table>
+                <gj-table field="age" title="app.body.label.age"></gj-table>
+              </gj-table>
             </template>
           </vxe-modal>
 

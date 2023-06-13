@@ -32,10 +32,10 @@ function renderLine (h, _vm, $xetable, params) {
   if (treeConfig && treeNode && treeOpts.line) {
     return [
       h('div', {
-        class: 'jy-tree--line-wrapper'
+        class: 'gj-tree--line-wrapper'
       }, [
         h('div', {
-          class: 'jy-tree--line',
+          class: 'gj-tree--line',
           style: {
             height: `${calcTreeLine(params, items, rIndex)}px`,
             left: `${(rLevel * treeOpts.indent) + (rLevel ? 2 - getOffsetSize($xetable) : 0) + 16}px`
@@ -211,7 +211,7 @@ function renderColumn (h, _vm, $xetable, seq, rowid, fixedType, rowLevel, row, r
   if (fixedHiddenColumn && (allColumnOverflow ? isAllOverflow : allColumnOverflow)) {
     tdVNs.push(
       h('div', {
-        class: ['jy-cell', {
+        class: ['gj-cell', {
           'c--title': showTitle,
           'c--tooltip': showTooltip,
           'c--ellipsis': showEllipsis
@@ -226,7 +226,7 @@ function renderColumn (h, _vm, $xetable, seq, rowid, fixedType, rowLevel, row, r
     tdVNs.push(
       ...renderLine(h, _vm, $xetable, params),
       h('div', {
-        class: ['jy-cell', {
+        class: ['gj-cell', {
           'c--title': showTitle,
           'c--tooltip': showTooltip,
           'c--ellipsis': showEllipsis
@@ -242,20 +242,20 @@ function renderColumn (h, _vm, $xetable, seq, rowid, fixedType, rowLevel, row, r
     if (showValidTip && hasValidError) {
       tdVNs.push(
         h('div', {
-          class: 'jy-cell--valid',
+          class: 'gj-cell--valid',
           style: validStore.rule && validStore.rule.maxWidth ? {
             width: `${validStore.rule.maxWidth}px`
           } : null
         }, [
           h('span', {
-            class: 'jy-cell--valid-msg'
+            class: 'gj-cell--valid-msg'
           }, validStore.content)
         ])
       )
     }
   }
   return h('td', {
-    class: ['jy-body--column', column.id, {
+    class: ['gj-body--column', column.id, {
       [`col--${cellAlign}`]: cellAlign,
       [`col--${type}`]: type,
       'col--last': $columnIndex === columns.length - 1,
@@ -343,7 +343,7 @@ function renderRows (h, _vm, $xetable, fixedType, tableData, tableColumn) {
     }
     rows.push(
       h('tr', {
-        class: ['jy-body--row', treeConfig ? `row--level-${rowLevel}` : '', {
+        class: ['gj-body--row', treeConfig ? `row--level-${rowLevel}` : '', {
           'row--stripe': stripe && ($xetable.getVTRowIndex(row) + 1) % 2 === 0,
           'is--new': isNewRow,
           'is--expand-row': isExpandRow,
@@ -375,13 +375,13 @@ function renderRows (h, _vm, $xetable, fixedType, tableData, tableColumn) {
       const expandParams = { $table: $xetable, seq, column: expandColumn, fixed: fixedType, type: renderType, level: rowLevel, row, rowIndex, $rowIndex }
       rows.push(
         h('tr', {
-          class: 'jy-body--expanded-row',
+          class: 'gj-body--expanded-row',
           key: `expand_${rowid}`,
           style: rowStyle ? (XEUtils.isFunction(rowStyle) ? rowStyle(expandParams) : rowStyle) : null,
           on: trOn
         }, [
           h('td', {
-            class: ['jy-body--expanded-column', {
+            class: ['gj-body--expanded-column', {
               'fixed--hidden': fixedType && !hasFixedColumn,
               'col--ellipsis': hasEllipsis
             }],
@@ -390,7 +390,7 @@ function renderRows (h, _vm, $xetable, fixedType, tableData, tableColumn) {
             }
           }, [
             h('div', {
-              class: 'jy-body--expanded-cell',
+              class: 'gj-body--expanded-cell',
               style: cellStyle
             }, [
               expandColumn.renderData(h, expandParams)
@@ -448,7 +448,7 @@ function syncBodyScroll (_vm, fixedType, scrollTop, elem1, elem2) {
 }
 
 export default {
-  name: 'JyTableBody',
+  name: 'GjTableBody',
   props: {
     tableData: Array,
     tableColumn: Array,
@@ -531,7 +531,7 @@ export default {
       }
     }
     return h('div', {
-      class: ['jy-table--body-wrapper', fixedType ? `fixed-${fixedType}--wrapper` : 'body--wrapper'],
+      class: ['gj-table--body-wrapper', fixedType ? `fixed-${fixedType}--wrapper` : 'body--wrapper'],
       attrs: {
         xid: tId
       },
@@ -540,15 +540,15 @@ export default {
       } : {}
     }, [
       fixedType ? _e() : h('div', {
-        class: 'jy-body--x-space',
+        class: 'gj-body--x-space',
         ref: 'xSpace'
       }),
       h('div', {
-        class: 'jy-body--y-space',
+        class: 'gj-body--y-space',
         ref: 'ySpace'
       }),
       h('table', {
-        class: 'jy-table--body',
+        class: 'gj-table--body',
         attrs: {
           xid: tId,
           cellspacing: 0,
@@ -578,16 +578,16 @@ export default {
         }, renderRows(h, this, $xetable, fixedType, tableData, tableColumn))
       ]),
       h('div', {
-        class: 'jy-table--checkbox-range'
+        class: 'gj-table--checkbox-range'
       }),
       mouseConfig && mouseOpts.area ? h('div', {
-        class: 'jy-table--cell-area'
+        class: 'gj-table--cell-area'
       }, [
         h('span', {
-          class: 'jy-table--cell-main-area'
+          class: 'gj-table--cell-main-area'
         }, mouseOpts.extension ? [
           h('span', {
-            class: 'jy-table--cell-main-area-btn',
+            class: 'gj-table--cell-main-area-btn',
             on: {
               mousedown (evnt) {
                 $xetable.triggerCellExtendMousedownEvent(evnt, { $table: $xetable, fixed: fixedType, type: renderType })
@@ -596,24 +596,24 @@ export default {
           })
         ] : null),
         h('span', {
-          class: 'jy-table--cell-copy-area'
+          class: 'gj-table--cell-copy-area'
         }),
         h('span', {
-          class: 'jy-table--cell-extend-area'
+          class: 'gj-table--cell-extend-area'
         }),
         h('span', {
-          class: 'jy-table--cell-multi-area'
+          class: 'gj-table--cell-multi-area'
         }),
         h('span', {
-          class: 'jy-table--cell-active-area'
+          class: 'gj-table--cell-active-area'
         })
       ]) : null,
       !fixedType ? h('div', {
-        class: 'jy-table--empty-block',
+        class: 'gj-table--empty-block',
         ref: 'emptyBlock'
       }, [
         h('div', {
-          class: 'jy-table--empty-content'
+          class: 'gj-table--empty-content'
         }, emptyContent)
       ]) : null
     ])

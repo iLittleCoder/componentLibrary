@@ -63,7 +63,7 @@
   @include m(horizontal) {
     padding: 5px 0;
 
-    & > .jy-menu-item {
+    & > .gj-menu-item {
       float: left;
       line-height: 18px;
       margin: 0;
@@ -89,7 +89,7 @@
         background-color: $--color-neutral-hover;
       }
     }
-    & > .jy-submenu {
+    & > .gj-submenu {
       float: left;
       margin-right: 24px;
       &:last-of-type {
@@ -99,14 +99,14 @@
       &:focus,
       &:hover {
         outline: none;
-        .jy-submenu__title {
+        .gj-submenu__title {
           color: $--color-text-primary;
           border-radius: $--border-radius-base;
         }
       }
 
       &.is-active {
-        .jy-submenu__title {
+        .gj-submenu__title {
           color: $--color-text-primary;
           font-weight: 600;
 
@@ -117,7 +117,7 @@
         }
       }
 
-      & .jy-submenu__title {
+      & .gj-submenu__title {
         line-height: 18px;
         color: $--color-text-secondary;
         padding: 2px 8px;
@@ -126,16 +126,16 @@
           background-color: $--color-neutral-hover;
         }
       }
-      & .jy-submenu__icon-arrow {
+      & .gj-submenu__icon-arrow {
         position: static;
         vertical-align: middle;
         margin-left: 8px;
         margin-top: -3px;
       }
     }
-    & .jy-menu {
-      & .jy-menu-item,
-      & .jy-submenu__title {
+    & .gj-menu {
+      & .gj-menu-item,
+      & .gj-submenu__title {
         // background-color: $--menu-background-color;
         float: none;
         height: 28px;
@@ -149,7 +149,7 @@
           border-radius: 4px;
         }
       }
-      & .jy-menu-item {
+      & .gj-menu-item {
         height: 28px;
         line-height: 28px;
         border-radius: 4px;
@@ -160,22 +160,22 @@
           margin-bottom: 8px;
         }
       }
-      & .jy-menu-item.is-active,
-      & .jy-submenu.is-active > .jy-submenu__title {
+      & .gj-menu-item.is-active,
+      & .gj-submenu.is-active > .gj-submenu__title {
         //color: $--color-text-primary;
       }
     }
-    & .jy-menu-item:not(.is-disabled):hover,
-    & .jy-menu-item:not(.is-disabled):focus {
+    & .gj-menu-item:not(.is-disabled):hover,
+    & .gj-menu-item:not(.is-disabled):focus {
       outline: none;
       // color: $--color-text-primary;
     }
-    & .jy-menu-item:not(.is-disabled):focus {
+    & .gj-menu-item:not(.is-disabled):focus {
       outline: none;
       // color: $--color-text-primary;
       background-color: $--color-tip;
     }
-    & > .jy-menu-item.is-active {
+    & > .gj-menu-item.is-active {
       color: $--color-text-primary;
       font-weight: 600;
       position: relative;
@@ -184,7 +184,7 @@
     }
     @include b(submenu) {
       @include when(opened) {
-        &:not(.is-active) .jy-submenu__title {
+        &:not(.is-active) .gj-submenu__title {
           color: $--color-text-primary;
         }
       }
@@ -194,21 +194,21 @@
   @include m(vertical) {
     padding: 8px 0;
 
-    &:not(.jy-menu--collapse) {
-      .jy-submenu {
-        .jy-submenu__title {
+    &:not(.gj-menu--collapse) {
+      .gj-submenu {
+        .gj-submenu__title {
           margin: 0px 8px;
           margin-bottom: 8px;
         }
       }
-      .jy-submenu.is-opened {
-        .jy-submenu__title {
+      .gj-submenu.is-opened {
+        .gj-submenu__title {
           margin-bottom: 4px;
         }
       }
     }
 
-    .jy-menu-item {
+    .gj-menu-item {
       margin: 0 8px;
 
       &:not(:last-of-type) {
@@ -224,14 +224,14 @@
       }
     }
 
-    .jy-menu--inline {
+    .gj-menu--inline {
       background-color: $--background-primary-color-light;
       padding: 4px 0;
       padding-bottom: 0px;
       margin-bottom: 4px;
     }
 
-    .jy-menu--popup-right-start {
+    .gj-menu--popup-right-start {
       padding: 8px;
       box-sizing: border-box;
     }
@@ -248,18 +248,18 @@
   @include m(collapse) {
     width: 48px;
 
-    > .jy-menu-item {
+    > .gj-menu-item {
       margin-bottom: 0;
     }
 
-    > .jy-menu-item,
-    .jy-submenu {
+    > .gj-menu-item,
+    .gj-submenu {
       height: 32px;
       margin-bottom: 8px;
     }
 
-    > .jy-menu-item,
-    > .jy-submenu > .jy-submenu__title {
+    > .gj-menu-item,
+    > .gj-submenu > .gj-submenu__title {
       margin: 0 8px;
       padding: 0;
       padding-left: 0 !important;
@@ -282,7 +282,7 @@
           // background-color: $--color-neutral-hover;
         }
       }
-      .jy-submenu__icon-arrow {
+      .gj-submenu__icon-arrow {
         display: none;
       }
       span {
@@ -294,26 +294,26 @@
       }
     }
 
-    > .jy-menu-item.is-active i {
+    > .gj-menu-item.is-active i {
       color: $--menu-active-color;
       // background-color: $--color-neutral-pressed;
       /* &:hover{
         background-color: $--background-primary-color;
       }*/
     }
-    > .jy-submenu.is-active i {
+    > .gj-submenu.is-active i {
       color: $--color-primary;
       /* &:hover{
         background-color: $--background-primary-color;
       }*/
     }
-    .jy-menu .jy-submenu {
+    .gj-menu .gj-submenu {
       min-width: 200px;
     }
 
-    .jy-submenu {
+    .gj-submenu {
       position: relative;
-      & .jy-menu {
+      & .gj-menu {
         position: absolute;
         margin-left: 4px;
         top: 0;
@@ -325,7 +325,7 @@
       }
 
       &.is-opened {
-        > .jy-submenu__title .jy-submenu__icon-arrow {
+        > .gj-submenu__title .gj-submenu__icon-arrow {
           transform: none;
         }
       }
@@ -342,28 +342,28 @@
     &-bottom-start {
       margin-top: 5px;
 
-      .jy-menu--popup-right-start {
+      .gj-menu--popup-right-start {
         margin-left: 12px;
       }
     }
     &-right-start {
       margin-left: 4px;
       margin-right: 4px;
-      .jy-menu-item {
+      .gj-menu-item {
         margin: 0px;
       }
-      .jy-submenu .jy-submenu__title {
+      .gj-submenu .gj-submenu__title {
         margin: 0px !important;
       }
-      .jy-submenu.is-opened:not(.is-active) .jy-submenu__title {
+      .gj-submenu.is-opened:not(.is-active) .gj-submenu__title {
         color: $--color-info;
       }
 
-      .jy-menu--popup-right-start {
+      .gj-menu--popup-right-start {
         margin-left: 12px;
       }
     }
-    .jy-submenu__title .jy-submenu__icon-arrow {
+    .gj-submenu__title .gj-submenu__icon-arrow {
       transform: none !important;
     }
   }
@@ -399,10 +399,10 @@
       background-color: $--menu-item-hover-fill;
     }
   }
-  & .jy-menu {
+  & .gj-menu {
     border: none;
   }
-  & .jy-menu-item {
+  & .gj-menu-item {
     height: 32px;
     line-height: 18px;
     padding-left: 32px;
@@ -415,7 +415,7 @@
     font-size: $--font-size-base;
   }
   @include when(active) {
-    > .jy-submenu__title {
+    > .gj-submenu__title {
       color: $--color-primary;
       border-bottom-color: $--color-primary;
       &:hover {
@@ -425,16 +425,16 @@
     }
   }
   @include when(opened) {
-    .jy-submenu__title {
+    .gj-submenu__title {
       // color:$--color-primary ;
     }
-    > .jy-submenu__title .jy-submenu__icon-arrow {
+    > .gj-submenu__title .gj-submenu__icon-arrow {
       transform: rotateZ(180deg);
     }
   }
   @include when(disabled) {
-    .jy-submenu__title,
-    .jy-menu-item,
+    .gj-submenu__title,
+    .gj-menu-item,
     i {
       color: $--color-text-disabled !important;
       cursor: not-allowed !important;
@@ -462,7 +462,7 @@
   }
 }
 
-.horizontal-collapse-transition .jy-submenu__title .jy-submenu__icon-arrow {
+.horizontal-collapse-transition .gj-submenu__title .gj-submenu__icon-arrow {
   transition: 0.2s;
   opacity: 0;
 }

@@ -24,7 +24,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-footer
@@ -34,8 +34,8 @@
       :data="tableData"
       @checkbox-change="checkboxChangeEvent"
       @checkbox-all="checkboxChangeEvent">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="160" :resizable="false" show-overflow>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="160" :resizable="false" show-overflow>
         <template #header>
           <div class="first-col">
             <div class="first-col-top">名称</div>
@@ -49,13 +49,13 @@
         <template #default="{ row }">
           <vxe-button @click="showDetailEvent(row)">弹框{{ row.name }}</vxe-button>
         </template>
-      </jy-column>
-      <jy-column field="name" title="app.body.label.name" sortable>
+      </gj-column>
+      <gj-column field="name" title="app.body.label.name" sortable>
         <template #default="{ row }">
-          <a href="https://github.com/x-extends/jy-table" target="_black">我是超链接：{{ row.name }}</a>
+          <a href="https://github.com/x-extends/gj-table" target="_black">我是超链接：{{ row.name }}</a>
         </template>
-      </jy-column>
-      <jy-column field="sex" title="app.body.label.sex" :filters="[{data: ''}]" :filter-method="filterSexMethod">
+      </gj-column>
+      <gj-column field="sex" title="app.body.label.sex" :filters="[{data: ''}]" :filter-method="filterSexMethod">
         <template #header>
           <span style="color: red;">自定义头部</span>
         </template>
@@ -72,8 +72,8 @@
           <vxe-button type="text">编辑</vxe-button>
           <vxe-button type="text">删除</vxe-button>
         </template>
-      </jy-column>
-      <jy-column field="time" title="Time">
+      </gj-column>
+      <gj-column field="time" title="Time">
         <template #header>
           <vxe-input v-model="value1" placeholder="放个输入框" size="mini"></vxe-input>
         </template>
@@ -88,8 +88,8 @@
             <span>{{ formatDate(row.time) }}</span>
           </template>
         </template>
-      </jy-column>
-      <jy-column field="address" title="Address" show-overflow>
+      </gj-column>
+      <gj-column field="address" title="Address" show-overflow>
         <template #default="{ row, rowIndex }">
           <template v-if="rowIndex === 1">
             <vxe-select v-model="row.flag1" transfer>
@@ -98,27 +98,27 @@
             </vxe-select>
           </template>
           <template v-else>
-            <a href="https://github.com/x-extends/jy-table">{{ row.name }}</a>
+            <a href="https://github.com/x-extends/gj-table">{{ row.name }}</a>
           </template>
         </template>
-      </jy-column>
-      <jy-column field="html1" title="Html片段" width="200" show-overflow>
+      </gj-column>
+      <gj-column field="html1" title="Html片段" width="200" show-overflow>
         <template #default="{ row }">
           <span v-html="row.html1"></span>
         </template>
         <template #footer>
           <span>
-            <img src="/jy-table/static/other/img1.gif" style="width: 36px;">自定义模板<img src="/jy-table/static/other/img2.gif" style="width: 30px;">
+            <img src="/gj-table/static/other/img1.gif" style="width: 36px;">自定义模板<img src="/gj-table/static/other/img2.gif" style="width: 30px;">
           </span>
         </template>
-      </jy-column>
-      <jy-column field="img1" title="图片路径" width="120">
+      </gj-column>
+      <gj-column field="img1" title="图片路径" width="120">
         <template #default="{ row }">
           <img v-if="row.img1" :src="row.img1" style="width: 100px;">
           <span v-else>无</span>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <vxe-pager
       perfect
@@ -144,9 +144,9 @@
         </span>
       </template>
       <template #right>
-        <img src="/jy-table/static/other/img1.gif" height="34">
-        <img src="/jy-table/static/other/img1.gif" height="34">
-        <img src="/jy-table/static/other/img1.gif" height="34">
+        <img src="/gj-table/static/other/img1.gif" height="34">
+        <img src="/gj-table/static/other/img1.gif" height="34">
+        <img src="/gj-table/static/other/img1.gif" height="34">
       </template>
     </vxe-pager>
 
@@ -178,14 +178,14 @@ export default {
       isIndeterminate: false,
       selectRecords: [],
       tableData: [
-        { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc', flag: false, time: 1600261774531, html1: '<span style="color:red">自定义HTML</span>', img1: '/jy-table/static/other/img1.gif' },
-        { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou', flag: false, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img1.gif' },
-        { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai', flag: true, time: 1600261774531, html1: '<span style="color:orange">自定义HTML</span>', img1: '/jy-table/static/other/img2.gif' },
-        { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 23, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img2.gif' },
-        { id: 10005, name: 'Test5', role: 'Develop', sex: 'Women', age: 30, address: 'Shanghai', flag: true, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img1.gif' },
-        { id: 10006, name: 'Test6', role: 'Designer', sex: 'Women', age: 21, address: 'test abc', flag: true, time: 1600261774531, html1: '<span style="color:blue">自定义HTML</span>', img1: '/jy-table/static/other/img2.gif' },
-        { id: 10007, name: 'Test7', role: 'Test', sex: 'Man', age: 29, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img1.gif' },
-        { id: 10008, name: 'Test8', role: 'Develop', sex: 'Man', age: 35, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img1.gif' }
+        { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc', flag: false, time: 1600261774531, html1: '<span style="color:red">自定义HTML</span>', img1: '/gj-table/static/other/img1.gif' },
+        { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou', flag: false, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img1.gif' },
+        { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai', flag: true, time: 1600261774531, html1: '<span style="color:orange">自定义HTML</span>', img1: '/gj-table/static/other/img2.gif' },
+        { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 23, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img2.gif' },
+        { id: 10005, name: 'Test5', role: 'Develop', sex: 'Women', age: 30, address: 'Shanghai', flag: true, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img1.gif' },
+        { id: 10006, name: 'Test6', role: 'Designer', sex: 'Women', age: 21, address: 'test abc', flag: true, time: 1600261774531, html1: '<span style="color:blue">自定义HTML</span>', img1: '/gj-table/static/other/img2.gif' },
+        { id: 10007, name: 'Test7', role: 'Test', sex: 'Man', age: 29, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img1.gif' },
+        { id: 10008, name: 'Test8', role: 'Develop', sex: 'Man', age: 35, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img1.gif' }
       ],
       tablePage: {
         total: 0,
@@ -210,7 +210,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-footer
@@ -220,8 +220,8 @@ export default {
           :data="tableData"
           @checkbox-change="checkboxChangeEvent"
           @checkbox-all="checkboxChangeEvent">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="160" :resizable="false" show-overflow>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="160" :resizable="false" show-overflow>
             <template #header>
               <div class="first-col">
                 <div class="first-col-top">名称</div>
@@ -235,13 +235,13 @@ export default {
             <template #default="{ row }">
               <vxe-button @click="showDetailEvent(row)">弹框{{ row.name }}</vxe-button>
             </template>
-          </jy-column>
-          <jy-column field="name" title="app.body.label.name" sortable>
+          </gj-column>
+          <gj-column field="name" title="app.body.label.name" sortable>
             <template #default="{ row }">
-              <a href="https://github.com/x-extends/jy-table" target="_black">我是超链接：{{ row.name }}</a>
+              <a href="https://github.com/x-extends/gj-table" target="_black">我是超链接：{{ row.name }}</a>
             </template>
-          </jy-column>
-          <jy-column field="sex" title="app.body.label.sex" :filters="[{data: ''}]" :filter-method="filterSexMethod">
+          </gj-column>
+          <gj-column field="sex" title="app.body.label.sex" :filters="[{data: ''}]" :filter-method="filterSexMethod">
             <template #header>
               <span style="color: red;">自定义头部</span>
             </template>
@@ -258,8 +258,8 @@ export default {
               <vxe-button type="text">编辑</vxe-button>
               <vxe-button type="text">删除</vxe-button>
             </template>
-          </jy-column>
-          <jy-column field="time" title="Time">
+          </gj-column>
+          <gj-column field="time" title="Time">
             <template #header>
               <vxe-input v-model="value1" placeholder="放个输入框" size="mini"></vxe-input>
             </template>
@@ -274,8 +274,8 @@ export default {
                 <span>{{ formatDate(row.time) }}</span>
               </template>
             </template>
-          </jy-column>
-          <jy-column field="address" title="Address" show-overflow>
+          </gj-column>
+          <gj-column field="address" title="Address" show-overflow>
             <template #default="{ row, rowIndex }">
               <template v-if="rowIndex === 1">
                 <vxe-select v-model="row.flag1" transfer>
@@ -284,27 +284,27 @@ export default {
                 </vxe-select>
               </template>
               <template v-else>
-                <a href="https://github.com/x-extends/jy-table">{{ row.name }}</a>
+                <a href="https://github.com/x-extends/gj-table">{{ row.name }}</a>
               </template>
             </template>
-          </jy-column>
-          <jy-column field="html1" title="Html片段" width="200" show-overflow>
+          </gj-column>
+          <gj-column field="html1" title="Html片段" width="200" show-overflow>
             <template #default="{ row }">
               <span v-html="row.html1"></span>
             </template>
             <template #footer>
               <span>
-                <img src="/jy-table/static/other/img1.gif" style="width: 36px;">自定义模板<img src="/jy-table/static/other/img2.gif" style="width: 30px;">
+                <img src="/gj-table/static/other/img1.gif" style="width: 36px;">自定义模板<img src="/gj-table/static/other/img2.gif" style="width: 30px;">
               </span>
             </template>
-          </jy-column>
-          <jy-column field="img1" title="图片路径" width="120">
+          </gj-column>
+          <gj-column field="img1" title="图片路径" width="120">
             <template #default="{ row }">
               <img v-if="row.img1" :src="row.img1" style="width: 100px;">
               <span v-else>无</span>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
 
         <vxe-pager
           perfect
@@ -330,9 +330,9 @@ export default {
             </span>
           </template>
           <template #right>
-            <img src="/jy-table/static/other/img1.gif" height="34">
-            <img src="/jy-table/static/other/img1.gif" height="34">
-            <img src="/jy-table/static/other/img1.gif" height="34">
+            <img src="/gj-table/static/other/img1.gif" height="34">
+            <img src="/gj-table/static/other/img1.gif" height="34">
+            <img src="/gj-table/static/other/img1.gif" height="34">
           </template>
         </vxe-pager>
 
@@ -354,14 +354,14 @@ export default {
               isIndeterminate: false,
               selectRecords: [],
               tableData: [
-                { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc', flag: false, time: 1600261774531, html1: '<span style="color:red">自定义HTML</span>', img1: '/jy-table/static/other/img1.gif' },
-                { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou', flag: false, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img1.gif' },
-                { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai', flag: true, time: 1600261774531, html1: '<span style="color:orange">自定义HTML</span>', img1: '/jy-table/static/other/img2.gif' },
-                { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 23, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img2.gif' },
-                { id: 10005, name: 'Test5', role: 'Develop', sex: 'Women', age: 30, address: 'Shanghai', flag: true, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img1.gif' },
-                { id: 10006, name: 'Test6', role: 'Designer', sex: 'Women', age: 21, address: 'test abc', flag: true, time: 1600261774531, html1: '<span style="color:blue">自定义HTML</span>', img1: '/jy-table/static/other/img2.gif' },
-                { id: 10007, name: 'Test7', role: 'Test', sex: 'Man', age: 29, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img1.gif' },
-                { id: 10008, name: 'Test8', role: 'Develop', sex: 'Man', age: 35, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/jy-table/static/other/img1.gif' }
+                { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc', flag: false, time: 1600261774531, html1: '<span style="color:red">自定义HTML</span>', img1: '/gj-table/static/other/img1.gif' },
+                { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou', flag: false, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img1.gif' },
+                { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai', flag: true, time: 1600261774531, html1: '<span style="color:orange">自定义HTML</span>', img1: '/gj-table/static/other/img2.gif' },
+                { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 23, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img2.gif' },
+                { id: 10005, name: 'Test5', role: 'Develop', sex: 'Women', age: 30, address: 'Shanghai', flag: true, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img1.gif' },
+                { id: 10006, name: 'Test6', role: 'Designer', sex: 'Women', age: 21, address: 'test abc', flag: true, time: 1600261774531, html1: '<span style="color:blue">自定义HTML</span>', img1: '/gj-table/static/other/img2.gif' },
+                { id: 10007, name: 'Test7', role: 'Test', sex: 'Man', age: 29, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img1.gif' },
+                { id: 10008, name: 'Test8', role: 'Develop', sex: 'Man', age: 35, address: 'test abc', flag: false, time: 1600261774531, html1: '', img1: '/gj-table/static/other/img1.gif' }
               ],
               tablePage: {
                 total: 0,

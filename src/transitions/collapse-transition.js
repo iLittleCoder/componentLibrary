@@ -65,7 +65,7 @@ class Transition {
 }
 
 export default {
-  name: 'JyCollapseTransition',
+  name: 'GjCollapseTransition',
   functional: true,
   render(h, { children }) {
     const data = {

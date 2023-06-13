@@ -2,21 +2,21 @@
   <div>
     <p class="tip">设置 <table-column-api-link prop="edit-render"/>.<table-column-api-link prop="placeholder"/> 启用占位符，但单元格内容为空时，则显示占位符的内容</p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', placeholder: '请点击输入...', attrs: {type: 'text'}}"></jy-column>
-      <jy-column field="nickname" title="Role" :edit-render="{name: 'input', placeholder: '请输入昵称', attrs: {type: 'text', placeholder: '请输入昵称'}}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: 'select', placeholder: '请选择', options: sexList}"></jy-column>
-      <jy-column field="sex2" title="多选下拉" :edit-render="{name: '$select', placeholder: '请选择', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></jy-column>
-      <jy-column field="num1" title="Amount" :edit-render="{name: '$input', placeholder: '请输入数值', props: {type: 'float', digits: 2, placeholder: '请输入数值'}}"></jy-column>
-      <jy-column field="date12" title="Date" :edit-render="{name: '$input', placeholder: '请选择日期', props: {type: 'date', placeholder: '请选择日期'}}"></jy-column>
-      <jy-column field="date13" title="Week" :edit-render="{name: '$input', props: {type: 'week', placeholder: '请选择日期'}}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', placeholder: '请点击输入...', attrs: {type: 'text'}}"></gj-column>
+      <gj-column field="nickname" title="Role" :edit-render="{name: 'input', placeholder: '请输入昵称', attrs: {type: 'text', placeholder: '请输入昵称'}}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: 'select', placeholder: '请选择', options: sexList}"></gj-column>
+      <gj-column field="sex2" title="多选下拉" :edit-render="{name: '$select', placeholder: '请选择', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></gj-column>
+      <gj-column field="num1" title="Amount" :edit-render="{name: '$input', placeholder: '请输入数值', props: {type: 'float', digits: 2, placeholder: '请输入数值'}}"></gj-column>
+      <gj-column field="date12" title="Date" :edit-render="{name: '$input', placeholder: '请选择日期', props: {type: 'date', placeholder: '请选择日期'}}"></gj-column>
+      <gj-column field="date13" title="Week" :edit-render="{name: '$input', props: {type: 'week', placeholder: '请选择日期'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -48,21 +48,21 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', placeholder: '请点击输入...', attrs: {type: 'text'}}"></jy-column>
-          <jy-column field="nickname" title="Role" :edit-render="{name: 'input', placeholder: '请输入昵称', attrs: {type: 'text', placeholder: '请输入昵称'}}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: 'select', placeholder: '请选择', options: sexList}"></jy-column>
-          <jy-column field="sex2" title="多选下拉" :edit-render="{name: '$select', placeholder: '请选择', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></jy-column>
-          <jy-column field="num1" title="Amount" :edit-render="{name: '$input', placeholder: '请输入数值', props: {type: 'float', digits: 2, placeholder: '请输入数值'}}"></jy-column>
-          <jy-column field="date12" title="Date" :edit-render="{name: '$input', placeholder: '请选择日期', props: {type: 'date', placeholder: '请选择日期'}}"></jy-column>
-          <jy-column field="date13" title="Week" :edit-render="{name: '$input', props: {type: 'week', placeholder: '请选择日期'}}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', placeholder: '请点击输入...', attrs: {type: 'text'}}"></gj-column>
+          <gj-column field="nickname" title="Role" :edit-render="{name: 'input', placeholder: '请输入昵称', attrs: {type: 'text', placeholder: '请输入昵称'}}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: 'select', placeholder: '请选择', options: sexList}"></gj-column>
+          <gj-column field="sex2" title="多选下拉" :edit-render="{name: '$select', placeholder: '请选择', options: sexList, props: {multiple: true, placeholder: '请选择'}}"></gj-column>
+          <gj-column field="num1" title="Amount" :edit-render="{name: '$input', placeholder: '请输入数值', props: {type: 'float', digits: 2, placeholder: '请输入数值'}}"></gj-column>
+          <gj-column field="date12" title="Date" :edit-render="{name: '$input', placeholder: '请选择日期', props: {type: 'date', placeholder: '请选择日期'}}"></gj-column>
+          <gj-column field="date13" title="Week" :edit-render="{name: '$input', props: {type: 'week', placeholder: '请选择日期'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

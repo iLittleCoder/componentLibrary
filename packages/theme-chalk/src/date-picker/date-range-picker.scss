@@ -2,14 +2,14 @@
 
 @include b(date-range-picker) {
   width: 532px;
-  &.jy-month-range-picker,
-  &.jy-year-range-picker{
+  &.gj-month-range-picker,
+  &.gj-year-range-picker{
     width: 480px;
   }
-  &.jy-quarter-range-picker{
+  &.gj-quarter-range-picker{
     width: 656px;
   }
-  .jy-month-table{
+  .gj-month-table{
     padding: 0 8px;
   }
 
@@ -32,7 +32,7 @@
 
   &.has-time{
     // 时间日期选择器
-    .jy-date-range-picker__time-header .jy-input__inner{
+    .gj-date-range-picker__time-header .gj-input__inner{
       text-align: center;
       background-color: $--color-neutral;
     }

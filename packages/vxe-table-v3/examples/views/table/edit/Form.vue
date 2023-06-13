@@ -23,20 +23,20 @@
       </vxe-form-item>
     </vxe-form>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
       :loading="loading"
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></jy-column>
-      <jy-column field="role" title="Role" :edit-render="{name: 'input', attrs: {type: 'text'}}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-      <jy-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'number'}}"></jy-column>
-      <jy-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></gj-column>
+      <gj-column field="role" title="Role" :edit-render="{name: 'input', attrs: {type: 'text'}}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+      <gj-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'number'}}"></gj-column>
+      <gj-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -84,20 +84,20 @@ export default {
           </vxe-form-item>
         </vxe-form>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
           :loading="loading"
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></jy-column>
-          <jy-column field="role" title="Role" :edit-render="{name: 'input', attrs: {type: 'text'}}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-          <jy-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'number'}}"></jy-column>
-          <jy-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></gj-column>
+          <gj-column field="role" title="Role" :edit-render="{name: 'input', attrs: {type: 'text'}}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+          <gj-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'number'}}"></gj-column>
+          <gj-column field="date13" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

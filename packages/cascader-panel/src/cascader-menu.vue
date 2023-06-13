@@ -1,21 +1,21 @@
 <script>
-import JyScrollbar from 'GildataDesign/packages/scrollbar';
-import JyEmpty from 'GildataDesign/packages/empty';
+import GjScrollbar from 'GildataDesign/packages/scrollbar';
+import GjEmpty from 'GildataDesign/packages/empty';
 import CascaderNode from './cascader-node.vue';
 import Locale from 'GildataDesign/src/mixins/locale';
 import { generateId } from 'GildataDesign/src/utils/util';
 
 export default {
-  name: 'JyCascaderMenu',
+  name: 'GjCascaderMenu',
 
   mixins: [Locale],
 
   inject: ['panel'],
 
   components: {
-    JyScrollbar,
+    GjScrollbar,
     CascaderNode,
-    JyEmpty
+    GjEmpty
   },
 
   props: {
@@ -77,9 +77,9 @@ export default {
     },
 
     renderEmptyText(h) {
-      // <div class="jy-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
+      // <div class="gj-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
       return (
-        <jy-empty empty-type="noResult" image-size={84}></jy-empty>
+        <gj-empty empty-type="noResult" image-size={84}></gj-empty>
       );
     },
     renderNodeList(h) {
@@ -106,7 +106,7 @@ export default {
 
       return [
         ...nodes,
-        isHoverMenu ? <svg ref='hoverZone' class='jy-cascader-menu__hover-zone'></svg> : null
+        isHoverMenu ? <svg ref='hoverZone' class='gj-cascader-menu__hover-zone'></svg> : null
       ];
     }
   },
@@ -122,19 +122,19 @@ export default {
     }
 
     return (
-      <jy-scrollbar
+      <gj-scrollbar
         tag="ul"
         role="menu"
         id={ menuId }
-        class="jy-cascader-menu"
-        wrap-class="jy-cascader-menu__wrap"
+        class="gj-cascader-menu"
+        wrap-class="gj-cascader-menu__wrap"
         view-class={{
-          'jy-cascader-menu__list': true,
+          'gj-cascader-menu__list': true,
           'is-empty': isEmpty
         }}
         { ...events }>
         { isEmpty ? this.renderEmptyText(h) : this.renderNodeList(h) }
-      </jy-scrollbar>
+      </gj-scrollbar>
     );
   }
 };

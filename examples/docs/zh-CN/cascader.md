@@ -10,10 +10,10 @@
 <div class="cascader-title">
   是否自适应宽度：是/否
 </div>
-<jy-row class="cascader-flex">
+<gj-row class="cascader-flex">
   <div class="cascader-demo">
     <span class="demonstration">单选click触发子菜单</span>
-    <jy-cascader
+    <gj-cascader
       :size="size"
       :show-border="true"
       placeholder="分类"
@@ -21,12 +21,12 @@
       :options="options"
       @change="handleChange"
       :self-adaption="true"
-    ></jy-cascader>
+    ></gj-cascader>
   </div>
 
   <div class="cascader-demo">
     <span class="demonstration">单选click触发子菜单</span>
-    <jy-cascader
+    <gj-cascader
       :size="size"
       :show-border="true"
       placeholder="分类"
@@ -34,40 +34,40 @@
       :options="options"
       @change="handleChange"
       :self-adaption="false"
-    ></jy-cascader>
+    ></gj-cascader>
   </div>
-</jy-row>
+</gj-row>
 <div class="cascader-title">
   单选/多选
 </div>
-<jy-row class="cascader-flex">
+<gj-row class="cascader-flex">
   <div class="cascader-demo">
     <span class="demonstration">单选click触发子菜单</span>
-    <jy-cascader
+    <gj-cascader
       :size="size"
       :show-border="false"
       placeholder="分类"
       v-model="value"
       :options="options"
       @change="handleChange"
-    ></jy-cascader>
+    ></gj-cascader>
   </div>
   <div class="cascader-demo">
     <span class="demonstration">单选hover触发子菜单</span>
-    <jy-cascader
+    <gj-cascader
       :size="size"
       placeholder="选择分类"
       v-model="value1"
       :options="options"
       :props="{ expandTrigger: 'hover' }"
       @change="handleChange"
-    ></jy-cascader>
+    ></gj-cascader>
   </div>
-</jy-row>
-<jy-row class="cascader-flex">
+</gj-row>
+<gj-row class="cascader-flex">
   <div class="cascader-demo">
     <span class="demonstration">多选可搜索click触发子菜单</span>
-    <jy-cascader
+    <gj-cascader
       :size="size"
       :show-border="false"
       placeholder="行业分类"
@@ -77,11 +77,11 @@
       show-footer
       :props="{ multiple: true}"
       @change="handleChange"
-    ></jy-cascader>
+    ></gj-cascader>
   </div>
   <div class="cascader-demo">
     <span class="demonstration">多选hover触发子菜单</span>
-    <jy-cascader
+    <gj-cascader
       :size="size"
       placeholder="市场分类"
       v-model="value3"
@@ -91,9 +91,9 @@
       show-footer
       :show-all-levels="false"
       @change="handleChange"
-    ></jy-cascader>
+    ></gj-cascader>
   </div>
-</jy-row>
+</gj-row>
 
 <script>
   export default {
@@ -200,20 +200,20 @@
 ```html
 <div class="block">
   <span class="demonstration">默认 click 触发子菜单</span>
-  <jy-cascader
+  <gj-cascader
     v-model="value"
     :options="options"
     @change="handleChange"
-  ></jy-cascader>
+  ></gj-cascader>
 </div>
 <div class="block">
   <span class="demonstration">hover 触发子菜单</span>
-  <jy-cascader
+  <gj-cascader
     v-model="value1"
     :options="options"
     :props="{ expandTrigger: 'hover' }"
     @change="handleChange"
-  ></jy-cascader>
+  ></gj-cascader>
 </div>
 
 <script>
@@ -511,7 +511,7 @@
 
 ```html
 <div class="block">
-  <jy-cascader :options="options"></jy-cascader>
+  <gj-cascader :options="options"></gj-cascader>
 </div>
 <script>
   export default {
@@ -802,7 +802,7 @@
 
 ```html
 <div class="block">
-  <jy-cascader :options="options" clearable></jy-cascader>
+  <gj-cascader :options="options" clearable></gj-cascader>
 </div>
 <script>
   export default {
@@ -1092,7 +1092,7 @@
 
 ```html
 <div class="block">
-  <jy-cascader :options="options" :show-all-levels="false"></jy-cascader>
+  <gj-cascader :options="options" :show-all-levels="false"></gj-cascader>
 </div>
 
 <script>
@@ -1384,16 +1384,16 @@
 ```html
 <div class="block">
   <span class="demonstration">默认显示所有Tag</span>
-  <jy-cascader :options="options" :props="props" clearable></jy-cascader>
+  <gj-cascader :options="options" :props="props" clearable></gj-cascader>
 </div>
 <div class="block">
   <span class="demonstration">折叠展示Tag</span>
-  <jy-cascader
+  <gj-cascader
     :options="options"
     :props="props"
     collapse-tags
     clearable
-  ></jy-cascader>
+  ></gj-cascader>
 </div>
 
 <script>
@@ -1475,11 +1475,11 @@
 ```html
 <div class="block">
   <span class="demonstration">多选选择任意一级选项</span>
-  <jy-cascader
+  <gj-cascader
     :options="options"
     :props="{ multiple: true, checkStrictly: true }"
     clearable
-  ></jy-cascader>
+  ></gj-cascader>
 </div>
 
 <script>
@@ -1770,7 +1770,7 @@
 
 ```html
 <div class="block">
-  <jy-cascader :props="props"></jy-cascader>
+  <gj-cascader :props="props"></gj-cascader>
 </div>
 
 <script>
@@ -1811,21 +1811,21 @@
 ```html
 <div class="block">
   <span class="demonstration">单选可搜索</span>
-  <jy-cascader
+  <gj-cascader
     :max-width="150"
     placeholder="试试搜索：指南"
     :options="options"
     filterable
-  ></jy-cascader>
+  ></gj-cascader>
 </div>
 <div class="block">
   <span class="demonstration">多选可搜索</span>
-  <jy-cascader
+  <gj-cascader
     placeholder="试试搜索：指南"
     :options="options"
     :props="{ multiple: true }"
     filterable
-  ></jy-cascader>
+  ></gj-cascader>
 </div>
 
 <script>
@@ -2116,12 +2116,12 @@
 
 ```html
 <div class="block">
-  <jy-cascader :options="options">
+  <gj-cascader :options="options">
     <template slot-scope="{ node, data }">
       <span>{{ data.label }}</span>
       <span v-if="!node.isLeaf"> ({{ data.children.length }}) </span>
     </template>
-  </jy-cascader>
+  </gj-cascader>
 </div>
 
 <script>
@@ -2411,7 +2411,7 @@
 :::demo 和级联选择器一样，通过`options`来指定选项，也可通过`props`来设置多选、动态加载等功能，具体详情见下方 API 表格。
 
 ```html
-<jy-cascader-panel :options="options"></jy-cascader-panel>
+<gj-cascader-panel :options="options"></gj-cascader-panel>
 
 <script>
   export default {

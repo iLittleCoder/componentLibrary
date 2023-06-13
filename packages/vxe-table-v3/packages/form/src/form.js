@@ -143,7 +143,7 @@ export default {
     const hasUseTooltip = VXETable._tooltip
     const defaultSlot = this.$scopedSlots.default
     return h('form', {
-      class: ['jy-table-form', className ? (XEUtils.isFunction(className) ? className({ items: formItems, data, $form: this }) : className) : '', {
+      class: ['gj-table-form', className ? (XEUtils.isFunction(className) ? className({ items: formItems, data, $form: this }) : className) : '', {
         [`size--${vSize}`]: vSize,
         'is--loading': loading
       }],
@@ -153,7 +153,7 @@ export default {
       }
     }, [
       h('div', {
-        class: 'jy-table-form--wrapper jy-row'
+        class: 'gj-table-form--wrapper gj-row'
       }, customLayout ? (defaultSlot ? defaultSlot.call(this, h, {}) : []) : formItems.map((item, index) => {
         return h(VxeFormConfigItem, {
           key: index,
@@ -163,22 +163,22 @@ export default {
         })
       })),
       h('div', {
-        class: 'jy-table-form-slots',
+        class: 'gj-table-form-slots',
         ref: 'hideItem'
       }, customLayout ? [] : (defaultSlot ? defaultSlot.call(this, h, {}) : [])),
       h('div', {
-        class: ['jy-table-loading', {
+        class: ['gj-table-loading', {
           'is--visible': loading
         }]
       }, [
         h('div', {
-          class: 'jy-table-loading--spinner'
+          class: 'gj-table-loading--spinner'
         })
       ]),
       /**
        * 工具提示
        */
-      hasUseTooltip ? h('jy-table-tooltip', {
+      hasUseTooltip ? h('gj-table-tooltip', {
         ref: 'tooltip',
         props: tooltipOpts
       }) : _e()

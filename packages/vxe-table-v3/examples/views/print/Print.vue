@@ -13,19 +13,19 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable"
       height="300"
       :print-config="{}"
       :data="tableData">
-      <jy-table type="checkbox" width="60"></jy-table>
-      <jy-table type="seq" width="60"></jy-table>
-      <jy-table field="name" title="Name"></jy-table>
-      <jy-table field="role" title="Role"></jy-table>
-      <jy-table field="age" title="Age"></jy-table>
-      <jy-table field="address" title="Address"></jy-table>
-    </jy-table>
+      <gj-table type="checkbox" width="60"></gj-table>
+      <gj-table type="seq" width="60"></gj-table>
+      <gj-table field="name" title="Name"></gj-table>
+      <gj-table field="role" title="Role"></gj-table>
+      <gj-table field="age" title="Age"></gj-table>
+      <gj-table field="address" title="Address"></gj-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -207,19 +207,19 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable"
           height="300"
           :print-config="{}"
           :data="tableData">
-          <jy-table type="checkbox" width="60"></jy-table>
-          <jy-table type="seq" width="60"></jy-table>
-          <jy-table field="name" title="Name"></jy-table>
-          <jy-table field="role" title="Role"></jy-table>
-          <jy-table field="age" title="Age"></jy-table>
-          <jy-table field="address" title="Address"></jy-table>
-        </jy-table>
+          <gj-table type="checkbox" width="60"></gj-table>
+          <gj-table type="seq" width="60"></gj-table>
+          <gj-table field="name" title="Name"></gj-table>
+          <gj-table field="role" title="Role"></gj-table>
+          <gj-table field="age" title="Age"></gj-table>
+          <gj-table field="address" title="Address"></gj-table>
+        </gj-table>
         `,
         `
         // 打印样式

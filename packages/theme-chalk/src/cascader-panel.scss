@@ -16,7 +16,7 @@
   }
 
   @include when(multiple) {
-    .jy-cascader-node {
+    .gj-cascader-node {
       &.in-active-path,
       &.is-selectable.in-checked-path,
       &.is-active {
@@ -34,12 +34,12 @@
 
   &:last-child {
     border-right: none;
-    .jy-cascader-node {
+    .gj-cascader-node {
       padding-right: 20px;
     }
   }
 
-  .jy-scrollbar__wrap {
+  .gj-scrollbar__wrap {
     height: 204px;
   }
 
@@ -135,10 +135,10 @@
     text-overflow: ellipsis;
   }
 
-  > .jy-radio {
+  > .gj-radio {
     margin-right: 0;
 
-    .jy-radio__label {
+    .gj-radio__label {
       padding-left: 0;
     }
   }

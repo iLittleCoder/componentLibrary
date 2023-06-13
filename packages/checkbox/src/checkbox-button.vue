@@ -1,8 +1,8 @@
 <template>
   <label
-    class="jy-checkbox-button"
+    class="gj-checkbox-button"
       :class="[
-        size ? 'jy-checkbox-button--no' + size : '',
+        size ? 'gj-checkbox-button--no' + size : '',
         { 'is-disabled': isDisabled },
         { 'is-checked': isChecked },
         { 'is-focus': focus },
@@ -13,7 +13,7 @@
     >
     <input
       v-if="trueLabel || falseLabel"
-      class="jy-checkbox-button__original"
+      class="gj-checkbox-button__original"
       type="checkbox"
       :name="name"
       :disabled="isDisabled"
@@ -25,7 +25,7 @@
       @blur="focus = false">
     <input
       v-else
-      class="jy-checkbox-button__original"
+      class="gj-checkbox-button__original"
       type="checkbox"
       :name="name"
       :disabled="isDisabled"
@@ -35,7 +35,7 @@
       @focus="focus = true"
       @blur="focus = false">
 
-    <span class="jy-checkbox-button__inner"
+    <span class="gj-checkbox-button__inner"
       v-if="$slots.default || label"
       :style="isChecked ? activeStyle : null">
       <slot>{{label}}</slot>
@@ -47,15 +47,15 @@
   import Emitter from 'GildataDesign/src/mixins/emitter';
 
   export default {
-    name: 'JyCheckboxButton',
+    name: 'GjCheckboxButton',
 
     mixins: [Emitter],
 
     inject: {
-      jyForm: {
+      GjForm: {
         default: ''
       },
-      jyFormItem: {
+      GjFormItem: {
         default: ''
       }
     },
@@ -97,7 +97,7 @@
               (this.isLimitExceeded = true));
 
             this.isLimitExceeded === false &&
-            this.dispatch('JyCheckboxGroup', 'input', [val]);
+            this.dispatch('GjCheckboxGroup', 'input', [val]);
           } else if (this.value !== undefined) {
             this.$emit('input', val);
           } else {
@@ -119,7 +119,7 @@
       _checkboxGroup() {
         let parent = this.$parent;
         while (parent) {
-          if (parent.$options.componentName !== 'JyCheckboxGroup') {
+          if (parent.$options.componentName !== 'GjCheckboxGroup') {
             parent = parent.$parent;
           } else {
             return parent;
@@ -143,7 +143,7 @@
       },
 
       _elFormItemSize() {
-        return (this.jyFormItem || {}).jyFormItemSize;
+        return (this.GjFormItem || {}).GjFormItemSize;
       },
 
       size() {
@@ -160,8 +160,8 @@
 
       isDisabled() {
         return this._checkboxGroup
-          ? this._checkboxGroup.disabled || this.disabled || (this.jyForm || {}).disabled || this.isLimitDisabled
-          : this.disabled || (this.jyForm || {}).disabled;
+          ? this._checkboxGroup.disabled || this.disabled || (this.GjForm || {}).disabled || this.isLimitDisabled
+          : this.disabled || (this.GjForm || {}).disabled;
       }
     },
     methods: {
@@ -186,7 +186,7 @@
         this.$emit('change', value, ev);
         this.$nextTick(() => {
           if (this._checkboxGroup) {
-            this.dispatch('JyCheckboxGroup', 'change', [this._checkboxGroup.value]);
+            this.dispatch('GjCheckboxGroup', 'change', [this._checkboxGroup.value]);
           }
         });
       }

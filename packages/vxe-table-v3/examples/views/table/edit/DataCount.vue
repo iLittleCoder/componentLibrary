@@ -5,7 +5,7 @@
       <span class="red">（具体请自行实现，该示例仅供参考）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -13,16 +13,16 @@
       :data="tableData"
       :footer-method="footerMethod"
       :edit-config="{trigger: 'click', mode: 'cell'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="书名" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="amount" title="单价" :edit-render="{name: '$input', props: {type: 'number'}}"></jy-column>
-      <jy-column field="number" title="数量" :edit-render="{name: '$input', props: {type: 'number'}}"></jy-column>
-      <jy-column title="总价">
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="书名" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="amount" title="单价" :edit-render="{name: '$input', props: {type: 'number'}}"></gj-column>
+      <gj-column field="number" title="数量" :edit-render="{name: '$input', props: {type: 'number'}}"></gj-column>
+      <gj-column title="总价">
         <template #default="{ row }">
           <span>{{ countAmount(row) }} 元</span>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -45,7 +45,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -53,16 +53,16 @@ export default {
           :data="tableData"
           :footer-method="footerMethod"
           :edit-config="{trigger: 'click', mode: 'cell'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="书名" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="amount" title="单价" :edit-render="{name: '$input', props: {type: 'number'}}"></jy-column>
-          <jy-column field="number" title="数量" :edit-render="{name: '$input', props: {type: 'number'}}"></jy-column>
-          <jy-column title="总价">
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="书名" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="amount" title="单价" :edit-render="{name: '$input', props: {type: 'number'}}"></gj-column>
+          <gj-column field="number" title="数量" :edit-render="{name: '$input', props: {type: 'number'}}"></gj-column>
+          <gj-column title="总价">
             <template #default="{ row }">
               <span>{{ countAmount(row) }} 元</span>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         export default {

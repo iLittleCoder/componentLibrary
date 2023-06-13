@@ -2,7 +2,7 @@
   <div>
     <p class="tip">右键菜单，支持表头菜单、内容菜单、表尾菜单，自定义样式，配置项 <table-api-link prop="menu-config"/>={header,body,footer}</p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       highlight-current-row
@@ -12,12 +12,12 @@
       :data="tableData"
       :menu-config="tableMenu"
       @menu-click="contextMenuClickEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="time" title="Time"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="time" title="Time"></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -102,7 +102,7 @@ export default {
       },
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-footer
           highlight-current-row
@@ -112,12 +112,12 @@ export default {
           :data="tableData"
           :menu-config="tableMenu"
           @menu-click="contextMenuClickEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="time" title="Time"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="time" title="Time"></gj-column>
+        </gj-table>
         `,
         `
         import XEClipboard from 'xe-clipboard'

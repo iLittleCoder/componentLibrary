@@ -9,46 +9,46 @@
 :::demo 定义`value`属性，它接受`Number`或者`String`。
 
 ```html
-<jy-badge :value="12" class="item">
-  <jy-button size="small">评论</jy-button>
-</jy-badge>
-<jy-badge :value="3" class="item">
-  <jy-button size="small">回复</jy-button>
-</jy-badge>
-<jy-badge :value="1" class="item" type="primary">
-  <jy-button size="small">评论</jy-button>
-</jy-badge>
-<jy-badge :value="2" class="item" type="warning">
-  <jy-button size="small">回复</jy-button>
-</jy-badge>
+<gj-badge :value="12" class="item">
+  <gj-button size="small">评论</gj-button>
+</gj-badge>
+<gj-badge :value="3" class="item">
+  <gj-button size="small">回复</gj-button>
+</gj-badge>
+<gj-badge :value="1" class="item" type="primary">
+  <gj-button size="small">评论</gj-button>
+</gj-badge>
+<gj-badge :value="2" class="item" type="warning">
+  <gj-button size="small">回复</gj-button>
+</gj-badge>
 
-<jy-dropdown trigger="click">
-  <span class="jy-dropdown-link">
+<gj-dropdown trigger="click">
+  <span class="gj-dropdown-link">
     点我查看<i class="Gildata-downarrow el-icon--right"></i>
   </span>
-  <jy-dropdown-menu slot="dropdown">
-    <jy-dropdown-item class="clearfix">
+  <gj-dropdown-menu slot="dropdown">
+    <gj-dropdown-item class="clearfix">
       <div class="demo-flex">
         <div class="demo-flex-content">
           评论
         </div>
         <div class="demo-flex-badge">
-          <jy-badge class="mark" :value="12"> </jy-badge>
+          <gj-badge class="mark" :value="12"> </gj-badge>
         </div>
       </div>
-    </jy-dropdown-item>
-    <jy-dropdown-item class="clearfix">
+    </gj-dropdown-item>
+    <gj-dropdown-item class="clearfix">
       <div class="demo-flex">
         <div class="demo-flex-content">
           回复
         </div>
         <div class="demo-flex-badge">
-          <jy-badge class="mark" :value="3"> </jy-badge>
+          <gj-badge class="mark" :value="3"> </gj-badge>
         </div>
       </div>
-    </jy-dropdown-item>
-  </jy-dropdown-menu>
-</jy-dropdown>
+    </gj-dropdown-item>
+  </gj-dropdown-menu>
+</gj-dropdown>
 
 <style>
   .item {
@@ -67,12 +67,12 @@
 :::demo 由`max`属性定义，它接受一个`Number`，需要注意的是，只有当`value`为`Number`时，它才会生效。
 
 ```html
-<jy-badge :value="200" :max="99" class="item">
-  <jy-button size="small">评论</jy-button>
-</jy-badge>
-<jy-badge :value="100" :max="10" class="item">
-  <jy-button size="small">回复</jy-button>
-</jy-badge>
+<gj-badge :value="200" :max="99" class="item">
+  <gj-button size="small">评论</gj-button>
+</gj-badge>
+<gj-badge :value="100" :max="10" class="item">
+  <gj-button size="small">回复</gj-button>
+</gj-badge>
 
 <style>
   .item {
@@ -91,12 +91,12 @@
 :::demo 定义`value`为`String`类型是时可以用于显示自定义文本。
 
 ```html
-<jy-badge value="new" type="primary" class="item">
-  <jy-button size="small">评论</jy-button>
-</jy-badge>
-<jy-badge value="hot" class="item">
-  <jy-button size="small">回复</jy-button>
-</jy-badge>
+<gj-badge value="new" type="primary" class="item">
+  <gj-button size="small">评论</gj-button>
+</gj-badge>
+<gj-badge value="hot" class="item">
+  <gj-button size="small">回复</gj-button>
+</gj-badge>
 
 <style>
   .item {
@@ -115,10 +115,10 @@
 :::demo 除了数字外，设置`is-dot`属性，它接受一个`Boolean`。
 
 ```html
-<jy-badge is-dot class="item">
+<gj-badge is-dot class="item">
   <i class="Gildata-folder"></i>
-</jy-badge>
-<jy-badge is-dot class="item">消息</jy-badge>
+</gj-badge>
+<gj-badge is-dot class="item">消息</gj-badge>
 
 <style>
   .item {

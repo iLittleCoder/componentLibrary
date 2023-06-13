@@ -64,7 +64,7 @@ const convertToRows = (originColumns) => {
 };
 
 export default {
-  name: 'JyTableHeader',
+  name: 'GjTableHeader',
 
   mixins: [LayoutObserver],
 
@@ -76,7 +76,7 @@ export default {
     if (isGroup) this.$parent.isGroup = true;
     return (
       <table
-        class="jy-table__header"
+        class="gj-table__header"
         cellspacing="0"
         cellpadding="0"
         border="0">
@@ -127,7 +127,7 @@ export default {
                       }
                       {
                         column.filterable ? (<span
-                          class="jy-table__column-filter-trigger"
+                          class="gj-table__column-filter-trigger"
                           on-click={ ($event) => this.handleFilterClick($event, column) }>
                           <i class={ ['el-icon-arrow-down', column.filterOpened ? 'el-icon-arrow-up' : ''] }></i>
                         </span>) : ''
@@ -136,7 +136,7 @@ export default {
                   </th>))
                 }
                 {
-                  this.hasGutter ? <th class="jy-table__cell gutter"></th> : ''
+                  this.hasGutter ? <th class="gj-table__cell gutter"></th> : ''
                 }
               </tr>
             )
@@ -286,7 +286,7 @@ export default {
         }));
       }
 
-      classes.push('jy-table__cell');
+      classes.push('gj-table__cell');
 
       return classes.join(' ');
     },
@@ -300,7 +300,7 @@ export default {
       const target = event.target;
       let cell = target.tagName === 'TH' ? target : target.parentNode;
       if (hasClass(cell, 'noclick')) return;
-      cell = cell.querySelector('.jy-table__column-filter-trigger') || cell;
+      cell = cell.querySelector('.gj-table__column-filter-trigger') || cell;
       const table = this.$parent;
 
       let filterPanel = this.filterPanels[column.id];

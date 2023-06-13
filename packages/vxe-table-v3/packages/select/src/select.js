@@ -129,7 +129,7 @@ export function renderOption (h, _vm, list, group) {
     const defaultSlot = slots ? slots.default : null
     return isVisible ? h('div', {
       key: useKey || optionKey ? optid : cIndex,
-      class: ['jy-table-select-option', option.className, {
+      class: ['gj-table-select-option', option.className, {
         'is--disabled': isDisabled,
         'is--selected': multiple ? (value && value.indexOf(optionValue) > -1) : value === optionValue,
         'is--hover': currentValue === optionValue
@@ -164,7 +164,7 @@ export function renderOptgroup (h, _vm) {
     const defaultSlot = slots ? slots.default : null
     return h('div', {
       key: useKey || optionKey ? optid : gIndex,
-      class: ['jy-table-optgroup', group.className, {
+      class: ['gj-table-optgroup', group.className, {
         'is--disabled': isGroupDisabled
       }],
       attrs: {
@@ -172,10 +172,10 @@ export function renderOptgroup (h, _vm) {
       }
     }, [
       h('div', {
-        class: 'jy-table-optgroup--title'
+        class: 'gj-table-optgroup--title'
       }, defaultSlot ? _vm.callSlot(defaultSlot, { option: group, $select: _vm }, h) : getFuncText(group[groupLabelField])),
       h('div', {
-        class: 'jy-table-optgroup--wrapper'
+        class: 'gj-table-optgroup--wrapper'
       }, renderOption(h, _vm, group[groupOptionsField], group))
     ])
   })
@@ -194,7 +194,7 @@ function renderOpts (h, _vm) {
   }
   return [
     h('div', {
-      class: 'jy-table-select--empty-placeholder'
+      class: 'gj-table-select--empty-placeholder'
     }, _vm.emptyText || GlobalConfig.i18n('vxe.select.emptyText'))
   ]
 }
@@ -352,7 +352,7 @@ export default {
     const { $scopedSlots, vSize, className, inited, isActivated, loading, disabled, visiblePanel } = this
     const prefixSlot = $scopedSlots.prefix
     return h('div', {
-      class: ['jy-table-select', className ? (XEUtils.isFunction(className) ? className({ $select: this }) : className) : '', {
+      class: ['gj-table-select', className ? (XEUtils.isFunction(className) ? className({ $select: this }) : className) : '', {
         [`size--${vSize}`]: vSize,
         'is--visivle': visiblePanel,
         'is--disabled': disabled,
@@ -361,7 +361,7 @@ export default {
       }]
     }, [
       h('div', {
-        class: 'jy-table-select-slots',
+        class: 'gj-table-select-slots',
         ref: 'hideOption'
       }, this.$slots.default),
       h('vxe-input', {
@@ -389,7 +389,7 @@ export default {
       }),
       h('div', {
         ref: 'panel',
-        class: ['jy-table--ignore-clear jy-table-select--panel', {
+        class: ['gj-table--ignore-clear gj-table-select--panel', {
           [`size--${vSize}`]: vSize,
           'is--transfer': this.transfer,
           'animat--leave': !loading && this.animatVisible,
@@ -402,7 +402,7 @@ export default {
       }, inited ? [
         h('div', {
           ref: 'optWrapper',
-          class: 'jy-table-select-option--wrapper'
+          class: 'gj-table-select-option--wrapper'
         }, renderOpts(h, this))
       ] : null)
     ])

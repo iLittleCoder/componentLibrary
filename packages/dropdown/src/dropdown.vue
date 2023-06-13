@@ -2,22 +2,22 @@
   import Clickoutside from 'GildataDesign/src/utils/clickoutside';
   import Emitter from 'GildataDesign/src/mixins/emitter';
   import Migrating from 'GildataDesign/src/mixins/migrating';
-  import JyButton from 'GildataDesign/packages/button';
-  import JyButtonGroup from 'GildataDesign/packages/button-group';
+  import GjButton from 'GildataDesign/packages/button';
+  import GjButtonGroup from 'GildataDesign/packages/button-group';
   import { generateId } from 'GildataDesign/src/utils/util';
 
   export default {
-    name: 'JyDropdown',
+    name: 'GjDropdown',
 
-    componentName: 'JyDropdown',
+    componentName: 'GjDropdown',
 
     mixins: [Emitter, Migrating],
 
     directives: { Clickoutside },
 
     components: {
-      JyButton,
-      JyButtonGroup
+      GjButton,
+      GjButtonGroup
     },
 
     provide() {
@@ -91,11 +91,11 @@
 
     watch: {
       visible(val) {
-        this.broadcast('JyDropdownMenu', 'visible', val);
+        this.broadcast('GjDropdownMenu', 'visible', val);
         this.$emit('visible-change', val);
       },
       focusing(val) {
-        const selfDefine = this.$el.querySelector('.jy-dropdown-selfdefine');
+        const selfDefine = this.$el.querySelector('.gj-dropdown-selfdefine');
         if (selfDefine) { // 自定义
           if (val) {
             selfDefine.className += ' focusing';
@@ -201,7 +201,7 @@
         if (!this.splitButton) { // 自定义
           this.triggerElm.setAttribute('role', 'button');
           this.triggerElm.setAttribute('tabindex', this.tabindex);
-          this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' jy-dropdown-selfdefine'); // 控制
+          this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' gj-dropdown-selfdefine'); // 控制
         }
       },
       initEvent() {
@@ -264,14 +264,14 @@
 
       let triggerElm = null;
       if (splitButton) {
-        triggerElm = <jy-button-group>
-          <jy-button type={type} size={dropdownSize || 'small'} nativeOn-click={handleMainButtonClick} disabled={disabled}>
+        triggerElm = <gj-button-group>
+          <gj-button type={type} size={dropdownSize || 'small'} nativeOn-click={handleMainButtonClick} disabled={disabled}>
             {this.$slots.default}
-          </jy-button>
-          <jy-button ref="trigger" type={type} size={dropdownSize || 'small'} class="jy-dropdown__caret-button" disabled={disabled}>
-            <i class="jy-dropdown__icon Gildata-more"></i>
-          </jy-button>
-        </jy-button-group>;
+          </gj-button>
+          <gj-button ref="trigger" type={type} size={dropdownSize || 'small'} class="gj-dropdown__caret-button" disabled={disabled}>
+            <i class="gj-dropdown__icon Gildata-more"></i>
+          </gj-button>
+        </gj-button-group>;
       } else {
         triggerElm = this.$slots.default;
         const vnodeData = triggerElm[0].data || {};
@@ -284,7 +284,7 @@
       const menuElm = disabled ? null : this.$slots.dropdown;
 
       return (
-        <div class={{'jy-dropdown': true, 'is-visible': visible }} v-clickoutside={hide} aria-disabled={disabled}>
+        <div class={{'gj-dropdown': true, 'is-visible': visible }} v-clickoutside={hide} aria-disabled={disabled}>
           {triggerElm}
           {menuElm}
         </div>

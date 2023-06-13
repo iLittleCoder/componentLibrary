@@ -3,7 +3,7 @@
     height: calc(100% - 60px);
     margin-top: 60px;
 
-    > .jy-scrollbar__wrap {
+    > .gj-scrollbar__wrap {
       overflow-x: hidden;
     }
   }
@@ -20,7 +20,7 @@
     margin-top: 60px;
     transition: padding-top .3s;
 
-  > .jy-scrollbar__wrap {
+  > .gj-scrollbar__wrap {
     height: 100%;
     overflow-x: auto;
   }
@@ -87,14 +87,14 @@
   }
 </style>
 <template>
-  <jy-scrollbar class="page-component__scroll" ref="componentScrollBar">
+  <gj-scrollbar class="page-component__scroll" ref="componentScrollBar">
   <div class="page-container page-guide">
-    <jy-scrollbar class="page-component__nav">
+    <gj-scrollbar class="page-component__nav">
       <side-nav :data="navsData" :base="`/${ lang }/guide`"></side-nav>
-    </jy-scrollbar>
+    </gj-scrollbar>
     <router-view class="content"></router-view>
   </div>
-  </jy-scrollbar>
+  </gj-scrollbar>
 </template>
 <script>
   export default {

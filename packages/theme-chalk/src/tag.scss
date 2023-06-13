@@ -21,7 +21,7 @@
     }
   }
 
-  .jy-tag__close {
+  .gj-tag__close {
     color: $--color-primary;
     &:hover,
     &:focus {
@@ -32,7 +32,7 @@
     }
   }
 
-  &.jy-tag--info {
+  &.gj-tag--info {
     background-color: $--color-neutral-hover;
     // border-color: $--color-neutral-hover;
     border-color: transparent;
@@ -53,7 +53,7 @@
       }
     }
 
-    .jy-tag__close {
+    .gj-tag__close {
       color: $--color-text-secondary;
       &:hover,
       &:focus {
@@ -65,7 +65,7 @@
     }
   }
 
-  &.jy-tag--success {
+  &.gj-tag--success {
     background-color: $--background-success-color;
     border-color: $--background-success-color;
     color: $--color-success;
@@ -85,7 +85,7 @@
       }
     }
 
-    .jy-tag__close {
+    .gj-tag__close {
       color: $--color-success;
       &:hover,
       &:focus {
@@ -97,7 +97,7 @@
     }
   }
 
-  &.jy-tag--warning {
+  &.gj-tag--warning {
     background-color: $--background-warning-color;
     border-color: $--background-warning-color;
     color: $--color-warning;
@@ -117,7 +117,7 @@
       }
     }
 
-    .jy-tag__close {
+    .gj-tag__close {
       color: $--color-warning;
       &:hover,
       &:focus {
@@ -129,7 +129,7 @@
     }
   }
 
-  &.jy-tag--danger {
+  &.gj-tag--danger {
     background-color: $--background-danger-color;
     border-color: $--background-danger-color;
     color: $--color-danger;
@@ -149,7 +149,7 @@
       }
     }
 
-    .jy-tag__close {
+    .gj-tag__close {
       color: $--color-danger;
       &:hover,
       &:focus {

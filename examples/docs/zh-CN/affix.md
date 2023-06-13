@@ -11,9 +11,9 @@
 
 ```html
 <template>
-  <jy-affix :offset="120">
-    <jy-button type="primary">Offset top 120px</jy-button>
-  </jy-affix>
+  <gj-affix :offset="120">
+    <gj-button type="primary">Offset top 120px</gj-button>
+  </gj-affix>
 </template>
 ```
 
@@ -30,9 +30,9 @@
 ```html
 <template>
   <div class="affix-container">
-    <jy-affix target=".affix-container" :offset="80">
-      <jy-button type="primary">Target container</jy-button>
-    </jy-affix>
+    <gj-affix target=".affix-container" :offset="80">
+      <gj-button type="primary">Target container</gj-button>
+    </gj-affix>
   </div>
 </template>
 ```
@@ -49,9 +49,9 @@ Affix 组件提供 2 个固定的位置参数 top 和 bottom。
 
 ```html
 <template>
-  <jy-affix position="bottom" :offset="20" @scroll="handleScroll" @change="handleChange">
-    <jy-button type="primary">Offset bottom 20px</jy-button>
-  </jy-affix>
+  <gj-affix position="bottom" :offset="20" @scroll="handleScroll" @change="handleChange">
+    <gj-button type="primary">Offset bottom 20px</gj-button>
+  </gj-affix>
 </template>
 <script>
   export default {

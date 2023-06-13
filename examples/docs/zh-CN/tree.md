@@ -10,7 +10,7 @@
 
 ```html
 <div class="tree-demo">
-  <jy-tree
+  <gj-tree
     :dbclick="true"
     icon-left-class="Gildata-folder"
     icon-right-class="Gildata-plus"
@@ -18,7 +18,7 @@
     :props="defaultProps"
     @check-change="handleCheckChange"
     @node-click="handleNodeClick"
-  ></jy-tree>
+  ></gj-tree>
 </div>
 <script>
   export default {
@@ -111,11 +111,11 @@
 :::demo
 
 ```html
-<jy-tree
+<gj-tree
   :data="data"
   :props="defaultProps"
   @node-click="handleNodeClick"
-></jy-tree>
+></gj-tree>
 
 <script>
   export default {
@@ -202,14 +202,14 @@
 :::demo 本例还展示了动态加载节点数据的方法。
 
 ```html
-<jy-tree
+<gj-tree
   :props="props"
   :load="loadNode"
   lazy
   show-checkbox
   @check-change="handleCheckChange"
 >
-</jy-tree>
+</gj-tree>
 
 <script>
   export default {
@@ -274,7 +274,7 @@
 :::demo 由于在点击节点时才进行该层数据的获取，默认情况下 Tree 无法预知某个节点是否为叶子节点，所以会为每个节点添加一个下拉按钮，如果节点没有下层数据，则点击后下拉按钮会消失。同时，你也可以提前告知 Tree 某个节点是否为叶子节点，从而避免在叶子节点前渲染下拉按钮。
 
 ```html
-<jy-tree :props="props" :load="loadNode" lazy show-checkbox> </jy-tree>
+<gj-tree :props="props" :load="loadNode" lazy show-checkbox> </gj-tree>
 
 <script>
   export default {
@@ -322,7 +322,7 @@
 :::demo 分别通过`default-expanded-keys`和`default-checked-keys`设置默认展开和默认选中的节点。需要注意的是，此时必须设置`node-key`，其值为节点数据中的一个字段名，该字段在整棵树中是唯一的。
 
 ```html
-<jy-tree
+<gj-tree
   :data="data"
   show-checkbox
   node-key="id"
@@ -330,7 +330,7 @@
   :default-checked-keys="[5]"
   :props="defaultProps"
 >
-</jy-tree>
+</gj-tree>
 
 <script>
   export default {
@@ -405,14 +405,14 @@
 :::demo 通过`disabled`设置禁用状态。
 
 ```html
-<jy-tree
+<gj-tree
   :data="data"
   show-checkbox
   node-key="id"
   :default-expanded-keys="[2, 3]"
   :default-checked-keys="[5]"
 >
-</jy-tree>
+</gj-tree>
 
 <script>
   export default {
@@ -475,7 +475,7 @@
 :::demo 本例展示如何获取和设置选中节点。获取和设置各有两种方式：通过 node 或通过 key。如果需要通过 key 来获取或设置，则必须设置`node-key`。
 
 ```html
-<jy-tree
+<gj-tree
   :data="data"
   show-checkbox
   default-expand-all
@@ -484,14 +484,14 @@
   highlight-current
   :props="defaultProps"
 >
-</jy-tree>
+</gj-tree>
 
 <div class="buttons">
-  <jy-button @click="getCheckedNodes">通过 node 获取</jy-button>
-  <jy-button @click="getCheckedKeys">通过 key 获取</jy-button>
-  <jy-button @click="setCheckedNodes">通过 node 设置</jy-button>
-  <jy-button @click="setCheckedKeys">通过 key 设置</jy-button>
-  <jy-button @click="resetChecked">清空</jy-button>
+  <gj-button @click="getCheckedNodes">通过 node 获取</gj-button>
+  <gj-button @click="getCheckedKeys">通过 key 获取</gj-button>
+  <gj-button @click="setCheckedNodes">通过 node 设置</gj-button>
+  <gj-button @click="setCheckedKeys">通过 key 设置</gj-button>
+  <gj-button @click="resetChecked">清空</gj-button>
 </div>
 
 <script>
@@ -597,18 +597,18 @@
 <div class="custom-tree-container">
   <div class="block">
     <p>使用 render-content增加tooltip</p>
-    <jy-tree
+    <gj-tree
       :data="data"
       node-key="id"
       default-expand-all
       :expand-on-click-node="false"
       :render-content="renderContent"
     >
-    </jy-tree>
+    </gj-tree>
   </div>
   <div class="block">
     <p>使用 scoped slot</p>
-    <jy-tree
+    <gj-tree
       :data="data1"
       show-checkbox
       node-key="id"
@@ -618,15 +618,15 @@
       <span class="custom-tree-node" slot-scope="{ node, data }">
         <span>{{ node.label }}</span>
         <span>
-          <jy-button type="text" size="mini" @click="() => append(data)">
+          <gj-button type="text" size="mini" @click="() => append(data)">
             Append
-          </jy-button>
-          <jy-button type="text" size="mini" @click="() => remove(node, data)">
+          </gj-button>
+          <gj-button type="text" size="mini" @click="() => remove(node, data)">
             Delete
-          </jy-button>
+          </gj-button>
         </span>
       </span>
-    </jy-tree>
+    </gj-tree>
   </div>
 </div>
 
@@ -713,14 +713,14 @@
         } else {
           return (
             <span class="custom-tree-tooltip">
-              <jy-tooltip
+              <gj-tooltip
                 class="item"
                 effect="dark"
                 content="This is Top 提示文字"
                 placement="top"
               >
                 <i class="Gildata-help custom-tree-icon" />
-              </jy-tooltip>
+              </gj-tooltip>
               <span>{node.label}</span>
             </span>
           );
@@ -751,9 +751,9 @@
 :::demo 在需要对节点进行过滤时，调用 Tree 实例的`filter`方法，参数为关键字。需要注意的是，此时需要设置`filter-node-method`，值为过滤函数。
 
 ```html
-<jy-input placeholder="输入关键字进行过滤" v-model="filterText"> </jy-input>
+<gj-input placeholder="输入关键字进行过滤" v-model="filterText"> </gj-input>
 
-<jy-tree
+<gj-tree
   class="filter-tree"
   :data="data"
   :props="defaultProps"
@@ -761,7 +761,7 @@
   :filter-node-method="filterNode"
   ref="tree"
 >
-</jy-tree>
+</gj-tree>
 
 <script>
   export default {
@@ -850,13 +850,13 @@
 :::demo
 
 ```html
-<jy-tree
+<gj-tree
   :data="data"
   :props="defaultProps"
   accordion
   @node-click="handleNodeClick"
 >
-</jy-tree>
+</gj-tree>
 
 <script>
   export default {
@@ -944,7 +944,7 @@
 
 ```html
 <div class="tree-demo">
-  <jy-tree
+  <gj-tree
     :data="data"
     node-key="id"
     default-expand-all
@@ -958,7 +958,7 @@
     :allow-drop="allowDrop"
     :allow-drag="allowDrag"
   >
-  </jy-tree>
+  </gj-tree>
 </div>
 <script>
   export default {

@@ -263,7 +263,7 @@ export default {
         vxeOptgroup: 'vxe-optgroup',
         vxeOption: 'vxe-option',
         vxeButton: 'vxe-button',
-        vxeTooltip: 'jy-table-tooltip',
+        vxeTooltip: 'gj-table-tooltip',
         vxeModal: 'vxe-modal',
         vxeForm: 'vxe-form',
         vxeFormItem: 'vxe-form-item',

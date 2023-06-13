@@ -92,7 +92,7 @@ Object.keys(props).forEach(name => {
 })
 
 export default {
-  name: 'JyColumn',
+  name: 'GjColumn',
   props,
   provide () {
     return {

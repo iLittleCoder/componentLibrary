@@ -9,7 +9,7 @@
     <!-- 只当在 event.target 是当前元素自身时触发处理函数, 即点击弹框背景是触发，点击弹框内部元素不会触发 -->
     <div
       v-show="visible"
-      class="jy-dialog__wrapper"
+      class="gj-dialog__wrapper"
       @click.self="handleWrapperClick">
       <!--通过改变key值来销毁div-->
       <div
@@ -17,29 +17,29 @@
         :key="key"
         aria-modal="true"
         :aria-label="title || 'dialog'"
-        :class="['jy-dialog', { 'is-fullscreen': fullscreen, 'jy-dialog--center': center }, customClass]"
+        :class="['gj-dialog', { 'is-fullscreen': fullscreen, 'gj-dialog--center': center }, customClass]"
         ref="dialog"
         :style="style">
         <!--dialog_header包含：标题、关闭按钮-->
-        <div class="jy-dialog__header">
+        <div class="gj-dialog__header">
           <!--标题-->
           <slot name="title">
-            <span class="jy-dialog__title">{{ title }}</span>
+            <span class="gj-dialog__title">{{ title }}</span>
           </slot>
           <!--关闭按钮-->
           <button
             type="button"
-            class="jy-dialog__headerbtn"
+            class="gj-dialog__headerbtn"
             aria-label="Close"
             v-if="showClose"
             @click="handleClose">
-            <i class="jy-dialog__close jy-icon Gildata-close"></i>
+            <i class="gj-dialog__close gj-icon Gildata-close"></i>
           </button>
         </div>
         <!--中间的内容-->
-        <div class="jy-dialog__body" v-if="rendered"><slot></slot></div>
+        <div class="gj-dialog__body" v-if="rendered"><slot></slot></div>
         <!--底部内容-->
-        <div class="jy-dialog__footer" v-if="$slots.footer">
+        <div class="gj-dialog__footer" v-if="$slots.footer">
           <slot name="footer"></slot>
         </div>
       </div>
@@ -53,7 +53,7 @@
   import emitter from 'GildataDesign/src/mixins/emitter';
 
   export default {
-    name: 'JyDialog',
+    name: 'GjDialog',
 
     mixins: [Popup, emitter, Migrating],
 
@@ -197,8 +197,8 @@
         }
       },
       updatePopper() {
-        this.broadcast('JySelectDropdown', 'updatePopper');
-        this.broadcast('JyDropdownMenu', 'updatePopper');
+        this.broadcast('GjSelectDropdown', 'updatePopper');
+        this.broadcast('GjDropdownMenu', 'updatePopper');
       },
       afterEnter() {
         this.$emit('opened');

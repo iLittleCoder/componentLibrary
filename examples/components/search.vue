@@ -1,5 +1,5 @@
 <template>
-  <jy-autocomplete
+  <gj-autocomplete
     v-model="query"
     size="medium"
     class="header-search"
@@ -32,26 +32,26 @@
       <!--          src="../assets/images/search-by-algolia.svg"-->
       <!--          alt="algolia-logo">-->
       <!--      </a>-->
-      <jy-empty
+      <gj-empty
         v-if="props.item.isEmpty"
         class="algolia-search-empty"
         :description="emptyText"
-      ></jy-empty>
+      ></gj-empty>
     </template>
-  </jy-autocomplete>
+  </gj-autocomplete>
 </template>
 
 <style lang="scss">
 .header-search {
-  .jy-input {
+  .gj-input {
     width: 200px !important;
   }
-  .jy-input__inner {
+  .gj-input__inner {
     font-size: 12px;
   }
 
-  .jy-input--medium {
-    .jy-input__icon {
+  .gj-input--medium {
+    .gj-input__icon {
       line-height: 60px;
     }
   }
@@ -61,7 +61,7 @@
   width: 450px !important;
 
   &.is-empty {
-    .jy-autocomplete-suggestion__list {
+    .gj-autocomplete-suggestion__list {
       padding-bottom: 0;
       li {
         background-color: #fff;
@@ -72,7 +72,7 @@
     }
   }
 
-  .jy-autocomplete-suggestion__list {
+  .gj-autocomplete-suggestion__list {
     position: static !important;
     padding-bottom: 0;
   }

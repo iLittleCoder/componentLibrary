@@ -195,14 +195,14 @@ export default {
     } = this;
     const data = {
       class: {
-        'jy-upload': true
+        'gj-upload': true
       },
       on: {
         click: handleClick,
         keydown: handleKeydown
       }
     };
-    data.class[`jy-upload--${listType}`] = true;
+    data.class[`gj-upload--${listType}`] = true;
     return (
       <div {...data} tabindex="0">
         {drag ? (
@@ -213,7 +213,7 @@ export default {
           this.$slots.default
         )}
         <input
-          class="jy-upload__input"
+          class="gj-upload__input"
           type="file"
           ref="input"
           name={name}

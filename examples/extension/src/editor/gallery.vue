@@ -15,17 +15,17 @@
         <theme-card type="upload" :config="{name: 'upload'}" @action="onAction"></theme-card>
       </li>
     </ul>
-    <jy-dialog :visible.sync="copyDialogVisible" :modal-append-to-body="false">
-      <jy-form :model="copyForm" ref="copyForm" :rules="copyFormRule">
-        <jy-form-item label="主题名称" prop="name">
-          <jy-input v-model="copyForm.name"></jy-input>
-        </jy-form-item>
-      </jy-form>
+    <gj-dialog :visible.sync="copyDialogVisible" :modal-append-to-body="false">
+      <gj-form :model="copyForm" ref="copyForm" :rules="copyFormRule">
+        <gj-form-item label="主题名称" prop="name">
+          <gj-input v-model="copyForm.name"></gj-input>
+        </gj-form-item>
+      </gj-form>
       <div slot="footer" class="dialog-footer">
-        <jy-button @click="closeCopyForm">取消</jy-button>
-        <jy-button type="primary" @click="copyToUser">确认</jy-button>
+        <gj-button @click="closeCopyForm">取消</gj-button>
+        <gj-button type="primary" @click="copyToUser">确认</gj-button>
       </div>
-    </jy-dialog>
+    </gj-dialog>
   </div>
 </template>
 

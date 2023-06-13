@@ -1,8 +1,8 @@
 <template>
-  <transition name="jy-zoom-in-top" @after-leave="$emit('dodestroy')">
+  <transition name="gj-zoom-in-top" @after-leave="$emit('dodestroy')">
     <div
       v-show="visible"
-      class="jy-picker-panel jy-date-range-picker jy-popper"
+      class="gj-picker-panel gj-date-range-picker gj-popper"
       :class="[
         {
           'has-time': showTime
@@ -10,28 +10,28 @@
         popperClass
       ]"
     >
-      <div class="jy-picker-panel__body-wrapper">
-        <slot name="sidebar" class="jy-picker-panel__sidebar"></slot>
+      <div class="gj-picker-panel__body-wrapper">
+        <slot name="sidebar" class="gj-picker-panel__sidebar"></slot>
 
-        <div class="jy-picker-panel__body">
-          <div class="jy-date-range-picker__time-header" v-if="showTime">
-            <span class="jy-date-range-picker__editors-wrap">
-              <span class="jy-date-range-picker__time-picker-wrap">
-                <jy-input
+        <div class="gj-picker-panel__body">
+          <div class="gj-date-range-picker__time-header" v-if="showTime">
+            <span class="gj-date-range-picker__editors-wrap">
+              <span class="gj-date-range-picker__time-picker-wrap">
+                <gj-input
                   size="mini"
                   :disabled="rangeState.selecting"
                   ref="minInput"
                   :placeholder="t('el.datepicker.startDate')"
-                  class="jy-date-range-picker__editor"
+                  class="gj-date-range-picker__editor"
                   :value="minVisibleDate"
                   @input="(val) => handleDateInput(val, 'min')"
                   @change="(val) => handleDateChange(val, 'min')"
                 />
               </span>
-              <span class="jy-date-range-picker__time-picker-wrap " v-clickoutside="handleMinTimeClose">
-                <jy-input
+              <span class="gj-date-range-picker__time-picker-wrap " v-clickoutside="handleMinTimeClose">
+                <gj-input
                   size="mini"
-                  class="jy-date-range-picker__editor"
+                  class="gj-date-range-picker__editor"
                   :disabled="rangeState.selecting"
                   :placeholder="t('el.datepicker.startTime')"
                   :value="minVisibleTime"
@@ -49,12 +49,12 @@
                 </time-picker>
               </span>
             </span>
-            <!-- <span class="jy-icon-arrow-right Gildata-rightarrow"></span> -->
-            <span class="jy-date-range-picker__editors-wrap is-right">
-              <span class="jy-date-range-picker__time-picker-wrap">
-                <jy-input
+            <!-- <span class="gj-icon-arrow-right Gildata-rightarrow"></span> -->
+            <span class="gj-date-range-picker__editors-wrap is-right">
+              <span class="gj-date-range-picker__time-picker-wrap">
+                <gj-input
                   size="mini"
-                  class="jy-date-range-picker__editor"
+                  class="gj-date-range-picker__editor"
                   :disabled="rangeState.selecting"
                   :placeholder="t('el.datepicker.endDate')"
                   :value="maxVisibleDate"
@@ -63,10 +63,10 @@
                   @change="(val) => handleDateChange(val, 'max')"
                 />
               </span>
-              <span class="jy-date-range-picker__time-picker-wrap" v-clickoutside="handleMaxTimeClose">
-                <jy-input
+              <span class="gj-date-range-picker__time-picker-wrap" v-clickoutside="handleMaxTimeClose">
+                <gj-input
                   size="mini"
-                  class="jy-date-range-picker__editor"
+                  class="gj-date-range-picker__editor"
                   :disabled="rangeState.selecting"
                   :placeholder="t('el.datepicker.endTime')"
                   :value="maxVisibleTime"
@@ -86,17 +86,17 @@
               </span>
             </span>
           </div>
-          <div class="jy-picker-panel__content jy-date-range-picker__content is-left">
-            <div class="jy-date-range-picker__header">
+          <div class="gj-picker-panel__content gj-date-range-picker__content is-left">
+            <div class="gj-date-range-picker__header">
               <button
                 type="button"
                 @click="leftPrevYear"
-                class="jy-picker-panel__icon-btn jy-icon-d-arrow-left Gildata-d-leftarrow"
+                class="gj-picker-panel__icon-btn gj-icon-d-arrow-left Gildata-d-leftarrow"
               ></button>
               <button
                 type="button"
                 @click="leftPrevMonth"
-                class="jy-picker-panel__icon-btn jy-icon-arrow-left Gildata-leftarrow"
+                class="gj-picker-panel__icon-btn gj-icon-arrow-left Gildata-leftarrow"
               ></button>
               <button
                 type="button"
@@ -104,7 +104,7 @@
                 v-if="unlinkPanels"
                 :disabled="!enableYearArrow"
                 :class="{ 'is-disabled': !enableYearArrow }"
-                class="jy-picker-panel__icon-btn jy-icon-d-arrow-right Gildata-d-rightarrow"
+                class="gj-picker-panel__icon-btn gj-icon-d-arrow-right Gildata-d-rightarrow"
               ></button>
               <button
                 type="button"
@@ -112,7 +112,7 @@
                 v-if="unlinkPanels"
                 :disabled="!enableMonthArrow"
                 :class="{ 'is-disabled': !enableMonthArrow }"
-                class="jy-picker-panel__icon-btn jy-icon-arrow-right Gildata-rightarrow"
+                class="gj-picker-panel__icon-btn gj-icon-arrow-right Gildata-rightarrow"
               ></button>
               <div>{{ leftLabel }}</div>
             </div>
@@ -131,15 +131,15 @@
             >
             </date-table>
           </div>
-          <div class="jy-picker-panel__content jy-date-range-picker__content is-right">
-            <div class="jy-date-range-picker__header">
+          <div class="gj-picker-panel__content gj-date-range-picker__content is-right">
+            <div class="gj-date-range-picker__header">
               <button
                 type="button"
                 @click="rightPrevYear"
                 v-if="unlinkPanels"
                 :disabled="!enableYearArrow"
                 :class="{ 'is-disabled': !enableYearArrow }"
-                class="jy-picker-panel__icon-btn jy-icon-d-arrow-left Gildata-d-leftarrow"
+                class="gj-picker-panel__icon-btn gj-icon-d-arrow-left Gildata-d-leftarrow"
               ></button>
               <button
                 type="button"
@@ -147,17 +147,17 @@
                 v-if="unlinkPanels"
                 :disabled="!enableMonthArrow"
                 :class="{ 'is-disabled': !enableMonthArrow }"
-                class="jy-picker-panel__icon-btn jy-icon-arrow-left Gildata-leftarrow"
+                class="gj-picker-panel__icon-btn gj-icon-arrow-left Gildata-leftarrow"
               ></button>
               <button
                 type="button"
                 @click="rightNextYear"
-                class="jy-picker-panel__icon-btn jy-icon-d-arrow-right Gildata-d-rightarrow"
+                class="gj-picker-panel__icon-btn gj-icon-d-arrow-right Gildata-d-rightarrow"
               ></button>
               <button
                 type="button"
                 @click="rightNextMonth"
-                class="jy-picker-panel__icon-btn jy-icon-arrow-right Gildata-rightarrow"
+                class="gj-picker-panel__icon-btn gj-icon-arrow-right Gildata-rightarrow"
               ></button>
               <div>{{ rightLabel }}</div>
             </div>
@@ -178,22 +178,22 @@
           </div>
         </div>
       </div>
-      <div class="jy-picker-panel__footer" v-if="showTime">
+      <div class="gj-picker-panel__footer" v-if="showTime">
         <div class="daterange-footer">
-          <jy-button class="footer-btn" size="mini" @click="handleClear">
+          <gj-button class="footer-btn" size="mini" @click="handleClear">
             {{ t('el.table.resetFilter') }}
-          </jy-button>
+          </gj-button>
 
-          <jy-button class="footer-btn ml-8" size="mini" type="primary" @click="handleConfirm(false)">
+          <gj-button class="footer-btn ml-8" size="mini" type="primary" @click="handleConfirm(false)">
             {{ t('el.datepicker.confirm') }}
-          </jy-button>
+          </gj-button>
           <!-- :disabled="btnDisabled" -->
         </div>
       </div>
-      <div class="jy-picker-panel__shortcut--footer" v-if="shortcuts">
-        <jy-button size="mini" v-for="(shortcut, key) in shortcuts" :key="key" @click="handleShortcutClick(shortcut)">{{
+      <div class="gj-picker-panel__shortcut--footer" v-if="shortcuts">
+        <gj-button size="mini" v-for="(shortcut, key) in shortcuts" :key="key" @click="handleShortcutClick(shortcut)">{{
           shortcut.text
-        }}</jy-button>
+        }}</gj-button>
       </div>
     </div>
   </transition>

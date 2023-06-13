@@ -1,6 +1,6 @@
 <template>
-  <div class="jy-pie">
-    <div class="jy-pie--chart" ref="pieChart" :style="{ width: width, height: height}"></div>
+  <div class="gj-pie">
+    <div class="gj-pie--chart" ref="pieChart" :style="{ width: width, height: height}"></div>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
   import { renderColor, colors } from 'GildataDesign/src/chart-color/colorData';
   let colorData = {};
   export default {
-    name: 'JyPie',
+    name: 'GjPie',
     data() {
       return {
         lineChart: ''

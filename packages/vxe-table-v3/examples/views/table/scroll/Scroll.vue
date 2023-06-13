@@ -6,19 +6,19 @@
       <span class="red">（注：启用虚拟滚动后：<table-api-link prop="show-overflow"/>，<table-api-link prop="show-header-overflow"/>，<table-api-link prop="show-footer-overflow"/> 参数将根据不同场景各自触发生效，无法取消；如果需要支持，将虚拟滚动关闭即可）</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       highlight-hover-row
       ref="xTable1"
       height="300"
       :sort-config="{trigger: 'cell'}">
-      <jy-column type="seq" width="100"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="100"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -32,7 +32,7 @@
       通过指定 <table-api-link prop="scroll-x"/>={gt: 20} 或 <table-api-link prop="scroll-y"/>={gt: 40} 适合的参数可以手动调优，如果设置 <table-api-link prop="enabled"/>=false 则关闭虚拟滚动<br>
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       show-header-overflow
@@ -44,35 +44,35 @@
       :footer-method="footerMethod"
       :scroll-x="{gt: 10}"
       :scroll-y="{gt: 100}">
-      <jy-column type="seq" width="100"></jy-column>
-      <jy-column field="name" title="Name" width="150" sortable></jy-column>
-      <jy-column field="sex" title="Sex" width="100"></jy-column>
-      <jy-column field="age" title="Age" width="100"></jy-column>
-      <jy-column field="num" title="Num" width="100"></jy-column>
-      <jy-column field="num2" title="Num2" width="100"></jy-column>
-      <jy-column field="attr19" title="Name" width="150" sortable></jy-column>
-      <jy-column field="attr18" title="Sex" width="100"></jy-column>
-      <jy-column field="attr17" title="Age" width="100"></jy-column>
-      <jy-column field="date3" title="Date" width="200" show-overflow></jy-column>
-      <jy-column field="role" title="Role" width="100"></jy-column>
-      <jy-column field="attr16" title="Age" width="100"></jy-column>
-      <jy-column field="attr15" title="Num2" width="100"></jy-column>
-      <jy-column field="attr14" title="Sex" width="100"></jy-column>
-      <jy-column field="attr13" title="Name" width="150" sortable></jy-column>
-      <jy-column field="attr12" title="Sex" width="100"></jy-column>
-      <jy-column field="attr11" title="Age" width="100"></jy-column>
-      <jy-column field="attr1" title="Num" width="100"></jy-column>
-      <jy-column field="address" title="Address" width="200" show-overflow></jy-column>
-      <jy-column field="attr2" title="Role" width="100"></jy-column>
-      <jy-column field="attr3" title="Age" width="100"></jy-column>
-      <jy-column field="attr4" title="Num2" width="100"></jy-column>
-      <jy-column field="attr5" title="Rate" width="100"></jy-column>
-      <jy-column field="attr6" title="Name" width="150" sortable></jy-column>
-      <jy-column field="attr7" title="Date" width="200" show-overflow></jy-column>
-      <jy-column field="attr8" title="Role" width="100"></jy-column>
-      <jy-column field="attr9" title="Num" width="100"></jy-column>
-      <jy-column field="attr10" title="Address" width="200" show-overflow></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="100"></gj-column>
+      <gj-column field="name" title="Name" width="150" sortable></gj-column>
+      <gj-column field="sex" title="Sex" width="100"></gj-column>
+      <gj-column field="age" title="Age" width="100"></gj-column>
+      <gj-column field="num" title="Num" width="100"></gj-column>
+      <gj-column field="num2" title="Num2" width="100"></gj-column>
+      <gj-column field="attr19" title="Name" width="150" sortable></gj-column>
+      <gj-column field="attr18" title="Sex" width="100"></gj-column>
+      <gj-column field="attr17" title="Age" width="100"></gj-column>
+      <gj-column field="date3" title="Date" width="200" show-overflow></gj-column>
+      <gj-column field="role" title="Role" width="100"></gj-column>
+      <gj-column field="attr16" title="Age" width="100"></gj-column>
+      <gj-column field="attr15" title="Num2" width="100"></gj-column>
+      <gj-column field="attr14" title="Sex" width="100"></gj-column>
+      <gj-column field="attr13" title="Name" width="150" sortable></gj-column>
+      <gj-column field="attr12" title="Sex" width="100"></gj-column>
+      <gj-column field="attr11" title="Age" width="100"></gj-column>
+      <gj-column field="attr1" title="Num" width="100"></gj-column>
+      <gj-column field="address" title="Address" width="200" show-overflow></gj-column>
+      <gj-column field="attr2" title="Role" width="100"></gj-column>
+      <gj-column field="attr3" title="Age" width="100"></gj-column>
+      <gj-column field="attr4" title="Num2" width="100"></gj-column>
+      <gj-column field="attr5" title="Rate" width="100"></gj-column>
+      <gj-column field="attr6" title="Name" width="150" sortable></gj-column>
+      <gj-column field="attr7" title="Date" width="200" show-overflow></gj-column>
+      <gj-column field="attr8" title="Role" width="100"></gj-column>
+      <gj-column field="attr9" title="Num" width="100"></gj-column>
+      <gj-column field="attr10" title="Address" width="200" show-overflow></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -105,19 +105,19 @@ export default {
     return {
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           highlight-hover-row
           ref="xTable1"
           height="300"
           :sort-config="{trigger: 'cell'}">
-          <jy-column type="seq" width="100"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="100"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -156,7 +156,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           show-header-overflow
@@ -168,35 +168,35 @@ export default {
           :footer-method="footerMethod"
           :scroll-x="{gt: 10}"
           :scroll-y="{gt: 100}">
-          <jy-column type="seq" width="100"></jy-column>
-          <jy-column field="name" title="Name" width="150" sortable></jy-column>
-          <jy-column field="sex" title="Sex" width="100"></jy-column>
-          <jy-column field="age" title="Age" width="100"></jy-column>
-          <jy-column field="num" title="Num" width="100"></jy-column>
-          <jy-column field="num2" title="Num2" width="100"></jy-column>
-          <jy-column field="attr19" title="Name" width="150" sortable></jy-column>
-          <jy-column field="attr18" title="Sex" width="100"></jy-column>
-          <jy-column field="attr17" title="Age" width="100"></jy-column>
-          <jy-column field="date3" title="Date" width="200" show-overflow></jy-column>
-          <jy-column field="role" title="Role" width="100"></jy-column>
-          <jy-column field="attr16" title="Age" width="100"></jy-column>
-          <jy-column field="attr15" title="Num2" width="100"></jy-column>
-          <jy-column field="attr14" title="Sex" width="100"></jy-column>
-          <jy-column field="attr13" title="Name" width="150" sortable></jy-column>
-          <jy-column field="attr12" title="Sex" width="100"></jy-column>
-          <jy-column field="attr11" title="Age" width="100"></jy-column>
-          <jy-column field="attr1" title="Num" width="100"></jy-column>
-          <jy-column field="address" title="Address" width="200" show-overflow></jy-column>
-          <jy-column field="attr2" title="Role" width="100"></jy-column>
-          <jy-column field="attr3" title="Age" width="100"></jy-column>
-          <jy-column field="attr4" title="Num2" width="100"></jy-column>
-          <jy-column field="attr5" title="Rate" width="100"></jy-column>
-          <jy-column field="attr6" title="Name" width="150" sortable></jy-column>
-          <jy-column field="attr7" title="Date" width="200" show-overflow></jy-column>
-          <jy-column field="attr8" title="Role" width="100"></jy-column>
-          <jy-column field="attr9" title="Num" width="100"></jy-column>
-          <jy-column field="attr10" title="Address" width="200" show-overflow></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="100"></gj-column>
+          <gj-column field="name" title="Name" width="150" sortable></gj-column>
+          <gj-column field="sex" title="Sex" width="100"></gj-column>
+          <gj-column field="age" title="Age" width="100"></gj-column>
+          <gj-column field="num" title="Num" width="100"></gj-column>
+          <gj-column field="num2" title="Num2" width="100"></gj-column>
+          <gj-column field="attr19" title="Name" width="150" sortable></gj-column>
+          <gj-column field="attr18" title="Sex" width="100"></gj-column>
+          <gj-column field="attr17" title="Age" width="100"></gj-column>
+          <gj-column field="date3" title="Date" width="200" show-overflow></gj-column>
+          <gj-column field="role" title="Role" width="100"></gj-column>
+          <gj-column field="attr16" title="Age" width="100"></gj-column>
+          <gj-column field="attr15" title="Num2" width="100"></gj-column>
+          <gj-column field="attr14" title="Sex" width="100"></gj-column>
+          <gj-column field="attr13" title="Name" width="150" sortable></gj-column>
+          <gj-column field="attr12" title="Sex" width="100"></gj-column>
+          <gj-column field="attr11" title="Age" width="100"></gj-column>
+          <gj-column field="attr1" title="Num" width="100"></gj-column>
+          <gj-column field="address" title="Address" width="200" show-overflow></gj-column>
+          <gj-column field="attr2" title="Role" width="100"></gj-column>
+          <gj-column field="attr3" title="Age" width="100"></gj-column>
+          <gj-column field="attr4" title="Num2" width="100"></gj-column>
+          <gj-column field="attr5" title="Rate" width="100"></gj-column>
+          <gj-column field="attr6" title="Name" width="150" sortable></gj-column>
+          <gj-column field="attr7" title="Date" width="200" show-overflow></gj-column>
+          <gj-column field="attr8" title="Role" width="100"></gj-column>
+          <gj-column field="attr9" title="Num" width="100"></gj-column>
+          <gj-column field="attr10" title="Address" width="200" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

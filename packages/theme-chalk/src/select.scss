@@ -17,18 +17,18 @@
   }
   position: relative;
   color: $--select-option-selected-font-color;
-  .jy-select__single {
+  .gj-select__single {
     display: inline-block;
-    .jy-input .jy-input__inner {
+    .gj-input .gj-input__inner {
       overflow: hidden;
       text-overflow: ellipsis;
     }
   }
-  .jy-select__tags > span {
+  .gj-select__tags > span {
     display: contents;
   }
   // tags显示时的多余部分
-  .jy-select__tags span.jy-select-tagsitem {
+  .gj-select__tags span.gj-select-tagsitem {
     display: flex;
     width: 100%;
     &-first {
@@ -43,7 +43,7 @@
   }
 
   &.no-border {
-    .jy-input__inner {
+    .gj-input__inner {
       border-color: transparent;
       border: none;
       &:focus,
@@ -52,7 +52,7 @@
       }
     }
     & .is-disabled {
-      & .jy-input__inner {
+      & .gj-input__inner {
         cursor: not-allowed;
         background-color: transparent;
         border: none;
@@ -60,18 +60,18 @@
     }
   }
   &.select-option-show {
-    .jy-input.is-focus .jy-input__inner {
+    .gj-input.is-focus .gj-input__inner {
       color: $--color-text-regular;
       border-color: $--border-color-base;
     }
 
-    .jy-input .jy-input__selected,
-    .jy-select__tags {
+    .gj-input .gj-input__selected,
+    .gj-select__tags {
       color: $--color-text-regular;
     }
   }
 
-  .jy-input__inner {
+  .gj-input__inner {
     cursor: pointer;
     padding-right: 35px;
 
@@ -81,14 +81,14 @@
     }
   }
 
-  .jy-input {
+  .gj-input {
     display: block;
     &.is-focus {
-      &.is-filter .jy-input__inner {
+      &.is-filter .gj-input__inner {
         color: $--color-info;
       }
     }
-    & .jy-select__caret {
+    & .gj-select__caret {
       color: $--color-text-regular;
       font-size: $--select-input-font-size;
       transition: transform 0.3s;
@@ -106,12 +106,12 @@
         }
       }
     }
-    & .jy-input__selected {
+    & .gj-input__selected {
       color: $--select-option-selected-font-color;
     }
 
     &.is-disabled {
-      & .jy-input__inner {
+      & .gj-input__inner {
         cursor: not-allowed;
         &::placeholder {
           color: $--color-text-disabled;
@@ -121,20 +121,20 @@
           border-color: $--select-disabled-border;
         }
       }
-      .jy-input__suffix {
+      .gj-input__suffix {
         color: $--color-text-disabled;
       }
     }
 
-    &.is-focus .jy-input__inner {
+    &.is-focus .gj-input__inner {
       border-color: $--select-input-focus-border-color;
     }
   }
 
-  > .jy-input {
+  > .gj-input {
     display: block;
   }
-  .jy-m-select__tags-text {
+  .gj-m-select__tags-text {
     // margin-left: 8px;
     margin-left: 0px;
 
@@ -199,7 +199,7 @@
     text-overflow: ellipsis;
   }
 
-  .jy-tag {
+  .gj-tag {
     box-sizing: border-box;
     border-color: transparent;
     margin: 2px 0 2px 6px;
@@ -225,7 +225,7 @@
     }
   }
 }
-.jy-m-select__tags-text-top {
+.gj-m-select__tags-text-top {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -236,21 +236,21 @@
     margin-right: 8px;
   }
 }
-.jy-m-select__tags-text-line {
+.gj-m-select__tags-text-line {
   box-shadow: $--popper-box-shadow;
   height: 1px;
   background-color: $--background-color-base;
 }
 
 // ----------------------------------------------------------------------------------
-.jy-select-not-set-width {
+.gj-select-not-set-width {
   max-width: 110px;
   width: fit-content;
   &-long {
     max-width: 155px;
   }
 }
-.jy-select-new-main {
+.gj-select-new-main {
   width: 100%;
   background-color: $--color-neutral;
   position: relative;
@@ -268,7 +268,7 @@
 
   &-active {
     // border-color: $--color-primary;
-    .jy-select-right-icon .jy-input__icon {
+    .gj-select-right-icon .gj-input__icon {
       color: $--color-primary;
     }
   }
@@ -276,41 +276,41 @@
   &.is-disabled {
     background-color: $--background-color-disabled;
     border-color: $--border-color-disabled;
-    .jy-select-placeholder,
-    .jy-select-selected-item,
-    .jy-select-right-icon .jy-input__icon {
+    .gj-select-placeholder,
+    .gj-select-selected-item,
+    .gj-select-right-icon .gj-input__icon {
       color: $--color-text-disabled;
     }
     &:hover {
       // border-color: $--border-color-disabled ;
       cursor: not-allowed;
-      .jy-select-right-icon .jy-select__caret {
+      .gj-select-right-icon .gj-select__caret {
         cursor: not-allowed;
       }
     }
-    .jy-select-right-icon .jy-select__caret {
+    .gj-select-right-icon .gj-select__caret {
       cursor: not-allowed;
-      &.jy-input__selected {
+      &.gj-input__selected {
         color: $--color-text-disabled;
       }
     }
   }
 
-  .jy-select-content {
+  .gj-select-content {
     position: relative;
     &.is-no-filter {
-      .jy-select-placeholder,
-      .jy-select-selected-item {
+      .gj-select-placeholder,
+      .gj-select-selected-item {
         opacity: 1;
       }
-      .jy-input__inner {
+      .gj-input__inner {
         opacity: 0;
       }
     }
   }
 
-  .jy-select-placeholder,
-  .jy-select-selected-item {
+  .gj-select-placeholder,
+  .gj-select-selected-item {
     opacity: 0;
     box-sizing: border-box;
     text-overflow: ellipsis;
@@ -324,7 +324,7 @@
 
     // margin-left: 8px;
     padding: 0 8px;
-    .jy-select__tags {
+    .gj-select__tags {
       position: relative;
       top: 0;
       transform: translateY(0%);
@@ -338,24 +338,24 @@
       }
     }
   }
-  .jy-select-placeholder {
+  .gj-select-placeholder {
     color: $--color-text-regular;
   }
-  .jy-select-selected-item {
+  .gj-select-selected-item {
     color: $--color-primary;
     &-multiple {
       opacity: 1;
     }
   }
 
-  .jy-select__single {
+  .gj-select__single {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
     // padding-right: 8px;
-    .jy-input__inner {
+    .gj-input__inner {
       display: block;
       // padding-right: 0;
       padding: 0 8px;
@@ -366,12 +366,12 @@
         color: $--color-text-regular;
       }
     }
-    .jy-input.is-disabled .jy-input__inner {
+    .gj-input.is-disabled .gj-input__inner {
       background-color: transparent;
     }
   }
 
-  .jy-select-right-icon {
+  .gj-select-right-icon {
     position: absolute;
     top: 0;
     right: 6px;
@@ -379,16 +379,16 @@
     transform: translateY(-50%);
     transition: transform 0.3s;
     font-size: 16px;
-    &.jy-input__icon {
+    &.gj-input__icon {
       line-height: 28px;
     }
-    & .jy-select__caret {
+    & .gj-select__caret {
       color: $--color-text-regular;
       // font-size: $--select-input-font-size;
       transition: transform 0.3s;
 
       cursor: pointer;
-      &.jy-input__selected {
+      &.gj-input__selected {
         color: $--color-primary;
       }
     }
@@ -414,17 +414,17 @@
   }
 }
 .select-option-show {
-  .jy-select-new-main {
+  .gj-select-new-main {
     border-color: $--border-color-base;
-    .jy-select-selected-item,
-    .jy-select-right-icon .jy-input__icon {
+    .gj-select-selected-item,
+    .gj-select-right-icon .gj-input__icon {
       color: $--color-text-regular;
     }
   }
 }
 
 .no-border {
-  .jy-select-new-main {
+  .gj-select-new-main {
     // line-height: 28px;
     border: none;
     &.is-disabled {
@@ -432,201 +432,201 @@
     }
   }
 
-  .jy-select-placeholder,
-  .jy-select-selected-item {
+  .gj-select-placeholder,
+  .gj-select-selected-item {
     line-height: 28px;
     padding: 0 8px;
   }
-  .jy-select__single .jy-input__inner {
+  .gj-select__single .gj-input__inner {
     height: 28px;
   }
-  .jy-select-right-icon {
+  .gj-select-right-icon {
     right: 6px;
-    .jy-input__icon {
+    .gj-input__icon {
       line-height: 28px;
     }
   }
-  .jy-m-select__tags-text {
+  .gj-m-select__tags-text {
     line-height: 28px;
   }
 }
 
-.jy-select--large {
+.gj-select--large {
   &.no-border {
-    .jy-select-new-main {
+    .gj-select-new-main {
       padding-right: 28px;
       // line-height: 40px;
     }
 
-    .jy-select-placeholder,
-    .jy-select-selected-item {
+    .gj-select-placeholder,
+    .gj-select-selected-item {
       line-height: 40px;
       padding: 0 12px;
       font-size: 14px;
     }
-    .jy-select__single .jy-input__inner {
+    .gj-select__single .gj-input__inner {
       height: 40px;
     }
-    .jy-select-right-icon {
+    .gj-select-right-icon {
       right: 10px;
-      .jy-input__icon {
+      .gj-input__icon {
         line-height: 40px;
       }
     }
-    .jy-m-select__tags-text {
+    .gj-m-select__tags-text {
       line-height: 40px;
     }
   }
-  .jy-select-not-set-width {
+  .gj-select-not-set-width {
     max-width: 130px;
     &-long {
       max-width: 172px;
     }
   }
-  .jy-select-new-main {
+  .gj-select-new-main {
     padding-right: 28px;
     // line-height: 38px;
   }
 
-  .jy-select-placeholder,
-  .jy-select-selected-item {
+  .gj-select-placeholder,
+  .gj-select-selected-item {
     line-height: 38px;
     padding: 0 12px;
     font-size: 14px;
   }
-  .jy-select__single .jy-input__inner {
+  .gj-select__single .gj-input__inner {
     height: 38px;
     padding: 0 12px;
   }
-  .jy-select-right-icon {
+  .gj-select-right-icon {
     right: 10px;
-    .jy-input__icon {
+    .gj-input__icon {
       line-height: 40px;
     }
   }
-  .jy-m-select__tags-text {
+  .gj-m-select__tags-text {
     line-height: 38px;
   }
 }
 
-.jy-select--medium {
+.gj-select--medium {
   &.no-border {
-    .jy-select-new-main {
+    .gj-select-new-main {
       padding-right: 26px;
       // line-height: 32px;
     }
 
-    .jy-select-placeholder,
-    .jy-select-selected-item {
+    .gj-select-placeholder,
+    .gj-select-selected-item {
       line-height: 32px;
       // margin:0 10px;
       padding: 0 10px;
       font-size: 14px;
     }
-    .jy-select__single .jy-input__inner {
+    .gj-select__single .gj-input__inner {
       height: 32px;
     }
-    .jy-select-right-icon {
+    .gj-select-right-icon {
       right: 8px;
-      .jy-input__icon {
+      .gj-input__icon {
         line-height: 32px;
       }
     }
-    .jy-m-select__tags-text {
+    .gj-m-select__tags-text {
       line-height: 32px;
     }
   }
-  .jy-select-not-set-width {
+  .gj-select-not-set-width {
     max-width: 130px;
     &-long {
       max-width: 172px;
     }
   }
-  .jy-select-new-main {
+  .gj-select-new-main {
     padding-right: 26px;
     // line-height: 30px;
   }
 
-  .jy-select-placeholder,
-  .jy-select-selected-item {
+  .gj-select-placeholder,
+  .gj-select-selected-item {
     line-height: 30px;
     // margin:0 10px;
     padding: 0 10px;
     font-size: 14px;
   }
-  .jy-select__single .jy-input__inner {
+  .gj-select__single .gj-input__inner {
     height: 30px;
     padding: 0 10px;
   }
-  .jy-select-right-icon {
+  .gj-select-right-icon {
     right: 8px;
-    .jy-input__icon {
+    .gj-input__icon {
       line-height: 32px;
     }
   }
-  .jy-m-select__tags-text {
+  .gj-m-select__tags-text {
     line-height: 30px;
   }
 }
 
-.jy-select--mini {
+.gj-select--mini {
   &.no-border {
-    .jy-select-new-main {
+    .gj-select-new-main {
       padding-right: 20px;
       // line-height: 22px;
     }
 
-    .jy-select-placeholder,
-    .jy-select-selected-item {
+    .gj-select-placeholder,
+    .gj-select-selected-item {
       line-height: 22px;
       // margin:0 4px;
       padding: 0 6px;
       font-size: 12px;
     }
 
-    .jy-select__single .jy-input__inner {
+    .gj-select__single .gj-input__inner {
       height: 22px;
     }
-    .jy-select-right-icon {
+    .gj-select-right-icon {
       right: 4px;
-      .jy-input__icon {
+      .gj-input__icon {
         line-height: 22px;
       }
     }
-    .jy-m-select__tags-text {
+    .gj-m-select__tags-text {
       line-height: 22px;
     }
   }
-  .jy-select-not-set-width {
+  .gj-select-not-set-width {
     max-width: 108px;
     &-long {
       max-width: 150px;
     }
   }
-  .jy-select-new-main {
+  .gj-select-new-main {
     padding-right: 20px;
     // line-height: 20px;
   }
 
-  .jy-select-placeholder,
-  .jy-select-selected-item {
+  .gj-select-placeholder,
+  .gj-select-selected-item {
     line-height: 20px;
     // margin:0 4px;
     padding: 0 6px;
     font-size: 12px;
   }
 
-  .jy-select__single .jy-input__inner {
+  .gj-select__single .gj-input__inner {
     height: 20px;
     padding: 0 6px;
   }
-  .jy-select-right-icon {
+  .gj-select-right-icon {
     right: 4px;
-    .jy-input__icon {
+    .gj-input__icon {
       line-height: 22px;
     }
   }
-  .jy-m-select__tags-text {
+  .gj-m-select__tags-text {
     line-height: 20px;
   }
 }

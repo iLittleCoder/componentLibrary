@@ -1,12 +1,12 @@
 <template>
-  <div class="jy-time-spinner" :class="{ 'has-seconds': showSeconds }">
+  <div class="gj-time-spinner" :class="{ 'has-seconds': showSeconds }">
     <template v-if="!arrowControl">
-      <jy-scrollbar
+      <gj-scrollbar
         @mouseenter.native="emitSelectRange('hours')"
         @mousemove.native="adjustCurrentSpinner('hours')"
-        class="jy-time-spinner__wrapper"
+        class="gj-time-spinner__wrapper"
         wrap-style="max-height: inherit;"
-        view-class="jy-time-spinner__list"
+        view-class="gj-time-spinner__list"
         noresize
         tag="ul"
         ref="hours"
@@ -14,24 +14,24 @@
         <li
           @click="handleClick('hours', { value: hour, disabled: disabled })"
           v-for="(disabled, hour) in hoursList"
-          class="jy-time-spinner__item"
+          class="gj-time-spinner__item"
           :key="hour"
           :class="{ active: hour === hours, disabled: disabled }"
         >
           {{ ('0' + (amPmMode ? hour % 12 || 12 : hour)).slice(-2)
           }}{{ amPm(hour) }}
         </li>
-      </jy-scrollbar>
-      <jy-scrollbar
+      </gj-scrollbar>
+      <gj-scrollbar
         @mouseenter.native="emitSelectRange('minutes')"
         @mousemove.native="adjustCurrentSpinner('minutes')"
-        class="jy-time-spinner__wrapper"
+        class="gj-time-spinner__wrapper"
         :class="[
-          'jy-time-spinner__line-left',
-          showSeconds ? 'jy-time-spinner__line-right' : ''
+          'gj-time-spinner__line-left',
+          showSeconds ? 'gj-time-spinner__line-right' : ''
         ]"
         wrap-style="max-height: inherit;"
-        view-class="jy-time-spinner__list"
+        view-class="gj-time-spinner__list"
         noresize
         tag="ul"
         ref="minutes"
@@ -40,19 +40,19 @@
           @click="handleClick('minutes', { value: key, disabled: false })"
           v-for="(enabled, key) in minutesList"
           :key="key"
-          class="jy-time-spinner__item"
+          class="gj-time-spinner__item"
           :class="{ active: key === minutes, disabled: !enabled }"
         >
           {{ ('0' + key).slice(-2) }}
         </li>
-      </jy-scrollbar>
-      <jy-scrollbar
+      </gj-scrollbar>
+      <gj-scrollbar
         v-show="showSeconds"
         @mouseenter.native="emitSelectRange('seconds')"
         @mousemove.native="adjustCurrentSpinner('seconds')"
-        class="jy-time-spinner__wrapper"
+        class="gj-time-spinner__wrapper"
         wrap-style="max-height: inherit;"
-        view-class="jy-time-spinner__list"
+        view-class="gj-time-spinner__list"
         noresize
         tag="ul"
         ref="seconds"
@@ -60,30 +60,30 @@
         <li
           @click="handleClick('seconds', { value: key, disabled: false })"
           v-for="(second, key) in 60"
-          class="jy-time-spinner__item"
+          class="gj-time-spinner__item"
           :class="{ active: key === seconds }"
           :key="key"
         >
           {{ ('0' + key).slice(-2) }}
         </li>
-      </jy-scrollbar>
+      </gj-scrollbar>
     </template>
     <template v-if="arrowControl">
       <div
         @mouseenter="emitSelectRange('hours')"
-        class="jy-time-spinner__wrapper is-arrow"
+        class="gj-time-spinner__wrapper is-arrow"
       >
         <i
           v-repeat-click="decrease"
-          class="jy-time-spinner__arrow Gildata-uparrow"
+          class="gj-time-spinner__arrow Gildata-uparrow"
         ></i>
         <i
           v-repeat-click="increase"
-          class="jy-time-spinner__arrow Gildata-downarrow"
+          class="gj-time-spinner__arrow Gildata-downarrow"
         ></i>
-        <ul class="jy-time-spinner__list" ref="hours">
+        <ul class="gj-time-spinner__list" ref="hours">
           <li
-            class="jy-time-spinner__item"
+            class="gj-time-spinner__item"
             :class="{ active: hour === hours, disabled: hoursList[hour] }"
             v-for="(hour, key) in arrowHourList"
             :key="key"
@@ -99,19 +99,19 @@
       </div>
       <div
         @mouseenter="emitSelectRange('minutes')"
-        class="jy-time-spinner__wrapper is-arrow"
+        class="gj-time-spinner__wrapper is-arrow"
       >
         <i
           v-repeat-click="decrease"
-          class="jy-time-spinner__arrow Gildata-uparrow"
+          class="gj-time-spinner__arrow Gildata-uparrow"
         ></i>
         <i
           v-repeat-click="increase"
-          class="jy-time-spinner__arrow Gildata-downarrow"
+          class="gj-time-spinner__arrow Gildata-downarrow"
         ></i>
-        <ul class="jy-time-spinner__list" ref="minutes">
+        <ul class="gj-time-spinner__list" ref="minutes">
           <li
-            class="jy-time-spinner__item"
+            class="gj-time-spinner__item"
             :class="{ active: minute === minutes }"
             v-for="(minute, key) in arrowMinuteList"
             :key="key"
@@ -122,21 +122,21 @@
       </div>
       <div
         @mouseenter="emitSelectRange('seconds')"
-        class="jy-time-spinner__wrapper is-arrow"
+        class="gj-time-spinner__wrapper is-arrow"
         v-if="showSeconds"
       >
         <i
           v-repeat-click="decrease"
-          class="jy-time-spinner__arrow Gildata-uparrow"
+          class="gj-time-spinner__arrow Gildata-uparrow"
         ></i>
         <i
           v-repeat-click="increase"
-          class="jy-time-spinner__arrow Gildata-downarrow"
+          class="gj-time-spinner__arrow Gildata-downarrow"
         ></i>
-        <ul class="jy-time-spinner__list" ref="seconds">
+        <ul class="gj-time-spinner__list" ref="seconds">
           <li
             v-for="(second, key) in arrowSecondList"
-            class="jy-time-spinner__item"
+            class="gj-time-spinner__item"
             :class="{ active: second === seconds }"
             :key="key"
           >

@@ -1,6 +1,6 @@
 <template>
   <transition
-    name="jy-zoom-in-top"
+    name="gj-zoom-in-top"
     @before-enter="handleMenuEnter"
     @after-leave="$emit('dodestroy')"
   >
@@ -9,9 +9,9 @@
       v-show="visible"
       :style="{ width: width + 'px' }"
       :class="popperClass"
-      class="jy-picker-panel time-select jy-popper"
+      class="gj-picker-panel time-select gj-popper"
     >
-      <jy-scrollbar noresize wrap-class="jy-picker-panel__content">
+      <gj-scrollbar noresize wrap-class="gj-picker-panel__content">
         <div
           class="time-select-item"
           v-for="item in items"
@@ -27,7 +27,7 @@
           <i class="Gildata-tick time-selected" v-if="value === item.value"></i>
           {{ item.value }}
         </div>
-      </jy-scrollbar>
+      </gj-scrollbar>
     </div>
   </transition>
 </template>
@@ -113,7 +113,7 @@ export default {
     },
 
     scrollToOption(selector = '.selected') {
-      const menu = this.$refs.popper.querySelector('.jy-picker-panel__content');
+      const menu = this.$refs.popper.querySelector('.gj-picker-panel__content');
       scrollIntoView(menu, menu.querySelector(selector));
     },
 

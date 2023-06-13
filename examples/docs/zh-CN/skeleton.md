@@ -10,7 +10,7 @@
 
 ```html
 <template>
-  <jy-skeleton />
+  <gj-skeleton />
 </template>
 ```
 
@@ -23,7 +23,7 @@
 :::demo
 
 ```html
-<jy-skeleton :rows="6" />
+<gj-skeleton :rows="6" />
 ```
 
 :::
@@ -35,7 +35,7 @@
 :::demo
 
 ```html
-<jy-skeleton :rows="6" animated />
+<gj-skeleton :rows="6" animated />
 ```
 
 :::
@@ -49,20 +49,20 @@ GildataDesign 提供的排版模式有时候并不满足要求，当您想要用
 
 ```html
 <template>
-  <jy-skeleton style="width: 240px">
+  <gj-skeleton style="width: 240px">
     <template slot="template">
-      <jy-skeleton-item variant="image" style="width: 240px; height: 240px;" />
+      <gj-skeleton-item variant="image" style="width: 240px; height: 240px;" />
       <div style="padding: 14px;">
-        <jy-skeleton-item variant="p" style="width: 50%" />
+        <gj-skeleton-item variant="p" style="width: 50%" />
         <div
           style="display: flex; align-items: center; justify-items: space-between;"
         >
-          <jy-skeleton-item variant="text" style="margin-right: 16px;" />
-          <jy-skeleton-item variant="text" style="width: 30%;" />
+          <gj-skeleton-item variant="text" style="margin-right: 16px;" />
+          <gj-skeleton-item variant="text" style="width: 30%;" />
         </div>
       </div>
     </template>
-  </jy-skeleton>
+  </gj-skeleton>
 </template>
 ```
 
@@ -80,26 +80,26 @@ GildataDesign 提供的排版模式有时候并不满足要求，当您想要用
   <div style="width: 240px">
     <p>
       <label style="margin-right: 16px;">切换 Loading</label>
-      <jy-switch v-model="loading" />
+      <gj-switch v-model="loading" />
     </p>
-    <jy-skeleton style="width: 240px" :loading="loading" animated>
+    <gj-skeleton style="width: 240px" :loading="loading" animated>
       <template slot="template">
-        <jy-skeleton-item
+        <gj-skeleton-item
           variant="image"
           style="width: 240px; height: 240px;"
         />
         <div style="padding: 14px;">
-          <jy-skeleton-item variant="h3" style="width: 50%;" />
+          <gj-skeleton-item variant="h3" style="width: 50%;" />
           <div
             style="display: flex; align-items: center; justify-items: space-between; margin-top: 16px; height: 16px;"
           >
-            <jy-skeleton-item variant="text" style="margin-right: 16px;" />
-            <jy-skeleton-item variant="text" style="width: 30%;" />
+            <gj-skeleton-item variant="text" style="margin-right: 16px;" />
+            <gj-skeleton-item variant="text" style="width: 30%;" />
           </div>
         </div>
       </template>
       <template>
-        <jy-card :body-style="{ padding: '0px', marginBottom: '1px' }">
+        <gj-card :body-style="{ padding: '0px', marginBottom: '1px' }">
           <img
             src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
             class="image"
@@ -108,12 +108,12 @@ GildataDesign 提供的排版模式有时候并不满足要求，当您想要用
             <span>好吃的汉堡</span>
             <div class="bottom card-header">
               <span class="time">{{ currentDate }}</span>
-              <jy-button type="text" class="button">操作按钮</jy-button>
+              <gj-button type="text" class="button">操作按钮</gj-button>
             </div>
           </div>
-        </jy-card>
+        </gj-card>
       </template>
-    </jy-skeleton>
+    </gj-skeleton>
   </div>
 </template>
 
@@ -146,26 +146,26 @@ GildataDesign 提供的排版模式有时候并不满足要求，当您想要用
 <template>
   <div style="width: 400px">
     <p>
-      <jy-button @click="setLoading">点我重新加载</jy-button>
+      <gj-button @click="setLoading">点我重新加载</gj-button>
     </p>
-    <jy-skeleton style="width:400px" :loading="loading" animated :count="3">
+    <gj-skeleton style="width:400px" :loading="loading" animated :count="3">
       <template slot="template">
-        <jy-skeleton-item
+        <gj-skeleton-item
           variant="image"
           style="width: 400px; height: 267px;"
         />
         <div style="padding: 14px;">
-          <jy-skeleton-item variant="h3" style="width: 50%;" />
+          <gj-skeleton-item variant="h3" style="width: 50%;" />
           <div
             style="display: flex; align-items: center; justify-items: space-between; margin-top: 16px; height: 16px;"
           >
-            <jy-skeleton-item variant="text" style="margin-right: 16px;" />
-            <jy-skeleton-item variant="text" style="width: 30%;" />
+            <gj-skeleton-item variant="text" style="margin-right: 16px;" />
+            <gj-skeleton-item variant="text" style="width: 30%;" />
           </div>
         </div>
       </template>
       <template>
-        <jy-card
+        <gj-card
           :body-style="{ padding: '0px', marginBottom: '1px' }"
           v-for="item in lists"
           :key="item.name"
@@ -175,12 +175,12 @@ GildataDesign 提供的排版模式有时候并不满足要求，当您想要用
             <span>{{ item.name }}</span>
             <div class="bottom card-header">
               <span class="time">{{ currentDate }}</span>
-              <jy-button type="text" class="button">操作按钮</jy-button>
+              <gj-button type="text" class="button">操作按钮</gj-button>
             </div>
           </div>
-        </jy-card>
+        </gj-card>
       </template>
-    </jy-skeleton>
+    </gj-skeleton>
   </div>
 </template>
 
@@ -236,31 +236,31 @@ GildataDesign 提供的排版模式有时候并不满足要求，当您想要用
   <div style="width: 240px">
     <p>
       <label style="margin-right: 16px;">切换 Loading</label>
-      <jy-switch v-model="loading" />
+      <gj-switch v-model="loading" />
     </p>
-    <jy-skeleton
+    <gj-skeleton
       style="width: 240px"
       :loading="loading"
       animated
       :throttle="500"
     >
       <template slot="template">
-        <jy-skeleton-item
+        <gj-skeleton-item
           variant="image"
           style="width: 240px; height: 240px;"
         />
         <div style="padding: 14px;">
-          <jy-skeleton-item variant="h3" style="width: 50%;" />
+          <gj-skeleton-item variant="h3" style="width: 50%;" />
           <div
             style="display: flex; align-items: center; justify-items: space-between; margin-top: 16px; height: 16px;"
           >
-            <jy-skeleton-item variant="text" style="margin-right: 16px;" />
-            <jy-skeleton-item variant="text" style="width: 30%;" />
+            <gj-skeleton-item variant="text" style="margin-right: 16px;" />
+            <gj-skeleton-item variant="text" style="width: 30%;" />
           </div>
         </div>
       </template>
       <template>
-        <jy-card :body-style="{ padding: '0px', marginBottom: '1px'}">
+        <gj-card :body-style="{ padding: '0px', marginBottom: '1px'}">
           <img
             src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
             class="image"
@@ -269,12 +269,12 @@ GildataDesign 提供的排版模式有时候并不满足要求，当您想要用
             <span>好吃的汉堡</span>
             <div class="bottom card-header">
               <span class="time">{{ currentDate }}</span>
-              <jy-button type="text" class="button">操作按钮</jy-button>
+              <gj-button type="text" class="button">操作按钮</gj-button>
             </div>
           </div>
-        </jy-card>
+        </gj-card>
       </template>
-    </jy-skeleton>
+    </gj-skeleton>
   </div>
 </template>
 

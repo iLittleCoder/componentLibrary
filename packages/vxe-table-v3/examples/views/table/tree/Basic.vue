@@ -14,19 +14,19 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       resizable
       border="inner"
       ref="xTree"
       :tree-config="{children: 'childs'}"
       :data="tableData1"
       @toggle-tree-expand="toggleExpandChangeEvent">
-      <jy-column type="seq" width="80"></jy-column>
-      <jy-column field="name" title="app.body.label.name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="80"></gj-column>
+      <gj-column field="name" title="app.body.label.name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -37,16 +37,16 @@
 
     <p class="tip">默认展开树节点，通过 <table-api-link prop="tree-config"/>={<table-api-link prop="expandRowKeys"/>: []} 设置默认展开树节点的主键</p>
 
-    <jy-table
+    <gj-table
       resizable
       :row-config="{keyField: 'id'}"
       :tree-config="{transform: true, expandRowKeys: defaultExpandKeys}"
       :data="tableData2">
-      <jy-column field="name" title="app.body.label.name" tree-node></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="name" title="app.body.label.name" tree-node></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -57,20 +57,20 @@
 
     <p class="tip">默认展开所有树节点，通过 <table-api-link prop="tree-config"/>={<table-api-link prop="expandAll"/>: true} 设置默认展开所有树节点</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       :row-config="{keyField: 'id'}"
       :data="tableData3"
       :tree-config="{transform: true, expandAll: true}">
-      <jy-column type="seq" width="180" title="序号" tree-node></jy-column>
-      <jy-column field="name" title="app.body.label.name"></jy-column>
+      <gj-column type="seq" width="180" title="序号" tree-node></gj-column>
+      <gj-column field="name" title="app.body.label.name"></gj-column>
       <vxe-colgroup title="基本信息">
-        <jy-column field="size" title="Size"></jy-column>
-        <jy-column field="type" title="Type"></jy-column>
+        <gj-column field="size" title="Size"></gj-column>
+        <gj-column field="type" title="Type"></gj-column>
       </vxe-colgroup>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -164,18 +164,18 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           resizable
           border="inner"
           ref="xTree"
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :data="tableData1"
           @toggle-tree-expand="toggleExpandChangeEvent">
-          <jy-column field="name" title="app.body.label.name" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="app.body.label.name" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -215,16 +215,16 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           resizable
           row-id="id"
           :tree-config="{transform: true, expandRowKeys: defaultExpandKeys}"
           :data="tableData2">
-          <jy-column field="name" title="app.body.label.name" tree-node></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="name" title="app.body.label.name" tree-node></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -256,20 +256,20 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           row-id="id"
           :data="tableData3"
           :tree-config="{transform: true, expandAll: true}">
-          <jy-column type="seq" width="180" title="序号" tree-node></jy-column>
-          <jy-column field="name" title="app.body.label.name"></jy-column>
+          <gj-column type="seq" width="180" title="序号" tree-node></gj-column>
+          <gj-column field="name" title="app.body.label.name"></gj-column>
           <vxe-colgroup title="基本信息">
-            <jy-column field="size" title="Size"></jy-column>
-            <jy-column field="type" title="Type"></jy-column>
+            <gj-column field="size" title="Size"></gj-column>
+            <gj-column field="type" title="Type"></gj-column>
           </vxe-colgroup>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {

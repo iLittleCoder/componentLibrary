@@ -7,7 +7,7 @@
 }
 @include b(collapse-item) {
   @include when(disabled) {
-    .jy-collapse-item__header,
+    .gj-collapse-item__header,
     i {
       color: $--color-text-disabled;
       cursor: not-allowed;

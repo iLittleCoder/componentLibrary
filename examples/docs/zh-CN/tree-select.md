@@ -9,56 +9,56 @@
 ```html
 <div class="tree">
   <div class="tree-title">是否过滤：filterable</div>
-  <jy-tree-select
+  <gj-tree-select
     v-model="value0"
     placeholder="请选择"
     border
     :treeData="treeData"
   >
-  </jy-tree-select>
-  <jy-tree-select
+  </gj-tree-select>
+  <gj-tree-select
     v-model="value1"
     placeholder="请选择"
     border
     :treeData="treeData"
     filterable
   >
-  </jy-tree-select>
+  </gj-tree-select>
 
   <div class="tree-title">尺寸</div>
 
-  <jy-tree-select
+  <gj-tree-select
     v-model="value2"
     placeholder="请选择"
     border
     :treeData="treeData"
     size="large"
   >
-  </jy-tree-select>
-  <jy-tree-select
+  </gj-tree-select>
+  <gj-tree-select
     v-model="value3"
     placeholder="请选择"
     border
     :treeData="treeData"
     size="medium"
   >
-  </jy-tree-select>
-  <jy-tree-select
+  </gj-tree-select>
+  <gj-tree-select
     v-model="value4"
     placeholder="请选择"
     border
     :treeData="treeData"
   >
-  </jy-tree-select>
+  </gj-tree-select>
 
-  <jy-tree-select
+  <gj-tree-select
     v-model="value5"
     placeholder="请选择"
     border
     :treeData="treeData"
     size="mini"
   >
-  </jy-tree-select>
+  </gj-tree-select>
 </div>
 <script>
   export default {
@@ -163,15 +163,15 @@
 ```html
 <div class="tree-title">是否父子关联：checkStrictly</div>
 <div class="tree">
-  <jy-tree-select
+  <gj-tree-select
     v-model="value0"
     placeholder="请选择"
     border
     multiple
     :treeData="treeData"
   >
-  </jy-tree-select>
-  <jy-tree-select
+  </gj-tree-select>
+  <gj-tree-select
     v-model="value1"
     placeholder="请选择"
     border
@@ -179,7 +179,7 @@
     :check-strictly="true"
     :treeData="treeData"
   >
-  </jy-tree-select>
+  </gj-tree-select>
 </div>
 <script>
   export default {

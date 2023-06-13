@@ -56,7 +56,7 @@ export default {
       const isColGroup = column.children && column.children.length
       cols.push(
         h('li', {
-          class: ['jy-table-export--panel-column-option', `level--${column.level}`, {
+          class: ['gj-table-export--panel-column-option', `level--${column.level}`, {
             'is--group': isColGroup,
             'is--checked': column.checked,
             'is--indeterminate': column.halfChecked,
@@ -74,16 +74,16 @@ export default {
           }
         }, [
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--checked-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--checked-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--unchecked-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--unchecked-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--icon jy-table-checkbox--indeterminate-icon'
+            class: 'gj-table-checkbox--icon gj-table-checkbox--indeterminate-icon'
           }),
           h('span', {
-            class: 'jy-table-checkbox--label'
+            class: 'gj-table-checkbox--label'
           }, colTitle)
         ])
       )
@@ -109,7 +109,7 @@ export default {
       }
     }, [
       h('div', {
-        class: 'jy-table-export--panel'
+        class: 'gj-table-export--panel'
       }, [
         h('table', {
           attrs: {
@@ -206,13 +206,13 @@ export default {
                 h('td', [GlobalConfig.i18n('vxe.export.expColumn')]),
                 h('td', [
                   h('div', {
-                    class: 'jy-table-export--panel-column'
+                    class: 'gj-table-export--panel-column'
                   }, [
                     h('ul', {
-                      class: 'jy-table-export--panel-column-header'
+                      class: 'gj-table-export--panel-column-header'
                     }, [
                       h('li', {
-                        class: ['jy-table-export--panel-column-option', {
+                        class: ['gj-table-export--panel-column-option', {
                           'is--checked': isAll,
                           'is--indeterminate': isIndeterminate
                         }],
@@ -224,21 +224,21 @@ export default {
                         }
                       }, [
                         h('span', {
-                          class: 'jy-table-checkbox--icon jy-table-checkbox--checked-icon'
+                          class: 'gj-table-checkbox--icon gj-table-checkbox--checked-icon'
                         }),
                         h('span', {
-                          class: 'jy-table-checkbox--icon jy-table-checkbox--unchecked-icon'
+                          class: 'gj-table-checkbox--icon gj-table-checkbox--unchecked-icon'
                         }),
                         h('span', {
-                          class: 'jy-table-checkbox--icon jy-table-checkbox--indeterminate-icon'
+                          class: 'gj-table-checkbox--icon gj-table-checkbox--indeterminate-icon'
                         }),
                         h('span', {
-                          class: 'jy-table-checkbox--label'
+                          class: 'gj-table-checkbox--label'
                         }, GlobalConfig.i18n('vxe.export.expCurrentColumn'))
                       ])
                     ]),
                     h('ul', {
-                      class: 'jy-table-export--panel-column-body'
+                      class: 'gj-table-export--panel-column-body'
                     }, cols)
                   ])
                 ])
@@ -247,7 +247,7 @@ export default {
                 h('td', GlobalConfig.i18n('vxe.export.expOpts')),
                 h('td', [
                   h('div', {
-                    class: 'jy-table-export--panel-option-row'
+                    class: 'gj-table-export--panel-option-row'
                   }, [
                     h('vxe-checkbox', {
                       props: {
@@ -288,7 +288,7 @@ export default {
                     })
                   ]),
                   h('div', {
-                    class: 'jy-table-export--panel-option-row'
+                    class: 'gj-table-export--panel-option-row'
                   }, [
                     h('vxe-checkbox', {
                       props: {
@@ -349,7 +349,7 @@ export default {
           ])
         ]),
         h('div', {
-          class: 'jy-table-export--panel-btns'
+          class: 'gj-table-export--panel-btns'
         }, [
           h('vxe-button', {
             props: {

@@ -1,24 +1,24 @@
 <template>
   <div
-    class="jy-form-item"
+    class="gj-form-item"
     :class="[
       {
-        'jy-form-item--feedback': jyForm && jyForm.statusIcon,
+        'gj-form-item--feedback': GjForm && GjForm.statusIcon,
         'is-error': validateState === 'error',
         'is-validating': validateState === 'validating',
         'is-success': validateState === 'success',
         'is-required': isRequired || required,
-        'is-no-asterisk': jyForm && jyForm.hideRequiredAsterisk
+        'is-no-asterisk': GjForm && GjForm.hideRequiredAsterisk
       },
-      sizeClass ? 'jy-form-item--' + sizeClass : ''
+      sizeClass ? 'gj-form-item--' + sizeClass : ''
     ]"
   >
     <label-wrap :is-auto-width="labelStyle && labelStyle.width === 'auto'" :update-all="form.labelWidth === 'auto'">
-      <label :for="labelFor" class="jy-form-item__label" :style="labelStyle" v-if="label || $slots.label">
-        <div class="jy-form-item__label--flex">
+      <label :for="labelFor" class="gj-form-item__label" :style="labelStyle" v-if="label || $slots.label">
+        <div class="gj-form-item__label--flex">
           <i
-            class="Gildata-asterisk jy-form-item__label--star"
-            v-if="(isRequired || required) && !(jyForm && jyForm.hideRequiredAsterisk)"
+            class="Gildata-asterisk gj-form-item__label--star"
+            v-if="(isRequired || required) && !(GjForm && GjForm.hideRequiredAsterisk)"
           ></i>
           <slot name="label">{{ label + form.labelSuffix }}</slot>
         </div>
@@ -26,15 +26,15 @@
         <!-- <slot name="label">{{ label + form.labelSuffix }}</slot> -->
       </label>
     </label-wrap>
-    <div class="jy-form-item__content" :style="contentStyle">
+    <div class="gj-form-item__content" :style="contentStyle">
       <slot></slot>
-      <transition name="jy-zoom-in-top">
+      <transition name="gj-zoom-in-top">
         <slot v-if="validateState === 'error' && showMessage && form.showMessage" name="error" :error="validateMessage">
           <div
-            class="jy-form-item__error"
+            class="gj-form-item__error"
             :class="{
-              'jy-form-item__error--inline':
-                typeof inlineMessage === 'boolean' ? inlineMessage : (jyForm && jyForm.inlineMessage) || false
+              'gj-form-item__error--inline':
+                typeof inlineMessage === 'boolean' ? inlineMessage : (GjForm && GjForm.inlineMessage) || false
             }"
           >
             {{ validateMessage }}
@@ -51,19 +51,19 @@ import objectAssign from 'GildataDesign/src/utils/merge';
 import { noop, getPropByPath } from 'GildataDesign/src/utils/util';
 import LabelWrap from './label-wrap';
 export default {
-  name: 'JyFormItem',
+  name: 'GjFormItem',
 
-  componentName: 'JyFormItem',
+  componentName: 'GjFormItem',
 
   mixins: [emitter],
 
   provide() {
     return {
-      jyFormItem: this
+      GjFormItem: this
     };
   },
 
-  inject: ['jyForm'],
+  inject: ['GjForm'],
 
   props: {
     label: String,
@@ -126,7 +126,7 @@ export default {
         if (this.labelWidth === 'auto') {
           ret.marginLeft = this.computedLabelWidth;
         } else if (this.form.labelWidth === 'auto') {
-          ret.marginLeft = this.jyForm.autoLabelWidth;
+          ret.marginLeft = this.GjForm.autoLabelWidth;
         }
       } else {
         ret.marginLeft = labelWidth;
@@ -136,8 +136,8 @@ export default {
     form() {
       let parent = this.$parent;
       let parentName = parent.$options.componentName;
-      while (parentName !== 'JyForm') {
-        if (parentName === 'JyFormItem') {
+      while (parentName !== 'GjForm') {
+        if (parentName === 'GjFormItem') {
           this.isNested = true;
         }
         parent = parent.$parent;
@@ -174,13 +174,13 @@ export default {
       return isRequired;
     },
     _formSize() {
-      return this.jyForm.size;
+      return this.GjForm.size;
     },
-    jyFormItemSize() {
+    GjFormItemSize() {
       return this.size || this._formSize;
     },
     sizeClass() {
-      return this.jyFormItemSize || (this.$ELEMENT || {}).size;
+      return this.GjFormItemSize || (this.$ELEMENT || {}).size;
     }
   },
   data() {
@@ -222,7 +222,7 @@ export default {
         this.validateMessage = errors ? errors[0].message : '';
 
         callback(this.validateMessage, invalidFields);
-        this.jyForm && this.jyForm.$emit('validate', this.prop, !errors, this.validateMessage || null);
+        this.GjForm && this.GjForm.$emit('validate', this.prop, !errors, this.validateMessage || null);
       });
     },
     clearValidate() {
@@ -255,7 +255,7 @@ export default {
         this.validateDisabled = false;
       });
 
-      this.broadcast('JyTimeSelect', 'fieldReset', this.initialValue);
+      this.broadcast('GjTimeSelect', 'fieldReset', this.initialValue);
     },
     getRules() {
       let formRules = this.form.rules;
@@ -309,7 +309,7 @@ export default {
   },
   mounted() {
     if (this.prop) {
-      this.dispatch('JyForm', 'el.form.addField', [this]);
+      this.dispatch('GjForm', 'el.form.addField', [this]);
 
       let initialValue = this.fieldValue;
       if (Array.isArray(initialValue)) {
@@ -323,7 +323,7 @@ export default {
     }
   },
   beforeDestroy() {
-    this.dispatch('JyForm', 'el.form.removeField', [this]);
+    this.dispatch('GjForm', 'el.form.removeField', [this]);
   }
 };
 </script>

@@ -4,13 +4,13 @@
 
 @include b(date-picker) {
   width: 266px;
-  &.jy-picker-panel__content-ym{
+  &.gj-picker-panel__content-ym{
     width: 240px;
-    .jy-date-picker__header,
-    .jy-picker-panel__content {
+    .gj-date-picker__header,
+    .gj-picker-panel__content {
       width: 240px;
     }
-    .jy-picker-panel__content{
+    .gj-picker-panel__content{
       padding: 0px 16px;
     }
   }
@@ -25,16 +25,16 @@
   }
 
   &.has-time { // 时间日期选择器
-    .jy-date-picker__time-header .jy-input__inner{
+    .gj-date-picker__time-header .gj-input__inner{
       text-align: center;
     }
-    .jy-picker-panel__body-wrapper {
+    .gj-picker-panel__body-wrapper {
       position: relative;
     }
   } 
   
 
-  .jy-picker-panel__content {
+  .gj-picker-panel__content {
     width: 266px;
     padding: 8px;
     box-sizing: border-box;
@@ -77,7 +77,7 @@
       // padding-bottom: 8px; // 年、月的title过宽
       border-bottom: solid 1px $--border-color-normal;
 
-      & + .jy-picker-panel__content {
+      & + .gj-picker-panel__content {
         margin-top: 0;
       }
     }

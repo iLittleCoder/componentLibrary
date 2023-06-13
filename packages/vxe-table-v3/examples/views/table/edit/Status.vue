@@ -17,7 +17,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       keep-source
@@ -25,36 +25,36 @@
       :loading="loading"
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true, icon: 'fa fa-pencil-square-o'}">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{autofocus: '.myinput'}">
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{autofocus: '.myinput'}">
         <template #edit="scope">
           <input type="text" class="myinput" v-model="scope.row.name" @input="$refs.xTable.updateStatus(scope)"/>
         </template>
-      </jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{autofocus: '.myinput'}">
+      </gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{autofocus: '.myinput'}">
         <template #edit="scope">
           <input type="text" class="myinput" v-model="scope.row.sex" @input="$refs.xTable.updateStatus(scope)"/>
         </template>
-      </jy-column>
-      <jy-column field="address" title="Address" :edit-render="{}">
+      </gj-column>
+      <gj-column field="address" title="Address" :edit-render="{}">
         <template #edit="scope">
           <input type="text" v-model="scope.row.address" @input="$refs.xTable.updateStatus(scope)"/>
         </template>
-      </jy-column>
-      <jy-column field="date3" title="Date" formatter="formatDate">
+      </gj-column>
+      <gj-column field="date3" title="Date" formatter="formatDate">
         <template #edit="scope">
           <input type="date" v-model="scope.row.date3" @input="$refs.xTable.updateStatus(scope)"/>
         </template>
-      </jy-column>
-      <jy-column title="操作" width="200">
+      </gj-column>
+      <gj-column title="操作" width="200">
         <template #default="{ row }">
           <template v-if="$refs.xTable.isUpdateByRow(row)">
             <vxe-button @click="saveUpdateEvent(row)" :loading="row.loading">局部保存</vxe-button>
           </template>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -91,7 +91,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           keep-source
@@ -99,36 +99,36 @@ export default {
           :loading="loading"
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'cell', showStatus: true, icon: 'fa fa-pencil-square-o'}">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{autofocus: '.myinput'}">
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{autofocus: '.myinput'}">
             <template #edit="scope">
               <input type="text" class="myinput" v-model="scope.row.name" @input="$refs.xTable.updateStatus(scope)"/>
             </template>
-          </jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{autofocus: '.myinput'}">
+          </gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{autofocus: '.myinput'}">
             <template #edit="scope">
               <input type="text" class="myinput" v-model="scope.row.sex" @input="$refs.xTable.updateStatus(scope)"/>
             </template>
-          </jy-column>
-          <jy-column field="address" title="Address" :edit-render="{}">
+          </gj-column>
+          <gj-column field="address" title="Address" :edit-render="{}">
             <template #edit="scope">
               <input type="text" v-model="scope.row.address" @input="$refs.xTable.updateStatus(scope)"/>
             </template>
-          </jy-column>
-          <jy-column field="date3" title="Date" formatter="formatDate">
+          </gj-column>
+          <gj-column field="date3" title="Date" formatter="formatDate">
             <template #edit="scope">
               <input type="date" v-model="scope.row.date3" @input="$refs.xTable.updateStatus(scope)"/>
             </template>
-          </jy-column>
-          <jy-column title="操作" width="200">
+          </gj-column>
+          <gj-column title="操作" width="200">
             <template #default="{ row }">
               <template v-if="$refs.xTable.isUpdateByRow(row)">
                 <vxe-button @click="saveUpdateEvent(row)" :loading="row.loading">局部保存</vxe-button>
               </template>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         export default {

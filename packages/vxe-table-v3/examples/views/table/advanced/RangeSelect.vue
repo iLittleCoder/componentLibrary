@@ -2,17 +2,17 @@
   <div>
     <p class="tip">复选框的范围选中功能，通过配置项 <table-api-link prop="checkbox-config"/>={<table-api-link prop="range"/>} 启用，还可以同时按住 ctrl 键取消/勾选不连续的行</p>
 
-    <jy-table
+    <gj-table
       border
       height="400"
       :checkbox-config="{trigger: 'row', highlight: true, range: true}"
       :data="tableData">
-      <jy-column type="checkbox" width="80"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="time" title="Time"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="80"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="time" title="Time"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -41,17 +41,17 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           height="400"
           :checkbox-config="{trigger: 'row', highlight: true, range: true}"
           :data="tableData">
-          <jy-column type="checkbox" width="80"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="time" title="Time"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="80"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="time" title="Time"></gj-column>
+        </gj-table>
         `,
         `
         export default {

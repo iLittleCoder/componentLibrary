@@ -3,7 +3,7 @@ import VXETable from '../../v-x-e-table'
 import UtilTools from '../../tools/utils'
 import XEUtils from 'xe-utils'
 export default {
-  name: 'JyTableFilter',
+  name: 'GjTableFilter',
   props: {
     filterStore: Object
   },
@@ -19,7 +19,7 @@ export default {
     const filterRender = column ? column.filterRender : null
     const compConf = filterRender ? VXETable.renderer.get(filterRender.name) : null
     return h('div', {
-      class: ['jy-table--filter-wrapper', 'filter--prevent-default', compConf && compConf.className ? compConf.className : '', {
+      class: ['gj-table--filter-wrapper', 'filter--prevent-default', compConf && compConf.className ? compConf.className : '', {
         'is--animat': $xetable.animat,
         'is--multiple': filterStore.multiple,
         'is--active': filterStore.visible
@@ -36,23 +36,23 @@ export default {
       if (slots && slots.filter) {
         return [
           h('div', {
-            class: 'jy-table--filter-template'
+            class: 'gj-table--filter-template'
           }, $xetable.callSlot(slots.filter, Object.assign({ $panel: this, context: this }, args), h))
         ]
       } else if (compConf && compConf.renderFilter) {
         return [
           h('div', {
-            class: 'jy-table--filter-template'
+            class: 'gj-table--filter-template'
           }, compConf.renderFilter.call($xetable, h, filterRender, Object.assign({ $panel: this, context: this }, args)))
         ]
       }
       return [
         h('ul', {
 
-          class: 'jy-table--filter-header'
+          class: 'gj-table--filter-header'
         }, [
           h('li', {
-            class: ['jy-table--filter-option', {
+            class: ['gj-table--filter-option', {
               'is--checked': multiple ? filterStore.isAllSelected : !filterStore.options.some(item => item._checked),
               'is--indeterminate': multiple && filterStore.isIndeterminate
             }],
@@ -66,28 +66,28 @@ export default {
             }
           }, (multiple ? [
             h('span', {
-              class: 'jy-checkbox--icon jy-checkbox--checked-icon'
+              class: 'gj-checkbox--icon gj-checkbox--checked-icon'
             }),
             h('span', {
-              class: 'jy-checkbox--icon jy-checkbox--unchecked-icon'
+              class: 'gj-checkbox--icon gj-checkbox--unchecked-icon'
             }),
             h('span', {
-              class: 'jy-checkbox--icon jy-checkbox--indeterminate-icon'
+              class: 'gj-checkbox--icon gj-checkbox--indeterminate-icon'
             })
           ] : []).concat([
             h('span', {
-              class: 'jy-checkbox--label'
+              class: 'gj-checkbox--label'
             }, GlobalConfig.i18n('vxe.table.allFilter'))
           ]))
         ]),
         h('ul', {
-          class: 'jy-table--filter-body',
+          class: 'gj-table--filter-body',
           style: maxHeight ? {
             maxHeight: `${maxHeight}px`
           } : {}
         }, filterStore.options.map(item => {
           return h('li', {
-            class: ['jy-table--filter-option', {
+            class: ['gj-table--filter-option', {
               'is--checked': item._checked
             }],
             attrs: {
@@ -100,17 +100,17 @@ export default {
             }
           }, (multiple ? [
             h('span', {
-              class: 'jy-checkbox--icon jy-checkbox--checked-icon'
+              class: 'gj-checkbox--icon gj-checkbox--checked-icon'
             }),
             h('span', {
-              class: 'jy-checkbox--icon jy-checkbox--unchecked-icon'
+              class: 'gj-checkbox--icon gj-checkbox--unchecked-icon'
             }),
             h('span', {
-              class: 'jy-checkbox--icon jy-checkbox--indeterminate-icon'
+              class: 'gj-checkbox--icon gj-checkbox--indeterminate-icon'
             })
           ] : []).concat([
             h('span', {
-              class: 'jy-checkbox--label'
+              class: 'gj-checkbox--label'
             }, UtilTools.formatText(item.label, 1))
           ]))
         }))
@@ -124,7 +124,7 @@ export default {
       const isDisabled = !hasCheckOption && !filterStore.isAllSelected && !filterStore.isIndeterminate
       return multiple && (!compConf || (XEUtils.isBoolean(compConf.showFilterFooter) ? compConf.showFilterFooter !== false : compConf.isFooter !== false)) ? [
         h('div', {
-          class: 'jy-table--filter-footer'
+          class: 'gj-table--filter-footer'
         }, [
           h('button', {
             class: {

@@ -1,8 +1,8 @@
-import JyDropdownItem from '../dropdown/src/dropdown-item';
+import GjDropdownItem from '../dropdown/src/dropdown-item';
 
 /* istanbul ignore next */
-JyDropdownItem.install = function(Vue) {
-  Vue.component(JyDropdownItem.name, JyDropdownItem);
+GjDropdownItem.install = function(Vue) {
+  Vue.component(GjDropdownItem.name, GjDropdownItem);
 };
 
-export default JyDropdownItem;
+export default GjDropdownItem;

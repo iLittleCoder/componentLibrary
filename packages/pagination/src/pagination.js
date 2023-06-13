@@ -8,14 +8,14 @@
 
 import Simple from './simple-pager'; // 页码组件
 import Pager from './pager.vue'; // 页码组件
-import JySelect from 'GildataDesign/packages/select'; // 选择页面条数的组件
-import JyOption from 'GildataDesign/packages/option'; // 下拉框选项
-import JyInput from 'GildataDesign/packages/input'; // 输入页面跳转组件
+import GjSelect from 'GildataDesign/packages/select'; // 选择页面条数的组件
+import GjOption from 'GildataDesign/packages/option'; // 下拉框选项
+import GjInput from 'GildataDesign/packages/input'; // 输入页面跳转组件
 import Locale from 'GildataDesign/src/mixins/locale'; // 混入切换语音的方法，this.t
 import { valueEquals } from 'GildataDesign/src/utils/util'; // 判断两个值是否相等
 
 export default {
-  name: 'JyPagination',
+  name: 'GjPagination',
 
   props: {
     pageSize: {
@@ -56,7 +56,7 @@ export default {
 
     popperClass: { // 选择器的下拉框类名
       type: String,
-      default: 'jy-pagination--select-popper'
+      default: 'gj-pagination--select-popper'
     },
 
     prevText: String,
@@ -85,8 +85,8 @@ export default {
     // 判断是否只有一页
     if (this.hideOnSinglePage && (!this.internalPageCount || this.internalPageCount === 1)) return null;
 
-    let template = <div class={['jy-pagination', {
-      'jy-pagination--small': this.small
+    let template = <div class={['gj-pagination', {
+      'gj-pagination--small': this.small
     }] }></div>;
     const TEMPLATE_MAP = {
       prev: <prev></prev>,
@@ -99,7 +99,7 @@ export default {
       total: <total></total>
     };
     const components = layout.split(',').map((item) => item.trim());
-    const rightWrapper = <div class="jy-pagination__rightwrapper"></div>;
+    const rightWrapper = <div class="gj-pagination__rightwrapper"></div>;
     let haveRightWrapper = false;
 
     template.children = template.children || [];
@@ -184,8 +184,8 @@ export default {
       },
       render(h) {
         return (
-          <span class="jy-pagination__sizes">
-            <jy-select
+          <span class="gj-pagination__sizes">
+            <gj-select
               value={ this.$parent.internalPageSize }
               popperClass={ this.$parent.popperClass || '' }
               size="mini"
@@ -193,20 +193,20 @@ export default {
               disabled={ this.$parent.disabled }>
               {
                 this.pageSizes.map(item =>
-                  <jy-option
+                  <gj-option
                     value={ item }
                     label={ item + ' ' + this.t('el.pagination.pagesize') }>
-                  </jy-option>
+                  </gj-option>
                 )
               }
-            </jy-select>
+            </gj-select>
           </span>
         );
       },
 
       components: {
-        JySelect,
-        JyOption
+        GjSelect,
+        GjOption
       },
 
       methods: {
@@ -224,7 +224,7 @@ export default {
     Jumper: {
       mixins: [Locale],
 
-      components: { JyInput },
+      components: { GjInput },
 
       data() {
         return {
@@ -260,10 +260,10 @@ export default {
 
       render(h) {
         return (
-          <span class="jy-pagination__jump">
+          <span class="gj-pagination__jump">
             { this.t('el.pagination.goto') }
-            <jy-input
-              class="jy-pagination__editor is-in-pagination"
+            <gj-input
+              class="gj-pagination__editor is-in-pagination"
               min={ 1 }
               max={ this.$parent.internalPageCount }
               value={ this.userInput !== null ? this.userInput : this.$parent.internalCurrentPage }
@@ -284,7 +284,7 @@ export default {
       render(h) {
         return (
           typeof this.$parent.total === 'number'
-            ? <span class="jy-pagination__total">{ this.t('el.pagination.total', { total: this.$parent.total }) }</span>
+            ? <span class="gj-pagination__total">{ this.t('el.pagination.total', { total: this.$parent.total }) }</span>
             : ''
         );
       }

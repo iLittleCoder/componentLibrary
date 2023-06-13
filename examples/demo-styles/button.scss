@@ -14,22 +14,22 @@
     color: var(--color-primary);
     background-color: #fff;
   }
-  .jy-row {
+  .gj-row {
     margin-bottom: 20px;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
-  .jy-button + .jy-button {
+  .gj-button + .gj-button {
     margin-left: 10px;
   }
-  .jy-button-group {
-    .jy-button + .jy-button {
+  .gj-button-group {
+    .gj-button + .gj-button {
       margin-left: 0;
     }
 
-    & + .jy-button-group {
+    & + .gj-button-group {
       margin-left: 10px;
     }
   }

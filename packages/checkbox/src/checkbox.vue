@@ -1,8 +1,8 @@
 <template>
   <label
-    class="jy-checkbox"
+    class="gj-checkbox"
     :class="[
-      border && checkboxSize ? 'jy-checkbox--' + checkboxSize : '',
+      border && checkboxSize ? 'gj-checkbox--' + checkboxSize : '',
       { 'is-disabled': isDisabled },
       { 'is-bordered': border },
       { 'is-checked': isChecked }
@@ -10,7 +10,7 @@
     :id="id"
   >
     <span
-      class="jy-checkbox__input"
+      class="gj-checkbox__input"
       :class="{
         'is-disabled': isDisabled,
         'is-checked': isChecked,
@@ -21,10 +21,10 @@
       :role="indeterminate ? 'checkbox' : false"
       :aria-checked="indeterminate ? 'mixed' : false"
     >
-      <span class="jy-checkbox__inner"></span>
+      <span class="gj-checkbox__inner"></span>
       <input
         v-if="trueLabel || falseLabel"
-        class="jy-checkbox__original"
+        class="gj-checkbox__original"
         type="checkbox"
         :aria-hidden="indeterminate ? 'true' : 'false'"
         :name="name"
@@ -38,7 +38,7 @@
       />
       <input
         v-else
-        class="jy-checkbox__original"
+        class="gj-checkbox__original"
         type="checkbox"
         :aria-hidden="indeterminate ? 'true' : 'false'"
         :disabled="isDisabled"
@@ -50,7 +50,7 @@
         @blur="focus = false"
       />
     </span>
-    <span class="jy-checkbox__label" v-if="$slots.default || label">
+    <span class="gj-checkbox__label" v-if="$slots.default || label">
       <slot></slot>
       <template v-if="!$slots.default">{{ label }}</template>
     </span>
@@ -60,20 +60,20 @@
 import Emitter from 'GildataDesign/src/mixins/emitter';
 
 export default {
-  name: 'JyCheckbox',
+  name: 'GjCheckbox',
 
   mixins: [Emitter],
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
 
-  componentName: 'JyCheckbox',
+  componentName: 'GjCheckbox',
 
   data() {
     return {
@@ -100,7 +100,7 @@ export default {
             val.length > this._checkboxGroup.max &&
             (this.isLimitExceeded = true);
 
-          this.isLimitExceeded === false && this.dispatch('JyCheckboxGroup', 'input', [val]);
+          this.isLimitExceeded === false && this.dispatch('GjCheckboxGroup', 'input', [val]);
         } else {
           this.$emit('input', val);
           this.selfModel = val;
@@ -122,7 +122,7 @@ export default {
       if (this.selectCheck) return false;
       let parent = this.$parent;
       while (parent) {
-        if (parent.$options.componentName !== 'JyCheckboxGroup') {
+        if (parent.$options.componentName !== 'GjCheckboxGroup') {
           parent = parent.$parent;
         } else {
           this._checkboxGroup = parent;
@@ -147,12 +147,12 @@ export default {
 
     isDisabled() {
       return this.isGroup
-        ? this._checkboxGroup.disabled || this.disabled || (this.jyForm || {}).disabled || this.isLimitDisabled
-        : this.disabled || (this.jyForm || {}).disabled;
+        ? this._checkboxGroup.disabled || this.disabled || (this.GjForm || {}).disabled || this.isLimitDisabled
+        : this.disabled || (this.GjForm || {}).disabled;
     },
 
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
 
     checkboxSize() {
@@ -200,7 +200,7 @@ export default {
       this.$emit('change', value, ev);
       this.$nextTick(() => {
         if (this.isGroup) {
-          this.dispatch('JyCheckboxGroup', 'change', [this._checkboxGroup.value]);
+          this.dispatch('GjCheckboxGroup', 'change', [this._checkboxGroup.value]);
         }
       });
     }
@@ -218,7 +218,7 @@ export default {
 
   watch: {
     value(value) {
-      this.dispatch('JyFormItem', 'el.form.change', value);
+      this.dispatch('GjFormItem', 'el.form.change', value);
     }
   }
 };

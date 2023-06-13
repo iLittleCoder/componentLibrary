@@ -2,7 +2,7 @@
   <div>
     <p class="tip">右键菜单，支持表头菜单、内容菜单、表尾菜单，通过 <table-api-link prop="visibleMethod"/> 和 <table-api-link prop="visible"/> | <table-api-link prop="disabled"/> 属性来控制菜单选项的操作权限</p>
 
-    <jy-table
+    <gj-table
       border
       show-footer
       highlight-current-row
@@ -15,12 +15,12 @@
       @header-cell-menu="headerCellContextMenuEvent"
       @cell-menu="cellContextMenuEvent"
       @menu-click="contextMenuClickEvent">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="time" title="Time"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="time" title="Time"></gj-column>
+    </gj-table>
 
     <pre>
       <pre-code>
@@ -110,7 +110,7 @@ export default {
       },
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-footer
           highlight-current-row
@@ -123,12 +123,12 @@ export default {
           @header-cell-menu="headerCellContextMenuEvent"
           @cell-menu="cellContextMenuEvent"
           @menu-click="contextMenuClickEvent">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="time" title="Time"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="time" title="Time"></gj-column>
+        </gj-table>
         `,
         `
         import XEClipboard from 'xe-clipboard'

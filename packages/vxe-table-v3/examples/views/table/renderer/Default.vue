@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="tip">
-      默认的渲染 <table-column-api-link prop="cell-render"/>，查看 <a class="link" href="https://gitee.com/xuliangzhan_admin/jy-table/tree/v3/examples/plugins/table/renderer" target="_blank">示例的源码</a><span class="red">（具体请自行实现，该示例仅供参考）</span><br>
+      默认的渲染 <table-column-api-link prop="cell-render"/>，查看 <a class="link" href="https://gitee.com/xuliangzhan_admin/gj-table/tree/v3/examples/plugins/table/renderer" target="_blank">示例的源码</a><span class="red">（具体请自行实现，该示例仅供参考）</span><br>
       配置参数：<br>
       renderHeader (h, renderOpts, params: { column, columnIndex, columnIndex, $rowIndex, $table }) 表头单元格显示内容<br>
       renderDefault (h, renderOpts, params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, $table }) 单元格显示默认内容<br>
@@ -10,14 +10,14 @@
       footerExportMethod (params: { items, _columnIndex }) 表尾单元格导出函数<br>
     </p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name" :cell-render="{name: 'MyLink', events: {click: linkEvent}}"></jy-column>
-      <jy-column field="sex" title="sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name" :cell-render="{name: 'MyLink', events: {click: linkEvent}}"></gj-column>
+      <gj-column field="sex" title="sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -63,14 +63,14 @@ export default {
         })
         `,
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name" :cell-render="{name: 'MyLink', events: {click: linkEvent}}"></jy-column>
-          <jy-column field="sex" title="sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name" :cell-render="{name: 'MyLink', events: {click: linkEvent}}"></gj-column>
+          <gj-column field="sex" title="sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {

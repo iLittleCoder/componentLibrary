@@ -74,11 +74,11 @@
     height: 180px;
     padding: 2px 0;
 
-    .jy-color-hue-slider__bar {
+    .gj-color-hue-slider__bar {
       background: linear-gradient(to bottom, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
     }
 
-    .jy-color-hue-slider__thumb {
+    .gj-color-hue-slider__thumb {
       left: 0;
       top: 0;
       width: 100%;
@@ -154,11 +154,11 @@
     width: 20px;
     height: 180px;
 
-    .jy-color-alpha-slider__bar {
+    .gj-color-alpha-slider__bar {
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     }
 
-    .jy-color-alpha-slider__thumb {
+    .gj-color-alpha-slider__thumb {
       left: 0;
       top: 0;
       width: 100%;
@@ -233,7 +233,7 @@
   height: 40px;
 
   @include when(disabled) {
-    .jy-color-picker__trigger {
+    .gj-color-picker__trigger {
       cursor: not-allowed;
     }
   }
@@ -241,12 +241,12 @@
   @include m(medium) {
     height: 36px;
 
-    .jy-color-picker__trigger {
+    .gj-color-picker__trigger {
       height: 36px;
       width: 36px;
     }
 
-    .jy-color-picker__mask {
+    .gj-color-picker__mask {
       height: 34px;
       width: 34px;
     }
@@ -255,18 +255,18 @@
   @include m(small) {
     height: 32px;
 
-    .jy-color-picker__trigger {
+    .gj-color-picker__trigger {
       height: 32px;
       width: 32px;
     }
 
-    .jy-color-picker__mask {
+    .gj-color-picker__mask {
       height: 30px;
       width: 30px;
     }
 
-    .jy-color-picker__icon,
-    .jy-color-picker__empty {
+    .gj-color-picker__icon,
+    .gj-color-picker__empty {
       transform: translate3d(-50%, -50%, 0) scale(0.8);
     }
   }
@@ -274,18 +274,18 @@
   @include m(mini) {
     height: 28px;
 
-    .jy-color-picker__trigger {
+    .gj-color-picker__trigger {
       height: 28px;
       width: 28px;
     }
 
-    .jy-color-picker__mask {
+    .gj-color-picker__mask {
       height: 26px;
       width: 26px;
     }
 
-    .jy-color-picker__icon,
-    .jy-color-picker__empty {
+    .gj-color-picker__icon,
+    .gj-color-picker__empty {
       transform: translate3d(-50%, -50%, 0) scale(0.8);
     }
   }

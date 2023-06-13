@@ -1,26 +1,26 @@
 <template>
-  <div class="jy-image">
+  <div class="gj-image">
     <slot v-if="loading" name="placeholder">
-      <div class="jy-image__placeholder">
+      <div class="gj-image__placeholder">
         <i class="Gildata-loading"></i>
         <span>加载中</span>
       </div>
     </slot>
     <slot v-else-if="error" name="error">
-      <div class="jy-image__error">
+      <div class="gj-image__error">
         <i class="Gildata-p-loadfailed"></i>
         <span>{{ t('el.image.error') }}</span>
       </div>
     </slot>
     <img
       v-else
-      class="jy-image__inner"
+      class="gj-image__inner"
       v-bind="$attrs"
       v-on="$listeners"
       @click="clickHandler"
       :src="src"
       :style="imageStyle"
-      :class="{ 'jy-image__inner--center': alignCenter, 'jy-image__preview': preview }">
+      :class="{ 'gj-image__inner--center': alignCenter, 'gj-image__preview': preview }">
     <template v-if="preview">
       <image-viewer :z-index="zIndex" :initial-index="imageIndex" v-if="showViewer" :on-close="closeViewer" :url-list="previewSrcList"/>
     </template>
@@ -47,7 +47,7 @@
   let prevOverflow = '';
 
   export default {
-    name: 'JyImage',
+    name: 'GjImage',
 
     mixins: [Locale],
     inheritAttrs: false,

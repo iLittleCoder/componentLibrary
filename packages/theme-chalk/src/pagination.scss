@@ -41,7 +41,7 @@
     box-sizing: border-box;
   }
 
-  .jy-input__inner {
+  .gj-input__inner {
     text-align: center;
     -moz-appearance: textfield;
     line-height: normal;
@@ -94,13 +94,13 @@
     margin-left: 8px;
   }
 
-  .jy-pager li.disabled {
+  .gj-pager li.disabled {
     color: $--color-text-placeholder;
     cursor: not-allowed;
   }
 
   @include m(select-popper) {
-    &.jy-select-dropdown {
+    &.gj-select-dropdown {
       border: none;
     }
   }
@@ -108,10 +108,10 @@
   @include m(small) {
     .btn-prev,
     .btn-next,
-    .jy-pager li,
-    .jy-pager li.btn-quicknext,
-    .jy-pager li.btn-quickprev,
-    .jy-pager li:last-child {
+    .gj-pager li,
+    .gj-pager li.btn-quicknext,
+    .gj-pager li.btn-quickprev,
+    .gj-pager li:last-child {
       border-color: transparent;
       font-size: 12px;
       line-height: $--pagination-button-height;
@@ -136,7 +136,7 @@
 
     @include e(editor) {
       height: 22px;
-      &.jy-input .jy-input__inner {
+      &.gj-input .gj-input__inner {
         height: 22px;
       }
     }
@@ -146,19 +146,19 @@
     font-weight: normal;
     color: $--color-text-primary;
 
-    .jy-select {
-      .jy-select-right-icon {
-        .jy-input__icon {
+    .gj-select {
+      .gj-select-right-icon {
+        .gj-input__icon {
           color: $--color-text-secondary !important;
         }
       }
     }
 
-    .jy-input {
+    .gj-input {
       // width: 84px;
       margin: 0;
 
-      .jy-input__inner {
+      .gj-input__inner {
         font-size: $--font-size-base;
         border: none;
         padding-left: 6px;
@@ -173,10 +173,10 @@
     }
 
     // pagesize 的下拉 icon
-    .jy-input .jy-input__suffix {
+    .gj-input .gj-input__suffix {
       right: 8px;
 
-      .jy-select__caret {
+      .gj-select__caret {
         font-size: $--font-size-base;
         font-weight: bold;
         color: $--color-text-regular;
@@ -195,7 +195,7 @@
     color: $--color-text-primary;
     margin-left: 8px;
 
-    .jy-input__inner {
+    .gj-input__inner {
       padding: 0 3px;
     }
   }
@@ -215,11 +215,11 @@
     box-sizing: border-box;
     border-radius: $--pagination-border-radius;
 
-    &.jy-input {
+    &.gj-input {
       width: 44px;
     }
 
-    &.jy-input .jy-input__inner {
+    &.gj-input .gj-input__inner {
       height: $--pagination-button-height;
 
       &:hover,
@@ -228,8 +228,8 @@
       }
     }
 
-    .jy-input__inner::-webkit-inner-spin-button,
-    .jy-input__inner::-webkit-outer-spin-button {
+    .gj-input__inner::-webkit-inner-spin-button,
+    .gj-input__inner::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
@@ -238,7 +238,7 @@
   @include when(background) {
     .btn-prev,
     .btn-next,
-    .jy-pager li {
+    .gj-pager li {
       margin: 0 5px;
       background-color: $--color-info-lighter;
       color: $--color-text-primary;
@@ -259,7 +259,7 @@
       }
     }
 
-    .jy-pager li:not(.disabled) {
+    .gj-pager li:not(.disabled) {
       &:hover {
         //color: $--pagination-hover-color;
         color: $--color-primary;
@@ -271,10 +271,10 @@
       }
     }
 
-    &.jy-pagination--small {
+    &.gj-pagination--small {
       .btn-prev,
       .btn-next,
-      .jy-pager li {
+      .gj-pager li {
         margin: 0 3px;
         min-width: 20px;
       }
@@ -363,19 +363,19 @@
   color: $--color-text-primary;
   text-align: center;
 
-  .jy-simple-one-pager {
+  .gj-simple-one-pager {
     color: $--color-info;
   }
 
-  .jy-select {
-    .jy-select-new-main {
+  .gj-select {
+    .gj-select-new-main {
       padding: 0;
     }
 
-    .jy-input {
+    .gj-input {
       border-radius: $--pagination-border-radius;
 
-      .jy-input__inner {
+      .gj-input__inner {
         font-size: $--font-size-base;
         padding: 0 6px;
         border: none;
@@ -389,21 +389,21 @@
       }
     }
 
-    .jy-select-right-icon {
+    .gj-select-right-icon {
       display: none;
     }
   }
 
   // pagesize 的下拉 icon
-  .jy-input .jy-input__suffix {
+  .gj-input .gj-input__suffix {
     display: none;
   }
 
-  .jy-select-dropdown {
+  .gj-select-dropdown {
     left: -18px !important;
     border: none;
 
-    .jy-select-dropdown__item {
+    .gj-select-dropdown__item {
       padding: 0 32px;
 
       span {

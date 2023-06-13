@@ -1,7 +1,7 @@
 @import "mixins/mixins";
 @import "common/var";
 
-@keyframes jy-drawer-fade-in {
+@keyframes gj-drawer-fade-in {
   0% {
     opacity: 0;
   }
@@ -91,7 +91,7 @@
 }
 
 @mixin animation-in($direction) {
-  .jy-drawer__open &.#{$direction} {
+  .gj-drawer__open &.#{$direction} {
     animation: #{$direction}-drawer-in .3s 1ms;
   }
 }
@@ -144,7 +144,7 @@ $directions: rtl, ltr, ttb, btt;
     flex-shrink: 0;
     border-bottom: 1px solid $--border-color-normal;
 
-    .jy-icon {
+    .gj-icon {
       font-size: $--font-size-extra-large;
 
       &:hover {
@@ -216,16 +216,16 @@ $directions: rtl, ltr, ttb, btt;
     padding: 12px 12px 12px 0;
     border-top: 1px solid $--border-color-normal;
 
-    .jy-button + .jy-button {
+    .gj-button + .gj-button {
       margin-left: 8px;
     }
-    .jy-button {
+    .gj-button {
       padding: 2px 12px;
     }
   }
 }
 
-.jy-drawer__container {
+.gj-drawer__container {
   position: relative;
   left: 0;
   right: 0;
@@ -235,10 +235,10 @@ $directions: rtl, ltr, ttb, btt;
   width: 100%;
 }
 
-.jy-drawer-fade-enter-active {
-  animation: jy-drawer-fade-in .3s;
+.gj-drawer-fade-enter-active {
+  animation: gj-drawer-fade-in .3s;
 }
 
-.jy-drawer-fade-leave-active {
-  animation: jy-drawer-fade-in .3s reverse;
+.gj-drawer-fade-leave-active {
+  animation: gj-drawer-fade-in .3s reverse;
 }

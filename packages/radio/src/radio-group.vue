@@ -1,7 +1,7 @@
 <template>
   <component
     :is="_elTag"
-    class="jy-radio-group"
+    class="gj-radio-group"
     :class="{ 'is-plain': !showBackground }"
     role="radiogroup"
     @keydown="handleKeydown"
@@ -19,12 +19,12 @@ const keyCode = Object.freeze({
   DOWN: 40
 });
 export default {
-  name: 'JyRadioGroup',
+  name: 'GjRadioGroup',
 
-  componentName: 'JyRadioGroup',
+  componentName: 'GjRadioGroup',
 
   inject: {
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
@@ -45,7 +45,7 @@ export default {
 
   computed: {
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
     _elTag() {
       let tag = (this.$vnode.data || {}).tag;
@@ -112,7 +112,7 @@ export default {
   },
   watch: {
     value(value) {
-      this.dispatch('JyFormItem', 'el.form.change', [this.value]);
+      this.dispatch('GjFormItem', 'el.form.change', [this.value]);
     }
   }
 };

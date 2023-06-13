@@ -20,7 +20,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       keep-source
@@ -29,20 +29,20 @@
       :data="tableData"
       :edit-rules="validRules"
       :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
       <vxe-colgroup title="分组1">
-        <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-        <jy-column field="role" title="Role" :edit-render="{name: '$input'}"></jy-column>
+        <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+        <gj-column field="role" title="Role" :edit-render="{name: '$input'}"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="分组2">
         <vxe-colgroup title="分组21">
-          <jy-column field="sex2" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'integer'}}"></jy-column>
-          <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
+          <gj-column field="sex2" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'integer'}}"></gj-column>
+          <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -115,7 +115,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           keep-source
@@ -124,20 +124,20 @@ export default {
           :data="tableData"
           :edit-rules="validRules"
           :edit-config="{trigger: 'click', mode: 'cell', showStatus: true}">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
           <vxe-colgroup title="分组1">
-            <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-            <jy-column field="role" title="Role" :edit-render="{name: '$input'}"></jy-column>
+            <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+            <gj-column field="role" title="Role" :edit-render="{name: '$input'}"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="分组2">
             <vxe-colgroup title="分组21">
-              <jy-column field="sex2" title="Sex" :edit-render="{name: 'input'}"></jy-column>
-              <jy-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'integer'}}"></jy-column>
-              <jy-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></jy-column>
+              <gj-column field="sex2" title="Sex" :edit-render="{name: 'input'}"></gj-column>
+              <gj-column field="age" title="Age" :edit-render="{name: '$input', props: {type: 'integer'}}"></gj-column>
+              <gj-column field="date" title="Date" :edit-render="{name: '$input', props: {type: 'date'}}"></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         export default {

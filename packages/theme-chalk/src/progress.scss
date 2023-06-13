@@ -5,7 +5,7 @@
 @include b(progress) {
   position: relative;
   line-height: 1;
-  .jy-progress-circle {
+  .gj-progress-circle {
     height: 48px;
     width: 48px;
   }
@@ -26,7 +26,7 @@
 
   @include m((circle, dashboard)) {
     display: inline-block;
-    .jy-progress__text {
+    .gj-progress__text {
       font-weight: 500;
       position: absolute;
       top: 50%;
@@ -41,19 +41,19 @@
         display: inline-block;
       }
     }
-    &.jy-progress__large {
-      .jy-progress__text i {
+    &.gj-progress__large {
+      .gj-progress__text i {
         font-size: 24px;
       }
     }
   }
 
   @include m(without-text) {
-    .jy-progress__text {
+    .gj-progress__text {
       display: none;
     }
 
-    .jy-progress-bar {
+    .gj-progress-bar {
       padding-right: 0;
       margin-right: 0;
       display: block;
@@ -61,51 +61,51 @@
   }
 
   @include m(text-inside) {
-    .jy-progress-bar {
+    .gj-progress-bar {
       padding-right: 0;
       margin-right: 0;
     }
   }
 
   @include when(success) {
-    .jy-progress-bar__inner {
+    .gj-progress-bar__inner {
       background-color: $--color-success;
     }
 
-    .jy-progress__text {
+    .gj-progress__text {
       color: $--color-success;
     }
   }
 
   @include when(warning) {
-    .jy-progress-bar__inner {
+    .gj-progress-bar__inner {
       background-color: $--color-warning;
     }
 
-    .jy-progress__text {
+    .gj-progress__text {
       color: $--color-warning;
     }
   }
 
   @include when(exception) {
-    .jy-progress-bar__inner {
+    .gj-progress-bar__inner {
       background-color: $--color-danger;
     }
 
-    .jy-progress__text {
+    .gj-progress__text {
       color: $--color-danger;
     }
   }
 
   @include e(large) {
-    .jy-progress-bar__outer {
+    .gj-progress-bar__outer {
       height: 8px;
       border-radius: 4px;
     }
-    .jy-progress-bar__inner {
+    .gj-progress-bar__inner {
       border-radius: 4px;
     }
-    .jy-progress-circle {
+    .gj-progress-circle {
       height: 80px;
       width: 80px;
     }

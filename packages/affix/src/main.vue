@@ -1,6 +1,6 @@
 <template>
-  <div ref="root" class="jy-affix" :style="rootStyle">
-    <div :class="{ 'jy-affix--fixed': fixed }" :style="affixStyle">
+  <div ref="root" class="gj-affix" :style="rootStyle">
+    <div :class="{ 'gj-affix--fixed': fixed }" :style="affixStyle">
       <slot></slot>
     </div>
   </div>
@@ -10,7 +10,7 @@
 import { on, off, getScrollContainer } from 'GildataDesign/src/utils/dom';
 import { addResizeListener } from 'GildataDesign/src/utils/resize-event';
 export default {
-  name: 'JyAffix',
+  name: 'GjAffix',
   props: {
     zIndex: {
       type: [Number, String],

@@ -1,8 +1,8 @@
 <template>
   <div
-    class="jy-tree-select"
+    class="gj-tree-select"
     :class="[
-      selectSize ? 'jy-tree-select--' + selectSize : '',
+      selectSize ? 'gj-tree-select--' + selectSize : '',
       {
         'no-border': !border,
         'select-option-show': visible
@@ -12,23 +12,23 @@
     v-clickoutside="handleClose"
   >
     <div
-      class="jy-tree-select-new-main"
+      class="gj-tree-select-new-main"
       :class="[
         selectDisabled ? 'is-disabled' : '',
         isSelfAdaption && collapseTags && selected.length
-          ? 'jy-tree-select-not-set-width-long'
+          ? 'gj-tree-select-not-set-width-long'
           : '',
         (!!selectedLabel && !multiple) || (multiple && !!selected.length)
-          ? 'jy-tree-select-new-main-active'
+          ? 'gj-tree-select-new-main-active'
           : '',
-        isSelfAdaption ? 'jy-tree-select-not-set-width' : ''
+        isSelfAdaption ? 'gj-tree-select-not-set-width' : ''
       ]"
       @mouseenter="inputHovering = true"
       @mouseleave="inputHovering = false"
     >
-      <div class="jy-tree-select-content">
-        <span class="jy-tree-select__single">
-          <jy-input
+      <div class="gj-tree-select-content">
+        <span class="gj-tree-select__single">
+          <gj-input
             ref="reference"
             v-model="selectedLabel"
             type="text"
@@ -58,22 +58,22 @@
             @compositionupdate="handleComposition"
             @compositionend="handleComposition"
           >
-          </jy-input>
+          </gj-input>
         </span>
         <span
-          class="jy-tree-select-placeholder"
+          class="gj-tree-select-placeholder"
           v-if="!selectedLabel && !multiple"
           :title="currentPlaceholder"
           >{{ currentPlaceholder }}</span
         >
         <span
-          class="jy-tree-select-selected-item"
+          class="gj-tree-select-selected-item"
           v-if="!!selectedLabel && !multiple"
           :title="selectedLabel"
           >{{ selectedLabel }}
         </span>
         <span
-          class="jy-tree-select-placeholder"
+          class="gj-tree-select-placeholder"
           v-if="
             multiple && !selected.length && currentPlaceholder && !filterable
           "
@@ -83,12 +83,12 @@
         <span
           :style="{ minHeight: 'auto' }"
           ref="mulpFilter"
-          class="jy-tree-select-selected-item"
+          class="gj-tree-select-selected-item"
           v-if="multiple && (selected.length || filterable)"
         >
-          <div class="jy-tree-select__tags" ref="tags">
+          <div class="gj-tree-select__tags" ref="tags">
             <span v-if="collapseTags && selected.length" style="display:flex">
-              <jy-tag
+              <gj-tag
                 :closable="!selectDisabled"
                 :size="collapseTagSize"
                 :hit="selected[0].hitState"
@@ -96,25 +96,25 @@
                 @close="deleteTag($event, selected[0])"
                 disable-transitions
               >
-                <span class="jy-tree-select__tags-text">{{
+                <span class="gj-tree-select__tags-text">{{
                   selected[0].currentLabel
                 }}</span>
-              </jy-tag>
-              <jy-tag
+              </gj-tag>
+              <gj-tag
                 v-if="selected.length > 1"
                 :closable="false"
                 :size="collapseTagSize"
                 type="info"
                 disable-transitions
               >
-                <span class="jy-tree-select__tags-text"
+                <span class="gj-tree-select__tags-text"
                   >+ {{ selected.length - 1 }}</span
                 >
-              </jy-tag>
+              </gj-tag>
             </span>
 
             <div
-              class="jy-m-tree-select__tags-text"
+              class="gj-m-tree-select__tags-text"
               v-if="!collapseTags && showFooter"
             >
               <span v-for="(item, index) in selectedCopy" :key="index"
@@ -123,7 +123,7 @@
               >
             </div>
             <div
-              class="jy-m-tree-select__tags-text"
+              class="gj-m-tree-select__tags-text"
               v-if="!collapseTags && !showFooter"
             >
               <span v-for="(item, index) in selected" :key="index"
@@ -133,7 +133,7 @@
             </div>
 
             <span
-              class="jy-tree-select-placeholder multiple-placeholder"
+              class="gj-tree-select-placeholder multiple-placeholder"
               :title="currentPlaceholder"
               v-if="
                 multiple && !selected.length && currentPlaceholder && filterable
@@ -143,7 +143,7 @@
 
             <input
               type="text"
-              class="jy-tree-select__input"
+              class="gj-tree-select__input"
               :class="[selectSize ? `is-${selectSize}` : '']"
               :disabled="selectDisabled"
               :autocomplete="autoComplete || autocomplete"
@@ -175,29 +175,29 @@
         </span>
       </div>
 
-      <span class="jy-tree-select-right-icon">
+      <span class="gj-tree-select-right-icon">
         <i
           v-show="!showClose"
           :class="[
-            'jy-tree-select__caret',
-            'jy-input__icon',
+            'gj-tree-select__caret',
+            'gj-input__icon',
             iconClass === 'search' ? 'Gildata-search1' : iconClass,
             visible && 'is-reverse',
             (!!selectedLabel || selected.length > 0) && iconClass !== 'search'
-              ? 'jy-input__selected'
+              ? 'gj-input__selected'
               : ''
           ]"
         ></i>
         <i
           v-if="showClose"
-          class="jy-tree-select__caret jy-input__icon Gildata-clean"
+          class="gj-tree-select__caret gj-input__icon Gildata-clean"
           @click="handleClearClick"
         ></i>
       </span>
     </div>
 
     <transition
-      name="jy-zoom-in-top"
+      name="gj-zoom-in-top"
       @before-enter="handleMenuEnter"
       @after-leave="doDestroy"
     >
@@ -206,17 +206,17 @@
         :append-to-body="popperAppendToBody"
         v-show="visible && emptyText !== false"
       >
-        <!-- <jy-scrollbar
+        <!-- <gj-scrollbar
           tag="ul"
-          wrap-class="jy-tree-select-dropdown__wrap"
-          view-class="jy-tree-select-dropdown__list"
+          wrap-class="gj-tree-select-dropdown__wrap"
+          view-class="gj-tree-select-dropdown__list"
           ref="scrollbar"
           :class="{
             'is-empty': !allowCreate && query && filteredOptionsCount === 0
           }"
           v-show="treeData.length > 0 && !loading"
         >
-        </jy-scrollbar> -->
+        </gj-scrollbar> -->
         <template
           v-if="
             emptyText &&
@@ -226,8 +226,8 @@
           "
         >
           <slot name="empty" v-if="$slots.empty"></slot>
-          <p class="jy-tree-select-dropdown__empty" v-else>
-            <jy-empty empty-type="noResult" description="无搜索结果"></jy-empty>
+          <p class="gj-tree-select-dropdown__empty" v-else>
+            <gj-empty empty-type="noResult" description="无搜索结果"></gj-empty>
           </p>
         </template>
       </down-tree>
@@ -239,10 +239,10 @@
 import Emitter from 'GildataDesign/src/mixins/emitter';
 import Focus from 'GildataDesign/src/mixins/focus';
 import Locale from 'GildataDesign/src/mixins/locale';
-import JyInput from 'GildataDesign/packages/input';
+import GjInput from 'GildataDesign/packages/input';
 import DownTree from './down-tree.vue';
-import JyTag from 'GildataDesign/packages/tag';
-import JyScrollbar from 'GildataDesign/packages/scrollbar';
+import GjTag from 'GildataDesign/packages/tag';
+import GjScrollbar from 'GildataDesign/packages/scrollbar';
 import debounce from 'throttle-debounce/debounce';
 import Clickoutside from 'GildataDesign/src/utils/clickoutside';
 import {
@@ -264,16 +264,16 @@ import { treeToData } from './tree-to-data.js';
 export default {
   mixins: [Emitter, Locale, Focus('reference')],
 
-  name: 'JyTreeSelect',
+  name: 'GjTreeSelect',
 
-  componentName: 'JyTreeSelect',
+  componentName: 'GjTreeSelect',
 
   inject: {
-    jyForm: {
+    GjForm: {
       default: ''
     },
 
-    jyFormItem: {
+    GjFormItem: {
       default: ''
     }
   },
@@ -286,7 +286,7 @@ export default {
 
   computed: {
     _elFormItemSize() {
-      return (this.jyFormItem || {}).jyFormItemSize;
+      return (this.GjFormItem || {}).GjFormItemSize;
     },
 
     readonly() {
@@ -354,7 +354,7 @@ export default {
     },
 
     selectDisabled() {
-      return this.disabled || (this.jyForm || {}).disabled;
+      return this.disabled || (this.GjForm || {}).disabled;
     },
 
     collapseTagSize() {
@@ -399,10 +399,10 @@ export default {
   },
 
   components: {
-    JyInput,
+    GjInput,
     DownTree,
-    JyTag,
-    JyScrollbar
+    GjTag,
+    GjScrollbar
   },
 
   directives: { Clickoutside },
@@ -571,13 +571,13 @@ export default {
         this.inputLength = 20;
       }
       if (!valueEquals(val, oldVal)) {
-        this.dispatch('JyFormItem', 'jy.form.change', val);
+        this.dispatch('GjFormItem', 'gj.form.change', val);
       }
     },
 
     visible(val) {
       if (!val) {
-        this.broadcast('JyDownTree', 'destroyPopper');
+        this.broadcast('GjDownTree', 'destroyPopper');
         if (this.$refs.input) {
           this.$refs.input.blur();
         }
@@ -616,7 +616,7 @@ export default {
           }
         }
       } else {
-        this.broadcast('JyDownTree', 'updatePopper');
+        this.broadcast('GjDownTree', 'updatePopper');
         if (this.filterable) {
           // this.query = this.remote ? '' : this.selectedLabel;
           this.query = this.remote ? '' : '';
@@ -684,7 +684,7 @@ export default {
       this.previousQuery = val;
       this.$nextTick(() => {
         if (this.visible) {
-          this.broadcast('JyDownTree', 'updatePopper');
+          this.broadcast('GjDownTree', 'updatePopper');
         }
       });
       this.hoverIndex = -1;
@@ -704,7 +704,7 @@ export default {
         // TODO:
       } else {
         this.filteredOptionsCount = this.optionsCount;
-        this.broadcast('JyDownTree', 'setTreeData', val);
+        this.broadcast('GjDownTree', 'setTreeData', val);
       }
       if (
         this.defaultFirstOption &&
@@ -720,7 +720,7 @@ export default {
         Array.isArray(option) && option[0] ? option[0].$el : option.$el;
       if (this.$refs.popper && target) {
         const menu = this.$refs.popper.$el.querySelector(
-          '.jy-tree-select-dropdown__wrap'
+          '.gj-tree-select-dropdown__wrap'
         );
         scrollIntoView(menu, target);
       }
@@ -899,7 +899,7 @@ export default {
         input.style.height = heightNum;
 
         if (this.visible && this.emptyText !== false) {
-          this.broadcast('JyDownTree', 'updatePopper');
+          this.broadcast('GjDownTree', 'updatePopper');
         }
         if (this.$refs.mulpFilter) {
           // 设置多选filter高度

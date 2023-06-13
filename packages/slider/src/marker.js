@@ -1,5 +1,5 @@
 export default {
-  name: 'JyMarker',
+  name: 'GjMarker',
 
   props: {
     mark: {
@@ -10,7 +10,7 @@ export default {
     let label = typeof this.mark === 'string' ? this.mark : this.mark.label;
 
     return (
-      <div class="jy-slider__marks-text" style={this.mark.style || {}}>
+      <div class="gj-slider__marks-text" style={this.mark.style || {}}>
         {label}
       </div>
     );

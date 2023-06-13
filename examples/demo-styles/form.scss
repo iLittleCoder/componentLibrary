@@ -1,8 +1,8 @@
 .demo-form {
-  .jy-select .jy-input {
+  .gj-select .gj-input {
     // width: 380px;
   }
-  .jy-form {
+  .gj-form {
     width: 460px;
   }
 
@@ -11,7 +11,7 @@
     color: rgba(20,20,20,0.65);
   }
 
-  .jy-checkbox-group {
+  .gj-checkbox-group {
     width: 320px;
     margin: 0;
     padding: 0;
@@ -29,14 +29,14 @@
       height: 0;
     }
 
-    .jy-checkbox {
+    .gj-checkbox {
       float: left;
       width: 160px;
       padding-right: 20px;
       margin: 0;
       padding: 0;
 
-      + .jy-checkbox {
+      + .gj-checkbox {
         margin-left: 0;
       }
     }
@@ -47,7 +47,7 @@
   .demo-form-inline {
     width: auto;
 
-  //  &:not( .jy-select) .jy-input {
+  //  &:not( .gj-select) .gj-input {
   //     width: 150px;
   //   }
     > * {
@@ -57,12 +57,12 @@
   .demo-ruleForm {
     width: 460px;
 
-    .jy-select .jy-input {
+    .gj-select .gj-input {
       width: 360px;
     }
   }
   .demo-dynamic {
-    .jy-input {
+    .gj-input {
       margin-right: 10px;
       width: 270px;
       vertical-align: top;

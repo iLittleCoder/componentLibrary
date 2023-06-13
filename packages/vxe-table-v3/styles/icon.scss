@@ -1,12 +1,12 @@
 /**Variable**/
 @import './helpers/mixin.scss';
 
-[class*="jy-icon--"] {
+[class*="gj-icon--"] {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   direction: ltr;
-  font-family: $jy-icon-font-family;
+  font-family: $gj-icon-font-family;
   font-weight: normal;
   user-select: none;
   &.rotate45 {
@@ -31,7 +31,7 @@
   position: absolute;
 }
 
-.jy-icon--square {
+.gj-icon--square {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -45,12 +45,12 @@
   }
 }
 
-.jy-icon--zoomin {
+.gj-icon--zoomin {
   @extend %DefaultWidthHeight;
   border-width: 0.1em;
   border-style: solid;
   border-color: inherit;
-  background-color: $jy-icon-background-color;
+  background-color: $gj-icon-background-color;
   &:before,
   &:after {
     @extend %PseudoClass;
@@ -70,7 +70,7 @@
   }
 }
 
-.jy-icon--zoomout {
+.gj-icon--zoomout {
   @extend %DefaultWidthHeight;
   position: relative;
   &:before {
@@ -92,11 +92,11 @@
     border-width: 0.1em;
     border-style: solid;
     border-color: inherit;
-    background-color: $jy-icon-background-color;
+    background-color: $gj-icon-background-color;
   }
 }
 
-.jy-icon--menu {
+.gj-icon--menu {
   $yOffset: 0.36em;
   @extend %DefaultWidthHeight;
   &:before {
@@ -119,7 +119,7 @@
   }
 }
 
-.jy-icon--caret-top {
+.gj-icon--caret-top {
   @extend %Caret;
   &:before {
     left: 0.1em;
@@ -128,7 +128,7 @@
   }
 }
 
-.jy-icon--caret-bottom {
+.gj-icon--caret-bottom {
   @extend %Caret;
   &:before {
     left: 0.1em;
@@ -137,7 +137,7 @@
   }
 }
 
-.jy-icon--caret-left {
+.gj-icon--caret-left {
   @extend %Caret;
   &:before {
     right: 0.3em;
@@ -146,7 +146,7 @@
   }
 }
 
-.jy-icon--caret-right {
+.gj-icon--caret-right {
   @extend %Caret;
   &:before {
     left: 0.3em;
@@ -171,7 +171,7 @@
   }
 }
 
-.jy-icon--arrow-top {
+.gj-icon--arrow-top {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -190,8 +190,8 @@
   }
 }
 
-.jy-icon--arrow-bottom {
-  @extend .jy-icon--arrow-top;
+.gj-icon--arrow-bottom {
+  @extend .gj-icon--arrow-top;
   &:before {
     top: 0;
     left: 0.14em;
@@ -199,8 +199,8 @@
   }
 }
 
-.jy-icon--arrow-left {
-  @extend .jy-icon--arrow-top;
+.gj-icon--arrow-left {
+  @extend .gj-icon--arrow-top;
   &:before {
     top: 0.18em;
     left: 0.35em;
@@ -208,8 +208,8 @@
   }
 }
 
-.jy-icon--arrow-right {
-  @extend .jy-icon--arrow-top;
+.gj-icon--arrow-right {
+  @extend .gj-icon--arrow-top;
   &:before {
     top: 0.18em;
     left: 0;
@@ -217,7 +217,7 @@
   }
 }
 
-.jy-icon--d-arrow-left {
+.gj-icon--d-arrow-left {
   @extend %DefaultWidthHeight;
   &:before {
     left: 0.15em;
@@ -242,8 +242,8 @@
   }
 }
 
-.jy-icon--d-arrow-right {
-  @extend .jy-icon--d-arrow-left;
+.gj-icon--d-arrow-right {
+  @extend .gj-icon--d-arrow-left;
   &:before,
   &:after {
     transform: rotate(135deg);
@@ -256,7 +256,7 @@
   }
 }
 
-.jy-icon--funnel {
+.gj-icon--funnel {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -281,7 +281,7 @@
   }
 }
 
-.jy-icon--edit-outline {
+.gj-icon--edit-outline {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -308,7 +308,7 @@
   }
 }
 
-.jy-icon--more {
+.gj-icon--more {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -320,7 +320,7 @@
   }
 }
 
-.jy-icon--plus {
+.gj-icon--plus {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -332,7 +332,7 @@
   }
 }
 
-.jy-icon--check {
+.gj-icon--check {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -351,7 +351,7 @@
   }
 }
 
-.jy-icon--close {
+.gj-icon--close {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -364,7 +364,7 @@
   }
 }
 
-.jy-icon--minus {
+.gj-icon--minus {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -378,7 +378,7 @@
   }
 }
 
-.jy-icon--refresh {
+.gj-icon--refresh {
   @extend %DefaultWidthHeight;
   border-width: 0.1em;
   border-style: solid;
@@ -439,12 +439,12 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: $jy-icon-background-color;
+    color: $gj-icon-background-color;
     transform: rotate(-10deg) scale(0.75);
   }
 }
 
-.jy-icon--question {
+.gj-icon--question {
   @extend %DefaultWidthHeight, %QuestionAndInfoWarning;
   &:before {
     @extend %BeforeSolidRadius;
@@ -454,7 +454,7 @@
   }
 }
 
-.jy-icon--info {
+.gj-icon--info {
   @extend %DefaultWidthHeight, %QuestionAndInfoWarning;
   &:before {
     @extend %BeforeSolidRadius;
@@ -464,7 +464,7 @@
   }
 }
 
-.jy-icon--warning {
+.gj-icon--warning {
   @extend %DefaultWidthHeight, %QuestionAndInfoWarning;
   &:before {
     @extend %BeforeSolidRadius;
@@ -474,7 +474,7 @@
   }
 }
 
-.jy-icon--success {
+.gj-icon--success {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %BeforeSolidRadius;
@@ -484,12 +484,12 @@
     content: "\2713";
     left: 0.25em;
     bottom: 0;
-    color: $jy-icon-background-color;
+    color: $gj-icon-background-color;
     font-size: 0.65em;
   }
 }
 
-.jy-icon--circle-plus {
+.gj-icon--circle-plus {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %BeforeSolidRadius;
@@ -501,13 +501,13 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: $jy-icon-background-color;
+    color: $gj-icon-background-color;
     line-height: 1.4em;
     font-size: 0.8em;
   }
 }
 
-.jy-icon--remove {
+.gj-icon--remove {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %BeforeSolidRadius;
@@ -520,12 +520,12 @@
     width: 100%;
     text-align: center;
     line-height: 1.5em;
-    color: $jy-icon-background-color;
+    color: $gj-icon-background-color;
     font-size: 0.7em;
   }
 }
 
-.jy-icon--error {
+.gj-icon--error {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %BeforeSolidRadius;
@@ -538,13 +538,13 @@
     width: 100%;
     line-height: 1.4em;
     text-align: center;
-    color: $jy-icon-background-color;
+    color: $gj-icon-background-color;
     font-size: 0.8em;
   }
 }
 
-.jy-icon--upload,
-.jy-icon--download {
+.gj-icon--upload,
+.gj-icon--download {
   @extend %DefaultWidthHeight;
   overflow: hidden;
   &:before {
@@ -563,7 +563,7 @@
   }
 }
 
-.jy-icon--upload {
+.gj-icon--upload {
   &:before {
     top: 0.1em;
     border-top-width: 0.1em;
@@ -575,7 +575,7 @@
   }
 }
 
-.jy-icon--download {
+.gj-icon--download {
   &:before {
     bottom: 0.05em;
     border-bottom-width: 0.1em;
@@ -588,8 +588,8 @@
   }
 }
 
-.jy-icon--eye,
-.jy-icon--eye-slash {
+.gj-icon--eye,
+.gj-icon--eye-slash {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -607,7 +607,7 @@
   }
 }
 
-.jy-icon--eye-slash {
+.gj-icon--eye-slash {
   &:after {
     @extend %PseudoClass;
     top: -0.1em;
@@ -622,7 +622,7 @@
   }
 }
 
-.jy-icon--calendar {
+.gj-icon--calendar {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -647,7 +647,7 @@
   }
 }
 
-.jy-icon--dot {
+.gj-icon--dot {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;
@@ -660,7 +660,7 @@
   }
 }
 
-.jy-icon--print {
+.gj-icon--print {
   @extend %DefaultWidthHeight;
   box-shadow: inset 0 0 0 0.1em;
   border-width: 0.2em 0;
@@ -682,11 +682,11 @@
     left: 0.2em;
     bottom: -0.2em;
     box-shadow: inset 0 0 0 0.1em;
-    background-color: $jy-icon-background-color;
+    background-color: $gj-icon-background-color;
   }
 }
 
-.jy-icon--search {
+.gj-icon--search {
   @extend %DefaultWidthHeight;
   &:before {
     @extend %PseudoClass;

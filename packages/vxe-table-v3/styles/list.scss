@@ -1,21 +1,21 @@
 /**Variable**/
 
-.jy-table-list {
+.gj-table-list {
   position: relative;
   display: block;
   padding: 0;
-  color: $jy-font-color;
+  color: $gj-font-color;
   direction: ltr;
-  .jy-table-list--virtual-wrapper {
+  .gj-table-list--virtual-wrapper {
     position: relative;
     overflow: auto;
   }
-  .jy-table-list--y-space {
+  .gj-table-list--y-space {
     width: 0;
     float: left;
   }
-  .jy-table-list--virtual-wrapper,
-  .jy-table-list--body {
+  .gj-table-list--virtual-wrapper,
+  .gj-table-list--body {
     padding: 0;
     margin: 0;
     border: 0;
@@ -23,6 +23,6 @@
   }
 }
 
-.jy-table-list--virtual-wrapper {
+.gj-table-list--virtual-wrapper {
   height: 100px;
 }

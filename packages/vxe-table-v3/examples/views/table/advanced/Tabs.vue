@@ -16,43 +16,43 @@
     </p>
 
     <div v-show="selectTab === 'tab1'">
-      <jy-table
+      <gj-table
         border
         :sync-resize="selectTab"
         :data="tableData">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name"></jy-column>
-        <jy-column field="sex" title="Sex"></jy-column>
-        <jy-column field="address" title="Address" show-overflow></jy-column>
-      </jy-table>
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name"></gj-column>
+        <gj-column field="sex" title="Sex"></gj-column>
+        <gj-column field="address" title="Address" show-overflow></gj-column>
+      </gj-table>
     </div>
 
     <div v-show="selectTab === 'tab2'">
-      <jy-table
+      <gj-table
         border
         :sync-resize="selectTab"
         :data="tableData">
-        <jy-column type="radio" width="60"></jy-column>
-        <jy-column field="role" title="Rolw"></jy-column>
-        <jy-column field="age" title="Age"></jy-column>
-        <jy-column field="num" title="Num"></jy-column>
-        <jy-column field="date12" title="Date"></jy-column>
-      </jy-table>
+        <gj-column type="radio" width="60"></gj-column>
+        <gj-column field="role" title="Rolw"></gj-column>
+        <gj-column field="age" title="Age"></gj-column>
+        <gj-column field="num" title="Num"></gj-column>
+        <gj-column field="date12" title="Date"></gj-column>
+      </gj-table>
     </div>
 
     <div v-show="selectTab === 'tab3'">
-      <jy-table
+      <gj-table
         border
         :sync-resize="selectTab"
         :data="tableData">
-        <jy-column type="checkbox" width="60"></jy-column>
-        <jy-column field="nickname" title="nickname"></jy-column>
-        <jy-column field="sex" title="Sex"></jy-column>
-        <jy-column field="age" title="Age"></jy-column>
-        <jy-column field="date12" title="Date"></jy-column>
-        <jy-column field="region" title="Region"></jy-column>
-        <jy-column field="rate" title="Rate"></jy-column>
-      </jy-table>
+        <gj-column type="checkbox" width="60"></gj-column>
+        <gj-column field="nickname" title="nickname"></gj-column>
+        <gj-column field="sex" title="Sex"></gj-column>
+        <gj-column field="age" title="Age"></gj-column>
+        <gj-column field="date12" title="Date"></gj-column>
+        <gj-column field="region" title="Region"></gj-column>
+        <gj-column field="rate" title="Rate"></gj-column>
+      </gj-table>
     </div>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
@@ -87,43 +87,43 @@ export default {
         </p>
 
         <div v-show="selectTab === 'tab1'">
-          <jy-table
+          <gj-table
             border
             :sync-resize="selectTab"
             :data="tableData">
-            <jy-column type="seq" width="60"></jy-column>
-            <jy-column field="name" title="Name"></jy-column>
-            <jy-column field="sex" title="Sex"></jy-column>
-            <jy-column field="address" title="Address" show-overflow></jy-column>
-          </jy-table>
+            <gj-column type="seq" width="60"></gj-column>
+            <gj-column field="name" title="Name"></gj-column>
+            <gj-column field="sex" title="Sex"></gj-column>
+            <gj-column field="address" title="Address" show-overflow></gj-column>
+          </gj-table>
         </div>
 
         <div v-show="selectTab === 'tab2'">
-          <jy-table
+          <gj-table
             border
             :sync-resize="selectTab"
             :data="tableData">
-            <jy-column type="radio" width="60"></jy-column>
-            <jy-column field="role" title="Rolw"></jy-column>
-            <jy-column field="age" title="Age"></jy-column>
-            <jy-column field="num" title="Num"></jy-column>
-            <jy-column field="date12" title="Date"></jy-column>
-          </jy-table>
+            <gj-column type="radio" width="60"></gj-column>
+            <gj-column field="role" title="Rolw"></gj-column>
+            <gj-column field="age" title="Age"></gj-column>
+            <gj-column field="num" title="Num"></gj-column>
+            <gj-column field="date12" title="Date"></gj-column>
+          </gj-table>
         </div>
 
         <div v-show="selectTab === 'tab3'">
-          <jy-table
+          <gj-table
             border
             :sync-resize="selectTab"
             :data="tableData">
-            <jy-column type="checkbox" width="60"></jy-column>
-            <jy-column field="nickname" title="nickname"></jy-column>
-            <jy-column field="sex" title="Sex"></jy-column>
-            <jy-column field="age" title="Age"></jy-column>
-            <jy-column field="date12" title="Date"></jy-column>
-            <jy-column field="region" title="Region"></jy-column>
-            <jy-column field="rate" title="Rate"></jy-column>
-          </jy-table>
+            <gj-column type="checkbox" width="60"></gj-column>
+            <gj-column field="nickname" title="nickname"></gj-column>
+            <gj-column field="sex" title="Sex"></gj-column>
+            <gj-column field="age" title="Age"></gj-column>
+            <gj-column field="date12" title="Date"></gj-column>
+            <gj-column field="region" title="Region"></gj-column>
+            <gj-column field="rate" title="Rate"></gj-column>
+          </gj-table>
         </div>
         `,
         `

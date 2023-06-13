@@ -5,7 +5,7 @@
       通过 <table-api-link prop="keyboard-config"/>={<table-api-link prop="editMethod"/>} 重写默认的编辑方法，改为追加的方式
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       show-footer
@@ -17,13 +17,13 @@
       :checkbox-config="{range: true}"
       :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true, editMethod}"
       :edit-config="{trigger: 'dblclick', mode: 'cell'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="age" title="Age" :edit-render="{name: 'input'}"></jy-column>
-      <jy-column field="date12" title="Date" :edit-render="{name: '$input'}"></jy-column>
-      <jy-column field="address" title="Address" :edit-render="{name: '$input'}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="age" title="Age" :edit-render="{name: 'input'}"></gj-column>
+      <gj-column field="date12" title="Date" :edit-render="{name: '$input'}"></gj-column>
+      <gj-column field="address" title="Address" :edit-render="{name: '$input'}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -50,7 +50,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           show-footer
@@ -62,13 +62,13 @@ export default {
           :checkbox-config="{range: true}"
           :keyboard-config="{isArrow: true, isDel: true, isEnter: true, isTab: true, isEdit: true, editMethod}"
           :edit-config="{trigger: 'dblclick', mode: 'cell'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="age" title="Age" :edit-render="{name: 'input'}"></jy-column>
-          <jy-column field="date12" title="Date" :edit-render="{name: '$input'}"></jy-column>
-          <jy-column field="address" title="Address" :edit-render="{name: '$input'}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="age" title="Age" :edit-render="{name: 'input'}"></gj-column>
+          <gj-column field="date12" title="Date" :edit-render="{name: '$input'}"></gj-column>
+          <gj-column field="address" title="Address" :edit-render="{name: '$input'}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

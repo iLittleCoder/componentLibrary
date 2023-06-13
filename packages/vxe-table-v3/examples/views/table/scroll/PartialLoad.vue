@@ -14,7 +14,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       ref="xTable"
       border
       resizable
@@ -22,14 +22,14 @@
       height="500"
       :row-config="{keyField: 'id'}"
       :loading="loading">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="100"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-      <jy-column field="address" title="Address"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="100"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+      <gj-column field="address" title="Address"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -59,7 +59,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           ref="xTable"
           border
           resizable
@@ -67,14 +67,14 @@ export default {
           height="500"
           row-id="id"
           :loading="loading">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="100"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-          <jy-column field="address" title="Address"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="100"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+          <gj-column field="address" title="Address"></gj-column>
+        </gj-table>
         `,
         `
         export default {

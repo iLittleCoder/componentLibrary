@@ -1,13 +1,13 @@
 <template>
-  <span class="jy-breadcrumb__item">
-    <span :class="['jy-breadcrumb__inner', actived ? 'is-link' : '', disabled ? 'is-disabled' : '']" ref="link" role="link"><slot></slot> </span>
-    <i v-if="separatorClass" class="jy-breadcrumb__separator" :class="separatorClass"></i>
-    <span v-else class="jy-breadcrumb__separator" :class="[disabled ? 'is-disabled' : '']" role="presentation">{{ separator }}</span>
+  <span class="gj-breadcrumb__item">
+    <span :class="['gj-breadcrumb__inner', actived ? 'is-link' : '', disabled ? 'is-disabled' : '']" ref="link" role="link"><slot></slot> </span>
+    <i v-if="separatorClass" class="gj-breadcrumb__separator" :class="separatorClass"></i>
+    <span v-else class="gj-breadcrumb__separator" :class="[disabled ? 'is-disabled' : '']" role="presentation">{{ separator }}</span>
   </span>
 </template>
 <script>
 export default {
-  name: 'JyBreadcrumbItem',
+  name: 'GjBreadcrumbItem',
   props: {
     actived: Boolean,
     to: {},
@@ -21,11 +21,11 @@ export default {
     };
   },
 
-  inject: ['jyBreadcrumb'],
+  inject: ['GjBreadcrumb'],
 
   mounted() {
-    this.separator = this.jyBreadcrumb.separator;
-    this.separatorClass = this.jyBreadcrumb.separatorClass;
+    this.separator = this.GjBreadcrumb.separator;
+    this.separatorClass = this.GjBreadcrumb.separatorClass;
     const link = this.$refs.link;
     link.setAttribute('role', 'link');
     link.addEventListener('click', (_) => {

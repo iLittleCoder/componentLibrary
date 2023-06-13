@@ -1,28 +1,28 @@
 .demo-block {
   &.demo-radio {
-    .jy-radio.is-bordered + .jy-radio.is-bordered {
+    .gj-radio.is-bordered + .gj-radio.is-bordered {
       margin-left: 0;
     }
   }
   .demo-radio-group {
     margin-bottom: 20px;
-    .jy-radio-group {
-      .jy-radio--large {
+    .gj-radio-group {
+      .gj-radio--large {
         &:first-of-type {
           margin-right: 35px;
         }
       }
-      .jy-radio--medium {
+      .gj-radio--medium {
         &:first-of-type {
           margin-right: 37px;
         }
       }
-      .jy-radio--small {
+      .gj-radio--small {
         &:first-of-type {
           margin-right: 44px;
         }
       }
-      .jy-radio--mini {
+      .gj-radio--mini {
         &:first-of-type {
           margin-right: 44px;
         }

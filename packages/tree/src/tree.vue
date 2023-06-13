@@ -10,16 +10,16 @@
 
 <template>
   <div
-    class="jy-tree"
+    class="gj-tree"
     :class="{
-      'jy-tree--highlight-current': highlightCurrent,
+      'gj-tree--highlight-current': highlightCurrent,
       'is-dragging': !!dragState.draggingNode,
       'is-drop-not-allow': !dragState.allowDrop,
       'is-drop-inner': dragState.dropType === 'inner'
     }"
     role="tree"
   >
-    <jy-tree-node
+    <gj-tree-node
       v-for="child in root.childNodes"
       :node="child"
       :props="props"
@@ -31,36 +31,36 @@
       :render-content="renderContent"
       @node-expand="handleNodeExpand"
     >
-    </jy-tree-node>
-    <div class="jy-tree__empty-block" v-if="isEmpty">
-      <jy-empty empty-type="noResult" :description="emptyText"></jy-empty>
-      <!--      <span class="jy-tree__empty-text">{{ emptyText }}</span>-->
+    </gj-tree-node>
+    <div class="gj-tree__empty-block" v-if="isEmpty">
+      <gj-empty empty-type="noResult" :description="emptyText"></gj-empty>
+      <!--      <span class="gj-tree__empty-text">{{ emptyText }}</span>-->
     </div>
     <div
       v-show="dragState.showDropIndicator"
-      class="jy-tree__drop-indicator"
+      class="gj-tree__drop-indicator"
       ref="dropIndicator"
     ></div>
   </div>
 </template>
 
 <script>
-import JyEmpty from 'GildataDesign/packages/empty';
+import GjEmpty from 'GildataDesign/packages/empty';
 import TreeStore from './model/tree-store';
 import { getNodeKey, findNearestComponent } from './model/util';
-import JyTreeNode from './tree-node.vue';
+import GjTreeNode from './tree-node.vue';
 import { t } from 'GildataDesign/src/locale';
 import emitter from 'GildataDesign/src/mixins/emitter';
 import { addClass, removeClass } from 'GildataDesign/src/utils/dom';
 
 export default {
-  name: 'JyTree',
+  name: 'GjTree',
 
   mixins: [emitter],
 
   components: {
-    JyTreeNode,
-    JyEmpty
+    GjTreeNode,
+    GjEmpty
   },
 
   data() {
@@ -349,7 +349,7 @@ export default {
     },
 
     handleNodeExpand(nodeData, node, instance) {
-      this.broadcast('JyTreeNode', 'tree-node-expand', node);
+      this.broadcast('GjTreeNode', 'tree-node-expand', node);
       this.$emit('node-expand', nodeData, node, instance);
     },
 
@@ -378,7 +378,7 @@ export default {
     handleKeydown(ev) {
       ev.stopPropagation();
       const currentItem = ev.target;
-      if (currentItem.className.indexOf('jy-tree-node') === -1) return;
+      if (currentItem.className.indexOf('gj-tree-node') === -1) return;
       const keyCode = ev.keyCode;
       this.treeItems = this.$el.querySelectorAll(
         '.is-focusable[role=treeitem]'
@@ -455,7 +455,7 @@ export default {
     });
 
     this.$on('tree-node-drag-over', (event, treeNode) => {
-      const dropNode = findNearestComponent(event.target, 'JyTreeNode');
+      const dropNode = findNearestComponent(event.target, 'GjTreeNode');
       const oldDropNode = dragState.dropNode;
       if (oldDropNode && oldDropNode !== dropNode) {
         removeClass(oldDropNode.$el, 'is-drop-inner');
@@ -533,7 +533,7 @@ export default {
       }
 
       const iconPosition = dropNode.$el
-        .querySelector('.jy-tree-node__expand-icon')
+        .querySelector('.gj-tree-node__expand-icon')
         .getBoundingClientRect();
       const dropIndicator = this.$refs.dropIndicator;
       if (dropType === 'before') {

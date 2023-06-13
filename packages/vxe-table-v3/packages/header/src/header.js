@@ -66,17 +66,17 @@ export default {
       headerGroups = [tableColumn]
     }
     return h('div', {
-      class: ['jy-table--header-wrapper', fixedType ? `fixed-${fixedType}--wrapper` : 'body--wrapper'],
+      class: ['gj-table--header-wrapper', fixedType ? `fixed-${fixedType}--wrapper` : 'body--wrapper'],
       attrs: {
         xid: tId
       }
     }, [
       fixedType ? _e() : h('div', {
-        class: 'jy-body--x-space',
+        class: 'gj-body--x-space',
         ref: 'xSpace'
       }),
       h('table', {
-        class: 'jy-table--header',
+        class: 'gj-table--header',
         attrs: {
           xid: tId,
           cellspacing: 0,
@@ -111,7 +111,7 @@ export default {
           ref: 'thead'
         }, headerGroups.map((cols, $rowIndex) => {
           return h('tr', {
-            class: ['jy-header--row', headerRowClassName ? XEUtils.isFunction(headerRowClassName) ? headerRowClassName({ $table: $xetable, $rowIndex, fixed: fixedType, type: cellType }) : headerRowClassName : ''],
+            class: ['gj-header--row', headerRowClassName ? XEUtils.isFunction(headerRowClassName) ? headerRowClassName({ $table: $xetable, $rowIndex, fixed: fixedType, type: cellType }) : headerRowClassName : ''],
             style: headerRowStyle ? (XEUtils.isFunction(headerRowStyle) ? headerRowStyle({ $table: $xetable, $rowIndex, fixed: fixedType, type: cellType }) : headerRowStyle) : null
           }, cols.map((column, $columnIndex) => {
             const { type, showHeaderOverflow, headerAlign, align, headerClassName } = column
@@ -144,7 +144,7 @@ export default {
               thOns.mousedown = evnt => $xetable.triggerHeaderCellMousedownEvent(evnt, params)
             }
             return h('th', {
-              class: ['jy-header--column', column.id, {
+              class: ['gj-header--column', column.id, {
                 [`col--${headAlign}`]: headAlign,
                 [`col--${type}`]: type,
                 'col--last': $columnIndex === cols.length - 1,
@@ -167,7 +167,7 @@ export default {
               key: columnKey || columnOpts.useKey || isColGroup ? column.id : $columnIndex
             }, [
               h('div', {
-                class: ['jy-cell', {
+                class: ['gj-cell', {
                   'c--title': showTitle,
                   'c--tooltip': showTooltip,
                   'c--ellipsis': showEllipsis
@@ -177,7 +177,7 @@ export default {
                * 列宽拖动
                */
               !fixedHiddenColumn && !isColGroup && (XEUtils.isBoolean(column.resizable) ? column.resizable : (columnOpts.resizable || resizable)) ? h('div', {
-                class: ['jy-resizable', {
+                class: ['gj-resizable', {
                   'is--line': !border || border === 'none'
                 }],
                 on: {
@@ -187,7 +187,7 @@ export default {
             ])
           }).concat(scrollbarWidth ? [
             h('th', {
-              class: 'jy-header--gutter col--gutter'
+              class: 'gj-header--gutter col--gutter'
             })
           ] : []))
         }))
@@ -196,7 +196,7 @@ export default {
        * 其他
        */
       h('div', {
-        class: 'jy-table--header-border-line',
+        class: 'gj-table--header-border-line',
         ref: 'repair'
       })
     ])

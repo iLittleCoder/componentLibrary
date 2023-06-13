@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="tip">
-      可编辑渲染 <table-column-api-link prop="edit-render"/>，查看 <a class="link" href="https://gitee.com/xuliangzhan_admin/jy-table/tree/v3/examples/plugins/table/renderer" target="_blank">示例的源码</a><span class="red">（具体请自行实现，该示例仅供参考）</span><br>
+      可编辑渲染 <table-column-api-link prop="edit-render"/>，查看 <a class="link" href="https://gitee.com/xuliangzhan_admin/gj-table/tree/v3/examples/plugins/table/renderer" target="_blank">示例的源码</a><span class="red">（具体请自行实现，该示例仅供参考）</span><br>
       配置参数：<br>
       autofocus 自动聚焦的类名<br>
       renderHeader (h, renderOpts, params: { column, columnIndex, columnIndex, $rowIndex, $table }) 表头单元格显示内容<br>
@@ -12,17 +12,17 @@
       footerExportMethod (params: { items, _columnIndex }) 表尾单元格导出函数<br>
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="简单输入框" :edit-render="{name: 'MyInput'}"></jy-column>
-      <jy-column field="role" title="下拉表格" :edit-render="{name: 'EditDownTable'}"></jy-column>
-      <jy-column field="sex" title="弹窗表格" :edit-render="{name: 'EditPopupModal'}"></jy-column>
-      <jy-column field="address" title="复杂渲染" :edit-render="{name: 'EditDownModal'}"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="简单输入框" :edit-render="{name: 'MyInput'}"></gj-column>
+      <gj-column field="role" title="下拉表格" :edit-render="{name: 'EditDownTable'}"></gj-column>
+      <gj-column field="sex" title="弹窗表格" :edit-render="{name: 'EditPopupModal'}"></gj-column>
+      <gj-column field="address" title="复杂渲染" :edit-render="{name: 'EditDownModal'}"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -72,17 +72,17 @@ export default {
         })
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           :data="tableData"
           :edit-config="{trigger: 'click', mode: 'row'}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="简单输入框" :edit-render="{name: 'MyInput'}"></jy-column>
-          <jy-column field="role" title="下拉表格" :edit-render="{name: 'EditDownTable'}"></jy-column>
-          <jy-column field="sex" title="弹窗表格" :edit-render="{name: 'EditPopupModal'}"></jy-column>
-          <jy-column field="address" title="复杂渲染" :edit-render="{name: 'EditDownModal'}"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="简单输入框" :edit-render="{name: 'MyInput'}"></gj-column>
+          <gj-column field="role" title="下拉表格" :edit-render="{name: 'EditDownTable'}"></gj-column>
+          <gj-column field="sex" title="弹窗表格" :edit-render="{name: 'EditPopupModal'}"></gj-column>
+          <gj-column field="address" title="复杂渲染" :edit-render="{name: 'EditDownModal'}"></gj-column>
+        </gj-table>
         `,
         `
         export default {

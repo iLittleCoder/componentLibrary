@@ -1,13 +1,13 @@
 <template>
-  <div class="jy-collapse" role="tablist" aria-multiselectable="true">
+  <div class="gj-collapse" role="tablist" aria-multiselectable="true">
     <slot></slot>
   </div>
 </template>
 <script>
   export default {
-    name: 'JyCollapse',
+    name: 'GjCollapse',
 
-    componentName: 'JyCollapse',
+    componentName: 'GjCollapse',
 
     props: {
       accordion: Boolean,

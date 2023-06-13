@@ -1,6 +1,6 @@
 <template>
-  <div class="jy-chart__container">
-    <div class="jy-chart" ref="chart" :style="{ width, height }"></div>
+  <div class="gj-chart__container">
+    <div class="gj-chart" ref="chart" :style="{ width, height }"></div>
     <!-- 为了导出图片，使用完之后会进行销毁不会占用dom -->
     <div ref="chartCopy" id="chartCopy" v-show="false" :style="{ width, height }"></div>
   </div>
@@ -40,10 +40,10 @@ echarts.registerTheme('White', configure(colors.White, 'White'));
 echarts.registerTheme('Black', configure(colors.Black, 'Black'));
 
 export default {
-  name: 'JyChart',
+  name: 'GjChart',
 
   data() {
-    this.jyChart = null;
+    this.GjChart = null;
     this.myChartCopy = null;
     return {
       options: {}
@@ -55,8 +55,8 @@ export default {
         if (val) {
           colorMap = colors[val];
           // 先销毁示例 使用对应的主题样式
-          this.jyChart && this.jyChart.dispose();
-          this.jyChart = this.$echarts.init(this.$refs.chart, this.theme);
+          this.GjChart && this.GjChart.dispose();
+          this.GjChart = this.$echarts.init(this.$refs.chart, this.theme);
           this.handleOption();
         }
       }
@@ -114,7 +114,7 @@ export default {
   },
   mounted() {
     // 使用对应的主题样式
-    this.jyChart = this.$echarts.init(this.$refs.chart, this.theme);
+    this.GjChart = this.$echarts.init(this.$refs.chart, this.theme);
     this.handleOption();
     // 添加resize监听事件
     window.addEventListener('resize', this.chartResize);
@@ -233,24 +233,24 @@ export default {
       }
 
       // 第二个参数为true，表示旧的组件会被完全移除，新的组件会根据option创建
-      this.jyChart.setOption(this.options, true);
-      this.jyChart.resize();
+      this.GjChart.setOption(this.options, true);
+      this.GjChart.resize();
     },
     // 尺寸变化 重新渲染
     chartResize() {
-      this.jyChart && this.jyChart.resize();
+      this.GjChart && this.GjChart.resize();
     },
     resize() {
-      if (this.$refs.chart && this.jyChart) {
-        this.jyChart.setOption(this.options, true);
-        this.jyChart.resize();
+      if (this.$refs.chart && this.GjChart) {
+        this.GjChart.setOption(this.options, true);
+        this.GjChart.resize();
       }
     },
     merge(a, b) {
       return DeepMerge((a, b) => b)(a, b);
     },
     getChart() {
-      return this.jyChart;
+      return this.GjChart;
     },
     // 图形组件对外提供复制，下载图片echart初始化
     getChartUrl({ getUrlMethod, copyWidth = this.$refs.chart.offsetWidth, copyHeight = this.$refs.chart.offsetHeight, isClear = true }) {
@@ -288,8 +288,8 @@ export default {
   beforeDestroy() {
     // 移除resize监听事件
     window.removeEventListener('resize', this.chartResize);
-    this.jyChart.clear();
-    this.jyChart = null;
+    this.GjChart.clear();
+    this.GjChart = null;
     this.myChartCopy = null;
   }
 };

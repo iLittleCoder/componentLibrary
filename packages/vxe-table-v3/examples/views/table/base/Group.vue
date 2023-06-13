@@ -2,26 +2,26 @@
   <div>
     <p class="tip">当数据结构比较复杂的时候，可以使用多级表头来更加直观的显示数据</p>
 
-    <jy-table
+    <gj-table
       border
       height="400"
       :data="tableData">
       <vxe-colgroup title="基本信息">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name"></jy-column>
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup title="更多信息">
-        <jy-column field="role" title="Role"></jy-column>
+        <gj-column field="role" title="Role"></gj-column>
         <vxe-colgroup title="详细信息">
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
       <vxe-colgroup title="分类信息">
-        <jy-column field="date3" title="Date"></jy-column>
+        <gj-column field="date3" title="Date"></gj-column>
       </vxe-colgroup>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -41,34 +41,34 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       ref="xTable"
       height="400"
       :data="tableData">
       <vxe-colgroup field="group0" title="基本信息">
-        <jy-column type="seq" width="60"></jy-column>
-        <jy-column field="name" title="Name" width="180"></jy-column>
+        <gj-column type="seq" width="60"></gj-column>
+        <gj-column field="name" title="Name" width="180"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup field="group1" title="分类信息1">
-        <jy-column field="age" title="Age1" width="120"></jy-column>
+        <gj-column field="age" title="Age1" width="120"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup field="group2" title="更多信息">
-        <jy-column field="role" title="Role" width="300"></jy-column>
-        <jy-column field="attr1" title="Attr1" width="200"></jy-column>
+        <gj-column field="role" title="Role" width="300"></gj-column>
+        <gj-column field="attr1" title="Attr1" width="200"></gj-column>
         <vxe-colgroup title="详细信息">
-          <jy-column field="sex" title="Sex" width="200"></jy-column>
-          <jy-column field="num" title="Num" width="200"></jy-column>
+          <gj-column field="sex" title="Sex" width="200"></gj-column>
+          <gj-column field="num" title="Num" width="200"></gj-column>
         </vxe-colgroup>
       </vxe-colgroup>
       <vxe-colgroup field="group3" title="分类信息2">
-        <jy-column field="attr6" title="Attr6" width="120"></jy-column>
+        <gj-column field="attr6" title="Attr6" width="120"></gj-column>
       </vxe-colgroup>
       <vxe-colgroup field="group4" title="额外信息">
-        <jy-column field="date3" title="Date" width="140"></jy-column>
-        <jy-column field="address" title="Address" width="200" show-overflow></jy-column>
+        <gj-column field="date3" title="Date" width="140"></gj-column>
+        <gj-column field="address" title="Address" width="200" show-overflow></gj-column>
       </vxe-colgroup>
-    </jy-table>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -97,26 +97,26 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           height="400"
           :data="tableData">
           <vxe-colgroup title="基本信息">
-            <jy-column type="seq" width="60"></jy-column>
-            <jy-column field="name" title="Name"></jy-column>
+            <gj-column type="seq" width="60"></gj-column>
+            <gj-column field="name" title="Name"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup title="更多信息">
-            <jy-column field="role" title="Role"></jy-column>
+            <gj-column field="role" title="Role"></gj-column>
             <vxe-colgroup title="详细信息">
-              <jy-column field="sex" title="Sex"></jy-column>
-              <jy-column field="age" title="Age"></jy-column>
+              <gj-column field="sex" title="Sex"></gj-column>
+              <gj-column field="age" title="Age"></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
           <vxe-colgroup title="分类信息">
-            <jy-column field="date3" title="Date"></jy-column>
+            <gj-column field="date3" title="Date"></gj-column>
           </vxe-colgroup>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -146,34 +146,34 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           ref="xTable"
           height="400"
           :data="tableData">
           <vxe-colgroup field="group0" title="基本信息">
-            <jy-column type="seq" width="60"></jy-column>
-            <jy-column field="name" title="Name" width="180"></jy-column>
+            <gj-column type="seq" width="60"></gj-column>
+            <gj-column field="name" title="Name" width="180"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup field="group1" title="分类信息1">
-            <jy-column field="age" title="Age1" width="120"></jy-column>
+            <gj-column field="age" title="Age1" width="120"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup field="group2" title="更多信息">
-            <jy-column field="role" title="Role" width="300"></jy-column>
-            <jy-column field="attr1" title="Attr1" width="200"></jy-column>
+            <gj-column field="role" title="Role" width="300"></gj-column>
+            <gj-column field="attr1" title="Attr1" width="200"></gj-column>
             <vxe-colgroup title="详细信息">
-              <jy-column field="sex" title="Sex" width="200"></jy-column>
-              <jy-column field="num" title="Num" width="200"></jy-column>
+              <gj-column field="sex" title="Sex" width="200"></gj-column>
+              <gj-column field="num" title="Num" width="200"></gj-column>
             </vxe-colgroup>
           </vxe-colgroup>
           <vxe-colgroup field="group3" title="分类信息2">
-            <jy-column field="attr6" title="Attr6" width="120"></jy-column>
+            <gj-column field="attr6" title="Attr6" width="120"></gj-column>
           </vxe-colgroup>
           <vxe-colgroup field="group4" title="额外信息">
-            <jy-column field="date3" title="Date" width="140"></jy-column>
-            <jy-column field="address" title="Address" width="200" show-overflow></jy-column>
+            <gj-column field="date3" title="Date" width="140"></gj-column>
+            <gj-column field="address" title="Address" width="200" show-overflow></gj-column>
           </vxe-colgroup>
-        </jy-table>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

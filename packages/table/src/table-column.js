@@ -5,7 +5,7 @@ import ElCheckbox from 'GildataDesign/packages/checkbox';
 let columnIdSeed = 1;
 
 export default {
-  name: 'JyTableColumn',
+  name: 'GjTableColumn',
 
   props: {
     type: {
@@ -182,7 +182,7 @@ export default {
             style: {}
           };
           if (column.showOverflowTooltip) {
-            props.class += ' jy-tooltip';
+            props.class += ' gj-tooltip';
             props.style = {width: (data.column.realWidth || data.column.width) - 1 + 'px'};
           }
           return (<div { ...props }>

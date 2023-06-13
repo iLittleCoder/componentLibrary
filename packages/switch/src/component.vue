@@ -1,8 +1,8 @@
 <template>
   <div
-    class="jy-switch"
+    class="gj-switch"
     :class="[
-      size ? 'jy-switch--' + size : '',
+      size ? 'gj-switch--' + size : '',
       {
         'is-disabled': switchDisabled,
         'is-checked': checked
@@ -15,7 +15,7 @@
   >
     <!--input的作用再研究-->
     <input
-      class="jy-switch__input"
+      class="gj-switch__input"
       type="checkbox"
       @change="handleChange"
       ref="input"
@@ -28,17 +28,17 @@
     >
     <!--显示左边的文字标签-->
     <span
-      :class="['jy-switch__label', 'jy-switch__label--left', !checked ? 'is-active' : '']"
+      :class="['gj-switch__label', 'gj-switch__label--left', !checked ? 'is-active' : '']"
       v-if="inactiveIconClass || inactiveText">
       <i :class="[inactiveIconClass]" v-if="inactiveIconClass"></i>
       <span v-if="!inactiveIconClass && inactiveText" :aria-hidden="checked">{{ inactiveText }}</span>
     </span>
     <!--显示中间的switch框-->
-    <span class="jy-switch__core" ref="core" :style="{ 'width': coreWidth + 'px' }">
+    <span class="gj-switch__core" ref="core" :style="{ 'width': coreWidth + 'px' }">
     </span>
     <!--显示右边的文字标签-->
     <span
-      :class="['jy-switch__label', 'jy-switch__label--right', checked ? 'is-active' : '']"
+      :class="['gj-switch__label', 'gj-switch__label--right', checked ? 'is-active' : '']"
       v-if="activeIconClass || activeText">
       <i :class="[activeIconClass]" v-if="activeIconClass"></i>
       <span v-if="!activeIconClass && activeText" :aria-hidden="!checked">{{ activeText }}</span>
@@ -51,11 +51,11 @@
   import Migrating from 'GildataDesign/src/mixins/migrating';
 
   export default {
-    name: 'JySwitch',
+    name: 'GjSwitch',
     // 注入emitter 进行表单验证，  Migrating 用于校验props参数
     mixins: [Focus('input'), Migrating, emitter],
     inject: {
-      jyForm: {
+      GjForm: {
         default: ''
       }
     },
@@ -128,7 +128,7 @@
         return this.value === this.activeValue;
       },
       switchDisabled() {
-        return this.disabled || (this.jyForm || {}).disabled;
+        return this.disabled || (this.GjForm || {}).disabled;
       }
     },
     watch: {
@@ -140,7 +140,7 @@
         }
         // 触发表单的校验
         if (this.validateEvent) {
-          this.dispatch('JyFormItem', 'el.form.change', [this.value]);
+          this.dispatch('GjFormItem', 'el.form.change', [this.value]);
         }
       }
     },

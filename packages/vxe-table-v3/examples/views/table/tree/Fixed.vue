@@ -13,7 +13,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -22,12 +22,12 @@
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
       :checkbox-config="{labelField: 'id'}"
       :data="tableData">
-      <jy-column type="checkbox" title="ID" fixed="left" width="280" tree-node></jy-column>
-      <jy-column field="name" title="Name" width="300"></jy-column>
-      <jy-column field="size" title="Size" width="300"></jy-column>
-      <jy-column field="type" title="Type" width="300"></jy-column>
-      <jy-column field="date" title="Date" width="300"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" title="ID" fixed="left" width="280" tree-node></gj-column>
+      <gj-column field="name" title="Name" width="300"></gj-column>
+      <gj-column field="size" title="Size" width="300"></gj-column>
+      <gj-column field="type" title="Type" width="300"></gj-column>
+      <gj-column field="date" title="Date" width="300"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -73,7 +73,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -82,12 +82,12 @@ export default {
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :checkbox-config="{labelField: 'id'}"
           :data="tableData">
-          <jy-column type="checkbox" title="ID" fixed="left" width="280" tree-node></jy-column>
-          <jy-column field="name" title="Name" width="300"></jy-column>
-          <jy-column field="size" title="Size" width="300"></jy-column>
-          <jy-column field="type" title="Type" width="300"></jy-column>
-          <jy-column field="date" title="Date" width="300"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" title="ID" fixed="left" width="280" tree-node></gj-column>
+          <gj-column field="name" title="Name" width="300"></gj-column>
+          <gj-column field="size" title="Size" width="300"></gj-column>
+          <gj-column field="type" title="Type" width="300"></gj-column>
+          <gj-column field="date" title="Date" width="300"></gj-column>
+        </gj-table>
         `,
         `
         export default {

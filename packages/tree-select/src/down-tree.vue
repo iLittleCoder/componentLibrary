@@ -1,13 +1,13 @@
 <template>
   <div
-    class="jy-tree-select-dropdown jy-popper"
+    class="gj-tree-select-dropdown gj-popper"
     :class="[{ 'is-multiple': $parent.multiple }, popperClass]"
     :style="{ minWidth: minWidth }"
   >
-    <jy-scrollbar
+    <gj-scrollbar
       tag="ul"
-      wrap-class="jy-tree-select-dropdown__wrap"
-      view-class="jy-tree-select-dropdown__list"
+      wrap-class="gj-tree-select-dropdown__wrap"
+      view-class="gj-tree-select-dropdown__list"
       ref="scrollbar"
       :class="{
         'is-empty': !$parent.allowCreate && $parent.query && $parent.filteredOptionsCount === 0
@@ -15,8 +15,8 @@
       v-show="allTreeData.length > 0 && !$parent.loading"
     >
       <div
-        class="jy-tree-select-dropdown-tree scroll-bar"
-        :class="['jy-tree-select-dropdown-tree--' + ($parent.size ? $parent.size : 'small')]"
+        class="gj-tree-select-dropdown-tree scroll-bar"
+        :class="['gj-tree-select-dropdown-tree--' + ($parent.size ? $parent.size : 'small')]"
       >
         <!-- @check-change="handleCheckChange" -->
 
@@ -34,23 +34,23 @@
           @check="handleCheck"
         />
       </div>
-    </jy-scrollbar>
+    </gj-scrollbar>
   </div>
 </template>
 
 <script type="text/babel">
 import Popper from 'GildataDesign/src/utils/vue-popper';
 import Emitter from 'GildataDesign/src/mixins/emitter';
-import JyScrollbar from 'GildataDesign/packages/scrollbar';
+import GjScrollbar from 'GildataDesign/packages/scrollbar';
 import Tree from 'GildataDesign/packages/tree';
 import { treeToData } from './tree-to-data.js';
 export default {
-  name: 'JyDownTree',
+  name: 'GjDownTree',
 
-  componentName: 'JyDownTree',
+  componentName: 'GjDownTree',
   components: {
     Tree,
-    JyScrollbar
+    GjScrollbar
   },
 
   mixins: [Popper, Emitter],
@@ -175,13 +175,13 @@ export default {
     },
     handleNodeClick(data) {
       if (data.disabled || this.multiple) return;
-      this.dispatch('JyTreeSelect', 'handleTreeSelected', data);
+      this.dispatch('GjTreeSelect', 'handleTreeSelected', data);
     },
     handleCheckChange(obj, selected, node) {
       console.log('handleCheckChange', obj, selected, node);
     },
     handleCheck(node, selected) {
-      this.dispatch('JyTreeSelect', 'handleTreeSelected', [selected.checkedNodes]);
+      this.dispatch('GjTreeSelect', 'handleTreeSelected', [selected.checkedNodes]);
     }
   }
 };

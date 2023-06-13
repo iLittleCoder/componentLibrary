@@ -1,8 +1,8 @@
 <template>
   <a
     :class="[
-      'jy-link',
-      type ? `jy-link--${type}` : '',
+      'gj-link',
+      type ? `gj-link--${type}` : '',
       disabled && 'is-disabled',
       underline && !disabled && 'is-underline'
     ]"
@@ -11,9 +11,9 @@
     @click="handleClick"
   >
 
-    <jy-icon :name="icon" v-if="icon"></jy-icon>
+    <gj-icon :name="icon" v-if="icon"></gj-icon>
 
-    <span v-if="$slots.default" class="jy-link--inner">
+    <span v-if="$slots.default" class="gj-link--inner">
       <slot></slot>
     </span>
 
@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import JyIcon from 'GildataDesign/packages/icon';
+import GjIcon from 'GildataDesign/packages/icon';
 export default {
-  name: 'JyLink',
+  name: 'GjLink',
 
   props: {
     type: {
@@ -40,7 +40,7 @@ export default {
     icon: String
   },
   components: {
-    JyIcon
+    GjIcon
   },
   methods: {
     handleClick(event) {

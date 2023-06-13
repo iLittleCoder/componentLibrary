@@ -15,29 +15,29 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
       :data="tableData">
-      <jy-column field="name" title="app.body.label.name"></jy-column>
-      <jy-column field="size" title="Size"></jy-column>
-      <jy-column field="type" title="Type">
+      <gj-column field="name" title="app.body.label.name"></gj-column>
+      <gj-column field="size" title="Size"></gj-column>
+      <gj-column field="type" title="Type">
         <template #default="{ row }">
           <span>{{ `类型：${row.type || '无'}` }}</span>
         </template>
-      </jy-column>
-      <jy-column field="attr3" title="Image" tree-node>
+      </gj-column>
+      <gj-column field="attr3" title="Image" tree-node>
         <template #default>
-          <img src="/jy-table/static/other/img1.gif" height="50">
+          <img src="/gj-table/static/other/img1.gif" height="50">
         </template>
-      </jy-column>
-      <jy-column field="date" title="Date">
+      </gj-column>
+      <gj-column field="date" title="Date">
         <template #default="{ row }">
           <span>{{ formatDate(row.date) }}</span>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -87,29 +87,29 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           :tree-config="{transform: true, rowField: 'id', parentField: 'parentId'}"
           :data="tableData">
-          <jy-column field="name" title="app.body.label.name"></jy-column>
-          <jy-column field="size" title="Size"></jy-column>
-          <jy-column field="type" title="Type">
+          <gj-column field="name" title="app.body.label.name"></gj-column>
+          <gj-column field="size" title="Size"></gj-column>
+          <gj-column field="type" title="Type">
             <template #default="{ row }">
               <span>{{ \`类型：\${row.type || '无'}\` }}</span>
             </template>
-          </jy-column>
-          <jy-column field="attr3" title="Image" tree-node>
+          </gj-column>
+          <gj-column field="attr3" title="Image" tree-node>
             <template #default>
-              <img src="/jy-table/static/other/img1.gif" height="50">
+              <img src="/gj-table/static/other/img1.gif" height="50">
             </template>
-          </jy-column>
-          <jy-column field="date" title="Date">
+          </gj-column>
+          <gj-column field="date" title="Date">
             <template #default="{ row }">
               <span>{{ formatDate(row.date) }}</span>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         import XEUtils from 'xe-utils'

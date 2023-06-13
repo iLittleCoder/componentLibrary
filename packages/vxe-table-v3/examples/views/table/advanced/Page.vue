@@ -4,19 +4,19 @@
 
     <p class="tip">默认样式</p>
 
-    <jy-table
+    <gj-table
       show-overflow
       height="200"
       :row-config="{keyField: 'id'}"
       :loading="loading1"
       :data="tableData1">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="rate" title="Rate"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="rate" title="Rate"></gj-column>
+    </gj-table>
 
     <vxe-pager
       :loading="loading1"
@@ -36,7 +36,7 @@
 
     <p class="tip">设置分页 border 样式</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       height="200"
@@ -44,13 +44,13 @@
       :row-config="{keyField: 'id'}"
       :loading="loading2"
       :data="tableData2">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="rate" title="Rate"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="rate" title="Rate"></gj-column>
+    </gj-table>
 
     <vxe-pager
       border
@@ -72,7 +72,7 @@
 
     <p class="tip">设置分页 background 样式，自定义每页大小</p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       height="200"
@@ -80,13 +80,13 @@
       :row-config="{keyField: 'id'}"
       :loading="loading3"
       :data="tableData3">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="rate" title="Rate"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="rate" title="Rate"></gj-column>
+    </gj-table>
 
     <vxe-pager
       background
@@ -120,7 +120,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable4"
@@ -131,13 +131,13 @@
       :seq-config="{startIndex: (tablePage4.currentPage - 1) * tablePage4.pageSize}"
       :checkbox-config="{reserve: true}"
       :data="tableData4">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" title="序号" width="60"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-      <jy-column field="rate" title="Rate"></jy-column>
-    </jy-table>
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" title="序号" width="60"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+      <gj-column field="rate" title="Rate"></gj-column>
+    </gj-table>
 
     <vxe-pager
       perfect
@@ -195,19 +195,19 @@ export default {
       },
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           show-overflow
           height="200"
           row-id="id"
           :loading="loading1"
           :data="tableData1">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" title="序号" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="rate" title="Rate"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" title="序号" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="rate" title="Rate"></gj-column>
+        </gj-table>
 
         <vxe-pager
           :loading="loading1"
@@ -270,7 +270,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           height="200"
@@ -278,13 +278,13 @@ export default {
           size="medium"
           :loading="loading2"
           :data="tableData2">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" title="序号" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="rate" title="Rate"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" title="序号" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="rate" title="Rate"></gj-column>
+        </gj-table>
 
         <vxe-pager
           border
@@ -349,7 +349,7 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           height="200"
@@ -357,13 +357,13 @@ export default {
           size="small"
           :loading="loading3"
           :data="tableData3">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" title="序号" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="rate" title="Rate"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" title="序号" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="rate" title="Rate"></gj-column>
+        </gj-table>
 
         <vxe-pager
           background
@@ -436,7 +436,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           show-overflow
           ref="xTable4"
@@ -447,13 +447,13 @@ export default {
           :seq-config="{startIndex: (tablePage4.currentPage - 1) * tablePage4.pageSize}"
           :checkbox-config="{reserve: true}"
           :data="tableData4">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" title="序号" width="60"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-          <jy-column field="rate" title="Rate"></jy-column>
-        </jy-table>
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" title="序号" width="60"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+          <gj-column field="rate" title="Rate"></gj-column>
+        </gj-table>
 
         <vxe-pager
           perfect

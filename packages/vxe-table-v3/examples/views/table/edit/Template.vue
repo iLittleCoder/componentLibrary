@@ -11,7 +11,7 @@
       <table-column-api-link prop="edit"/>：自定义可编辑模板（建议使用<router-link :to="{name: 'RendererAPI'}">渲染器</router-link>，可以更好的复用）
     </p>
 
-    <jy-table
+    <gj-table
       border
       show-overflow
       ref="xTable"
@@ -19,14 +19,14 @@
       :edit-config="{trigger: 'click', mode: 'cell', icon: 'fa fa-pencil'}"
       @checkbox-change="checkboxChangeEvent"
       @checkbox-all="checkboxChangeEvent">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="role" title="Role" :edit-render="{autofocus: '.vxe-input--inner'}">
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="role" title="Role" :edit-render="{autofocus: '.vxe-input--inner'}">
         <template #edit="scope">
           <vxe-input type="text" v-model="scope.row.role" @input="$refs.xTable.updateStatus(scope)"></vxe-input>
         </template>
-      </jy-column>
-      <jy-column field="name" title="Name" :edit-render="{autofocus: '.custom-input'}">
+      </gj-column>
+      <gj-column field="name" title="Name" :edit-render="{autofocus: '.custom-input'}">
         <template #edit="{ row }">
           <vxe-pulldown ref="xPulldown1" transfer>
             <template #default>
@@ -42,21 +42,21 @@
             </template>
           </vxe-pulldown>
         </template>
-      </jy-column>
+      </gj-column>
       <vxe-colgroup title="分组">
-        <jy-column field="age" title="Age" :edit-render="{autofocus: '.vxe-input--inner'}">
+        <gj-column field="age" title="Age" :edit-render="{autofocus: '.vxe-input--inner'}">
           <template #edit="scope">
             <vxe-input type="number" v-model="scope.row.age" @input="$refs.xTable.updateStatus(scope)"></vxe-input>
           </template>
-        </jy-column>
-        <jy-column field="num" title="Money" :edit-render="{autofocus: '.vxe-input--inner'}">
+        </gj-column>
+        <gj-column field="num" title="Money" :edit-render="{autofocus: '.vxe-input--inner'}">
           <template #edit="scope">
             <vxe-input type="number" v-model="scope.row.num" @input="$refs.xTable.updateStatus(scope)"></vxe-input>
           </template>
           <template #default="{ row }">￥{{ row.num }}</template>
-        </jy-column>
+        </gj-column>
       </vxe-colgroup>
-      <jy-column field="attr1" title="不同行渲染" :edit-render="{}">
+      <gj-column field="attr1" title="不同行渲染" :edit-render="{}">
         <template #edit="scope">
           <template v-if="scope.rowIndex === 0">
             <vxe-input type="date" v-model="scope.row.attr1" placeholder="请选择日期" @input="$refs.xTable.updateStatus(scope)" transfer></vxe-input>
@@ -75,8 +75,8 @@
             <vxe-input type="text" v-model="scope.row.attr1" placeholder="请输入内容"></vxe-input>
           </template>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <vxe-pager
       perfect
@@ -102,9 +102,9 @@
         </span>
       </template>
       <template #right>
-        <img src="/jy-table/static/other/img1.gif" height="34">
-        <img src="/jy-table/static/other/img1.gif" height="34">
-        <img src="/jy-table/static/other/img1.gif" height="34">
+        <img src="/gj-table/static/other/img1.gif" height="34">
+        <img src="/gj-table/static/other/img1.gif" height="34">
+        <img src="/gj-table/static/other/img1.gif" height="34">
       </template>
     </vxe-pager>
 
@@ -149,7 +149,7 @@ export default {
       },
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           show-overflow
           ref="xTable"
@@ -157,14 +157,14 @@ export default {
           :edit-config="{trigger: 'click', mode: 'cell', icon: 'fa fa-pencil'}"
           @checkbox-change="checkboxChangeEvent"
           @checkbox-all="checkboxChangeEvent">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="role" title="Role" :edit-render="{autofocus: '.vxe-input--inner'}">
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="role" title="Role" :edit-render="{autofocus: '.vxe-input--inner'}">
             <template #edit="{ row }">
               <vxe-input type="text" v-model="row.role"></vxe-input>
             </template>
-          </jy-column>
-          <jy-column field="name" title="Name" :edit-render="{autofocus: '.custom-input'}">
+          </gj-column>
+          <gj-column field="name" title="Name" :edit-render="{autofocus: '.custom-input'}">
             <template #edit="{ row }">
               <vxe-pulldown ref="xPulldown1" transfer>
                 <template #default>
@@ -180,21 +180,21 @@ export default {
                 </template>
               </vxe-pulldown>
             </template>
-          </jy-column>
+          </gj-column>
           <vxe-colgroup title="分组">
-            <jy-column field="age" title="Age" :edit-render="{autofocus: '.vxe-input--inner'}">
+            <gj-column field="age" title="Age" :edit-render="{autofocus: '.vxe-input--inner'}">
               <template #edit="{ row }">
                 <vxe-input type="number" v-model="row.age"></vxe-input>
               </template>
-            </jy-column>
-            <jy-column field="num" title="Money" :edit-render="{autofocus: '.vxe-input--inner'}">
+            </gj-column>
+            <gj-column field="num" title="Money" :edit-render="{autofocus: '.vxe-input--inner'}">
               <template #edit="{ row }">
                 <vxe-input type="number" v-model="row.num"></vxe-input>
               </template>
               <template #default="{ row }">￥{{ row.num }}</template>
-            </jy-column>
+            </gj-column>
           </vxe-colgroup>
-          <jy-column field="attr1" title="不同行渲染" :edit-render="{}">
+          <gj-column field="attr1" title="不同行渲染" :edit-render="{}">
             <template #edit="scope">
               <template v-if="scope.rowIndex === 0">
                 <vxe-input type="date" v-model="scope.row.attr1" placeholder="请选择日期" @input="$refs.xTable.updateStatus(scope)" transfer></vxe-input>
@@ -213,8 +213,8 @@ export default {
                 <vxe-input type="text" v-model="scope.row.attr1" placeholder="请输入内容"></vxe-input>
               </template>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
 
         <vxe-pager
           perfect
@@ -240,9 +240,9 @@ export default {
             </span>
           </template>
           <template #right>
-            <img src="/jy-table/static/other/img1.gif" height="34">
-            <img src="/jy-table/static/other/img1.gif" height="34">
-            <img src="/jy-table/static/other/img1.gif" height="34">
+            <img src="/gj-table/static/other/img1.gif" height="34">
+            <img src="/gj-table/static/other/img1.gif" height="34">
+            <img src="/gj-table/static/other/img1.gif" height="34">
           </template>
         </vxe-pager>
         `,

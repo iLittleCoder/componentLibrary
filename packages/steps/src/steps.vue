@@ -1,10 +1,10 @@
 <template>
   <div
-    class="jy-steps"
+    class="gj-steps"
     :class="[
-       !simple && 'jy-steps--' + direction,
-       simple && 'jy-steps--simple',
-       nav && 'jy-steps--nav'
+       !simple && 'gj-steps--' + direction,
+       simple && 'gj-steps--simple',
+       nav && 'gj-steps--nav'
      ]">
       <slot></slot>
   </div>
@@ -14,7 +14,7 @@
 import Migrating from 'GildataDesign/src/mixins/migrating';
 
 export default {
-  name: 'JySteps',
+  name: 'GjSteps',
 
   mixins: [Migrating],
 

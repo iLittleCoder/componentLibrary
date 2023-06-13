@@ -43,14 +43,14 @@ export default {
       attrs.title = title
     }
     return h('label', {
-      class: ['jy-table-radio', 'jy-table-radio-button', {
+      class: ['gj-table-radio', 'gj-table-radio-button', {
         [`size--${vSize}`]: vSize,
         'is--disabled': isDisabled
       }],
       attrs
     }, [
       h('input', {
-        class: 'jy-table-radio--input',
+        class: 'gj-table-radio--input',
         attrs: {
           type: 'radio',
           name: $xeradiogroup ? $xeradiogroup.name : null,
@@ -65,7 +65,7 @@ export default {
         }
       }),
       h('span', {
-        class: 'jy-table-radio--label'
+        class: 'gj-table-radio--label'
       }, $scopedSlots.default ? $scopedSlots.default.call(this, {}) : [getFuncText(content)])
     ])
   },

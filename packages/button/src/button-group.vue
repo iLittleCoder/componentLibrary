@@ -3,13 +3,13 @@
 -->
 
 <template>
-  <div class="jy-button-group" :class="{'jy-button-group-no-border' : buttonGroupType === 'no-border' }">
+  <div class="gj-button-group" :class="{'gj-button-group-no-border' : buttonGroupType === 'no-border' }">
     <slot></slot>
   </div>
 </template>
 <script>
   export default {
-    name: 'JyButtonGroup',
+    name: 'GjButtonGroup',
 
     props: {
       buttonGroupType: {

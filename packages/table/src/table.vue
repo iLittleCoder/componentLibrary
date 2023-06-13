@@ -1,23 +1,23 @@
 <template>
-  <div class="jy-table"
+  <div class="gj-table"
     :class="[{
-      'jy-table--fit': fit,
-      'jy-table--striped': stripe,
-      'jy-table--border': border || isGroup,
-      'jy-table--hidden': isHidden,
-      'jy-table--group': isGroup,
-      'jy-table--fluid-height': maxHeight,
-      'jy-table--scrollable-x': layout.scrollX,
-      'jy-table--scrollable-y': layout.scrollY,
-      'jy-table--enable-row-hover': !store.states.isComplex,
-      'jy-table--enable-row-transition': (store.states.data || []).length !== 0 && (store.states.data || []).length < 100
-    }, tableSize ? `jy-table--${ tableSize }` : '']"
+      'gj-table--fit': fit,
+      'gj-table--striped': stripe,
+      'gj-table--border': border || isGroup,
+      'gj-table--hidden': isHidden,
+      'gj-table--group': isGroup,
+      'gj-table--fluid-height': maxHeight,
+      'gj-table--scrollable-x': layout.scrollX,
+      'gj-table--scrollable-y': layout.scrollY,
+      'gj-table--enable-row-hover': !store.states.isComplex,
+      'gj-table--enable-row-transition': (store.states.data || []).length !== 0 && (store.states.data || []).length < 100
+    }, tableSize ? `gj-table--${ tableSize }` : '']"
     @mouseleave="handleMouseLeave($event)">
     <div class="hidden-columns" ref="hiddenColumns"><slot></slot></div>
     <div
       v-if="showHeader"
       v-mousewheel="handleHeaderFooterMousewheel"
-      class="jy-table__header-wrapper"
+      class="gj-table__header-wrapper"
       ref="headerWrapper">
       <table-header
         ref="tableHeader"
@@ -30,7 +30,7 @@
       </table-header>
     </div>
     <div
-      class="jy-table__body-wrapper"
+      class="gj-table__body-wrapper"
       ref="bodyWrapper"
       :class="[layout.scrollX ? `is-scrolling-${scrollPosition}` : 'is-scrolling-none']"
       :style="[bodyHeight]">
@@ -47,16 +47,16 @@
       </table-body>
       <div
         v-if="!data || data.length === 0"
-        class="jy-table__empty-block"
+        class="gj-table__empty-block"
         ref="emptyBlock"
         :style="emptyBlockStyle">
-        <span class="jy-table__empty-text" >
+        <span class="gj-table__empty-text" >
           <slot name="empty">{{ emptyText || t('el.table.emptyText') }}</slot>
         </span>
       </div>
       <div
         v-if="$slots.append"
-        class="jy-table__append-wrapper"
+        class="gj-table__append-wrapper"
         ref="appendWrapper">
         <slot name="append"></slot>
       </div>
@@ -65,7 +65,7 @@
       v-if="showSummary"
       v-show="data && data.length > 0"
       v-mousewheel="handleHeaderFooterMousewheel"
-      class="jy-table__footer-wrapper"
+      class="gj-table__footer-wrapper"
       ref="footerWrapper">
       <table-footer
         :store="store"
@@ -81,7 +81,7 @@
     <div
       v-if="fixedColumns.length > 0"
       v-mousewheel="handleFixedMousewheel"
-      class="jy-table__fixed"
+      class="gj-table__fixed"
       ref="fixedWrapper"
       :style="[{
         width: layout.fixedWidth ? layout.fixedWidth + 'px' : ''
@@ -89,7 +89,7 @@
       fixedHeight]">
       <div
         v-if="showHeader"
-        class="jy-table__fixed-header-wrapper"
+        class="gj-table__fixed-header-wrapper"
         ref="fixedHeaderWrapper" >
         <table-header
           ref="fixedTableHeader"
@@ -101,7 +101,7 @@
           }"></table-header>
       </div>
       <div
-        class="jy-table__fixed-body-wrapper"
+        class="gj-table__fixed-body-wrapper"
         ref="fixedBodyWrapper"
         :style="[{
           top: layout.headerHeight + 'px'
@@ -120,13 +120,13 @@
         </table-body>
         <div
           v-if="$slots.append"
-          class="jy-table__append-gutter"
+          class="gj-table__append-gutter"
           :style="{ height: layout.appendHeight + 'px'}"></div>
       </div>
       <div
         v-if="showSummary"
         v-show="data && data.length > 0"
-        class="jy-table__fixed-footer-wrapper"
+        class="gj-table__fixed-footer-wrapper"
         ref="fixedFooterWrapper">
         <table-footer
           fixed="left"
@@ -142,7 +142,7 @@
     <div
       v-if="rightFixedColumns.length > 0"
       v-mousewheel="handleFixedMousewheel"
-      class="jy-table__fixed-right"
+      class="gj-table__fixed-right"
       ref="rightFixedWrapper"
       :style="[{
         width: layout.rightFixedWidth ? layout.rightFixedWidth + 'px' : '',
@@ -150,7 +150,7 @@
       },
       fixedHeight]">
       <div v-if="showHeader"
-        class="jy-table__fixed-header-wrapper"
+        class="gj-table__fixed-header-wrapper"
         ref="rightFixedHeaderWrapper">
         <table-header
           ref="rightFixedTableHeader"
@@ -162,7 +162,7 @@
           }"></table-header>
       </div>
       <div
-        class="jy-table__fixed-body-wrapper"
+        class="gj-table__fixed-body-wrapper"
         ref="rightFixedBodyWrapper"
         :style="[{
           top: layout.headerHeight + 'px'
@@ -181,13 +181,13 @@
         </table-body>
          <div
           v-if="$slots.append"
-          class="jy-table__append-gutter"
+          class="gj-table__append-gutter"
           :style="{ height: layout.appendHeight + 'px' }"></div>
       </div>
       <div
         v-if="showSummary"
         v-show="data && data.length > 0"
-        class="jy-table__fixed-footer-wrapper"
+        class="gj-table__fixed-footer-wrapper"
         ref="rightFixedFooterWrapper">
         <table-footer
           fixed="right"
@@ -202,13 +202,13 @@
     </div>
     <div
       v-if="rightFixedColumns.length > 0"
-      class="jy-table__fixed-right-patch"
+      class="gj-table__fixed-right-patch"
       ref="rightFixedPatch"
       :style="{
         width: layout.scrollY ? layout.gutterWidth + 'px' : '0',
         height: layout.headerHeight + 'px'
       }"></div>
-    <div class="jy-table__column-resize-proxy" ref="resizeProxy" v-show="resizeProxyVisible"></div>
+    <div class="gj-table__column-resize-proxy" ref="resizeProxy" v-show="resizeProxyVisible"></div>
   </div>
 </template>
 
@@ -229,7 +229,7 @@
   let tableIdSeed = 1;
 
   export default {
-    name: 'JyTable',
+    name: 'GjTable',
 
     mixins: [Locale, Migrating],
 
@@ -626,7 +626,7 @@
     },
 
     created() {
-      this.tableId = 'jy-table_' + tableIdSeed++;
+      this.tableId = 'gj-table_' + tableIdSeed++;
       this.debouncedUpdateLayout = debounce(50, () => this.doLayout());
     },
 

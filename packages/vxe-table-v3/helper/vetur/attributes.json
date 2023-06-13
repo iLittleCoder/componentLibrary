@@ -1383,39 +1383,39 @@
     "type": "boolean",
     "description": "是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）"
   },
-  "jy-table-tooltip/value": {
+  "gj-table-tooltip/value": {
     "type": "boolean",
     "description": "是否显示"
   },
-  "jy-table-tooltip/content": {
+  "gj-table-tooltip/content": {
     "type": "string",
     "description": "显示内容"
   },
-  "jy-table-tooltip/trigger": {
+  "gj-table-tooltip/trigger": {
     "type": "string",
     "description": "触发方式"
   },
-  "jy-table-tooltip/theme": {
+  "gj-table-tooltip/theme": {
     "type": "string",
     "description": "主题样式"
   },
-  "jy-table-tooltip/z-index": {
+  "gj-table-tooltip/z-index": {
     "type": "number",
     "description": "自定义堆叠顺序（对于某些特殊场景，比如被遮挡时可能会用到）"
   },
-  "jy-table-tooltip/is-arrow": {
+  "gj-table-tooltip/is-arrow": {
     "type": "boolean",
     "description": "是否显示箭头"
   },
-  "jy-table-tooltip/enterable": {
+  "gj-table-tooltip/enterable": {
     "type": "boolean",
     "description": "鼠标是否可进入到 tooltip 中"
   },
-  "jy-table-tooltip/enter-delay": {
+  "gj-table-tooltip/enter-delay": {
     "type": "number",
     "description": "鼠标移入后延时多少才显示 tooltip"
   },
-  "jy-table-tooltip/leave-delay": {
+  "gj-table-tooltip/leave-delay": {
     "type": "number",
     "description": "鼠标移出后延时多少才隐藏 tooltip"
   },

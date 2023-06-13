@@ -51,7 +51,7 @@ $typeMap: (
     }
   }
 
-  &.jy-link--default {
+  &.gj-link--default {
     color: $--color-text-regular;
     &:hover {
       color: $--color-primary;
@@ -65,7 +65,7 @@ $typeMap: (
   }
 
   @each $type, $primaryColor in $typeMap {
-    &.jy-link--#{$type} {
+    &.gj-link--#{$type} {
       color: $primaryColor;
 
       @if $type == primary {

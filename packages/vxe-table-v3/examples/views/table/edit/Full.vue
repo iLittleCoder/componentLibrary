@@ -11,7 +11,7 @@
       </template>
     </vxe-toolbar>
 
-    <jy-table
+    <gj-table
       border
       resizable
       show-overflow
@@ -22,19 +22,19 @@
       :data="tableData"
       :edit-rules="validRules"
       :edit-config="{trigger: 'click', mode: 'row', showUpdateStatus: true, showInsertStatus: true}">
-      <jy-column type="checkbox" width="60"></jy-column>
-      <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></jy-column>
-      <jy-column field="nickname" title="Nickname" :edit-render="{name: 'input', attrs: {type: 'text', placeholder: '请输入昵称'}}"></jy-column>
-      <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-      <jy-column field="amount" title="Amount" :edit-render="{name: '$input', props: {type: 'float', digits: 2}}"></jy-column>
-      <jy-column field="updateDate" title="Date" :edit-render="{name: '$input', props: {type: 'date', placeholder: '请选择日期'}}"></jy-column>
-      <jy-column title="操作" width="240">
+      <gj-column type="checkbox" width="60"></gj-column>
+      <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></gj-column>
+      <gj-column field="nickname" title="Nickname" :edit-render="{name: 'input', attrs: {type: 'text', placeholder: '请输入昵称'}}"></gj-column>
+      <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+      <gj-column field="amount" title="Amount" :edit-render="{name: '$input', props: {type: 'float', digits: 2}}"></gj-column>
+      <gj-column field="updateDate" title="Date" :edit-render="{name: '$input', props: {type: 'date', placeholder: '请选择日期'}}"></gj-column>
+      <gj-column title="操作" width="240">
         <template #default="{ row }">
           <vxe-button status="warning" content="临时删除" @click="removeRowEvent(row)"></vxe-button>
           <vxe-button status="danger" content="直接删除" @click="deleteRowEvent(row)"></vxe-button>
         </template>
-      </jy-column>
-    </jy-table>
+      </gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -74,7 +74,7 @@ export default {
           </template>
         </vxe-toolbar>
 
-        <jy-table
+        <gj-table
           border
           resizable
           show-overflow
@@ -85,19 +85,19 @@ export default {
           :data="tableData"
           :edit-rules="validRules"
           :edit-config="{trigger: 'click', mode: 'cell', showUpdateStatus: true, showInsertStatus: true}">
-          <jy-column type="checkbox" width="60"></jy-column>
-          <jy-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></jy-column>
-          <jy-column field="nickname" title="Nickname" :edit-render="{name: 'input', attrs: {type: 'text', placeholder: '请输入昵称'}}"></jy-column>
-          <jy-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></jy-column>
-          <jy-column field="amount" title="Amount" :edit-render="{name: '$input', props: {type: 'float', digits: 2}}"></jy-column>
-          <jy-column field="updateDate" title="Date" :edit-render="{name: '$input', props: {type: 'date', placeholder: '请选择日期'}}"></jy-column>
-          <jy-column title="操作" width="240">
+          <gj-column type="checkbox" width="60"></gj-column>
+          <gj-column field="name" title="Name" :edit-render="{name: 'input', attrs: {type: 'text'}}"></gj-column>
+          <gj-column field="nickname" title="Nickname" :edit-render="{name: 'input', attrs: {type: 'text', placeholder: '请输入昵称'}}"></gj-column>
+          <gj-column field="sex" title="Sex" :edit-render="{name: '$select', options: sexList}"></gj-column>
+          <gj-column field="amount" title="Amount" :edit-render="{name: '$input', props: {type: 'float', digits: 2}}"></gj-column>
+          <gj-column field="updateDate" title="Date" :edit-render="{name: '$input', props: {type: 'date', placeholder: '请选择日期'}}"></gj-column>
+          <gj-column title="操作" width="240">
             <template #default="{ row }">
               <vxe-button status="warning" content="临时删除" @click="removeRowEvent(row)"></vxe-button>
               <vxe-button status="danger" content="直接删除" @click="deleteRowEvent(row)"></vxe-button>
             </template>
-          </jy-column>
-        </jy-table>
+          </gj-column>
+        </gj-table>
         `,
         `
         import XEAjax from 'xe-ajax'

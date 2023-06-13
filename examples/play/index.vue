@@ -1,6 +1,6 @@
 <template>
   <div class="tree-demo">
-    <jy-tree
+    <gj-tree
       ref="jyTree"
       :data="data"
       :default-expanded-keys="[2, 3]"
@@ -8,8 +8,8 @@
       node-key="id"
       :props="defaultProps"
     >
-    </jy-tree>
-    <jy-chart :theme="theme" type="line" :chartOptions="chartOptions"></jy-chart>
+    </gj-tree>
+    <gj-chart :theme="theme" type="line" :chartOptions="chartOptions"></gj-chart>
   </div>
 </template>
 

@@ -4,27 +4,27 @@
 ### 示例
 :::demo
 ```html
-<jy-card class="box-card">
+<gj-card class="box-card">
   <div slot="header" class="card-title">
-    <jy-icon name="Gildata-color-title"></jy-icon>
+    <gj-icon name="Gildata-color-title"></gj-icon>
     <span class="text">标题名称</span>
   </div>
   <div class="text-body"></div>
-</jy-card>
+</gj-card>
 
-<jy-card class="box-card">
+<gj-card class="box-card">
   <div slot="header" class="card-title">
-    <jy-icon name="Gildata-color-title"></jy-icon>
+    <gj-icon name="Gildata-color-title"></gj-icon>
     <span class="text">标题名称</span>
   </div>
   <div v-for="o in 2" :key="o" class="card-subtitle">
     <p class="subtitle">标题名称</p>
     <div></div>
   </div>
-</jy-card>
+</gj-card>
 
 <div class="card-box">
-  <jy-card class="special-card">
+  <gj-card class="special-card">
     <div slot="header" class="card-title">
       <span class="logo">logo</span>
       <div class="icon-list">
@@ -32,12 +32,12 @@
       </div>
     </div>
     <div class="special-subtitle">
-      <jy-icon name="Gildata-home"></jy-icon>
+      <gj-icon name="Gildata-home"></gj-icon>
     </div>
     <div class="special-body">
       <div v-for="o in 4" :key="o" class="special-list"></div>
     </div>
-  </jy-card>
+  </gj-card>
 </div>
 
 ```
@@ -50,15 +50,15 @@
 
 :::demo Card 组件包括`header`和`body`部分，`header`部分需要有显式具名 slot 分发，同时也是可选的。
 ```html
-<jy-card class="box-card">
+<gj-card class="box-card">
   <div slot="header" class="clearfix">
     <span>卡片名称</span>
-    <jy-button style="float: right; padding: 3px 0" type="text">操作按钮</jy-button>
+    <gj-button style="float: right; padding: 3px 0" type="text">操作按钮</gj-button>
   </div>
   <div v-for="o in 4" :key="o" class="text item">
     {{'列表内容 ' + o }}
   </div>
-</jy-card>
+</gj-card>
 
 <style>
   .text {
@@ -91,11 +91,11 @@
 
 :::demo
 ```html
-<jy-card class="box-card">
+<gj-card class="box-card">
   <div v-for="o in 4" :key="o" class="text item">
     {{'列表内容 ' + o }}
   </div>
-</jy-card>
+</gj-card>
 
 <style>
   .text {
@@ -119,20 +119,20 @@
 
 :::demo 配置`body-style`属性来自定义`body`部分的`style`，我们还使用了布局组件。
 ```html
-<jy-row>
-  <jy-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-    <jy-card :body-style="{ padding: '0px' }">
+<gj-row>
+  <gj-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
+    <gj-card :body-style="{ padding: '0px' }">
       <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
       <div style="padding: 14px;">
         <span>好吃的汉堡</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <jy-button type="text" class="button">操作按钮</jy-button>
+          <gj-button type="text" class="button">操作按钮</gj-button>
         </div>
       </div>
-    </jy-card>
-  </jy-col>
-</jy-row>
+    </gj-card>
+  </gj-col>
+</gj-row>
 
 <style>
   .time {
@@ -184,23 +184,23 @@ export default {
 
 :::demo 通过`shadow`属性设置卡片阴影出现的时机：`always`、`hover`或`never`。
 ```html
-<jy-row :gutter="12">
-  <jy-col :span="8">
-    <jy-card shadow="always">
+<gj-row :gutter="12">
+  <gj-col :span="8">
+    <gj-card shadow="always">
       总是显示
-    </jy-card>
-  </jy-col>
-  <jy-col :span="8">
-    <jy-card shadow="hover">
+    </gj-card>
+  </gj-col>
+  <gj-col :span="8">
+    <gj-card shadow="hover">
       鼠标悬浮时显示
-    </jy-card>
-  </jy-col>
-  <jy-col :span="8">
-    <jy-card shadow="never">
+    </gj-card>
+  </gj-col>
+  <gj-col :span="8">
+    <gj-card shadow="never">
       从不显示
-    </jy-card>
-  </jy-col>
-</jy-row>
+    </gj-card>
+  </gj-col>
+</gj-row>
 ```
 :::
 

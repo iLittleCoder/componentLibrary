@@ -2,14 +2,14 @@
   <div>
     <p class="tip">单元格超出指定宽度自动换行，通过设置 <table-api-link prop="scroll-y"/>="{enabled: false} 关闭虚拟滚动，则支持自动换行</p>
 
-    <jy-table
+    <gj-table
       :data="tableData"
       :scroll-y="{enabled: false}">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -33,14 +33,14 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           :data="tableData"
           :scroll-y="{enabled: false}">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {

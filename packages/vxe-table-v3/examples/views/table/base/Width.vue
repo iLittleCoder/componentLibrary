@@ -5,15 +5,15 @@
       <span class="red">(注：不应该全部都使用固定像素，应该当所有列加起来的宽度小于表格宽度时，就会出现空白区，可以配合 "%" 或 "<table-column-api-link prop="min-width"/>" 实现等比例缩放)</span>
     </p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq"></jy-column>
-      <jy-column field="name" title="Name"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex"></jy-column>
-      <jy-column field="date" title="Date"></jy-column>
-    </jy-table>
+      <gj-column type="seq"></gj-column>
+      <gj-column field="name" title="Name"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex"></gj-column>
+      <gj-column field="date" title="Date"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -24,15 +24,15 @@
 
     <p class="tip">部分固定列宽，其余自适应</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="80"></jy-column>
-      <jy-column field="name" title="Name" width="200"></jy-column>
-      <jy-column field="role" title="Role"></jy-column>
-      <jy-column field="sex" title="Sex" width="140"></jy-column>
-      <jy-column field="age" title="Age"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="80"></gj-column>
+      <gj-column field="name" title="Name" width="200"></gj-column>
+      <gj-column field="role" title="Role"></gj-column>
+      <gj-column field="sex" title="Sex" width="140"></gj-column>
+      <gj-column field="age" title="Age"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -43,15 +43,15 @@
 
     <p class="tip">设置固定和最小宽，实现等比例放大</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="80"></jy-column>
-      <jy-column field="name" title="Name" min-width="200"></jy-column>
-      <jy-column field="role" title="Role" min-width="140"></jy-column>
-      <jy-column field="sex" title="Sex" min-width="120"></jy-column>
-      <jy-column field="age" title="Age" min-width="120"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="80"></gj-column>
+      <gj-column field="name" title="Name" min-width="200"></gj-column>
+      <gj-column field="role" title="Role" min-width="140"></gj-column>
+      <gj-column field="sex" title="Sex" min-width="120"></gj-column>
+      <gj-column field="age" title="Age" min-width="120"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -62,15 +62,15 @@
 
     <p class="tip">设置百分比</p>
 
-    <jy-table
+    <gj-table
       border
       :data="tableData">
-      <jy-column type="seq" width="10%"></jy-column>
-      <jy-column field="name" title="Name" width="30%"></jy-column>
-      <jy-column field="role" title="Role" width="20%"></jy-column>
-      <jy-column field="sex" title="Sex" width="20%"></jy-column>
-      <jy-column field="age" title="Age" width="20%"></jy-column>
-    </jy-table>
+      <gj-column type="seq" width="10%"></gj-column>
+      <gj-column field="name" title="Name" width="30%"></gj-column>
+      <gj-column field="role" title="Role" width="20%"></gj-column>
+      <gj-column field="sex" title="Sex" width="20%"></gj-column>
+      <gj-column field="age" title="Age" width="20%"></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -97,15 +97,15 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq"></jy-column>
-          <jy-column field="name" title="Name"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="sex" title="Sex"></jy-column>
-          <jy-column field="date" title="Date"></jy-column>
-        </jy-table>
+          <gj-column type="seq"></gj-column>
+          <gj-column field="name" title="Name"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="sex" title="Sex"></gj-column>
+          <gj-column field="date" title="Date"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -126,15 +126,15 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq" width="80"></jy-column>
-          <jy-column field="name" title="Name" width="200"></jy-column>
-          <jy-column field="role" title="Role"></jy-column>
-          <jy-column field="sex" title="Sex" width="140"></jy-column>
-          <jy-column field="age" title="Age"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="80"></gj-column>
+          <gj-column field="name" title="Name" width="200"></gj-column>
+          <gj-column field="role" title="Role"></gj-column>
+          <gj-column field="sex" title="Sex" width="140"></gj-column>
+          <gj-column field="age" title="Age"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -155,15 +155,15 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq" width="80"></jy-column>
-          <jy-column field="name" title="Name" min-width="200"></jy-column>
-          <jy-column field="role" title="Role" min-width="140"></jy-column>
-          <jy-column field="sex" title="Sex" min-width="120"></jy-column>
-          <jy-column field="age" title="Age" min-width="120"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="80"></gj-column>
+          <gj-column field="name" title="Name" min-width="200"></gj-column>
+          <gj-column field="role" title="Role" min-width="140"></gj-column>
+          <gj-column field="sex" title="Sex" min-width="120"></gj-column>
+          <gj-column field="age" title="Age" min-width="120"></gj-column>
+        </gj-table>
         `,
         `
         export default {
@@ -184,15 +184,15 @@ export default {
         }
         `,
         `
-        <jy-table
+        <gj-table
           border
           :data="tableData">
-          <jy-column type="seq" width="10%"></jy-column>
-          <jy-column field="name" title="Name" width="30%"></jy-column>
-          <jy-column field="role" title="Role" width="20%"></jy-column>
-          <jy-column field="sex" title="Sex" width="20%"></jy-column>
-          <jy-column field="age" title="Age" width="20%"></jy-column>
-        </jy-table>
+          <gj-column type="seq" width="10%"></gj-column>
+          <gj-column field="name" title="Name" width="30%"></gj-column>
+          <gj-column field="role" title="Role" width="20%"></gj-column>
+          <gj-column field="sex" title="Sex" width="20%"></gj-column>
+          <gj-column field="age" title="Age" width="20%"></gj-column>
+        </gj-table>
         `,
         `
         export default {

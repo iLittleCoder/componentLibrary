@@ -1,22 +1,22 @@
 <template>
   <div class="configurator-action">
       <div class="action-group">
-        <jy-tooltip :content="getActionDisplayName('undo')">
+        <gj-tooltip :content="getActionDisplayName('undo')">
           <img 
             src="../../assets/images/icon-undo.svg"
             @click="onUndo"
             :class="{ 'active': userConfigHistory.length > 0 }"
           />
-        </jy-tooltip>
-        <jy-tooltip :content="getActionDisplayName('redo')">
+        </gj-tooltip>
+        <gj-tooltip :content="getActionDisplayName('redo')">
           <img 
             src="../../assets/images/icon-redo.svg"
             @click="onRedo"
             :class="{ 'active': userConfigRedoHistory.length > 0 }"
           />
-        </jy-tooltip>
+        </gj-tooltip>
         <div class="button-group">
-          <jy-button
+          <gj-button
             class="reset"
             type="primary" 
             round 
@@ -25,8 +25,8 @@
             @click="onReset"
           >
             {{getActionDisplayName('reset-theme')}}
-          </jy-button>
-          <jy-button
+          </gj-button>
+          <gj-button
             class="download"
             type="primary" 
             round 
@@ -35,17 +35,17 @@
             @click="onDownload"
           >
             {{getActionDisplayName('download-theme')}}
-          </jy-button>
+          </gj-button>
         </div>
       </div>
-      <jy-select v-model="selectedComponent" class="selector">
-        <jy-option
+      <gj-select v-model="selectedComponent" class="selector">
+        <gj-option
           v-for="item in selectOptions"
           :key="item.value"
           :label="item.label"
           :value="item.value">
-        </jy-option>
-      </jy-select>
+        </gj-option>
+      </gj-select>
       <div class="line"></div>
     </div>
 </template>
@@ -72,7 +72,7 @@
     }
     .button-group {
       float: right;
-      .jy-button {
+      .gj-button {
         padding: 6px 15px;
         &.is-disabled {
           color: #C0C4CC;

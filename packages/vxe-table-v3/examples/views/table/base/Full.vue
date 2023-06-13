@@ -2,7 +2,7 @@
   <div>
     <p class="tip">完整示例</p>
 
-    <jy-table
+    <gj-table
       border
       stripe
       resizable
@@ -11,18 +11,18 @@
       :loading="loading"
       :checkbox-config="{labelField: 'id', highlight: true, range: true}"
       :data="tableData">
-      <jy-column type="seq" width="60"></jy-column>
-      <jy-column type="checkbox" title="ID" width="140"></jy-column>
-      <jy-column field="name" title="Name" sortable></jy-column>
-      <jy-column field="sex" title="Sex" :filters="sexList" :filter-multiple="false" :formatter="formatterSex"></jy-column>
-      <jy-column
+      <gj-column type="seq" width="60"></gj-column>
+      <gj-column type="checkbox" title="ID" width="140"></gj-column>
+      <gj-column field="name" title="Name" sortable></gj-column>
+      <gj-column field="sex" title="Sex" :filters="sexList" :filter-multiple="false" :formatter="formatterSex"></gj-column>
+      <gj-column
         field="age"
         title="Age"
         sortable
         :filters="[{label: '大于16岁', value: 16}, {label: '大于26岁', value: 26}, {label: '大于30岁', value: 30}]"
-        :filter-method="filterAgeMethod"></jy-column>
-      <jy-column field="address" title="Address" show-overflow></jy-column>
-    </jy-table>
+        :filter-method="filterAgeMethod"></gj-column>
+      <gj-column field="address" title="Address" show-overflow></gj-column>
+    </gj-table>
 
     <p class="demo-code">{{ $t('app.body.button.showCode') }}</p>
 
@@ -45,7 +45,7 @@ export default {
       ],
       demoCodes: [
         `
-        <jy-table
+        <gj-table
           border
           stripe
           resizable
@@ -54,18 +54,18 @@ export default {
           :loading="loading"
           :checkbox-config="{labelField: 'id', highlight: true, range: true}"
           :data="tableData">
-          <jy-column type="seq" width="60"></jy-column>
-          <jy-column type="checkbox" title="ID" width="140"></jy-column>
-          <jy-column field="name" title="Name" sortable></jy-column>
-          <jy-column field="sex" title="Sex" :filters="sexList" :filter-multiple="false" :formatter="formatterSex"></jy-column>
-          <jy-column
+          <gj-column type="seq" width="60"></gj-column>
+          <gj-column type="checkbox" title="ID" width="140"></gj-column>
+          <gj-column field="name" title="Name" sortable></gj-column>
+          <gj-column field="sex" title="Sex" :filters="sexList" :filter-multiple="false" :formatter="formatterSex"></gj-column>
+          <gj-column
             field="age"
             title="Age"
             sortable
             :filters="[{label: '大于16岁', value: 16}, {label: '大于26岁', value: 26}, {label: '大于30岁', value: 30}]"
-            :filter-method="filterAgeMethod"></jy-column>
-          <jy-column field="address" title="Address" show-overflow></jy-column>
-        </jy-table>
+            :filter-method="filterAgeMethod"></gj-column>
+          <gj-column field="address" title="Address" show-overflow></gj-column>
+        </gj-table>
         `,
         `
         export default {

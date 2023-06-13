@@ -1,9 +1,9 @@
 <template>
   <li
-    class="jy-dropdown-menu__item"
+    class="gj-dropdown-menu__item"
     :class="{
       'is-disabled': disabled,
-      'jy-dropdown-menu__item--divided': divided
+      'gj-dropdown-menu__item--divided': divided
     }"
     @click="handleClick"
     :aria-disabled="disabled"
@@ -17,7 +17,7 @@
   import Emitter from 'GildataDesign/src/mixins/emitter';
 
   export default {
-    name: 'JyDropdownItem',
+    name: 'GjDropdownItem',
 
     mixins: [Emitter],
 
@@ -30,7 +30,7 @@
 
     methods: {
       handleClick(e) {
-        this.dispatch('JyDropdown', 'menu-item-click', [this.command, this]);
+        this.dispatch('GjDropdown', 'menu-item-click', [this.command, this]);
       }
     }
   };

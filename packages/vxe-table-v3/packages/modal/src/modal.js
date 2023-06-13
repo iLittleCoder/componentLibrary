@@ -133,7 +133,7 @@ export default {
       headerOns.dblclick = this.toggleZoomEvent
     }
     return h('div', {
-      class: ['jy-table-modal--wrapper', `type--${type}`, className || '', {
+      class: ['gj-table-modal--wrapper', `type--${type}`, className || '', {
         [`size--${vSize}`]: vSize,
         [`status--${status}`]: status,
         'is--animat': animat,
@@ -155,24 +155,24 @@ export default {
       }
     }, [
       h('div', {
-        class: 'jy-table-modal--box',
+        class: 'gj-table-modal--box',
         on: {
           mousedown: this.boxMousedownEvent
         },
         ref: 'modalBox'
       }, [
         this.showHeader ? h('div', {
-          class: ['jy-table-modal--header', {
+          class: ['gj-table-modal--header', {
             'is--drag': draggable,
             'is--ellipsis': !isMsg && showTitleOverflow
           }],
           on: headerOns
         }, headerSlot ? (!inited || (destroyOnClose && !visible) ? [] : headerSlot.call(this, { $modal: this }, h)) : [
           titleSlot ? titleSlot.call(this, { $modal: this }, h) : h('span', {
-            class: 'jy-table-modal--title'
+            class: 'gj-table-modal--title'
           }, title ? getFuncText(title) : GlobalConfig.i18n('vxe.alert.title')),
           showZoom ? h('i', {
-            class: ['jy-table-modal--zoom-btn', 'trigger--btn', zoomLocat ? GlobalConfig.icon.MODAL_ZOOM_OUT : GlobalConfig.icon.MODAL_ZOOM_IN],
+            class: ['gj-table-modal--zoom-btn', 'trigger--btn', zoomLocat ? GlobalConfig.icon.MODAL_ZOOM_OUT : GlobalConfig.icon.MODAL_ZOOM_IN],
             attrs: {
               title: GlobalConfig.i18n(`vxe.modal.zoom${zoomLocat ? 'Out' : 'In'}`)
             },
@@ -181,7 +181,7 @@ export default {
             }
           }) : _e(),
           showClose ? h('i', {
-            class: ['jy-table-modal--close-btn', 'trigger--btn', GlobalConfig.icon.MODAL_CLOSE],
+            class: ['gj-table-modal--close-btn', 'trigger--btn', GlobalConfig.icon.MODAL_CLOSE],
             attrs: {
               title: GlobalConfig.i18n('vxe.modal.close')
             },
@@ -191,30 +191,30 @@ export default {
           }) : _e()
         ]) : null,
         h('div', {
-          class: 'jy-table-modal--body'
+          class: 'gj-table-modal--body'
         }, [
           status ? h('div', {
-            class: 'jy-table-modal--status-wrapper'
+            class: 'gj-table-modal--status-wrapper'
           }, [
             h('i', {
-              class: ['jy-table-modal--status-icon', iconStatus || GlobalConfig.icon[`MODAL_${status}`.toLocaleUpperCase()]]
+              class: ['gj-table-modal--status-icon', iconStatus || GlobalConfig.icon[`MODAL_${status}`.toLocaleUpperCase()]]
             })
           ]) : null,
           h('div', {
-            class: 'jy-table-modal--content'
+            class: 'gj-table-modal--content'
           }, defaultSlot ? (!inited || (destroyOnClose && !visible) ? [] : defaultSlot.call(this, { $modal: this }, h)) : getFuncText(content)),
           !isMsg ? h('div', {
-            class: ['jy-table-loading', {
+            class: ['gj-table-loading', {
               'is--visible': loading
             }]
           }, [
             h('div', {
-              class: 'jy-table-loading--spinner'
+              class: 'gj-table-loading--spinner'
             })
           ]) : null
         ]),
         showFooter ? h('div', {
-          class: 'jy-table-modal--footer'
+          class: 'gj-table-modal--footer'
         }, footerSlot ? (!inited || (destroyOnClose && !visible) ? [] : footerSlot.call(this, { $modal: this }, h)) : [
           type === 'confirm' ? h('vxe-button', {
             ref: 'cancelBtn',
@@ -233,7 +233,7 @@ export default {
           }, this.confirmButtonText || GlobalConfig.i18n('vxe.button.confirm'))
         ]) : null,
         !isMsg && resize ? h('span', {
-          class: 'jy-table-modal--resize'
+          class: 'gj-table-modal--resize'
         }, ['wl', 'wr', 'swst', 'sest', 'st', 'swlb', 'selb', 'sb'].map(type => {
           return h('span', {
             class: `${type}-resize`,

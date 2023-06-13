@@ -12,8 +12,8 @@
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-date-picker v-model="value0" type="date" placeholder="请选择日期" showToday :size="size"> </jy-date-picker>
-    <jy-date-picker
+    <gj-date-picker v-model="value0" type="date" placeholder="请选择日期" showToday :size="size"> </gj-date-picker>
+    <gj-date-picker
       v-model="value1"
       type="date"
       placeholder="请选择日期"
@@ -21,12 +21,12 @@
       :size="size"
       :picker-options="pickerOptions"
     >
-    </jy-date-picker>
+    </gj-date-picker>
 
-    <jy-date-picker v-model="value2" type="date" placeholder="请选择日期" disabled :size="size"> </jy-date-picker>
+    <gj-date-picker v-model="value2" type="date" placeholder="请选择日期" disabled :size="size"> </gj-date-picker>
 
-    <jy-date-picker v-model="value3" type="date" placeholder="请选择日期" disabled border :size="size">
-    </jy-date-picker>
+    <gj-date-picker v-model="value3" type="date" placeholder="请选择日期" disabled border :size="size">
+    </gj-date-picker>
   </div>
 </template>
 
@@ -86,21 +86,21 @@
 <div class="container">
   <div class="block">
     <span class="demonstration">周</span>
-    <jy-date-picker v-model="value1" type="week" format="yyyy-WW周" placeholder="请选择周"> </jy-date-picker>
+    <gj-date-picker v-model="value1" type="week" format="yyyy-WW周" placeholder="请选择周"> </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">月</span>
-    <jy-date-picker v-model="value2" type="month" placeholder="请选择月"> </jy-date-picker>
+    <gj-date-picker v-model="value2" type="month" placeholder="请选择月"> </gj-date-picker>
   </div>
 </div>
 <div class="container">
   <div class="block">
     <span class="demonstration">年</span>
-    <jy-date-picker v-model="value3" type="year" placeholder="请选择年"> </jy-date-picker>
+    <gj-date-picker v-model="value3" type="year" placeholder="请选择年"> </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">多个日期</span>
-    <jy-date-picker type="dates" v-model="value4" placeholder="请选择一个或多个日期"> </jy-date-picker>
+    <gj-date-picker type="dates" v-model="value4" placeholder="请选择一个或多个日期"> </gj-date-picker>
   </div>
 </div>
 
@@ -130,7 +130,7 @@
 <div class="container">
   <div class="block">
     <span class="demonstration">周</span>
-    <jy-date-picker
+    <gj-date-picker
       v-model="value1"
       type="week"
       format="yyyy-WW周"
@@ -138,24 +138,24 @@
       border
       :picker-options="pickerOptions"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">月</span>
 
-    <jy-date-picker v-model="value2" type="month" placeholder="选择月" border :picker-options="pickerOptions2">
-    </jy-date-picker>
+    <gj-date-picker v-model="value2" type="month" placeholder="选择月" border :picker-options="pickerOptions2">
+    </gj-date-picker>
   </div>
 </div>
 <div class="container">
   <div class="block">
     <span class="demonstration">年</span>
-    <jy-date-picker v-model="value3" type="year" placeholder="请选择年" border :picker-options="pickerOptions3">
-    </jy-date-picker>
+    <gj-date-picker v-model="value3" type="year" placeholder="请选择年" border :picker-options="pickerOptions3">
+    </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">多个日期</span>
-    <jy-date-picker type="dates" v-model="value4" placeholder="请选择一个或多个日期" border> </jy-date-picker>
+    <gj-date-picker type="dates" v-model="value4" placeholder="请选择一个或多个日期" border> </gj-date-picker>
   </div>
 </div>
 
@@ -265,20 +265,20 @@
 ```html
 <div class="block">
   <span class="demonstration">季度</span>
-  <jy-date-picker
+  <gj-date-picker
     v-model="value"
     type="quarter"
     format="yyyy-Q"
     placeholder="请选择季度"
     :picker-options="pickerOptions"
   >
-  </jy-date-picker>
+  </gj-date-picker>
 </div>
 
 <div class="block">
   <span class="demonstration">季度</span>
-  <jy-date-picker v-model="bordervalue" type="quarter" format="yyyy-Q" placeholder="请选择季度" border>
-  </jy-date-picker>
+  <gj-date-picker v-model="bordervalue" type="quarter" format="yyyy-Q" placeholder="请选择季度" border>
+  </gj-date-picker>
 </div>
 
 <script>
@@ -336,16 +336,16 @@
 <template>
   <div style="margin-bottom:20px">
     <span class="show-desc">尺寸：</span>
-    <jy-radio-group size="mini" v-model="size" :show-background="false">
-      <jy-radio-button label="large"></jy-radio-button>
-      <jy-radio-button label="medium"> </jy-radio-button>
-      <jy-radio-button label="small"></jy-radio-button>
-      <jy-radio-button label="mini"></jy-radio-button>
-    </jy-radio-group>
+    <gj-radio-group size="mini" v-model="size" :show-background="false">
+      <gj-radio-button label="large"></gj-radio-button>
+      <gj-radio-button label="medium"> </gj-radio-button>
+      <gj-radio-button label="small"></gj-radio-button>
+      <gj-radio-button label="mini"></gj-radio-button>
+    </gj-radio-group>
   </div>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-date-picker
+    <gj-date-picker
       v-model="value0"
       type="daterange"
       start-placeholder="开始日期"
@@ -353,9 +353,9 @@
       :size="size"
       :picker-options="pickerOptions"
     >
-    </jy-date-picker>
+    </gj-date-picker>
 
-    <jy-date-picker
+    <gj-date-picker
       v-model="value1"
       type="daterange"
       start-placeholder="开始日期"
@@ -363,7 +363,7 @@
       border
       :size="size"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
 </template>
 
@@ -424,7 +424,7 @@
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-date-picker
+    <gj-date-picker
       v-model="weekValue"
       type="weekrange"
       format="yyyy-WW周"
@@ -432,9 +432,9 @@
       end-placeholder="结束周"
       :picker-options="pickerOptions"
     >
-    </jy-date-picker>
+    </gj-date-picker>
 
-    <jy-date-picker
+    <gj-date-picker
       v-model="weekValue1"
       type="weekrange"
       format="yyyy-WW周"
@@ -442,7 +442,7 @@
       end-placeholder="结束周"
       border
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
 </template>
 
@@ -509,17 +509,17 @@
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-date-picker
+    <gj-date-picker
       v-model="value0"
       type="monthrange"
       start-placeholder="开始月份"
       end-placeholder="结束月份"
       :picker-options="pickerOptions"
     >
-    </jy-date-picker>
+    </gj-date-picker>
 
-    <jy-date-picker v-model="value1" type="monthrange" start-placeholder="开始月份" end-placeholder="结束月份" border>
-    </jy-date-picker>
+    <gj-date-picker v-model="value1" type="monthrange" start-placeholder="开始月份" end-placeholder="结束月份" border>
+    </gj-date-picker>
   </div>
 </template>
 
@@ -574,17 +574,17 @@
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-date-picker
+    <gj-date-picker
       v-model="value0"
       type="quarterrange"
       start-placeholder="开始季度"
       end-placeholder="结束季度"
       :picker-options="pickerOptions"
     >
-    </jy-date-picker>
+    </gj-date-picker>
 
-    <jy-date-picker v-model="value1" type="quarterrange" start-placeholder="开始季度" end-placeholder="结束季度" border>
-    </jy-date-picker>
+    <gj-date-picker v-model="value1" type="quarterrange" start-placeholder="开始季度" end-placeholder="结束季度" border>
+    </gj-date-picker>
   </div>
 </template>
 
@@ -646,7 +646,7 @@
 <template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <jy-date-picker
+    <gj-date-picker
       v-model="value0"
       type="yearrange"
       format="yyyy"
@@ -654,9 +654,9 @@
       end-placeholder="结束年份"
       :picker-options="pickerOptions"
     >
-    </jy-date-picker>
+    </gj-date-picker>
 
-    <jy-date-picker
+    <gj-date-picker
       v-model="value1"
       type="yearrange"
       format="yyyy"
@@ -665,7 +665,7 @@
       unlink-panels
       border
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
 </template>
 
@@ -769,31 +769,31 @@
   <div class="block">
     <span class="demonstration">默认为 Date 对象</span>
     <div class="demonstration">值：{{ value1 }}</div>
-    <jy-date-picker v-model="value1" type="date" placeholder="选择日期" format="yyyy 年 MM 月 dd 日"> </jy-date-picker>
+    <gj-date-picker v-model="value1" type="date" placeholder="选择日期" format="yyyy 年 MM 月 dd 日"> </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">使用 value-format</span>
     <div class="demonstration">值：{{ value2 }}</div>
-    <jy-date-picker
+    <gj-date-picker
       v-model="value2"
       type="date"
       placeholder="选择日期"
       format="yyyy 年 MM 月 dd 日"
       value-format="yyyy-MM-dd"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
   <div class="block">
     <span class="demonstration">时间戳</span>
     <div class="demonstration">值：{{ value3 }}</div>
-    <jy-date-picker
+    <gj-date-picker
       v-model="value3"
       type="date"
       placeholder="选择日期"
       format="yyyy 年 MM 月 dd 日"
       value-format="timestamp"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
 </template>
 
@@ -822,14 +822,14 @@
 <template>
   <div class="block">
     <p>组件值：{{ value }}</p>
-    <jy-date-picker
+    <gj-date-picker
       v-model="value"
       type="daterange"
       start-placeholder="开始日期"
       end-placeholder="结束日期"
       :default-time="['00:00:00', '23:59:59']"
     >
-    </jy-date-picker>
+    </gj-date-picker>
   </div>
 </template>
 

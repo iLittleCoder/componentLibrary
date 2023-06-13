@@ -1,8 +1,8 @@
-.jy-table .warning-row {
+.gj-table .warning-row {
   background: oldlace;
 }
 
-.jy-table .success-row {
+.gj-table .success-row {
   background: #f0f9eb;
 }
 
@@ -15,7 +15,7 @@
     width: 90px;
     color: #99a9bf;
   }
-  .jy-form-item {
+  .gj-form-item {
     margin-right: 0;
     margin-bottom: 0;
     width: 50%;
@@ -23,19 +23,19 @@
 }
 
 
- .mytable-style.jy-table .jy-body--row.row-green {
+ .mytable-style.gj-table .gj-body--row.row-green {
    background-color: rgba(231,246,236,0.15);
 
  }
-.mytable-style.jy-table .jy-header--column.col-blue {
+.mytable-style.gj-table .gj-header--column.col-blue {
   background-color: rgba(45,183,245,0.15);
 
 }
-.mytable-style.jy-table .jy-body--column.col-red {
+.mytable-style.gj-table .gj-body--column.col-red {
   background-color: rgba(45,183,245,0.15);
 
 }
-.mytable-style.jy-table .jy-body--column.col-orange {
+.mytable-style.gj-table .gj-body--column.col-orange {
   background-color: rgba(231,246,236,0.15);
 }
 .my-autocomplete {

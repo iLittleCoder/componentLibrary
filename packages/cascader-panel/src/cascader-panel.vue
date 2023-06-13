@@ -1,5 +1,5 @@
 <template>
-  <div :class="['jy-cascader-panel', border && 'is-bordered']" @keydown="handleKeyDown">
+  <div :class="['gj-cascader-panel', border && 'is-bordered']" @keydown="handleKeyDown">
     <cascader-menu ref="menu" v-for="(menu, index) in menus" :index="index" :key="index" :nodes="menu"></cascader-menu>
   </div>
 </template>
@@ -33,7 +33,7 @@ const isLeaf = (el) => !el.getAttribute('aria-owns');
 const getSibling = (el, distance) => {
   const { parentNode } = el;
   if (parentNode) {
-    const siblings = parentNode.querySelectorAll('.jy-cascader-node[tabindex="-1"]');
+    const siblings = parentNode.querySelectorAll('.gj-cascader-node[tabindex="-1"]');
     const index = Array.prototype.indexOf.call(siblings, el);
     return siblings[index + distance] || null;
   }
@@ -64,7 +64,7 @@ const checkNode = (el) => {
 };
 
 export default {
-  name: 'JyCascaderPanel',
+  name: 'GjCascaderPanel',
 
   components: {
     CascaderMenu
@@ -140,7 +140,7 @@ export default {
     },
     menus: {
       handler: function(val) {
-        // 重新计算jy-cascader__tags的宽度
+        // 重新计算Gj-cascader__tags的宽度
         this.$emit('calcTagWidth');
       },
       deep: true
@@ -236,14 +236,14 @@ export default {
         case KeyCode.left:
           const preMenu = this.$refs.menu[getMenuIndex(target) - 1];
           if (preMenu) {
-            const expandedNode = preMenu.$el.querySelector('.jy-cascader-node[aria-expanded="true"]');
+            const expandedNode = preMenu.$el.querySelector('.gj-cascader-node[aria-expanded="true"]');
             focusNode(expandedNode);
           }
           break;
         case KeyCode.right:
           const nextMenu = this.$refs.menu[getMenuIndex(target) + 1];
           if (nextMenu) {
-            const firstNode = nextMenu.$el.querySelector('.jy-cascader-node[tabindex="-1"]');
+            const firstNode = nextMenu.$el.querySelector('.gj-cascader-node[tabindex="-1"]');
             focusNode(firstNode);
           }
           break;
@@ -340,8 +340,8 @@ export default {
       menus.forEach((menu) => {
         const menuElement = menu.$el;
         if (menuElement) {
-          const container = menuElement.querySelector('.jy-scrollbar__wrap');
-          const activeNode = menuElement.querySelector('.jy-cascader-node.is-active') || menuElement.querySelector('.jy-cascader-node.in-active-path');
+          const container = menuElement.querySelector('.gj-scrollbar__wrap');
+          const activeNode = menuElement.querySelector('.gj-cascader-node.is-active') || menuElement.querySelector('.gj-cascader-node.in-active-path');
           scrollIntoView(container, activeNode);
         }
       });
